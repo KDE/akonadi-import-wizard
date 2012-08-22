@@ -29,7 +29,7 @@ public:
   explicit BalsaSettings(const QString& filename, ImportWizard *parent);
   ~BalsaSettings();
 private:
-  void readAccount(const KConfigGroup &grp);
+  void readAccount(const KConfigGroup &grp, bool autoCheck, int autoDelay);
   void readIdentity(const KConfigGroup &grp);
   void readTransport(const KConfigGroup &grp);
   void readGlobalSettings(const KConfig &config);
