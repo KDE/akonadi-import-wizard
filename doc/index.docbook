@@ -1,0 +1,193 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY i18n-importwizard "<application>Import Wizard</application>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE"> 
+]>
+
+<article id="importwizard" lang="&language;">
+
+<articleinfo id="importwizardinfo">
+
+<title>The &i18n-importwizard; Handbook</title>
+
+<authorgroup>
+<author>
+<personname>
+<firstname>Laurent</firstname>
+<surname>Montel</surname>
+</personname>
+<email>montel@kde.org</email>
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<copyright>
+<year>2013</year>
+<holder>Laurent Montel</holder>
+</copyright>
+
+<date>2016-07-27</date>
+<releaseinfo>5.3.40 (Applications 16.08)</releaseinfo>
+
+</articleinfo>
+
+<sect1 id="introduction">
+<title>Introduction</title>
+
+<para>&i18n-importwizard; allows to import emails, settings, addressbook and calendar data detected in
+your user account from the following mailers:</para>
+
+<para>
+<application>Trojitá</application>, <application>Evolution 1.x - 3.x</application>,
+<application>OS X Mail</application>, <application>Opera</application>,
+<application>Sylpheed</application>, <application>Thunderbird/Mozilla</application>,
+<application>The Bat!</application>, <application>Outlook Express</application>,
+<application>Balsa</application>, <application>Pegasus-Mail</application>,
+and <application>Claws Mail</application>
+</para>
+
+<para>Additionally you can use the manual import for <application>KMail Archive</application>,
+<application>mbox (Unix, Evolution)</application>, &kmail; Maildirs, <application>Icedove</application>,
+<application>Lotus Notes</application>, <application>Plain Text</application>
+and <application>Mailman</application> Archives.
+</para>
+
+<para>
+If no mail data are detected automatically then click on <guibutton>Manual Selection</guibutton>
+in the start window and use the <link linkend="manual-import">Manual Import</link> features.
+</para>
+
+<para>You can start &i18n-importwizard; directly from the application launcher or from &kmail;
+with <menuchoice><guimenu>Tools</guimenu><guimenuitem>Import Wizard</guimenuitem></menuchoice>
+for automatic detection or from &kmail; with <menuchoice><guimenu>File</guimenu>
+<guimenuitem>Import Messages</guimenuitem></menuchoice> for manual import.
+</para>
+
+<note>
+<para>Close &kmail; before importing data. Some plugins will modify &kmail;'s configuration file.</para>
+</note>
+
+<para>For information about other utilities to import mails please read the
+<ulink url="help:/pimsettingexporter">PIM Setting Exporter</ulink> handbook.</para>
+
+<sect2 id="detected-mailers">
+<title>Detected Mail Applications</title>
+
+<para>At startup the import wizard will detect all supported email applications,
+and list them for you in the window. Select the email application you want to import from,
+and click the <guibutton>Next</guibutton> button. The wizard will then ask if you want to import everything,
+or give you options to select which types of materials you want to import.</para>
+
+<screenshot>
+<screeninfo>Import Selection</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="import-selection.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase>Import Selection</phrase>
+    </textobject>
+    <caption>
+      <para>Import Selection</para>
+    </caption>
+  </mediaobject>
+</screenshot>
+
+<para>Depending on your selections in the materials to import screen,
+you will see one or more of the following screens:</para>
+
+<itemizedlist>
+
+<listitem><para>To import mail messages, you need to
+select the folder you want your email messages to import into. 
+Once selected, click the <guibutton>Import Mails</guibutton> button.
+Once the progress bar reaches 100%, click the <guibutton>Next</guibutton> button, 
+or the <guibutton>Finish</guibutton> button, if this was your last material 
+selection.</para></listitem>
+
+<listitem><para>To import mail filters, click the <guibutton>Import
+Filters</guibutton> button and it will import any filters it found, once finished click 
+the <guibutton>Next</guibutton> button, or the <guibutton>Finish</guibutton> button, 
+if this was your last material selection.</para></listitem>
+
+<listitem><para>To import settings, click the <guibutton>Import
+Settings</guibutton> button. The wizard will ask you some questions &eg; which folder 
+to use for account folders that do not exist. The wizard will also create your identity. 
+Once complete, click the <guibutton>Next</guibutton> button, or the <guibutton>Finish</guibutton> 
+button, if this was your last material selection.</para></listitem>
+
+<listitem><para>To import address books or calendars, click the <guibutton>Import
+address book</guibutton> or <guibutton>Import Calendar</guibutton> button, and it
+will import all address books or calendars it finds.
+Once complete, click the <guibutton>Next</guibutton> button.</para></listitem>
+</itemizedlist>
+
+<para>Click the <guibutton>Finish</guibutton> button to complete and exit the wizard. 
+If at any time you wish to end the wizard, you can click the <guibutton>Cancel</guibutton> 
+button.</para>
+
+</sect2>
+
+<sect2 id="manual-import">
+<title>Manual Import</title>
+
+<para>
+<screenshot>
+<screeninfo>Manual Import</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="manual-import.png" format="PNG" />
+    </imageobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note><para> Please make sure that you compact your folders in the other email client.</para></note>
+<para>Select your previous email program from the drop down box. The center text area of the dialog will update
+ with special instructions (if applicable), and the known location of email message storage for that application.
+ Follow these instructions, then select the folder you wish to import your messages to.</para>
+<para>If you want to remove duplicate messages, check <guilabel>Remove duplicate messages during import</guilabel>.
+ A file select dialog will pop up and you need to select the file/folder noted in the instructions.
+ Click the <guibutton>Next</guibutton> button to complete the import. When the import is finished you
+ can click the <guibutton>Back</guibutton> button to import from another application or the <guibutton>Finish</guibutton> button to exit.
+</para>
+</sect2>
+
+</sect1>
+
+<sect1 id="credits">
+
+<title>Credits and License</title>
+
+<para>&i18n-importwizard;</para>
+<para>
+Program copyright 2013 Laurent Montel montel@kde.org
+</para>
+<para>Section Manual Import is a modified copy of the KMailCVT handbook</para>
+<para>
+Documentation Copyright &copy; 2013 Laurent Montel montel@kde.org
+and Scarlett Clark scarlett@scarlettgatelyclark.com
+</para>
+
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+
+&underFDL;               <!-- FDL: do not remove -->
+&underGPL;        	 <!-- GPL License -->
+</sect1>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

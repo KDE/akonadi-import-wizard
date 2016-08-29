@@ -90,5 +90,6 @@ add_subdirectory(src)
 install( FILES importwizard.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
 
 if ("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
+    add_subdirectory(doc)
     feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 endif()
