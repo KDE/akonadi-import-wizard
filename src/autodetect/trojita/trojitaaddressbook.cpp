@@ -64,7 +64,7 @@ void TrojitaAddressBook::readAddressBook()
         url.setUrl(QUrl(settings->value(QStringLiteral("url")).toString()));
         contactABC.setUrl(url);
 
-        const QDateTime birthDate(QDate::fromString(settings->value(QStringLiteral("anniversary")).toString()));
+        const QDate birthDate = QDate::fromString(settings->value(QStringLiteral("anniversary")).toString());
         if (birthDate.isValid()) {
             contactABC.setBirthday(birthDate);
         }

@@ -245,7 +245,7 @@ void ThunderBirdAddressBook::readAddressBook(const QString &filename)
                                 contact.insertAddress(workAddr);
                             }
 
-                            const QDateTime birthDate(QDate(birthyear, birthmonth, birthday));
+                            const QDate birthDate(birthyear, birthmonth, birthday);
                             if (birthDate.isValid()) {
                                 contact.setBirthday(birthDate);
                             }
