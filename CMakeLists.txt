@@ -85,7 +85,7 @@ include_directories(
 
 add_subdirectory(src)
 
-install( FILES importwizard.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
+install( FILES importwizard.renamecategories importwizard.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
 
 add_subdirectory(doc)
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
