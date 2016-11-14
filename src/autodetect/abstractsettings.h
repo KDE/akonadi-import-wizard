@@ -39,6 +39,7 @@ class Transport;
 
 class AbstractSettings : public AbstractBase
 {
+    Q_OBJECT
 public:
     explicit AbstractSettings(ImportWizard *parent);
     ~AbstractSettings();

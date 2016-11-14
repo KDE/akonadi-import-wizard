@@ -27,6 +27,7 @@ class ImportWizard;
 
 class ThunderBirdAddressBook: public AbstractAddressBook
 {
+    Q_OBJECT
 public:
     explicit ThunderBirdAddressBook(const QDir &dir, ImportWizard *parent);
     ~ThunderBirdAddressBook();

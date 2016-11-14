@@ -29,6 +29,7 @@ class ImportWizard;
 
 class SylpheedAddressBook : public AbstractAddressBook
 {
+    Q_OBJECT
 public:
     explicit SylpheedAddressBook(const QDir &dir, ImportWizard *parent);
     ~SylpheedAddressBook();

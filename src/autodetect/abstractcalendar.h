@@ -27,6 +27,7 @@ class ImportWizard;
 
 class AbstractCalendar : public AbstractBase
 {
+    Q_OBJECT
 public:
     explicit AbstractCalendar(ImportWizard *parent);
     virtual ~AbstractCalendar();

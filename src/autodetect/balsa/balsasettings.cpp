@@ -76,7 +76,7 @@ void BalsaSettings::readAccount(const KConfigGroup &grp, bool autoCheck, int aut
 
         const bool apop = grp.readEntry(QStringLiteral("DisableApop"), false);
         Q_UNUSED(apop);
-        const QString agentIdentifyName = AbstractBase::createResource("akonadi_pop3_resource", name, settings);
+        const QString agentIdentifyName = AbstractBase::createResource(QStringLiteral("akonadi_pop3_resource"), name, settings);
 
         addCheckMailOnStartup(agentIdentifyName, autoCheck);
         addToManualCheck(agentIdentifyName, check);
@@ -86,7 +86,7 @@ void BalsaSettings::readAccount(const KConfigGroup &grp, bool autoCheck, int aut
         const QString server = grp.readEntry(QStringLiteral("Server"));
         settings.insert(QStringLiteral("ImapServer"), server);
         const QString name = grp.readEntry(QStringLiteral("Name"));
-        const QString agentIdentifyName = AbstractBase::createResource("akonadi_imap_resource", name, settings);
+        const QString agentIdentifyName = AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, settings);
         addCheckMailOnStartup(agentIdentifyName, autoCheck);
         addToManualCheck(agentIdentifyName, check);
     } else {

@@ -97,7 +97,7 @@ void OperaSettings::readAccount(const KConfigGroup &grp)
             settings.insert(QStringLiteral("IntervalCheckTime"), pollInterval);
         }
 
-        const QString agentIdentifyName = AbstractBase::createResource("akonadi_imap_resource", name, settings);
+        const QString agentIdentifyName = AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, settings);
         addToManualCheck(agentIdentifyName, enableManualCheck);
         //We have not settings for it => same than manual check
         addCheckMailOnStartup(agentIdentifyName, enableManualCheck);
@@ -163,7 +163,7 @@ void OperaSettings::readAccount(const KConfigGroup &grp)
             break;
         }
 
-        const QString agentIdentifyName = AbstractBase::createResource("akonadi_pop3_resource", name, settings);
+        const QString agentIdentifyName = AbstractBase::createResource(QStringLiteral("akonadi_pop3_resource"), name, settings);
         //We have not settings for it => same than manual check
         addCheckMailOnStartup(agentIdentifyName, enableManualCheck);
         addToManualCheck(agentIdentifyName, enableManualCheck);

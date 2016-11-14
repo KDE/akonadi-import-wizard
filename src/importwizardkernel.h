@@ -35,6 +35,7 @@ class FolderCollectionMonitor;
 
 class ImportWizardKernel : public QObject, public MailCommon::IKernel, public MailCommon::ISettings
 {
+    Q_OBJECT
 public:
     explicit ImportWizardKernel(QObject *parent = Q_NULLPTR);
 
