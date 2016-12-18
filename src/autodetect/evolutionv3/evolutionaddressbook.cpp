@@ -69,7 +69,7 @@ void EvolutionAddressBook::exportEvolutionAddressBook()
             int i = 0;
             QString name;
             QString displayname;
-            Q_FOREACH (const QString &arg, listAddressBook) {
+            for (const QString &arg : listAddressBook) {
                 switch (i) {
                 case 0:
                     name = arg;

@@ -30,13 +30,13 @@ ThunderBirdAddressBook::ThunderBirdAddressBook(const QDir &dir, ImportWizard *pa
 {
     readAddressBook(dir.path() + QLatin1String("/impab.mab"));
     const QStringList filesimportab = dir.entryList(QStringList(QStringLiteral("impab-[0-9]*.map")), QDir::Files, QDir::Name);
-    Q_FOREACH (const QString &file, filesimportab) {
+    for (const QString &file : filesimportab) {
         readAddressBook(dir.path() + QLatin1Char('/') + file);
     }
     readAddressBook(dir.path() + QLatin1String("/abook.mab"));
 
     const QStringList files = dir.entryList(QStringList(QStringLiteral("abook-[0-9]*.map")), QDir::Files, QDir::Name);
-    Q_FOREACH (const QString &file, files) {
+    for (const QString &file : files) {
         readAddressBook(dir.path() + QLatin1Char('/') + file);
     }
     readAddressBook(dir.path() + QLatin1String("/history.mab"));

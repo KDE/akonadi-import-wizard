@@ -545,7 +545,7 @@ QString EvolutionSettings::getSecurityMethod(const QStringList &listArgument, bo
     if (listArgument.isEmpty()) {
         return QString();
     }
-    Q_FOREACH (const QString &str, listArgument) {
+    for (const QString &str : listArgument) {
         if (str.contains(QStringLiteral("security-method="))) {
             const int index = str.indexOf(QLatin1String("security-method="));
             if (index != -1) {

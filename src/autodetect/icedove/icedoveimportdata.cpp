@@ -114,12 +114,12 @@ bool IcedoveImportData::importFilters()
         return true;
     }
 
-    Q_FOREACH (const QString &mailPath, subDir) {
+    for (const QString &mailPath : subDir) {
         const QString subMailPath(path + QLatin1Char('/') + mailPath);
         QDir dirMail(subMailPath);
         const QStringList subDirMail = dirMail.entryList(QDir::AllDirs | QDir::NoDotAndDotDot, QDir::Name);
         bool foundFilterFile = false;
-        Q_FOREACH (const QString &file, subDirMail) {
+        for (const QString &file : subDirMail) {
             const QString filterFile(subMailPath + QLatin1Char('/') + file + QLatin1String("/msgFilterRules.dat"));
             if (QFile(filterFile).exists()) {
                 foundFilterFile = true;

@@ -41,7 +41,7 @@ BalsaAddressBook::BalsaAddressBook(const QString &filename, ImportWizard *parent
     if (addressBookList.isEmpty()) {
         addAddressBookImportInfo(i18n("No addressbook found"));
     } else {
-        Q_FOREACH (const QString &addressbook, addressBookList) {
+        for (const QString &addressbook : addressBookList) {
             KConfigGroup grp = config.group(addressbook);
             readAddressBook(grp);
         }

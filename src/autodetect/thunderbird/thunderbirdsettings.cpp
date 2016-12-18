@@ -652,7 +652,7 @@ void ThunderbirdSettings::readAccount()
         const QString identityConfig = QStringLiteral("mail.account.%1").arg(account) + QStringLiteral(".identities");
         if (mHashConfig.contains(identityConfig)) {
             const QStringList idList = mHashConfig.value(identityConfig).toString().split(QLatin1Char(','));
-            Q_FOREACH (const QString &id, idList) {
+            for (const QString &id : idList) {
                 readIdentity(id);
             }
         }
@@ -665,14 +665,14 @@ void ThunderbirdSettings::readTransport()
     if (mailSmtpServer.isEmpty()) {
         return;
     }
-    QStringList smtpList = mailSmtpServer.split(QLatin1Char(','));
+    const QStringList smtpList = mailSmtpServer.split(QLatin1Char(','));
     QString defaultSmtp = mHashConfig.value(QStringLiteral("mail.smtp.defaultserver")).toString();
     if (smtpList.count() == 1 && defaultSmtp.isEmpty()) {
         //Be sure to define default smtp
         defaultSmtp = smtpList.at(0);
     }
 
-    Q_FOREACH (const QString &smtp, smtpList) {
+    for (const QString &smtp : smtpList) {
         const QString smtpName = QStringLiteral("mail.smtpserver.%1").arg(smtp);
         MailTransport::Transport *mt = createTransport();
         const QString name = mHashConfig.value(smtpName + QStringLiteral(".description")).toString();

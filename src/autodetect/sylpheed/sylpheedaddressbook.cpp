@@ -35,7 +35,7 @@ SylpheedAddressBook::SylpheedAddressBook(const QDir &dir, ImportWizard *parent)
         addAddressBookImportInfo(i18n("No addressbook found"));
     }
 
-    Q_FOREACH (const QString &file, files) {
+    for (const QString &file : files) {
         readAddressBook(dir.path() + QLatin1Char('/') + file);
     }
     cleanUp();
