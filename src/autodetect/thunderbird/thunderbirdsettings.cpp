@@ -840,7 +840,7 @@ void ThunderbirdSettings::readIdentity(const QString &account)
         KContacts::VCardConverter converter;
         KContacts::Addressee addr = converter.parseVCard(vcard);
 
-        const QString filename = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + QLatin1Char('/') + newIdentity->identityName() + QStringLiteral(".vcf");
+        const QString filename = QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + QLatin1Char('/') + newIdentity->identityName() + QStringLiteral(".vcf");
         QFileInfo fileInfo(filename);
         QDir().mkpath(fileInfo.absolutePath());
         QFile file(filename);
