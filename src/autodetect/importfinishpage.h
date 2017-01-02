@@ -30,7 +30,7 @@ class ImportFinishPage : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ImportFinishPage(QWidget *parent = Q_NULLPTR);
+    explicit ImportFinishPage(QWidget *parent = nullptr);
     ~ImportFinishPage();
 
     void addImportInfo(const QString &log);

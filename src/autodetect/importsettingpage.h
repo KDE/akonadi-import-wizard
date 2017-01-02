@@ -31,7 +31,7 @@ class ImportSettingPage : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ImportSettingPage(QWidget *parent = Q_NULLPTR);
+    explicit ImportSettingPage(QWidget *parent = nullptr);
     ~ImportSettingPage();
     void addImportInfo(const QString &log);
     void addImportError(const QString &log);

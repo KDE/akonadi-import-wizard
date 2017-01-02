@@ -32,7 +32,7 @@ class SelectComponentPage : public QWidget
     Q_OBJECT
 
 public:
-    explicit SelectComponentPage(QWidget *parent = Q_NULLPTR);
+    explicit SelectComponentPage(QWidget *parent = nullptr);
     ~SelectComponentPage();
 
     void setEnabledComponent(AbstractImporter::TypeSupportedOptions options);

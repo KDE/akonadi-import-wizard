@@ -41,7 +41,7 @@ class ImportMailPage : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ImportMailPage(QWidget *parent = Q_NULLPTR);
+    explicit ImportMailPage(QWidget *parent = nullptr);
     ~ImportMailPage();
     MailImporter::ImportMailsWidget *mailWidget();
     Akonadi::Collection selectedCollection() const;

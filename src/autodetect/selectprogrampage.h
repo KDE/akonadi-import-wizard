@@ -34,7 +34,7 @@ class SelectProgramPage : public QWidget
     Q_OBJECT
 
 public:
-    explicit SelectProgramPage(QWidget *parent = Q_NULLPTR);
+    explicit SelectProgramPage(QWidget *parent = nullptr);
     ~SelectProgramPage();
 
     void setFoundProgram(const QStringList &list);

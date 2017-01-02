@@ -49,7 +49,7 @@ public:
         Manual = 1
     };
 
-    explicit ImportWizard(WizardMode mode, QWidget *parent = Q_NULLPTR);
+    explicit ImportWizard(WizardMode mode, QWidget *parent = nullptr);
     ~ImportWizard();
 
     void next() Q_DECL_OVERRIDE;

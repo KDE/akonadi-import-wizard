@@ -32,7 +32,7 @@ class ImportAddressbookPage : public QWidget
     Q_OBJECT
 
 public:
-    explicit ImportAddressbookPage(QWidget *parent = Q_NULLPTR);
+    explicit ImportAddressbookPage(QWidget *parent = nullptr);
     ~ImportAddressbookPage();
 
     void addImportInfo(const QString &log);
