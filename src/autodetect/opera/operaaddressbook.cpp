@@ -35,7 +35,7 @@ OperaAddressBook::OperaAddressBook(const QString &filename, ImportWizard *parent
 
     QTextStream stream(&file);
     bool foundContact = false;
-    KContacts::Addressee *contact = 0;
+    KContacts::Addressee *contact = nullptr;
     while (!stream.atEnd()) {
         QString line = stream.readLine();
         if (line == QLatin1String("#CONTACT")) {
@@ -89,6 +89,6 @@ void OperaAddressBook::appendContact(KContacts::Addressee *contact)
         addImportContactNote(*contact, QStringLiteral("Opera"));
         createContact(*contact);
         delete contact;
-        contact = 0;
+        contact = nullptr;
     }
 }

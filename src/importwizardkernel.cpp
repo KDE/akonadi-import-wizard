@@ -75,7 +75,7 @@ void ImportWizardKernel::syncConfig()
 MailCommon::JobScheduler *ImportWizardKernel::jobScheduler() const
 {
     Q_ASSERT(false);
-    return 0;
+    return nullptr;
 }
 
 Akonadi::ChangeRecorder *ImportWizardKernel::folderCollectionMonitor() const

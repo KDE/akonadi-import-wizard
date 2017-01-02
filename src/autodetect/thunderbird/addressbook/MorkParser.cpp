@@ -70,7 +70,7 @@ void MorkParser::initVars()
     mError = NoError;
     mMorkPos = 0;
     nowParsing_ = NPValues;
-    mCurrentCells = 0;
+    mCurrentCells = nullptr;
     mNextAddValueId = 0x7fffffff;
 }
 
@@ -267,7 +267,7 @@ bool MorkParser::parseCell()
             QString HexChar;
             HexChar += nextChar();
             HexChar += nextChar();
-            Text += (char) HexChar.toInt(0, 16);
+            Text += (char) HexChar.toInt(nullptr, 16);
         }
         break;
         default:
@@ -284,7 +284,7 @@ bool MorkParser::parseCell()
     }
     Q_UNUSED(bColumnOid);
     // Apply column and text
-    int ColumnId = Column.toInt(0, 16);
+    int ColumnId = Column.toInt(nullptr, 16);
 
     if (NPRows != nowParsing_) {
         // Dicts
@@ -300,7 +300,7 @@ bool MorkParser::parseCell()
     } else {
         if (!Text.isEmpty()) {
             // Rows
-            int ValueId = Text.toInt(0, 16);
+            int ValueId = Text.toInt(nullptr, 16);
 
             if (bValueOid) {
                 (*mCurrentCells)[ ColumnId ] = ValueId;
@@ -391,10 +391,10 @@ void MorkParser::parseScopeId(const QString &textId, int &Id, int &Scope)
             tSc.remove(0, 1);
         }
 
-        Id =  tId.toInt(0, 16);
-        Scope = tSc.toInt(0, 16);
+        Id =  tId.toInt(nullptr, 16);
+        Scope = tSc.toInt(nullptr, 16);
     } else {
-        Id = textId.toInt(0, 16);
+        Id = textId.toInt(nullptr, 16);
     }
 }
 
@@ -491,7 +491,7 @@ MorkTableMap *MorkParser::getTables(int TableScope)
     iter = mMork.find(TableScope);
 
     if (iter == mMork.end()) {
-        return 0;
+        return nullptr;
     }
 
     return &iter.value();
@@ -506,7 +506,7 @@ MorkRowMap *MorkParser::getRows(int RowScope, RowScopeMap *table)
     iter = table->find(RowScope);
 
     if (iter == table->end()) {
-        return 0;
+        return nullptr;
     }
 
     return &iter.value();

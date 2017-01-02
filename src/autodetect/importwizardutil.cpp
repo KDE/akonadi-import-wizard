@@ -93,7 +93,7 @@ void ImportWizardUtil::addAkonadiTag(const QVector<tagStruct> &tagList)
 
 void ImportWizardUtil::storeInKWallet(const QString &name, ImportWizardUtil::ResourceType type, const QString &password)
 {
-    KWallet::Wallet *wallet = 0;
+    KWallet::Wallet *wallet = nullptr;
     switch (type) {
     case Imap:
         wallet = KWallet::Wallet::openWallet(KWallet::Wallet::NetworkWallet(), 0);
