@@ -103,8 +103,11 @@ void BalsaSettings::readIdentity(const KConfigGroup &grp)
     newIdentity->setReplyToAddr(grp.readEntry(QStringLiteral("ReplyTo")));
     newIdentity->setBcc(grp.readEntry(QStringLiteral("Bcc")));
     const QString smtp = grp.readEntry(QStringLiteral("SmtpServer"));
-    if (!smtp.isEmpty() && mHashSmtp.contains(smtp)) {
-        newIdentity->setTransport(mHashSmtp.value(smtp));
+    if (!smtp.isEmpty()) {
+        const QString val = mHashSmtp.value(smtp);
+        if (val.isEmpty()) {
+            newIdentity->setTransport(val);
+        }
     }
 
     const QString signaturePath = grp.readEntry(QStringLiteral("SignaturePath"));
