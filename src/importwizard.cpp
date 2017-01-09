@@ -289,8 +289,9 @@ void ImportWizard::slotImportCalendarClicked()
 
 void ImportWizard::slotProgramSelected(const QString &program)
 {
-    if (mlistImport.contains(program)) {
-        mSelectedPim = mlistImport.value(program);
+    AbstractImporter *importer = mlistImport.value(program);
+    if (importer) {
+        mSelectedPim = importer;
         setValid(currentPage(), true);
     }
 }
