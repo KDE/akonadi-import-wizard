@@ -26,7 +26,7 @@ class SelectProgramListWidget : public QListWidget
 {
     Q_OBJECT
 public:
-    explicit SelectProgramListWidget(QWidget *parent = Q_NULLPTR);
+    explicit SelectProgramListWidget(QWidget *parent = nullptr);
     ~SelectProgramListWidget();
 
     void setNoProgramFound(bool noProgramFound);

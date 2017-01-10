@@ -24,7 +24,7 @@ class ManualImportMailPage : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ManualImportMailPage(QWidget *parent = Q_NULLPTR);
+    explicit ManualImportMailPage(QWidget *parent = nullptr);
     ~ManualImportMailPage();
 
     Ui::ManualImportMailPage *widget() const;

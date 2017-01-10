@@ -29,7 +29,7 @@ class ManualSelectFilterPage : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ManualSelectFilterPage(QWidget *parent = Q_NULLPTR);
+    explicit ManualSelectFilterPage(QWidget *parent = nullptr);
     ~ManualSelectFilterPage();
 
     void  addFilter(MailImporter::Filter *f);
