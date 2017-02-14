@@ -100,22 +100,22 @@ void AbstractImporter::appendFilters(const QList<MailCommon::MailFilter *> &filt
     }
 }
 
-void AbstractImporter::addImportFilterInfo(const QString &log)
+void AbstractImporter::addImportFilterInfo(const QString &log) const
 {
     mImportWizard->importFilterPage()->addImportInfo(log);
 }
 
-void AbstractImporter::addImportFilterError(const QString &log)
+void AbstractImporter::addImportFilterError(const QString &log) const
 {
     mImportWizard->importFilterPage()->addImportError(log);
 }
 
-void AbstractImporter::addImportSettingsInfo(const QString &log)
+void AbstractImporter::addImportSettingsInfo(const QString &log) const
 {
     mImportWizard->importSettingPage()->addImportError(log);
 }
 
-void AbstractImporter::addImportCalendarInfo(const QString &log)
+void AbstractImporter::addImportCalendarInfo(const QString &log) const
 {
     mImportWizard->importCalendarPage()->addImportError(log);
 }

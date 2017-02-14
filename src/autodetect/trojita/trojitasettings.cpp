@@ -85,7 +85,7 @@ void TrojitaSettings::readImapAccount()
     }
 
     if (settings->contains(QStringLiteral("imap.offline"))) {
-        const bool offlineStatus = settings->value(QStringLiteral("imap.offline")).toBool();
+        //const bool offlineStatus = settings->value(QStringLiteral("imap.offline")).toBool();
         //It's not a deconnected mode as imap disconnected #317023
         //Will implement soon.
         //TODO use akonadi cache.

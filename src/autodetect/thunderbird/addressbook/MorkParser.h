@@ -94,10 +94,10 @@ protected: // Members
 
     void initVars();
 
-    bool isWhiteSpace(char c);
+    bool isWhiteSpace(char c) const;
     char nextChar();
 
-    void parseScopeId(const QString &TextId, int &Id, int &Scope);
+    void parseScopeId(const QString &TextId, int &Id, int &Scope) const;
     void setCurrentRow(int TableScope, int TableId, int RowScope, int RowId);
 
     // Parse methods

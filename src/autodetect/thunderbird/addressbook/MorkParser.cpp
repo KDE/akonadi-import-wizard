@@ -126,7 +126,7 @@ bool MorkParser::parse()
 //        =============================================================
 //        MorkParser::isWhiteSpace
 
-bool MorkParser::isWhiteSpace(char c)
+bool MorkParser::isWhiteSpace(char c) const
 {
     switch (c) {
     case ' ':
@@ -378,7 +378,7 @@ bool MorkParser::parseTable()
 //        =============================================================
 //        MorkParser::parseScopeId
 
-void MorkParser::parseScopeId(const QString &textId, int &Id, int &Scope)
+void MorkParser::parseScopeId(const QString &textId, int &Id, int &Scope) const
 {
     int Pos = 0;
 

@@ -89,6 +89,5 @@ void OperaAddressBook::appendContact(KContacts::Addressee *contact)
         addImportContactNote(*contact, QStringLiteral("Opera"));
         createContact(*contact);
         delete contact;
-        contact = nullptr;
     }
 }
