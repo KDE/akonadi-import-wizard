@@ -19,6 +19,7 @@
 
 #include "balsaaddressbook.h"
 #include "importwizardutil.h"
+#include "helper_p.h"
 
 #include <KContacts/Addressee>
 #include <KContacts/LDIFConverter>
@@ -89,7 +90,7 @@ void BalsaAddressBook::readAddressBook(const KConfigGroup &grp)
                 file.close();
 
                 KContacts::LDIFConverter::LDIFToAddressee(wholeFile, contacts, contactsGroup, dtDefault);
-                Q_FOREACH (KContacts::Addressee contact, contacts) {
+                for (KContacts::Addressee contact : qAsConst(contacts)) {
                     addImportContactNote(contact, QStringLiteral("Balsa"));
                     createContact(contact);
                 }

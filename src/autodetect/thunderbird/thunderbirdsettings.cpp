@@ -21,6 +21,7 @@
 #include <MailTransport/mailtransport/transportmanager.h>
 #include "MailCommon/MailUtil"
 #include "importwizardutil.h"
+#include "helper_p.h"
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>
 #include <KIdentityManagement/kidentitymanagement/signature.h>
@@ -273,7 +274,7 @@ void ThunderbirdSettings::readTagSettings()
 {
     QVector<tagStruct> v;
     v.reserve(mHashTag.size());
-    foreach (const tagStruct &tag, mHashTag) {
+    for (const tagStruct &tag : qAsConst(mHashTag)) {
         v.push_back(tag);
     }
 
@@ -283,7 +284,7 @@ void ThunderbirdSettings::readTagSettings()
 void ThunderbirdSettings::readLdapSettings()
 {
     //qCDebug(IMPORTWIZARD_LOG)<<" mLdapAccountList:"<<mLdapAccountList;
-    Q_FOREACH (const QString &ldapAccountName, mLdapAccountList) {
+    for (const QString &ldapAccountName : qAsConst(mLdapAccountList)) {
         ldapStruct ldap;
         const QString ldapDescription = QStringLiteral("%1.description").arg(ldapAccountName);
         if (mHashConfig.contains(ldapDescription)) {
@@ -482,7 +483,7 @@ void ThunderbirdSettings::addAuth(QMap<QString, QVariant> &settings, const QStri
 
 void ThunderbirdSettings::readAccount()
 {
-    Q_FOREACH (const QString &account, mAccountList) {
+    for (const QString &account : qAsConst(mAccountList)) {
         const QString serverName = mHashConfig.value(QStringLiteral("mail.account.%1").arg(account) + QStringLiteral(".server")).toString();
         const QString accountName = QStringLiteral("mail.server.%1").arg(serverName);
         const QString host = mHashConfig.value(accountName + QStringLiteral(".hostname")).toString();
@@ -491,7 +492,7 @@ void ThunderbirdSettings::readAccount()
 
         const QString type = mHashConfig.value(accountName + QStringLiteral(".type")).toString();
         //TODO use it ?
-        const QString directory = mHashConfig.value(accountName + QStringLiteral(".directory")).toString();
+        //const QString directory = mHashConfig.value(accountName + QStringLiteral(".directory")).toString();
 
         const QString loginAtStartupStr = accountName + QStringLiteral(".login_at_startup");
         bool loginAtStartup = true; //Default for thunderbird;
