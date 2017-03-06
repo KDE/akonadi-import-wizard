@@ -21,7 +21,7 @@
 #include "importwizard_debug.h"
 #include "mailimporter/filteropera.h"
 
-#include <MailTransport/mailtransport/transportmanager.h>
+#include <mailtransport/transportmanager.h>
 #include "MailCommon/MailUtil"
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>

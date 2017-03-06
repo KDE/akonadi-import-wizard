@@ -18,7 +18,7 @@
 */
 
 #include "thunderbirdsettings.h"
-#include <MailTransport/mailtransport/transportmanager.h>
+#include <mailtransport/transportmanager.h>
 #include "MailCommon/MailUtil"
 #include "importwizardutil.h"
 #include "helper_p.h"

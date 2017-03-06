@@ -22,7 +22,7 @@
 
 #include <KIdentityManagement/kidentitymanagement/identitymanager.h>
 #include <KIdentityManagement/kidentitymanagement/identity.h>
-#include <MailTransport/mailtransport/transportmanager.h>
+#include <mailtransport/transportmanager.h>
 
 #include <KLocalizedString>
 #include <KSharedConfig>

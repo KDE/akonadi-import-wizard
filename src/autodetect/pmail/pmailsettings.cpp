@@ -20,7 +20,7 @@
 #include "pmailsettings.h"
 #include "importwizardutil.h"
 
-#include <MailTransport/mailtransport/transportmanager.h>
+#include <mailtransport/transportmanager.h>
 #include "MailCommon/MailUtil"
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>
