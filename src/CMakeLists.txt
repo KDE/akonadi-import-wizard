@@ -94,7 +94,7 @@ target_link_libraries(importwizard
     KF5::DBusAddons
     KF5::XmlGui
     KF5::MailImporter
-    KF5::PimCommonAkonadi
+    KF5::PimCommon
     KF5::MailCommon
     KF5::Libkdepim
     KF5::MessageComposer
