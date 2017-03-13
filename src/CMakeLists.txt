@@ -65,6 +65,9 @@ set(importwizard_autodetect_SRCS
     autodetect/trojita/trojitaimportdata.cpp
     autodetect/trojita/trojitaaddressbook.cpp
     autodetect/icedove/icedoveimportdata.cpp
+    autodetect/geary/gearysettings.cpp
+    autodetect/geary/gearyimportdata.cpp
+    autodetect/geary/gearyaddressbook.cpp
     )
 
 
