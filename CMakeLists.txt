@@ -83,6 +83,10 @@ include_directories(
     ${akonadi-import-wizard_SOURCE_DIR}/src/autodetect/
     )
 
+if(BUILD_TESTING)
+   add_definitions(-DBUILD_TESTING)
+endif(BUILD_TESTING)
+
 add_subdirectory(src)
 
 install( FILES importwizard.renamecategories importwizard.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
