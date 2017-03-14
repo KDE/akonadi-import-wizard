@@ -24,6 +24,7 @@
 #include "mailimporter/othermailerutil.h"
 #include "importfilterinfogui.h"
 #include "importwizard.h"
+#include "importwizard_debug.h"
 
 #include <QDir>
 
@@ -58,7 +59,18 @@ bool GearyImportData::importMails()
 
 bool GearyImportData::importSettings()
 {
-    return false;
+    QDir directory(mPath);
+    const QStringList lstDir = directory.entryList(QDir::AllDirs);
+    qCDebug(IMPORTWIZARD_LOG) << "Number of directory " << lstDir.count();
+    const QString configName = QStringLiteral("geary.ini");
+    for (int i = 0; i < lstDir.count(); ++i) {
+        const QString fullPath = lstDir.at(i) + QDir::separator() + configName;
+        QFile f(fullPath);
+        if (f.exists()) {
+            GearySettings setting(fullPath, mImportWizard);
+        }
+    }
+    return true;
 }
 
 bool GearyImportData::importAddressBook()
