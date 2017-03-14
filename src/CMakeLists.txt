@@ -3,19 +3,18 @@
 configure_file(importwizard-version.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/importwizard-version.h @ONLY)
 add_subdirectory(icons)
 add_subdirectory(kconf_update)
-set(importwizard_SRCS
-    importwizardkernel.cpp
-    importwizard.cpp
-    main.cpp
-    )
 
-set(importwizard_manual_SRCS
+set(libimportwizard_SRCS
+    importwizard.cpp
+    importwizardkernel.cpp
+    )
+set(libimportwizard_manual_SRCS
     manual/manualimportmailpage.cpp
     manual/importwizardfilterinfogui.cpp
     manual/manualselectfilterpage.cpp
     )
 
-set(importwizard_autodetect_SRCS
+set(libimportwizard_autodetect_SRCS
     autodetect/widgets/selectprogramlistwidget.cpp
     autodetect/importwizardutil.cpp
     autodetect/selectprogrampage.cpp
@@ -71,7 +70,7 @@ set(importwizard_autodetect_SRCS
     )
 
 
-ki18n_wrap_ui(importwizard_SRCS 
+ki18n_wrap_ui(libimportwizard_SRCS
     ui/autodetect/selectprogrampage.ui
     ui/autodetect/importaddressbookpage.ui
     ui/autodetect/importfilterpage.ui
@@ -84,17 +83,20 @@ ki18n_wrap_ui(importwizard_SRCS
     ui/manual/manualselectfilterpage.ui
     )
 
-ecm_qt_declare_logging_category(importwizard_SRCS HEADER importwizard_debug.h IDENTIFIER IMPORTWIZARD_LOG CATEGORY_NAME org.kde.pim.importwizard)
+ecm_qt_declare_logging_category(libimportwizard_SRCS HEADER importwizard_debug.h IDENTIFIER IMPORTWIZARD_LOG CATEGORY_NAME org.kde.pim.importwizard)
 
 file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/icons/*-apps-kontact-import-wizard.png")
 ecm_add_app_icon(importwizard_SRCS ICONS ${ICONS_SRCS})
 
-add_executable(importwizard ${importwizard_SRCS} ${importwizard_autodetect_SRCS} ${importwizard_manual_SRCS})
 
-target_link_libraries(importwizard
+add_library(libimportwizard ${libimportwizard_autodetect_SRCS} ${libimportwizard_manual_SRCS} ${libimportwizard_SRCS})
+
+generate_export_header(libimportwizard BASE_NAME libimportwizard)
+
+target_link_libraries(libimportwizard
+    PRIVATE
     KF5::AkonadiCore
     KF5::MailTransport
-    KF5::DBusAddons
     KF5::XmlGui
     KF5::MailImporter
     KF5::PimCommon
@@ -105,10 +107,35 @@ target_link_libraries(importwizard
     KF5::Completion
     KF5::I18n
     KF5::Crash
+    KF5::CoreAddons
+    )
+
+set_target_properties(libimportwizard
+    PROPERTIES OUTPUT_NAME importwizard VERSION ${KDEPIM_LIB_VERSION} SOVERSION ${KDEPIM_LIB_SOVERSION}
+    )
+
+
+set(importwizard_SRCS
+    main.cpp
+    )
+
+add_executable(importwizard ${importwizard_SRCS})
+
+target_link_libraries(importwizard
+    libimportwizard
+    KF5::I18n
+    KF5::Crash
+    KF5::CoreAddons
+    KF5::DBusAddons
+    Qt5::Widgets
+    KF5::ConfigCore
+    KF5::WidgetsAddons
     )
 
 install(TARGETS importwizard  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(PROGRAMS data/org.kde.importwizard.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+
+install(TARGETS libimportwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
 add_subdirectory(manual/pics)
 

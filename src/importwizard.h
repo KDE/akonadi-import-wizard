@@ -20,6 +20,7 @@
 #define IMPORTWIZARD_H
 
 #include "abstractimporter.h"
+#include "libimportwizard_export.h"
 
 #include <KAssistantDialog>
 
@@ -40,7 +41,7 @@ namespace Akonadi
 {
 class Collection;
 }
-class ImportWizard : public KAssistantDialog
+class LIBIMPORTWIZARD_EXPORT ImportWizard : public KAssistantDialog
 {
     Q_OBJECT
 public:
