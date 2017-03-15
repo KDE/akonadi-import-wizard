@@ -30,7 +30,6 @@
 ImportWizardKernel::ImportWizardKernel(QObject *parent)
     : QObject(parent)
 {
-    mMessageSender = new MessageComposer::AkonadiSender(this);
     mIdentityManager = new KIdentityManagement::IdentityManager(false, this);
     Akonadi::Session *session = new Akonadi::Session("ImportWizard Kernel ETM", this);
     mFolderCollectionMonitor = new MailCommon::FolderCollectionMonitor(session, this);
@@ -54,7 +53,8 @@ KIdentityManagement::IdentityManager *ImportWizardKernel::identityManager()
 
 MessageComposer::MessageSender *ImportWizardKernel::msgSender()
 {
-    return mMessageSender;
+    Q_ASSERT(false);
+    return nullptr;
 }
 
 Akonadi::EntityMimeTypeFilterModel *ImportWizardKernel::collectionModel() const

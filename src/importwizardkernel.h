@@ -59,11 +59,9 @@ public:
 
 private:
     KIdentityManagement::IdentityManager *mIdentityManager;
-    MessageComposer::MessageSender *mMessageSender;
     MailCommon::FolderCollectionMonitor *mFolderCollectionMonitor;
     Akonadi::EntityTreeModel *mEntityTreeModel;
     Akonadi::EntityMimeTypeFilterModel *mCollectionModel;
-
 };
 
 #endif
