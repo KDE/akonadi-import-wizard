@@ -55,11 +55,9 @@ QString OperaImportData::name() const
 
 bool OperaImportData::importMails()
 {
-    MailImporter::FilterInfo *info = initializeInfo();
-
     MailImporter::FilterOpera opera;
-    opera.setFilterInfo(info);
-    info->setStatusMessage(i18n("Import in progress"));
+    initializeFilter(opera);
+    opera.filterInfo()->setStatusMessage(i18n("Import in progress"));
     const QString mailPath(mPath + QLatin1String("mail/store/"));
     QDir directory(mailPath);
     if (directory.exists()) {
@@ -67,9 +65,7 @@ bool OperaImportData::importMails()
     } else {
         opera.import();
     }
-    info->setStatusMessage(i18n("Import finished"));
-
-    delete info;
+    opera.filterInfo()->setStatusMessage(i18n("Import finished"));
     return true;
 }
 

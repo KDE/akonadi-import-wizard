@@ -26,6 +26,7 @@ class ImportWizard;
 namespace MailImporter
 {
 class FilterInfo;
+class Filter;
 }
 
 namespace MailCommon
@@ -73,7 +74,7 @@ public:
 
 protected:
     void appendFilters(const QList<MailCommon::MailFilter *> &filters);
-    MailImporter::FilterInfo *initializeInfo();
+    void initializeFilter(MailImporter::Filter &filter);
     void addImportFilterInfo(const QString &log) const;
     void addImportFilterError(const QString &log) const;
     bool addFilters(const QString &filterPath, MailCommon::FilterImporterExporter::FilterType type);

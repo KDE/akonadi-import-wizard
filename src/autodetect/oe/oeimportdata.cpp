@@ -56,20 +56,16 @@ QString OeImportData::name() const
 
 bool OeImportData::importMails()
 {
-    MailImporter::FilterInfo *info = initializeInfo();
-
     MailImporter::FilterOE opera;
-    opera.setFilterInfo(info);
-    info->setStatusMessage(i18n("Import in progress"));
+    initializeFilter(opera);
+    opera.filterInfo()->setStatusMessage(i18n("Import in progress"));
     QDir directory(mPath);
     if (directory.exists()) {
         opera.importMails(mPath);
     } else {
         opera.import();
     }
-    info->setStatusMessage(i18n("Import finished"));
-
-    delete info;
+    opera.filterInfo()->setStatusMessage(i18n("Import finished"));
     return true;
 }
 

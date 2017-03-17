@@ -56,20 +56,16 @@ QString MailAppImportData::name() const
 
 bool MailAppImportData::importMails()
 {
-    MailImporter::FilterInfo *info = initializeInfo();
-
     MailImporter::FilterMailApp mailapp;
-    mailapp.setFilterInfo(info);
-    info->setStatusMessage(i18n("Import in progress"));
+    initializeFilter(mailapp);
+    mailapp.filterInfo()->setStatusMessage(i18n("Import in progress"));
     QDir directory(mPath);
     if (directory.exists()) {
         mailapp.importMails(mPath);
     } else {
         mailapp.import();
     }
-    info->setStatusMessage(i18n("Import finished"));
-
-    delete info;
+    mailapp.filterInfo()->setStatusMessage(i18n("Import finished"));
     return true;
 }
 

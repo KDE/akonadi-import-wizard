@@ -74,11 +74,9 @@ bool Evolutionv3ImportData::importSettings()
 
 bool Evolutionv3ImportData::importMails()
 {
-    MailImporter::FilterInfo *info = initializeInfo();
-
     MailImporter::FilterEvolution_v3 evolution;
-    evolution.setFilterInfo(info);
-    info->setStatusMessage(i18n("Import in progress"));
+    initializeFilter(evolution);
+    evolution.filterInfo()->setStatusMessage(i18n("Import in progress"));
     const QString mailsPath = mPath;
     QDir directory(mailsPath);
     if (directory.exists()) {
@@ -86,9 +84,7 @@ bool Evolutionv3ImportData::importMails()
     } else {
         evolution.import();
     }
-    info->setStatusMessage(i18n("Import finished"));
-
-    delete info;
+    evolution.filterInfo()->setStatusMessage(i18n("Import finished"));
     return true;
 }
 

@@ -52,10 +52,9 @@ QString Evolutionv1ImportData::name() const
 
 bool Evolutionv1ImportData::importMails()
 {
-    MailImporter::FilterInfo *info = initializeInfo();
     MailImporter::FilterEvolution evolution;
-    evolution.setFilterInfo(info);
-    info->setStatusMessage(i18n("Import in progress"));
+    initializeFilter(evolution);
+    evolution.filterInfo()->setStatusMessage(i18n("Import in progress"));
     const QString mailsPath = mPath;
     QDir directory(mailsPath);
     if (directory.exists()) {
@@ -63,9 +62,7 @@ bool Evolutionv1ImportData::importMails()
     } else {
         evolution.import();
     }
-    info->setStatusMessage(i18n("Import finished"));
-
-    delete info;
+    evolution.filterInfo()->setStatusMessage(i18n("Import finished"));
     return true;
 }
 

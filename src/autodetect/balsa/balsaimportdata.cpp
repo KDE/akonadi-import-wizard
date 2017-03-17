@@ -22,6 +22,7 @@
 #include "balsa/balsaaddressbook.h"
 #include "mailimporter/filterbalsa.h"
 #include "mailimporter/filterinfo.h"
+#include <MailImporter/FilterImporterAkonadi>
 #include "MailCommon/FilterImporterBalsa"
 #include "importfilterinfogui.h"
 #include "importwizard.h"
@@ -56,20 +57,16 @@ QString BalsaImportData::name() const
 
 bool BalsaImportData::importMails()
 {
-    MailImporter::FilterInfo *info = initializeInfo();
-
     MailImporter::FilterBalsa balsa;
-    balsa.setFilterInfo(info);
-    info->setStatusMessage(i18n("Import in progress"));
+    initializeFilter(balsa);
+    balsa.filterInfo()->setStatusMessage(i18n("Import in progress"));
     QDir directory(balsa.localMailDirPath());
     if (directory.exists()) {
         balsa.importMails(directory.absolutePath());
     } else {
         balsa.import();
     }
-    info->setStatusMessage(i18n("Import finished"));
-
-    delete info;
+    balsa.filterInfo()->setStatusMessage(i18n("Import finished"));
     return true;
 }
 

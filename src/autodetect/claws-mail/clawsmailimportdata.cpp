@@ -56,11 +56,9 @@ QString ClawsMailImportData::name() const
 
 bool ClawsMailImportData::importMails()
 {
-    MailImporter::FilterInfo *info = initializeInfo();
-
     MailImporter::FilterClawsMail clawsMail;
-    clawsMail.setFilterInfo(info);
-    info->setStatusMessage(i18n("Import in progress"));
+    initializeFilter(clawsMail);
+    clawsMail.filterInfo()->setStatusMessage(i18n("Import in progress"));
     const QString mailsPath = clawsMail.localMailDirPath();
     QDir directory(mailsPath);
     if (directory.exists()) {
@@ -68,9 +66,7 @@ bool ClawsMailImportData::importMails()
     } else {
         clawsMail.import();
     }
-    info->setStatusMessage(i18n("Import finished"));
-
-    delete info;
+    clawsMail.filterInfo()->setStatusMessage(i18n("Import finished"));
     return true;
 }
 

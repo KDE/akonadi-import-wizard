@@ -57,19 +57,16 @@ QString PMailImportData::name() const
 
 bool PMailImportData::importMails()
 {
-    MailImporter::FilterInfo *info = initializeInfo();
     MailImporter::FilterPMail pmail;
-    pmail.setFilterInfo(info);
-    info->setStatusMessage(i18n("Import in progress"));
+    initializeFilter(pmail);
+    pmail.filterInfo()->setStatusMessage(i18n("Import in progress"));
     QDir directory(mPath);
     if (directory.exists()) {
         pmail.importMails(mPath);
     } else {
         pmail.import();
     }
-    info->setStatusMessage(i18n("Import finished"));
-
-    delete info;
+    pmail.filterInfo()->setStatusMessage(i18n("Import finished"));
     return true;
 }
 

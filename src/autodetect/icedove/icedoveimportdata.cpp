@@ -85,12 +85,9 @@ bool IcedoveImportData::importSettings()
 bool IcedoveImportData::importMails()
 {
     //* This should be usually ~/.icedove/xxxx.default/Mail/Local Folders/
-    MailImporter::FilterInfo *info = initializeInfo();
-
     MailImporter::FilterThunderbird thunderbird;
-    thunderbird.setFilterInfo(info);
-    info->clear();
-    info->setStatusMessage(i18n("Import in progress"));
+    initializeFilter(thunderbird);
+    thunderbird.filterInfo()->setStatusMessage(i18n("Import in progress"));
     const QString mailsPath = mPath + defaultProfile() + QLatin1String("/Mail/Local Folders/");
     QDir directory(mailsPath);
     if (directory.exists()) {
@@ -98,9 +95,7 @@ bool IcedoveImportData::importMails()
     } else {
         thunderbird.import();
     }
-    info->setStatusMessage(i18n("Import finished"));
-
-    delete info;
+    thunderbird.filterInfo()->setStatusMessage(i18n("Import finished"));
     return true;
 }
 

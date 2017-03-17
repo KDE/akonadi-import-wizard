@@ -68,11 +68,9 @@ bool SylpheedImportData::importSettings()
 
 bool SylpheedImportData::importMails()
 {
-    MailImporter::FilterInfo *info = initializeInfo();
-
     MailImporter::FilterSylpheed sylpheed;
-    sylpheed.setFilterInfo(info);
-    info->setStatusMessage(i18n("Import in progress"));
+    initializeFilter(sylpheed);
+    sylpheed.filterInfo()->setStatusMessage(i18n("Import in progress"));
     const QString mailsPath = sylpheed.localMailDirPath();
     QDir directory(mailsPath);
     if (directory.exists()) {
@@ -80,9 +78,7 @@ bool SylpheedImportData::importMails()
     } else {
         sylpheed.import();
     }
-    info->setStatusMessage(i18n("Import finished"));
-
-    delete info;
+    sylpheed.filterInfo()->setStatusMessage(i18n("Import finished"));
     return true;
 }
 

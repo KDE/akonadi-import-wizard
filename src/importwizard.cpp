@@ -47,6 +47,7 @@
 #include "manual/importwizardfilterinfogui.h"
 
 #include "mailimporter/filterinfo.h"
+#include <MailImporter/FilterImporterAkonadi>
 
 #include <QAction>
 #include <KAboutData>
@@ -369,16 +370,19 @@ void ImportWizard::next()
         finishButton()->setEnabled(false);
 
         MailImporter::FilterInfo *info = new MailImporter::FilterInfo();
+        MailImporter::FilterImporterAkonadi *filterImporter = new MailImporter::FilterImporterAkonadi(info);
         ImportWizardFilterInfoGui *infoGui = new ImportWizardFilterInfoGui(mImportpage, this);
         info->setFilterInfoGui(infoGui);
         info->setStatusMessage(i18n("Import in progress"));
         info->setRemoveDupMessage(mSelfilterpage->removeDupMsg_checked());
         info->clear(); // Clear info from last time
-        info->setRootCollection(selectedCollection);
+        filterImporter->setRootCollection(selectedCollection);
+        selectedFilter->setFilterImporter(filterImporter);
         selectedFilter->setFilterInfo(info);
         selectedFilter->import();
         info->setStatusMessage(i18n("Import finished"));
         // Cleanup
+        delete filterImporter;
         delete info;
         // Enable finish & back buttons
         setValid(currentPage(), true);

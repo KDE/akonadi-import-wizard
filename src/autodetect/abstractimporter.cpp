@@ -27,6 +27,7 @@
 
 #include "mailimporter/filterinfo.h"
 #include "MailCommon/FilterManager"
+#include <MailImporter/FilterImporterAkonadi>
 
 #include <QFile>
 
@@ -64,14 +65,16 @@ bool AbstractImporter::importCalendar()
     return false;
 }
 
-MailImporter::FilterInfo *AbstractImporter::initializeInfo()
+void AbstractImporter::initializeFilter(MailImporter::Filter &filter)
 {
     MailImporter::FilterInfo *info = new MailImporter::FilterInfo();
     ImportFilterInfoGui *infoGui = new ImportFilterInfoGui(mImportWizard->importMailPage());
     info->setFilterInfoGui(infoGui);
-    info->setRootCollection(mImportWizard->importMailPage()->selectedCollection());
     info->clear(); // Clear info from last time
-    return info;
+    MailImporter::FilterImporterAkonadi *filterImporter = new MailImporter::FilterImporterAkonadi(info);
+    filterImporter->setRootCollection(mImportWizard->importMailPage()->selectedCollection());
+    filter.setFilterImporter(filterImporter);
+    filter.setFilterInfo(info);
 }
 
 bool AbstractImporter::addFilters(const QString &filterPath, MailCommon::FilterImporterExporter::FilterType type)

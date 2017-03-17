@@ -54,20 +54,16 @@ QString TheBatImportData::name() const
 
 bool TheBatImportData::importMails()
 {
-    MailImporter::FilterInfo *info = initializeInfo();
-
     MailImporter::FilterTheBat thebat;
-    thebat.setFilterInfo(info);
-    info->setStatusMessage(i18n("Import in progress"));
+    initializeFilter(thebat);
+    thebat.filterInfo()->setStatusMessage(i18n("Import in progress"));
     QDir directory(mPath);
     if (directory.exists()) {
         thebat.importMails(mPath);
     } else {
         thebat.import();
     }
-    info->setStatusMessage(i18n("Import finished"));
-
-    delete info;
+    thebat.filterInfo()->setStatusMessage(i18n("Import finished"));
     return true;
 }
 
