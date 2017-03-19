@@ -81,8 +81,9 @@ bool GearyImportData::importAddressBook()
 AbstractImporter::TypeSupportedOptions GearyImportData::supportedOption()
 {
     TypeSupportedOptions options;
+    //TODO reactivate it
     //options |=AbstractImporter::Mails;
-    options |= AbstractImporter::Settings;
+    //options |= AbstractImporter::Settings;
     //options |= AbstractImporter::AddressBooks;
     return options;
 }
