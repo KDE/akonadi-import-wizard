@@ -27,7 +27,7 @@
 
 #include "mailimporter/filterinfo.h"
 #include "MailCommon/FilterManager"
-#include <MailImporter/FilterImporterAkonadi>
+#include <MailImporterAkonadi/FilterImporterAkonadi>
 
 #include <QFile>
 

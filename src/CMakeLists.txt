@@ -98,7 +98,7 @@ target_link_libraries(libimportwizard
     KF5::AkonadiCore
     KF5::MailTransport
     KF5::XmlGui
-    KF5::MailImporter
+    KF5::MailImporterAkonadi
     KF5::PimCommon
     KF5::MailCommon
     KF5::Libkdepim

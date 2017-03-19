@@ -22,7 +22,6 @@
 #include "balsa/balsaaddressbook.h"
 #include "mailimporter/filterbalsa.h"
 #include "mailimporter/filterinfo.h"
-#include <MailImporter/FilterImporterAkonadi>
 #include "MailCommon/FilterImporterBalsa"
 #include "importfilterinfogui.h"
 #include "importwizard.h"

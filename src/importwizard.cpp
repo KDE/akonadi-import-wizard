@@ -47,7 +47,7 @@
 #include "manual/importwizardfilterinfogui.h"
 
 #include "mailimporter/filterinfo.h"
-#include <MailImporter/FilterImporterAkonadi>
+#include <MailImporterAkonadi/FilterImporterAkonadi>
 
 #include <QAction>
 #include <KAboutData>
