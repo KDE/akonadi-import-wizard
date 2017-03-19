@@ -106,7 +106,6 @@ target_link_libraries(libimportwizard
     KF5::MessageViewer
     KF5::Completion
     KF5::I18n
-    KF5::Crash
     KF5::CoreAddons
     )
 
