@@ -74,7 +74,6 @@ find_package(KF5MailImporterAkonadi ${MAILIMPORTER_VERSION_LIB} CONFIG REQUIRED)
 find_package(KF5MessageViewer ${MESSAGELIB_LIB_VERSION_LIB} CONFIG REQUIRED)
 find_package(KF5PimCommonAkonadi ${PIMCOMMON_LIB_VERSION_LIB} CONFIG REQUIRED)
 find_package(KF5Libkdepim ${LIBKDEPIM_LIB_VERSION_LIB} CONFIG REQUIRED)
-find_package(KF5MessageComposer ${MESSAGELIB_LIB_VERSION_LIB} CONFIG REQUIRED)
 include_directories(${importwizard_SOURCE_DIR} ${importwizard_BINARY_DIR})
 
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
