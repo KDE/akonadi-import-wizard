@@ -19,7 +19,6 @@
 #include "importwizardkernel.h"
 
 #include <KIdentityManagement/kidentitymanagement/identitymanager.h>
-#include <MessageComposer/AkonadiSender>
 #include <MailCommon/FolderCollectionMonitor>
 #include <AkonadiCore/session.h>
 #include <AkonadiCore/entitytreemodel.h>
