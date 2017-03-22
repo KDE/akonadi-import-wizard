@@ -128,6 +128,7 @@ target_link_libraries(importwizard
     Qt5::Widgets
     KF5::ConfigCore
     KF5::WidgetsAddons
+    KF5::MailCommon
     )
 
 install(TARGETS importwizard  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
