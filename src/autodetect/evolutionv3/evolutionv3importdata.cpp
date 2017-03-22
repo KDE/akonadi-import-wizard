@@ -97,6 +97,7 @@ bool Evolutionv3ImportData::importFilters()
 bool Evolutionv3ImportData::importAddressBook()
 {
     EvolutionAddressBook addressbook(mImportWizard);
+    addressbook.exportEvolutionAddressBook();
     return true;
 }
 

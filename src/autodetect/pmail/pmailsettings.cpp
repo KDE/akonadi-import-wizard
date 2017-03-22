@@ -32,10 +32,16 @@
 #include <QRegularExpression>
 
 PMailSettings::PMailSettings(const QString &filename, ImportWizard *parent)
-    : AbstractSettings(parent)
+    : AbstractSettings(parent),
+      mFileName(filename)
 {
-    if (QFile(filename).exists()) {
-        KConfig config(filename);
+
+}
+
+void PMailSettings::importSettings()
+{
+    if (QFile(mFileName).exists()) {
+        KConfig config(mFileName);
 
         const QStringList accountList = config.groupList().filter(QRegularExpression(QStringLiteral("WinPMail Identity - *")));
         const QStringList::const_iterator end(accountList.constEnd());

@@ -28,22 +28,28 @@
 #include <QDomDocument>
 
 SylpheedAddressBook::SylpheedAddressBook(const QDir &dir, ImportWizard *parent)
-    : AbstractAddressBook(parent)
+    : AbstractAddressBook(parent),
+      mDir(dir)
 {
-    const QStringList files = dir.entryList(QStringList(QStringLiteral("addrbook-[0-9]*.xml")), QDir::Files, QDir::Name);
-    if (files.isEmpty()) {
-        addAddressBookImportInfo(i18n("No addressbook found"));
-    }
-
-    for (const QString &file : files) {
-        readAddressBook(dir.path() + QLatin1Char('/') + file);
-    }
-    cleanUp();
 }
 
 SylpheedAddressBook::~SylpheedAddressBook()
 {
 }
+
+void SylpheedAddressBook::importAddressBook()
+{
+    const QStringList files = mDir.entryList(QStringList(QStringLiteral("addrbook-[0-9]*.xml")), QDir::Files, QDir::Name);
+    if (files.isEmpty()) {
+        addAddressBookImportInfo(i18n("No addressbook found"));
+    } else {
+        for (const QString &file : files) {
+            readAddressBook(mDir.path() + QLatin1Char('/') + file);
+        }
+    }
+    cleanUp();
+}
+
 
 void SylpheedAddressBook::readAddressBook(const QString &filename)
 {

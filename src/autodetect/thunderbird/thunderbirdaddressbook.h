@@ -32,8 +32,10 @@ public:
     explicit ThunderBirdAddressBook(const QDir &dir, ImportWizard *parent);
     ~ThunderBirdAddressBook();
 
+    void importAddressBook();
 private:
     void readAddressBook(const QString &filename);
+    QDir mDir;
 };
 
 #endif // THUNDERBIRDADDRESSBOOK_H
