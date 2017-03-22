@@ -73,6 +73,7 @@ bool BalsaImportData::importAddressBook()
 {
     const QString addressbookFile(mPath + QStringLiteral("config"));
     BalsaAddressBook addressbook(addressbookFile, mImportWizard);
+    addressbook.importAddressBook();
     return true;
 }
 

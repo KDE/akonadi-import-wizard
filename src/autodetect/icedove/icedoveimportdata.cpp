@@ -63,6 +63,7 @@ bool IcedoveImportData::importAddressBook()
 {
     const QDir addressbookDir(mPath + defaultProfile());
     ThunderBirdAddressBook account(addressbookDir, mImportWizard);
+    account.importAddressBook();
     return true;
 }
 

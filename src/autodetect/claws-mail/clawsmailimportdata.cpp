@@ -74,6 +74,7 @@ bool ClawsMailImportData::importAddressBook()
 {
     const QDir addressbookDir(mPath + QLatin1String("addrbook/"));
     ClawsMailAddressBook account(addressbookDir, mImportWizard);
+    account.importAddressBook();
     return true;
 }
 

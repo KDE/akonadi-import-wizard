@@ -32,3 +32,8 @@ GearyAddressBook::GearyAddressBook(const QString &filename, ImportWizard *parent
 GearyAddressBook::~GearyAddressBook()
 {
 }
+
+void GearyAddressBook::importAddressBook()
+{
+
+}

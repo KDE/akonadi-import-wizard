@@ -33,10 +33,15 @@
 #include <QRegularExpression>
 
 OperaSettings::OperaSettings(const QString &filename, ImportWizard *parent)
-    : AbstractSettings(parent)
+    : AbstractSettings(parent),
+      mFileName(filename)
 {
-    if (QFile(filename).exists()) {
-        KConfig config(filename);
+}
+
+void OperaSettings::importSettings()
+{
+    if (QFile(mFileName).exists()) {
+        KConfig config(mFileName);
         KConfigGroup grp = config.group(QStringLiteral("Accounts"));
         readGlobalAccount(grp);
         const QStringList accountList = config.groupList().filter(QRegularExpression(QStringLiteral("Account\\d+")));

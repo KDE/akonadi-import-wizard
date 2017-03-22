@@ -92,6 +92,7 @@ bool SylpheedImportData::importAddressBook()
 {
     const QDir addressbookDir(mPath);
     SylpheedAddressBook account(addressbookDir, mImportWizard);
+    account.importAddressBook();
     return true;
 }
 

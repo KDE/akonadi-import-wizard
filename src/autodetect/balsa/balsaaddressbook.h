@@ -31,8 +31,10 @@ public:
     explicit BalsaAddressBook(const QString &filename, ImportWizard *parent);
     ~BalsaAddressBook();
 
+    void importAddressBook();
 private:
     void readAddressBook(const KConfigGroup &grp);
+    QString mFileName;
 };
 
 #endif // BalsaAddressBook_H

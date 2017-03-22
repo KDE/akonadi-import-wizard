@@ -31,11 +31,13 @@ public:
     explicit OperaSettings(const QString &filename, ImportWizard *parent);
     ~OperaSettings();
 
+    void importSettings();
 private:
     void readAccount(const KConfigGroup &grp);
     void readTransport(const KConfigGroup &grp);
     void readGlobalAccount(const KConfigGroup &grp);
     void readIdentity(const KConfigGroup &grp);
+    QString mFileName;
 };
 
 #endif // OPERASETTINGS_H

@@ -26,27 +26,33 @@
 #include "importwizard_debug.h"
 
 ThunderBirdAddressBook::ThunderBirdAddressBook(const QDir &dir, ImportWizard *parent)
-    : AbstractAddressBook(parent)
+    : AbstractAddressBook(parent),
+      mDir(dir)
 {
-    readAddressBook(dir.path() + QLatin1String("/impab.mab"));
-    const QStringList filesimportab = dir.entryList(QStringList(QStringLiteral("impab-[0-9]*.map")), QDir::Files, QDir::Name);
-    for (const QString &file : filesimportab) {
-        readAddressBook(dir.path() + QLatin1Char('/') + file);
-    }
-    readAddressBook(dir.path() + QLatin1String("/abook.mab"));
-
-    const QStringList files = dir.entryList(QStringList(QStringLiteral("abook-[0-9]*.map")), QDir::Files, QDir::Name);
-    for (const QString &file : files) {
-        readAddressBook(dir.path() + QLatin1Char('/') + file);
-    }
-    readAddressBook(dir.path() + QLatin1String("/history.mab"));
-
-    cleanUp();
 }
 
 ThunderBirdAddressBook::~ThunderBirdAddressBook()
 {
 
+}
+
+void ThunderBirdAddressBook::importAddressBook()
+{
+    const QString path = mDir.path();
+    readAddressBook(path + QLatin1String("/impab.mab"));
+    const QStringList filesimportab = mDir.entryList(QStringList(QStringLiteral("impab-[0-9]*.map")), QDir::Files, QDir::Name);
+    for (const QString &file : filesimportab) {
+        readAddressBook(path + QLatin1Char('/') + file);
+    }
+    readAddressBook(path + QLatin1String("/abook.mab"));
+
+    const QStringList files = mDir.entryList(QStringList(QStringLiteral("abook-[0-9]*.map")), QDir::Files, QDir::Name);
+    for (const QString &file : files) {
+        readAddressBook(path + QLatin1Char('/') + file);
+    }
+    readAddressBook(path + QLatin1String("/history.mab"));
+
+    cleanUp();
 }
 
 void ThunderBirdAddressBook::readAddressBook(const QString &filename)

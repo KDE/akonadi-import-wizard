@@ -31,8 +31,10 @@ public:
     explicit PMailSettings(const QString &filename, ImportWizard *parent);
     ~PMailSettings();
 
+    void importSettings();
 private:
     void readIdentity(const KConfigGroup &group);
+    QString mFileName;
 };
 
 #endif // ClawsMailSettings_H

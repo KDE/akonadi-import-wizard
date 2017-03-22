@@ -75,6 +75,7 @@ bool PMailImportData::importSettings()
     //TODO verify path
     const QString settingFile(mPath + QLatin1String("pmail.ini"));
     PMailSettings settings(settingFile, mImportWizard);
+    settings.importSettings();
     return true;
 }
 

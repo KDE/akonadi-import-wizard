@@ -25,11 +25,16 @@
 #include <QFile>
 
 OperaAddressBook::OperaAddressBook(const QString &filename, ImportWizard *parent)
-    : AbstractAddressBook(parent)
+    : AbstractAddressBook(parent),
+      mFileName(filename)
 {
-    QFile file(filename);
+}
+
+void OperaAddressBook::importAddressBook()
+{
+    QFile file(mFileName);
     if (!file.open(QIODevice::ReadOnly)) {
-        qCDebug(IMPORTWIZARD_LOG) << " We can't open file" << filename;
+        qCDebug(IMPORTWIZARD_LOG) << " We can't open file" << mFileName;
         return;
     }
 

@@ -31,6 +31,7 @@ class GearyAddressBook : public AbstractAddressBook
 public:
     explicit GearyAddressBook(const QString &filename, ImportWizard *parent);
     ~GearyAddressBook();
+    void importAddressBook();
 };
 
 #endif /* GearyAddressBook_H */

@@ -30,8 +30,10 @@ public:
     explicit OperaAddressBook(const QString &filename, ImportWizard *parent);
     ~OperaAddressBook();
 
+    void importAddressBook();
 private:
     void appendContact(KContacts::Addressee *contact);
+    QString mFileName;
 };
 
 #endif // OPERAADDRESSBOOK_H
