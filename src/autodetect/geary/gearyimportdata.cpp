@@ -68,6 +68,7 @@ bool GearyImportData::importSettings()
         QFile f(fullPath);
         if (f.exists()) {
             GearySettings setting(fullPath, mImportWizard);
+            setting.importSettings();
         }
     }
     return true;

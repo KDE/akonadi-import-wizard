@@ -34,12 +34,16 @@ AbstractCalendar::~AbstractCalendar()
 
 void AbstractCalendar::addImportInfo(const QString &log)
 {
-    mImportWizard->importCalendarPage()->addImportInfo(log);
+    if (mImportWizard) {
+        mImportWizard->importCalendarPage()->addImportInfo(log);
+    }
 }
 
 void AbstractCalendar::addImportError(const QString &log)
 {
-    mImportWizard->importCalendarPage()->addImportError(log);
+    if (mImportWizard) {
+        mImportWizard->importCalendarPage()->addImportError(log);
+    }
 }
 
 //eventviewsrc for calendar color for example

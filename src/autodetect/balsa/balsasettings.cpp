@@ -32,9 +32,20 @@
 #include <QRegularExpression>
 
 BalsaSettings::BalsaSettings(const QString &filename, ImportWizard *parent)
-    : AbstractSettings(parent)
+    : AbstractSettings(parent),
+      mFileName(filename)
 {
-    KConfig config(filename);
+}
+
+
+BalsaSettings::~BalsaSettings()
+{
+
+}
+
+void BalsaSettings::importSettings()
+{
+    KConfig config(mFileName);
 
     bool autoCheck = false;
     int autoCheckDelay = -1;
@@ -56,11 +67,6 @@ BalsaSettings::BalsaSettings(const QString &filename, ImportWizard *parent)
         readTransport(grp);
     }
     readGlobalSettings(config);
-}
-
-BalsaSettings::~BalsaSettings()
-{
-
 }
 
 void BalsaSettings::readAccount(const KConfigGroup &grp, bool autoCheck, int autoDelay)

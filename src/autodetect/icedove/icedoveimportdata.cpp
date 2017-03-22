@@ -76,6 +76,7 @@ bool IcedoveImportData::importSettings()
     const QString accountFile = mPath + defaultProfile() + QLatin1String("/prefs.js");
     if (QFile(accountFile).exists()) {
         ThunderbirdSettings account(accountFile, mImportWizard);
+        account.importSettings();
     } else {
         addImportSettingsInfo(i18n("Thunderbird settings not found."));
     }

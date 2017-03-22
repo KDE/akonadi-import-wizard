@@ -30,6 +30,7 @@ class TrojitaSettings : public AbstractSettings
 public:
     explicit TrojitaSettings(const QString &filename, ImportWizard *parent);
     ~TrojitaSettings();
+    void importSettings();
 private:
     void readImapAccount();
     void readIdentity();

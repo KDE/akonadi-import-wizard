@@ -31,6 +31,7 @@ public:
     explicit BalsaSettings(const QString &filename, ImportWizard *parent);
     ~BalsaSettings();
 
+    void importSettings();
 private:
     void readAccount(const KConfigGroup &grp, bool autoCheck, int autoDelay);
     void readIdentity(const KConfigGroup &grp);
@@ -38,6 +39,7 @@ private:
     void readGlobalSettings(const KConfig &config);
 
     QHash<QString, QString> mHashSmtp;
+    QString mFileName;
 };
 
 #endif // BalsaSettings_H

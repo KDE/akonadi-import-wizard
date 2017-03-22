@@ -33,15 +33,19 @@ TrojitaSettings::TrojitaSettings(const QString &filename, ImportWizard *parent)
     : AbstractSettings(parent)
 {
     settings = new QSettings(filename, QSettings::IniFormat, this);
-    readImapAccount();
-    readTransport();
-    readIdentity();
-    readGlobalSettings();
 }
 
 TrojitaSettings::~TrojitaSettings()
 {
     delete settings;
+}
+
+void TrojitaSettings::importSettings()
+{
+    readImapAccount();
+    readTransport();
+    readIdentity();
+    readGlobalSettings();
 }
 
 void TrojitaSettings::readImapAccount()
