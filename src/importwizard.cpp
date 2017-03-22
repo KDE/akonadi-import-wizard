@@ -434,6 +434,7 @@ ImportSettingPage *ImportWizard::importSettingPage() const
 {
     return mImportSettingPage;
 }
+
 ImportFinishPage *ImportWizard::importFinishPage() const
 {
     return mImportFinishPage;

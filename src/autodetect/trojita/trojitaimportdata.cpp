@@ -60,6 +60,7 @@ bool TrojitaImportData::importSettings()
 {
     const QString settingsPath = mPath + QLatin1String("trojita.conf");
     TrojitaSettings settings(settingsPath, mImportWizard);
+    settings.importSettings();
     return true;
 }
 

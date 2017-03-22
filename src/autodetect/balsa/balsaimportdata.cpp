@@ -80,6 +80,7 @@ bool BalsaImportData::importSettings()
 {
     const QString settingFile(mPath + QStringLiteral("config"));
     BalsaSettings settings(settingFile, mImportWizard);
+    settings.importSettings();
     return true;
 }
 

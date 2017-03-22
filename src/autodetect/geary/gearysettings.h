@@ -30,6 +30,7 @@ class GearySettings : public AbstractSettings
 public:
     explicit GearySettings(const QString &filename, ImportWizard *parent);
     ~GearySettings();
+    void importSettings();
 private:
     void readImapAccount();
     void readIdentity();

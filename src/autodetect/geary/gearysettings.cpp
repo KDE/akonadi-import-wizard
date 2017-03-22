@@ -33,15 +33,19 @@ GearySettings::GearySettings(const QString &filename, ImportWizard *parent)
     : AbstractSettings(parent)
 {
     settings = new QSettings(filename, QSettings::IniFormat, this);
-    readImapAccount();
-    readTransport();
-    readIdentity();
-    readGlobalSettings();
 }
 
 GearySettings::~GearySettings()
 {
     delete settings;
+}
+
+void GearySettings::importSettings()
+{
+    readImapAccount();
+    readTransport();
+    readIdentity();
+    readGlobalSettings();
 }
 
 void GearySettings::readImapAccount()

@@ -37,11 +37,21 @@
 #include <QDir>
 
 ThunderbirdSettings::ThunderbirdSettings(const QString &filename, ImportWizard *parent)
-    : AbstractSettings(parent)
+    : AbstractSettings(parent),
+      mFileName(filename)
 {
-    QFile file(filename);
+
+}
+
+ThunderbirdSettings::~ThunderbirdSettings()
+{
+}
+
+void ThunderbirdSettings::importSettings()
+{
+    QFile file(mFileName);
     if (!file.open(QIODevice::ReadOnly)) {
-        qCDebug(IMPORTWIZARD_LOG) << " We can't open file" << filename;
+        qCDebug(IMPORTWIZARD_LOG) << " We can't open file" << mFileName;
         return;
     }
     QTextStream stream(&file);
@@ -83,9 +93,6 @@ ThunderbirdSettings::ThunderbirdSettings(const QString &filename, ImportWizard *
     readExtensionsSettings();
 }
 
-ThunderbirdSettings::~ThunderbirdSettings()
-{
-}
 
 void ThunderbirdSettings::readExtensionsSettings()
 {

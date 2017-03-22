@@ -32,6 +32,7 @@ class ThunderbirdSettings : public AbstractSettings
 public:
     explicit ThunderbirdSettings(const QString &filename, ImportWizard *parent);
     ~ThunderbirdSettings();
+    void importSettings();
 private:
     void readAccount();
     void readIdentity(const QString &account);
@@ -54,6 +55,7 @@ private:
     QStringList mLdapAccountList;
 
     QHash<QString, tagStruct> mHashTag;
+    QString mFileName;
 };
 
 #endif /* THUNDERBIRDSETTINGS_H */

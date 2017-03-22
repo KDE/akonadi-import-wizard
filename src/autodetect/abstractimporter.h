@@ -73,8 +73,10 @@ public:
     virtual bool importCalendar();
 
 protected:
+    //TODO we need to redefine it.
+    virtual void initializeFilter(MailImporter::Filter &filter);
+
     void appendFilters(const QList<MailCommon::MailFilter *> &filters);
-    void initializeFilter(MailImporter::Filter &filter);
     void addImportFilterInfo(const QString &log) const;
     void addImportFilterError(const QString &log) const;
     bool addFilters(const QString &filterPath, MailCommon::FilterImporterExporter::FilterType type);
