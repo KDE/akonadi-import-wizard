@@ -29,7 +29,7 @@
 ImportWizardKernel::ImportWizardKernel(QObject *parent)
     : QObject(parent)
 {
-    mIdentityManager = new KIdentityManagement::IdentityManager(false, this);
+    mIdentityManager = KIdentityManagement::IdentityManager::self();
     Akonadi::Session *session = new Akonadi::Session("ImportWizard Kernel ETM", this);
     mFolderCollectionMonitor = new MailCommon::FolderCollectionMonitor(session, this);
 

@@ -38,14 +38,13 @@ using namespace Akonadi;
 AbstractSettings::AbstractSettings(ImportWizard *parent)
     : mImportWizard(parent)
 {
-    mManager = new KIdentityManagement::IdentityManager(false, this, "mIdentityManager");
+    mManager = KIdentityManagement::IdentityManager::self();
     mKmailConfig = KSharedConfig::openConfig(QStringLiteral("kmail2rc"));
 }
 
 AbstractSettings::~AbstractSettings()
 {
     syncKmailConfig();
-    delete mManager;
 }
 
 KIdentityManagement::Identity *AbstractSettings::createIdentity(QString &name)
