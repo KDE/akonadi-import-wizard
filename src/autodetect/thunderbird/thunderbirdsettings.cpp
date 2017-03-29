@@ -642,14 +642,10 @@ void ThunderbirdSettings::readAccount()
             qCDebug(IMPORTWIZARD_LOG) << " account type none!";
         } else if (type == QLatin1String("movemail")) {
             qCDebug(IMPORTWIZARD_LOG) << " movemail accound found and not implemented in importthunderbird";
-            //TODO
         } else if (type == QLatin1String("rss")) {
-            //TODO when akregator2 will merge in kdepim
             qCDebug(IMPORTWIZARD_LOG) << " rss resource needs to be implemented";
             continue;
         } else if (type == QLatin1String("nntp")) {
-            //TODO add config directly to knode
-            //TODO when knode will merge in kdepim
             qCDebug(IMPORTWIZARD_LOG) << " nntp resource need to be implemented";
             continue;
         } else {
