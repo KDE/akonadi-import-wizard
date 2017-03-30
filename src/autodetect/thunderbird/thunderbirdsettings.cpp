@@ -73,7 +73,8 @@ void ThunderbirdSettings::importSettings()
                     line.contains(QStringLiteral("mailnews.tags.")) ||
                     line.contains(QStringLiteral("extensions.AutoResizeImage.")) ||
                     line.contains(QStringLiteral("mail.phishing.")) ||
-                    line.contains(QStringLiteral("mail.display_glyph"))) {
+                    line.contains(QStringLiteral("mail.display_glyph")) ||
+                    line.contains(QStringLiteral("extensions.sieve.account."))) {
                 insertIntoMap(line);
             }
         } else {
