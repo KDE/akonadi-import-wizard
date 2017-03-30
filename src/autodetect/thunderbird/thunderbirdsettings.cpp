@@ -77,7 +77,14 @@ void ThunderbirdSettings::importSettings()
                 insertIntoMap(line);
             }
         } else {
-            qCDebug(IMPORTWIZARD_LOG) << " unstored line :" << line;
+            if (!line.startsWith(QLatin1Char('#')) ||
+                    line.isEmpty() ||
+                    line.startsWith(QStringLiteral("/*")) ||
+                    line.startsWith(QStringLiteral(" */")) ||
+                    line.startsWith(QStringLiteral(" *"))) {
+                qCDebug(IMPORTWIZARD_LOG) << " unstored line :" << line;
+            }
+
         }
     }
     const QString mailAccountPreference = mHashConfig.value(QStringLiteral("mail.accountmanager.accounts")).toString();
