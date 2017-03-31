@@ -474,6 +474,7 @@ void ThunderbirdSettings::addAuth(QMap<QString, QVariant> &settings, const QStri
         if (found) {
             switch (authMethod) {
             case 0:
+                settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::PLAIN);   //????
                 break;
             case 4: //Encrypted password ???
                 settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::LOGIN);   //????
