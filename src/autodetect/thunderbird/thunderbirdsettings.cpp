@@ -489,7 +489,8 @@ void ThunderbirdSettings::addAuth(QMap<QString, QVariant> &settings, const QStri
             case 7: //TLS
                 qCDebug(IMPORTWIZARD_LOG) << " authmethod method == TLS"; //????
                 break;
-            case 10: //OAuth2
+            case 10: //OAuth2 verify it.
+                settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::XOAUTH2);
                 qCDebug(IMPORTWIZARD_LOG) << " authmethod method == OAuth2"; //????
                 break;
             default:
