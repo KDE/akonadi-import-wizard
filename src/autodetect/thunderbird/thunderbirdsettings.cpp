@@ -466,6 +466,11 @@ void ThunderbirdSettings::readGlobalSettings()
 
 }
 
+void ThunderbirdSettings::importSieveSettings(QMap<QString, QVariant> &settings, const QString &accountName)
+{
+
+}
+
 void ThunderbirdSettings::addAuth(QMap<QString, QVariant> &settings, const QString &argument, const QString &accountName)
 {
     bool found = false;
@@ -581,6 +586,8 @@ void ThunderbirdSettings::readAccount()
             if (mHashConfig.contains(trashFolderStr)) {
                 settings.insert(QStringLiteral("TrashCollection"), MailCommon::Util::convertFolderPathToCollectionId(mHashConfig.value(trashFolderStr).toString()));
             }
+            importSieveSettings(settings, accountName);
+
 
             const QString agentIdentifyName = AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, settings);
             addCheckMailOnStartup(agentIdentifyName, loginAtStartup);
