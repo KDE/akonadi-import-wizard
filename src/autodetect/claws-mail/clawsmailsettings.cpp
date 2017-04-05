@@ -47,9 +47,9 @@ void ClawsMailSettings::importSettings(const QString &filename, const QString &p
 {
     bool checkMailOnStartup = true;
     int intervalCheckMail = -1;
-    const QString sylpheedrc = path + QLatin1String("/clawsrc");
-    if (QFile(sylpheedrc).exists()) {
-        KConfig configCommon(sylpheedrc);
+    const QString clawsmailrc = path + QLatin1String("/clawsrc");
+    if (QFile(clawsmailrc).exists()) {
+        KConfig configCommon(clawsmailrc);
         if (configCommon.hasGroup("Common")) {
             KConfigGroup common = configCommon.group("Common");
             checkMailOnStartup = (common.readEntry("check_on_startup", 1) == 1);

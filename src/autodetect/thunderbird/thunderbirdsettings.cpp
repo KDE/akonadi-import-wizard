@@ -466,9 +466,68 @@ void ThunderbirdSettings::readGlobalSettings()
 
 }
 
-void ThunderbirdSettings::importSieveSettings(QMap<QString, QVariant> &settings, const QString &accountName)
+void ThunderbirdSettings::importSieveSettings(QMap<QString, QVariant> &settings, const QString &userName, const QString &imapServerName)
 {
+    QString userNameSieveConverted = userName;
+    userNameSieveConverted.replace(QLatin1Char('@'), QStringLiteral("%40"));
 
+    const QString sieveKeyServerUserName = QStringLiteral("extensions.sieve.account.") + userNameSieveConverted + QLatin1Char('@') + imapServerName;
+    //user_pref("extensions.sieve.account.<username>@<server>.enabled", true);
+#if 0
+    if (mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".enabled"), false).toBool()) {
+        //TODO
+        //user_pref("extensions.sieve.account.<username>@<server>.TLS", true);
+        //user_pref("extensions.sieve.account.<username>@<server>.TLS.forced", true);
+        //user_pref("extensions.sieve.account.<username>@<server>.activeAuthorization", 1);
+        //user_pref("extensions.sieve.account.<username>@<server>.activeHost", 1);
+        //user_pref("extensions.sieve.account.<username>@<server>.activeLogin", 1);
+        SieveEditorUtil::SieveServerConfig config;
+        //0 4190
+        //1 2000
+        //2 custom
+        //Default == 4190
+        //user_pref("extensions.sieve.account.<username>@<server>.port", 1255);
+        config.sieveSettings.port = mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".port"), 4190).toInt();
+        //not necessary to import this one : user_pref("extensions.sieve.account.<username>@<server>.port.type", 1);
+
+        //user_pref("extensions.sieve.account.<username>@<server>.hostname", "sdfsfsqsdf");
+        const QString sieveHostName = mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".hostname")).toString();
+        if (sieveHostName.isEmpty()) {
+            config.sieveSettings.serverName = imapServerName;
+        } else {
+            config.sieveSettings.serverName = sieveHostName;
+        }
+
+        const QString sieveUserName = mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".login.username")).toString();
+        //user_pref("extensions.sieve.account.<username>@<server>.login.username", "newuser");
+        if (sieveUserName.isEmpty()) {
+            config.sieveSettings.userName = userName;
+        } else {
+            config.sieveSettings.userName = sieveUserName;
+        }
+
+        //not necessary to import this one : user_pref("extensions.sieve.account.<username>@<server>.proxy.type", 1);
+
+
+        //qCDebug(SIEVEEDITOR_LOG) << "imap account " << accountName;
+        const QString name = mHashConfig.value(accountName + QStringLiteral(".name")).toString();
+        bool found;
+        const int sievePort = mHashConfig.value(accountName + QStringLiteral(".port")).toInt(&found);
+        if (found) {
+            config.sieveImapAccountSettings.setPort(sievePort);
+        }
+        encryption(config, accountName);
+        addAuth(config, accountName);
+        config.sieveImapAccountSettings.setUserName(userName);
+        config.sieveImapAccountSettings.setServerName(imapServerName);
+
+        if (config.isValid()) {
+            atLeastAnAccountFound = true;
+            Q_EMIT importSetting(name, config);
+        }
+    }
+
+#endif
 }
 
 void ThunderbirdSettings::addAuth(QMap<QString, QVariant> &settings, const QString &argument, const QString &accountName)
@@ -586,7 +645,7 @@ void ThunderbirdSettings::readAccount()
             if (mHashConfig.contains(trashFolderStr)) {
                 settings.insert(QStringLiteral("TrashCollection"), MailCommon::Util::convertFolderPathToCollectionId(mHashConfig.value(trashFolderStr).toString()));
             }
-            importSieveSettings(settings, accountName);
+            importSieveSettings(settings, userName, serverName);
 
 
             const QString agentIdentifyName = AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, settings);
