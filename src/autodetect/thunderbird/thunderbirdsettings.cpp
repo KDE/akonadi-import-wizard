@@ -473,6 +473,47 @@ void ThunderbirdSettings::importSieveSettings(QMap<QString, QVariant> &settings,
 
     const QString sieveKeyServerUserName = QStringLiteral("extensions.sieve.account.") + userNameSieveConverted + QLatin1Char('@') + imapServerName;
     //user_pref("extensions.sieve.account.<username>@<server>.enabled", true);
+    if (mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".enabled"), false).toBool()) {
+        settings.insert(QStringLiteral("SieveSupport"), true);
+        settings.insert(QStringLiteral("SievePort"), mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".port"), 4190).toInt());
+        //TODO add more
+    }
+#if 0
+    <group name="siever">
+      <entry name="SieveSupport" type="Bool">
+        <label>Define if server supports sieve</label>
+        <default>false</default>
+      </entry>
+      <entry name="SieveReuseConfig" type="Bool">
+        <label>Define if we reuse host and login configuration</label>
+        <default>true</default>
+      </entry>
+      <entry name="SievePort" type="Int">
+        <label>Define sieve port</label>
+        <default>4190</default>
+      </entry>
+      <entry name="SieveAlternateUrl" type="String">
+        <label>Define alternate URL</label>
+      </entry>
+      <entry name="AlternateAuthentication" type="Int">
+        <label>Defines the authentication type to use for alternate server</label>
+        <default>1</default>
+      </entry>
+      <entry name="SieveVacationFilename" type="String">
+        <label>Define default sieve vacation filename</label>
+        <default>kmail-vacation.siv</default>
+      </entry>
+      <entry name="SieveCustomUsername" type="String">
+        <label>Define username used from custom server sieve url</label>
+        <default></default>
+      </entry>
+      <entry name="SieveCustomAuthentification" type="String">
+        <label>Defines the type of identification used by custom sieve server</label>
+        <default>ImapUserPassword</default>
+      </entry>
+    </group>
+
+#endif
 #if 0
     if (mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".enabled"), false).toBool()) {
         //TODO
