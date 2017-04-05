@@ -46,7 +46,7 @@ private:
     void insertIntoMap(const QString &line);
 
     void addAuth(QMap<QString, QVariant> &settings, const QString &argument, const QString &accountName);
-    void importSieveSettings(QMap<QString, QVariant> &settings, const QString &accountName);
+    void importSieveSettings(QMap<QString, QVariant> &settings, const QString &userName, const QString &imapServerName);
 
     void addNewMailNotifier(const QString &group, const QString &key, bool value);
 
