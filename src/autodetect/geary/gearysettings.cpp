@@ -85,6 +85,18 @@ void GearySettings::readImapAccount()
 
 void GearySettings::readTransport()
 {
+    const QString host = settings->value(QStringLiteral("smtp_host")).toString();
+    if (!host.isEmpty()) {
+        MailTransport::Transport *mt = createTransport();
+        mt->setType(MailTransport::Transport::EnumType::SMTP);
+        mt->setHost(host);
+        const int port = settings->value(QStringLiteral("msa.smtp.port"), -1).toInt();
+        if (port != -1) {
+            mt->setPort(port);
+        }
+        //ADD more settings
+        storeTransport(mt, true);   //only one smtp for the moment
+    }
 #if 0
     smtp_host=smtp.bla.bla
     smtp_port=465
@@ -93,14 +105,79 @@ void GearySettings::readTransport()
     smtp_use_imap_credentials=false
     smtp_noauth=true
 #endif
+#if 0
+    const QString smtpMethod = settings->value(QStringLiteral("msa.method")).toString();
+    if (!smtpMethod.isEmpty()) {
+        MailTransport::Transport *mt = createTransport();
+        if (smtpMethod == QLatin1String("IMAP-SENDMAIL")) {
+            //see http://tools.ietf.org/html/draft-kundrat-imap-submit-01
+        } else if (smtpMethod == QLatin1String("SMTP") || smtpMethod == QLatin1String("SSMTP")) {
+            if (settings->contains(QStringLiteral("msa.smtp.host"))) {
+                mt->setHost(settings->value(QStringLiteral("msa.smtp.host")).toString());
+            }
+            if (settings->contains(QStringLiteral("msa.smtp.port"))) {
+                mt->setPort(settings->value(QStringLiteral("msa.smtp.port")).toInt());
+            }
+            if (settings->contains(QStringLiteral("msa.smtp.auth"))) {
+                if (settings->value(QStringLiteral("msa.smtp.auth")).toBool()) {
+                    if (settings->contains(QStringLiteral("msa.smtp.auth.user"))) {
+                        mt->setUserName(settings->value(QStringLiteral("msa.smtp.auth.user")).toString());
+                    }
+                    if (settings->contains(QStringLiteral("msa.smtp.auth.pass"))) {
+                        mt->setPassword(settings->value(QStringLiteral("msa.smtp.auth.pass")).toString());
+                    }
+                }
+            }
+
+            if (settings->contains(QStringLiteral("msa.smtp.starttls"))) {
+                if (settings->value(QStringLiteral("msa.smtp.starttls")).toBool()) {
+                    mt->setEncryption(MailTransport::Transport::EnumEncryption::TLS);
+                }
+            }
+            mt->setType(MailTransport::Transport::EnumType::SMTP);
+        } else {
+            qCWarning(IMPORTWIZARD_LOG) << " smtpMethod unknown " << smtpMethod;
+        }
+        storeTransport(mt, true);   //only one smtp for the moment
+    }
+#endif
 }
 
 void GearySettings::readIdentity()
 {
+    QString realName = settings->value(QStringLiteral("realName")).toString();
+    if (!realName.isEmpty()) {
+        KIdentityManagement::Identity *identity  = createIdentity(realName);
+        identity->setFullName(realName);
+        identity->setIdentityName(realName);
+        const QString address = settings->value(QStringLiteral("primary_email")).toString();
+        identity->setPrimaryEmailAddress(address);
+        //TODO add "nickname=bli@kde.org"
+        storeIdentity(identity);
+    }
 #if 0
     real_name=blo
     primary_email=bli@kde.org
     nickname=bli@kde.org
+#endif
+#if 0
+            QString realName = settings->value(QStringLiteral("realName")).toString();
+            KIdentityManagement::Identity *identity  = createIdentity(realName);
+            identity->setFullName(realName);
+            identity->setIdentityName(realName);
+            const QString address = settings->value(QStringLiteral("address")).toString();
+            identity->setPrimaryEmailAddress(address);
+            const QString organisation = settings->value(QStringLiteral("organisation")).toString();
+            identity->setOrganization(organisation);
+            QString signatureStr = settings->value(QStringLiteral("signature")).toString();
+            if (!signatureStr.isEmpty()) {
+                KIdentityManagement::Signature signature;
+                signature.setType(KIdentityManagement::Signature::Inlined);
+                signature.setText(signatureStr);
+                identity->setSignature(signature);
+            }
+            qCDebug(IMPORTWIZARD_LOG) << " realName :" << realName << " address : " << address << " organisation : " << organisation << " signature: " << signatureStr;
+            storeIdentity(identity);
 #endif
 }
 
