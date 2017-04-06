@@ -54,13 +54,13 @@ void GearySettings::readImapAccount()
 
     QString name;
 
-    if (settings->contains(QStringLiteral("imap_host"))) {
-        name = settings->value(QStringLiteral("imap_host")).toString();
+    name = settings->value(QStringLiteral("imap_host")).toString();
+    if (!name.isEmpty()) {
         newSettings.insert(QStringLiteral("ImapServer"), name);
     }
 
-    if (settings->contains(QStringLiteral("imap_port"))) {
-        int port = settings->value(QStringLiteral("imap_port")).toInt();
+    const int port = settings->value(QStringLiteral("imap_port"), -1).toInt();
+    if (port > -1) {
         newSettings.insert(QStringLiteral("ImapPort"), port);
     }
 
@@ -85,10 +85,23 @@ void GearySettings::readImapAccount()
 
 void GearySettings::readTransport()
 {
+#if 0
+    smtp_host=smtp.bla.bla
+    smtp_port=465
+    smtp_ssl=true
+    smtp_starttls=false
+    smtp_use_imap_credentials=false
+    smtp_noauth=true
+#endif
 }
 
 void GearySettings::readIdentity()
 {
+#if 0
+    real_name=blo
+    primary_email=bli@kde.org
+    nickname=bli@kde.org
+#endif
 }
 
 void GearySettings::readGlobalSettings()

@@ -53,13 +53,13 @@ void TrojitaSettings::readImapAccount()
     QMap<QString, QVariant> newSettings;
     QString name;
 
-    if (settings->contains(QStringLiteral("imap.host"))) {
-        name = settings->value(QStringLiteral("imap.host")).toString();
+    name = settings->value(QStringLiteral("imap.host")).toString();
+    if (!name.isEmpty()) {
         newSettings.insert(QStringLiteral("ImapServer"), name);
     }
 
-    if (settings->contains(QStringLiteral("imap.port"))) {
-        int port = settings->value(QStringLiteral("imap.port")).toInt();
+    const int port = settings->value(QStringLiteral("imap.port"), -1).toInt();
+    if (port > -1) {
         newSettings.insert(QStringLiteral("ImapPort"), port);
     }
 
@@ -70,20 +70,16 @@ void TrojitaSettings::readImapAccount()
         }
     }
 
-    if (settings->contains(QStringLiteral("imap.auth.user"))) {
-        const QString userName = settings->value(QStringLiteral("imap.auth.user")).toString();
-        if (!userName.isEmpty()) {
-            newSettings.insert(QStringLiteral("Username"), userName);
-        }
+    const QString userName = settings->value(QStringLiteral("imap.auth.user")).toString();
+    if (!userName.isEmpty()) {
+        newSettings.insert(QStringLiteral("Username"), userName);
+    }
+    const QString password = settings->value(QStringLiteral("imap.auth.pass")).toString();
+    if (!password.isEmpty()) {
+        newSettings.insert(QStringLiteral("Password"), password);
     }
 
-    if (settings->contains(QStringLiteral("imap.auth.pass"))) {
-        const QString password = settings->value(QStringLiteral("imap.auth.pass")).toString();
-        if (!password.isEmpty()) {
-            newSettings.insert(QStringLiteral("Password"), password);
-        }
-    }
-
+#if 0
     if (settings->contains(QStringLiteral("imap.process"))) {
         //What's this ?
     }
@@ -94,7 +90,6 @@ void TrojitaSettings::readImapAccount()
         //Will implement soon.
         //TODO use akonadi cache.
     }
-
     if (settings->contains(QStringLiteral("imap.enableId"))) {
         //Not supported by Akonadi.
     }
@@ -106,7 +101,7 @@ void TrojitaSettings::readImapAccount()
     if (settings->contains(QStringLiteral("imap.capabilities.blacklist"))) {
         //Not supported by akonadi-imap-resource.
     }
-
+#endif
     if (!name.isEmpty()) {
         const QString agentIdentifyName = AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, newSettings);
         //Check by default
