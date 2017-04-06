@@ -50,6 +50,37 @@ void GearySettings::importSettings()
 
 void GearySettings::readImapAccount()
 {
+    QMap<QString, QVariant> newSettings;
+
+    QString name;
+
+    if (settings->contains(QStringLiteral("imap_host"))) {
+        name = settings->value(QStringLiteral("imap_host")).toString();
+        newSettings.insert(QStringLiteral("ImapServer"), name);
+    }
+
+    if (settings->contains(QStringLiteral("imap_port"))) {
+        int port = settings->value(QStringLiteral("imap_port")).toInt();
+        newSettings.insert(QStringLiteral("ImapPort"), port);
+    }
+
+    if (settings->contains(QStringLiteral("imap_starttls"))) {
+        const bool useTLS = settings->value(QStringLiteral("imap_starttls")).toBool();
+        if (useTLS) {
+            newSettings.insert(QStringLiteral("Safety"), QStringLiteral("STARTTLS"));
+        }
+    }
+
+    const QString userName = settings->value(QStringLiteral("imap_username")).toString();
+    if (!userName.isEmpty()) {
+        newSettings.insert(QStringLiteral("Username"), userName);
+    }
+
+    if (!name.isEmpty()) {
+        const QString agentIdentifyName = AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, newSettings);
+        //Check by default
+        addCheckMailOnStartup(agentIdentifyName, true);
+    }
 }
 
 void GearySettings::readTransport()
