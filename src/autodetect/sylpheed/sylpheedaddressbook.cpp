@@ -82,10 +82,7 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
     }
 
     for (; !e.isNull(); e = e.nextSiblingElement()) {
-        QString name;
-        if (e.hasAttribute(QStringLiteral("name"))) {
-            name = e.attribute(QStringLiteral("name"));
-        }
+        //TODO ?? const QString name = e.attribute(QStringLiteral("name"));
 
         const QString tag = e.tagName();
         if (tag == QLatin1String("person")) {
@@ -157,10 +154,7 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
             addImportContactNote(contact, QStringLiteral("Sylpheed"));
             createContact(contact);
         } else if (tag == QLatin1String("group")) {
-            QString name;
-            if (e.hasAttribute(QStringLiteral("name"))) {
-                name = e.attribute(QStringLiteral("name"));
-            }
+            QString name = e.attribute(QStringLiteral("name"));
             KContacts::ContactGroup group(name);
             //TODO: create Group
             for (QDomElement groupElement = e.firstChildElement(); !groupElement.isNull(); groupElement = groupElement.nextSiblingElement()) {
