@@ -20,7 +20,13 @@
 
 #include "importmailpluginmanager.h"
 
-ImportMailPluginManager::ImportMailPluginManager(QObject *parent) : QObject(parent)
+ImportMailPluginManager::ImportMailPluginManager(QObject *parent)
+    : QObject(parent)
+{
+
+}
+
+ImportMailPluginManager::~ImportMailPluginManager()
 {
 
 }
