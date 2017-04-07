@@ -80,8 +80,8 @@ void BalsaSettings::readAccount(const KConfigGroup &grp, bool autoCheck, int aut
         settings.insert(QStringLiteral("Host"), server);
         const QString name = grp.readEntry(QStringLiteral("Name"));
 
-        const bool apop = grp.readEntry(QStringLiteral("DisableApop"), false);
-        Q_UNUSED(apop);
+        //const bool apop = grp.readEntry(QStringLiteral("DisableApop"), false);
+        //Q_UNUSED(apop);
         const QString agentIdentifyName = AbstractBase::createResource(QStringLiteral("akonadi_pop3_resource"), name, settings);
 
         addCheckMailOnStartup(agentIdentifyName, autoCheck);
@@ -167,7 +167,7 @@ void BalsaSettings::readTransport(const KConfigGroup &grp)
         qCDebug(IMPORTWIZARD_LOG) << " unknown ssl value :" << ssl;
     }
 
-    const QString anonymous = grp.readEntry(QStringLiteral("Anonymous"));
+    //TODO const QString anonymous = grp.readEntry(QStringLiteral("Anonymous"));
 
     //TODO
     storeTransport(mt, /*( smtp == defaultSmtp )*/true);   //FIXME
@@ -197,9 +197,10 @@ void BalsaSettings::readGlobalSettings(const KConfig &config)
     }
     if (config.hasGroup(QStringLiteral("MessageDisplay"))) {
         KConfigGroup messageDisplay = config.group(QStringLiteral("MessageDisplay"));
+#if 0
         if (messageDisplay.hasKey(QStringLiteral("WordWrap"))) {
-            bool wordWrap = messageDisplay.readEntry(QStringLiteral("WordWrap"), false);
-            Q_UNUSED(wordWrap);
+            //bool wordWrap = messageDisplay.readEntry(QStringLiteral("WordWrap"), false);
+            //Q_UNUSED(wordWrap);
             //TODO not implemented in kmail.
         }
         if (messageDisplay.hasKey(QStringLiteral("WordWrapLength"))) {
@@ -207,6 +208,7 @@ void BalsaSettings::readGlobalSettings(const KConfig &config)
             Q_UNUSED(wordWrapLength);
             //TODO not implemented in kmail
         }
+#endif
         if (messageDisplay.hasKey(QStringLiteral("DateFormat"))) {
             const QString dateFormat = messageDisplay.readEntry(QStringLiteral("DateFormat"));
             if (!dateFormat.isEmpty()) {
