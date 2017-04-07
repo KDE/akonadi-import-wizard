@@ -59,11 +59,6 @@ ManualSelectFilterPage::ManualSelectFilterPage(QWidget *parent)
     mWidget->mIntroSidebar->setPixmap(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("importwizard/pics/step1.png")));
     connect(mWidget->mFilterCombo, static_cast<void (KComboBox::*)(int)>(&KComboBox::activated), this, &ManualSelectFilterPage::filterSelected);
 
-    // Add new filters below. If this annoys you, please rewrite the stuff to use a factory.
-    // The former approach was overengineered and only worked around problems in the design
-    // For now, we have to live without the warm and fuzzy feeling a refactoring might give.
-    // Patches appreciated. (danimo)
-
     addFilter(new MailImporter::FilterKMailArchive);
     addFilter(new MailImporter::FilterMBox);
     addFilter(new MailImporter::FilterEvolution);
