@@ -161,38 +161,14 @@ void GearySettings::readIdentity()
             KIdentityManagement::Signature signature;
             signature.setType(KIdentityManagement::Signature::Inlined);
             signature.setText(signatureStr);
+            const bool useSignature = settings->value(QStringLiteral("use_email_signature"), true).toBool();
+            signature.setEnabledSignature(useSignature);
             identity->setSignature(signature);
         }
 
         //TODO add "nickname=bli@kde.org"
         storeIdentity(identity);
     }
-#if 0
-    real_name=blo
-    primary_email=bli@kde.org
-    nickname=bli@kde.org
-            alternate_emails=
-            email_signature=fdssfq fqsdf qsdfqdsfdsq fsqdfqsdfs f\ndsfsd dsqf qs\ndf\n sdf \nsdqfqsdf qsdf
-#endif
-#if 0
-            QString realName = settings->value(QStringLiteral("realName")).toString();
-            KIdentityManagement::Identity *identity  = createIdentity(realName);
-            identity->setFullName(realName);
-            identity->setIdentityName(realName);
-            const QString address = settings->value(QStringLiteral("address")).toString();
-            identity->setPrimaryEmailAddress(address);
-            const QString organisation = settings->value(QStringLiteral("organisation")).toString();
-            identity->setOrganization(organisation);
-            QString signatureStr = settings->value(QStringLiteral("signature")).toString();
-            if (!signatureStr.isEmpty()) {
-                KIdentityManagement::Signature signature;
-                signature.setType(KIdentityManagement::Signature::Inlined);
-                signature.setText(signatureStr);
-                identity->setSignature(signature);
-            }
-            qCDebug(IMPORTWIZARD_LOG) << " realName :" << realName << " address : " << address << " organisation : " << organisation << " signature: " << signatureStr;
-            storeIdentity(identity);
-#endif
 }
 
 void GearySettings::readGlobalSettings()
