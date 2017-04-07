@@ -799,6 +799,7 @@ void ThunderbirdSettings::readTransport()
     for (const QString &smtp : smtpList) {
         const QString smtpName = QStringLiteral("mail.smtpserver.%1").arg(smtp);
         MailTransport::Transport *mt = createTransport();
+        mt->setType(MailTransport::Transport::EnumType::SMTP);
         const QString name = mHashConfig.value(smtpName + QStringLiteral(".description")).toString();
         mt->setName(name);
         const QString hostName = mHashConfig.value(smtpName + QStringLiteral(".hostname")).toString();
