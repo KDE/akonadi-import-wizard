@@ -152,6 +152,10 @@ void GearySettings::readIdentity()
         identity->setIdentityName(realName);
         const QString address = settings->value(QStringLiteral("primary_email")).toString();
         identity->setPrimaryEmailAddress(address);
+        const QString alias = settings->value(QStringLiteral("alternate_emails")).toString();
+        if (!alias.isEmpty()) {
+            identity->setEmailAliases(alias.split(QLatin1Char(';'), QString::SkipEmptyParts));
+        }
         //TODO add "nickname=bli@kde.org"
         storeIdentity(identity);
     }
@@ -159,6 +163,7 @@ void GearySettings::readIdentity()
     real_name=blo
     primary_email=bli@kde.org
     nickname=bli@kde.org
+            alternate_emails=
 #endif
 #if 0
             QString realName = settings->value(QStringLiteral("realName")).toString();
