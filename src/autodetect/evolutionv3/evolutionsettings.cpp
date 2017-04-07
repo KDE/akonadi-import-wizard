@@ -413,6 +413,7 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
             }
 
             MailTransport::Transport *transport = createTransport();
+            transport->setType(MailTransport::Transport::EnumType::SMTP);
             for (QDomElement smtp = e.firstChildElement(); !smtp.isNull(); smtp = smtp.nextSiblingElement()) {
                 const QString smtpTag = smtp.tagName();
                 if (smtpTag == QLatin1String("url")) {
