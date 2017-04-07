@@ -152,6 +152,18 @@ void GearySettings::readIdentity()
         identity->setIdentityName(realName);
         const QString address = settings->value(QStringLiteral("primary_email")).toString();
         identity->setPrimaryEmailAddress(address);
+        const QString alias = settings->value(QStringLiteral("alternate_emails")).toString();
+        if (!alias.isEmpty()) {
+            identity->setEmailAliases(alias.split(QLatin1Char(';'), QString::SkipEmptyParts));
+        }
+        const QString signatureStr = settings->value(QStringLiteral("email_signature")).toString();
+        if (!signatureStr.isEmpty()) {
+            KIdentityManagement::Signature signature;
+            signature.setType(KIdentityManagement::Signature::Inlined);
+            signature.setText(signatureStr);
+            identity->setSignature(signature);
+        }
+
         //TODO add "nickname=bli@kde.org"
         storeIdentity(identity);
     }
@@ -159,6 +171,8 @@ void GearySettings::readIdentity()
     real_name=blo
     primary_email=bli@kde.org
     nickname=bli@kde.org
+            alternate_emails=
+            email_signature=fdssfq fqsdf qsdfqdsfdsq fsqdfqsdfs f\ndsfsd dsqf qs\ndf\n sdf \nsdqfqsdf qsdf
 #endif
 #if 0
             QString realName = settings->value(QStringLiteral("realName")).toString();
