@@ -27,6 +27,9 @@ class ImportMailPluginManager : public QObject
 public:
     explicit ImportMailPluginManager(QObject *parent = nullptr);
     ~ImportMailPluginManager();
+
+    static ImportMailPluginManager *self();
+
 };
 
 #endif // IMPORTMAILPLUGINMANAGER_H

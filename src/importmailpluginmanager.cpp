@@ -20,6 +20,8 @@
 
 #include "importmailpluginmanager.h"
 
+Q_GLOBAL_STATIC(ImportMailPluginManager, s_pImportMailPluginManagerSelf)
+
 ImportMailPluginManager::ImportMailPluginManager(QObject *parent)
     : QObject(parent)
 {
@@ -29,4 +31,9 @@ ImportMailPluginManager::ImportMailPluginManager(QObject *parent)
 ImportMailPluginManager::~ImportMailPluginManager()
 {
 
+}
+
+ImportMailPluginManager *ImportMailPluginManager::self()
+{
+    return s_pImportMailPluginManagerSelf;
 }

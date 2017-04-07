@@ -7,7 +7,9 @@ add_subdirectory(kconf_update)
 set(libimportwizard_SRCS
     importwizard.cpp
     importwizardkernel.cpp
+    importmailpluginmanager.cpp
     )
+
 set(libimportwizard_manual_SRCS
     manual/manualimportmailpage.cpp
     manual/importwizardfilterinfogui.cpp
