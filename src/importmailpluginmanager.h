@@ -29,7 +29,7 @@ public:
     ~ImportMailPluginManager();
 
     static ImportMailPluginManager *self();
-
+    bool initializePluginList();
 };
 
 #endif // IMPORTMAILPLUGINMANAGER_H
