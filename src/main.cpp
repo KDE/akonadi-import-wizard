@@ -53,8 +53,8 @@ int main(int argc, char *argv[])
 
     aboutData.addAuthor(i18n("Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("kontact-import-wizard")));
-    aboutData.setOrganizationDomain(QByteArray("kde.org"));
-    aboutData.setProductName(QByteArray("importwizard"));
+    aboutData.setOrganizationDomain(QByteArrayLiteral("kde.org"));
+    aboutData.setProductName(QByteArrayLiteral("importwizard"));
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
