@@ -65,8 +65,7 @@ bool GearyImportData::importSettings()
     const QString configName = QStringLiteral("geary.ini");
     for (int i = 0; i < lstDir.count(); ++i) {
         const QString fullPath = lstDir.at(i) + QDir::separator() + configName;
-        QFile f(fullPath);
-        if (f.exists()) {
+        if (QFileInfo::exists(fullPath)) {
             GearySettings setting(fullPath, mImportWizard);
             setting.importSettings();
         }
