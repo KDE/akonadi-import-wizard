@@ -59,11 +59,11 @@ QString Evolutionv3ImportData::name() const
 bool Evolutionv3ImportData::importSettings()
 {
     const QString accountFile = QDir::homePath() + QLatin1String("/.gconf/apps/evolution/mail/%gconf.xml");
-    if (QFile(accountFile).exists()) {
+    if (QFileInfo::exists(accountFile)) {
         EvolutionSettings account(mImportWizard);
         account.loadAccount(accountFile);
         const QString ldapFile = QDir::homePath() + QLatin1String("/.gconf/apps/evolution/addressbook/%gconf.xml");
-        if (QFile(ldapFile).exists()) {
+        if (QFileInfo::exists(ldapFile)) {
             account.loadLdap(ldapFile);
         }
     } else {
@@ -104,7 +104,7 @@ bool Evolutionv3ImportData::importAddressBook()
 bool Evolutionv3ImportData::importCalendar()
 {
     const QString calendarFile = QDir::homePath() + QLatin1String("/.gconf/apps/evolution/calendar/%gconf.xml");
-    if (QFile(calendarFile).exists()) {
+    if (QFileInfo::exists(calendarFile)) {
         EvolutionCalendar calendar(mImportWizard);
         calendar.loadCalendar(calendarFile);
     } else {

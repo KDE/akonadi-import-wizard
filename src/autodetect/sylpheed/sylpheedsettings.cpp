@@ -21,6 +21,7 @@
 #include "sylpheedsettingsutils.h"
 #include <mailtransport/transportmanager.h>
 #include "MailCommon/MailUtil"
+#include <QFileInfo>
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>
 #include <KIdentityManagement/kidentitymanagement/signature.h>
@@ -47,7 +48,7 @@ void SylpheedSettings::importSettings(const QString &filename, const QString &pa
     bool checkMailOnStartup = true;
     int intervalCheckMail = -1;
     const QString sylpheedrc = path + QLatin1String("/sylpheedrc");
-    if (QFile(sylpheedrc).exists()) {
+    if (QFileInfo::exists(sylpheedrc)) {
         KConfig configCommon(sylpheedrc);
         if (configCommon.hasGroup("Common")) {
             KConfigGroup common = configCommon.group("Common");

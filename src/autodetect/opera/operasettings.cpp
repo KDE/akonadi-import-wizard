@@ -40,7 +40,7 @@ OperaSettings::OperaSettings(const QString &filename, ImportWizard *parent)
 
 void OperaSettings::importSettings()
 {
-    if (QFile(mFileName).exists()) {
+    if (QFileInfo::exists(mFileName)) {
         KConfig config(mFileName);
         KConfigGroup grp = config.group(QStringLiteral("Accounts"));
         readGlobalAccount(grp);

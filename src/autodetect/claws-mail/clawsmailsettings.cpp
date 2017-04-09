@@ -29,7 +29,7 @@
 #include "importwizard_debug.h"
 #include <KConfig>
 #include <KConfigGroup>
-#include <QFile>
+#include <QFileInfo>
 
 #include <QRegularExpression>
 
@@ -48,7 +48,7 @@ void ClawsMailSettings::importSettings(const QString &filename, const QString &p
     bool checkMailOnStartup = true;
     int intervalCheckMail = -1;
     const QString clawsmailrc = path + QLatin1String("/clawsrc");
-    if (QFile(clawsmailrc).exists()) {
+    if (QFileInfo::exists(clawsmailrc)) {
         KConfig configCommon(clawsmailrc);
         if (configCommon.hasGroup("Common")) {
             KConfigGroup common = configCommon.group("Common");

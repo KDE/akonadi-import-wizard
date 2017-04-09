@@ -74,7 +74,7 @@ QString ThunderbirdImportData::name() const
 bool ThunderbirdImportData::importSettings()
 {
     const QString accountFile = mPath + defaultProfile() + QLatin1String("/prefs.js");
-    if (QFile(accountFile).exists()) {
+    if (QFileInfo::exists(accountFile)) {
         ThunderbirdSettings account(accountFile, mImportWizard);
         account.importSettings();
     } else {
@@ -117,7 +117,7 @@ bool ThunderbirdImportData::importFilters()
         bool foundFilterFile = false;
         for (const QString &file : subDirMail) {
             const QString filterFile(subMailPath + QLatin1Char('/') + file + QLatin1String("/msgFilterRules.dat"));
-            if (QFile(filterFile).exists()) {
+            if (QFileInfo::exists(filterFile)) {
                 foundFilterFile = true;
                 const bool added = addFilters(filterFile, MailCommon::FilterImporterExporter::ThunderBirdFilter);
                 if (!filtersAdded && added) {

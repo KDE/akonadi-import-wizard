@@ -79,7 +79,7 @@ void AbstractImporter::initializeFilter(MailImporter::Filter &filter)
 
 bool AbstractImporter::addFilters(const QString &filterPath, MailCommon::FilterImporterExporter::FilterType type)
 {
-    if (QFile(filterPath).exists()) {
+    if (QFileInfo::exists(filterPath)) {
         bool canceled = false;
         MailCommon::FilterImporterExporter importer(mImportWizard);
         QList<MailCommon::MailFilter *> listFilter = importer.importFilters(canceled, type, filterPath);
