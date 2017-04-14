@@ -19,8 +19,22 @@
 
 
 #include "importmailpluginmanager.h"
+#include "importwizard_debug.h"
+#include <QVector>
+#include <KPluginMetaData>
+#include <KPluginLoader>
 
 Q_GLOBAL_STATIC(ImportMailPluginManager, s_instance)
+
+
+namespace
+{
+QString pluginVersion()
+{
+    return QStringLiteral("1.0");
+}
+}
+
 
 ImportMailPluginManager::ImportMailPluginManager(QObject *parent)
     : QObject(parent)
@@ -38,9 +52,79 @@ ImportMailPluginManager *ImportMailPluginManager::self()
     return s_instance;
 }
 
-
 bool ImportMailPluginManager::initializePluginList()
 {
+    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("importwizard"), [](const KPluginMetaData & md) {
+        return md.serviceTypes().contains(QStringLiteral("ImportWizard/PluginMailImporter"));
+    });
+
+#if 0
+    QVectorIterator<KPluginMetaData> i(plugins);
+    i.toBack();
+    QSet<QString> unique;
+    while (i.hasPrevious()) {
+        ImportMailPluginManagerInfo info;
+        const KPluginMetaData data = i.previous();
+
+        //1) get plugin data => name/description etc.
+        info.pluginData = PimCommon::PluginUtil::createPluginMetaData(data);
+        //2) look at if plugin is activated
+        info.metaDataFileNameBaseName = QFileInfo(data.fileName()).baseName();
+        info.metaDataFileName = data.fileName();
+        if (pluginVersion() == data.version()) {
+            // only load plugins once, even if found multiple times!
+            if (unique.contains(info.metaDataFileNameBaseName)) {
+                continue;
+            }
+            info.plugin = nullptr;
+            mPluginList.push_back(info);
+            unique.insert(info.metaDataFileNameBaseName);
+        } else {
+            qCWarning(IMPORTWIZARD_LOG) << "Plugin " << data.name() << " doesn't have correction plugin version. It will not be loaded.";
+        }
+    }
+    QVector<ImportMailPluginManagerInfo>::iterator end(mPluginList.end());
+    for (QVector<PluginEditorCheckBeforeSendInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
+        loadPlugin(&(*it));
+    }
+    return true;
     //TODO
+#endif
     return false;
+}
+
+void ImportMailPluginManager::loadPlugin(ImportMailPluginManagerInfo *item)
+{
+    KPluginLoader pluginLoader(item->metaDataFileName);
+#if 0
+    if (pluginLoader.factory()) {
+        item->plugin = pluginLoader.factory()->create<PluginEditorCheckBeforeSend>(q, QVariantList() << item->metaDataFileNameBaseName);
+        mPluginDataList.append(item->pluginData);
+    }
+#endif
+}
+
+#if 0
+QVector<PluginEditorCheckBeforeSend *> ImportMailPluginManager::pluginsList() const
+{
+    QVector<PluginEditorCheckBeforeSend *> lst;
+    QVector<ImportMailPluginManagerInfo>::ConstIterator end(mPluginList.constEnd());
+    for (QVector<ImportMailPluginManagerInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
+        if ((*it).plugin) {
+            lst << (*it).plugin;
+        }
+    }
+    return lst;
+}
+
+
+#endif
+
+PluginUtilData ImportMailPluginManager::createPluginMetaData(const KPluginMetaData &metaData)
+{
+    PluginUtilData pluginData;
+    pluginData.mDescription = metaData.description();
+    pluginData.mName = metaData.name();
+    pluginData.mIdentifier = metaData.pluginId();
+    return pluginData;
 }

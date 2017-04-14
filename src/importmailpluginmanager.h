@@ -20,6 +20,37 @@
 #define IMPORTMAILPLUGINMANAGER_H
 
 #include <QObject>
+#include <KPluginMetaData>
+
+class PluginUtilData
+{
+public:
+    PluginUtilData()
+    {
+
+    }
+    QStringList mExtraInfo;
+    QString mDescription;
+    QString mIdentifier;
+    QString mName;
+};
+
+class ImportMailPluginManagerInfo
+{
+public:
+    ImportMailPluginManagerInfo()
+        //: plugin(nullptr)
+    {
+
+    }
+    QString metaDataFileNameBaseName;
+    QString metaDataFileName;
+    PluginUtilData pluginData;
+#if 0
+    PluginEditorCheckBeforeSend *plugin;
+#endif
+};
+
 
 class ImportMailPluginManager : public QObject
 {
@@ -30,6 +61,10 @@ public:
 
     static ImportMailPluginManager *self();
     bool initializePluginList();
+private:
+    void loadPlugin(ImportMailPluginManagerInfo *item);
+    PluginUtilData createPluginMetaData(const KPluginMetaData &metaData);
+    QVector<ImportMailPluginManagerInfo> mPluginList;
 };
 
 #endif // IMPORTMAILPLUGINMANAGER_H
