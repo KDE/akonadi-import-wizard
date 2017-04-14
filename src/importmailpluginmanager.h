@@ -21,6 +21,7 @@
 
 #include <QObject>
 #include <KPluginMetaData>
+class AbstractImporter;
 
 class PluginUtilData
 {
@@ -39,16 +40,14 @@ class ImportMailPluginManagerInfo
 {
 public:
     ImportMailPluginManagerInfo()
-        //: plugin(nullptr)
+        : plugin(nullptr)
     {
 
     }
     QString metaDataFileNameBaseName;
     QString metaDataFileName;
     PluginUtilData pluginData;
-#if 0
-    PluginEditorCheckBeforeSend *plugin;
-#endif
+    AbstractImporter *plugin;
 };
 
 
@@ -61,10 +60,14 @@ public:
 
     static ImportMailPluginManager *self();
     bool initializePluginList();
+
+    QVector<AbstractImporter *> pluginsList() const;
+
 private:
     void loadPlugin(ImportMailPluginManagerInfo *item);
     PluginUtilData createPluginMetaData(const KPluginMetaData &metaData);
     QVector<ImportMailPluginManagerInfo> mPluginList;
+    QVector<PluginUtilData> mPluginDataList;
 };
 
 #endif // IMPORTMAILPLUGINMANAGER_H

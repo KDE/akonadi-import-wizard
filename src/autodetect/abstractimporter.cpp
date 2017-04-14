@@ -32,7 +32,8 @@
 #include <QFile>
 
 AbstractImporter::AbstractImporter(ImportWizard *parent)
-    : mImportWizard(parent)
+    : QObject(),
+      mImportWizard(parent)
 {
 }
 

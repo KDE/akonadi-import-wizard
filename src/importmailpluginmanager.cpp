@@ -20,9 +20,11 @@
 
 #include "importmailpluginmanager.h"
 #include "importwizard_debug.h"
+#include "abstractimporter.h"
 #include <QVector>
 #include <KPluginMetaData>
 #include <KPluginLoader>
+#include <KPluginFactory>
 
 Q_GLOBAL_STATIC(ImportMailPluginManager, s_instance)
 
@@ -96,18 +98,15 @@ bool ImportMailPluginManager::initializePluginList()
 void ImportMailPluginManager::loadPlugin(ImportMailPluginManagerInfo *item)
 {
     KPluginLoader pluginLoader(item->metaDataFileName);
-#if 0
     if (pluginLoader.factory()) {
-        item->plugin = pluginLoader.factory()->create<PluginEditorCheckBeforeSend>(q, QVariantList() << item->metaDataFileNameBaseName);
+        item->plugin = pluginLoader.factory()->create<AbstractImporter>(this, QVariantList() << item->metaDataFileNameBaseName);
         mPluginDataList.append(item->pluginData);
     }
-#endif
 }
 
-#if 0
-QVector<PluginEditorCheckBeforeSend *> ImportMailPluginManager::pluginsList() const
+QVector<AbstractImporter *> ImportMailPluginManager::pluginsList() const
 {
-    QVector<PluginEditorCheckBeforeSend *> lst;
+    QVector<AbstractImporter *> lst;
     QVector<ImportMailPluginManagerInfo>::ConstIterator end(mPluginList.constEnd());
     for (QVector<ImportMailPluginManagerInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
         if ((*it).plugin) {
@@ -116,9 +115,6 @@ QVector<PluginEditorCheckBeforeSend *> ImportMailPluginManager::pluginsList() co
     }
     return lst;
 }
-
-
-#endif
 
 PluginUtilData ImportMailPluginManager::createPluginMetaData(const KPluginMetaData &metaData)
 {

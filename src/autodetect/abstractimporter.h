@@ -35,8 +35,9 @@ class MailFilter;
 class FilterImporterExporter;
 }
 
-class AbstractImporter
+class AbstractImporter : public QObject
 {
+    Q_OBJECT
 public:
     enum TypeSupportedOption {
         None = 0,
