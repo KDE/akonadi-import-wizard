@@ -118,12 +118,16 @@ void AbstractAddressBook::addImportError(const QString &log)
 
 void AbstractAddressBook::addAddressBookImportInfo(const QString &log)
 {
-    mImportWizard->importAddressBookPage()->addImportInfo(log);
+    if (mImportWizard) {
+        mImportWizard->importAddressBookPage()->addImportInfo(log);
+    }
 }
 
 void AbstractAddressBook::addAddressBookImportError(const QString &log)
 {
-    mImportWizard->importAddressBookPage()->addImportError(log);
+    if (mImportWizard) {
+        mImportWizard->importAddressBookPage()->addImportError(log);
+    }
 }
 
 void AbstractAddressBook::cleanUp()

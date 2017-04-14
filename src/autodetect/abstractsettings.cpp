@@ -93,12 +93,16 @@ void AbstractSettings::storeTransport(MailTransport::Transport *mt, bool isDefau
 
 void AbstractSettings::addImportInfo(const QString &log)
 {
-    mImportWizard->importSettingPage()->addImportInfo(log);
+    if (mImportWizard) {
+        mImportWizard->importSettingPage()->addImportInfo(log);
+    }
 }
 
 void AbstractSettings::addImportError(const QString &log)
 {
-    mImportWizard->importSettingPage()->addImportError(log);
+    if (mImportWizard) {
+        mImportWizard->importSettingPage()->addImportError(log);
+    }
 }
 
 void AbstractSettings::addCheckMailOnStartup(const QString &agentIdentifyName, bool loginAtStartup)

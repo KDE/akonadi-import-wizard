@@ -25,7 +25,7 @@ class ImportWizard;
 class TheBatImportData : public AbstractImporter
 {
 public:
-    explicit TheBatImportData(ImportWizard *parent);
+    explicit TheBatImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
     ~TheBatImportData();
 
     TypeSupportedOptions supportedOption() Q_DECL_OVERRIDE;

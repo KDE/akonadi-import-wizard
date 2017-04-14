@@ -26,10 +26,10 @@
 #include "importwizard.h"
 
 #include <KLocalizedString>
-
+#include <kpluginfactory.h>
 #include <QDir>
 
-OperaImportData::OperaImportData(ImportWizard *parent)
+OperaImportData::OperaImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
     mPath = MailImporter::FilterOpera::defaultSettingsPath();

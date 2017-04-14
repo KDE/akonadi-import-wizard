@@ -27,10 +27,10 @@
 #include "sylpheed/sylpheedaddressbook.h"
 
 #include <KLocalizedString>
-
+#include <kpluginfactory.h>
 #include <QDir>
 
-SylpheedImportData::SylpheedImportData(ImportWizard *parent)
+SylpheedImportData::SylpheedImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
     mPath = MailImporter::FilterSylpheed::defaultSettingsPath();

@@ -25,7 +25,7 @@ class ImportWizard;
 class Evolutionv1ImportData : public AbstractImporter
 {
 public:
-    explicit Evolutionv1ImportData(ImportWizard *parent);
+    explicit Evolutionv1ImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
     ~Evolutionv1ImportData();
 
     TypeSupportedOptions supportedOption() Q_DECL_OVERRIDE;

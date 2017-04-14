@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "balsaimporter",
+        "Name": "Balsa Importer",
+        "ServiceTypes": [
+            "ImportWizard/PluginMailImporter"
+        ],
+        "Version": "1.0"
+    }
+}

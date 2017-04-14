@@ -25,7 +25,7 @@ class ImportWizard;
 class GearyImportData : public AbstractImporter
 {
 public:
-    explicit GearyImportData(ImportWizard *parent);
+    explicit GearyImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
     ~GearyImportData();
 
     TypeSupportedOptions supportedOption() Q_DECL_OVERRIDE;

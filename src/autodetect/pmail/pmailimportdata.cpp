@@ -25,10 +25,10 @@
 #include "importwizard.h"
 
 #include <KLocalizedString>
-
+#include <kpluginfactory.h>
 #include <QDir>
 
-PMailImportData::PMailImportData(ImportWizard *parent)
+PMailImportData::PMailImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
     mPath = QDir::homePath();

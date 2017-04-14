@@ -21,6 +21,7 @@
 #define ABSTRACTSETTINGS_H
 
 #include "abstractbase.h"
+#include "libimportwizard_export.h"
 #include <KSharedConfig>
 #include <QMap>
 
@@ -37,7 +38,7 @@ namespace MailTransport
 class Transport;
 }
 
-class AbstractSettings : public AbstractBase
+class LIBIMPORTWIZARD_EXPORT AbstractSettings : public AbstractBase
 {
     Q_OBJECT
 public:

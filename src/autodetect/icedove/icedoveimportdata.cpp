@@ -28,11 +28,12 @@
 #include "importwizard.h"
 
 #include <KLocalizedString>
+#include <kpluginfactory.h>
 #include <KConfig>
 
 #include <QDir>
 
-IcedoveImportData::IcedoveImportData(ImportWizard *parent)
+IcedoveImportData::IcedoveImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
     mPath = MailImporter::FilterIcedove::defaultSettingsPath();

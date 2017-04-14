@@ -25,7 +25,7 @@ class ImportWizard;
 class ClawsMailImportData : public AbstractImporter
 {
 public:
-    explicit ClawsMailImportData(ImportWizard *parent);
+    explicit ClawsMailImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
     ~ClawsMailImportData();
 
     TypeSupportedOptions supportedOption() Q_DECL_OVERRIDE;

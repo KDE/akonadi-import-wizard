@@ -25,7 +25,7 @@ class ImportWizard;
 class OeImportData : public AbstractImporter
 {
 public:
-    explicit OeImportData(ImportWizard *parent);
+    explicit OeImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
     ~OeImportData();
 
     TypeSupportedOptions supportedOption() Q_DECL_OVERRIDE;

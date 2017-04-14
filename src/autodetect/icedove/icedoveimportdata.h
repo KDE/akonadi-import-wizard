@@ -25,7 +25,7 @@ class ImportWizard;
 class IcedoveImportData : public AbstractImporter
 {
 public:
-    explicit IcedoveImportData(ImportWizard *parent);
+    explicit IcedoveImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
     ~IcedoveImportData();
 
     TypeSupportedOptions supportedOption() Q_DECL_OVERRIDE;

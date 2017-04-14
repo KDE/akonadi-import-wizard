@@ -21,10 +21,13 @@
 #include "importmailpluginmanager.h"
 #include "importwizard_debug.h"
 #include "abstractimporter.h"
-#include <QVector>
+
 #include <KPluginMetaData>
 #include <KPluginLoader>
 #include <KPluginFactory>
+
+#include <QFileInfo>
+#include <QVector>
 
 Q_GLOBAL_STATIC(ImportMailPluginManager, s_instance)
 
@@ -60,7 +63,6 @@ bool ImportMailPluginManager::initializePluginList()
         return md.serviceTypes().contains(QStringLiteral("ImportWizard/PluginMailImporter"));
     });
 
-#if 0
     QVectorIterator<KPluginMetaData> i(plugins);
     i.toBack();
     QSet<QString> unique;
@@ -69,7 +71,7 @@ bool ImportMailPluginManager::initializePluginList()
         const KPluginMetaData data = i.previous();
 
         //1) get plugin data => name/description etc.
-        info.pluginData = PimCommon::PluginUtil::createPluginMetaData(data);
+        info.pluginData = createPluginMetaData(data);
         //2) look at if plugin is activated
         info.metaDataFileNameBaseName = QFileInfo(data.fileName()).baseName();
         info.metaDataFileName = data.fileName();
@@ -86,13 +88,10 @@ bool ImportMailPluginManager::initializePluginList()
         }
     }
     QVector<ImportMailPluginManagerInfo>::iterator end(mPluginList.end());
-    for (QVector<PluginEditorCheckBeforeSendInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
+    for (QVector<ImportMailPluginManagerInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
         loadPlugin(&(*it));
     }
     return true;
-    //TODO
-#endif
-    return false;
 }
 
 void ImportMailPluginManager::loadPlugin(ImportMailPluginManagerInfo *item)

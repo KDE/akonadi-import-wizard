@@ -25,7 +25,7 @@ class ImportWizard;
 class TrojitaImportData : public AbstractImporter
 {
 public:
-    explicit TrojitaImportData(ImportWizard *parent);
+    explicit TrojitaImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
     ~TrojitaImportData();
 
     TypeSupportedOptions supportedOption() Q_DECL_OVERRIDE;

@@ -26,7 +26,7 @@ class ImportWizard;
 class OperaImportData : public AbstractImporter
 {
 public:
-    explicit OperaImportData(ImportWizard *parent);
+    explicit OperaImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
     ~OperaImportData();
 
     TypeSupportedOptions supportedOption() Q_DECL_OVERRIDE;

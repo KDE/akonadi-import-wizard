@@ -24,10 +24,11 @@
 #include "importwizard.h"
 
 #include <KLocalizedString>
+#include <kpluginfactory.h>
 
 #include <QDir>
 
-OeImportData::OeImportData(ImportWizard *parent)
+OeImportData::OeImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
     mPath = QDir::homePath();

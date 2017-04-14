@@ -32,7 +32,7 @@
 
 #include <QDir>
 
-Evolutionv3ImportData::Evolutionv3ImportData(ImportWizard *parent)
+Evolutionv3ImportData::Evolutionv3ImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
     mPath = MailImporter::FilterEvolution_v3::defaultSettingsPath();

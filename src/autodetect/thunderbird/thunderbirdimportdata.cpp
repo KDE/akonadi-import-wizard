@@ -28,10 +28,11 @@
 #include "importwizard.h"
 
 #include <KLocalizedString>
+#include <kpluginfactory.h>
 
 #include <QDir>
 
-ThunderbirdImportData::ThunderbirdImportData(ImportWizard *parent)
+ThunderbirdImportData::ThunderbirdImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
     mPath = MailImporter::FilterThunderbird::defaultSettingsPath();

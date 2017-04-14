@@ -31,9 +31,9 @@
 
 #include <QFile>
 
-AbstractImporter::AbstractImporter(ImportWizard *parent)
-    : QObject(),
-      mImportWizard(parent)
+AbstractImporter::AbstractImporter(QObject *parent)
+    : QObject(parent),
+      mImportWizard(nullptr)
 {
 }
 
@@ -106,20 +106,33 @@ void AbstractImporter::appendFilters(const QList<MailCommon::MailFilter *> &filt
 
 void AbstractImporter::addImportFilterInfo(const QString &log) const
 {
-    mImportWizard->importFilterPage()->addImportInfo(log);
+    if (mImportWizard) {
+        mImportWizard->importFilterPage()->addImportInfo(log);
+    }
 }
 
 void AbstractImporter::addImportFilterError(const QString &log) const
 {
-    mImportWizard->importFilterPage()->addImportError(log);
+    if (mImportWizard) {
+        mImportWizard->importFilterPage()->addImportError(log);
+    }
 }
 
 void AbstractImporter::addImportSettingsInfo(const QString &log) const
 {
-    mImportWizard->importSettingPage()->addImportError(log);
+    if (mImportWizard) {
+        mImportWizard->importSettingPage()->addImportError(log);
+    }
 }
 
 void AbstractImporter::addImportCalendarInfo(const QString &log) const
 {
-    mImportWizard->importCalendarPage()->addImportError(log);
+    if (mImportWizard) {
+        mImportWizard->importCalendarPage()->addImportError(log);
+    }
+}
+
+void AbstractImporter::setImportWizard(ImportWizard *importWizard)
+{
+    mImportWizard = importWizard;
 }

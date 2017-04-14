@@ -25,7 +25,7 @@ class ImportWizard;
 class BalsaImportData : public AbstractImporter
 {
 public:
-    explicit BalsaImportData(ImportWizard *parent);
+    explicit BalsaImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
     ~BalsaImportData();
 
     TypeSupportedOptions supportedOption() Q_DECL_OVERRIDE;

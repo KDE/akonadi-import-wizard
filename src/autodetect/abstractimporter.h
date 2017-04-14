@@ -20,6 +20,7 @@
 #ifndef AbstractImporter_H
 #define AbstractImporter_H
 #include "MailCommon/FilterImporterExporter"
+#include "libimportwizard_export.h"
 
 class ImportWizard;
 
@@ -35,7 +36,7 @@ class MailFilter;
 class FilterImporterExporter;
 }
 
-class AbstractImporter : public QObject
+class LIBIMPORTWIZARD_EXPORT AbstractImporter : public QObject
 {
     Q_OBJECT
 public:
@@ -50,7 +51,7 @@ public:
 
     Q_DECLARE_FLAGS(TypeSupportedOptions, TypeSupportedOption)
 
-    explicit AbstractImporter(ImportWizard *parent);
+    explicit AbstractImporter(QObject *parent);
     virtual ~AbstractImporter();
 
     /**
@@ -72,6 +73,8 @@ public:
     virtual bool importFilters();
     virtual bool importAddressBook();
     virtual bool importCalendar();
+
+    void setImportWizard(ImportWizard *importWizard);
 
 protected:
     //TODO we need to redefine it.

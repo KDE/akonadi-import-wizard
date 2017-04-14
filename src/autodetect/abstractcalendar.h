@@ -22,10 +22,10 @@
 
 class ImportWizard;
 #include "abstractbase.h"
-
+#include "libimportwizard_export.h"
 #include <QString>
 
-class AbstractCalendar : public AbstractBase
+class LIBIMPORTWIZARD_EXPORT AbstractCalendar : public AbstractBase
 {
     Q_OBJECT
 public:

@@ -27,10 +27,12 @@
 #include "importwizard.h"
 
 #include <KLocalizedString>
-
+#include <kpluginfactory.h>
 #include <QDir>
 
-BalsaImportData::BalsaImportData(ImportWizard *parent)
+//K_PLUGIN_FACTORY_WITH_JSON(BalsaImporterFactory, "balsaimporter.json", registerPlugin<BalsaImportData>();)
+
+BalsaImportData::BalsaImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
     mPath = MailImporter::FilterBalsa::defaultSettingsPath();
@@ -100,3 +102,5 @@ AbstractImporter::TypeSupportedOptions BalsaImportData::supportedOption()
     options |= AbstractImporter::Filters;
     return options;
 }
+
+#include "balsaimportdata.moc"

@@ -25,7 +25,7 @@ class ImportWizard;
 class ThunderbirdImportData : public AbstractImporter
 {
 public:
-    explicit ThunderbirdImportData(ImportWizard *parent);
+    explicit ThunderbirdImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
     ~ThunderbirdImportData();
 
     TypeSupportedOptions supportedOption() Q_DECL_OVERRIDE;

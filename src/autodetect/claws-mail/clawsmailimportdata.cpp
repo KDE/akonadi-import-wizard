@@ -26,11 +26,14 @@
 #include "importfilterinfogui.h"
 #include "importwizard.h"
 
+#include <kpluginfactory.h>
 #include <KLocalizedString>
 
 #include <QDir>
 
-ClawsMailImportData::ClawsMailImportData(ImportWizard *parent)
+//K_PLUGIN_FACTORY_WITH_JSON(ClawsMailImporterFactory, "clawsmailimporter.json", registerPlugin<ClawsMailImportData>();)
+
+ClawsMailImportData::ClawsMailImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
     mPath = MailImporter::FilterClawsMail::defaultSettingsPath();
@@ -105,3 +108,5 @@ AbstractImporter::TypeSupportedOptions ClawsMailImportData::supportedOption()
     options |= AbstractImporter::Filters;
     return options;
 }
+
+#include "clawsmailimportdata.moc"

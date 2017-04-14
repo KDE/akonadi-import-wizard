@@ -24,10 +24,11 @@
 #include "mailimporter/othermailerutil.h"
 #include "importfilterinfogui.h"
 #include "importwizard.h"
+#include <kpluginfactory.h>
 
 #include <QDir>
 
-TrojitaImportData::TrojitaImportData(ImportWizard *parent)
+TrojitaImportData::TrojitaImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
     mPath = MailImporter::OtherMailerUtil::trojitaDefaultPath();

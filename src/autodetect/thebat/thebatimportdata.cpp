@@ -24,10 +24,11 @@
 #include "importwizard.h"
 
 #include <KLocalizedString>
+#include <kpluginfactory.h>
 
 #include <QDir>
 
-TheBatImportData::TheBatImportData(ImportWizard *parent)
+TheBatImportData::TheBatImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
     //TODO fix it

@@ -25,10 +25,12 @@
 #include "importfilterinfogui.h"
 #include "importwizard.h"
 #include "importwizard_debug.h"
-
+#include <kpluginfactory.h>
 #include <QDir>
 
-GearyImportData::GearyImportData(ImportWizard *parent)
+K_PLUGIN_FACTORY_WITH_JSON(GearyImporterFactory, "gearyimporter.json", registerPlugin<GearyImportData>();)
+
+GearyImportData::GearyImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
     mPath = MailImporter::OtherMailerUtil::gearyDefaultPath();
@@ -86,3 +88,5 @@ AbstractImporter::TypeSupportedOptions GearyImportData::supportedOption()
     //options |= AbstractImporter::AddressBooks;
     return options;
 }
+
+#include "gearyimportdata.moc"

@@ -25,7 +25,7 @@ class ImportWizard;
 class SylpheedImportData : public AbstractImporter
 {
 public:
-    explicit SylpheedImportData(ImportWizard *parent);
+    explicit SylpheedImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
     ~SylpheedImportData();
 
     TypeSupportedOptions supportedOption() Q_DECL_OVERRIDE;

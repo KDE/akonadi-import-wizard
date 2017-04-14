@@ -26,7 +26,7 @@ class ImportWizard;
 class PMailImportData : public AbstractImporter
 {
 public:
-    explicit PMailImportData(ImportWizard *parent);
+    explicit PMailImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
     ~PMailImportData();
 
     TypeSupportedOptions supportedOption() Q_DECL_OVERRIDE;

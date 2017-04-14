@@ -106,7 +106,6 @@ ImportWizard::ImportWizard(WizardMode mode, QWidget *parent)
 
 ImportWizard::~ImportWizard()
 {
-    qDeleteAll(mlistImport);
     writeConfig();
 }
 
@@ -219,28 +218,65 @@ void ImportWizard::createAutomaticModePage()
 void ImportWizard::initializeImportModule()
 {
     //Import module
-    addImportModule(new ThunderbirdImportData(this));
-    addImportModule(new IcedoveImportData(this));
-    addImportModule(new SylpheedImportData(this));
-    addImportModule(new Evolutionv3ImportData(this));
-    addImportModule(new Evolutionv2ImportData(this));
-    addImportModule(new Evolutionv1ImportData(this));
-    addImportModule(new OperaImportData(this));
+    AbstractImporter *importer = new ThunderbirdImportData(this);
+    importer->setImportWizard(this);
+    addImportModule(importer);
+
+    importer = new IcedoveImportData(this);
+    importer->setImportWizard(this);
+    addImportModule(importer);
+
+    importer = new SylpheedImportData(this);
+    importer->setImportWizard(this);
+    addImportModule(importer);
+
+    importer = new Evolutionv3ImportData(this);
+    importer->setImportWizard(this);
+    addImportModule(importer);
+
+    importer = new Evolutionv2ImportData(this);
+    importer->setImportWizard(this);
+    addImportModule(importer);
+
+    importer = new Evolutionv1ImportData(this);
+    importer->setImportWizard(this);
+    addImportModule(importer);
+
+    importer = new OperaImportData(this);
+    importer->setImportWizard(this);
+    addImportModule(importer);
 #ifdef Q_OS_WIN
-    addImportModule(new OeImportData(this));
+    importer = new OeImportData(this);
+    importer->setImportWizard(this);
+    addImportModule(importer);
 #endif
 #ifdef Q_OS_MAC
-    addImportModule(new MailAppImportData(this));
+    importer = new OeImportData(this);
+    importer->setImportWizard(this);
+    addImportModule(importer);
 #endif
 
 #ifdef Q_OS_WIN
-    addImportModule(new PMailImportData(this));
-    addImportModule(new TheBatImportData(this));
+    importer = new PMailImportData(this);
+    importer->setImportWizard(this);
+    addImportModule(importer);
+
+    importer = new TheBatImportData(this);
+    importer->setImportWizard(this);
+    addImportModule(importer);
 #endif
 
-    addImportModule(new BalsaImportData(this));
-    addImportModule(new ClawsMailImportData(this));
-    addImportModule(new TrojitaImportData(this));
+    importer = new BalsaImportData(this);
+    importer->setImportWizard(this);
+    addImportModule(importer);
+
+    importer = new ClawsMailImportData(this);
+    importer->setImportWizard(this);
+    addImportModule(importer);
+
+    importer = new TrojitaImportData(this);
+    importer->setImportWizard(this);
+    addImportModule(importer);
 }
 
 void ImportWizard::slotProgramDoubleClicked()

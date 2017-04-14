@@ -24,10 +24,10 @@
 #include "importwizard.h"
 
 #include <KLocalizedString>
-
+#include <kpluginfactory.h>
 #include <QDir>
 
-MailAppImportData::MailAppImportData(ImportWizard *parent)
+MailAppImportData::MailAppImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
     mPath = QDir::homePath();

@@ -22,6 +22,7 @@
 
 #include <AkonadiCore/Collection>
 #include "abstractbase.h"
+#include "libimportwizard_export.h"
 
 class ImportWizard;
 
@@ -33,7 +34,7 @@ class ContactGroup;
 
 class KJob;
 
-class AbstractAddressBook: public AbstractBase
+class LIBIMPORTWIZARD_EXPORT AbstractAddressBook: public AbstractBase
 {
     Q_OBJECT
 public:

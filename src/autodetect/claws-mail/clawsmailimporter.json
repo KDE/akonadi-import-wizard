@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "clawsmailimporter",
+        "Name": "ClawsMail Importer",
+        "ServiceTypes": [
+            "ImportWizard/PluginMailImporter"
+        ],
+        "Version": "1.0"
+    }
+}

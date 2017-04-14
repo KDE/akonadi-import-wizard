@@ -23,10 +23,11 @@
 #include "importfilterinfogui.h"
 
 #include <KLocalizedString>
+#include <kpluginfactory.h>
 
 #include <QDir>
 
-Evolutionv1ImportData::Evolutionv1ImportData(ImportWizard *parent)
+Evolutionv1ImportData::Evolutionv1ImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
     mPath = MailImporter::FilterEvolution::defaultSettingsPath();
