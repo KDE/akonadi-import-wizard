@@ -33,7 +33,6 @@
 #include "autodetect/evolutionv2/evolutionv2importdata.h"
 #include "autodetect/evolutionv1/evolutionv1importdata.h"
 #include "autodetect/icedove/icedoveimportdata.h"
-#include "autodetect/opera/operaimportdata.h"
 #include "autodetect/oe/oeimportdata.h"
 #include "autodetect/mailapp/mailappimportdata.h"
 #include "autodetect/pmail/pmailimportdata.h"
@@ -241,9 +240,9 @@ void ImportWizard::initializeImportModule()
     importer->setImportWizard(this);
     addImportModule(importer);
 
-    importer = new OperaImportData(this);
-    importer->setImportWizard(this);
-    addImportModule(importer);
+//    importer = new OperaImportData(this);
+//    importer->setImportWizard(this);
+//    addImportModule(importer);
 #ifdef Q_OS_WIN
     importer = new OeImportData(this);
     importer->setImportWizard(this);

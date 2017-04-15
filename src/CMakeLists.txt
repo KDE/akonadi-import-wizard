@@ -48,9 +48,9 @@ set(libimportwizard_autodetect_SRCS
     autodetect/evolutionv3/evolutionutil.cpp
     autodetect/evolutionv2/evolutionv2importdata.cpp
     autodetect/evolutionv1/evolutionv1importdata.cpp
-    autodetect/opera/operaimportdata.cpp
-    autodetect/opera/operaaddressbook.cpp
-    autodetect/opera/operasettings.cpp
+#    autodetect/opera/operaimportdata.cpp
+#    autodetect/opera/operaaddressbook.cpp
+#    autodetect/opera/operasettings.cpp
     autodetect/oe/oeimportdata.cpp
     autodetect/mailapp/mailappimportdata.cpp
     autodetect/pmail/pmailimportdata.cpp

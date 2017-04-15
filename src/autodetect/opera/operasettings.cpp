@@ -18,7 +18,7 @@
 */
 
 #include "operasettings.h"
-#include "importwizard_debug.h"
+//#include "importwizard_debug.h"
 #include "mailimporter/filteropera.h"
 
 #include <mailtransport/transportmanager.h>
@@ -116,7 +116,7 @@ void OperaSettings::readAccount(const KConfigGroup &grp)
         } else if (leaveOnServer == 0) {
             settings.insert(QStringLiteral("LeaveOnServer"), false);
         } else {
-            qCDebug(IMPORTWIZARD_LOG) << " leave on server option unknown : " << leaveOnServer;
+            //FIXME qCDebug(IMPORTWIZARD_LOG) << " leave on server option unknown : " << leaveOnServer;
         }
 
         const int removeMailFromSever = grp.readEntry(QStringLiteral("Remove From Server Delay Enabled"), -1);
@@ -164,7 +164,7 @@ void OperaSettings::readAccount(const KConfigGroup &grp)
             settings.insert(QStringLiteral("AuthenticationMethod"), MailTransport::Transport::EnumAuthenticationType::APOP);   //TODO: verify
             break;
         default:
-            qCDebug(IMPORTWIZARD_LOG) << " unknown authentication method :" << authMethod;
+            //FIXME qCDebug(IMPORTWIZARD_LOG) << " unknown authentication method :" << authMethod;
             break;
         }
 
@@ -173,7 +173,7 @@ void OperaSettings::readAccount(const KConfigGroup &grp)
         addCheckMailOnStartup(agentIdentifyName, enableManualCheck);
         addToManualCheck(agentIdentifyName, enableManualCheck);
     } else {
-        qCDebug(IMPORTWIZARD_LOG) << " protocol unknown : " << incomingProtocol;
+        //FIXME qCDebug(IMPORTWIZARD_LOG) << " protocol unknown : " << incomingProtocol;
     }
 }
 
@@ -219,7 +219,8 @@ void OperaSettings::readTransport(const KConfigGroup &grp)
             mt->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN); //Don't know... Verify
             break;
         default:
-            qCDebug(IMPORTWIZARD_LOG) << " authMethod unknown :" << authMethod;
+            //FIXME qCDebug(IMPORTWIZARD_LOG) << " authMethod unknown :" << authMethod;
+            ;
         }
 
         //We can't specify a default smtp...
@@ -280,7 +281,7 @@ void OperaSettings::readIdentity(const KConfigGroup &grp)
                     signature.setText(QString(sigText));
                     break;
                 default:
-                    qCDebug(IMPORTWIZARD_LOG) << " pb with Signature is HTML " << signatureHtml;
+                    //FIXME qCDebug(IMPORTWIZARD_LOG) << " pb with Signature is HTML " << signatureHtml;
                     break;
                 }
                 newIdentity->setSignature(signature);
