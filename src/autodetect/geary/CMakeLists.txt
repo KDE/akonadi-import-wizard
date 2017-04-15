@@ -16,4 +16,5 @@ target_link_libraries(gearyimporterplugin
   KF5::MailImporterAkonadi
   KF5::MailTransport
   KF5::IdentityManagement
+  KF5::MailCommon
 )

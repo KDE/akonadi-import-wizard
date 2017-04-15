@@ -15,5 +15,6 @@ target_link_libraries(trojitaimporterplugin
   KF5::Contacts
   KF5::MailImporterAkonadi
   KF5::MailTransport
+  KF5::MailCommon
   KF5::IdentityManagement
 )

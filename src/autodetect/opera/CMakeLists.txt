@@ -15,5 +15,6 @@ target_link_libraries(operaimporterplugin
   KF5::Contacts
   KF5::MailImporterAkonadi
   KF5::MailTransport
+  KF5::MailCommon
   KF5::IdentityManagement
 )
