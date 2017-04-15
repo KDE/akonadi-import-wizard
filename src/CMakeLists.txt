@@ -62,13 +62,13 @@ set(libimportwizard_autodetect_SRCS
     autodetect/claws-mail/clawsmailimportdata.cpp
     autodetect/claws-mail/clawsmailsettings.cpp
     autodetect/claws-mail/clawsmailaddressbook.cpp
-    autodetect/trojita/trojitasettings.cpp
-    autodetect/trojita/trojitaimportdata.cpp
-    autodetect/trojita/trojitaaddressbook.cpp
+#    autodetect/trojita/trojitasettings.cpp
+#    autodetect/trojita/trojitaimportdata.cpp
+#    autodetect/trojita/trojitaaddressbook.cpp
     autodetect/icedove/icedoveimportdata.cpp
-    autodetect/geary/gearysettings.cpp
-    autodetect/geary/gearyimportdata.cpp
-    autodetect/geary/gearyaddressbook.cpp
+#    autodetect/geary/gearysettings.cpp
+#    autodetect/geary/gearyimportdata.cpp
+#    autodetect/geary/gearyaddressbook.cpp
     )
 
 

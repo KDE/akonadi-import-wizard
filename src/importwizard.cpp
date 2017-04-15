@@ -40,7 +40,6 @@
 #include "autodetect/thebat/thebatimportdata.h"
 #include "autodetect/balsa/balsaimportdata.h"
 #include "autodetect/claws-mail/clawsmailimportdata.h"
-#include "autodetect/trojita/trojitaimportdata.h"
 
 #include "manual/manualimportmailpage.h"
 #include "manual/manualselectfilterpage.h"
@@ -274,9 +273,9 @@ void ImportWizard::initializeImportModule()
     importer->setImportWizard(this);
     addImportModule(importer);
 
-    importer = new TrojitaImportData(this);
-    importer->setImportWizard(this);
-    addImportModule(importer);
+//    importer = new TrojitaImportData(this);
+//    importer->setImportWizard(this);
+//    addImportModule(importer);
 }
 
 void ImportWizard::slotProgramDoubleClicked()
