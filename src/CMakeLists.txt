@@ -139,4 +139,4 @@ install(PROGRAMS data/org.kde.importwizard.desktop DESTINATION ${KDE_INSTALL_APP
 install(TARGETS libimportwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
 add_subdirectory(manual/pics)
-add_subdirectory(autodetect/geary)
+add_subdirectory(autodetect/)
