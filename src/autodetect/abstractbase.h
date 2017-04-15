@@ -21,6 +21,7 @@
 #define ABSTRACTBASE_H
 
 #include <QObject>
+#include "libimportwizard_export.h"
 #include <QString>
 #include <QMap>
 #include <QVariant>
@@ -30,7 +31,7 @@ namespace PimCommon
 class CreateResource;
 }
 
-class AbstractBase : public QObject
+class LIBIMPORTWIZARD_EXPORT AbstractBase : public QObject
 {
     Q_OBJECT
 public:
