@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "evolution1importer",
+        "Name": "Evolution1 Importer",
+        "ServiceTypes": [
+            "ImportWizard/PluginMailImporter"
+        ],
+        "Version": "1.0"
+    }
+}
