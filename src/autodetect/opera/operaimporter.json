@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "operaimporter",
+        "Name": "Opera Importer",
+        "ServiceTypes": [
+            "ImportWizard/PluginMailImporter"
+        ],
+        "Version": "1.0"
+    }
+}

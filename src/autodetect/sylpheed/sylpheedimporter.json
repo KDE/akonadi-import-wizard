@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "sylpheedimporter",
+        "Name": "Sylpheed Importer",
+        "ServiceTypes": [
+            "ImportWizard/PluginMailImporter"
+        ],
+        "Version": "1.0"
+    }
+}

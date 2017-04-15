@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "thebatimporter",
+        "Name": "TheBat Importer",
+        "ServiceTypes": [
+            "ImportWizard/PluginMailImporter"
+        ],
+        "Version": "1.0"
+    }
+}

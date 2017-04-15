@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "icedoveimporter",
+        "Name": "Icedove Importer",
+        "ServiceTypes": [
+            "ImportWizard/PluginMailImporter"
+        ],
+        "Version": "1.0"
+    }
+}

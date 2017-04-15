@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "trojitaimporter",
+        "Name": "Trojita Importer",
+        "ServiceTypes": [
+            "ImportWizard/PluginMailImporter"
+        ],
+        "Version": "1.0"
+    }
+}

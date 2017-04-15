@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "mailappimporter",
+        "Name": "MailApp Importer",
+        "ServiceTypes": [
+            "ImportWizard/PluginMailImporter"
+        ],
+        "Version": "1.0"
+    }
+}

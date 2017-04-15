@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "oeimporter",
+        "Name": "OE Importer",
+        "ServiceTypes": [
+            "ImportWizard/PluginMailImporter"
+        ],
+        "Version": "1.0"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "thunderbirdimporter",
+        "Name": "Thunderbird Importer",
+        "ServiceTypes": [
+            "ImportWizard/PluginMailImporter"
+        ],
+        "Version": "1.0"
+    }
+}
