@@ -41,6 +41,7 @@
 #include "autodetect/balsa/balsaimportdata.h"
 #include "autodetect/claws-mail/clawsmailimportdata.h"
 #include "autodetect/trojita/trojitaimportdata.h"
+#include "autodetect/geary/gearyimportdata.h"
 
 #include "manual/manualimportmailpage.h"
 #include "manual/manualselectfilterpage.h"
@@ -241,6 +242,7 @@ void ImportWizard::initializeImportModule()
     addImportModule(new BalsaImportData(this));
     addImportModule(new ClawsMailImportData(this));
     addImportModule(new TrojitaImportData(this));
+    addImportModule(new GearyImportData(this));
 }
 
 void ImportWizard::slotProgramDoubleClicked()
