@@ -53,8 +53,8 @@ set(libimportwizard_autodetect_SRCS
 #    autodetect/opera/operasettings.cpp
 #    autodetect/oe/oeimportdata.cpp
 #    autodetect/mailapp/mailappimportdata.cpp
-    autodetect/pmail/pmailimportdata.cpp
-    autodetect/pmail/pmailsettings.cpp
+#autodetect/pmail/pmailimportdata.cpp
+#autodetect/pmail/pmailsettings.cpp
 #    autodetect/thebat/thebatimportdata.cpp
 #    autodetect/balsa/balsaimportdata.cpp
 #    autodetect/balsa/balsasettings.cpp
