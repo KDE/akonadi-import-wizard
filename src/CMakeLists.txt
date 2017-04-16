@@ -37,10 +37,10 @@ set(libimportwizard_autodetect_SRCS
     autodetect/thunderbird/thunderbirdsettings.cpp
     autodetect/thunderbird/thunderbirdaddressbook.cpp
     autodetect/thunderbird/addressbook/MorkParser.cpp
-    autodetect/sylpheed/sylpheedimportdata.cpp
-    autodetect/sylpheed/sylpheedsettings.cpp
-    autodetect/sylpheed/sylpheedaddressbook.cpp
-    autodetect/sylpheed/sylpheedsettingsutils.cpp
+#    autodetect/sylpheed/sylpheedimportdata.cpp
+#    autodetect/sylpheed/sylpheedsettings.cpp
+#    autodetect/sylpheed/sylpheedaddressbook.cpp
+#    autodetect/sylpheed/sylpheedsettingsutils.cpp
 #    autodetect/evolutionv3/evolutionv3importdata.cpp
 #    autodetect/evolutionv3/evolutionsettings.cpp
 #    autodetect/evolutionv3/evolutioncalendar.cpp
@@ -59,9 +59,9 @@ set(libimportwizard_autodetect_SRCS
 #    autodetect/balsa/balsaimportdata.cpp
 #    autodetect/balsa/balsasettings.cpp
 #    autodetect/balsa/balsaaddressbook.cpp
-    autodetect/claws-mail/clawsmailimportdata.cpp
-    autodetect/claws-mail/clawsmailsettings.cpp
-    autodetect/claws-mail/clawsmailaddressbook.cpp
+#    autodetect/claws-mail/clawsmailimportdata.cpp
+#    autodetect/claws-mail/clawsmailsettings.cpp
+#    autodetect/claws-mail/clawsmailaddressbook.cpp
 #    autodetect/trojita/trojitasettings.cpp
 #    autodetect/trojita/trojitaimportdata.cpp
 #    autodetect/trojita/trojitaaddressbook.cpp

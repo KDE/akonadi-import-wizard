@@ -28,11 +28,9 @@
 #include "importfinishpage.h"
 
 #include "autodetect/thunderbird/thunderbirdimportdata.h"
-#include "autodetect/sylpheed/sylpheedimportdata.h"
 #include "autodetect/icedove/icedoveimportdata.h"
 #include "autodetect/oe/oeimportdata.h"
 #include "autodetect/thebat/thebatimportdata.h"
-#include "autodetect/claws-mail/clawsmailimportdata.h"
 
 #include "manual/manualimportmailpage.h"
 #include "manual/manualselectfilterpage.h"
@@ -218,9 +216,9 @@ void ImportWizard::initializeImportModule()
     importer->setImportWizard(this);
     addImportModule(importer);
 
-    importer = new SylpheedImportData(this);
-    importer->setImportWizard(this);
-    addImportModule(importer);
+//    importer = new SylpheedImportData(this);
+//    importer->setImportWizard(this);
+//    addImportModule(importer);
 
 //    importer = new Evolutionv3ImportData(this);
 //    importer->setImportWizard(this);
@@ -262,9 +260,9 @@ void ImportWizard::initializeImportModule()
 //    importer->setImportWizard(this);
 //    addImportModule(importer);
 
-    importer = new ClawsMailImportData(this);
-    importer->setImportWizard(this);
-    addImportModule(importer);
+//    importer = new ClawsMailImportData(this);
+//    importer->setImportWizard(this);
+//    addImportModule(importer);
 
 //    importer = new TrojitaImportData(this);
 //    importer->setImportWizard(this);

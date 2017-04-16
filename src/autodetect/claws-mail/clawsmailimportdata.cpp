@@ -31,7 +31,7 @@
 
 #include <QDir>
 
-//K_PLUGIN_FACTORY_WITH_JSON(ClawsMailImporterFactory, "clawsmailimporter.json", registerPlugin<ClawsMailImportData>();)
+K_PLUGIN_FACTORY_WITH_JSON(ClawsMailImporterFactory, "clawsmailimporter.json", registerPlugin<ClawsMailImportData>();)
 
 ClawsMailImportData::ClawsMailImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)

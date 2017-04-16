@@ -9,4 +9,6 @@ add_subdirectory(evolutionv2)
 add_subdirectory(evolutionv3)
 add_subdirectory(oe)
 add_subdirectory(thebat)
+add_subdirectory(sylpheed)
+add_subdirectory(claws-mail)
 

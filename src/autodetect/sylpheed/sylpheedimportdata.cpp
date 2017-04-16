@@ -30,6 +30,8 @@
 #include <kpluginfactory.h>
 #include <QDir>
 
+K_PLUGIN_FACTORY_WITH_JSON(SylpheedImporterFactory, "sylpheedimporter.json", registerPlugin<SylpheedImportData>();)
+
 SylpheedImportData::SylpheedImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
@@ -105,3 +107,5 @@ AbstractImporter::TypeSupportedOptions SylpheedImportData::supportedOption()
     options |= AbstractImporter::AddressBooks;
     return options;
 }
+
+#include "sylpheedimportdata.moc"
