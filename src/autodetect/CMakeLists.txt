@@ -8,3 +8,5 @@ add_subdirectory(evolutionv1)
 add_subdirectory(evolutionv2)
 add_subdirectory(evolutionv3)
 add_subdirectory(oe)
+add_subdirectory(thebat)
+

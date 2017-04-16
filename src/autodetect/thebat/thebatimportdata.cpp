@@ -28,6 +28,8 @@
 
 #include <QDir>
 
+K_PLUGIN_FACTORY_WITH_JSON(TheBatImporterFactory, "thebatimporter.json", registerPlugin<TheBatImportData>();)
+
 TheBatImportData::TheBatImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
@@ -74,3 +76,5 @@ AbstractImporter::TypeSupportedOptions TheBatImportData::supportedOption()
     options |= AbstractImporter::Mails;
     return options;
 }
+
+#include "thebatimportdata.moc"
