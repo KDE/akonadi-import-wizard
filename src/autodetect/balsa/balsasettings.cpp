@@ -96,7 +96,7 @@ void BalsaSettings::readAccount(const KConfigGroup &grp, bool autoCheck, int aut
         addCheckMailOnStartup(agentIdentifyName, autoCheck);
         addToManualCheck(agentIdentifyName, check);
     } else {
-        qCDebug(IMPORTWIZARD_LOG) << " unknown account type :" << type;
+        //FIXME qCDebug(IMPORTWIZARD_LOG) << " unknown account type :" << type;
     }
 }
 
@@ -164,7 +164,7 @@ void BalsaSettings::readTransport(const KConfigGroup &grp)
     } else if (ssl == QLatin1String("false")) {
         mt->setEncryption(MailTransport::Transport::EnumEncryption::None);
     } else {
-        qCDebug(IMPORTWIZARD_LOG) << " unknown ssl value :" << ssl;
+        //FIXME qCDebug(IMPORTWIZARD_LOG) << " unknown ssl value :" << ssl;
     }
 
     //TODO const QString anonymous = grp.readEntry(QStringLiteral("Anonymous"));

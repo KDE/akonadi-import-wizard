@@ -79,7 +79,7 @@ void BalsaAddressBook::readAddressBook(const KConfigGroup &grp)
         ImportWizardUtil::mergeLdap(ldap);
         addAddressBookImportInfo(i18n("Ldap created"));
     } else if (type == QLatin1String("LibBalsaAddressBookGpe")) {
-        qCDebug(IMPORTWIZARD_LOG) << " Import it !";
+        //FIXME qCDebug(IMPORTWIZARD_LOG) << " Import it !";
     } else if (type == QLatin1String("LibBalsaAddressBookLdif")) {
         const QString path = grp.readEntry(QStringLiteral("Path"));
         if (!path.isEmpty()) {
@@ -110,6 +110,6 @@ void BalsaAddressBook::readAddressBook(const KConfigGroup &grp)
             addAddressBookImportInfo(i18n("New addressbook created: %1", createResource(QStringLiteral("akonadi_vcard_resource"), name, settings)));
         }
     } else {
-        qCDebug(IMPORTWIZARD_LOG) << " unknown addressbook type :" << type;
+        //FIXME qCDebug(IMPORTWIZARD_LOG) << " unknown addressbook type :" << type;
     }
 }

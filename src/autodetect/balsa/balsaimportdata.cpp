@@ -30,7 +30,7 @@
 #include <kpluginfactory.h>
 #include <QDir>
 
-//K_PLUGIN_FACTORY_WITH_JSON(BalsaImporterFactory, "balsaimporter.json", registerPlugin<BalsaImportData>();)
+K_PLUGIN_FACTORY_WITH_JSON(BalsaImporterFactory, "balsaimporter.json", registerPlugin<BalsaImportData>();)
 
 BalsaImportData::BalsaImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)

@@ -35,7 +35,7 @@
 #include "autodetect/icedove/icedoveimportdata.h"
 #include "autodetect/oe/oeimportdata.h"
 #include "autodetect/thebat/thebatimportdata.h"
-#include "autodetect/balsa/balsaimportdata.h"
+//#include "autodetect/balsa/balsaimportdata.h"
 #include "autodetect/claws-mail/clawsmailimportdata.h"
 
 #include "manual/manualimportmailpage.h"
@@ -262,9 +262,9 @@ void ImportWizard::initializeImportModule()
     addImportModule(importer);
 #endif
 
-    importer = new BalsaImportData(this);
-    importer->setImportWizard(this);
-    addImportModule(importer);
+//    importer = new BalsaImportData(this);
+//    importer->setImportWizard(this);
+//    addImportModule(importer);
 
     importer = new ClawsMailImportData(this);
     importer->setImportWizard(this);

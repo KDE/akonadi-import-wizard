@@ -56,9 +56,9 @@ set(libimportwizard_autodetect_SRCS
     autodetect/pmail/pmailimportdata.cpp
     autodetect/pmail/pmailsettings.cpp
     autodetect/thebat/thebatimportdata.cpp
-    autodetect/balsa/balsaimportdata.cpp
-    autodetect/balsa/balsasettings.cpp
-    autodetect/balsa/balsaaddressbook.cpp
+#    autodetect/balsa/balsaimportdata.cpp
+#    autodetect/balsa/balsasettings.cpp
+#    autodetect/balsa/balsaaddressbook.cpp
     autodetect/claws-mail/clawsmailimportdata.cpp
     autodetect/claws-mail/clawsmailsettings.cpp
     autodetect/claws-mail/clawsmailaddressbook.cpp
