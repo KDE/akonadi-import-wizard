@@ -28,6 +28,8 @@
 
 #include <QDir>
 
+K_PLUGIN_FACTORY_WITH_JSON(OEImporterFactory, "oeimporter.json", registerPlugin<OeImportData>();)
+
 OeImportData::OeImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
@@ -76,3 +78,5 @@ AbstractImporter::TypeSupportedOptions OeImportData::supportedOption()
     options |= AbstractImporter::Mails;
     return options;
 }
+
+#include "oeimportdata.moc"

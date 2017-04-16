@@ -27,6 +27,9 @@
 
 #include <QDir>
 
+K_PLUGIN_FACTORY_WITH_JSON(Evolutionv1ImporterFactory, "evolutionv1importer.json", registerPlugin<Evolutionv1ImportData>();)
+
+
 Evolutionv1ImportData::Evolutionv1ImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
@@ -73,3 +76,6 @@ AbstractImporter::TypeSupportedOptions Evolutionv1ImportData::supportedOption()
     options |= AbstractImporter::Mails;
     return options;
 }
+
+#include "evolutionv1importdata.moc"
+

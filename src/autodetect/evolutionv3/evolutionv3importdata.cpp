@@ -25,12 +25,15 @@
 #include "mailimporter/filterinfo.h"
 #include "importfilterinfogui.h"
 #include "MailCommon/FilterImporterExporter"
-
+#include <kpluginfactory.h>
 #include "importwizard.h"
 
 #include <KLocalizedString>
 
 #include <QDir>
+
+K_PLUGIN_FACTORY_WITH_JSON(Evolutionv3ImporterFactory, "evolutionv3importer.json", registerPlugin<Evolutionv3ImportData>();)
+
 
 Evolutionv3ImportData::Evolutionv3ImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
@@ -123,3 +126,5 @@ AbstractImporter::TypeSupportedOptions Evolutionv3ImportData::supportedOption()
     options |= AbstractImporter::AddressBooks;
     return options;
 }
+
+#include "evolutionv3importdata.moc"
