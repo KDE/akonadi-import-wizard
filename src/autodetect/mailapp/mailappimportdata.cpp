@@ -27,6 +27,8 @@
 #include <kpluginfactory.h>
 #include <QDir>
 
+K_PLUGIN_FACTORY_WITH_JSON(MailAppImporterFactory, "mailappimporter.json", registerPlugin<MailAppImportData>();)
+
 MailAppImportData::MailAppImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
@@ -75,3 +77,6 @@ AbstractImporter::TypeSupportedOptions MailAppImportData::supportedOption()
     options |= AbstractImporter::Mails;
     return options;
 }
+
+#include "mailappimportdata.moc"
+

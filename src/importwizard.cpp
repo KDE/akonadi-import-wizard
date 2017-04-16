@@ -34,7 +34,6 @@
 #include "autodetect/evolutionv1/evolutionv1importdata.h"
 #include "autodetect/icedove/icedoveimportdata.h"
 #include "autodetect/oe/oeimportdata.h"
-#include "autodetect/mailapp/mailappimportdata.h"
 #include "autodetect/pmail/pmailimportdata.h"
 #include "autodetect/thebat/thebatimportdata.h"
 #include "autodetect/balsa/balsaimportdata.h"
