@@ -25,7 +25,7 @@
 #include <QString>
 #include "libimportwizard_export.h"
 
-struct ldapStruct {
+struct LIBIMPORTWIZARD_EXPORT ldapStruct {
     ldapStruct()
         : maxHint(-1),
           port(-1),
@@ -66,7 +66,7 @@ enum ResourceType {
 };
 
 LIBIMPORTWIZARD_EXPORT void mergeLdap(const ldapStruct &ldap);
-void addAkonadiTag(const QVector<tagStruct> &tagList);
+LIBIMPORTWIZARD_EXPORT void addAkonadiTag(const QVector<tagStruct> &tagList);
 void storeInKWallet(const QString &name, ImportWizardUtil::ResourceType type, const QString &password);
 }
 
