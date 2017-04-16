@@ -34,7 +34,6 @@
 #include "autodetect/evolutionv1/evolutionv1importdata.h"
 #include "autodetect/icedove/icedoveimportdata.h"
 #include "autodetect/oe/oeimportdata.h"
-#include "autodetect/pmail/pmailimportdata.h"
 #include "autodetect/thebat/thebatimportdata.h"
 #include "autodetect/balsa/balsaimportdata.h"
 #include "autodetect/claws-mail/clawsmailimportdata.h"
@@ -254,9 +253,9 @@ void ImportWizard::initializeImportModule()
 #endif
 
 #ifdef Q_OS_WIN
-    importer = new PMailImportData(this);
-    importer->setImportWizard(this);
-    addImportModule(importer);
+//    importer = new PMailImportData(this);
+//    importer->setImportWizard(this);
+//    addImportModule(importer);
 
     importer = new TheBatImportData(this);
     importer->setImportWizard(this);

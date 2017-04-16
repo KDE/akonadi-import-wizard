@@ -28,6 +28,7 @@
 #include <kpluginfactory.h>
 #include <QDir>
 
+K_PLUGIN_FACTORY_WITH_JSON(PMailImporterFactory, "pmailimporter.json", registerPlugin<PMailImportData>();)
 PMailImportData::PMailImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
@@ -86,3 +87,5 @@ AbstractImporter::TypeSupportedOptions PMailImportData::supportedOption()
     //options |=AbstractImporter::Settings;
     return options;
 }
+
+#include "pmailimportdata.moc"
