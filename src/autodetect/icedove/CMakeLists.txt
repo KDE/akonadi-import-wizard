@@ -1,7 +1,9 @@
 set(icedoveimporter_SRCS
-   icedoveaddressbook.cpp  
-   icedoveimportdata.cpp  
-   icedovesettings.cpp
+   icedoveimportdata.cpp
+   ../thunderbird/thunderbirdaddressbook.cpp  
+   ../thunderbird/thunderbirdsettings.cpp
+   ../thunderbird/addressbook/MorkParser.cpp
+
 )
 
 kcoreaddons_add_plugin(icedoveimporterplugin JSON icedoveimporter.json SOURCES
@@ -16,4 +18,5 @@ target_link_libraries(icedoveimporterplugin
   KF5::MailImporterAkonadi
   KF5::MailTransport
   KF5::IdentityManagement
+  KF5::MailCommon
 )

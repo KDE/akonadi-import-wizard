@@ -11,4 +11,6 @@ add_subdirectory(oe)
 add_subdirectory(thebat)
 add_subdirectory(sylpheed)
 add_subdirectory(claws-mail)
+add_subdirectory(thunderbird)
+add_subdirectory(icedove)
 

@@ -33,10 +33,11 @@ set(libimportwizard_autodetect_SRCS
     autodetect/abstractaddressbook.cpp
     autodetect/abstractcalendar.cpp
     autodetect/abstractbase.cpp
-    autodetect/thunderbird/thunderbirdimportdata.cpp
-    autodetect/thunderbird/thunderbirdsettings.cpp
-    autodetect/thunderbird/thunderbirdaddressbook.cpp
-    autodetect/thunderbird/addressbook/MorkParser.cpp
+#    autodetect/thunderbird/thunderbirdimportdata.cpp
+#    autodetect/thunderbird/thunderbirdsettings.cpp
+#    autodetect/thunderbird/thunderbirdaddressbook.cpp
+#    autodetect/thunderbird/addressbook/MorkParser.cpp
+#    autodetect/icedove/icedoveimportdata.cpp
 #    autodetect/sylpheed/sylpheedimportdata.cpp
 #    autodetect/sylpheed/sylpheedsettings.cpp
 #    autodetect/sylpheed/sylpheedaddressbook.cpp
@@ -65,7 +66,6 @@ set(libimportwizard_autodetect_SRCS
 #    autodetect/trojita/trojitasettings.cpp
 #    autodetect/trojita/trojitaimportdata.cpp
 #    autodetect/trojita/trojitaaddressbook.cpp
-    autodetect/icedove/icedoveimportdata.cpp
 #    autodetect/geary/gearysettings.cpp
 #    autodetect/geary/gearyimportdata.cpp
 #    autodetect/geary/gearyaddressbook.cpp

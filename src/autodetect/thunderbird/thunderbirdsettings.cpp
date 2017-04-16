@@ -31,7 +31,7 @@
 #include <QTextStream>
 #include <QStringList>
 #include <QFile>
-#include "importwizard_debug.h"
+//#include "importwizard_debug.h"
 #include <QStandardPaths>
 #include <QFileInfo>
 #include <QDir>
@@ -51,7 +51,7 @@ void ThunderbirdSettings::importSettings()
 {
     QFile file(mFileName);
     if (!file.open(QIODevice::ReadOnly)) {
-        qCDebug(IMPORTWIZARD_LOG) << " We can't open file" << mFileName;
+        //FIXME qCDebug(IMPORTWIZARD_LOG) << " We can't open file" << mFileName;
         return;
     }
     QTextStream stream(&file);
@@ -83,7 +83,7 @@ void ThunderbirdSettings::importSettings()
                     line.startsWith(QStringLiteral("/*")) ||
                     line.startsWith(QStringLiteral(" */")) ||
                     line.startsWith(QStringLiteral(" *"))) {
-                qCDebug(IMPORTWIZARD_LOG) << " unstored line :" << line;
+                //FIXME qCDebug(IMPORTWIZARD_LOG) << " unstored line :" << line;
             }
 
         }
@@ -205,7 +205,7 @@ void ThunderbirdSettings::readExtensionsSettings()
             addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("FilterRecipientType"), QStringLiteral("DontResizeOneEmailContainsPattern"));
             break;
         default:
-            qCDebug(IMPORTWIZARD_LOG) << " unknown FilterRecipientType: " << filterRecipients;
+            //FIXME qCDebug(IMPORTWIZARD_LOG) << " unknown FilterRecipientType: " << filterRecipients;
             break;
         }
     }
@@ -298,7 +298,7 @@ void ThunderbirdSettings::readTagSettings()
 
 void ThunderbirdSettings::readLdapSettings()
 {
-    //qCDebug(IMPORTWIZARD_LOG)<<" mLdapAccountList:"<<mLdapAccountList;
+    ////FIXME qCDebug(IMPORTWIZARD_LOG)<<" mLdapAccountList:"<<mLdapAccountList;
     for (const QString &ldapAccountName : qAsConst(mLdapAccountList)) {
         ldapStruct ldap;
         const QString ldapDescription = QStringLiteral("%1.description").arg(ldapAccountName);
@@ -331,7 +331,7 @@ void ThunderbirdSettings::readLdapSettings()
             } else if (ldap.ldapUrl.scheme() == QLatin1String("ldap")) {
                 ldap.useSSL = false;
             } else {
-                qCDebug(IMPORTWIZARD_LOG) << " Security not implemented :" << ldap.ldapUrl.scheme();
+                //FIXME qCDebug(IMPORTWIZARD_LOG) << " Security not implemented :" << ldap.ldapUrl.scheme();
             }
         }
         ImportWizardUtil::mergeLdap(ldap);
@@ -550,7 +550,7 @@ void ThunderbirdSettings::importSieveSettings(QMap<QString, QVariant> &settings,
         //not necessary to import this one : user_pref("extensions.sieve.account.<username>@<server>.proxy.type", 1);
 
 
-        //qCDebug(SIEVEEDITOR_LOG) << "imap account " << accountName;
+        ////FIXME qCDebug(SIEVEEDITOR_LOG) << "imap account " << accountName;
         const QString name = mHashConfig.value(accountName + QStringLiteral(".name")).toString();
         bool found;
         const int sievePort = mHashConfig.value(accountName + QStringLiteral(".port")).toInt(&found);
@@ -583,7 +583,7 @@ void ThunderbirdSettings::addAuth(QMap<QString, QVariant> &settings, const QStri
                 break;
             case 4: //Encrypted password ???
                 settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::LOGIN);   //????
-                qCDebug(IMPORTWIZARD_LOG) << " authmethod == encrypt password";
+                //FIXME qCDebug(IMPORTWIZARD_LOG) << " authmethod == encrypt password";
                 break;
             case 5: //GSSAPI
                 settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::GSSAPI);
@@ -592,14 +592,14 @@ void ThunderbirdSettings::addAuth(QMap<QString, QVariant> &settings, const QStri
                 settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::NTLM);
                 break;
             case 7: //TLS
-                qCDebug(IMPORTWIZARD_LOG) << " authmethod method == TLS"; //????
+                //FIXME qCDebug(IMPORTWIZARD_LOG) << " authmethod method == TLS"; //????
                 break;
             case 10: //OAuth2 verify it.
                 settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::XOAUTH2);
-                qCDebug(IMPORTWIZARD_LOG) << " authmethod method == OAuth2"; //????
+                //FIXME qCDebug(IMPORTWIZARD_LOG) << " authmethod method == OAuth2"; //????
                 break;
             default:
-                qCDebug(IMPORTWIZARD_LOG) << " ThunderbirdSettings::addAuth unknown :" << authMethod;
+                //FIXME qCDebug(IMPORTWIZARD_LOG) << " ThunderbirdSettings::addAuth unknown :" << authMethod;
                 break;
             }
         }
@@ -662,7 +662,8 @@ void ThunderbirdSettings::readAccount()
                     settings.insert(QStringLiteral("Safety"), QStringLiteral("SSL"));
                     break;
                 default:
-                    qCDebug(IMPORTWIZARD_LOG) << " socketType " << socketType;
+                    //FIXME qCDebug(IMPORTWIZARD_LOG) << " socketType " << socketType;
+                    break;
                 }
             }
             const QString checkNewMailStr = accountName + QStringLiteral(".check_new_mail");
@@ -732,7 +733,8 @@ void ThunderbirdSettings::readAccount()
                     settings.insert(QStringLiteral("UseSSL"), true);
                     break;
                 default:
-                    qCDebug(IMPORTWIZARD_LOG) << " socketType " << socketType;
+                    //FIXME qCDebug(IMPORTWIZARD_LOG) << " socketType " << socketType;
+                    break;
                 }
             }
             addAuth(settings, QStringLiteral("AuthenticationMethod"), accountName);
@@ -759,17 +761,17 @@ void ThunderbirdSettings::readAccount()
             addToManualCheck(agentIdentifyName, true);
         } else if (type == QLatin1String("none")) {
             //FIXME look at if we can implement it
-            qCDebug(IMPORTWIZARD_LOG) << " account type none!";
+            //FIXME qCDebug(IMPORTWIZARD_LOG) << " account type none!";
         } else if (type == QLatin1String("movemail")) {
-            qCDebug(IMPORTWIZARD_LOG) << " movemail accound found and not implemented in importthunderbird";
+            //FIXME qCDebug(IMPORTWIZARD_LOG) << " movemail accound found and not implemented in importthunderbird";
         } else if (type == QLatin1String("rss")) {
-            qCDebug(IMPORTWIZARD_LOG) << " rss resource needs to be implemented";
+            //FIXME qCDebug(IMPORTWIZARD_LOG) << " rss resource needs to be implemented";
             continue;
         } else if (type == QLatin1String("nntp")) {
-            qCDebug(IMPORTWIZARD_LOG) << " nntp resource need to be implemented";
+            //FIXME qCDebug(IMPORTWIZARD_LOG) << " nntp resource need to be implemented";
             continue;
         } else {
-            qCDebug(IMPORTWIZARD_LOG) << " type unknown : " << type;
+            //FIXME qCDebug(IMPORTWIZARD_LOG) << " type unknown : " << type;
             continue;
         }
 
@@ -830,7 +832,8 @@ void ThunderbirdSettings::readTransport()
             mt->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::NTLM);
             break;
         default:
-            qCDebug(IMPORTWIZARD_LOG) << " authMethod unknown :" << authMethod;
+            //FIXME qCDebug(IMPORTWIZARD_LOG) << " authMethod unknown :" << authMethod;
+            break;
         }
 
         const int trySsl = mHashConfig.value(smtpName + QStringLiteral(".try_ssl")).toInt();
@@ -845,7 +848,8 @@ void ThunderbirdSettings::readTransport()
             mt->setEncryption(MailTransport::Transport::EnumEncryption::SSL);
             break;
         default:
-            qCDebug(IMPORTWIZARD_LOG) << " trySsl unknown :" << trySsl;
+            //FIXME qCDebug(IMPORTWIZARD_LOG) << " trySsl unknown :" << trySsl;
+            break;
         }
 
         const QString userName = mHashConfig.value(smtpName + QStringLiteral(".username")).toString();
@@ -1040,7 +1044,7 @@ void ThunderbirdSettings::insertIntoMap(const QString &line)
             tag.name = mHashConfig.value(key).toString();
         }
         mHashTag.insert(name, tag);
-        qCDebug(IMPORTWIZARD_LOG) << " tag :" << name << " tag.name" << tag.name << " color :" << tag.color;
+        //FIXME qCDebug(IMPORTWIZARD_LOG) << " tag :" << name << " tag.name" << tag.name << " color :" << tag.color;
     }
 }
 

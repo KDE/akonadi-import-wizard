@@ -27,11 +27,6 @@
 #include "importcalendarpage.h"
 #include "importfinishpage.h"
 
-#include "autodetect/thunderbird/thunderbirdimportdata.h"
-#include "autodetect/icedove/icedoveimportdata.h"
-#include "autodetect/oe/oeimportdata.h"
-#include "autodetect/thebat/thebatimportdata.h"
-
 #include "manual/manualimportmailpage.h"
 #include "manual/manualselectfilterpage.h"
 #include "manual/importwizardfilterinfogui.h"
@@ -208,13 +203,13 @@ void ImportWizard::createAutomaticModePage()
 void ImportWizard::initializeImportModule()
 {
     //Import module
-    AbstractImporter *importer = new ThunderbirdImportData(this);
-    importer->setImportWizard(this);
-    addImportModule(importer);
+//    AbstractImporter *importer = new ThunderbirdImportData(this);
+//    importer->setImportWizard(this);
+//    addImportModule(importer);
 
-    importer = new IcedoveImportData(this);
-    importer->setImportWizard(this);
-    addImportModule(importer);
+//    AbstractImporter *importer = new IcedoveImportData(this);
+//    importer->setImportWizard(this);
+//    addImportModule(importer);
 
 //    importer = new SylpheedImportData(this);
 //    importer->setImportWizard(this);
@@ -236,14 +231,14 @@ void ImportWizard::initializeImportModule()
 //    importer->setImportWizard(this);
 //    addImportModule(importer);
 #ifdef Q_OS_WIN
-    importer = new OeImportData(this);
-    importer->setImportWizard(this);
-    addImportModule(importer);
+//    importer = new OeImportData(this);
+//    importer->setImportWizard(this);
+//    addImportModule(importer);
 #endif
 #ifdef Q_OS_MAC
-    importer = new OeImportData(this);
-    importer->setImportWizard(this);
-    addImportModule(importer);
+//    importer = new OeImportData(this);
+//    importer->setImportWizard(this);
+//    addImportModule(importer);
 #endif
 
 #ifdef Q_OS_WIN
@@ -251,9 +246,9 @@ void ImportWizard::initializeImportModule()
 //    importer->setImportWizard(this);
 //    addImportModule(importer);
 
-    importer = new TheBatImportData(this);
-    importer->setImportWizard(this);
-    addImportModule(importer);
+//    importer = new TheBatImportData(this);
+//    importer->setImportWizard(this);
+//    addImportModule(importer);
 #endif
 
 //    importer = new BalsaImportData(this);

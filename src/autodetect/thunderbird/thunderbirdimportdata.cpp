@@ -32,6 +32,8 @@
 
 #include <QDir>
 
+K_PLUGIN_FACTORY_WITH_JSON(ThunderbirdImporterFactory, "thunderbirdimporter.json", registerPlugin<ThunderbirdImportData>();)
+
 ThunderbirdImportData::ThunderbirdImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
@@ -142,3 +144,5 @@ AbstractImporter::TypeSupportedOptions ThunderbirdImportData::supportedOption()
     options |= AbstractImporter::AddressBooks;
     return options;
 }
+
+#include "thunderbirdimportdata.moc"
