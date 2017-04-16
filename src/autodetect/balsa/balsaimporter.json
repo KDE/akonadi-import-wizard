@@ -2,6 +2,12 @@
     "KPlugin": {
         "Id": "balsaimporter",
         "Name": "Balsa Importer",
+        "Name[ca]": "Importador del Balsa",
+        "Name[nl]": "Balsa-importeur",
+        "Name[pl]": "Importer Balsa",
+        "Name[pt]": "Importador do Balsa",
+        "Name[uk]": "Засіб імпортування з Balsa",
+        "Name[x-test]": "xxBalsa Importerxx",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],
