@@ -41,13 +41,13 @@ set(libimportwizard_autodetect_SRCS
     autodetect/sylpheed/sylpheedsettings.cpp
     autodetect/sylpheed/sylpheedaddressbook.cpp
     autodetect/sylpheed/sylpheedsettingsutils.cpp
-    autodetect/evolutionv3/evolutionv3importdata.cpp
-    autodetect/evolutionv3/evolutionsettings.cpp
-    autodetect/evolutionv3/evolutioncalendar.cpp
-    autodetect/evolutionv3/evolutionaddressbook.cpp
-    autodetect/evolutionv3/evolutionutil.cpp
-    autodetect/evolutionv2/evolutionv2importdata.cpp
-    autodetect/evolutionv1/evolutionv1importdata.cpp
+#    autodetect/evolutionv3/evolutionv3importdata.cpp
+#    autodetect/evolutionv3/evolutionsettings.cpp
+#    autodetect/evolutionv3/evolutioncalendar.cpp
+#    autodetect/evolutionv3/evolutionaddressbook.cpp
+#    autodetect/evolutionv3/evolutionutil.cpp
+#    autodetect/evolutionv2/evolutionv2importdata.cpp
+#    autodetect/evolutionv1/evolutionv1importdata.cpp
 #    autodetect/opera/operaimportdata.cpp
 #    autodetect/opera/operaaddressbook.cpp
 #    autodetect/opera/operasettings.cpp

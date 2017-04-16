@@ -29,13 +29,9 @@
 
 #include "autodetect/thunderbird/thunderbirdimportdata.h"
 #include "autodetect/sylpheed/sylpheedimportdata.h"
-#include "autodetect/evolutionv3/evolutionv3importdata.h"
-#include "autodetect/evolutionv2/evolutionv2importdata.h"
-#include "autodetect/evolutionv1/evolutionv1importdata.h"
 #include "autodetect/icedove/icedoveimportdata.h"
 #include "autodetect/oe/oeimportdata.h"
 #include "autodetect/thebat/thebatimportdata.h"
-//#include "autodetect/balsa/balsaimportdata.h"
 #include "autodetect/claws-mail/clawsmailimportdata.h"
 
 #include "manual/manualimportmailpage.h"
@@ -226,17 +222,17 @@ void ImportWizard::initializeImportModule()
     importer->setImportWizard(this);
     addImportModule(importer);
 
-    importer = new Evolutionv3ImportData(this);
-    importer->setImportWizard(this);
-    addImportModule(importer);
+//    importer = new Evolutionv3ImportData(this);
+//    importer->setImportWizard(this);
+//    addImportModule(importer);
 
-    importer = new Evolutionv2ImportData(this);
-    importer->setImportWizard(this);
-    addImportModule(importer);
+//    importer = new Evolutionv2ImportData(this);
+//    importer->setImportWizard(this);
+//    addImportModule(importer);
 
-    importer = new Evolutionv1ImportData(this);
-    importer->setImportWizard(this);
-    addImportModule(importer);
+//    importer = new Evolutionv1ImportData(this);
+//    importer->setImportWizard(this);
+//    addImportModule(importer);
 
 //    importer = new OperaImportData(this);
 //    importer->setImportWizard(this);

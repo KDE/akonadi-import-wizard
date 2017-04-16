@@ -20,7 +20,7 @@
 #include "evolutioncalendar.h"
 #include "evolutionutil.h"
 
-#include "importwizard_debug.h"
+//#include "importwizard_debug.h"
 
 #include <QFile>
 #include <QDir>
@@ -42,7 +42,7 @@ void EvolutionCalendar::loadCalendar(const QString &filename)
     //Read gconf file
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
-        qCDebug(IMPORTWIZARD_LOG) << " We can't open file" << filename;
+        //FIXME qCDebug(IMPORTWIZARD_LOG) << " We can't open file" << filename;
         return;
     }
     QDomDocument doc;
@@ -52,7 +52,7 @@ void EvolutionCalendar::loadCalendar(const QString &filename)
     QDomElement config = doc.documentElement();
 
     if (config.isNull()) {
-        qCDebug(IMPORTWIZARD_LOG) << "No config found";
+        //FIXME qCDebug(IMPORTWIZARD_LOG) << "No config found";
         return;
     }
     mCalendarPath = QDir::homePath() + QLatin1String("/.local/share/evolution/calendar/");
@@ -64,7 +64,7 @@ void EvolutionCalendar::loadCalendar(const QString &filename)
                 if (attr == QLatin1String("sources")) {
                     readCalendar(e);
                 } else {
-                    qCDebug(IMPORTWIZARD_LOG) << " attr unknown " << attr;
+                    //FIXME qCDebug(IMPORTWIZARD_LOG) << " attr unknown " << attr;
                 }
             }
         }
@@ -92,7 +92,7 @@ void EvolutionCalendar::extractCalendarInfo(const QString &info)
     QDomElement domElement = cal.documentElement();
 
     if (domElement.isNull()) {
-        qCDebug(IMPORTWIZARD_LOG) << "Account not found";
+        //FIXME qCDebug(IMPORTWIZARD_LOG) << "Account not found";
         return;
     }
     QString base_uri;
@@ -134,28 +134,28 @@ void EvolutionCalendar::extractCalendarInfo(const QString &info)
                                         }
                                     }
                                 } else if (propertyName == QLatin1String("alarm")) {
-                                    qCDebug(IMPORTWIZARD_LOG) << " need to implement alarm property";
+                                    //FIXME qCDebug(IMPORTWIZARD_LOG) << " need to implement alarm property";
                                 } else {
-                                    qCDebug(IMPORTWIZARD_LOG) << " property unknown :" << propertyName;
+                                    //FIXME qCDebug(IMPORTWIZARD_LOG) << " property unknown :" << propertyName;
                                 }
                             }
                         } else {
-                            qCDebug(IMPORTWIZARD_LOG) << " tag unknown :" << propertyTag;
+                            //FIXME qCDebug(IMPORTWIZARD_LOG) << " tag unknown :" << propertyTag;
                         }
                     }
                 }
                 AbstractBase::createResource(QStringLiteral("akonadi_ical_resource"), name, settings);
             } else {
-                qCDebug(IMPORTWIZARD_LOG) << " tag unknown :" << tag;
+                //FIXME qCDebug(IMPORTWIZARD_LOG) << " tag unknown :" << tag;
             }
         }
     } else if (base_uri == QLatin1String("webcal://")) {
-        qCDebug(IMPORTWIZARD_LOG) << " need to implement webcal protocol";
+        //FIXME qCDebug(IMPORTWIZARD_LOG) << " need to implement webcal protocol";
     } else if (base_uri == QLatin1String("google://")) {
-        qCDebug(IMPORTWIZARD_LOG) << " need to implement google protocol";
+        //FIXME qCDebug(IMPORTWIZARD_LOG) << " need to implement google protocol";
     } else if (base_uri == QLatin1String("caldav://")) {
-        qCDebug(IMPORTWIZARD_LOG) << " need to implement caldav protocol";
+        //FIXME qCDebug(IMPORTWIZARD_LOG) << " need to implement caldav protocol";
     } else {
-        qCDebug(IMPORTWIZARD_LOG) << " base_uri unknown" << base_uri;
+        //FIXME qCDebug(IMPORTWIZARD_LOG) << " base_uri unknown" << base_uri;
     }
 }
