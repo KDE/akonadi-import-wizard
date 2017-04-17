@@ -24,7 +24,8 @@ class ImportWizard;
 #include "abstractbase.h"
 #include "libimportwizard_export.h"
 #include <QString>
-
+namespace LibImportWizard
+{
 class LIBIMPORTWIZARD_EXPORT AbstractCalendar : public AbstractBase
 {
     Q_OBJECT
@@ -40,5 +41,5 @@ protected:
 private:
     ImportWizard *mImportWizard;
 };
-
+}
 #endif // ABSTRACTCALENDAR_H

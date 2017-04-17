@@ -26,7 +26,7 @@ class QDomElement;
 
 class ImportWizard;
 
-class EvolutionCalendar : public AbstractCalendar
+class EvolutionCalendar : public LibImportWizard::AbstractCalendar
 {
 public:
     explicit EvolutionCalendar(ImportWizard *parent);
