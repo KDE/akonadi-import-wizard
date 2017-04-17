@@ -38,7 +38,7 @@ namespace MailTransport
 class Transport;
 }
 
-class LIBIMPORTWIZARD_EXPORT AbstractSettings : public AbstractBase
+class LIBIMPORTWIZARD_EXPORT AbstractSettings : public LibImportWizard::AbstractBase
 {
     Q_OBJECT
 public:

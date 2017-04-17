@@ -690,7 +690,7 @@ void ThunderbirdSettings::readAccount()
             importSieveSettings(settings, userName, serverName);
 
 
-            const QString agentIdentifyName = AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, settings);
+            const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, settings);
             addCheckMailOnStartup(agentIdentifyName, loginAtStartup);
             //Not find a method to disable it in thunderbird
             addToManualCheck(agentIdentifyName, true);
@@ -755,7 +755,7 @@ void ThunderbirdSettings::readAccount()
                 settings.insert(QStringLiteral("IntervalCheckInterval"), 10);
             }
 
-            const QString agentIdentifyName = AbstractBase::createResource(QStringLiteral("akonadi_pop3_resource"), name, settings);
+            const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_pop3_resource"), name, settings);
             addCheckMailOnStartup(agentIdentifyName, loginAtStartup);
             //Not find a method to disable it in thunderbird
             addToManualCheck(agentIdentifyName, true);

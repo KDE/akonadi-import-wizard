@@ -144,7 +144,7 @@ void EvolutionCalendar::extractCalendarInfo(const QString &info)
                         }
                     }
                 }
-                AbstractBase::createResource(QStringLiteral("akonadi_ical_resource"), name, settings);
+                LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_ical_resource"), name, settings);
             } else {
                 //FIXME qCDebug(IMPORTWIZARD_LOG) << " tag unknown :" << tag;
             }

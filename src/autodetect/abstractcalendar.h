@@ -26,7 +26,7 @@ class ImportWizard;
 #include <QString>
 namespace LibImportWizard
 {
-class LIBIMPORTWIZARD_EXPORT AbstractCalendar : public AbstractBase
+class LIBIMPORTWIZARD_EXPORT AbstractCalendar : public LibImportWizard::AbstractBase
 {
     Q_OBJECT
 public:

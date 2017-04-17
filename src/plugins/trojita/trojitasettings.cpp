@@ -103,7 +103,7 @@ void TrojitaSettings::readImapAccount()
     }
 #endif
     if (!name.isEmpty()) {
-        const QString agentIdentifyName = AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, newSettings);
+        const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, newSettings);
         //Check by default
         addCheckMailOnStartup(agentIdentifyName, true);
     }

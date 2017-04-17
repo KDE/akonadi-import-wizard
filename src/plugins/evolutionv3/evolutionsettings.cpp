@@ -352,7 +352,7 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                         }
 
                         addAuth(settings, QStringLiteral("Authentication"), userName);
-                        const QString agentIdentifyName = AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, settings);
+                        const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, settings);
                         //By default
                         addCheckMailOnStartup(agentIdentifyName, enableManualCheck);
                         addToManualCheck(agentIdentifyName, enableManualCheck);
@@ -384,7 +384,7 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                             settings.insert(QStringLiteral("LeaveOnServer"), true);
                         }
                         addAuth(settings, QStringLiteral("AuthenticationMethod"), userName);
-                        const QString agentIdentifyName = AbstractBase::createResource(QStringLiteral("akonadi_pop3_resource"), name, settings);
+                        const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_pop3_resource"), name, settings);
                         //By default
                         addCheckMailOnStartup(agentIdentifyName, enableManualCheck);
                         addToManualCheck(agentIdentifyName, enableManualCheck);
@@ -392,11 +392,11 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                         //mbox file
                         settings.insert(QStringLiteral("Path"), path);
                         settings.insert(QStringLiteral("DisplayName"), name);
-                        AbstractBase::createResource(QStringLiteral("akonadi_mbox_resource"), name, settings);
+                        LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_mbox_resource"), name, settings);
 
                     } else if (scheme == QLatin1String("maildir") || scheme == QLatin1String("spooldir")) {
                         settings.insert(QStringLiteral("Path"), path);
-                        AbstractBase::createResource(QStringLiteral("akonadi_maildir_resource"), name, settings);
+                        LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_maildir_resource"), name, settings);
                     } else if (scheme == QLatin1String("nntp")) {
                         //FIXME in the future
                         //FIXME qCDebug(IMPORTWIZARD_LOG) << " For the moment we can't import nntp resource";

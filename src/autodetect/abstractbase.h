@@ -30,7 +30,8 @@ namespace PimCommon
 {
 class CreateResource;
 }
-
+namespace LibImportWizard
+{
 class LIBIMPORTWIZARD_EXPORT AbstractBase : public QObject
 {
     Q_OBJECT
@@ -49,5 +50,5 @@ private:
     void slotCreateResourceInfo(const QString &);
     PimCommon::CreateResource *mCreateResource;
 };
-
+}
 #endif // ABSTRACTBASE_H

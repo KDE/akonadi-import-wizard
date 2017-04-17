@@ -355,7 +355,7 @@ void SylpheedSettings::readPop3Account(const KConfigGroup &accountConfig, bool c
         settings.insert(QStringLiteral("IntervalCheckInterval"), intervalCheckMail);
     }
 
-    const QString agentIdentifyName = AbstractBase::createResource(QStringLiteral("akonadi_pop3_resource"), name, settings);
+    const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_pop3_resource"), name, settings);
     addCheckMailOnStartup(agentIdentifyName, checkMailOnStartup);
     const bool enableManualCheck = (accountConfig.readEntry(QStringLiteral("receive_at_get_all"), 0) == 1);
     addToManualCheck(agentIdentifyName, enableManualCheck);
@@ -423,7 +423,7 @@ void SylpheedSettings::readImapAccount(const KConfigGroup &accountConfig, bool c
     const QString password = accountConfig.readEntry(QStringLiteral("password"));
     settings.insert(QStringLiteral("Password"), password);
 
-    const QString agentIdentifyName = AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, settings);
+    const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, settings);
     addCheckMailOnStartup(agentIdentifyName, checkMailOnStartup);
 
     const bool enableManualCheck = (accountConfig.readEntry(QStringLiteral("receive_at_get_all"), 0) == 1);
