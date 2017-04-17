@@ -23,7 +23,9 @@
 #include "libimportwizard_export.h"
 
 #include <KAssistantDialog>
-
+namespace LibImportWizard {
+class AbstractImporter;
+}
 class KPageWidgetItem;
 class SelectProgramPage;
 class SelectComponentPage;
@@ -33,7 +35,6 @@ class ImportSettingPage;
 class ImportAddressbookPage;
 class ImportFinishPage;
 class ImportCalendarPage;
-class AbstractImporter;
 class ManualSelectFilterPage;
 class ManualImportMailPage;
 

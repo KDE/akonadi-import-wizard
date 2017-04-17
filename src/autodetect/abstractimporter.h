@@ -23,7 +23,6 @@
 #include "libimportwizard_export.h"
 
 class ImportWizard;
-
 namespace MailImporter
 {
 class FilterInfo;
