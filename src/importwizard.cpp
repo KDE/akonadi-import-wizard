@@ -27,6 +27,7 @@
 #include "importcalendarpage.h"
 #include "importfinishpage.h"
 #include "importmailpluginmanager.h"
+#include "helper_p.h"
 
 #include "manual/manualimportmailpage.h"
 #include "manual/manualselectfilterpage.h"
@@ -204,8 +205,11 @@ void ImportWizard::createAutomaticModePage()
 void ImportWizard::initializeImportModule()
 {
     const QVector<AbstractImporter *> lstPlugins = ImportMailPluginManager::self()->pluginsList();
-    qDebug() << " void ImportWizard::initializeImportModule()" << lstPlugins.count();
-    //TODO
+    for (AbstractImporter *abstractPlugin : qAsConst(lstPlugins)) {
+        if (abstractPlugin->foundMailer()) {
+            mlistImport.insert(abstractPlugin->name(), abstractPlugin);
+        }
+    }
 }
 
 void ImportWizard::slotProgramDoubleClicked()
