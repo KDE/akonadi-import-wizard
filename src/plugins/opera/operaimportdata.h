@@ -23,7 +23,7 @@
 #include "abstractimporter.h"
 class ImportWizard;
 
-class OperaImportData : public AbstractImporter
+class OperaImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit OperaImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());

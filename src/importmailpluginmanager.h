@@ -21,7 +21,9 @@
 
 #include <QObject>
 #include <KPluginMetaData>
+namespace LibImportWizard {
 class AbstractImporter;
+}
 
 class PluginUtilData
 {
@@ -47,7 +49,7 @@ public:
     QString metaDataFileNameBaseName;
     QString metaDataFileName;
     PluginUtilData pluginData;
-    AbstractImporter *plugin;
+    LibImportWizard::AbstractImporter *plugin;
 };
 
 
@@ -61,7 +63,7 @@ public:
     static ImportMailPluginManager *self();
     bool initializePluginList();
 
-    QVector<AbstractImporter *> pluginsList() const;
+    QVector<LibImportWizard::AbstractImporter *> pluginsList() const;
 
 private:
     void loadPlugin(ImportMailPluginManagerInfo *item);

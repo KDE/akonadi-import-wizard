@@ -34,7 +34,7 @@
 K_PLUGIN_FACTORY_WITH_JSON(ClawsMailImporterFactory, "clawsmailimporter.json", registerPlugin<ClawsMailImportData>();)
 
 ClawsMailImportData::ClawsMailImportData(QObject *parent, const QList<QVariant> &)
-    : AbstractImporter(parent)
+    : LibImportWizard::AbstractImporter(parent)
 {
     mPath = MailImporter::FilterClawsMail::defaultSettingsPath();
 }
@@ -99,13 +99,13 @@ bool ClawsMailImportData::importFilters()
     return addFilters(filterPath, MailCommon::FilterImporterExporter::ClawsMailFilter);
 }
 
-AbstractImporter::TypeSupportedOptions ClawsMailImportData::supportedOption()
+LibImportWizard::AbstractImporter::TypeSupportedOptions ClawsMailImportData::supportedOption()
 {
     TypeSupportedOptions options;
-    options |= AbstractImporter::Mails;
-    options |= AbstractImporter::AddressBooks;
-    options |= AbstractImporter::Settings;
-    options |= AbstractImporter::Filters;
+    options |= LibImportWizard::AbstractImporter::Mails;
+    options |= LibImportWizard::AbstractImporter::AddressBooks;
+    options |= LibImportWizard::AbstractImporter::Settings;
+    options |= LibImportWizard::AbstractImporter::Filters;
     return options;
 }
 

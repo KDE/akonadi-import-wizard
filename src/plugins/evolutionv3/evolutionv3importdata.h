@@ -22,7 +22,7 @@
 #include "abstractimporter.h"
 class ImportWizard;
 
-class Evolutionv3ImportData : public AbstractImporter
+class Evolutionv3ImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit Evolutionv3ImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());

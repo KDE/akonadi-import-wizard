@@ -22,7 +22,7 @@
 #include "abstractimporter.h"
 class ImportWizard;
 
-class IcedoveImportData : public AbstractImporter
+class IcedoveImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit IcedoveImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());

@@ -31,42 +31,44 @@
 
 #include <QFile>
 
-AbstractImporter::AbstractImporter(QObject *parent)
+using namespace LibImportWizard;
+
+LibImportWizard::AbstractImporter::AbstractImporter(QObject *parent)
     : QObject(parent),
       mImportWizard(nullptr)
 {
 }
 
-AbstractImporter::~AbstractImporter()
+LibImportWizard::AbstractImporter::~AbstractImporter()
 {
 }
 
-bool AbstractImporter::importSettings()
-{
-    return false;
-}
-
-bool AbstractImporter::importMails()
+bool LibImportWizard::AbstractImporter::importSettings()
 {
     return false;
 }
 
-bool AbstractImporter::importFilters()
+bool LibImportWizard::AbstractImporter::importMails()
 {
     return false;
 }
 
-bool AbstractImporter::importAddressBook()
+bool LibImportWizard::AbstractImporter::importFilters()
 {
     return false;
 }
 
-bool AbstractImporter::importCalendar()
+bool LibImportWizard::AbstractImporter::importAddressBook()
 {
     return false;
 }
 
-void AbstractImporter::initializeFilter(MailImporter::Filter &filter)
+bool LibImportWizard::AbstractImporter::importCalendar()
+{
+    return false;
+}
+
+void LibImportWizard::AbstractImporter::initializeFilter(MailImporter::Filter &filter)
 {
     MailImporter::FilterInfo *info = new MailImporter::FilterInfo();
     ImportFilterInfoGui *infoGui = new ImportFilterInfoGui(mImportWizard->importMailPage());
@@ -78,7 +80,7 @@ void AbstractImporter::initializeFilter(MailImporter::Filter &filter)
     filter.setFilterInfo(info);
 }
 
-bool AbstractImporter::addFilters(const QString &filterPath, MailCommon::FilterImporterExporter::FilterType type)
+bool LibImportWizard::AbstractImporter::addFilters(const QString &filterPath, MailCommon::FilterImporterExporter::FilterType type)
 {
     if (QFileInfo::exists(filterPath)) {
         bool canceled = false;
@@ -97,42 +99,42 @@ bool AbstractImporter::addFilters(const QString &filterPath, MailCommon::FilterI
     }
 }
 
-void AbstractImporter::appendFilters(const QList<MailCommon::MailFilter *> &filters)
+void LibImportWizard::AbstractImporter::appendFilters(const QList<MailCommon::MailFilter *> &filters)
 {
     if (!filters.isEmpty()) {
         MailCommon::FilterManager::instance()->appendFilters(filters, false);
     }
 }
 
-void AbstractImporter::addImportFilterInfo(const QString &log) const
+void LibImportWizard::AbstractImporter::addImportFilterInfo(const QString &log) const
 {
     if (mImportWizard) {
         mImportWizard->importFilterPage()->addImportInfo(log);
     }
 }
 
-void AbstractImporter::addImportFilterError(const QString &log) const
+void LibImportWizard::AbstractImporter::addImportFilterError(const QString &log) const
 {
     if (mImportWizard) {
         mImportWizard->importFilterPage()->addImportError(log);
     }
 }
 
-void AbstractImporter::addImportSettingsInfo(const QString &log) const
+void LibImportWizard::AbstractImporter::addImportSettingsInfo(const QString &log) const
 {
     if (mImportWizard) {
         mImportWizard->importSettingPage()->addImportError(log);
     }
 }
 
-void AbstractImporter::addImportCalendarInfo(const QString &log) const
+void LibImportWizard::AbstractImporter::addImportCalendarInfo(const QString &log) const
 {
     if (mImportWizard) {
         mImportWizard->importCalendarPage()->addImportError(log);
     }
 }
 
-void AbstractImporter::setImportWizard(ImportWizard *importWizard)
+void LibImportWizard::AbstractImporter::setImportWizard(ImportWizard *importWizard)
 {
     mImportWizard = importWizard;
 }

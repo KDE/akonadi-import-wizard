@@ -31,7 +31,7 @@
 K_PLUGIN_FACTORY_WITH_JSON(GearyImporterFactory, "gearyimporter.json", registerPlugin<GearyImportData>();)
 
 GearyImportData::GearyImportData(QObject *parent, const QList<QVariant> &)
-    : AbstractImporter(parent)
+    : LibImportWizard::AbstractImporter(parent)
 {
     mPath = MailImporter::OtherMailerUtil::gearyDefaultPath();
 }
@@ -80,12 +80,12 @@ bool GearyImportData::importAddressBook()
     return false;
 }
 
-AbstractImporter::TypeSupportedOptions GearyImportData::supportedOption()
+LibImportWizard::AbstractImporter::TypeSupportedOptions GearyImportData::supportedOption()
 {
     TypeSupportedOptions options;
-    //options |=AbstractImporter::Mails;
-    options |= AbstractImporter::Settings;
-    //options |= AbstractImporter::AddressBooks;
+    //options |=LibImportWizard::AbstractImporter::Mails;
+    options |= LibImportWizard::AbstractImporter::Settings;
+    //options |= LibImportWizard::AbstractImporter::AddressBooks;
     return options;
 }
 

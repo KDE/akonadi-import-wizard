@@ -22,7 +22,7 @@
 #include "abstractimporter.h"
 class ImportWizard;
 
-class ThunderbirdImportData : public AbstractImporter
+class ThunderbirdImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit ThunderbirdImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());

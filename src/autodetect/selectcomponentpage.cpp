@@ -45,40 +45,40 @@ void SelectComponentPage::slotComponentClicked()
 
 void SelectComponentPage::slotEverythingClicked(bool clicked)
 {
-    ui->addressbooks->setEnabled(!clicked && (mOptions & AbstractImporter::AddressBooks));
-    ui->filters->setEnabled(!clicked && (mOptions & AbstractImporter::Filters));
-    ui->mails->setEnabled(!clicked && (mOptions & AbstractImporter::Mails));
-    ui->settings->setEnabled(!clicked && (mOptions & AbstractImporter::Settings));
-    ui->calendars->setEnabled(!clicked && (mOptions & AbstractImporter::Calendars));
+    ui->addressbooks->setEnabled(!clicked && (mOptions & LibImportWizard::AbstractImporter::AddressBooks));
+    ui->filters->setEnabled(!clicked && (mOptions & LibImportWizard::AbstractImporter::Filters));
+    ui->mails->setEnabled(!clicked && (mOptions & LibImportWizard::AbstractImporter::Mails));
+    ui->settings->setEnabled(!clicked && (mOptions & LibImportWizard::AbstractImporter::Settings));
+    ui->calendars->setEnabled(!clicked && (mOptions & LibImportWizard::AbstractImporter::Calendars));
     slotComponentClicked();
 }
 
-void SelectComponentPage::setEnabledComponent(AbstractImporter::TypeSupportedOptions options)
+void SelectComponentPage::setEnabledComponent(LibImportWizard::AbstractImporter::TypeSupportedOptions options)
 {
     mOptions = options;
     slotEverythingClicked(ui->everything->isChecked());
 }
 
-AbstractImporter::TypeSupportedOptions SelectComponentPage::selectedComponents() const
+LibImportWizard::AbstractImporter::TypeSupportedOptions SelectComponentPage::selectedComponents() const
 {
     if (ui->everything->isChecked()) {
         return mOptions;
     } else {
-        AbstractImporter::TypeSupportedOptions newOptions;
+        LibImportWizard::AbstractImporter::TypeSupportedOptions newOptions;
         if (ui->addressbooks->isChecked()) {
-            newOptions |= AbstractImporter::AddressBooks;
+            newOptions |= LibImportWizard::AbstractImporter::AddressBooks;
         }
         if (ui->filters->isChecked()) {
-            newOptions |= AbstractImporter::Filters;
+            newOptions |= LibImportWizard::AbstractImporter::Filters;
         }
         if (ui->mails->isChecked()) {
-            newOptions |= AbstractImporter::Mails;
+            newOptions |= LibImportWizard::AbstractImporter::Mails;
         }
         if (ui->settings->isChecked()) {
-            newOptions |= AbstractImporter::Settings;
+            newOptions |= LibImportWizard::AbstractImporter::Settings;
         }
         if (ui->calendars->isChecked()) {
-            newOptions |= AbstractImporter::Calendars;
+            newOptions |= LibImportWizard::AbstractImporter::Calendars;
         }
 
         return newOptions;

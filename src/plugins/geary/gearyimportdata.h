@@ -22,7 +22,7 @@
 #include "abstractimporter.h"
 class ImportWizard;
 
-class GearyImportData : public AbstractImporter
+class GearyImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit GearyImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());

@@ -22,7 +22,7 @@
 #include "abstractimporter.h"
 class ImportWizard;
 
-class MailAppImportData : public AbstractImporter
+class MailAppImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit MailAppImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());

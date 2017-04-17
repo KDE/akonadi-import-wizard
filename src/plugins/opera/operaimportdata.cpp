@@ -32,7 +32,7 @@
 K_PLUGIN_FACTORY_WITH_JSON(OperaImporterFactory, "operaimporter.json", registerPlugin<OperaImportData>();)
 
 OperaImportData::OperaImportData(QObject *parent, const QList<QVariant> &)
-    : AbstractImporter(parent)
+    : LibImportWizard::AbstractImporter(parent)
 {
     mPath = MailImporter::FilterOpera::defaultSettingsPath();
 }
@@ -87,12 +87,12 @@ bool OperaImportData::importSettings()
     return true;
 }
 
-AbstractImporter::TypeSupportedOptions OperaImportData::supportedOption()
+LibImportWizard::AbstractImporter::TypeSupportedOptions OperaImportData::supportedOption()
 {
     TypeSupportedOptions options;
-    options |= AbstractImporter::Mails;
-    options |= AbstractImporter::AddressBooks;
-    options |= AbstractImporter::Settings;
+    options |= LibImportWizard::AbstractImporter::Mails;
+    options |= LibImportWizard::AbstractImporter::AddressBooks;
+    options |= LibImportWizard::AbstractImporter::Settings;
     return options;
 }
 

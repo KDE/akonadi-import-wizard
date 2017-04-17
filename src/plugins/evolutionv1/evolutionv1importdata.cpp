@@ -31,7 +31,7 @@ K_PLUGIN_FACTORY_WITH_JSON(Evolutionv1ImporterFactory, "evolutionv1importer.json
 
 
 Evolutionv1ImportData::Evolutionv1ImportData(QObject *parent, const QList<QVariant> &)
-    : AbstractImporter(parent)
+    : LibImportWizard::AbstractImporter(parent)
 {
     mPath = MailImporter::FilterEvolution::defaultSettingsPath();
 }
@@ -70,10 +70,10 @@ bool Evolutionv1ImportData::importMails()
     return true;
 }
 
-AbstractImporter::TypeSupportedOptions Evolutionv1ImportData::supportedOption()
+LibImportWizard::AbstractImporter::TypeSupportedOptions Evolutionv1ImportData::supportedOption()
 {
     TypeSupportedOptions options;
-    options |= AbstractImporter::Mails;
+    options |= LibImportWizard::AbstractImporter::Mails;
     return options;
 }
 

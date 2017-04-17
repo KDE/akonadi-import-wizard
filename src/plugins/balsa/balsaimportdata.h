@@ -22,7 +22,7 @@
 #include "abstractimporter.h"
 class ImportWizard;
 
-class BalsaImportData : public AbstractImporter
+class BalsaImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit BalsaImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());

@@ -34,7 +34,7 @@
 #include <QDir>
 
 IcedoveImportData::IcedoveImportData(QObject *parent, const QList<QVariant> &)
-    : AbstractImporter(parent)
+    : LibImportWizard::AbstractImporter(parent)
 {
     mPath = MailImporter::FilterIcedove::defaultSettingsPath();
 }
@@ -134,12 +134,12 @@ bool IcedoveImportData::importFilters()
     return filtersAdded;
 }
 
-AbstractImporter::TypeSupportedOptions IcedoveImportData::supportedOption()
+LibImportWizard::AbstractImporter::TypeSupportedOptions IcedoveImportData::supportedOption()
 {
     TypeSupportedOptions options;
-    options |= AbstractImporter::Mails;
-    options |= AbstractImporter::Filters;
-    options |= AbstractImporter::Settings;
-    options |= AbstractImporter::AddressBooks;
+    options |= LibImportWizard::AbstractImporter::Mails;
+    options |= LibImportWizard::AbstractImporter::Filters;
+    options |= LibImportWizard::AbstractImporter::Settings;
+    options |= LibImportWizard::AbstractImporter::AddressBooks;
     return options;
 }

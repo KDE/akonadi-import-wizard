@@ -30,7 +30,7 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(PMailImporterFactory, "pmailimporter.json", registerPlugin<PMailImportData>();)
 PMailImportData::PMailImportData(QObject *parent, const QList<QVariant> &)
-    : AbstractImporter(parent)
+    : LibImportWizard::AbstractImporter(parent)
 {
     mPath = QDir::homePath();
 }
@@ -80,11 +80,11 @@ bool PMailImportData::importSettings()
     return true;
 }
 
-AbstractImporter::TypeSupportedOptions PMailImportData::supportedOption()
+LibImportWizard::AbstractImporter::TypeSupportedOptions PMailImportData::supportedOption()
 {
     TypeSupportedOptions options;
-    options |= AbstractImporter::Mails;
-    //options |=AbstractImporter::Settings;
+    options |= LibImportWizard::AbstractImporter::Mails;
+    //options |=LibImportWizard::AbstractImporter::Settings;
     return options;
 }
 

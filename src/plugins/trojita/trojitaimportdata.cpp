@@ -32,7 +32,7 @@ K_PLUGIN_FACTORY_WITH_JSON(TrojitaImporterFactory, "trojitaimporter.json", regis
 
 
 TrojitaImportData::TrojitaImportData(QObject *parent, const QList<QVariant> &)
-    : AbstractImporter(parent)
+    : LibImportWizard::AbstractImporter(parent)
 {
     mPath = MailImporter::OtherMailerUtil::trojitaDefaultPath();
 }
@@ -76,12 +76,12 @@ bool TrojitaImportData::importAddressBook()
     return true;
 }
 
-AbstractImporter::TypeSupportedOptions TrojitaImportData::supportedOption()
+LibImportWizard::AbstractImporter::TypeSupportedOptions TrojitaImportData::supportedOption()
 {
     TypeSupportedOptions options;
-    //options |=AbstractImporter::Mails;
-    options |= AbstractImporter::Settings;
-    options |= AbstractImporter::AddressBooks;
+    //options |=LibImportWizard::AbstractImporter::Mails;
+    options |= LibImportWizard::AbstractImporter::Settings;
+    options |= LibImportWizard::AbstractImporter::AddressBooks;
     return options;
 }
 

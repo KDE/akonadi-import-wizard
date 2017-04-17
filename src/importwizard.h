@@ -84,17 +84,17 @@ private:
     void writeConfig();
     void initializeImportModule();
     void createAutomaticModePage();
-    void addImportModule(AbstractImporter *);
+    void addImportModule(LibImportWizard::AbstractImporter *);
     void checkModules();
-    void setAppropriatePage(AbstractImporter::TypeSupportedOptions options);
+    void setAppropriatePage(LibImportWizard::AbstractImporter::TypeSupportedOptions options);
     void enableAllImportButton();
     void createManualModePage();
     void updatePagesFromMode();
 
-    QMap<QString, AbstractImporter *> mlistImport;
+    QMap<QString, LibImportWizard::AbstractImporter *> mlistImport;
 
     WizardMode mMode;
-    AbstractImporter *mSelectedPim;
+    LibImportWizard::AbstractImporter *mSelectedPim;
 
     KPageWidgetItem *mSelectProgramPageItem;
     KPageWidgetItem *mSelectComponentPageItem;

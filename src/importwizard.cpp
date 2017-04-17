@@ -204,8 +204,8 @@ void ImportWizard::createAutomaticModePage()
 
 void ImportWizard::initializeImportModule()
 {
-    const QVector<AbstractImporter *> lstPlugins = ImportMailPluginManager::self()->pluginsList();
-    for (AbstractImporter *abstractPlugin : qAsConst(lstPlugins)) {
+    const QVector<LibImportWizard::AbstractImporter *> lstPlugins = ImportMailPluginManager::self()->pluginsList();
+    for (LibImportWizard::AbstractImporter *abstractPlugin : qAsConst(lstPlugins)) {
         if (abstractPlugin->foundMailer()) {
             abstractPlugin->setImportWizard(this);
             mlistImport.insert(abstractPlugin->name(), abstractPlugin);
@@ -260,7 +260,7 @@ void ImportWizard::slotImportCalendarClicked()
 
 void ImportWizard::slotProgramSelected(const QString &program)
 {
-    AbstractImporter *importer = mlistImport.value(program);
+    LibImportWizard::AbstractImporter *importer = mlistImport.value(program);
     if (importer) {
         mSelectedPim = importer;
         setValid(currentPage(), true);
@@ -272,7 +272,7 @@ void ImportWizard::checkModules()
     mSelectProgramPage->setFoundProgram(mlistImport.keys());
 }
 
-void ImportWizard::addImportModule(AbstractImporter *import)
+void ImportWizard::addImportModule(LibImportWizard::AbstractImporter *import)
 {
     if (import->foundMailer()) {
         mlistImport.insert(import->name(), import);
@@ -286,13 +286,13 @@ void ImportWizard::slotAtLeastOneComponentSelected(bool result)
     setValid(mSelectComponentPageItem, result);
 }
 
-void ImportWizard::setAppropriatePage(AbstractImporter::TypeSupportedOptions options)
+void ImportWizard::setAppropriatePage(LibImportWizard::AbstractImporter::TypeSupportedOptions options)
 {
-    setAppropriate(mImportMailPageItem, (options & AbstractImporter::Mails));
-    setAppropriate(mImportFilterPageItem, (options & AbstractImporter::Filters));
-    setAppropriate(mImportSettingPageItem, (options & AbstractImporter::Settings));
-    setAppropriate(mImportAddressbookPageItem, (options & AbstractImporter::AddressBooks));
-    setAppropriate(mImportCalendarPageItem, (options & AbstractImporter::Calendars));
+    setAppropriate(mImportMailPageItem, (options & LibImportWizard::AbstractImporter::Mails));
+    setAppropriate(mImportFilterPageItem, (options & LibImportWizard::AbstractImporter::Filters));
+    setAppropriate(mImportSettingPageItem, (options & LibImportWizard::AbstractImporter::Settings));
+    setAppropriate(mImportAddressbookPageItem, (options & LibImportWizard::AbstractImporter::AddressBooks));
+    setAppropriate(mImportCalendarPageItem, (options & LibImportWizard::AbstractImporter::Calendars));
 }
 
 void ImportWizard::next()

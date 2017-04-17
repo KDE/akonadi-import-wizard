@@ -22,7 +22,7 @@
 #include "abstractimporter.h"
 class ImportWizard;
 
-class OeImportData : public AbstractImporter
+class OeImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit OeImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());

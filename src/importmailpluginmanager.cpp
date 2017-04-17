@@ -98,14 +98,14 @@ void ImportMailPluginManager::loadPlugin(ImportMailPluginManagerInfo *item)
 {
     KPluginLoader pluginLoader(item->metaDataFileName);
     if (pluginLoader.factory()) {
-        item->plugin = pluginLoader.factory()->create<AbstractImporter>(this, QVariantList() << item->metaDataFileNameBaseName);
+        item->plugin = pluginLoader.factory()->create<LibImportWizard::AbstractImporter>(this, QVariantList() << item->metaDataFileNameBaseName);
         mPluginDataList.append(item->pluginData);
     }
 }
 
-QVector<AbstractImporter *> ImportMailPluginManager::pluginsList() const
+QVector<LibImportWizard::AbstractImporter *> ImportMailPluginManager::pluginsList() const
 {
-    QVector<AbstractImporter *> lst;
+    QVector<LibImportWizard::AbstractImporter *> lst;
     QVector<ImportMailPluginManagerInfo>::ConstIterator end(mPluginList.constEnd());
     for (QVector<ImportMailPluginManagerInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
         if ((*it).plugin) {

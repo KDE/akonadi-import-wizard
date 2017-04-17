@@ -22,7 +22,7 @@
 #include "abstractimporter.h"
 class ImportWizard;
 
-class TrojitaImportData : public AbstractImporter
+class TrojitaImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit TrojitaImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());

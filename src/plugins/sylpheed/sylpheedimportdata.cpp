@@ -33,7 +33,7 @@
 K_PLUGIN_FACTORY_WITH_JSON(SylpheedImporterFactory, "sylpheedimporter.json", registerPlugin<SylpheedImportData>();)
 
 SylpheedImportData::SylpheedImportData(QObject *parent, const QList<QVariant> &)
-    : AbstractImporter(parent)
+    : LibImportWizard::AbstractImporter(parent)
 {
     mPath = MailImporter::FilterSylpheed::defaultSettingsPath();
 }
@@ -98,13 +98,13 @@ bool SylpheedImportData::importAddressBook()
     return true;
 }
 
-AbstractImporter::TypeSupportedOptions SylpheedImportData::supportedOption()
+LibImportWizard::AbstractImporter::TypeSupportedOptions SylpheedImportData::supportedOption()
 {
     TypeSupportedOptions options;
-    options |= AbstractImporter::Mails;
-    options |= AbstractImporter::Filters;
-    options |= AbstractImporter::Settings;
-    options |= AbstractImporter::AddressBooks;
+    options |= LibImportWizard::AbstractImporter::Mails;
+    options |= LibImportWizard::AbstractImporter::Filters;
+    options |= LibImportWizard::AbstractImporter::Settings;
+    options |= LibImportWizard::AbstractImporter::AddressBooks;
     return options;
 }
 

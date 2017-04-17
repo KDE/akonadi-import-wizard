@@ -33,7 +33,7 @@
 K_PLUGIN_FACTORY_WITH_JSON(BalsaImporterFactory, "balsaimporter.json", registerPlugin<BalsaImportData>();)
 
 BalsaImportData::BalsaImportData(QObject *parent, const QList<QVariant> &)
-    : AbstractImporter(parent)
+    : LibImportWizard::AbstractImporter(parent)
 {
     mPath = MailImporter::FilterBalsa::defaultSettingsPath();
 }
@@ -93,13 +93,13 @@ bool BalsaImportData::importFilters()
     return addFilters(filterPath, MailCommon::FilterImporterExporter::BalsaFilter);
 }
 
-AbstractImporter::TypeSupportedOptions BalsaImportData::supportedOption()
+LibImportWizard::AbstractImporter::TypeSupportedOptions BalsaImportData::supportedOption()
 {
     TypeSupportedOptions options;
-    options |= AbstractImporter::Mails;
-    options |= AbstractImporter::AddressBooks;
-    options |= AbstractImporter::Settings;
-    options |= AbstractImporter::Filters;
+    options |= LibImportWizard::AbstractImporter::Mails;
+    options |= LibImportWizard::AbstractImporter::AddressBooks;
+    options |= LibImportWizard::AbstractImporter::Settings;
+    options |= LibImportWizard::AbstractImporter::Filters;
     return options;
 }
 

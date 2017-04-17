@@ -36,6 +36,7 @@ class MailFilter;
 class FilterImporterExporter;
 }
 
+namespace LibImportWizard {
 class LIBIMPORTWIZARD_EXPORT AbstractImporter : public QObject
 {
     Q_OBJECT
@@ -90,6 +91,7 @@ protected:
     QString mPath;
     ImportWizard *mImportWizard;
 };
+}
 
 #endif /* AbstractImporter_H */
 

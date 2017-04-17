@@ -30,7 +30,7 @@
 K_PLUGIN_FACTORY_WITH_JSON(MailAppImporterFactory, "mailappimporter.json", registerPlugin<MailAppImportData>();)
 
 MailAppImportData::MailAppImportData(QObject *parent, const QList<QVariant> &)
-    : AbstractImporter(parent)
+    : LibImportWizard::AbstractImporter(parent)
 {
     mPath = QDir::homePath();
 }
@@ -71,10 +71,10 @@ bool MailAppImportData::importMails()
     return true;
 }
 
-AbstractImporter::TypeSupportedOptions MailAppImportData::supportedOption()
+LibImportWizard::AbstractImporter::TypeSupportedOptions MailAppImportData::supportedOption()
 {
     TypeSupportedOptions options;
-    options |= AbstractImporter::Mails;
+    options |= LibImportWizard::AbstractImporter::Mails;
     return options;
 }
 

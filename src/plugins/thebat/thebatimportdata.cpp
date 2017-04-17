@@ -31,7 +31,7 @@
 K_PLUGIN_FACTORY_WITH_JSON(TheBatImporterFactory, "thebatimporter.json", registerPlugin<TheBatImportData>();)
 
 TheBatImportData::TheBatImportData(QObject *parent, const QList<QVariant> &)
-    : AbstractImporter(parent)
+    : LibImportWizard::AbstractImporter(parent)
 {
     //TODO fix it
     mPath = QDir::homePath();
@@ -70,10 +70,10 @@ bool TheBatImportData::importMails()
     return true;
 }
 
-AbstractImporter::TypeSupportedOptions TheBatImportData::supportedOption()
+LibImportWizard::AbstractImporter::TypeSupportedOptions TheBatImportData::supportedOption()
 {
     TypeSupportedOptions options;
-    options |= AbstractImporter::Mails;
+    options |= LibImportWizard::AbstractImporter::Mails;
     return options;
 }
 

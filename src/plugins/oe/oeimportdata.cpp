@@ -31,7 +31,7 @@
 K_PLUGIN_FACTORY_WITH_JSON(OEImporterFactory, "oeimporter.json", registerPlugin<OeImportData>();)
 
 OeImportData::OeImportData(QObject *parent, const QList<QVariant> &)
-    : AbstractImporter(parent)
+    : LibImportWizard::AbstractImporter(parent)
 {
     mPath = QDir::homePath();
 }
@@ -72,10 +72,10 @@ bool OeImportData::importMails()
     return true;
 }
 
-AbstractImporter::TypeSupportedOptions OeImportData::supportedOption()
+LibImportWizard::AbstractImporter::TypeSupportedOptions OeImportData::supportedOption()
 {
     TypeSupportedOptions options;
-    options |= AbstractImporter::Mails;
+    options |= LibImportWizard::AbstractImporter::Mails;
     return options;
 }
 

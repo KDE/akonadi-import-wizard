@@ -36,7 +36,7 @@ K_PLUGIN_FACTORY_WITH_JSON(Evolutionv3ImporterFactory, "evolutionv3importer.json
 
 
 Evolutionv3ImportData::Evolutionv3ImportData(QObject *parent, const QList<QVariant> &)
-    : AbstractImporter(parent)
+    : LibImportWizard::AbstractImporter(parent)
 {
     mPath = MailImporter::FilterEvolution_v3::defaultSettingsPath();
 }
@@ -116,14 +116,14 @@ bool Evolutionv3ImportData::importCalendar()
     return true;
 }
 
-AbstractImporter::TypeSupportedOptions Evolutionv3ImportData::supportedOption()
+LibImportWizard::AbstractImporter::TypeSupportedOptions Evolutionv3ImportData::supportedOption()
 {
     TypeSupportedOptions options;
-    options |= AbstractImporter::Mails;
-    options |= AbstractImporter::Filters;
-    options |= AbstractImporter::Settings;
-    options |= AbstractImporter::Calendars;
-    options |= AbstractImporter::AddressBooks;
+    options |= LibImportWizard::AbstractImporter::Mails;
+    options |= LibImportWizard::AbstractImporter::Filters;
+    options |= LibImportWizard::AbstractImporter::Settings;
+    options |= LibImportWizard::AbstractImporter::Calendars;
+    options |= LibImportWizard::AbstractImporter::AddressBooks;
     return options;
 }
 

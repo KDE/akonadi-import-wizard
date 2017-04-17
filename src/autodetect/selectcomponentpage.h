@@ -35,8 +35,8 @@ public:
     explicit SelectComponentPage(QWidget *parent = nullptr);
     ~SelectComponentPage();
 
-    void setEnabledComponent(AbstractImporter::TypeSupportedOptions options);
-    AbstractImporter::TypeSupportedOptions selectedComponents() const;
+    void setEnabledComponent(LibImportWizard::AbstractImporter::TypeSupportedOptions options);
+    LibImportWizard::AbstractImporter::TypeSupportedOptions selectedComponents() const;
 
 Q_SIGNALS:
     void atLeastOneComponentSelected(bool componentSelected);
@@ -44,7 +44,7 @@ Q_SIGNALS:
 private:
     void slotEverythingClicked(bool clicked);
     void slotComponentClicked();
-    AbstractImporter::TypeSupportedOptions mOptions;
+    LibImportWizard::AbstractImporter::TypeSupportedOptions mOptions;
     Ui::SelectComponentPage *ui;
 };
 

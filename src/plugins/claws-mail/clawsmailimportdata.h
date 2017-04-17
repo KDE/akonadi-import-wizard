@@ -22,7 +22,7 @@
 #include "abstractimporter.h"
 class ImportWizard;
 
-class ClawsMailImportData : public AbstractImporter
+class ClawsMailImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit ClawsMailImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());

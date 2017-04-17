@@ -35,7 +35,7 @@
 K_PLUGIN_FACTORY_WITH_JSON(ThunderbirdImporterFactory, "thunderbirdimporter.json", registerPlugin<ThunderbirdImportData>();)
 
 ThunderbirdImportData::ThunderbirdImportData(QObject *parent, const QList<QVariant> &)
-    : AbstractImporter(parent)
+    : LibImportWizard::AbstractImporter(parent)
 {
     mPath = MailImporter::FilterThunderbird::defaultSettingsPath();
 }
@@ -135,13 +135,13 @@ bool ThunderbirdImportData::importFilters()
     return filtersAdded;
 }
 
-AbstractImporter::TypeSupportedOptions ThunderbirdImportData::supportedOption()
+LibImportWizard::AbstractImporter::TypeSupportedOptions ThunderbirdImportData::supportedOption()
 {
     TypeSupportedOptions options;
-    options |= AbstractImporter::Mails;
-    options |= AbstractImporter::Filters;
-    options |= AbstractImporter::Settings;
-    options |= AbstractImporter::AddressBooks;
+    options |= LibImportWizard::AbstractImporter::Mails;
+    options |= LibImportWizard::AbstractImporter::Filters;
+    options |= LibImportWizard::AbstractImporter::Settings;
+    options |= LibImportWizard::AbstractImporter::AddressBooks;
     return options;
 }
 

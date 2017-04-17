@@ -22,7 +22,7 @@
 #include "abstractimporter.h"
 class ImportWizard;
 
-class SylpheedImportData : public AbstractImporter
+class SylpheedImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit SylpheedImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
