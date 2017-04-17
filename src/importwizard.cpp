@@ -26,6 +26,7 @@
 #include "importaddressbookpage.h"
 #include "importcalendarpage.h"
 #include "importfinishpage.h"
+#include "importmailpluginmanager.h"
 
 #include "manual/manualimportmailpage.h"
 #include "manual/manualselectfilterpage.h"
@@ -202,66 +203,9 @@ void ImportWizard::createAutomaticModePage()
 
 void ImportWizard::initializeImportModule()
 {
-    //Import module
-//    AbstractImporter *importer = new ThunderbirdImportData(this);
-//    importer->setImportWizard(this);
-//    addImportModule(importer);
-
-//    AbstractImporter *importer = new IcedoveImportData(this);
-//    importer->setImportWizard(this);
-//    addImportModule(importer);
-
-//    importer = new SylpheedImportData(this);
-//    importer->setImportWizard(this);
-//    addImportModule(importer);
-
-//    importer = new Evolutionv3ImportData(this);
-//    importer->setImportWizard(this);
-//    addImportModule(importer);
-
-//    importer = new Evolutionv2ImportData(this);
-//    importer->setImportWizard(this);
-//    addImportModule(importer);
-
-//    importer = new Evolutionv1ImportData(this);
-//    importer->setImportWizard(this);
-//    addImportModule(importer);
-
-//    importer = new OperaImportData(this);
-//    importer->setImportWizard(this);
-//    addImportModule(importer);
-#ifdef Q_OS_WIN
-//    importer = new OeImportData(this);
-//    importer->setImportWizard(this);
-//    addImportModule(importer);
-#endif
-#ifdef Q_OS_MAC
-//    importer = new OeImportData(this);
-//    importer->setImportWizard(this);
-//    addImportModule(importer);
-#endif
-
-#ifdef Q_OS_WIN
-//    importer = new PMailImportData(this);
-//    importer->setImportWizard(this);
-//    addImportModule(importer);
-
-//    importer = new TheBatImportData(this);
-//    importer->setImportWizard(this);
-//    addImportModule(importer);
-#endif
-
-//    importer = new BalsaImportData(this);
-//    importer->setImportWizard(this);
-//    addImportModule(importer);
-
-//    importer = new ClawsMailImportData(this);
-//    importer->setImportWizard(this);
-//    addImportModule(importer);
-
-//    importer = new TrojitaImportData(this);
-//    importer->setImportWizard(this);
-//    addImportModule(importer);
+    const QVector<AbstractImporter *> lstPlugins = ImportMailPluginManager::self()->pluginsList();
+    qDebug() << " void ImportWizard::initializeImportModule()" << lstPlugins.count();
+    //TODO
 }
 
 void ImportWizard::slotProgramDoubleClicked()

@@ -44,7 +44,7 @@ QString pluginVersion()
 ImportMailPluginManager::ImportMailPluginManager(QObject *parent)
     : QObject(parent)
 {
-
+    initializePluginList();
 }
 
 ImportMailPluginManager::~ImportMailPluginManager()
