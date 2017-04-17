@@ -2,6 +2,16 @@
     "KPlugin": {
         "Id": "icedoveimporter",
         "Name": "Icedove Importer",
+        "Name[ca@valencia]": "Importador de l'Icedove",
+        "Name[ca]": "Importador de l'Icedove",
+        "Name[es]": "Importador Icedove",
+        "Name[it]": "Importatore da Icedove",
+        "Name[nl]": "Icedove-importeur",
+        "Name[pt]": "Importador do Icedove",
+        "Name[sk]": "Importér Icedove",
+        "Name[sv]": "Icedove-importverktyg",
+        "Name[uk]": "Засіб імпортування з Icedove",
+        "Name[x-test]": "xxIcedove Importerxx",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],

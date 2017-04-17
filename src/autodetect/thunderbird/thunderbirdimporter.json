@@ -2,6 +2,16 @@
     "KPlugin": {
         "Id": "thunderbirdimporter",
         "Name": "Thunderbird Importer",
+        "Name[ca@valencia]": "Importador del Thunderbird",
+        "Name[ca]": "Importador del Thunderbird",
+        "Name[es]": "Importador Thunderbird",
+        "Name[it]": "Importatore da Thunderbird",
+        "Name[nl]": "Thunderbird-importeur",
+        "Name[pt]": "Importador do Thunderbird",
+        "Name[sk]": "Importér Thunderbird",
+        "Name[sv]": "Thunderbird-importverktyg",
+        "Name[uk]": "Засіб імпортування з Thunderbird",
+        "Name[x-test]": "xxThunderbird Importerxx",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],

@@ -2,6 +2,16 @@
     "KPlugin": {
         "Id": "sylpheedimporter",
         "Name": "Sylpheed Importer",
+        "Name[ca@valencia]": "Importador del Sylpheed",
+        "Name[ca]": "Importador del Sylpheed",
+        "Name[es]": "Importador Sylpheed",
+        "Name[it]": "Importatore da Sylpheed",
+        "Name[nl]": "Sylpheed-importeur",
+        "Name[pt]": "Importador do Sylpheed",
+        "Name[sk]": "Importér Sylpheed",
+        "Name[sv]": "Sylpheed-importverktyg",
+        "Name[uk]": "Засіб імпортування з Sylpheed",
+        "Name[x-test]": "xxSylpheed Importerxx",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],

@@ -2,6 +2,16 @@
     "KPlugin": {
         "Id": "trojitaimporter",
         "Name": "Trojita Importer",
+        "Name[ca@valencia]": "Importador del Trojita",
+        "Name[ca]": "Importador del Trojita",
+        "Name[es]": "Importador Trojita",
+        "Name[it]": "Importatore da Trojita",
+        "Name[nl]": "Trojita-importeur",
+        "Name[pt]": "Importador do Trojita",
+        "Name[sk]": "Importér Trojita",
+        "Name[sv]": "Trojita-importverktyg",
+        "Name[uk]": "Засіб імпортування з Trojita",
+        "Name[x-test]": "xxTrojita Importerxx",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],
