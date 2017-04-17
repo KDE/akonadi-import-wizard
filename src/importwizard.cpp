@@ -207,6 +207,7 @@ void ImportWizard::initializeImportModule()
     const QVector<AbstractImporter *> lstPlugins = ImportMailPluginManager::self()->pluginsList();
     for (AbstractImporter *abstractPlugin : qAsConst(lstPlugins)) {
         if (abstractPlugin->foundMailer()) {
+            abstractPlugin->setImportWizard(this);
             mlistImport.insert(abstractPlugin->name(), abstractPlugin);
         }
     }
