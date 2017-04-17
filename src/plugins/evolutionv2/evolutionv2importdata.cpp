@@ -17,7 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "evolutionv2/evolutionv2importdata.h"
+#include "evolutionv2importdata.h"
 #include "mailimporter/filterevolution_v2.h"
 #include "mailimporter/filterinfo.h"
 #include "importfilterinfogui.h"

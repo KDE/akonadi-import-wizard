@@ -19,8 +19,8 @@
 
 #include "icedoveimportdata.h"
 #include "importfilterinfogui.h"
-#include "thunderbird/thunderbirdsettings.h"
-#include "thunderbird/thunderbirdaddressbook.h"
+#include "../thunderbird/thunderbirdsettings.h"
+#include "../thunderbird/thunderbirdaddressbook.h"
 
 #include "mailimporter/filtericedove.h"
 #include "mailimporter/filterinfo.h"

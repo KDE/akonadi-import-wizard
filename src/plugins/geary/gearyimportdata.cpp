@@ -17,9 +17,9 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "geary/gearyimportdata.h"
-#include "geary/gearysettings.h"
-#include "geary/gearyaddressbook.h"
+#include "gearyimportdata.h"
+#include "gearysettings.h"
+#include "gearyaddressbook.h"
 #include "mailimporter/filterinfo.h"
 #include "mailimporter/othermailerutil.h"
 #include "importfilterinfogui.h"

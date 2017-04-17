@@ -17,65 +17,66 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "evolutionv1/evolutionv1importdata.h"
-#include "mailimporter/filterevolution.h"
+#include "mailappimportdata.h"
+#include "mailimporter/filtermailapp.h"
 #include "mailimporter/filterinfo.h"
 #include "importfilterinfogui.h"
+#include "importwizard.h"
 
 #include <KLocalizedString>
 #include <kpluginfactory.h>
-
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(Evolutionv1ImporterFactory, "evolutionv1importer.json", registerPlugin<Evolutionv1ImportData>();)
+K_PLUGIN_FACTORY_WITH_JSON(MailAppImporterFactory, "mailappimporter.json", registerPlugin<MailAppImportData>();)
 
-
-Evolutionv1ImportData::Evolutionv1ImportData(QObject *parent, const QList<QVariant> &)
+MailAppImportData::MailAppImportData(QObject *parent, const QList<QVariant> &)
     : AbstractImporter(parent)
 {
-    mPath = MailImporter::FilterEvolution::defaultSettingsPath();
+    mPath = QDir::homePath();
 }
 
-Evolutionv1ImportData::~Evolutionv1ImportData()
+MailAppImportData::~MailAppImportData()
 {
 }
 
-bool Evolutionv1ImportData::foundMailer() const
+bool MailAppImportData::foundMailer() const
 {
+#ifdef Q_OS_MAC
+    //TODO find a method to search it. Perhaps look at binary.
     QDir directory(mPath);
     if (directory.exists()) {
         return true;
     }
+#endif
     return false;
 }
 
-QString Evolutionv1ImportData::name() const
+QString MailAppImportData::name() const
 {
-    return QStringLiteral("Evolution 1.x");
+    return QStringLiteral("Mail App");
 }
 
-bool Evolutionv1ImportData::importMails()
+bool MailAppImportData::importMails()
 {
-    MailImporter::FilterEvolution evolution;
-    initializeFilter(evolution);
-    evolution.filterInfo()->setStatusMessage(i18n("Import in progress"));
-    const QString mailsPath = mPath;
-    QDir directory(mailsPath);
+    MailImporter::FilterMailApp mailapp;
+    initializeFilter(mailapp);
+    mailapp.filterInfo()->setStatusMessage(i18n("Import in progress"));
+    QDir directory(mPath);
     if (directory.exists()) {
-        evolution.importMails(mailsPath);
+        mailapp.importMails(mPath);
     } else {
-        evolution.import();
+        mailapp.import();
     }
-    evolution.filterInfo()->setStatusMessage(i18n("Import finished"));
+    mailapp.filterInfo()->setStatusMessage(i18n("Import finished"));
     return true;
 }
 
-AbstractImporter::TypeSupportedOptions Evolutionv1ImportData::supportedOption()
+AbstractImporter::TypeSupportedOptions MailAppImportData::supportedOption()
 {
     TypeSupportedOptions options;
     options |= AbstractImporter::Mails;
     return options;
 }
 
-#include "evolutionv1importdata.moc"
+#include "mailappimportdata.moc"
 

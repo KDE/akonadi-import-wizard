@@ -17,9 +17,9 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "trojita/trojitaimportdata.h"
-#include "trojita/trojitasettings.h"
-#include "trojita/trojitaaddressbook.h"
+#include "trojitaimportdata.h"
+#include "trojitasettings.h"
+#include "trojitaaddressbook.h"
 #include "mailimporter/filterinfo.h"
 #include "mailimporter/othermailerutil.h"
 #include "importfilterinfogui.h"

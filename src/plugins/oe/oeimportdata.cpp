@@ -17,7 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "oe/oeimportdata.h"
+#include "oeimportdata.h"
 #include "mailimporter/filteroe.h"
 #include "mailimporter/filterinfo.h"
 #include "importfilterinfogui.h"

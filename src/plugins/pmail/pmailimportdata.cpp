@@ -17,8 +17,8 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "pmail/pmailimportdata.h"
-#include "pmail/pmailsettings.h"
+#include "pmailimportdata.h"
+#include "pmailsettings.h"
 #include "mailimporter/filterpmail.h"
 #include "mailimporter/filterinfo.h"
 #include "importfilterinfogui.h"

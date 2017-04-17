@@ -17,9 +17,9 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "balsa/balsaimportdata.h"
-#include "balsa/balsasettings.h"
-#include "balsa/balsaaddressbook.h"
+#include "balsaimportdata.h"
+#include "balsasettings.h"
+#include "balsaaddressbook.h"
 #include "mailimporter/filterbalsa.h"
 #include "mailimporter/filterinfo.h"
 #include "MailCommon/FilterImporterBalsa"

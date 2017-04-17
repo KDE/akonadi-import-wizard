@@ -17,14 +17,14 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "sylpheed/sylpheedimportdata.h"
+#include "sylpheedimportdata.h"
 #include "mailimporter/filtersylpheed.h"
 #include "mailimporter/filterinfo.h"
 #include "importfilterinfogui.h"
 #include "MailCommon/FilterImporterExporter"
 #include "importwizard.h"
-#include "sylpheed/sylpheedsettings.h"
-#include "sylpheed/sylpheedaddressbook.h"
+#include "sylpheedsettings.h"
+#include "sylpheedaddressbook.h"
 
 #include <KLocalizedString>
 #include <kpluginfactory.h>

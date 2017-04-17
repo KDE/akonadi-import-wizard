@@ -20,7 +20,7 @@
 #ifndef ClawsMailAddressBook_H
 #define ClawsMailAddressBook_H
 
-#include "sylpheed/sylpheedaddressbook.h"
+#include "../sylpheed/sylpheedaddressbook.h"
 #include <QDir>
 
 class ImportWizard;

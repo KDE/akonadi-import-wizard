@@ -17,9 +17,9 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "opera/operaimportdata.h"
-#include "opera/operaaddressbook.h"
-#include "opera/operasettings.h"
+#include "operaimportdata.h"
+#include "operaaddressbook.h"
+#include "operasettings.h"
 #include "mailimporter/filteropera.h"
 #include "mailimporter/filterinfo.h"
 #include "importfilterinfogui.h"

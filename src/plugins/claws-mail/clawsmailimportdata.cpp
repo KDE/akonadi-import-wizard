@@ -17,9 +17,9 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "claws-mail/clawsmailimportdata.h"
-#include "claws-mail/clawsmailsettings.h"
-#include "claws-mail/clawsmailaddressbook.h"
+#include "clawsmailimportdata.h"
+#include "clawsmailsettings.h"
+#include "clawsmailaddressbook.h"
 #include "mailimporter/filterclawsmail.h"
 #include "MailCommon/FilterImporterClawsMail"
 #include "mailimporter/filterinfo.h"

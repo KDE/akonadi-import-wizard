@@ -20,7 +20,7 @@
 #ifndef ClawsMailSettings_H
 #define ClawsMailSettings_H
 
-#include "sylpheed/sylpheedsettings.h"
+#include "../sylpheed/sylpheedsettings.h"
 
 class ImportWizard;
 class KConfigGroup;

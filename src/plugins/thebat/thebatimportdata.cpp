@@ -17,7 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "thebat/thebatimportdata.h"
+#include "thebatimportdata.h"
 #include "mailimporter/filterthebat.h"
 #include "mailimporter/filterinfo.h"
 #include "importfilterinfogui.h"
