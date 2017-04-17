@@ -26,7 +26,7 @@ class QSettings;
 
 class ImportWizard;
 
-class TrojitaAddressBook : public AbstractAddressBook
+class TrojitaAddressBook : public LibImportWizard::AbstractAddressBook
 {
 public:
     explicit TrojitaAddressBook(const QString &filename, ImportWizard *parent);

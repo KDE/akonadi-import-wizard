@@ -25,7 +25,7 @@
 #include <QSettings>
 
 TrojitaAddressBook::TrojitaAddressBook(const QString &filename, ImportWizard *parent)
-    : AbstractAddressBook(parent)
+    : LibImportWizard::AbstractAddressBook(parent)
 {
     settings = new QSettings(filename, QSettings::IniFormat, this);
     settings->setIniCodec("UTF-8");

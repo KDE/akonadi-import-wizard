@@ -25,7 +25,7 @@
 #include <QSettings>
 
 GearyAddressBook::GearyAddressBook(const QString &filename, ImportWizard *parent)
-    : AbstractAddressBook(parent)
+    : LibImportWizard::AbstractAddressBook(parent)
 {
 }
 

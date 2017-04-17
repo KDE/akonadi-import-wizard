@@ -26,7 +26,7 @@ class QSettings;
 
 class ImportWizard;
 
-class GearyAddressBook : public AbstractAddressBook
+class GearyAddressBook : public LibImportWizard::AbstractAddressBook
 {
 public:
     explicit GearyAddressBook(const QString &filename, ImportWizard *parent);

@@ -26,7 +26,7 @@
 //#include "importwizard_debug.h"
 
 ThunderBirdAddressBook::ThunderBirdAddressBook(const QDir &dir, ImportWizard *parent)
-    : AbstractAddressBook(parent),
+    : LibImportWizard::AbstractAddressBook(parent),
       mDir(dir)
 {
 }

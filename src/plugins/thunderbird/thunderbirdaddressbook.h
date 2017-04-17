@@ -25,7 +25,7 @@
 
 class ImportWizard;
 
-class ThunderBirdAddressBook: public AbstractAddressBook
+class ThunderBirdAddressBook: public LibImportWizard::AbstractAddressBook
 {
     Q_OBJECT
 public:

@@ -29,7 +29,7 @@
 #include <AkonadiWidgets/CollectionDialog>
 
 #include <QPointer>
-
+using namespace LibImportWizard;
 AbstractAddressBook::AbstractAddressBook(ImportWizard *parent)
     : mImportWizard(parent), mCollection(-1)
 {

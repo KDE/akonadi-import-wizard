@@ -28,7 +28,7 @@
 #include <QDomDocument>
 
 SylpheedAddressBook::SylpheedAddressBook(const QDir &dir, ImportWizard *parent)
-    : AbstractAddressBook(parent),
+    : LibImportWizard::AbstractAddressBook(parent),
       mDir(dir)
 {
 }

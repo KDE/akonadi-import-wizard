@@ -24,7 +24,7 @@
 
 class ImportWizard;
 
-class OperaAddressBook : public AbstractAddressBook
+class OperaAddressBook : public LibImportWizard::AbstractAddressBook
 {
 public:
     explicit OperaAddressBook(const QString &filename, ImportWizard *parent);

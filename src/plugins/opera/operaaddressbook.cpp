@@ -25,7 +25,7 @@
 #include <QFile>
 
 OperaAddressBook::OperaAddressBook(const QString &filename, ImportWizard *parent)
-    : AbstractAddressBook(parent),
+    : LibImportWizard::AbstractAddressBook(parent),
       mFileName(filename)
 {
 }

@@ -35,7 +35,7 @@
 #include <QRegularExpression>
 
 BalsaAddressBook::BalsaAddressBook(const QString &filename, ImportWizard *parent)
-    : AbstractAddressBook(parent),
+    : LibImportWizard::AbstractAddressBook(parent),
       mFileName(filename)
 {
 }

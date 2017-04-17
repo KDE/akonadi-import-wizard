@@ -27,7 +27,7 @@ class QString;
 
 class ImportWizard;
 
-class SylpheedAddressBook : public AbstractAddressBook
+class SylpheedAddressBook : public LibImportWizard::AbstractAddressBook
 {
     Q_OBJECT
 public:

@@ -33,7 +33,8 @@ class ContactGroup;
 }
 
 class KJob;
-
+namespace LibImportWizard
+{
 class LIBIMPORTWIZARD_EXPORT AbstractAddressBook: public AbstractBase
 {
     Q_OBJECT
@@ -61,5 +62,5 @@ private:
     bool selectAddressBook();
     Akonadi::Collection mCollection;
 };
-
+}
 #endif // ABSTRACTADDRESSBOOK_H

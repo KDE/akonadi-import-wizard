@@ -24,7 +24,7 @@
 #include <QFileDialog>
 
 EvolutionAddressBook::EvolutionAddressBook(ImportWizard *parent)
-    : AbstractAddressBook(parent)
+    : LibImportWizard::AbstractAddressBook(parent)
 {
 }
 

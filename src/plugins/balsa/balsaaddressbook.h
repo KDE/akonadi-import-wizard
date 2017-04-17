@@ -25,7 +25,7 @@
 class ImportWizard;
 class KConfigGroup;
 
-class BalsaAddressBook : public AbstractAddressBook
+class BalsaAddressBook : public LibImportWizard::AbstractAddressBook
 {
 public:
     explicit BalsaAddressBook(const QString &filename, ImportWizard *parent);

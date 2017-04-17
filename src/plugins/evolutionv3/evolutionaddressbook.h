@@ -24,7 +24,7 @@
 
 class ImportWizard;
 
-class EvolutionAddressBook: public AbstractAddressBook
+class EvolutionAddressBook: public LibImportWizard::AbstractAddressBook
 {
     Q_OBJECT
 public:
