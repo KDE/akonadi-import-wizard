@@ -35,12 +35,15 @@ class ContactGroup;
 class KJob;
 namespace LibImportWizard
 {
+class AbstractDisplayInfo;
 class LIBIMPORTWIZARD_EXPORT AbstractAddressBook: public LibImportWizard::AbstractBase
 {
     Q_OBJECT
 public:
     explicit AbstractAddressBook(ImportWizard *parent);
     ~AbstractAddressBook();
+
+    void setAbstractDisplayInfo(AbstractDisplayInfo *abstractDisplayInfo);
 
 protected:
     void createGroup(const KContacts::ContactGroup &group);
@@ -56,6 +59,7 @@ protected:
 
 protected:
     ImportWizard *mImportWizard;
+    AbstractDisplayInfo *mAbstractDisplayInfo;
 
 private:
     void slotStoreDone(KJob *job);

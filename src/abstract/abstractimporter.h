@@ -36,6 +36,7 @@ class FilterImporterExporter;
 }
 
 namespace LibImportWizard {
+class AbstractDisplayInfo;
 class LIBIMPORTWIZARD_EXPORT AbstractImporter : public QObject
 {
     Q_OBJECT
@@ -79,6 +80,9 @@ public:
     void setParentWidget(QWidget *parent);
     QWidget *parentWidget() const;
 
+    void setAbstractDisplayInfo(AbstractDisplayInfo *info);
+
+
 protected:
     //TODO we need to redefine it.
     virtual void initializeFilter(MailImporter::Filter &filter);
@@ -92,6 +96,7 @@ protected:
 
     QString mPath;
     ImportWizard *mImportWizard;
+    AbstractDisplayInfo *mAbstractDisplayInfo;
     QWidget *mParentWidget;
 };
 }

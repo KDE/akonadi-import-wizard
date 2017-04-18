@@ -19,6 +19,7 @@
 #include "abstract/abstractaddressbook.h"
 #include "importwizard.h"
 #include "importaddressbookpage.h"
+#include "abstractdisplayinfo.h"
 
 #include <KContacts/Addressee>
 #include <kcontacts/contactgroup.h>
@@ -31,7 +32,9 @@
 #include <QPointer>
 using namespace LibImportWizard;
 AbstractAddressBook::AbstractAddressBook(ImportWizard *parent)
-    : mImportWizard(parent), mCollection(-1)
+    : mImportWizard(parent),
+      mAbstractDisplayInfo(nullptr),
+      mCollection(-1)
 {
 }
 
@@ -85,6 +88,11 @@ void AbstractAddressBook::addImportContactNote(KContacts::Addressee &address, co
     address.setNote(currentNote);
 }
 
+void AbstractAddressBook::setAbstractDisplayInfo(AbstractDisplayInfo *abstractDisplayInfo)
+{
+    mAbstractDisplayInfo = abstractDisplayInfo;
+}
+
 void AbstractAddressBook::createContact(const KContacts::Addressee &address)
 {
     if (selectAddressBook()) {
@@ -118,15 +126,15 @@ void AbstractAddressBook::addImportError(const QString &log)
 
 void AbstractAddressBook::addAddressBookImportInfo(const QString &log)
 {
-    if (mImportWizard) {
-        mImportWizard->importAddressBookPage()->addImportInfo(log);
+    if (mAbstractDisplayInfo) {
+        mAbstractDisplayInfo->addressbookImportInfo(log);
     }
 }
 
 void AbstractAddressBook::addAddressBookImportError(const QString &log)
 {
-    if (mImportWizard) {
-        mImportWizard->importAddressBookPage()->addImportError(log);
+    if (mAbstractDisplayInfo) {
+        mAbstractDisplayInfo->addressbookImportError(log);
     }
 }
 

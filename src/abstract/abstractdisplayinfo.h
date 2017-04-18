@@ -29,6 +29,7 @@ class LIBIMPORTWIZARD_EXPORT AbstractDisplayInfo
 {
 public:
     AbstractDisplayInfo();
+    virtual ~AbstractDisplayInfo() = default;
 
     virtual void calendarImportError(const QString &log);
     virtual void settingsImportError(const QString &log);
