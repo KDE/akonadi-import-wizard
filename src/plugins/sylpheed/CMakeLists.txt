@@ -4,6 +4,7 @@ set(sylpheedimporter_SRCS
    sylpheedsettings.cpp
    sylpheedsettingsutils.cpp
 )
+ecm_qt_declare_logging_category(sylpheedimporter_SRCS HEADER sylpheedplugin_debug.h IDENTIFIER SYLPHEEDPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.sylpheedplugin)
 
 kcoreaddons_add_plugin(sylpheedimporterplugin JSON sylpheedimporter.json SOURCES
     ${sylpheedimporter_SRCS} INSTALL_NAMESPACE importwizard)

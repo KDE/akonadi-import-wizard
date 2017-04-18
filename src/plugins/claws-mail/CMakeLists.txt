@@ -8,6 +8,7 @@ set(clawsmailimporter_SRCS
 
 )
 
+ecm_qt_declare_logging_category(clawsmailimporter_SRCS HEADER sylpheedplugin_debug.h IDENTIFIER SYLPHEEDPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.sylpheedplugin)
 kcoreaddons_add_plugin(clawsmailimporterplugin JSON clawsmailimporter.json SOURCES
     ${clawsmailimporter_SRCS} INSTALL_NAMESPACE importwizard)
 

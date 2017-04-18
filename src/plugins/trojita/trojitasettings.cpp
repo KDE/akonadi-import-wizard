@@ -142,7 +142,7 @@ void TrojitaSettings::readTransport()
             }
             mt->setType(MailTransport::Transport::EnumType::SMTP);
         } else {
-            //FIXME qCWarning(IMPORTWIZARD_LOG) << " smtpMethod unknown " << smtpMethod;
+            qCWarning(TROJITAPLUGIN_LOG) << " smtpMethod unknown " << smtpMethod;
         }
         storeTransport(mt, true);   //only one smtp for the moment
     }

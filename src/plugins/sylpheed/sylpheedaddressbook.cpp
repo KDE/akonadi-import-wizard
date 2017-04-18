@@ -21,7 +21,7 @@
 #include <KContacts/Addressee>
 #include <kcontacts/contactgroup.h>
 
-//#include "importwizard_debug.h"
+#include "sylpheedplugin_debug.h"
 #include <KLocalizedString>
 
 #include <QDir>
@@ -54,9 +54,9 @@ void SylpheedAddressBook::importAddressBook()
 void SylpheedAddressBook::readAddressBook(const QString &filename)
 {
     QFile file(filename);
-    ////FIXME qCDebug(IMPORTWIZARD_LOG)<<" import filename :"<<filename;
+    //qCDebug(SYLPHEEDPLUGIN_LOG)<<" import filename :"<<filename;
     if (!file.open(QIODevice::ReadOnly)) {
-        //FIXME qCDebug(IMPORTWIZARD_LOG) << " We can't open file" << filename;
+        qCDebug(SYLPHEEDPLUGIN_LOG) << " We can't open file" << filename;
         return;
     }
     QString errorMsg;
@@ -64,14 +64,14 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
     int errorCol;
     QDomDocument doc;
     if (!doc.setContent(&file, &errorMsg, &errorRow, &errorCol)) {
-        //FIXME qCDebug(IMPORTWIZARD_LOG) << "Unable to load document.Parse error in line " << errorRow
-                                  //    << ", col " << errorCol << ": " << errorMsg;
+        qCDebug(SYLPHEEDPLUGIN_LOG) << "Unable to load document.Parse error in line " << errorRow
+                                    << ", col " << errorCol << ": " << errorMsg;
         return;
     }
     QDomElement domElement = doc.documentElement();
 
     if (domElement.isNull()) {
-        //FIXME qCDebug(IMPORTWIZARD_LOG) << "addressbook not found";
+        qCDebug(SYLPHEEDPLUGIN_LOG) << "addressbook not found";
         return;
     }
 
@@ -121,7 +121,7 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
                                 uidAddress << addresslist.attribute(QStringLiteral("uid"));
                             }
                         } else {
-                            //FIXME qCDebug(IMPORTWIZARD_LOG) << " tagAddressList unknown :" << tagAddressList;
+                            qCDebug(SYLPHEEDPLUGIN_LOG) << " tagAddressList unknown :" << tagAddressList;
                         }
                     }
                     if (!emails.isEmpty()) {
@@ -138,18 +138,18 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
                                 contact.insertCustom(QStringLiteral("KADDRESSBOOK"), name, value);
                             }
                         } else {
-                            //FIXME qCDebug(IMPORTWIZARD_LOG) << "tagAttributeList not implemented " << tagAttributeList;
+                            qCDebug(SYLPHEEDPLUGIN_LOG) << "tagAttributeList not implemented " << tagAttributeList;
                         }
                     }
 
                 } else {
-                    //FIXME qCDebug(IMPORTWIZARD_LOG) << " addressTag unknown :" << addressTag;
+                    qCDebug(SYLPHEEDPLUGIN_LOG) << " addressTag unknown :" << addressTag;
                 }
             }
             if (!mAddressBookUid.contains(uidPerson)) {
                 mAddressBookUid.insert(uidPerson, uidAddress);
             } else {
-                //FIXME qCDebug(IMPORTWIZARD_LOG) << " problem uidPerson already stored" << uidPerson;
+                qCDebug(SYLPHEEDPLUGIN_LOG) << " problem uidPerson already stored" << uidPerson;
             }
             addImportContactNote(contact, QStringLiteral("Sylpheed"));
             createContact(contact);
@@ -174,7 +174,7 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
                             if (!pid.isEmpty() && !eid.isEmpty()) {
                                 //TODO
                             } else {
-                                //FIXME qCDebug(IMPORTWIZARD_LOG) << " Problem with group" << name;
+                                qCDebug(SYLPHEEDPLUGIN_LOG) << " Problem with group" << name;
                             }
                             //TODO
                         }
@@ -183,7 +183,7 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
             }
             createGroup(group);
         } else {
-            //FIXME qCDebug(IMPORTWIZARD_LOG) << " SylpheedAddressBook::readAddressBook  tag unknown :" << tag;
+            qCDebug(SYLPHEEDPLUGIN_LOG) << " SylpheedAddressBook::readAddressBook  tag unknown :" << tag;
         }
     }
 }
