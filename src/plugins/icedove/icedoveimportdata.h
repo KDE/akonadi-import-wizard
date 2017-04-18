@@ -19,7 +19,7 @@
 #ifndef IcedoveImportData_H
 #define IcedoveImportData_H
 
-#include "abstractimporter.h"
+#include "abstract/abstractimporter.h"
 class ImportWizard;
 
 class IcedoveImportData : public LibImportWizard::AbstractImporter

@@ -20,7 +20,7 @@
 #ifndef TrojitaAddressBook_H
 #define TrojitaAddressBook_H
 
-#include "abstractaddressbook.h"
+#include "abstract/abstractaddressbook.h"
 #include <QHash>
 class QSettings;
 

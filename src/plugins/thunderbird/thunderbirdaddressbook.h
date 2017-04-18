@@ -20,7 +20,7 @@
 #ifndef THUNDERBIRDADDRESSBOOK_H
 #define THUNDERBIRDADDRESSBOOK_H
 
-#include "abstractaddressbook.h"
+#include "abstract/abstractaddressbook.h"
 #include <QDir>
 
 class ImportWizard;

@@ -20,7 +20,7 @@
 
 #include "importmailpluginmanager.h"
 #include "importwizard_debug.h"
-#include "abstractimporter.h"
+#include "abstract/abstractimporter.h"
 
 #include <KPluginMetaData>
 #include <KPluginLoader>

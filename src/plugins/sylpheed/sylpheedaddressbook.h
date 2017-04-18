@@ -20,7 +20,7 @@
 #ifndef SYLPHEEDADDRESSBOOK_H
 #define SYLPHEEDADDRESSBOOK_H
 
-#include "abstractaddressbook.h"
+#include "abstract/abstractaddressbook.h"
 #include <QHash>
 #include <QDir>
 class QString;

@@ -17,24 +17,29 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef PMailSettings_H
-#define PMailSettings_H
-
-#include "abstract/abstractsettings.h"
+#ifndef ABSTRACTCALENDAR_H
+#define ABSTRACTCALENDAR_H
 
 class ImportWizard;
-class KConfigGroup;
-
-class PMailSettings : public AbstractSettings
+#include "abstractbase.h"
+#include "libimportwizard_export.h"
+#include <QString>
+namespace LibImportWizard
 {
+class LIBIMPORTWIZARD_EXPORT AbstractCalendar : public LibImportWizard::AbstractBase
+{
+    Q_OBJECT
 public:
-    explicit PMailSettings(const QString &filename, ImportWizard *parent);
-    ~PMailSettings();
+    explicit AbstractCalendar(ImportWizard *parent);
+    virtual ~AbstractCalendar();
 
-    void importSettings();
+protected:
+    void addEvenViewConfig(const QString &groupName, const QString &key, const QString &value);
+    void addImportInfo(const QString &log) Q_DECL_OVERRIDE;
+    void addImportError(const QString &log) Q_DECL_OVERRIDE;
+
 private:
-    void readIdentity(const KConfigGroup &group);
-    QString mFileName;
+    ImportWizard *mImportWizard;
 };
-
-#endif // ClawsMailSettings_H
+}
+#endif // ABSTRACTCALENDAR_H

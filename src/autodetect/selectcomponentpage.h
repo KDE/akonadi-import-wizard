@@ -20,7 +20,7 @@
 #define SELECTCOMPONENTPAGE_H
 
 #include <QWidget>
-#include "abstractimporter.h"
+#include "abstract/abstractimporter.h"
 
 namespace Ui
 {

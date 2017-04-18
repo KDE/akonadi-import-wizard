@@ -20,7 +20,7 @@
 #ifndef TrojitaSettings_H
 #define TrojitaSettings_H
 
-#include "abstractsettings.h"
+#include "abstract/abstractsettings.h"
 
 class ImportWizard;
 class QSettings;

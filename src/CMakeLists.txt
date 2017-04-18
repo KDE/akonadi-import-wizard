@@ -16,6 +16,15 @@ set(libimportwizard_manual_SRCS
     manual/manualselectfilterpage.cpp
     )
 
+set(libimportwizard_abstract_SRCS
+    abstract/abstractimporter.cpp
+    abstract/abstractsettings.cpp
+    abstract/abstractaddressbook.cpp
+    abstract/abstractcalendar.cpp
+    abstract/abstractbase.cpp
+    )
+
+
 set(libimportwizard_autodetect_SRCS
     autodetect/widgets/selectprogramlistwidget.cpp
     autodetect/importwizardutil.cpp
@@ -28,11 +37,6 @@ set(libimportwizard_autodetect_SRCS
     autodetect/selectcomponentpage.cpp
     autodetect/importfilterinfogui.cpp
     autodetect/importcalendarpage.cpp
-    autodetect/abstractimporter.cpp
-    autodetect/abstractsettings.cpp
-    autodetect/abstractaddressbook.cpp
-    autodetect/abstractcalendar.cpp
-    autodetect/abstractbase.cpp
     )
 
 
@@ -55,7 +59,7 @@ file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/icons/*-apps-kontact-import-wi
 ecm_add_app_icon(importwizard_SRCS ICONS ${ICONS_SRCS})
 
 
-add_library(libimportwizard ${libimportwizard_autodetect_SRCS} ${libimportwizard_manual_SRCS} ${libimportwizard_SRCS})
+add_library(libimportwizard ${libimportwizard_autodetect_SRCS} ${libimportwizard_manual_SRCS} ${libimportwizard_SRCS} ${libimportwizard_abstract_SRCS})
 
 generate_export_header(libimportwizard BASE_NAME libimportwizard)
 

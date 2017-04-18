@@ -19,7 +19,7 @@
 #ifndef THUNDERBIRDIMPORTDATA_H
 #define THUNDERBIRDIMPORTDATA_H
 
-#include "abstractimporter.h"
+#include "abstract/abstractimporter.h"
 class ImportWizard;
 
 class ThunderbirdImportData : public LibImportWizard::AbstractImporter

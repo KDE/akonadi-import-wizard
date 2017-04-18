@@ -17,24 +17,38 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef PMailSettings_H
-#define PMailSettings_H
+#ifndef ABSTRACTBASE_H
+#define ABSTRACTBASE_H
 
-#include "abstract/abstractsettings.h"
+#include <QObject>
+#include "libimportwizard_export.h"
+#include <QString>
+#include <QMap>
+#include <QVariant>
 
-class ImportWizard;
-class KConfigGroup;
-
-class PMailSettings : public AbstractSettings
+namespace PimCommon
 {
+class CreateResource;
+}
+namespace LibImportWizard
+{
+class LIBIMPORTWIZARD_EXPORT AbstractBase : public QObject
+{
+    Q_OBJECT
 public:
-    explicit PMailSettings(const QString &filename, ImportWizard *parent);
-    ~PMailSettings();
+    explicit AbstractBase();
+    virtual ~AbstractBase();
 
-    void importSettings();
+    QString createResource(const QString &resources, const QString &name, const QMap<QString, QVariant> &settings);
+
+protected:
+    virtual void addImportInfo(const QString &log) = 0;
+    virtual void addImportError(const QString &log) = 0;
+
 private:
-    void readIdentity(const KConfigGroup &group);
-    QString mFileName;
+    void slotCreateResourceError(const QString &);
+    void slotCreateResourceInfo(const QString &);
+    PimCommon::CreateResource *mCreateResource;
 };
-
-#endif // ClawsMailSettings_H
+}
+#endif // ABSTRACTBASE_H
