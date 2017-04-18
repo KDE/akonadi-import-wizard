@@ -20,7 +20,6 @@
 #define ClawsMailImportData_H
 
 #include "abstract/abstractimporter.h"
-class ImportWizard;
 
 class ClawsMailImportData : public LibImportWizard::AbstractImporter
 {

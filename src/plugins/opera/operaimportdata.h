@@ -21,7 +21,6 @@
 #define OperaImportData_H
 
 #include "abstract/abstractimporter.h"
-class ImportWizard;
 
 class OperaImportData : public LibImportWizard::AbstractImporter
 {

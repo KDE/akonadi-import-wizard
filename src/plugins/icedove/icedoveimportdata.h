@@ -20,7 +20,6 @@
 #define IcedoveImportData_H
 
 #include "abstract/abstractimporter.h"
-class ImportWizard;
 
 class IcedoveImportData : public LibImportWizard::AbstractImporter
 {

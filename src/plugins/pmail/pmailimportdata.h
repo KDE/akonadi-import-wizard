@@ -21,7 +21,6 @@
 #define PMailImportData_H
 
 #include "abstract/abstractimporter.h"
-class ImportWizard;
 
 class PMailImportData : public LibImportWizard::AbstractImporter
 {

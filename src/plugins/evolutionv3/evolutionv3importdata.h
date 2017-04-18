@@ -20,7 +20,6 @@
 #define Evolutionv3ImportData_H
 
 #include "abstract/abstractimporter.h"
-class ImportWizard;
 
 class Evolutionv3ImportData : public LibImportWizard::AbstractImporter
 {

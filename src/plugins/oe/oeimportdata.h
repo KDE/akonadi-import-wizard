@@ -20,7 +20,6 @@
 #define OeImportData_H
 
 #include "abstract/abstractimporter.h"
-class ImportWizard;
 
 class OeImportData : public LibImportWizard::AbstractImporter
 {

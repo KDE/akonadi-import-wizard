@@ -24,8 +24,6 @@
 
 class QDomElement;
 
-class ImportWizard;
-
 class EvolutionCalendar : public LibImportWizard::AbstractCalendar
 {
 public:
