@@ -140,3 +140,13 @@ void AbstractImporter::setImportWizard(ImportWizard *importWizard)
 {
     mImportWizard = importWizard;
 }
+
+void AbstractImporter::setParentWidget(QWidget *parent)
+{
+    mParentWidget = parent;
+}
+
+QWidget *AbstractImporter::parentWidget() const
+{
+    return mParentWidget;
+}

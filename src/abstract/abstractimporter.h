@@ -76,6 +76,9 @@ public:
 
     void setImportWizard(ImportWizard *importWizard);
 
+    void setParentWidget(QWidget *parent);
+    QWidget *parentWidget() const;
+
 protected:
     //TODO we need to redefine it.
     virtual void initializeFilter(MailImporter::Filter &filter);
@@ -89,6 +92,7 @@ protected:
 
     QString mPath;
     ImportWizard *mImportWizard;
+    QWidget *mParentWidget;
 };
 }
 

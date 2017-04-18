@@ -27,12 +27,10 @@
 #include <AkonadiCore/agentinstancecreatejob.h>
 
 #include <QMetaMethod>
-#include <QWidget>
 
 using namespace Akonadi;
 using namespace LibImportWizard;
 AbstractBase::AbstractBase()
-    : mParentWidget(nullptr)
 {
     mCreateResource = new PimCommon::CreateResource();
     connect(mCreateResource, &PimCommon::CreateResource::createResourceInfo, this, &AbstractBase::slotCreateResourceInfo);
@@ -47,16 +45,6 @@ AbstractBase::~AbstractBase()
 QString LibImportWizard::AbstractBase::createResource(const QString &resources, const QString &name, const QMap<QString, QVariant> &settings)
 {
     return mCreateResource->createResource(resources, name, settings);
-}
-
-void AbstractBase::setParentWidget(QWidget *parent)
-{
-    mParentWidget = parent;
-}
-
-QWidget *AbstractBase::parentWidget() const
-{
-    return mParentWidget;
 }
 
 void AbstractBase::slotCreateResourceError(const QString &msg)

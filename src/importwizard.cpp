@@ -208,6 +208,7 @@ void ImportWizard::initializeImportModule()
     for (LibImportWizard::AbstractImporter *abstractPlugin : qAsConst(lstPlugins)) {
         if (abstractPlugin->foundMailer()) {
             abstractPlugin->setImportWizard(this);
+            abstractPlugin->setParentWidget(this);
             mlistImport.insert(abstractPlugin->name(), abstractPlugin);
         }
     }
