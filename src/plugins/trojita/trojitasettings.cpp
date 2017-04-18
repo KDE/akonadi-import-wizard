@@ -25,7 +25,7 @@
 #include <KIdentityManagement/kidentitymanagement/identity.h>
 #include <KIdentityManagement/kidentitymanagement/signature.h>
 
-//#include "importwizard_debug.h"
+#include "trojitaplugin_debug.h"
 
 #include <QSettings>
 
@@ -169,7 +169,7 @@ void TrojitaSettings::readIdentity()
             signature.setText(signatureStr);
             identity->setSignature(signature);
         }
-        //qCDebug(IMPORTWIZARD_LOG) << " realName :" << realName << " address : " << address << " organisation : " << organisation << " signature: " << signatureStr;
+        qCDebug(TROJITAPLUGIN_LOG) << " realName :" << realName << " address : " << address << " organisation : " << organisation << " signature: " << signatureStr;
         storeIdentity(identity);
     }
     settings->endArray();
