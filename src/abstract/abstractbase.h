@@ -30,6 +30,7 @@ namespace PimCommon
 {
 class CreateResource;
 }
+
 namespace LibImportWizard
 {
 class AbstractDisplayInfo;

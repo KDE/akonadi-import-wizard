@@ -19,7 +19,7 @@
 
 #ifndef AbstractImporter_H
 #define AbstractImporter_H
-#include "MailCommon/FilterImporterExporter"
+#include <MailCommon/FilterImporterExporter>
 #include "libimportwizard_export.h"
 
 namespace MailImporter
