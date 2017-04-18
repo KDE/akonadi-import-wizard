@@ -19,7 +19,6 @@
 
 #include "abstractimporter.h"
 #include "importmailpage.h"
-#include "importfilterinfogui.h"
 #include "importfilterpage.h"
 #include "importsettingpage.h"
 #include "importcalendarpage.h"
@@ -29,6 +28,7 @@
 #include "MailCommon/FilterManager"
 #include <MailImporterAkonadi/FilterImporterAkonadi>
 
+#include <QFileInfo>
 #include <QFile>
 
 using namespace LibImportWizard;

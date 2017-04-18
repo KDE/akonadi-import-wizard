@@ -13,6 +13,9 @@ set(libimportwizard_abstract_SRCS
     abstract/abstractbase.cpp
     abstract/abstractdisplayinfo.cpp
     )
+set(libimportwizard_utils_SRCS
+    autodetect/importwizardutil.cpp
+    )
 
 ecm_qt_declare_logging_category(libimportwizard_abstract_SRCS HEADER libimportwizard_debug.h IDENTIFIER LIBIMPORTWIZARD_LOG CATEGORY_NAME org.kde.pim.importwizard.lib)
 
@@ -20,23 +23,18 @@ file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/icons/*-apps-kontact-import-wi
 ecm_add_app_icon(importwizard_SRCS ICONS ${ICONS_SRCS})
 
 
-add_library(libimportwizard ${libimportwizard_abstract_SRCS})
+add_library(libimportwizard ${libimportwizard_abstract_SRCS} ${libimportwizard_utils_SRCS})
 
 generate_export_header(libimportwizard BASE_NAME libimportwizard)
 
 target_link_libraries(libimportwizard
-    PRIVATE
-    KF5::AkonadiCore
+    PUBLIC
     KF5::MailTransport
-    KF5::XmlGui
-    KF5::MailImporterAkonadi
+    PRIVATE
+    KF5::Archive
     KF5::PimCommon
     KF5::MailCommon
-    KF5::Libkdepim
-    KF5::MessageViewer
-    KF5::Completion
     KF5::I18n
-    KF5::CoreAddons
     )
 
 set_target_properties(libimportwizard
@@ -61,7 +59,6 @@ set(importwizard_manual_SRCS
 
 set(importwizard_autodetect_SRCS
     autodetect/widgets/selectprogramlistwidget.cpp
-    autodetect/importwizardutil.cpp
     autodetect/selectprogrampage.cpp
     autodetect/importaddressbookpage.cpp
     autodetect/importfilterpage.cpp
