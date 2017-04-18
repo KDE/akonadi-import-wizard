@@ -26,6 +26,7 @@
 #include <QMap>
 #include <QVariant>
 
+class QWidget;
 namespace PimCommon
 {
 class CreateResource;
@@ -41,6 +42,9 @@ public:
 
     QString createResource(const QString &resources, const QString &name, const QMap<QString, QVariant> &settings);
 
+    void setParentWidget(QWidget *parent);
+    QWidget *parentWidget() const;
+
 protected:
     virtual void addImportInfo(const QString &log) = 0;
     virtual void addImportError(const QString &log) = 0;
@@ -49,6 +53,7 @@ private:
     void slotCreateResourceError(const QString &);
     void slotCreateResourceInfo(const QString &);
     PimCommon::CreateResource *mCreateResource;
+    QWidget *mParentWidget;
 };
 }
 #endif // ABSTRACTBASE_H

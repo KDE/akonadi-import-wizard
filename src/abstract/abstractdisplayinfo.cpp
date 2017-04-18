@@ -26,3 +26,33 @@ AbstractDisplayInfo::AbstractDisplayInfo()
 {
 
 }
+
+void AbstractDisplayInfo::calendarImportError(const QString &log)
+{
+
+}
+
+void AbstractDisplayInfo::settingsImportError(const QString &log)
+{
+
+}
+
+void AbstractDisplayInfo::addressbookImportError(const QString &log)
+{
+
+}
+
+void AbstractDisplayInfo::calendarImportInfo(const QString &log)
+{
+
+}
+
+void AbstractDisplayInfo::settingsImportInfo(const QString &log)
+{
+
+}
+
+void AbstractDisplayInfo::addressbookImportInfo(const QString &log)
+{
+
+}

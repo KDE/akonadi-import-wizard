@@ -21,6 +21,7 @@
 #define ABSTRACTDISPLAYINFO_H
 
 #include "libimportwizard_export.h"
+#include <QString>
 
 namespace LibImportWizard
 {
@@ -28,6 +29,14 @@ class LIBIMPORTWIZARD_EXPORT AbstractDisplayInfo
 {
 public:
     AbstractDisplayInfo();
+
+    virtual void calendarImportError(const QString &log);
+    virtual void settingsImportError(const QString &log);
+    virtual void addressbookImportError(const QString &log);
+
+    virtual void calendarImportInfo(const QString &log);
+    virtual void settingsImportInfo(const QString &log);
+    virtual void addressbookImportInfo(const QString &log);
 };
 }
 
