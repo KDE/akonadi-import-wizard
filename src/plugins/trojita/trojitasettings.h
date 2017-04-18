@@ -22,13 +22,12 @@
 
 #include "abstract/abstractsettings.h"
 
-class ImportWizard;
 class QSettings;
 
 class TrojitaSettings : public AbstractSettings
 {
 public:
-    explicit TrojitaSettings(const QString &filename, ImportWizard *parent);
+    explicit TrojitaSettings(const QString &filename);
     ~TrojitaSettings();
     void importSettings();
 private:

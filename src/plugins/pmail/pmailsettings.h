@@ -22,13 +22,12 @@
 
 #include "abstract/abstractsettings.h"
 
-class ImportWizard;
 class KConfigGroup;
 
 class PMailSettings : public AbstractSettings
 {
 public:
-    explicit PMailSettings(const QString &filename, ImportWizard *parent);
+    explicit PMailSettings(const QString &filename);
     ~PMailSettings();
 
     void importSettings();

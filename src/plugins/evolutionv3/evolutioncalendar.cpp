@@ -27,8 +27,7 @@
 #include <QDomDocument>
 #include <QDomElement>
 
-EvolutionCalendar::EvolutionCalendar(ImportWizard *parent)
-    : LibImportWizard::AbstractCalendar(parent)
+EvolutionCalendar::EvolutionCalendar()
 {
 }
 

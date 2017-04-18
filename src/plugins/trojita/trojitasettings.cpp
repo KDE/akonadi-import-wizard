@@ -29,8 +29,7 @@
 
 #include <QSettings>
 
-TrojitaSettings::TrojitaSettings(const QString &filename, ImportWizard *parent)
-    : AbstractSettings(parent)
+TrojitaSettings::TrojitaSettings(const QString &filename)
 {
     settings = new QSettings(filename, QSettings::IniFormat, this);
 }

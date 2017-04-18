@@ -29,7 +29,7 @@ class ImportWizard;
 class EvolutionCalendar : public LibImportWizard::AbstractCalendar
 {
 public:
-    explicit EvolutionCalendar(ImportWizard *parent);
+    EvolutionCalendar();
     ~EvolutionCalendar();
 
     void loadCalendar(const QString &filename);

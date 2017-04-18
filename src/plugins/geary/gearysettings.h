@@ -22,13 +22,12 @@
 
 #include "abstract/abstractsettings.h"
 
-class ImportWizard;
 class QSettings;
 
 class GearySettings : public AbstractSettings
 {
 public:
-    explicit GearySettings(const QString &filename, ImportWizard *parent);
+    explicit GearySettings(const QString &filename);
     ~GearySettings();
     void importSettings();
 private:

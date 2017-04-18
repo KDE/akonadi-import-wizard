@@ -23,14 +23,13 @@
 #include "abstract/abstractsettings.h"
 #include <QString>
 
-class ImportWizard;
 class KConfigGroup;
 class QFile;
 
 class SylpheedSettings : public AbstractSettings
 {
 public:
-    explicit SylpheedSettings(ImportWizard *parent);
+    SylpheedSettings();
     ~SylpheedSettings();
     virtual void importSettings(const QString &filename, const QString &path);
 

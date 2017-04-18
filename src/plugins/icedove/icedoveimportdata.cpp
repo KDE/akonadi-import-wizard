@@ -19,6 +19,7 @@
 
 #include "icedoveimportdata.h"
 #include "importfilterinfogui.h"
+#include "abstract/abstractdisplayinfo.h"
 #include "../thunderbird/thunderbirdsettings.h"
 #include "../thunderbird/thunderbirdaddressbook.h"
 
@@ -46,7 +47,7 @@ IcedoveImportData::~IcedoveImportData()
 QString IcedoveImportData::defaultProfile()
 {
     if (mDefaultProfile.isEmpty()) {
-        mDefaultProfile = MailImporter::FilterThunderbird::defaultProfile(mPath, mImportWizard);
+        mDefaultProfile = MailImporter::FilterThunderbird::defaultProfile(mPath, mAbstractDisplayInfo->parentWidget());
     }
     return mDefaultProfile;
 }
@@ -63,7 +64,8 @@ bool IcedoveImportData::foundMailer() const
 bool IcedoveImportData::importAddressBook()
 {
     const QDir addressbookDir(mPath + defaultProfile());
-    ThunderBirdAddressBook account(addressbookDir, mImportWizard);
+    ThunderBirdAddressBook account(addressbookDir);
+    account.setAbstractDisplayInfo(mAbstractDisplayInfo);
     account.importAddressBook();
     return true;
 }
@@ -77,7 +79,8 @@ bool IcedoveImportData::importSettings()
 {
     const QString accountFile = mPath + defaultProfile() + QLatin1String("/prefs.js");
     if (QFileInfo::exists(accountFile)) {
-        ThunderbirdSettings account(accountFile, mImportWizard);
+        ThunderbirdSettings account(accountFile);
+        account.setAbstractDisplayInfo(mAbstractDisplayInfo);
         account.importSettings();
     } else {
         addImportSettingsInfo(i18n("Thunderbird settings not found."));

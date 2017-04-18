@@ -34,8 +34,7 @@
 #include <QFile>
 #include <QRegularExpression>
 
-SylpheedSettings::SylpheedSettings(ImportWizard *parent)
-    : AbstractSettings(parent)
+SylpheedSettings::SylpheedSettings()
 {
 }
 

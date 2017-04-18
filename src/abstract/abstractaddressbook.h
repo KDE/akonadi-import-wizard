@@ -24,7 +24,6 @@
 #include "abstractbase.h"
 #include "libimportwizard_export.h"
 
-class ImportWizard;
 
 namespace KContacts
 {
@@ -40,10 +39,8 @@ class LIBIMPORTWIZARD_EXPORT AbstractAddressBook: public LibImportWizard::Abstra
 {
     Q_OBJECT
 public:
-    explicit AbstractAddressBook(ImportWizard *parent);
+    AbstractAddressBook();
     ~AbstractAddressBook();
-
-    void setAbstractDisplayInfo(AbstractDisplayInfo *abstractDisplayInfo);
 
 protected:
     void createGroup(const KContacts::ContactGroup &group);
@@ -56,10 +53,6 @@ protected:
     void addAddressBookImportError(const QString &log);
     void cleanUp();
     void addImportContactNote(KContacts::Addressee &address, const QString &applicationName);
-
-protected:
-    ImportWizard *mImportWizard;
-    AbstractDisplayInfo *mAbstractDisplayInfo;
 
 private:
     void slotStoreDone(KJob *job);

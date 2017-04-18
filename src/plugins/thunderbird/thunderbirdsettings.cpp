@@ -36,9 +36,8 @@
 #include <QFileInfo>
 #include <QDir>
 
-ThunderbirdSettings::ThunderbirdSettings(const QString &filename, ImportWizard *parent)
-    : AbstractSettings(parent),
-      mFileName(filename)
+ThunderbirdSettings::ThunderbirdSettings(const QString &filename)
+    : mFileName(filename)
 {
 
 }

@@ -17,8 +17,9 @@
    Boston, MA 02110-1301, USA.
 */
 #include "abstract/abstractsettings.h"
-#include "importwizard.h"
+#include "abstract/abstractdisplayinfo.h"
 #include "importsettingpage.h"
+
 
 #include <KIdentityManagement/kidentitymanagement/identitymanager.h>
 #include <KIdentityManagement/kidentitymanagement/identity.h>
@@ -35,8 +36,7 @@
 
 using namespace Akonadi;
 
-AbstractSettings::AbstractSettings(ImportWizard *parent)
-    : mImportWizard(parent)
+AbstractSettings::AbstractSettings()
 {
     mManager = KIdentityManagement::IdentityManager::self();
     mKmailConfig = KSharedConfig::openConfig(QStringLiteral("kmail2rc"));
@@ -93,15 +93,15 @@ void AbstractSettings::storeTransport(MailTransport::Transport *mt, bool isDefau
 
 void AbstractSettings::addImportInfo(const QString &log)
 {
-    if (mImportWizard) {
-        mImportWizard->importSettingPage()->addImportInfo(log);
+    if (mAbstractDisplayInfo) {
+        mAbstractDisplayInfo->settingsImportInfo(log);
     }
 }
 
 void AbstractSettings::addImportError(const QString &log)
 {
-    if (mImportWizard) {
-        mImportWizard->importSettingPage()->addImportError(log);
+    if (mAbstractDisplayInfo) {
+        mAbstractDisplayInfo->settingsImportError(log);
     }
 }
 

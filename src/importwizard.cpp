@@ -27,6 +27,8 @@
 #include "importcalendarpage.h"
 #include "importfinishpage.h"
 #include "importmailpluginmanager.h"
+#include "importwizarddisplayinfo.h"
+
 #include "helper_p.h"
 
 #include "manual/manualimportmailpage.h"
@@ -54,6 +56,7 @@ ImportWizard::ImportWizard(WizardMode mode, QWidget *parent)
     setModal(true);
     setWindowTitle(i18n("PIM Import Tool"));
     setStandardButtons(QDialogButtonBox::Cancel | QDialogButtonBox::Help);
+    mAbstractDisplayInfo = new ImportWizardDisplayInfo(this);
 
     ImportWizardKernel *kernel = new ImportWizardKernel(this);
     CommonKernel->registerKernelIf(kernel);   //register KernelIf early, it is used by the Filter classes
@@ -207,8 +210,8 @@ void ImportWizard::initializeImportModule()
     const QVector<LibImportWizard::AbstractImporter *> lstPlugins = ImportMailPluginManager::self()->pluginsList();
     for (LibImportWizard::AbstractImporter *abstractPlugin : qAsConst(lstPlugins)) {
         if (abstractPlugin->foundMailer()) {
-            abstractPlugin->setImportWizard(this);
             abstractPlugin->setParentWidget(this);
+            abstractPlugin->setAbstractDisplayInfo(mAbstractDisplayInfo);
             mlistImport.insert(abstractPlugin->name(), abstractPlugin);
         }
     }

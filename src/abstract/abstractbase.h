@@ -32,6 +32,7 @@ class CreateResource;
 }
 namespace LibImportWizard
 {
+class AbstractDisplayInfo;
 class LIBIMPORTWIZARD_EXPORT AbstractBase : public QObject
 {
     Q_OBJECT
@@ -41,9 +42,13 @@ public:
 
     QString createResource(const QString &resources, const QString &name, const QMap<QString, QVariant> &settings);
 
+    void setAbstractDisplayInfo(AbstractDisplayInfo *abstractDisplayInfo);
+
 protected:
     virtual void addImportInfo(const QString &log) = 0;
     virtual void addImportError(const QString &log) = 0;
+
+    AbstractDisplayInfo *mAbstractDisplayInfo;
 
 private:
     void slotCreateResourceError(const QString &);

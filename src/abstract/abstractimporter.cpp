@@ -18,12 +18,12 @@
 */
 
 #include "abstractimporter.h"
-#include "importwizard.h"
 #include "importmailpage.h"
 #include "importfilterinfogui.h"
 #include "importfilterpage.h"
 #include "importsettingpage.h"
 #include "importcalendarpage.h"
+#include "abstract/abstractdisplayinfo.h"
 
 #include "mailimporter/filterinfo.h"
 #include "MailCommon/FilterManager"
@@ -35,7 +35,6 @@ using namespace LibImportWizard;
 
 AbstractImporter::AbstractImporter(QObject *parent)
     : QObject(parent),
-      mImportWizard(nullptr),
       mAbstractDisplayInfo(nullptr),
       mParentWidget(nullptr)
 {
@@ -72,23 +71,14 @@ bool AbstractImporter::importCalendar()
 
 void AbstractImporter::initializeFilter(MailImporter::Filter &filter)
 {
-    if (mImportWizard) {
-        MailImporter::FilterInfo *info = new MailImporter::FilterInfo();
-        ImportFilterInfoGui *infoGui = new ImportFilterInfoGui(mImportWizard->importMailPage());
-        info->setFilterInfoGui(infoGui);
-        info->clear(); // Clear info from last time
-        MailImporter::FilterImporterAkonadi *filterImporter = new MailImporter::FilterImporterAkonadi(info);
-        filterImporter->setRootCollection(mImportWizard->importMailPage()->selectedCollection());
-        filter.setFilterImporter(filterImporter);
-        filter.setFilterInfo(info);
-    }
+    mAbstractDisplayInfo->initializeFilter(filter);
 }
 
 bool AbstractImporter::addFilters(const QString &filterPath, MailCommon::FilterImporterExporter::FilterType type)
 {
     if (QFileInfo::exists(filterPath)) {
         bool canceled = false;
-        MailCommon::FilterImporterExporter importer(mImportWizard);
+        MailCommon::FilterImporterExporter importer(mAbstractDisplayInfo->parentWidget());
         QList<MailCommon::MailFilter *> listFilter = importer.importFilters(canceled, type, filterPath);
         appendFilters(listFilter);
         if (canceled) {
@@ -112,35 +102,30 @@ void AbstractImporter::appendFilters(const QList<MailCommon::MailFilter *> &filt
 
 void AbstractImporter::addImportFilterInfo(const QString &log) const
 {
-    if (mImportWizard) {
-        mImportWizard->importFilterPage()->addImportInfo(log);
+    if (mAbstractDisplayInfo) {
+        mAbstractDisplayInfo->filterImportInfo(log);
     }
 }
 
 void AbstractImporter::addImportFilterError(const QString &log) const
 {
-    if (mImportWizard) {
-        mImportWizard->importFilterPage()->addImportError(log);
+    if (mAbstractDisplayInfo) {
+        mAbstractDisplayInfo->filterImportError(log);
     }
 }
 
 void AbstractImporter::addImportSettingsInfo(const QString &log) const
 {
-    if (mImportWizard) {
-        mImportWizard->importSettingPage()->addImportError(log);
+    if (mAbstractDisplayInfo) {
+        mAbstractDisplayInfo->settingsImportInfo(log);
     }
 }
 
 void AbstractImporter::addImportCalendarInfo(const QString &log) const
 {
-    if (mImportWizard) {
-        mImportWizard->importCalendarPage()->addImportError(log);
+    if (mAbstractDisplayInfo) {
+        mAbstractDisplayInfo->calendarImportInfo(log);
     }
-}
-
-void AbstractImporter::setImportWizard(ImportWizard *importWizard)
-{
-    mImportWizard = importWizard;
 }
 
 void AbstractImporter::setParentWidget(QWidget *parent)

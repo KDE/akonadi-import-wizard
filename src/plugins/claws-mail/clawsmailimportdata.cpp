@@ -76,7 +76,8 @@ bool ClawsMailImportData::importMails()
 bool ClawsMailImportData::importAddressBook()
 {
     const QDir addressbookDir(mPath + QLatin1String("addrbook/"));
-    ClawsMailAddressBook account(addressbookDir, mImportWizard);
+    ClawsMailAddressBook account(addressbookDir);
+    account.setAbstractDisplayInfo(mAbstractDisplayInfo);
     account.importAddressBook();
     return true;
 }
@@ -85,7 +86,8 @@ bool ClawsMailImportData::importSettings()
 {
     const QString accountFile = mPath + QLatin1String("accountrc");
     if (QFileInfo::exists(accountFile)) {
-        ClawsMailSettings account(mImportWizard);
+        ClawsMailSettings account;
+        account.setAbstractDisplayInfo(mAbstractDisplayInfo);
         account.importSettings(accountFile, mPath);
     } else {
         addImportSettingsInfo(i18n("Claws Mail settings not found."));

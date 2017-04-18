@@ -60,7 +60,8 @@ bool SylpheedImportData::importSettings()
 {
     const QString accountFile = mPath + QLatin1String("/accountrc");
     if (QFileInfo::exists(accountFile)) {
-        SylpheedSettings account(mImportWizard);
+        SylpheedSettings account;
+        account.setAbstractDisplayInfo(mAbstractDisplayInfo);
         account.importSettings(accountFile, mPath);
     } else {
         addImportSettingsInfo(i18n("Sylpheed settings not found."));
@@ -93,7 +94,8 @@ bool SylpheedImportData::importFilters()
 bool SylpheedImportData::importAddressBook()
 {
     const QDir addressbookDir(mPath);
-    SylpheedAddressBook account(addressbookDir, mImportWizard);
+    SylpheedAddressBook account(addressbookDir);
+    account.setAbstractDisplayInfo(mAbstractDisplayInfo);
     account.importAddressBook();
     return true;
 }

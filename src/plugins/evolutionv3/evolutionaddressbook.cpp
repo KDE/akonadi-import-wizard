@@ -17,6 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 #include "evolutionaddressbook.h"
+#include "abstract/abstractdisplayinfo.h"
 #include "importwizard.h"
 #include "evolutionv3plugin_debug.h"
 #include <QProcess>
@@ -24,8 +25,7 @@
 #include <KLocalizedString>
 #include <QFileDialog>
 
-EvolutionAddressBook::EvolutionAddressBook(ImportWizard *parent)
-    : LibImportWizard::AbstractAddressBook(parent)
+EvolutionAddressBook::EvolutionAddressBook()
 {
 }
 
@@ -36,9 +36,9 @@ EvolutionAddressBook::~EvolutionAddressBook()
 
 void EvolutionAddressBook::exportEvolutionAddressBook()
 {
-    KMessageBox::information(mImportWizard, i18n("Evolution address book will be exported as vCard. Import vCard in KAddressBook."), i18n("Export Evolution Address Book"));
+    KMessageBox::information(mAbstractDisplayInfo->parentWidget(), i18n("Evolution address book will be exported as vCard. Import vCard in KAddressBook."), i18n("Export Evolution Address Book"));
 
-    const QString directory = QFileDialog::getExistingDirectory(mImportWizard, i18n("Select the directory where vCards will be stored."));
+    const QString directory = QFileDialog::getExistingDirectory(mAbstractDisplayInfo->parentWidget(), i18n("Select the directory where vCards will be stored."));
     if (directory.isEmpty()) {
         return;
     }

@@ -25,6 +25,7 @@
 #include <KAssistantDialog>
 namespace LibImportWizard {
 class AbstractImporter;
+class AbstractDisplayInfo;
 }
 class KPageWidgetItem;
 class SelectProgramPage;
@@ -120,6 +121,8 @@ private:
     ManualImportMailPage *mImportpage;
     KPageWidgetItem *mSelfilterpageItem;
     KPageWidgetItem *mImportpageItem;
+
+    LibImportWizard::AbstractDisplayInfo *mAbstractDisplayInfo;
 };
 
 #endif /* IMPORTWIZARD_H */

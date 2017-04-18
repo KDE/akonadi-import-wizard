@@ -22,13 +22,12 @@
 
 #include "../sylpheed/sylpheedsettings.h"
 
-class ImportWizard;
 class KConfigGroup;
 
 class ClawsMailSettings : public SylpheedSettings
 {
 public:
-    explicit ClawsMailSettings(ImportWizard *parent);
+    ClawsMailSettings();
     ~ClawsMailSettings();
 
     void importSettings(const QString &filename, const QString &path) Q_DECL_OVERRIDE;

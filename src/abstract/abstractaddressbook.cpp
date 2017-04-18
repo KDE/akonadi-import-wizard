@@ -31,10 +31,8 @@
 
 #include <QPointer>
 using namespace LibImportWizard;
-AbstractAddressBook::AbstractAddressBook(ImportWizard *parent)
-    : mImportWizard(parent),
-      mAbstractDisplayInfo(nullptr),
-      mCollection(-1)
+AbstractAddressBook::AbstractAddressBook()
+    : mCollection(-1)
 {
 }
 
@@ -48,7 +46,7 @@ bool AbstractAddressBook::selectAddressBook()
     addAddressBookImportInfo(i18n("Creating new contact..."));
     if (!mCollection.isValid()) {
         const QStringList mimeTypes(KContacts::Addressee::mimeType());
-        QPointer<Akonadi::CollectionDialog> dlg = new Akonadi::CollectionDialog(mImportWizard);
+        QPointer<Akonadi::CollectionDialog> dlg = new Akonadi::CollectionDialog(mAbstractDisplayInfo->parentWidget());
         dlg->setMimeTypeFilter(mimeTypes);
         dlg->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
         dlg->setWindowTitle(i18n("Select Address Book"));
@@ -86,11 +84,6 @@ void AbstractAddressBook::addImportContactNote(KContacts::Addressee &address, co
     }
     currentNote += i18n("Imported from \"%1\"", applicationName);
     address.setNote(currentNote);
-}
-
-void AbstractAddressBook::setAbstractDisplayInfo(AbstractDisplayInfo *abstractDisplayInfo)
-{
-    mAbstractDisplayInfo = abstractDisplayInfo;
 }
 
 void AbstractAddressBook::createContact(const KContacts::Addressee &address)

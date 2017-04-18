@@ -31,9 +31,8 @@
 #include <QImage>
 #include <QRegularExpression>
 
-BalsaSettings::BalsaSettings(const QString &filename, ImportWizard *parent)
-    : AbstractSettings(parent),
-      mFileName(filename)
+BalsaSettings::BalsaSettings(const QString &filename)
+    : mFileName(filename)
 {
 }
 

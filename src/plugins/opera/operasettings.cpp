@@ -32,9 +32,8 @@
 #include <QFile>
 #include <QRegularExpression>
 
-OperaSettings::OperaSettings(const QString &filename, ImportWizard *parent)
-    : AbstractSettings(parent),
-      mFileName(filename)
+OperaSettings::OperaSettings(const QString &filename)
+    : mFileName(filename)
 {
 }
 

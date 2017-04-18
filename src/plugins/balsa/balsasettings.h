@@ -22,13 +22,12 @@
 
 #include "abstract/abstractsettings.h"
 
-class ImportWizard;
 class KConfigGroup;
 
 class BalsaSettings : public AbstractSettings
 {
 public:
-    explicit BalsaSettings(const QString &filename, ImportWizard *parent);
+    explicit BalsaSettings(const QString &filename);
     ~BalsaSettings();
 
     void importSettings();

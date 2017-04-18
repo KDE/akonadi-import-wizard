@@ -22,13 +22,12 @@
 
 #include "abstract/abstractaddressbook.h"
 
-class ImportWizard;
 class KConfigGroup;
 
 class BalsaAddressBook : public LibImportWizard::AbstractAddressBook
 {
 public:
-    explicit BalsaAddressBook(const QString &filename, ImportWizard *parent);
+    explicit BalsaAddressBook(const QString &filename);
     ~BalsaAddressBook();
 
     void importAddressBook();

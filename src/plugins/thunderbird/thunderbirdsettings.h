@@ -25,12 +25,10 @@
 #include <QHash>
 #include <QStringList>
 
-class ImportWizard;
-
 class ThunderbirdSettings : public AbstractSettings
 {
 public:
-    explicit ThunderbirdSettings(const QString &filename, ImportWizard *parent);
+    explicit ThunderbirdSettings(const QString &filename);
     ~ThunderbirdSettings();
     void importSettings();
 private:

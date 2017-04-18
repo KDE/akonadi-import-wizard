@@ -31,6 +31,7 @@
 using namespace Akonadi;
 using namespace LibImportWizard;
 AbstractBase::AbstractBase()
+    : mAbstractDisplayInfo(nullptr)
 {
     mCreateResource = new PimCommon::CreateResource();
     connect(mCreateResource, &PimCommon::CreateResource::createResourceInfo, this, &AbstractBase::slotCreateResourceInfo);
@@ -45,6 +46,11 @@ AbstractBase::~AbstractBase()
 QString LibImportWizard::AbstractBase::createResource(const QString &resources, const QString &name, const QMap<QString, QVariant> &settings)
 {
     return mCreateResource->createResource(resources, name, settings);
+}
+
+void AbstractBase::setAbstractDisplayInfo(AbstractDisplayInfo *abstractDisplayInfo)
+{
+    mAbstractDisplayInfo = abstractDisplayInfo;
 }
 
 void AbstractBase::slotCreateResourceError(const QString &msg)

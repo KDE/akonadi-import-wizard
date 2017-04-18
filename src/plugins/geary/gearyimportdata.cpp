@@ -68,7 +68,8 @@ bool GearyImportData::importSettings()
     for (int i = 0; i < lstDir.count(); ++i) {
         const QString fullPath = lstDir.at(i) + QDir::separator() + configName;
         if (QFileInfo::exists(fullPath)) {
-            GearySettings setting(fullPath, mImportWizard);
+            GearySettings setting(fullPath);
+            setting.setAbstractDisplayInfo(mAbstractDisplayInfo);
             setting.importSettings();
         }
     }

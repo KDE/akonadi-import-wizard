@@ -33,8 +33,7 @@
 
 #include <QRegularExpression>
 
-ClawsMailSettings::ClawsMailSettings(ImportWizard *parent)
-    : SylpheedSettings(parent)
+ClawsMailSettings::ClawsMailSettings()
 {
 }
 

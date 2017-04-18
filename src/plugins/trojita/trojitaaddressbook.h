@@ -24,12 +24,10 @@
 #include <QHash>
 class QSettings;
 
-class ImportWizard;
-
 class TrojitaAddressBook : public LibImportWizard::AbstractAddressBook
 {
 public:
-    explicit TrojitaAddressBook(const QString &filename, ImportWizard *parent);
+    explicit TrojitaAddressBook(const QString &filename);
     ~TrojitaAddressBook();
 
     void readAddressBook();

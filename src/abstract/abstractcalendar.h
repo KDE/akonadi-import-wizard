@@ -20,7 +20,6 @@
 #ifndef ABSTRACTCALENDAR_H
 #define ABSTRACTCALENDAR_H
 
-class ImportWizard;
 #include "abstractbase.h"
 #include "libimportwizard_export.h"
 #include <QString>
@@ -30,16 +29,13 @@ class LIBIMPORTWIZARD_EXPORT AbstractCalendar : public LibImportWizard::Abstract
 {
     Q_OBJECT
 public:
-    explicit AbstractCalendar(ImportWizard *parent);
+    AbstractCalendar();
     virtual ~AbstractCalendar();
 
 protected:
     void addEvenViewConfig(const QString &groupName, const QString &key, const QString &value);
     void addImportInfo(const QString &log) Q_DECL_OVERRIDE;
     void addImportError(const QString &log) Q_DECL_OVERRIDE;
-
-private:
-    ImportWizard *mImportWizard;
 };
 }
 #endif // ABSTRACTCALENDAR_H

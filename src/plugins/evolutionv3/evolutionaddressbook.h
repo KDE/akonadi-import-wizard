@@ -22,13 +22,11 @@
 
 #include "abstract/abstractaddressbook.h"
 
-class ImportWizard;
-
 class EvolutionAddressBook: public LibImportWizard::AbstractAddressBook
 {
     Q_OBJECT
 public:
-    explicit EvolutionAddressBook(ImportWizard *parent);
+    EvolutionAddressBook();
     ~EvolutionAddressBook();
     void exportEvolutionAddressBook();
 };

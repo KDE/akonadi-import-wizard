@@ -32,9 +32,8 @@
 #include <QFileInfo>
 #include <QRegularExpression>
 
-PMailSettings::PMailSettings(const QString &filename, ImportWizard *parent)
-    : AbstractSettings(parent),
-      mFileName(filename)
+PMailSettings::PMailSettings(const QString &filename)
+    : mFileName(filename)
 {
 
 }

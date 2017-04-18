@@ -74,7 +74,8 @@ bool BalsaImportData::importMails()
 bool BalsaImportData::importAddressBook()
 {
     const QString addressbookFile(mPath + QStringLiteral("config"));
-    BalsaAddressBook addressbook(addressbookFile, mImportWizard);
+    BalsaAddressBook addressbook(addressbookFile);
+    addressbook.setAbstractDisplayInfo(mAbstractDisplayInfo);
     addressbook.importAddressBook();
     return true;
 }
@@ -82,7 +83,8 @@ bool BalsaImportData::importAddressBook()
 bool BalsaImportData::importSettings()
 {
     const QString settingFile(mPath + QStringLiteral("config"));
-    BalsaSettings settings(settingFile, mImportWizard);
+    BalsaSettings settings(settingFile);
+    settings.setAbstractDisplayInfo(mAbstractDisplayInfo);
     settings.importSettings();
     return true;
 }

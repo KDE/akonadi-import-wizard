@@ -74,7 +74,8 @@ bool OperaImportData::importMails()
 bool OperaImportData::importAddressBook()
 {
     const QString addressbookFile(mPath + QLatin1String("bookmarks.adr"));
-    OperaAddressBook addressbook(addressbookFile, mImportWizard);
+    OperaAddressBook addressbook(addressbookFile);
+    addressbook.setAbstractDisplayInfo(mAbstractDisplayInfo);
     addressbook.importAddressBook();
     return true;
 }
@@ -82,7 +83,8 @@ bool OperaImportData::importAddressBook()
 bool OperaImportData::importSettings()
 {
     const QString settingFile(mPath + QLatin1String("mail/accounts.ini"));
-    OperaSettings settings(settingFile, mImportWizard);
+    OperaSettings settings(settingFile);
+    settings.setAbstractDisplayInfo(mAbstractDisplayInfo);
     settings.importSettings();
     return true;
 }

@@ -24,9 +24,8 @@
 #include "operaplugin_debug.h"
 #include <QFile>
 
-OperaAddressBook::OperaAddressBook(const QString &filename, ImportWizard *parent)
-    : LibImportWizard::AbstractAddressBook(parent),
-      mFileName(filename)
+OperaAddressBook::OperaAddressBook(const QString &filename)
+    : mFileName(filename)
 {
 }
 

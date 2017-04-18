@@ -25,13 +25,11 @@
 #include <QDir>
 class QString;
 
-class ImportWizard;
-
 class SylpheedAddressBook : public LibImportWizard::AbstractAddressBook
 {
     Q_OBJECT
 public:
-    explicit SylpheedAddressBook(const QDir &dir, ImportWizard *parent);
+    explicit SylpheedAddressBook(const QDir &dir);
     ~SylpheedAddressBook();
 
     void importAddressBook();

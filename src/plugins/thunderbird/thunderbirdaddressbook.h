@@ -23,13 +23,11 @@
 #include "abstract/abstractaddressbook.h"
 #include <QDir>
 
-class ImportWizard;
-
 class ThunderBirdAddressBook: public LibImportWizard::AbstractAddressBook
 {
     Q_OBJECT
 public:
-    explicit ThunderBirdAddressBook(const QDir &dir, ImportWizard *parent);
+    explicit ThunderBirdAddressBook(const QDir &dir);
     ~ThunderBirdAddressBook();
 
     void importAddressBook();

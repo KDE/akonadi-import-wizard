@@ -24,13 +24,12 @@
 #include <KIdentityManagement/kidentitymanagement/signature.h>
 #include <QString>
 
-class ImportWizard;
 class QDomElement;
 
 class EvolutionSettings : public AbstractSettings
 {
 public:
-    explicit EvolutionSettings(ImportWizard *parent);
+    EvolutionSettings();
     ~EvolutionSettings();
     void loadAccount(const QString &filename);
     void loadLdap(const QString &filename);

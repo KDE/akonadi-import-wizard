@@ -22,13 +22,12 @@
 
 #include "abstract/abstractsettings.h"
 
-class ImportWizard;
 class KConfigGroup;
 
 class OperaSettings : public AbstractSettings
 {
 public:
-    explicit OperaSettings(const QString &filename, ImportWizard *parent);
+    explicit OperaSettings(const QString &filename);
     ~OperaSettings();
 
     void importSettings();

@@ -18,14 +18,13 @@
 */
 
 #include "abstractcalendar.h"
-#include "importwizard.h"
 #include "importcalendarpage.h"
-
+#include "abstract/abstractdisplayinfo.h"
+#include <KSharedConfig>
 #include <KConfigGroup>
 using namespace LibImportWizard;
 
-AbstractCalendar::AbstractCalendar(ImportWizard *parent)
-    : mImportWizard(parent)
+AbstractCalendar::AbstractCalendar()
 {
 }
 
@@ -35,15 +34,15 @@ AbstractCalendar::~AbstractCalendar()
 
 void AbstractCalendar::addImportInfo(const QString &log)
 {
-    if (mImportWizard) {
-        mImportWizard->importCalendarPage()->addImportInfo(log);
+    if (mAbstractDisplayInfo) {
+        mAbstractDisplayInfo->calendarImportInfo(log);
     }
 }
 
 void AbstractCalendar::addImportError(const QString &log)
 {
-    if (mImportWizard) {
-        mImportWizard->importCalendarPage()->addImportError(log);
+    if (mAbstractDisplayInfo) {
+        mAbstractDisplayInfo->calendarImportError(log);
     }
 }
 

@@ -63,7 +63,8 @@ bool Evolutionv3ImportData::importSettings()
 {
     const QString accountFile = QDir::homePath() + QLatin1String("/.gconf/apps/evolution/mail/%gconf.xml");
     if (QFileInfo::exists(accountFile)) {
-        EvolutionSettings account(mImportWizard);
+        EvolutionSettings account;
+        account.setAbstractDisplayInfo(mAbstractDisplayInfo);
         account.loadAccount(accountFile);
         const QString ldapFile = QDir::homePath() + QLatin1String("/.gconf/apps/evolution/addressbook/%gconf.xml");
         if (QFileInfo::exists(ldapFile)) {
@@ -99,7 +100,8 @@ bool Evolutionv3ImportData::importFilters()
 
 bool Evolutionv3ImportData::importAddressBook()
 {
-    EvolutionAddressBook addressbook(mImportWizard);
+    EvolutionAddressBook addressbook;
+    addressbook.setAbstractDisplayInfo(mAbstractDisplayInfo);
     addressbook.exportEvolutionAddressBook();
     return true;
 }
@@ -108,7 +110,8 @@ bool Evolutionv3ImportData::importCalendar()
 {
     const QString calendarFile = QDir::homePath() + QLatin1String("/.gconf/apps/evolution/calendar/%gconf.xml");
     if (QFileInfo::exists(calendarFile)) {
-        EvolutionCalendar calendar(mImportWizard);
+        EvolutionCalendar calendar;
+        calendar.setAbstractDisplayInfo(mAbstractDisplayInfo);
         calendar.loadCalendar(calendarFile);
     } else {
         addImportCalendarInfo(i18n("Evolution calendar not found."));

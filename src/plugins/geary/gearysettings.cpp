@@ -29,8 +29,7 @@
 
 #include <QSettings>
 
-GearySettings::GearySettings(const QString &filename, ImportWizard *parent)
-    : AbstractSettings(parent)
+GearySettings::GearySettings(const QString &filename)
 {
     settings = new QSettings(filename, QSettings::IniFormat, this);
 }

@@ -21,6 +21,7 @@
 #include "importfilterinfogui.h"
 #include "thunderbirdsettings.h"
 #include "thunderbirdaddressbook.h"
+#include "abstract/abstractdisplayinfo.h"
 
 #include "mailimporter/filterthunderbird.h"
 #include "mailimporter/filterinfo.h"
@@ -47,7 +48,7 @@ ThunderbirdImportData::~ThunderbirdImportData()
 QString ThunderbirdImportData::defaultProfile()
 {
     if (mDefaultProfile.isEmpty()) {
-        mDefaultProfile = MailImporter::FilterThunderbird::defaultProfile(mPath, mImportWizard);
+        mDefaultProfile = MailImporter::FilterThunderbird::defaultProfile(mPath, mAbstractDisplayInfo->parentWidget());
     }
     return mDefaultProfile;
 }
@@ -64,7 +65,8 @@ bool ThunderbirdImportData::foundMailer() const
 bool ThunderbirdImportData::importAddressBook()
 {
     const QDir addressbookDir(mPath + defaultProfile());
-    ThunderBirdAddressBook account(addressbookDir, mImportWizard);
+    ThunderBirdAddressBook account(addressbookDir);
+    account.setAbstractDisplayInfo(mAbstractDisplayInfo);
     account.importAddressBook();
     return true;
 }
@@ -78,7 +80,8 @@ bool ThunderbirdImportData::importSettings()
 {
     const QString accountFile = mPath + defaultProfile() + QLatin1String("/prefs.js");
     if (QFileInfo::exists(accountFile)) {
-        ThunderbirdSettings account(accountFile, mImportWizard);
+        ThunderbirdSettings account(accountFile);
+        account.setAbstractDisplayInfo(mAbstractDisplayInfo);
         account.importSettings();
     } else {
         addImportSettingsInfo(i18n("Thunderbird settings not found."));

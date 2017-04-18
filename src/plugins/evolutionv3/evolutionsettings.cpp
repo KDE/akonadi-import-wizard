@@ -33,8 +33,7 @@
 #include <QDomDocument>
 #include <QDomElement>
 
-EvolutionSettings::EvolutionSettings(ImportWizard *parent)
-    : AbstractSettings(parent)
+EvolutionSettings::EvolutionSettings()
 {
 }
 

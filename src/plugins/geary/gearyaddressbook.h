@@ -23,12 +23,10 @@
 #include "abstract/abstractaddressbook.h"
 #include <QHash>
 
-class ImportWizard;
-
 class GearyAddressBook : public LibImportWizard::AbstractAddressBook
 {
 public:
-    explicit GearyAddressBook(const QString &filename, ImportWizard *parent);
+    explicit GearyAddressBook(const QString &filename);
     ~GearyAddressBook();
     void importAddressBook();
 };

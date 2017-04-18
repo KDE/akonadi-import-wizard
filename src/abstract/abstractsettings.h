@@ -25,7 +25,6 @@
 #include <KSharedConfig>
 #include <QMap>
 
-class ImportWizard;
 
 namespace KIdentityManagement
 {
@@ -42,7 +41,7 @@ class LIBIMPORTWIZARD_EXPORT AbstractSettings : public LibImportWizard::Abstract
 {
     Q_OBJECT
 public:
-    explicit AbstractSettings(ImportWizard *parent);
+    AbstractSettings();
     ~AbstractSettings();
 
 protected:
@@ -73,7 +72,6 @@ protected:
     void addToManualCheck(const QString &agentIdentifyName, bool manualCheck);
     int readKmailSettings(const QString &groupName, const QString &key);
 
-    ImportWizard *mImportWizard;
     KIdentityManagement::IdentityManager *mManager;
     KSharedConfigPtr mKmailConfig;
 };

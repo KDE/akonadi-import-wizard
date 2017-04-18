@@ -8,6 +8,7 @@ set(libimportwizard_SRCS
     importwizard.cpp
     importwizardkernel.cpp
     importmailpluginmanager.cpp
+    importwizarddisplayinfo.cpp
     )
 
 set(libimportwizard_manual_SRCS

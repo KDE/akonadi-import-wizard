@@ -25,9 +25,8 @@
 #include <QUrl>
 #include "thunderbirdplugin_debug.h"
 
-ThunderBirdAddressBook::ThunderBirdAddressBook(const QDir &dir, ImportWizard *parent)
-    : LibImportWizard::AbstractAddressBook(parent),
-      mDir(dir)
+ThunderBirdAddressBook::ThunderBirdAddressBook(const QDir &dir)
+    : mDir(dir)
 {
 }
 

@@ -23,12 +23,10 @@
 #include "../sylpheed/sylpheedaddressbook.h"
 #include <QDir>
 
-class ImportWizard;
-
 class ClawsMailAddressBook : public SylpheedAddressBook
 {
 public:
-    explicit ClawsMailAddressBook(const QDir &dir, ImportWizard *parent);
+    explicit ClawsMailAddressBook(const QDir &dir);
     ~ClawsMailAddressBook();
 };
 

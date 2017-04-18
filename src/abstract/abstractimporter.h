@@ -22,7 +22,6 @@
 #include "MailCommon/FilterImporterExporter"
 #include "libimportwizard_export.h"
 
-class ImportWizard;
 namespace MailImporter
 {
 class FilterInfo;
@@ -75,8 +74,6 @@ public:
     virtual bool importAddressBook();
     virtual bool importCalendar();
 
-    void setImportWizard(ImportWizard *importWizard);
-
     void setParentWidget(QWidget *parent);
     QWidget *parentWidget() const;
 
@@ -84,8 +81,7 @@ public:
 
 
 protected:
-    //TODO we need to redefine it.
-    virtual void initializeFilter(MailImporter::Filter &filter);
+    void initializeFilter(MailImporter::Filter &filter);
 
     void appendFilters(const QList<MailCommon::MailFilter *> &filters);
     void addImportFilterInfo(const QString &log) const;
@@ -95,7 +91,6 @@ protected:
     void addImportCalendarInfo(const QString &log) const;
 
     QString mPath;
-    ImportWizard *mImportWizard;
     AbstractDisplayInfo *mAbstractDisplayInfo;
     QWidget *mParentWidget;
 };

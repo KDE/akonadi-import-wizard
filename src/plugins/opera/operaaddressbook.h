@@ -22,12 +22,10 @@
 
 #include "abstract/abstractaddressbook.h"
 
-class ImportWizard;
-
 class OperaAddressBook : public LibImportWizard::AbstractAddressBook
 {
 public:
-    explicit OperaAddressBook(const QString &filename, ImportWizard *parent);
+    explicit OperaAddressBook(const QString &filename);
     ~OperaAddressBook();
 
     void importAddressBook();
