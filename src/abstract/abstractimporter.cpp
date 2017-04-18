@@ -70,14 +70,16 @@ bool AbstractImporter::importCalendar()
 
 void AbstractImporter::initializeFilter(MailImporter::Filter &filter)
 {
-    MailImporter::FilterInfo *info = new MailImporter::FilterInfo();
-    ImportFilterInfoGui *infoGui = new ImportFilterInfoGui(mImportWizard->importMailPage());
-    info->setFilterInfoGui(infoGui);
-    info->clear(); // Clear info from last time
-    MailImporter::FilterImporterAkonadi *filterImporter = new MailImporter::FilterImporterAkonadi(info);
-    filterImporter->setRootCollection(mImportWizard->importMailPage()->selectedCollection());
-    filter.setFilterImporter(filterImporter);
-    filter.setFilterInfo(info);
+    if (mImportWizard) {
+        MailImporter::FilterInfo *info = new MailImporter::FilterInfo();
+        ImportFilterInfoGui *infoGui = new ImportFilterInfoGui(mImportWizard->importMailPage());
+        info->setFilterInfoGui(infoGui);
+        info->clear(); // Clear info from last time
+        MailImporter::FilterImporterAkonadi *filterImporter = new MailImporter::FilterImporterAkonadi(info);
+        filterImporter->setRootCollection(mImportWizard->importMailPage()->selectedCollection());
+        filter.setFilterImporter(filterImporter);
+        filter.setFilterInfo(info);
+    }
 }
 
 bool AbstractImporter::addFilters(const QString &filterPath, MailCommon::FilterImporterExporter::FilterType type)
