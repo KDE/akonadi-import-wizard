@@ -21,7 +21,7 @@
 #include <mailtransport/transportmanager.h>
 #include "MailCommon/MailUtil"
 #include "importwizardutil.h"
-#include "helper_p.h"
+
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>
 #include <KIdentityManagement/kidentitymanagement/signature.h>

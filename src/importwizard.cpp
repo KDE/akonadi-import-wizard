@@ -29,7 +29,7 @@
 #include "importmailpluginmanager.h"
 #include "importwizarddisplayinfo.h"
 
-#include "helper_p.h"
+
 
 #include "manual/manualimportmailpage.h"
 #include "manual/manualselectfilterpage.h"
