@@ -28,8 +28,8 @@
 #include <QListWidgetItem>
 
 ImportFilterInfoGui::ImportFilterInfoGui(ImportMailPage *parent)
-    : MailImporter::FilterInfoGui(),
-      m_parent(parent)
+    : MailImporter::FilterInfoGui()
+    , m_parent(parent)
 {
 }
 
@@ -58,13 +58,13 @@ void ImportFilterInfoGui::setCurrent(const QString &current)
     qApp->processEvents();
 }
 
-void  ImportFilterInfoGui::setCurrent(int percent)
+void ImportFilterInfoGui::setCurrent(int percent)
 {
     m_parent->mailWidget()->setCurrent(percent);
     qApp->processEvents(); // Be careful - back & finish buttons disabled, so only user event that can happen is cancel/close button
 }
 
-void  ImportFilterInfoGui::setOverall(int percent)
+void ImportFilterInfoGui::setOverall(int percent)
 {
     m_parent->mailWidget()->setOverall(percent);
 }
@@ -101,4 +101,3 @@ QWidget *ImportFilterInfoGui::parent() const
 {
     return m_parent;
 }
-

@@ -38,7 +38,6 @@ AbstractAddressBook::AbstractAddressBook()
 
 AbstractAddressBook::~AbstractAddressBook()
 {
-
 }
 
 bool AbstractAddressBook::selectAddressBook()
@@ -135,4 +134,3 @@ void AbstractAddressBook::cleanUp()
 {
     mCollection = Akonadi::Collection();
 }
-

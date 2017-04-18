@@ -22,8 +22,7 @@
 #include <QWidget>
 #include "abstract/abstractimporter.h"
 
-namespace Ui
-{
+namespace Ui {
 class SelectComponentPage;
 }
 

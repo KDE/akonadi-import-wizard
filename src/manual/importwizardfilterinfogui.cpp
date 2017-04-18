@@ -22,9 +22,9 @@
 #include <QApplication>
 
 ImportWizardFilterInfoGui::ImportWizardFilterInfoGui(ManualImportMailPage *dlg, QWidget *parent)
-    : MailImporter::FilterInfoGui(),
-      m_parent(parent),
-      mManualImportMailPage(dlg)
+    : MailImporter::FilterInfoGui()
+    , m_parent(parent)
+    , mManualImportMailPage(dlg)
 {
 }
 
@@ -53,13 +53,13 @@ void ImportWizardFilterInfoGui::setCurrent(const QString &current)
     qApp->processEvents();
 }
 
-void  ImportWizardFilterInfoGui::setCurrent(int percent)
+void ImportWizardFilterInfoGui::setCurrent(int percent)
 {
     mManualImportMailPage->widget()->mMailImporterWidget->setCurrent(percent);
     qApp->processEvents(); // Be careful - back & finish buttons disabled, so only user event that can happen is cancel/close button
 }
 
-void  ImportWizardFilterInfoGui::setOverall(int percent)
+void ImportWizardFilterInfoGui::setOverall(int percent)
 {
     mManualImportMailPage->widget()->mMailImporterWidget->setOverall(percent);
 }
@@ -92,4 +92,3 @@ QWidget *ImportWizardFilterInfoGui::parent() const
 {
     return m_parent;
 }
-

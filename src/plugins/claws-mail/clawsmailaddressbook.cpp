@@ -27,6 +27,4 @@ ClawsMailAddressBook::ClawsMailAddressBook(const QDir &dir)
 
 ClawsMailAddressBook::~ClawsMailAddressBook()
 {
-
 }
-

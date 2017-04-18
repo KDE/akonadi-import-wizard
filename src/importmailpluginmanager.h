@@ -30,8 +30,8 @@ class PluginUtilData
 public:
     PluginUtilData()
     {
-
     }
+
     QStringList mExtraInfo;
     QString mDescription;
     QString mIdentifier;
@@ -44,14 +44,13 @@ public:
     ImportMailPluginManagerInfo()
         : plugin(nullptr)
     {
-
     }
+
     QString metaDataFileNameBaseName;
     QString metaDataFileName;
     PluginUtilData pluginData;
     LibImportWizard::AbstractImporter *plugin;
 };
-
 
 class ImportMailPluginManager : public QObject
 {

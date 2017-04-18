@@ -35,8 +35,6 @@ public:
     bool importSettings() Q_DECL_OVERRIDE;
 
     QString name() const Q_DECL_OVERRIDE;
-
 };
 
 #endif /* PMail ImportData_H */
-

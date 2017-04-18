@@ -19,9 +19,9 @@
 #include "importfilterpage.h"
 #include "ui_importfilterpage.h"
 
-ImportFilterPage::ImportFilterPage(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::ImportFilterPage)
+ImportFilterPage::ImportFilterPage(QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::ImportFilterPage)
 {
     ui->setupUi(this);
     connect(ui->importFilters, &QPushButton::clicked, this, &ImportFilterPage::importFiltersClicked);
@@ -46,4 +46,3 @@ void ImportFilterPage::setImportButtonEnabled(bool enabled)
 {
     ui->importFilters->setEnabled(enabled);
 }
-

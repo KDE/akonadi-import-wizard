@@ -20,9 +20,9 @@
 #include "importaddressbookpage.h"
 #include "ui_importaddressbookpage.h"
 
-ImportAddressbookPage::ImportAddressbookPage(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::ImportAddressbookPage)
+ImportAddressbookPage::ImportAddressbookPage(QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::ImportAddressbookPage)
 {
     ui->setupUi(this);
     connect(ui->importAddressBook, &QPushButton::clicked, this, &ImportAddressbookPage::importAddressbookClicked);
@@ -47,4 +47,3 @@ void ImportAddressbookPage::setImportButtonEnabled(bool enabled)
 {
     ui->importAddressBook->setEnabled(enabled);
 }
-

@@ -32,8 +32,8 @@
 
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(Evolutionv3ImporterFactory, "evolutionv3importer.json", registerPlugin<Evolutionv3ImportData>();)
-
+K_PLUGIN_FACTORY_WITH_JSON(Evolutionv3ImporterFactory, "evolutionv3importer.json", registerPlugin<Evolutionv3ImportData>();
+                           )
 
 Evolutionv3ImportData::Evolutionv3ImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)

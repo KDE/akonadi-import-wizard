@@ -39,7 +39,6 @@ ClawsMailSettings::ClawsMailSettings()
 
 ClawsMailSettings::~ClawsMailSettings()
 {
-
 }
 
 void ClawsMailSettings::importSettings(const QString &filename, const QString &path)
@@ -180,7 +179,7 @@ void ClawsMailSettings::readTagColor(const KConfigGroup &group)
     QVector<tagStruct> listTag;
     for (int i = 1; i <= 15; ++i) {
         if (group.hasKey(customColorPattern.arg(i))
-                && group.hasKey(customColorLabelPattern.arg(i))) {
+            && group.hasKey(customColorLabelPattern.arg(i))) {
             tagStruct tag;
             const QString colorStr = group.readEntry(customColorPattern.arg(i));
             const QString labelStr = group.readEntry(customColorLabelPattern.arg(i));

@@ -23,16 +23,15 @@
 #include <QPainter>
 
 SelectProgramListWidget::SelectProgramListWidget(QWidget *parent)
-    : QListWidget(parent),
-      mNoProgramFound(false)
+    : QListWidget(parent)
+    , mNoProgramFound(false)
 {
-
 }
 
 SelectProgramListWidget::~SelectProgramListWidget()
 {
-
 }
+
 void SelectProgramListWidget::setNoProgramFound(bool noProgramFound)
 {
     mNoProgramFound = noProgramFound;
@@ -48,7 +47,7 @@ void SelectProgramListWidget::generalPaletteChanged()
 
 void SelectProgramListWidget::paintEvent(QPaintEvent *event)
 {
-    if (mNoProgramFound  && (!model() || model()->rowCount() == 0)) {
+    if (mNoProgramFound && (!model() || model()->rowCount() == 0)) {
         QPainter p(viewport());
 
         QFont font = p.font();
@@ -65,4 +64,3 @@ void SelectProgramListWidget::paintEvent(QPaintEvent *event)
         QListWidget::paintEvent(event);
     }
 }
-

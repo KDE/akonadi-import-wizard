@@ -28,7 +28,8 @@
 #include <kpluginfactory.h>
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(PMailImporterFactory, "pmailimporter.json", registerPlugin<PMailImportData>();)
+K_PLUGIN_FACTORY_WITH_JSON(PMailImporterFactory, "pmailimporter.json", registerPlugin<PMailImportData>();
+                           )
 PMailImportData::PMailImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)
 {

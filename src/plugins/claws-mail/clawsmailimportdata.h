@@ -36,8 +36,6 @@ public:
     bool importFilters() Q_DECL_OVERRIDE;
 
     QString name() const Q_DECL_OVERRIDE;
-
 };
 
 #endif /* ClawsMailImportData_H */
-

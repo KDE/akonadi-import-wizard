@@ -23,8 +23,7 @@
 #include "abstractbase.h"
 #include "libimportwizard_export.h"
 #include <QString>
-namespace LibImportWizard
-{
+namespace LibImportWizard {
 class LIBIMPORTWIZARD_EXPORT AbstractCalendar : public LibImportWizard::AbstractBase
 {
     Q_OBJECT

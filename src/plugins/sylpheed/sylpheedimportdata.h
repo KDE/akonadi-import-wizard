@@ -38,4 +38,3 @@ public:
 };
 
 #endif /* SylpheedImportData_H */
-

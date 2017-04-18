@@ -23,7 +23,7 @@
 #include "abstract/abstractaddressbook.h"
 #include <QDir>
 
-class ThunderBirdAddressBook: public LibImportWizard::AbstractAddressBook
+class ThunderBirdAddressBook : public LibImportWizard::AbstractAddressBook
 {
     Q_OBJECT
 public:

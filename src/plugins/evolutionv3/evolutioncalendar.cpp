@@ -33,7 +33,6 @@ EvolutionCalendar::EvolutionCalendar()
 
 EvolutionCalendar::~EvolutionCalendar()
 {
-
 }
 
 void EvolutionCalendar::loadCalendar(const QString &filename)

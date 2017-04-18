@@ -97,12 +97,12 @@ void GearySettings::readTransport()
         storeTransport(mt, true);   //only one smtp for the moment
     }
 #if 0
-    smtp_host=smtp.bla.bla
-    smtp_port=465
-    smtp_ssl=true
-    smtp_starttls=false
-    smtp_use_imap_credentials=false
-    smtp_noauth=true
+    smtp_host = smtp.bla.bla
+                smtp_port = 465
+                            smtp_ssl = true
+                                       smtp_starttls = false
+                                                       smtp_use_imap_credentials = false
+                                                                                   smtp_noauth = true
 #endif
 #if 0
     const QString smtpMethod = settings->value(QStringLiteral("msa.method")).toString();
@@ -146,7 +146,7 @@ void GearySettings::readIdentity()
 {
     QString realName = settings->value(QStringLiteral("realName")).toString();
     if (!realName.isEmpty()) {
-        KIdentityManagement::Identity *identity  = createIdentity(realName);
+        KIdentityManagement::Identity *identity = createIdentity(realName);
         identity->setFullName(realName);
         identity->setIdentityName(realName);
         const QString address = settings->value(QStringLiteral("primary_email")).toString();

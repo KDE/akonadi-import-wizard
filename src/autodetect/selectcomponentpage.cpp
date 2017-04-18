@@ -19,9 +19,9 @@
 #include "selectcomponentpage.h"
 #include "ui_selectcomponentpage.h"
 
-SelectComponentPage::SelectComponentPage(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::SelectComponentPage)
+SelectComponentPage::SelectComponentPage(QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::SelectComponentPage)
 {
     ui->setupUi(this);
     connect(ui->everything, &QCheckBox::clicked, this, &SelectComponentPage::slotEverythingClicked);
@@ -39,7 +39,8 @@ SelectComponentPage::~SelectComponentPage()
 
 void SelectComponentPage::slotComponentClicked()
 {
-    const bool componentSelected = (ui->addressbooks->isChecked() || ui->filters->isChecked() || ui->mails->isChecked() || ui->settings->isChecked() || ui->calendars->isChecked() || ui->everything->isChecked());
+    const bool componentSelected
+        = (ui->addressbooks->isChecked() || ui->filters->isChecked() || ui->mails->isChecked() || ui->settings->isChecked() || ui->calendars->isChecked() || ui->everything->isChecked());
     Q_EMIT atLeastOneComponentSelected(componentSelected);
 }
 
@@ -84,4 +85,3 @@ LibImportWizard::AbstractImporter::TypeSupportedOptions SelectComponentPage::sel
         return newOptions;
     }
 }
-

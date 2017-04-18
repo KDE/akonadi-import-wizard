@@ -154,7 +154,7 @@ void TrojitaSettings::readIdentity()
     for (int i = 0; i < size; ++i) {
         settings->setArrayIndex(i);
         QString realName = settings->value(QStringLiteral("realName")).toString();
-        KIdentityManagement::Identity *identity  = createIdentity(realName);
+        KIdentityManagement::Identity *identity = createIdentity(realName);
         identity->setFullName(realName);
         identity->setIdentityName(realName);
         const QString address = settings->value(QStringLiteral("address")).toString();

@@ -20,9 +20,9 @@
 #include "importcalendarpage.h"
 #include "ui_importcalendarpage.h"
 
-ImportCalendarPage::ImportCalendarPage(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::ImportCalendarPage)
+ImportCalendarPage::ImportCalendarPage(QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::ImportCalendarPage)
 {
     ui->setupUi(this);
     connect(ui->importCalendar, &QPushButton::clicked, this, &ImportCalendarPage::importCalendarClicked);
@@ -47,4 +47,3 @@ void ImportCalendarPage::setImportButtonEnabled(bool enabled)
 {
     ui->importCalendar->setEnabled(enabled);
 }
-

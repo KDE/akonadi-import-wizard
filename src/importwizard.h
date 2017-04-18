@@ -39,8 +39,7 @@ class ImportCalendarPage;
 class ManualSelectFilterPage;
 class ManualImportMailPage;
 
-namespace Akonadi
-{
+namespace Akonadi {
 class Collection;
 }
 class LIBIMPORTWIZARD_EXPORT ImportWizard : public KAssistantDialog
@@ -65,7 +64,6 @@ public:
     ImportSettingPage *importSettingPage() const;
     ImportFinishPage *importFinishPage() const;
     ImportCalendarPage *importCalendarPage() const;
-
 
 private Q_SLOTS:
     void slotProgramSelected(const QString &program);
@@ -126,4 +124,3 @@ private:
 };
 
 #endif /* IMPORTWIZARD_H */
-

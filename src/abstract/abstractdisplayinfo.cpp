@@ -19,12 +19,10 @@
 
 #include "abstractdisplayinfo.h"
 
-
 using namespace LibImportWizard;
 
 AbstractDisplayInfo::AbstractDisplayInfo()
 {
-
 }
 
 void AbstractDisplayInfo::calendarImportError(const QString &log)

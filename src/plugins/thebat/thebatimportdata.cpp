@@ -28,7 +28,8 @@
 
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(TheBatImporterFactory, "thebatimporter.json", registerPlugin<TheBatImportData>();)
+K_PLUGIN_FACTORY_WITH_JSON(TheBatImporterFactory, "thebatimporter.json", registerPlugin<TheBatImportData>();
+                           )
 
 TheBatImportData::TheBatImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)

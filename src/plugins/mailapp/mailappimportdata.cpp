@@ -27,7 +27,8 @@
 #include <kpluginfactory.h>
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(MailAppImporterFactory, "mailappimporter.json", registerPlugin<MailAppImportData>();)
+K_PLUGIN_FACTORY_WITH_JSON(MailAppImporterFactory, "mailappimporter.json", registerPlugin<MailAppImportData>();
+                           )
 
 MailAppImportData::MailAppImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)
@@ -79,4 +80,3 @@ LibImportWizard::AbstractImporter::TypeSupportedOptions MailAppImportData::suppo
 }
 
 #include "mailappimportdata.moc"
-

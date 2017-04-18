@@ -392,7 +392,6 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                         settings.insert(QStringLiteral("Path"), path);
                         settings.insert(QStringLiteral("DisplayName"), name);
                         LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_mbox_resource"), name, settings);
-
                     } else if (scheme == QLatin1String("maildir") || scheme == QLatin1String("spooldir")) {
                         settings.insert(QStringLiteral("Path"), path);
                         LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_maildir_resource"), name, settings);
@@ -460,7 +459,6 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                         if (found) {
                             if (securityMethod == QLatin1String("none")) {
                                 transport->setEncryption(MailTransport::Transport::EnumEncryption::None);
-
                             } else if (securityMethod == QLatin1String("ssl-on-alternate-port")) {
                                 transport->setEncryption(MailTransport::Transport::EnumEncryption::SSL);
                             } else {
@@ -501,40 +499,39 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                 //TODO
             }
         } else if (tag == QLatin1String("pgp")) {
-            if (e.hasAttribute(QStringLiteral("encrypt-to-self")) &&
-                    (e.attribute(QStringLiteral("encrypt-to-self")) == QLatin1String("true"))) {
+            if (e.hasAttribute(QStringLiteral("encrypt-to-self"))
+                && (e.attribute(QStringLiteral("encrypt-to-self")) == QLatin1String("true"))) {
                 //TODO
             }
-            if (e.hasAttribute(QStringLiteral("always-trust")) &&
-                    (e.attribute(QStringLiteral("always-trust")) == QLatin1String("true"))) {
+            if (e.hasAttribute(QStringLiteral("always-trust"))
+                && (e.attribute(QStringLiteral("always-trust")) == QLatin1String("true"))) {
                 //TODO
             }
-            if (e.hasAttribute(QStringLiteral("always-sign")) &&
-                    (e.attribute(QStringLiteral("always-sign")) == QLatin1String("true"))) {
+            if (e.hasAttribute(QStringLiteral("always-sign"))
+                && (e.attribute(QStringLiteral("always-sign")) == QLatin1String("true"))) {
                 //TODO
             }
-            if (e.hasAttribute(QStringLiteral("no-imip-sign")) &&
-                    (e.attribute(QStringLiteral("no-imip-sign")) == QLatin1String("true"))) {
+            if (e.hasAttribute(QStringLiteral("no-imip-sign"))
+                && (e.attribute(QStringLiteral("no-imip-sign")) == QLatin1String("true"))) {
                 //TODO
             }
         } else if (tag == QLatin1String("smime")) {
-            if (e.hasAttribute(QStringLiteral("sign-default")) &&
-                    (e.attribute(QStringLiteral("sign-default")) == QLatin1String("true"))) {
+            if (e.hasAttribute(QStringLiteral("sign-default"))
+                && (e.attribute(QStringLiteral("sign-default")) == QLatin1String("true"))) {
                 //TODO
             }
-            if (e.hasAttribute(QStringLiteral("encrypt-default")) &&
-                    (e.attribute(QStringLiteral("encrypt-default")) == QLatin1String("true"))) {
+            if (e.hasAttribute(QStringLiteral("encrypt-default"))
+                && (e.attribute(QStringLiteral("encrypt-default")) == QLatin1String("true"))) {
                 //TODO
             }
-            if (e.hasAttribute(QStringLiteral("encrypt-to-self")) &&
-                    (e.attribute(QStringLiteral("encrypt-to-self")) == QLatin1String("true"))) {
+            if (e.hasAttribute(QStringLiteral("encrypt-to-self"))
+                && (e.attribute(QStringLiteral("encrypt-to-self")) == QLatin1String("true"))) {
                 //TODO
             }
             //TODO
         } else {
             qCDebug(EVOLUTIONPLUGIN_LOG) << " tag not know :" << tag;
         }
-
     }
     storeIdentity(newIdentity);
 }

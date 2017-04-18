@@ -34,5 +34,4 @@ GearyAddressBook::~GearyAddressBook()
 
 void GearyAddressBook::importAddressBook()
 {
-
 }

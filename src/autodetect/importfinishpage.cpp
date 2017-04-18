@@ -20,9 +20,9 @@
 #include "importfinishpage.h"
 #include "ui_importfinishpage.h"
 
-ImportFinishPage::ImportFinishPage(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::ImportFinishPage)
+ImportFinishPage::ImportFinishPage(QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::ImportFinishPage)
 {
     ui->setupUi(this);
 }
@@ -41,4 +41,3 @@ void ImportFinishPage::addImportError(const QString &log)
 {
     ui->logFinish->addErrorLogEntry(log);
 }
-

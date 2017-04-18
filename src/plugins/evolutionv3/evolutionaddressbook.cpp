@@ -31,7 +31,6 @@ EvolutionAddressBook::EvolutionAddressBook()
 
 EvolutionAddressBook::~EvolutionAddressBook()
 {
-
 }
 
 void EvolutionAddressBook::exportEvolutionAddressBook()
@@ -103,4 +102,3 @@ void EvolutionAddressBook::exportEvolutionAddressBook()
         }
     }
 }
-

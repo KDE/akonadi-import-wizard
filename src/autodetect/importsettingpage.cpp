@@ -20,9 +20,9 @@
 #include "importsettingpage.h"
 #include "ui_importsettingpage.h"
 
-ImportSettingPage::ImportSettingPage(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::ImportSettingPage)
+ImportSettingPage::ImportSettingPage(QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::ImportSettingPage)
 {
     ui->setupUi(this);
     connect(ui->importSettings, &QPushButton::clicked, this, &ImportSettingPage::importSettingsClicked);
@@ -47,4 +47,3 @@ void ImportSettingPage::setImportButtonEnabled(bool enabled)
 {
     ui->importSettings->setEnabled(enabled);
 }
-

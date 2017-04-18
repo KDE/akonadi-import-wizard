@@ -35,8 +35,6 @@ public:
     bool importSettings() Q_DECL_OVERRIDE;
     bool importFilters() Q_DECL_OVERRIDE;
     QString name() const Q_DECL_OVERRIDE;
-
 };
 
 #endif /* BalsaImportData_H */
-

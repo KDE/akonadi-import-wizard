@@ -37,4 +37,3 @@ private:
 };
 
 #endif /* TrojitaAddressBook_H */
-

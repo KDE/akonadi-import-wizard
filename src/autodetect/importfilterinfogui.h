@@ -39,11 +39,10 @@ public:
     void addInfoLogEntry(const QString &log) Q_DECL_OVERRIDE;
     void clear() Q_DECL_OVERRIDE;
     void alert(const QString &message) Q_DECL_OVERRIDE;
-    QWidget *parent() const  Q_DECL_OVERRIDE;
+    QWidget *parent() const Q_DECL_OVERRIDE;
 
 private:
     ImportMailPage *m_parent;
 };
 
 #endif /* IMPORTFILTERINFOGUI_H */
-

@@ -34,9 +34,9 @@
 using namespace LibImportWizard;
 
 AbstractImporter::AbstractImporter(QObject *parent)
-    : QObject(parent),
-      mAbstractDisplayInfo(nullptr),
-      mParentWidget(nullptr)
+    : QObject(parent)
+    , mAbstractDisplayInfo(nullptr)
+    , mParentWidget(nullptr)
 {
 }
 

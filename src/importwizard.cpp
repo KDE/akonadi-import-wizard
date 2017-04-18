@@ -49,9 +49,9 @@
 #include <QPushButton>
 
 ImportWizard::ImportWizard(WizardMode mode, QWidget *parent)
-    : KAssistantDialog(parent),
-      mMode(mode),
-      mSelectedPim(nullptr)
+    : KAssistantDialog(parent)
+    , mMode(mode)
+    , mSelectedPim(nullptr)
 {
     setModal(true);
     setWindowTitle(i18n("PIM Import Tool"));
@@ -379,11 +379,11 @@ void ImportWizard::back()
 {
     if (currentPage() == mSelectProgramPageItem) {
         return;
-    } else if (currentPage() == mImportFilterPageItem ||
-               currentPage() == mImportSettingPageItem ||
-               currentPage() == mImportAddressbookPageItem ||
-               currentPage() == mImportCalendarPageItem ||
-               currentPage() == mImportFinishPageItem) {
+    } else if (currentPage() == mImportFilterPageItem
+               || currentPage() == mImportSettingPageItem
+               || currentPage() == mImportAddressbookPageItem
+               || currentPage() == mImportCalendarPageItem
+               || currentPage() == mImportFinishPageItem) {
         enableAllImportButton();
     }
     KAssistantDialog::back();

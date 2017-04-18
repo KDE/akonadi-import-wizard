@@ -28,8 +28,8 @@
 
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(TrojitaImporterFactory, "trojitaimporter.json", registerPlugin<TrojitaImportData>();)
-
+K_PLUGIN_FACTORY_WITH_JSON(TrojitaImporterFactory, "trojitaimporter.json", registerPlugin<TrojitaImportData>();
+                           )
 
 TrojitaImportData::TrojitaImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)

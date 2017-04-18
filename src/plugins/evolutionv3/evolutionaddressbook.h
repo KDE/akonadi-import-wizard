@@ -22,7 +22,7 @@
 
 #include "abstract/abstractaddressbook.h"
 
-class EvolutionAddressBook: public LibImportWizard::AbstractAddressBook
+class EvolutionAddressBook : public LibImportWizard::AbstractAddressBook
 {
     Q_OBJECT
 public:

@@ -36,10 +36,8 @@ BalsaSettings::BalsaSettings(const QString &filename)
 {
 }
 
-
 BalsaSettings::~BalsaSettings()
 {
-
 }
 
 void BalsaSettings::importSettings()
@@ -85,7 +83,6 @@ void BalsaSettings::readAccount(const KConfigGroup &grp, bool autoCheck, int aut
 
         addCheckMailOnStartup(agentIdentifyName, autoCheck);
         addToManualCheck(agentIdentifyName, check);
-
     } else if (type == QLatin1String("LibBalsaMailboxImap")) {
         QMap<QString, QVariant> settings;
         const QString server = grp.readEntry(QStringLiteral("Server"));
@@ -169,7 +166,7 @@ void BalsaSettings::readTransport(const KConfigGroup &grp)
     //TODO const QString anonymous = grp.readEntry(QStringLiteral("Anonymous"));
 
     //TODO
-    storeTransport(mt, /*( smtp == defaultSmtp )*/true);   //FIXME
+    storeTransport(mt, /*( smtp == defaultSmtp )*/ true);   //FIXME
     mHashSmtp.insert(smtp, QString::number(mt->id()));
 
     //TODO

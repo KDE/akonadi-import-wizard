@@ -20,9 +20,9 @@
 #include "selectprogrampage.h"
 #include "ui_selectprogrampage.h"
 
-SelectProgramPage::SelectProgramPage(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::SelectProgramPage)
+SelectProgramPage::SelectProgramPage(QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::SelectProgramPage)
 {
     ui->setupUi(this);
     connect(ui->listProgramFound, &QListWidget::itemSelectionChanged, this, &SelectProgramPage::slotItemSelectionChanged);

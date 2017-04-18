@@ -27,12 +27,12 @@
 
 struct LIBIMPORTWIZARD_EXPORT ldapStruct {
     ldapStruct()
-        : maxHint(-1),
-          port(-1),
-          limit(-1),
-          timeout(-1),
-          useSSL(false),
-          useTLS(false)
+        : maxHint(-1)
+        , port(-1)
+        , limit(-1)
+        , timeout(-1)
+        , useSSL(false)
+        , useTLS(false)
     {
     }
 
@@ -48,7 +48,6 @@ struct LIBIMPORTWIZARD_EXPORT ldapStruct {
     int timeout;
     bool useSSL;
     bool useTLS;
-
 };
 
 struct tagStruct {
@@ -57,8 +56,7 @@ struct tagStruct {
 };
 Q_DECLARE_TYPEINFO(tagStruct, Q_MOVABLE_TYPE);
 
-namespace ImportWizardUtil
-{
+namespace ImportWizardUtil {
 enum ResourceType {
     Imap,
     Pop3,

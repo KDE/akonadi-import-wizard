@@ -32,12 +32,10 @@
 ImportWizardDisplayInfo::ImportWizardDisplayInfo(ImportWizard *wizard)
     : mImportWizard(wizard)
 {
-
 }
 
 ImportWizardDisplayInfo::~ImportWizardDisplayInfo()
 {
-
 }
 
 void ImportWizardDisplayInfo::calendarImportError(const QString &log)

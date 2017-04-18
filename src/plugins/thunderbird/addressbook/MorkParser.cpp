@@ -34,8 +34,8 @@ bool MorkParser::open(const QString &path)
     QFile MorkFile(path);
 
     // Open file
-    if (!MorkFile.exists() ||
-            !MorkFile.open(QIODevice::ReadOnly)) {
+    if (!MorkFile.exists()
+        || !MorkFile.open(QIODevice::ReadOnly)) {
         mError = FailedToOpen;
         return false;
     }
@@ -174,7 +174,7 @@ bool MorkParser::parseDict()
             switch (cur) {
             case '<':
                 if (mMorkData.mid(mMorkPos - 1, strlen(MorkDictColumnMeta))
-                        == MorkDictColumnMeta) {
+                    == MorkDictColumnMeta) {
                     nowParsing_ = NPColumns;
                     mMorkPos += strlen(MorkDictColumnMeta) - 1;
                 }
@@ -185,7 +185,6 @@ bool MorkParser::parseDict()
             case '/':
                 Result = parseComment();
                 break;
-
             }
         }
 
@@ -253,7 +252,8 @@ bool MorkParser::parseCell()
                 Text += cur;
             }
             break;
-        case '\\': {
+        case '\\':
+        {
             // Get next two chars
             char NextChar = nextChar();
             if ('\r' != NextChar && '\n' != NextChar) {
@@ -261,16 +261,17 @@ bool MorkParser::parseCell()
             } else {
                 nextChar();
             }
+            break;
         }
-        break;
-        case '$': {
+        case '$':
+        {
             // Get next two chars
             QString HexChar;
             HexChar += nextChar();
             HexChar += nextChar();
-            Text += (char) HexChar.toInt(nullptr, 16);
+            Text += (char)HexChar.toInt(nullptr, 16);
+            break;
         }
-        break;
         default:
             // Just a char
             if (bColumn) {
@@ -350,7 +351,8 @@ bool MorkParser::parseTable()
             case '-':
             case '+':
                 break;
-            default: {
+            default:
+            {
                 QString JustId;
                 while (!isWhiteSpace(cur) && cur) {
                     JustId += cur;
@@ -365,8 +367,8 @@ bool MorkParser::parseTable()
                 parseScopeId(JustId, JustIdNum, JustScopeNum);
 
                 setCurrentRow(Scope, Id, JustScopeNum, JustIdNum);
+                break;
             }
-            break;
             }
         }
 
@@ -392,7 +394,7 @@ void MorkParser::parseScopeId(const QString &textId, int &Id, int &Scope) const
             tSc.remove(0, 1);
         }
 
-        Id =  tId.toInt(nullptr, 16);
+        Id = tId.toInt(nullptr, 16);
         Scope = tSc.toInt(nullptr, 16);
     } else {
         Id = textId.toInt(nullptr, 16);
@@ -540,4 +542,3 @@ QString MorkParser::getColumn(int oid)
 
     return *foundIter;
 }
-

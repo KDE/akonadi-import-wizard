@@ -50,8 +50,6 @@ protected:
 
     virtual void readDateFormat(const KConfigGroup &group);
     QString convertToKmailTemplate(const QString &templateStr);
-
 };
 
 #endif /* SYLPHEEDSETTINGS_H */
-

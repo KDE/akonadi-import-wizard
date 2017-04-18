@@ -126,5 +126,4 @@ void ImportWizardUtil::storeInKWallet(const QString &name, ImportWizardUtil::Res
         }
     }
     delete wallet;
-
 }

@@ -131,9 +131,9 @@ protected: // Data
     int mDefaultScope;
 
     // Indicates intity is being parsed
-    enum { NPColumns, NPValues, NPRows } nowParsing_;
-
+    enum {
+        NPColumns, NPValues, NPRows
+    } nowParsing_;
 };
 
 #endif // __MorkParser_h__
-

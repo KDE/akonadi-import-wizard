@@ -29,7 +29,8 @@
 #include <kpluginfactory.h>
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(OperaImporterFactory, "operaimporter.json", registerPlugin<OperaImportData>();)
+K_PLUGIN_FACTORY_WITH_JSON(OperaImporterFactory, "operaimporter.json", registerPlugin<OperaImportData>();
+                           )
 
 OperaImportData::OperaImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)

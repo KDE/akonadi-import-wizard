@@ -32,8 +32,6 @@ public:
 
     bool importMails() Q_DECL_OVERRIDE;
     QString name() const Q_DECL_OVERRIDE;
-
 };
 
 #endif /* MailApp ImportData_H */
-

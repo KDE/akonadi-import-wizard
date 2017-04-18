@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "importmailpluginmanager.h"
 #include "importwizard_debug.h"
 #include "abstract/abstractimporter.h"
@@ -31,15 +30,12 @@
 
 Q_GLOBAL_STATIC(ImportMailPluginManager, s_instance)
 
-
-namespace
-{
+namespace {
 QString pluginVersion()
 {
     return QStringLiteral("1.0");
 }
 }
-
 
 ImportMailPluginManager::ImportMailPluginManager(QObject *parent)
     : QObject(parent)
@@ -49,7 +45,6 @@ ImportMailPluginManager::ImportMailPluginManager(QObject *parent)
 
 ImportMailPluginManager::~ImportMailPluginManager()
 {
-
 }
 
 ImportMailPluginManager *ImportMailPluginManager::self()
@@ -59,7 +54,7 @@ ImportMailPluginManager *ImportMailPluginManager::self()
 
 bool ImportMailPluginManager::initializePluginList()
 {
-    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("importwizard"), [](const KPluginMetaData & md) {
+    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("importwizard"), [](const KPluginMetaData &md) {
         return md.serviceTypes().contains(QStringLiteral("ImportWizard/PluginMailImporter"));
     });
 

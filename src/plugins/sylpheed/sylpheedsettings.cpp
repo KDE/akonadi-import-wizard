@@ -101,7 +101,7 @@ void SylpheedSettings::readCustomHeader(QFile *customHeaderFile)
         }
         addKmailConfig(QStringLiteral("General"), QStringLiteral("mime-header-count"), newValue);
         int currentHeader = (oldValue > 0) ? oldValue : 0;
-        for (QMapIterator<QString, QString> it(header);  it.hasNext();) {
+        for (QMapIterator<QString, QString> it(header); it.hasNext();) {
             it.next();
             addComposerHeaderGroup(QStringLiteral("Mime #%1").arg(currentHeader), (it).key(), (it).value());
             ++currentHeader;
@@ -458,7 +458,7 @@ void SylpheedSettings::readAccount(const KConfigGroup &accountConfig, bool check
 void SylpheedSettings::readIdentity(const KConfigGroup &accountConfig)
 {
     QString name = accountConfig.readEntry(QStringLiteral("name"));
-    KIdentityManagement::Identity *identity  = createIdentity(name);
+    KIdentityManagement::Identity *identity = createIdentity(name);
 
     identity->setFullName(name);
     identity->setIdentityName(name);
@@ -552,7 +552,6 @@ QString SylpheedSettings::readTransport(const KConfigGroup &accountConfig)
         default:
             qCDebug(SYLPHEEDPLUGIN_LOG) << " smtp ssl config unknown :" << sslSmtp;
             break;
-
         }
         QString domainName;
         if (SylpheedSettingsUtils::readConfig(QStringLiteral("domain"), accountConfig, domainName, false)) {

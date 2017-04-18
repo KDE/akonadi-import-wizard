@@ -26,13 +26,11 @@
 #include <QMap>
 #include <QVariant>
 
-namespace PimCommon
-{
+namespace PimCommon {
 class CreateResource;
 }
 
-namespace LibImportWizard
-{
+namespace LibImportWizard {
 class AbstractDisplayInfo;
 class LIBIMPORTWIZARD_EXPORT AbstractBase : public QObject
 {

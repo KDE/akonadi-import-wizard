@@ -22,14 +22,12 @@
 #include <MailCommon/FilterImporterExporter>
 #include "libimportwizard_export.h"
 
-namespace MailImporter
-{
+namespace MailImporter {
 class FilterInfo;
 class Filter;
 }
 
-namespace MailCommon
-{
+namespace MailCommon {
 class MailFilter;
 class FilterImporterExporter;
 }
@@ -79,7 +77,6 @@ public:
 
     void setAbstractDisplayInfo(AbstractDisplayInfo *info);
 
-
 protected:
     void initializeFilter(MailImporter::Filter &filter);
 
@@ -97,4 +94,3 @@ protected:
 }
 
 #endif /* AbstractImporter_H */
-

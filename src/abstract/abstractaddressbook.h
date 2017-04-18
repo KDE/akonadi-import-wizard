@@ -24,18 +24,15 @@
 #include "abstractbase.h"
 #include "libimportwizard_export.h"
 
-
-namespace KContacts
-{
+namespace KContacts {
 class Addressee;
 class ContactGroup;
 }
 
 class KJob;
-namespace LibImportWizard
-{
+namespace LibImportWizard {
 class AbstractDisplayInfo;
-class LIBIMPORTWIZARD_EXPORT AbstractAddressBook: public LibImportWizard::AbstractBase
+class LIBIMPORTWIZARD_EXPORT AbstractAddressBook : public LibImportWizard::AbstractBase
 {
     Q_OBJECT
 public:

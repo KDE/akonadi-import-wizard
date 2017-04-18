@@ -40,4 +40,3 @@ private:
 };
 
 #endif /* SYLPHEEDADDRESSBOOK_H */
-

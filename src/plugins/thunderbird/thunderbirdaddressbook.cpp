@@ -32,7 +32,6 @@ ThunderBirdAddressBook::ThunderBirdAddressBook(const QDir &dir)
 
 ThunderBirdAddressBook::~ThunderBirdAddressBook()
 {
-
 }
 
 void ThunderBirdAddressBook::importAddressBook()

@@ -36,4 +36,3 @@ Ui::ManualImportMailPage *ManualImportMailPage::widget() const
 {
     return mWidget;
 }
-

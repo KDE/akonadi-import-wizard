@@ -35,8 +35,6 @@ public:
     bool importAddressBook() Q_DECL_OVERRIDE;
 
     QString name() const Q_DECL_OVERRIDE;
-
 };
 
 #endif /* TrojiraImportData_H */
-

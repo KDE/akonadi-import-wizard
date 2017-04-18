@@ -35,7 +35,6 @@
 PMailSettings::PMailSettings(const QString &filename)
     : mFileName(filename)
 {
-
 }
 
 void PMailSettings::importSettings()
@@ -54,12 +53,10 @@ void PMailSettings::importSettings()
 
 PMailSettings::~PMailSettings()
 {
-
 }
 
 void PMailSettings::readIdentity(const KConfigGroup &group)
 {
-
     QString personalNameStr = QStringLiteral("Personal name                             ");
     QString personalName;
     if (group.hasKey(personalNameStr)) {

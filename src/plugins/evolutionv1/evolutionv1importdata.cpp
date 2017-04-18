@@ -27,8 +27,8 @@
 
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(Evolutionv1ImporterFactory, "evolutionv1importer.json", registerPlugin<Evolutionv1ImportData>();)
-
+K_PLUGIN_FACTORY_WITH_JSON(Evolutionv1ImporterFactory, "evolutionv1importer.json", registerPlugin<Evolutionv1ImportData>();
+                           )
 
 Evolutionv1ImportData::Evolutionv1ImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)
@@ -78,4 +78,3 @@ LibImportWizard::AbstractImporter::TypeSupportedOptions Evolutionv1ImportData::s
 }
 
 #include "evolutionv1importdata.moc"
-

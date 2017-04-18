@@ -20,9 +20,9 @@
 #include "importmailpage.h"
 #include "ui_importmailpage.h"
 
-ImportMailPage::ImportMailPage(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::ImportMailPage)
+ImportMailPage::ImportMailPage(QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::ImportMailPage)
 {
     ui->setupUi(this);
     connect(ui->importMails, &QPushButton::clicked, this, &ImportMailPage::importMailsClicked);
@@ -53,4 +53,3 @@ void ImportMailPage::setImportButtonEnabled(bool enabled)
 {
     ui->importMails->setEnabled(enabled);
 }
-

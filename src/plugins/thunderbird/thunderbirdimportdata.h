@@ -42,4 +42,3 @@ private:
 };
 
 #endif /* THUNDERBIRDIMPORTDATA_H */
-

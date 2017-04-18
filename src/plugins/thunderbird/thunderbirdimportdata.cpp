@@ -33,7 +33,8 @@
 
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(ThunderbirdImporterFactory, "thunderbirdimporter.json", registerPlugin<ThunderbirdImportData>();)
+K_PLUGIN_FACTORY_WITH_JSON(ThunderbirdImporterFactory, "thunderbirdimporter.json", registerPlugin<ThunderbirdImportData>();
+                           )
 
 ThunderbirdImportData::ThunderbirdImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)

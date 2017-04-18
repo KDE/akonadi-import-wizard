@@ -49,7 +49,6 @@ void SylpheedAddressBook::importAddressBook()
     cleanUp();
 }
 
-
 void SylpheedAddressBook::readAddressBook(const QString &filename)
 {
     QFile file(filename);
@@ -96,7 +95,6 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
             }
             if (e.hasAttribute(QStringLiteral("last-name"))) {
                 contact.setFamilyName(e.attribute(QStringLiteral("last-name")));
-
             }
             if (e.hasAttribute(QStringLiteral("nick-name"))) {
                 contact.setNickName(e.attribute(QStringLiteral("nick-name")));
@@ -126,7 +124,6 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
                     if (!emails.isEmpty()) {
                         contact.setEmails(emails);
                     }
-
                 } else if (addressTag == QLatin1String("attribute-list")) {
                     for (QDomElement attributelist = addressElement.firstChildElement(); !attributelist.isNull(); attributelist = attributelist.nextSiblingElement()) {
                         const QString tagAttributeList = attributelist.tagName();
@@ -140,7 +137,6 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
                             qCDebug(SYLPHEEDPLUGIN_LOG) << "tagAttributeList not implemented " << tagAttributeList;
                         }
                     }
-
                 } else {
                     qCDebug(SYLPHEEDPLUGIN_LOG) << " addressTag unknown :" << addressTag;
                 }

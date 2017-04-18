@@ -41,7 +41,6 @@ BalsaAddressBook::BalsaAddressBook(const QString &filename)
 
 BalsaAddressBook::~BalsaAddressBook()
 {
-
 }
 
 void BalsaAddressBook::importAddressBook()
@@ -74,7 +73,7 @@ void BalsaAddressBook::readAddressBook(const KConfigGroup &grp)
         ldap.ldapUrl = QUrl(grp.readEntry(QStringLiteral("Host")));
         ldap.port = ldap.ldapUrl.port();
         //TODO: verify
-        const QString bookDN  = grp.readEntry(QStringLiteral("BookDN")); //TODO ?
+        const QString bookDN = grp.readEntry(QStringLiteral("BookDN"));  //TODO ?
         ImportWizardUtil::mergeLdap(ldap);
         addAddressBookImportInfo(i18n("Ldap created"));
     } else if (type == QLatin1String("LibBalsaAddressBookGpe")) {

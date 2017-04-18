@@ -56,7 +56,6 @@ void OperaSettings::importSettings()
 
 OperaSettings::~OperaSettings()
 {
-
 }
 
 void OperaSettings::readAccount(const KConfigGroup &grp)
@@ -219,7 +218,6 @@ void OperaSettings::readTransport(const KConfigGroup &grp)
             break;
         default:
             qCDebug(OPERAPLUGIN_LOG) << " authMethod unknown :" << authMethod;
-            ;
         }
 
         //We can't specify a default smtp...
