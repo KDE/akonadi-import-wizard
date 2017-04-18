@@ -1,4 +1,5 @@
 org.kde.pim.importwizard importwizard (importwizard)
+org.kde.pim.importwizard.lib importwizard (libimportwizard)
 org.kde.pim.importwizard.balsaplugin importwizard (balsa plugin)
 org.kde.pim.importwizard.evolutionplugin importwizard (evolution v3 plugin)
 org.kde.pim.importwizard.gearyplugin importwizard (geary plugin)
