@@ -20,7 +20,7 @@
 #ifndef OPERAADDRESSBOOK_H
 #define OPERAADDRESSBOOK_H
 
-#include "abstract/abstractaddressbook.h"
+#include "abstractaddressbook.h"
 
 class OperaAddressBook : public LibImportWizard::AbstractAddressBook
 {

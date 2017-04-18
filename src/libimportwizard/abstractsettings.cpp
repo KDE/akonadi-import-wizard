@@ -16,8 +16,8 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
-#include "abstract/abstractsettings.h"
-#include "abstract/abstractdisplayinfo.h"
+#include "abstractsettings.h"
+#include "abstractdisplayinfo.h"
 #include "importsettingpage.h"
 
 #include <KIdentityManagement/kidentitymanagement/identitymanager.h>

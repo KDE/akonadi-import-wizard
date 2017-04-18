@@ -26,7 +26,7 @@
 #include "importfilterinfogui.h"
 #include "MailCommon/FilterImporterExporter"
 #include <kpluginfactory.h>
-#include "importwizard.h"
+
 
 #include <KLocalizedString>
 

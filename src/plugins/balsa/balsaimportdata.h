@@ -19,7 +19,7 @@
 #ifndef BalsaImportData_H
 #define BalsaImportData_H
 
-#include "abstract/abstractimporter.h"
+#include "abstractimporter.h"
 
 class BalsaImportData : public LibImportWizard::AbstractImporter
 {

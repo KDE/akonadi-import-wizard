@@ -3,44 +3,10 @@
 configure_file(importwizard-version.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/importwizard-version.h @ONLY)
 add_subdirectory(icons)
 add_subdirectory(kconf_update)
-
-
-set(libimportwizard_abstract_SRCS
-    abstract/abstractimporter.cpp
-    abstract/abstractsettings.cpp
-    abstract/abstractaddressbook.cpp
-    abstract/abstractcalendar.cpp
-    abstract/abstractbase.cpp
-    abstract/abstractdisplayinfo.cpp
-    )
-set(libimportwizard_utils_SRCS
-    autodetect/importwizardutil.cpp
-    )
-
-ecm_qt_declare_logging_category(libimportwizard_abstract_SRCS HEADER libimportwizard_debug.h IDENTIFIER LIBIMPORTWIZARD_LOG CATEGORY_NAME org.kde.pim.importwizard.lib)
+add_subdirectory(libimportwizard)
 
 file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/icons/*-apps-kontact-import-wizard.png")
 ecm_add_app_icon(importwizard_SRCS ICONS ${ICONS_SRCS})
-
-
-add_library(libimportwizard ${libimportwizard_abstract_SRCS} ${libimportwizard_utils_SRCS})
-
-generate_export_header(libimportwizard BASE_NAME libimportwizard)
-
-target_link_libraries(libimportwizard
-    PUBLIC
-    KF5::MailTransport
-    PRIVATE
-    KF5::Archive
-    KF5::PimCommon
-    KF5::MailCommon
-    KF5::I18n
-    )
-
-set_target_properties(libimportwizard
-    PROPERTIES OUTPUT_NAME importwizard VERSION ${KDEPIM_LIB_VERSION} SOVERSION ${KDEPIM_LIB_SOVERSION}
-    )
-
 
 set(importwizard_SRCS
     main.cpp
@@ -115,8 +81,6 @@ target_link_libraries(importwizard
 
 install(TARGETS importwizard  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(PROGRAMS data/org.kde.importwizard.desktop DESTINATION ${KDE_INSTALL_APPDIR})
-
-install(TARGETS libimportwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} ${LIBRARY_NAMELINK})
 
 add_subdirectory(manual/pics)
 add_subdirectory(plugins/)

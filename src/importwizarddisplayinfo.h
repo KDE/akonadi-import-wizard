@@ -20,7 +20,7 @@
 #ifndef IMPORTWIZARDDISPLAYINFO_H
 #define IMPORTWIZARDDISPLAYINFO_H
 
-#include "abstract/abstractdisplayinfo.h"
+#include "abstractdisplayinfo.h"
 #include <QObject>
 
 class ImportWizard;

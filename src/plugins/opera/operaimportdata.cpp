@@ -23,7 +23,7 @@
 #include "mailimporter/filteropera.h"
 #include "mailimporter/filterinfo.h"
 #include "importfilterinfogui.h"
-#include "importwizard.h"
+
 
 #include <KLocalizedString>
 #include <kpluginfactory.h>

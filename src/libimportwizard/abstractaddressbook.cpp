@@ -16,8 +16,7 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
-#include "abstract/abstractaddressbook.h"
-#include "importwizard.h"
+#include "abstractaddressbook.h"
 #include "importaddressbookpage.h"
 #include "abstractdisplayinfo.h"
 

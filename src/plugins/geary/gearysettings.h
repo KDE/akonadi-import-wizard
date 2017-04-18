@@ -20,7 +20,7 @@
 #ifndef GearySettings_H
 #define GearySettings_H
 
-#include "abstract/abstractsettings.h"
+#include "abstractsettings.h"
 
 class QSettings;
 

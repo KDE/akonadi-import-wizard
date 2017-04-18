@@ -22,7 +22,7 @@
 #include "mailimporter/filterinfo.h"
 #include "importfilterinfogui.h"
 #include "MailCommon/FilterImporterExporter"
-#include "importwizard.h"
+
 #include "sylpheedsettings.h"
 #include "sylpheedaddressbook.h"
 

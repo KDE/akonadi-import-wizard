@@ -25,7 +25,6 @@
 #include <KIdentityManagement/kidentitymanagement/identity.h>
 #include <KIdentityManagement/kidentitymanagement/signature.h>
 
-#include "importwizard_debug.h"
 
 #include <QSettings>
 

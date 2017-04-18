@@ -20,7 +20,7 @@
 #ifndef EVOLUTIONSETTINGS_H
 #define EVOLUTIONSETTINGS_H
 
-#include "abstract/abstractsettings.h"
+#include "abstractsettings.h"
 #include <KIdentityManagement/kidentitymanagement/signature.h>
 #include <QString>
 

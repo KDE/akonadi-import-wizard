@@ -19,14 +19,14 @@
 
 #include "icedoveimportdata.h"
 #include "importfilterinfogui.h"
-#include "abstract/abstractdisplayinfo.h"
+#include "abstractdisplayinfo.h"
 #include "../thunderbird/thunderbirdsettings.h"
 #include "../thunderbird/thunderbirdaddressbook.h"
 
 #include "mailimporter/filtericedove.h"
 #include "mailimporter/filterinfo.h"
 #include "MailCommon/FilterImporterExporter"
-#include "importwizard.h"
+
 
 #include <KLocalizedString>
 #include <kpluginfactory.h>

@@ -17,8 +17,8 @@
    Boston, MA 02110-1301, USA.
 */
 #include "evolutionaddressbook.h"
-#include "abstract/abstractdisplayinfo.h"
-#include "importwizard.h"
+#include "abstractdisplayinfo.h"
+
 #include "evolutionv3plugin_debug.h"
 #include <QProcess>
 #include <KMessageBox>

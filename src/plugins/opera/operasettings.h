@@ -20,7 +20,7 @@
 #ifndef OPERASETTINGS_H
 #define OPERASETTINGS_H
 
-#include "abstract/abstractsettings.h"
+#include "abstractsettings.h"
 
 class KConfigGroup;
 

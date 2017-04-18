@@ -21,12 +21,12 @@
 #include "importfilterinfogui.h"
 #include "thunderbirdsettings.h"
 #include "thunderbirdaddressbook.h"
-#include "abstract/abstractdisplayinfo.h"
+#include "abstractdisplayinfo.h"
 
 #include "mailimporter/filterthunderbird.h"
 #include "mailimporter/filterinfo.h"
 #include "MailCommon/FilterImporterExporter"
-#include "importwizard.h"
+
 
 #include <KLocalizedString>
 #include <kpluginfactory.h>

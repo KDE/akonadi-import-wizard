@@ -19,7 +19,7 @@
 #ifndef IMPORTWIZARD_H
 #define IMPORTWIZARD_H
 
-#include "abstract/abstractimporter.h"
+#include "abstractimporter.h"
 #include "libimportwizard_export.h"
 
 #include <KAssistantDialog>

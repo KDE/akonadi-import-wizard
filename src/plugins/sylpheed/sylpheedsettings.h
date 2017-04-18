@@ -20,7 +20,7 @@
 #ifndef SYLPHEEDSETTINGS_H
 #define SYLPHEEDSETTINGS_H
 
-#include "abstract/abstractsettings.h"
+#include "abstractsettings.h"
 #include <QString>
 
 class KConfigGroup;

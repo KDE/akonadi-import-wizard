@@ -20,7 +20,7 @@
 #ifndef GearyAddressBook_H
 #define GearyAddressBook_H
 
-#include "abstract/abstractaddressbook.h"
+#include "abstractaddressbook.h"
 #include <QHash>
 
 class GearyAddressBook : public LibImportWizard::AbstractAddressBook

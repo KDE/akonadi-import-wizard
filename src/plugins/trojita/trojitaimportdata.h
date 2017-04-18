@@ -19,7 +19,7 @@
 #ifndef TrojitaImportData_H
 #define TrojitaImportData_H
 
-#include "abstract/abstractimporter.h"
+#include "abstractimporter.h"
 
 class TrojitaImportData : public LibImportWizard::AbstractImporter
 {

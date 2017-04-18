@@ -21,7 +21,7 @@
 #include "mailimporter/filtermailapp.h"
 #include "mailimporter/filterinfo.h"
 #include "importfilterinfogui.h"
-#include "importwizard.h"
+
 
 #include <KLocalizedString>
 #include <kpluginfactory.h>

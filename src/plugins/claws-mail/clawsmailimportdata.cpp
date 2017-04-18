@@ -24,7 +24,7 @@
 #include "MailCommon/FilterImporterClawsMail"
 #include "mailimporter/filterinfo.h"
 #include "importfilterinfogui.h"
-#include "importwizard.h"
+
 
 #include <kpluginfactory.h>
 #include <KLocalizedString>

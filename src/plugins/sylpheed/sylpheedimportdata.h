@@ -19,7 +19,7 @@
 #ifndef SylpheedImportData_H
 #define SylpheedImportData_H
 
-#include "abstract/abstractimporter.h"
+#include "abstractimporter.h"
 
 class SylpheedImportData : public LibImportWizard::AbstractImporter
 {

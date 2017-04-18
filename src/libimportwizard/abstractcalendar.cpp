@@ -19,7 +19,7 @@
 
 #include "abstractcalendar.h"
 #include "importcalendarpage.h"
-#include "abstract/abstractdisplayinfo.h"
+#include "abstractdisplayinfo.h"
 #include <KSharedConfig>
 #include <KConfigGroup>
 using namespace LibImportWizard;

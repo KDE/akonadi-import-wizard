@@ -19,7 +19,7 @@
 #ifndef GearyImportData_H
 #define GearyImportData_H
 
-#include "abstract/abstractimporter.h"
+#include "abstractimporter.h"
 
 class GearyImportData : public LibImportWizard::AbstractImporter
 {

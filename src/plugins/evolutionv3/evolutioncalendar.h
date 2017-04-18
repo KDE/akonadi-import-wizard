@@ -20,7 +20,7 @@
 #ifndef EVOLUTIONCALENDAR_H
 #define EVOLUTIONCALENDAR_H
 
-#include "abstract/abstractcalendar.h"
+#include "abstractcalendar.h"
 
 class QDomElement;
 

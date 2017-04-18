@@ -22,7 +22,7 @@
 #include "importfilterpage.h"
 #include "importsettingpage.h"
 #include "importcalendarpage.h"
-#include "abstract/abstractdisplayinfo.h"
+#include "abstractdisplayinfo.h"
 
 #include "mailimporter/filterinfo.h"
 #include "MailCommon/FilterManager"

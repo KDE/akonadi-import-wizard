@@ -20,7 +20,7 @@
 #ifndef BalsaSettings_H
 #define BalsaSettings_H
 
-#include "abstract/abstractsettings.h"
+#include "abstractsettings.h"
 
 class KConfigGroup;
 
