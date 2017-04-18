@@ -46,7 +46,7 @@ class LIBIMPORTWIZARD_EXPORT ImportWizard : public KAssistantDialog
 {
     Q_OBJECT
 public:
-    enum WizardMode {
+    enum class WizardMode {
         AutoDetect = 0,
         Manual = 1
     };

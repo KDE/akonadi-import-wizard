@@ -78,7 +78,7 @@ ImportWizard::ImportWizard(WizardMode mode, QWidget *parent)
     resize(640, 480);
     Akonadi::ControlGui::widgetNeedsAkonadi(this);
 
-    if (mode == AutoDetect) {
+    if (mode == WizardMode::AutoDetect) {
         checkModules();
         KMessageBox::information(this, i18n("Close KMail before importing data. Some plugins will modify KMail config file."));
     }
@@ -113,7 +113,7 @@ void ImportWizard::writeConfig()
 
 void ImportWizard::updatePagesFromMode()
 {
-    const bool autodetectMode = (mMode == AutoDetect);
+    const bool autodetectMode = (mMode == WizardMode::AutoDetect);
     setAppropriate(mSelectProgramPageItem, autodetectMode);
     setAppropriate(mSelectComponentPageItem, autodetectMode);
     setAppropriate(mImportMailPageItem, autodetectMode);
@@ -427,6 +427,6 @@ void ImportWizard::addFinishError(const QString &log)
 
 void ImportWizard::slotSelectManualSelectionChanged(bool b)
 {
-    mMode = b ? Manual : AutoDetect;
+    mMode = b ? WizardMode::Manual : WizardMode::AutoDetect;
     updatePagesFromMode();
 }

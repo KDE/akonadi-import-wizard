@@ -67,12 +67,12 @@ int main(int argc, char *argv[])
 
     KDBusService service(KDBusService::Unique);
 
-    ImportWizard::WizardMode mode = ImportWizard::AutoDetect;
+    ImportWizard::WizardMode mode = ImportWizard::WizardMode::AutoDetect;
     if (parser.isSet(QStringLiteral("mode"))) {
         if (!parser.positionalArguments().isEmpty()) {
             const QString modeStr = parser.positionalArguments().at(0);
             if (modeStr == QLatin1String("manual")) {
-                mode = ImportWizard::Manual;
+                mode = ImportWizard::WizardMode::Manual;
             }
         }
     }
