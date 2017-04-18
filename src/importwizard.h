@@ -65,8 +65,6 @@ public:
     ImportFinishPage *importFinishPage() const;
     ImportCalendarPage *importCalendarPage() const;
 
-    void addFinishInfo(const QString &log);
-    void addFinishError(const QString &log);
 
 private Q_SLOTS:
     void slotProgramSelected(const QString &program);
@@ -81,6 +79,9 @@ private Q_SLOTS:
     void slotCollectionChanged(const Akonadi::Collection &selectedCollection);
 
 private:
+    void addFinishInfo(const QString &log);
+    void addFinishError(const QString &log);
+
     void readConfig();
     void writeConfig();
     void initializeImportModule();
