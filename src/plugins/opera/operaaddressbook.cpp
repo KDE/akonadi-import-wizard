@@ -21,7 +21,7 @@
 
 #include <KContacts/Addressee>
 #include <QUrl>
-//#include "importwizard_debug.h"
+#include "operaplugin_debug.h"
 #include <QFile>
 
 OperaAddressBook::OperaAddressBook(const QString &filename, ImportWizard *parent)
@@ -34,7 +34,7 @@ void OperaAddressBook::importAddressBook()
 {
     QFile file(mFileName);
     if (!file.open(QIODevice::ReadOnly)) {
-        //FIXME qCDebug(IMPORTWIZARD_LOG) << " We can't open file" << mFileName;
+        qCDebug(OPERAPLUGIN_LOG) << " We can't open file" << mFileName;
         return;
     }
 

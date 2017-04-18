@@ -4,6 +4,7 @@ set(gearyimporter_SRCS
    gearysettings.cpp
 )
 
+ecm_qt_declare_logging_category(gearyimporter_SRCS HEADER gearyplugin_debug.h IDENTIFIER EVOLUTIONPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.gearyplugin)
 kcoreaddons_add_plugin(gearyimporterplugin JSON gearyimporter.json SOURCES
     ${gearyimporter_SRCS} INSTALL_NAMESPACE importwizard)
 

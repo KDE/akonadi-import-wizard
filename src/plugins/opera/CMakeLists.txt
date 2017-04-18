@@ -4,6 +4,7 @@ set(operaimporter_SRCS
    operasettings.cpp
 )
 
+ecm_qt_declare_logging_category(operaimporter_SRCS HEADER operaplugin_debug.h IDENTIFIER OPERAPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.operaplugin)
 kcoreaddons_add_plugin(operaimporterplugin JSON operaimporter.json SOURCES
     ${operaimporter_SRCS} INSTALL_NAMESPACE importwizard)
 
