@@ -6,6 +6,7 @@ set(icedoveimporter_SRCS
 
 )
 
+ecm_qt_declare_logging_category(icedoveimporter_SRCS HEADER thunderbirdplugin_debug.h IDENTIFIER THUNDERBIRDPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.thunderbirdplugin)
 kcoreaddons_add_plugin(icedoveimporterplugin JSON icedoveimporter.json SOURCES
     ${icedoveimporter_SRCS} INSTALL_NAMESPACE importwizard)
 

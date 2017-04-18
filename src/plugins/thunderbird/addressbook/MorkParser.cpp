@@ -16,6 +16,7 @@
 #include <QIODevice>
 //        =============================================================
 //        MorkParser::MorkParser
+#include "thunderbirdplugin_debug.h"
 
 MorkParser::MorkParser(int DefaultScope)
 {
@@ -291,10 +292,10 @@ bool MorkParser::parseCell()
         if (!Text.isEmpty()) {
             if (nowParsing_ == NPColumns) {
                 mColumns[ ColumnId ] = Text;
-                //qCDebug(IMPORTWIZARD_LOG)<<" column :"<<ColumnId<<" Text "<<Text;
+                qCDebug(THUNDERBIRDPLUGIN_LOG)<<" column :"<<ColumnId<<" Text "<<Text;
             } else {
                 mValues[ ColumnId ] = Text;
-                //qCDebug(IMPORTWIZARD_LOG)<<" ColumnId "<<ColumnId<<" Value : "<<Text;
+                qCDebug(THUNDERBIRDPLUGIN_LOG)<<" ColumnId "<<ColumnId<<" Value : "<<Text;
             }
         }
     } else {
