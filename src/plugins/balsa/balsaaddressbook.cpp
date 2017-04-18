@@ -29,7 +29,7 @@
 #include <KLocalizedString>
 #include <QUrl>
 
-#include "importwizard_debug.h"
+#include "balsaplugin_debug.h"
 #include <QFile>
 #include <QFileInfo>
 #include <QRegularExpression>
@@ -79,7 +79,7 @@ void BalsaAddressBook::readAddressBook(const KConfigGroup &grp)
         ImportWizardUtil::mergeLdap(ldap);
         addAddressBookImportInfo(i18n("Ldap created"));
     } else if (type == QLatin1String("LibBalsaAddressBookGpe")) {
-        //FIXME qCDebug(IMPORTWIZARD_LOG) << " Import it !";
+        qCDebug(BALSAPLUGIN_LOG) << " Import it !";
     } else if (type == QLatin1String("LibBalsaAddressBookLdif")) {
         const QString path = grp.readEntry(QStringLiteral("Path"));
         if (!path.isEmpty()) {
@@ -110,6 +110,6 @@ void BalsaAddressBook::readAddressBook(const KConfigGroup &grp)
             addAddressBookImportInfo(i18n("New addressbook created: %1", createResource(QStringLiteral("akonadi_vcard_resource"), name, settings)));
         }
     } else {
-        //FIXME qCDebug(IMPORTWIZARD_LOG) << " unknown addressbook type :" << type;
+        qCDebug(BALSAPLUGIN_LOG) << " unknown addressbook type :" << type;
     }
 }

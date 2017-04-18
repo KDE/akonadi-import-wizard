@@ -19,7 +19,7 @@
 
 #include "evolutionutil.h"
 
-//#include "importwizard_debug.h"
+#include "evolutionv3plugin_debug.h"
 
 #include <QDomDocument>
 #include <QFile>
@@ -30,8 +30,8 @@ bool EvolutionUtil::loadInDomDocument(QFile *file, QDomDocument &doc)
     int errorRow;
     int errorCol;
     if (!doc.setContent(file, &errorMsg, &errorRow, &errorCol)) {
-        //FIXME qCDebug(IMPORTWIZARD_LOG) << "Unable to load document.Parse error in line " << errorRow
-                                  //<< ", col " << errorCol << ": " << errorMsg;
+        qCDebug(EVOLUTIONPLUGIN_LOG) << "Unable to load document.Parse error in line " << errorRow
+                                  << ", col " << errorCol << ": " << errorMsg;
         return false;
     }
     return true;
@@ -43,8 +43,8 @@ bool EvolutionUtil::loadInDomDocument(const QString &file, QDomDocument &doc)
     int errorRow;
     int errorCol;
     if (!doc.setContent(file, &errorMsg, &errorRow, &errorCol)) {
-        //FIXME qCDebug(IMPORTWIZARD_LOG) << "Unable to load document.Parse error in line " << errorRow
-                                  //<< ", col " << errorCol << ": " << errorMsg;
+        qCDebug(EVOLUTIONPLUGIN_LOG) << "Unable to load document.Parse error in line " << errorRow
+                                  << ", col " << errorCol << ": " << errorMsg;
         return false;
     }
     return true;

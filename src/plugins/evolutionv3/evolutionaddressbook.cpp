@@ -18,6 +18,7 @@
 */
 #include "evolutionaddressbook.h"
 #include "importwizard.h"
+#include "evolutionv3plugin_debug.h"
 #include <QProcess>
 #include <KMessageBox>
 #include <KLocalizedString>
@@ -64,7 +65,7 @@ void EvolutionAddressBook::exportEvolutionAddressBook()
             result = result.replace('\n', ',');
             const QString value(result.trimmed());
             const QStringList listAddressBook = value.split(QLatin1Char(','));
-            //qCDebug(IMPORTWIZARD_LOG)<<" listAddressBook"<<listAddressBook;
+            //qCDebug(EVOLUTIONPLUGIN_LOG)<<" listAddressBook"<<listAddressBook;
             int i = 0;
             QString name;
             QString displayname;

@@ -3,6 +3,7 @@ set(balsaimporter_SRCS
    balsaimportdata.cpp  
    balsasettings.cpp
 )
+ecm_qt_declare_logging_category(balsaimporter_SRCS HEADER balsaplugin_debug.h IDENTIFIER BALSAPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.balsaplugin)
 
 kcoreaddons_add_plugin(balsaimporterplugin JSON balsaimporter.json SOURCES
     ${balsaimporter_SRCS} INSTALL_NAMESPACE importwizard)

@@ -5,6 +5,7 @@ set(evolutionv3importer_SRCS
    evolutioncalendar.cpp
    evolutionutil.cpp
 )
+ecm_qt_declare_logging_category(evolutionv3importer_SRCS HEADER evolutionv3plugin_debug.h IDENTIFIER EVOLUTIONPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.evolutionplugin)
 
 kcoreaddons_add_plugin(evolutionv3importerplugin JSON evolutionv3importer.json SOURCES
     ${evolutionv3importer_SRCS} INSTALL_NAMESPACE importwizard)

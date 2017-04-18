@@ -18,7 +18,7 @@
 */
 
 #include "balsasettings.h"
-#include "importwizard_debug.h"
+#include "balsaplugin_debug.h"
 #include <mailtransport/transportmanager.h>
 #include "MailCommon/MailUtil"
 #include "messageviewer/kxface.h"
@@ -96,7 +96,7 @@ void BalsaSettings::readAccount(const KConfigGroup &grp, bool autoCheck, int aut
         addCheckMailOnStartup(agentIdentifyName, autoCheck);
         addToManualCheck(agentIdentifyName, check);
     } else {
-        //FIXME qCDebug(IMPORTWIZARD_LOG) << " unknown account type :" << type;
+        qCDebug(BALSAPLUGIN_LOG) << " unknown account type :" << type;
     }
 }
 
@@ -164,7 +164,7 @@ void BalsaSettings::readTransport(const KConfigGroup &grp)
     } else if (ssl == QLatin1String("false")) {
         mt->setEncryption(MailTransport::Transport::EnumEncryption::None);
     } else {
-        //FIXME qCDebug(IMPORTWIZARD_LOG) << " unknown ssl value :" << ssl;
+        qCDebug(BALSAPLUGIN_LOG) << " unknown ssl value :" << ssl;
     }
 
     //TODO const QString anonymous = grp.readEntry(QStringLiteral("Anonymous"));
