@@ -63,7 +63,7 @@ bool GearyImportData::importSettings()
 {
     QDir directory(mPath);
     const QStringList lstDir = directory.entryList(QDir::AllDirs);
-    qCDebug(EVOLUTIONPLUGIN_LOG) << "Number of directory " << lstDir.count();
+    qCDebug(GEARYPLUGIN_LOG) << "Number of directory " << lstDir.count();
     const QString configName = QStringLiteral("geary.ini");
     for (int i = 0; i < lstDir.count(); ++i) {
         const QString fullPath = lstDir.at(i) + QDir::separator() + configName;
