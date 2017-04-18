@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2012-2017 Montel Laurent <montel@kde.org>
+   Copyright (C) 2017 Montel Laurent <montel@kde.org>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -17,29 +17,12 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef ABSTRACTCALENDAR_H
-#define ABSTRACTCALENDAR_H
+#include "abstractdisplayinfo.h"
 
-class ImportWizard;
-#include "abstractbase.h"
-#include "libimportwizard_export.h"
-#include <QString>
-namespace LibImportWizard
+
+using namespace LibImportWizard;
+
+AbstractDisplayInfo::AbstractDisplayInfo()
 {
-class LIBIMPORTWIZARD_EXPORT AbstractCalendar : public LibImportWizard::AbstractBase
-{
-    Q_OBJECT
-public:
-    explicit AbstractCalendar(ImportWizard *parent);
-    virtual ~AbstractCalendar();
 
-protected:
-    void addEvenViewConfig(const QString &groupName, const QString &key, const QString &value);
-    void addImportInfo(const QString &log) Q_DECL_OVERRIDE;
-    void addImportError(const QString &log) Q_DECL_OVERRIDE;
-
-private:
-    ImportWizard *mImportWizard;
-};
 }
-#endif // ABSTRACTCALENDAR_H

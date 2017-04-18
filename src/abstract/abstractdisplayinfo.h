@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2012-2017 Montel Laurent <montel@kde.org>
+   Copyright (C) 2017 Montel Laurent <montel@kde.org>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -17,38 +17,18 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef ABSTRACTBASE_H
-#define ABSTRACTBASE_H
+#ifndef ABSTRACTDISPLAYINFO_H
+#define ABSTRACTDISPLAYINFO_H
 
-#include <QObject>
 #include "libimportwizard_export.h"
-#include <QString>
-#include <QMap>
-#include <QVariant>
 
-namespace PimCommon
-{
-class CreateResource;
-}
 namespace LibImportWizard
 {
-class LIBIMPORTWIZARD_EXPORT AbstractBase : public QObject
+class LIBIMPORTWIZARD_EXPORT AbstractDisplayInfo
 {
-    Q_OBJECT
 public:
-    explicit AbstractBase();
-    virtual ~AbstractBase();
-
-    QString createResource(const QString &resources, const QString &name, const QMap<QString, QVariant> &settings);
-
-protected:
-    virtual void addImportInfo(const QString &log) = 0;
-    virtual void addImportError(const QString &log) = 0;
-
-private:
-    void slotCreateResourceError(const QString &);
-    void slotCreateResourceInfo(const QString &);
-    PimCommon::CreateResource *mCreateResource;
+    AbstractDisplayInfo();
 };
 }
-#endif // ABSTRACTBASE_H
+
+#endif // ABSTRACTDISPLAYINFO_H

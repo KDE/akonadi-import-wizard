@@ -22,6 +22,7 @@ set(libimportwizard_abstract_SRCS
     abstract/abstractaddressbook.cpp
     abstract/abstractcalendar.cpp
     abstract/abstractbase.cpp
+    abstract/abstractdisplayinfo.cpp
     )
 
 
