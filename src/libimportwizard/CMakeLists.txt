@@ -5,7 +5,7 @@ ecm_setup_version(PROJECT
     SOVERSION 5
 )
 
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim/ImportWizard")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPimImportWizard")
 
 
 configure_package_config_file(
@@ -52,6 +52,9 @@ ecm_qt_declare_logging_category(libimportwizard_abstract_SRCS HEADER libimportwi
 add_library(KPimImportWizard ${libimportwizard_abstract_SRCS} ${libimportwizard_utils_SRCS})
 
 add_library(KPim::ImportWizard ALIAS KPimImportWizard)
+
+
+target_include_directories(KPimImportWizard INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KPim/ImportWizard;${KDE_INSTALL_INCLUDEDIR_KF5}/KPim/>")
 
 
 generate_export_header(KPimImportWizard BASE_NAME libimportwizard)
