@@ -1,3 +1,40 @@
+#ecm_setup_version(PROJECT
+#    VARIABLE_PREFIX ImporWizard
+#    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/importwizard_version.h"
+#    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPimImportWizardConfigVersion.cmake"
+#    SOVERSION 5
+#)
+
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPimImportWizard")
+
+
+configure_package_config_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/KPimImportWizardConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPimImportWizardConfig.cmake"
+    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR}
+)
+
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KPimImportWizardConfig.cmake"
+    #"${CMAKE_CURRENT_BINARY_DIR}/KPimImportWizardConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    COMPONENT Devel
+)
+
+install(EXPORT KPimImportWizardTargets
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    FILE KPimImportWizardTargets.cmake
+    NAMESPACE KPim::
+)
+
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/importwizard_version.h"
+    DESTINATION "${KDE_INSTALL_INCLUDEDIR}/KPim"
+    COMPONENT Devel
+)
+
+
+
 set(libimportwizard_abstract_SRCS
     abstractimporter.cpp
     abstractsettings.cpp
@@ -28,6 +65,18 @@ target_link_libraries(KPimImportWizard
     KF5::MailCommon
     KF5::I18n
     )
+
+set_target_properties(KPimImportWizard PROPERTIES
+    VERSION ${IMPORTWIZARD_VERSION_STRING}
+    SOVERSION ${IMPORTWIZARD_SOVERSION}
+    EXPORT_NAME ImportWizard
+)
+
+install(TARGETS
+    KPimImportWizard
+    EXPORT KPimImportWizardTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+)
+
 
 set_target_properties(KPimImportWizard
     PROPERTIES OUTPUT_NAME importwizard VERSION ${KDEPIM_LIB_VERSION} SOVERSION ${KDEPIM_LIB_SOVERSION}
