@@ -5,7 +5,7 @@ ecm_setup_version(PROJECT
     SOVERSION 5
 )
 
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPimImportWizard")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim/ImportWizard")
 
 
 configure_package_config_file(
@@ -29,7 +29,7 @@ install(EXPORT KPimImportWizardTargets
 
 install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/importwizard_version.h"
-    DESTINATION "${KDE_INSTALL_INCLUDEDIR}/KPim"
+    DESTINATION "${KDE_INSTALL_INCLUDEDIR}/KPim/"
     COMPONENT Devel
 )
 
