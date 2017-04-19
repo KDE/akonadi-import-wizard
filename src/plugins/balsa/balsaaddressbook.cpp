@@ -18,7 +18,7 @@
 */
 
 #include "balsaaddressbook.h"
-#include "importwizardutil.h"
+#include <ImportWizard/ImportWizardUtil>
 
 
 #include <KContacts/Addressee>

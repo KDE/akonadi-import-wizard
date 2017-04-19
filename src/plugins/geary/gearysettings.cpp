@@ -18,7 +18,7 @@
 */
 
 #include "gearysettings.h"
-#include "importwizardutil.h"
+#include <ImportWizard/ImportWizardUtil>
 
 #include <mailtransport/transportmanager.h>
 

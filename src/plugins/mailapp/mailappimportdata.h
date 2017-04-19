@@ -19,7 +19,7 @@
 #ifndef MailAppImportData_H
 #define MailAppImportData_H
 
-#include "abstractimporter.h"
+#include <ImportWizard/AbstractImporter>
 
 class MailAppImportData : public LibImportWizard::AbstractImporter
 {

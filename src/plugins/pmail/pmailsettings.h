@@ -20,7 +20,7 @@
 #ifndef PMailSettings_H
 #define PMailSettings_H
 
-#include "abstractsettings.h"
+#include <ImportWizard/AbstractSettings>
 
 class KConfigGroup;
 

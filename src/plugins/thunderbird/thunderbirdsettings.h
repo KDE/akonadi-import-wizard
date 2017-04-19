@@ -20,8 +20,8 @@
 #ifndef THUNDERBIRDSETTINGS_H
 #define THUNDERBIRDSETTINGS_H
 
-#include "abstractsettings.h"
-#include "importwizardutil.h"
+#include <ImportWizard/AbstractSettings>
+#include <ImportWizard/ImportWizardUtil>
 #include <QHash>
 #include <QStringList>
 

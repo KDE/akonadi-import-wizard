@@ -88,6 +88,7 @@ ecm_generate_headers(ImportWizard_CamelCase_HEADERS
     AbstractSettings
     AbstractAddressBook
     AbstractCalendar
+    ImportWizardUtil
     PREFIX ImportWizard
     REQUIRED_HEADERS ImportWizard_HEADERS
     )

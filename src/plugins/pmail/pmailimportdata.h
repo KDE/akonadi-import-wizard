@@ -20,7 +20,7 @@
 #ifndef PMailImportData_H
 #define PMailImportData_H
 
-#include "abstractimporter.h"
+#include <ImportWizard/AbstractImporter>
 
 class PMailImportData : public LibImportWizard::AbstractImporter
 {

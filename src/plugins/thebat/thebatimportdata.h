@@ -19,7 +19,7 @@
 #ifndef TheBatImportData_H
 #define TheBatImportData_H
 
-#include "abstractimporter.h"
+#include <ImportWizard/AbstractImporter>
 
 class TheBatImportData : public LibImportWizard::AbstractImporter
 {

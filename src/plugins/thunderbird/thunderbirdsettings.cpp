@@ -20,7 +20,7 @@
 #include "thunderbirdsettings.h"
 #include <mailtransport/transportmanager.h>
 #include "MailCommon/MailUtil"
-#include "importwizardutil.h"
+#include <ImportWizard/ImportWizardUtil>
 
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>

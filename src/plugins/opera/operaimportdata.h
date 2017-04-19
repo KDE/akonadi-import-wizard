@@ -20,7 +20,7 @@
 #ifndef OperaImportData_H
 #define OperaImportData_H
 
-#include "abstractimporter.h"
+#include <ImportWizard/AbstractImporter>
 
 class OperaImportData : public LibImportWizard::AbstractImporter
 {

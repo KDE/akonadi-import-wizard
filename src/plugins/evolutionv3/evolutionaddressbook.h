@@ -20,7 +20,7 @@
 #ifndef EVOLUTIONADDRESSBOOK_H
 #define EVOLUTIONADDRESSBOOK_H
 
-#include "abstractaddressbook.h"
+#include <ImportWizard/AbstractAddressBook>
 
 class EvolutionAddressBook : public LibImportWizard::AbstractAddressBook
 {

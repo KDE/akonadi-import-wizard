@@ -20,7 +20,7 @@
 #ifndef BalsaAddressBook_H
 #define BalsaAddressBook_H
 
-#include "abstractaddressbook.h"
+#include <ImportWizard/AbstractAddressBook>
 
 class KConfigGroup;
 

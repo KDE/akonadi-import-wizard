@@ -18,7 +18,7 @@
 */
 
 #include "trojitasettings.h"
-#include "importwizardutil.h"
+#include <ImportWizard/ImportWizardUtil>
 
 #include <mailtransport/transportmanager.h>
 
