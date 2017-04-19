@@ -1,9 +1,9 @@
-#ecm_setup_version(PROJECT
-#    VARIABLE_PREFIX ImporWizard
-#    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/importwizard_version.h"
-#    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPimImportWizardConfigVersion.cmake"
-#    SOVERSION 5
-#)
+ecm_setup_version(PROJECT
+    VARIABLE_PREFIX IMPORTWIZARD
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/importwizard_version.h"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPimImportWizardConfigVersion.cmake"
+    SOVERSION 5
+)
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPimImportWizard")
 
@@ -16,7 +16,7 @@ configure_package_config_file(
 
 install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/KPimImportWizardConfig.cmake"
-    #"${CMAKE_CURRENT_BINARY_DIR}/KPimImportWizardConfigVersion.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPimImportWizardConfigVersion.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
 )
@@ -76,11 +76,6 @@ install(TARGETS
     KPimImportWizard
     EXPORT KPimImportWizardTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
 )
-
-
-set_target_properties(KPimImportWizard
-    PROPERTIES OUTPUT_NAME importwizard VERSION ${KDEPIM_LIB_VERSION} SOVERSION ${KDEPIM_LIB_SOVERSION}
-    )
 
 
 install(TARGETS KPimImportWizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} ${LIBRARY_NAMELINK})

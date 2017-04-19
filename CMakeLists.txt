@@ -1,6 +1,7 @@
-project(akonadi-import-wizard)
-
 cmake_minimum_required(VERSION 3.1)
+set(PIM_VERSION "5.5.41")
+project(AkonadiImportWizard VERSION ${PIM_VERSION})
+
 set(KF5_VERSION "5.32.0")
 find_package(ECM ${KF5_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -33,7 +34,7 @@ endif()
 
 
 
-set(KDEPIM_VERSION_NUMBER "5.5.41")
+set(KDEPIM_VERSION_NUMBER "${PIM_VERSION}")
 set(KDEPIM_VERSION "${KDEPIM_VERSION_NUMBER}${KDEPIM_DEV_VERSION}")
 
 
