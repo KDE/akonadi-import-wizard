@@ -12,7 +12,7 @@ kcoreaddons_add_plugin(icedoveimporterplugin JSON icedoveimporter.json SOURCES
 
 
 target_link_libraries(icedoveimporterplugin
-  libimportwizard
+  KPimImportWizard
   KF5::XmlGui
   KF5::I18n
   KF5::Contacts

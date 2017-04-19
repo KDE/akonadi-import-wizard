@@ -11,7 +11,7 @@ kcoreaddons_add_plugin(thunderbirdimporterplugin JSON thunderbirdimporter.json S
 
 
 target_link_libraries(thunderbirdimporterplugin
-  libimportwizard
+  KPimImportWizard
   KF5::XmlGui
   KF5::I18n
   KF5::Contacts

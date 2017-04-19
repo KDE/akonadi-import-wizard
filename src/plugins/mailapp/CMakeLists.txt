@@ -7,7 +7,7 @@ kcoreaddons_add_plugin(mailappimporterplugin JSON mailappimporter.json SOURCES
 
 
 target_link_libraries(mailappimporterplugin
-  libimportwizard
+  KPimImportWizard
   KF5::XmlGui
   KF5::I18n
   KF5::Contacts

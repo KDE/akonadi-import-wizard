@@ -60,7 +60,7 @@ add_executable(importwizard
     )
 
 target_link_libraries(importwizard
-    libimportwizard
+    KPimImportWizard
     KF5::AkonadiCore
     KF5::MailTransport
     KF5::XmlGui

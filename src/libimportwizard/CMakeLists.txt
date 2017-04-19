@@ -12,11 +12,14 @@ set(libimportwizard_utils_SRCS
 
 ecm_qt_declare_logging_category(libimportwizard_abstract_SRCS HEADER libimportwizard_debug.h IDENTIFIER LIBIMPORTWIZARD_LOG CATEGORY_NAME org.kde.pim.importwizard.lib)
 
-add_library(libimportwizard ${libimportwizard_abstract_SRCS} ${libimportwizard_utils_SRCS})
+add_library(KPimImportWizard ${libimportwizard_abstract_SRCS} ${libimportwizard_utils_SRCS})
 
-generate_export_header(libimportwizard BASE_NAME libimportwizard)
+add_library(KPim::ImportWizard ALIAS KPimImportWizard)
 
-target_link_libraries(libimportwizard
+
+generate_export_header(KPimImportWizard BASE_NAME libimportwizard)
+
+target_link_libraries(KPimImportWizard
     PUBLIC
     KF5::MailTransport
     PRIVATE
@@ -26,12 +29,12 @@ target_link_libraries(libimportwizard
     KF5::I18n
     )
 
-set_target_properties(libimportwizard
+set_target_properties(KPimImportWizard
     PROPERTIES OUTPUT_NAME importwizard VERSION ${KDEPIM_LIB_VERSION} SOVERSION ${KDEPIM_LIB_SOVERSION}
     )
 
 
-install(TARGETS libimportwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} ${LIBRARY_NAMELINK})
+install(TARGETS KPimImportWizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} ${LIBRARY_NAMELINK})
 
 ecm_generate_headers(ImportWizard_CamelCase_HEADERS
     HEADER_NAMES

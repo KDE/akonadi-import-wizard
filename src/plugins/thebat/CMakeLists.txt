@@ -7,7 +7,7 @@ kcoreaddons_add_plugin(thebatimporterplugin JSON thebatimporter.json SOURCES
 
 
 target_link_libraries(thebatimporterplugin
-  libimportwizard
+  KPimImportWizard
   KF5::XmlGui
   KF5::I18n
   KF5::Contacts
