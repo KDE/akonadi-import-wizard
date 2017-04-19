@@ -32,3 +32,29 @@ set_target_properties(libimportwizard
 
 
 install(TARGETS libimportwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} ${LIBRARY_NAMELINK})
+
+ecm_generate_headers(ImportWizard_CamelCase_HEADERS
+    HEADER_NAMES
+    AbstractBase
+    AbstractDisplayInfo
+    AbstractImporter
+    AbstractSettings
+    AbstractAddressBook
+    AbstractCalendar
+    PREFIX ImportWizard
+    REQUIRED_HEADERS ImportWizard_HEADERS
+    )
+
+install(FILES
+    ${ImportWizard_CamelCase_HEADERS}
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KPim/ImportWizard/
+    COMPONENT Devel
+    )
+
+install(FILES
+    ${CMAKE_CURRENT_BINARY_DIR}/libimportwizard_export.h
+    ${ImportWizard_HEADERS}
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KPim/importwizard/
+    COMPONENT Devel
+    )
+
