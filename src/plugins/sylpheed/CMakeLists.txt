@@ -11,7 +11,7 @@ kcoreaddons_add_plugin(sylpheedimporterplugin JSON sylpheedimporter.json SOURCES
 
 
 target_link_libraries(sylpheedimporterplugin
-  KPimImportWizard
+  KPim::ImportWizard
   KF5::XmlGui
   KF5::I18n
   KF5::Contacts

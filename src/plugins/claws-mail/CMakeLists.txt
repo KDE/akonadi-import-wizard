@@ -15,7 +15,7 @@ kcoreaddons_add_plugin(clawsmailimporterplugin JSON clawsmailimporter.json SOURC
 
 
 target_link_libraries(clawsmailimporterplugin
-  KPimImportWizard
+  KPim::ImportWizard
   KF5::XmlGui
   KF5::I18n
   KF5::Contacts

@@ -7,7 +7,7 @@ kcoreaddons_add_plugin(evolutionv2importerplugin JSON evolutionv2importer.json S
 
 
 target_link_libraries(evolutionv2importerplugin
-  KPimImportWizard
+  KPim::ImportWizard
   KF5::XmlGui
   KF5::I18n
   KF5::Contacts

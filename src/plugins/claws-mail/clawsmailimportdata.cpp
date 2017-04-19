@@ -23,7 +23,7 @@
 #include "mailimporter/filterclawsmail.h"
 #include "MailCommon/FilterImporterClawsMail"
 #include "mailimporter/filterinfo.h"
-#include "importfilterinfogui.h"
+
 
 
 #include <kpluginfactory.h>

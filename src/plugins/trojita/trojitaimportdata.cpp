@@ -22,7 +22,7 @@
 #include "trojitaaddressbook.h"
 #include "mailimporter/filterinfo.h"
 #include "mailimporter/othermailerutil.h"
-#include "importfilterinfogui.h"
+
 
 #include <kpluginfactory.h>
 

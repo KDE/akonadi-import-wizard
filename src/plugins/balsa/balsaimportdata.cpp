@@ -23,7 +23,7 @@
 #include "mailimporter/filterbalsa.h"
 #include "mailimporter/filterinfo.h"
 #include "MailCommon/FilterImporterBalsa"
-#include "importfilterinfogui.h"
+
 
 
 #include <KLocalizedString>

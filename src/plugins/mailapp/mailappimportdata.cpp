@@ -20,7 +20,7 @@
 #include "mailappimportdata.h"
 #include "mailimporter/filtermailapp.h"
 #include "mailimporter/filterinfo.h"
-#include "importfilterinfogui.h"
+
 
 
 #include <KLocalizedString>

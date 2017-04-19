@@ -20,7 +20,7 @@
 #include "oeimportdata.h"
 #include "mailimporter/filteroe.h"
 #include "mailimporter/filterinfo.h"
-#include "importfilterinfogui.h"
+
 
 
 #include <KLocalizedString>

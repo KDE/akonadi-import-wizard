@@ -10,7 +10,7 @@ kcoreaddons_add_plugin(operaimporterplugin JSON operaimporter.json SOURCES
 
 
 target_link_libraries(operaimporterplugin
-  KPimImportWizard
+  KPim::ImportWizard
   KF5::XmlGui
   KF5::I18n
   KF5::Contacts

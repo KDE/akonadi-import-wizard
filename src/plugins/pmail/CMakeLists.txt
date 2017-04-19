@@ -8,7 +8,7 @@ kcoreaddons_add_plugin(pmailimporterplugin JSON pmailimporter.json SOURCES
 
 
 target_link_libraries(pmailimporterplugin
-  KPimImportWizard
+  KPim::ImportWizard
   KF5::XmlGui
   KF5::I18n
   KF5::Contacts

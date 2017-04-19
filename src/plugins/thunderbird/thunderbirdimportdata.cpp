@@ -18,7 +18,7 @@
 */
 
 #include "thunderbirdimportdata.h"
-#include "importfilterinfogui.h"
+
 #include "thunderbirdsettings.h"
 #include "thunderbirdaddressbook.h"
 #include "abstractdisplayinfo.h"

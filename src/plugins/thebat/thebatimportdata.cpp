@@ -20,7 +20,7 @@
 #include "thebatimportdata.h"
 #include "mailimporter/filterthebat.h"
 #include "mailimporter/filterinfo.h"
-#include "importfilterinfogui.h"
+
 
 
 #include <KLocalizedString>

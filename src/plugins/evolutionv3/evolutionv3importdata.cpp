@@ -23,7 +23,7 @@
 #include "evolutionaddressbook.h"
 #include "mailimporter/filterevolution_v3.h"
 #include "mailimporter/filterinfo.h"
-#include "importfilterinfogui.h"
+
 #include "MailCommon/FilterImporterExporter"
 #include <kpluginfactory.h>
 

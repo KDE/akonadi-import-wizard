@@ -22,7 +22,7 @@
 #include "gearyaddressbook.h"
 #include "mailimporter/filterinfo.h"
 #include "mailimporter/othermailerutil.h"
-#include "importfilterinfogui.h"
+
 
 #include "gearyplugin_debug.h"
 #include <kpluginfactory.h>

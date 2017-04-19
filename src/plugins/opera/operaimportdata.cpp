@@ -22,7 +22,7 @@
 #include "operasettings.h"
 #include "mailimporter/filteropera.h"
 #include "mailimporter/filterinfo.h"
-#include "importfilterinfogui.h"
+
 
 
 #include <KLocalizedString>

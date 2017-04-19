@@ -21,7 +21,7 @@
 #include "pmailsettings.h"
 #include "mailimporter/filterpmail.h"
 #include "mailimporter/filterinfo.h"
-#include "importfilterinfogui.h"
+
 
 
 #include <KLocalizedString>
