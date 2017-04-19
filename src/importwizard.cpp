@@ -29,8 +29,6 @@
 #include "importmailpluginmanager.h"
 #include "importwizarddisplayinfo.h"
 
-
-
 #include "manual/manualimportmailpage.h"
 #include "manual/manualselectfilterpage.h"
 #include "manual/importwizardfilterinfogui.h"

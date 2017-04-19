@@ -24,8 +24,6 @@
 #include "mailimporter/filterinfo.h"
 #include "MailCommon/FilterImporterBalsa"
 
-
-
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 #include <QDir>

@@ -23,7 +23,6 @@
 #include "mailimporter/filterinfo.h"
 #include "mailimporter/othermailerutil.h"
 
-
 #include <kpluginfactory.h>
 
 #include <QDir>

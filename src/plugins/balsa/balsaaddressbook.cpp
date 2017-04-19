@@ -20,7 +20,6 @@
 #include "balsaaddressbook.h"
 #include <ImportWizard/ImportWizardUtil>
 
-
 #include <KContacts/Addressee>
 #include <KContacts/LDIFConverter>
 

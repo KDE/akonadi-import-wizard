@@ -27,7 +27,6 @@
 #include "mailimporter/filterinfo.h"
 #include "MailCommon/FilterImporterExporter"
 
-
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 

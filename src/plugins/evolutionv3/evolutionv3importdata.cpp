@@ -27,7 +27,6 @@
 #include "MailCommon/FilterImporterExporter"
 #include <kpluginfactory.h>
 
-
 #include <KLocalizedString>
 
 #include <QDir>
