@@ -71,6 +71,7 @@ bool AbstractImporter::importCalendar()
 
 void AbstractImporter::initializeFilter(MailImporter::Filter &filter)
 {
+    Q_ASSERT_X(mAbstractDisplayInfo, __FUNCTION__, "mAbstractDisplayInfo is not setting");
     mAbstractDisplayInfo->initializeFilter(filter);
 }
 
@@ -102,6 +103,7 @@ void AbstractImporter::appendFilters(const QList<MailCommon::MailFilter *> &filt
 
 void AbstractImporter::addImportFilterInfo(const QString &log) const
 {
+    Q_ASSERT_X(mAbstractDisplayInfo, __FUNCTION__, "mAbstractDisplayInfo is not setting");
     if (mAbstractDisplayInfo) {
         mAbstractDisplayInfo->filterImportInfo(log);
     }
@@ -109,6 +111,7 @@ void AbstractImporter::addImportFilterInfo(const QString &log) const
 
 void AbstractImporter::addImportFilterError(const QString &log) const
 {
+    Q_ASSERT_X(mAbstractDisplayInfo, __FUNCTION__, "mAbstractDisplayInfo is not setting");
     if (mAbstractDisplayInfo) {
         mAbstractDisplayInfo->filterImportError(log);
     }
@@ -116,6 +119,7 @@ void AbstractImporter::addImportFilterError(const QString &log) const
 
 void AbstractImporter::addImportSettingsInfo(const QString &log) const
 {
+    Q_ASSERT_X(mAbstractDisplayInfo, __FUNCTION__, "mAbstractDisplayInfo is not setting");
     if (mAbstractDisplayInfo) {
         mAbstractDisplayInfo->settingsImportInfo(log);
     }
@@ -123,6 +127,7 @@ void AbstractImporter::addImportSettingsInfo(const QString &log) const
 
 void AbstractImporter::addImportCalendarInfo(const QString &log) const
 {
+    Q_ASSERT_X(mAbstractDisplayInfo, __FUNCTION__, "mAbstractDisplayInfo is not setting");
     if (mAbstractDisplayInfo) {
         mAbstractDisplayInfo->calendarImportInfo(log);
     }

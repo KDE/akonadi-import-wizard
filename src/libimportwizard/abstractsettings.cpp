@@ -92,6 +92,7 @@ void AbstractSettings::storeTransport(MailTransport::Transport *mt, bool isDefau
 
 void AbstractSettings::addImportInfo(const QString &log)
 {
+    Q_ASSERT_X(mAbstractDisplayInfo, __FUNCTION__, "mAbstractDisplayInfo is not setting");
     if (mAbstractDisplayInfo) {
         mAbstractDisplayInfo->settingsImportInfo(log);
     }
@@ -99,6 +100,7 @@ void AbstractSettings::addImportInfo(const QString &log)
 
 void AbstractSettings::addImportError(const QString &log)
 {
+    Q_ASSERT_X(mAbstractDisplayInfo, __FUNCTION__, "mAbstractDisplayInfo is not setting");
     if (mAbstractDisplayInfo) {
         mAbstractDisplayInfo->settingsImportError(log);
     }

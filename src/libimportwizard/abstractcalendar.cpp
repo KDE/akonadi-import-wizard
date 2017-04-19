@@ -34,6 +34,7 @@ AbstractCalendar::~AbstractCalendar()
 
 void AbstractCalendar::addImportInfo(const QString &log)
 {
+    Q_ASSERT_X(mAbstractDisplayInfo, __FUNCTION__, "mAbstractDisplayInfo is not setting");
     if (mAbstractDisplayInfo) {
         mAbstractDisplayInfo->calendarImportInfo(log);
     }
@@ -41,6 +42,7 @@ void AbstractCalendar::addImportInfo(const QString &log)
 
 void AbstractCalendar::addImportError(const QString &log)
 {
+    Q_ASSERT_X(mAbstractDisplayInfo, __FUNCTION__, "mAbstractDisplayInfo is not setting");
     if (mAbstractDisplayInfo) {
         mAbstractDisplayInfo->calendarImportError(log);
     }
