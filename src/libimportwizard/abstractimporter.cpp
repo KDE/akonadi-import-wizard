@@ -18,10 +18,6 @@
 */
 
 #include "abstractimporter.h"
-#include "importmailpage.h"
-#include "importfilterpage.h"
-#include "importsettingpage.h"
-#include "importcalendarpage.h"
 #include "abstractdisplayinfo.h"
 
 #include "mailimporter/filterinfo.h"
