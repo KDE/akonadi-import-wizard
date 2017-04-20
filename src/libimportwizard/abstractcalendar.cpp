@@ -18,7 +18,6 @@
 */
 
 #include "abstractcalendar.h"
-#include "importcalendarpage.h"
 #include "abstractdisplayinfo.h"
 #include <KSharedConfig>
 #include <KConfigGroup>

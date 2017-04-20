@@ -79,9 +79,6 @@ include_directories(${importwizard_SOURCE_DIR} ${importwizard_BINARY_DIR})
 
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 add_definitions(-DQT_USE_QSTRINGBUILDER)
-include_directories(
-    ${AkonadiImportWizard_SOURCE_DIR}/src/autodetect/
-    )
 
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)

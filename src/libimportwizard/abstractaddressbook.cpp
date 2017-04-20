@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 #include "abstractaddressbook.h"
-#include "importaddressbookpage.h"
 #include "abstractdisplayinfo.h"
 
 #include <KContacts/Addressee>

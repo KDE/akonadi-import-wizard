@@ -19,15 +19,15 @@
 
 #include "importwizarddisplayinfo.h"
 #include "importwizard.h"
-#include "importcalendarpage.h"
-#include "importsettingpage.h"
-#include "importaddressbookpage.h"
-#include "importfilterpage.h"
-#include "importmailpage.h"
+#include "autodetect/importcalendarpage.h"
+#include "autodetect/importsettingpage.h"
+#include "autodetect/importaddressbookpage.h"
+#include "autodetect/importfilterpage.h"
+#include "autodetect/importmailpage.h"
+#include "autodetect/importfilterinfogui.h"
 
 #include <MailImporter/FilterInfo>
 #include <MailImporterAkonadi/FilterImporterAkonadi>
-#include <importfilterinfogui.h>
 
 ImportWizardDisplayInfo::ImportWizardDisplayInfo(ImportWizard *wizard)
     : mImportWizard(wizard)

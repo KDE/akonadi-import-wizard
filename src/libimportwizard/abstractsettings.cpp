@@ -18,7 +18,6 @@
 */
 #include "abstractsettings.h"
 #include "abstractdisplayinfo.h"
-#include "importsettingpage.h"
 
 #include <KIdentityManagement/kidentitymanagement/identitymanager.h>
 #include <KIdentityManagement/kidentitymanagement/identity.h>
