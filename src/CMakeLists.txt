@@ -68,7 +68,6 @@ target_link_libraries(importwizard
     KF5::PimCommon
     KF5::MailCommon
     KF5::Libkdepim
-    KF5::MessageViewer
     KF5::Completion
     KF5::I18n
     KF5::CoreAddons
