@@ -22,7 +22,6 @@
 
 #include <QObject>
 #include "libimportwizard_export.h"
-#include <QString>
 #include <QMap>
 #include <QVariant>
 
