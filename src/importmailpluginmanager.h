@@ -33,7 +33,6 @@ public:
     }
 
     QStringList mExtraInfo;
-    QString mDescription;
     QString mIdentifier;
     QString mName;
 };

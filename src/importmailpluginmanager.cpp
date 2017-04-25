@@ -113,7 +113,6 @@ QVector<LibImportWizard::AbstractImporter *> ImportMailPluginManager::pluginsLis
 PluginUtilData ImportMailPluginManager::createPluginMetaData(const KPluginMetaData &metaData)
 {
     PluginUtilData pluginData;
-    pluginData.mDescription = metaData.description();
     pluginData.mName = metaData.name();
     pluginData.mIdentifier = metaData.pluginId();
     return pluginData;
