@@ -43,7 +43,7 @@ bool AbstractAddressBook::selectAddressBook()
     addAddressBookImportInfo(i18n("Creating new contact..."));
     if (!mCollection.isValid()) {
         const QStringList mimeTypes(KContacts::Addressee::mimeType());
-        QPointer<Akonadi::CollectionDialog> dlg = new Akonadi::CollectionDialog(mAbstractDisplayInfo->parentWidget());
+        QPointer<Akonadi::CollectionDialog> dlg = new Akonadi::CollectionDialog(mAbstractDisplayInfo ? mAbstractDisplayInfo->parentWidget() : nullptr);
         dlg->setMimeTypeFilter(mimeTypes);
         dlg->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
         dlg->setWindowTitle(i18n("Select Address Book"));
