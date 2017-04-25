@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
-    parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("mode"), i18n("Mode")));
+    parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("mode"), i18n("Mode: %1", QStringLiteral("manual|automatic"))));
     parser.addVersionOption();
     parser.addHelpOption();
     aboutData.setupCommandLine(&parser);
