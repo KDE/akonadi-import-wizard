@@ -129,16 +129,6 @@ void AbstractImporter::addImportCalendarInfo(const QString &log) const
     }
 }
 
-void AbstractImporter::setParentWidget(QWidget *parent)
-{
-    mParentWidget = parent;
-}
-
-QWidget *AbstractImporter::parentWidget() const
-{
-    return mParentWidget;
-}
-
 void AbstractImporter::setAbstractDisplayInfo(AbstractDisplayInfo *info)
 {
     mAbstractDisplayInfo = info;

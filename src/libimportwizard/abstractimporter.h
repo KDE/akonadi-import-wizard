@@ -72,9 +72,6 @@ public:
     virtual bool importAddressBook();
     virtual bool importCalendar();
 
-    void setParentWidget(QWidget *parent);
-    QWidget *parentWidget() const;
-
     void setAbstractDisplayInfo(AbstractDisplayInfo *info);
 
 protected:
