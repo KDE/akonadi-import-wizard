@@ -66,6 +66,7 @@ target_link_libraries(KPimImportWizard
     KF5::Archive
     KF5::PimCommon
     KF5::MailCommon
+    KF5::MailImporter
     KF5::I18n
     )
 
