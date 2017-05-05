@@ -79,7 +79,7 @@ bool AbstractImporter::addFilters(const QString &filterPath, MailCommon::FilterI
         QList<MailCommon::MailFilter *> listFilter = importer.importFilters(canceled, type, filterPath);
         appendFilters(listFilter);
         if (canceled) {
-            addImportFilterInfo(i18n("Importing of filters was canceled."));
+            addImportFilterInfo(i18n("Importing of filters from \"%1\" was canceled.", filterPath));
         } else {
             addImportFilterInfo(i18np("1 filter was imported from \"%2\"", "%1 filters were imported from \"%2\"", listFilter.count(), filterPath));
         }
