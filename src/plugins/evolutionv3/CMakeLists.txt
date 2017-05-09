@@ -1,24 +1,25 @@
 set(evolutionv3importer_SRCS
-   evolutionaddressbook.cpp  
-   evolutionv3importdata.cpp  
-   evolutionsettings.cpp
-   evolutioncalendar.cpp
-   evolutionutil.cpp
-)
-ecm_qt_declare_logging_category(evolutionv3importer_SRCS HEADER evolutionv3plugin_debug.h IDENTIFIER EVOLUTIONPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.evolutionplugin)
+    evolutionaddressbook.cpp
+    evolutionv3importdata.cpp
+    evolutionsettings.cpp
+    evolutioncalendar.cpp
+    evolutionutil.cpp
+    )
+ecm_qt_declare_logging_category(evolutionv3importer_SRCS HEADER evolutionv3plugin_debug.h
+    IDENTIFIER EVOLUTIONPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.evolutionplugin)
 
 kcoreaddons_add_plugin(evolutionv3importerplugin JSON evolutionv3importer.json SOURCES
     ${evolutionv3importer_SRCS} INSTALL_NAMESPACE importwizard)
 
 
 target_link_libraries(evolutionv3importerplugin
-  KPim::ImportWizard
-  KF5::XmlGui
-  KF5::I18n
-  KF5::Contacts
-  KF5::MailImporterAkonadi
-  KF5::MailTransport
-  KF5::MailCommon
-  KF5::IdentityManagement
-  KF5::MessageViewer
-)
+    KPim::ImportWizard
+    KF5::XmlGui
+    KF5::I18n
+    KF5::Contacts
+    KF5::MailImporterAkonadi
+    KF5::MailTransport
+    KF5::MailCommon
+    KF5::IdentityManagement
+    KF5::MessageViewer
+    )
