@@ -18,6 +18,7 @@
         "Name[sv]": "ClawsMail-importverktyg",
         "Name[uk]": "Засіб імпортування з ClawsMail",
         "Name[x-test]": "xxClawsMail Importerxx",
+        "Name[zh_CN]": "ClawsMail 导入器",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],

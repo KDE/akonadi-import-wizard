@@ -18,6 +18,7 @@
         "Name[sv]": "Sylpheed-importverktyg",
         "Name[uk]": "Засіб імпортування з Sylpheed",
         "Name[x-test]": "xxSylpheed Importerxx",
+        "Name[zh_CN]": "Sylpheed 导入器",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],

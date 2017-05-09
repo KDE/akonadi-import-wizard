@@ -18,6 +18,7 @@
         "Name[sv]": "Balsa-importverktyg",
         "Name[uk]": "Засіб імпортування з Balsa",
         "Name[x-test]": "xxBalsa Importerxx",
+        "Name[zh_CN]": "Balsa 导入器",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],

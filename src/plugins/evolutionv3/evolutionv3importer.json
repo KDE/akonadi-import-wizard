@@ -18,6 +18,7 @@
         "Name[sv]": "Evolution3-importverktyg",
         "Name[uk]": "Засіб імпортування з Evolution3",
         "Name[x-test]": "xxEvolution3 Importerxx",
+        "Name[zh_CN]": "Evolution3 导入器",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],

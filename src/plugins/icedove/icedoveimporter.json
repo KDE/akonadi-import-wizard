@@ -18,6 +18,7 @@
         "Name[sv]": "Icedove-importverktyg",
         "Name[uk]": "Засіб імпортування з Icedove",
         "Name[x-test]": "xxIcedove Importerxx",
+        "Name[zh_CN]": "Icedove 导入器",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],

@@ -18,6 +18,7 @@
         "Name[sv]": "Thunderbird-importverktyg",
         "Name[uk]": "Засіб імпортування з Thunderbird",
         "Name[x-test]": "xxThunderbird Importerxx",
+        "Name[zh_CN]": "Thunderbird 导入器",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],

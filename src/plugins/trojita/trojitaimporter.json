@@ -18,6 +18,7 @@
         "Name[sv]": "Trojita-importverktyg",
         "Name[uk]": "Засіб імпортування з Trojita",
         "Name[x-test]": "xxTrojita Importerxx",
+        "Name[zh_CN]": "Trojita 导入器",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],
