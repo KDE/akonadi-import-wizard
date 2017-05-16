@@ -82,7 +82,7 @@ bool IcedoveImportData::importSettings()
         account.setAbstractDisplayInfo(mAbstractDisplayInfo);
         account.importSettings();
     } else {
-        addImportSettingsInfo(i18n("Thunderbird settings not found."));
+        addImportSettingsInfo(i18n("Icedove settings not found."));
     }
     return true;
 }
@@ -123,7 +123,7 @@ bool IcedoveImportData::importFilters()
             const QString filterFile(subMailPath + QLatin1Char('/') + file + QLatin1String("/msgFilterRules.dat"));
             if (QFileInfo::exists(filterFile)) {
                 foundFilterFile = true;
-                const bool added = addFilters(filterFile, MailCommon::FilterImporterExporter::ThunderBirdFilter);
+                const bool added = addFilters(filterFile, MailCommon::FilterImporterExporter::IcedoveFilter);
                 if (!filtersAdded && added) {
                     filtersAdded = true;
                 }
