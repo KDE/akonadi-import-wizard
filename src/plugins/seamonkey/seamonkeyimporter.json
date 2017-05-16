@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "seamonkeyimporter",
+        "Name": "SeaMonkey Importer",
+        "ServiceTypes": [
+            "ImportWizard/PluginMailImporter"
+        ],
+        "Version": "1.0"
+    }
+}
