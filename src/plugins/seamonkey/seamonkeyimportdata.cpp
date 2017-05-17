@@ -23,7 +23,7 @@
 #include "../thunderbird/thunderbirdsettings.h"
 #include "../thunderbird/thunderbirdaddressbook.h"
 
-#include "mailimporter/filterthunderbird.h"
+#include "mailimporter/filterseamonkey.h"
 #include "mailimporter/filterinfo.h"
 #include "MailCommon/FilterImporterExporter"
 
@@ -36,8 +36,7 @@
 SeaMonkeyImportData::SeaMonkeyImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)
 {
-    //FIXME use MailImporter::FilterSeaMonkey::defaultSettingsPath()
-    mPath = MailImporter::FilterThunderbird::defaultSettingsPath();
+    mPath = MailImporter::FilterSeaMonkey::defaultSettingsPath();
 }
 
 SeaMonkeyImportData::~SeaMonkeyImportData()
@@ -90,7 +89,7 @@ bool SeaMonkeyImportData::importSettings()
 
 bool SeaMonkeyImportData::importMails()
 {
-    //* This should be usually ~/.SeaMonkey/xxxx.default/Mail/Local Folders/
+    //* This should be usually ~/.mozilla/seamonkey/xxxx.default/Mail/Local Folders/
     MailImporter::FilterThunderbird thunderbird;
     initializeFilter(thunderbird);
     thunderbird.filterInfo()->setStatusMessage(i18n("Import in progress"));
