@@ -36,7 +36,8 @@
 SeaMonkeyImportData::SeaMonkeyImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)
 {
-    mPath = MailImporter::FilterSeaMonkey::defaultSettingsPath();
+    //FIXME use MailImporter::FilterSeaMonkey::defaultSettingsPath()
+    mPath = MailImporter::FilterThunderbird::defaultSettingsPath();
 }
 
 SeaMonkeyImportData::~SeaMonkeyImportData()
@@ -123,7 +124,7 @@ bool SeaMonkeyImportData::importFilters()
             const QString filterFile(subMailPath + QLatin1Char('/') + file + QLatin1String("/msgFilterRules.dat"));
             if (QFileInfo::exists(filterFile)) {
                 foundFilterFile = true;
-                const bool added = addFilters(filterFile, MailCommon::FilterImporterExporter::SeaMonkeyFilter);
+                const bool added = addFilters(filterFile, MailCommon::FilterImporterExporter::SeaMonkey);
                 if (!filtersAdded && added) {
                     filtersAdded = true;
                 }
