@@ -123,7 +123,7 @@ bool SeaMonkeyImportData::importFilters()
             const QString filterFile(subMailPath + QLatin1Char('/') + file + QLatin1String("/msgFilterRules.dat"));
             if (QFileInfo::exists(filterFile)) {
                 foundFilterFile = true;
-                const bool added = addFilters(filterFile, MailCommon::FilterImporterExporter::SeaMonkey);
+                const bool added = addFilters(filterFile, MailCommon::FilterImporterExporter::SeaMonkeyFilter);
                 if (!filtersAdded && added) {
                     filtersAdded = true;
                 }
