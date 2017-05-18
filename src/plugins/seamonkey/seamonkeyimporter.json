@@ -2,6 +2,11 @@
     "KPlugin": {
         "Id": "seamonkeyimporter",
         "Name": "SeaMonkey Importer",
+        "Name[ca]": "Importador del SeaMonkey",
+        "Name[nl]": "SeaMonkey-importeur",
+        "Name[pt]": "Importador do SeaMonkey",
+        "Name[uk]": "Засіб імпортування з SeaMonkey",
+        "Name[x-test]": "xxSeaMonkey Importerxx",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],
