@@ -2,6 +2,7 @@
     "KPlugin": {
         "Id": "seamonkeyimporter",
         "Name": "SeaMonkey Importer",
+        "Name[ca@valencia]": "Importador del SeaMonkey",
         "Name[ca]": "Importador del SeaMonkey",
         "Name[it]": "Importatore da SeaMonkey",
         "Name[nl]": "SeaMonkey-importeur",
