@@ -32,8 +32,8 @@ public:
 
 protected:
     void addEvenViewConfig(const QString &groupName, const QString &key, const QString &value);
-    void addImportInfo(const QString &log) Q_DECL_OVERRIDE;
-    void addImportError(const QString &log) Q_DECL_OVERRIDE;
+    void addImportInfo(const QString &log) override;
+    void addImportError(const QString &log) override;
 };
 }
 #endif // ABSTRACTCALENDAR_H

@@ -28,17 +28,17 @@ public:
     explicit ImportWizardFilterInfoGui(ManualImportMailPage *dlg, QWidget *parent);
     ~ImportWizardFilterInfoGui();
 
-    void setStatusMessage(const QString &status) Q_DECL_OVERRIDE;
-    void setFrom(const QString &from) Q_DECL_OVERRIDE;
-    void setTo(const QString &to) Q_DECL_OVERRIDE;
-    void setCurrent(const QString &current) Q_DECL_OVERRIDE;
-    void setCurrent(int percent = 0) Q_DECL_OVERRIDE;
-    void setOverall(int percent = 0) Q_DECL_OVERRIDE;
-    void addErrorLogEntry(const QString &log) Q_DECL_OVERRIDE;
-    void addInfoLogEntry(const QString &log) Q_DECL_OVERRIDE;
-    void clear() Q_DECL_OVERRIDE;
-    void alert(const QString &message) Q_DECL_OVERRIDE;
-    QWidget *parent() const Q_DECL_OVERRIDE;
+    void setStatusMessage(const QString &status) override;
+    void setFrom(const QString &from) override;
+    void setTo(const QString &to) override;
+    void setCurrent(const QString &current) override;
+    void setCurrent(int percent = 0) override;
+    void setOverall(int percent = 0) override;
+    void addErrorLogEntry(const QString &log) override;
+    void addInfoLogEntry(const QString &log) override;
+    void clear() override;
+    void alert(const QString &message) override;
+    QWidget *parent() const override;
 
 private:
     QWidget *m_parent;

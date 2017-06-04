@@ -54,9 +54,9 @@ public:
     explicit ImportWizard(WizardMode mode, QWidget *parent = nullptr);
     ~ImportWizard();
 
-    void next() Q_DECL_OVERRIDE;
-    void reject() Q_DECL_OVERRIDE;
-    void back() Q_DECL_OVERRIDE;
+    void next() override;
+    void reject() override;
+    void back() override;
 
     ImportMailPage *importMailPage() const;
     ImportFilterPage *importFilterPage() const;

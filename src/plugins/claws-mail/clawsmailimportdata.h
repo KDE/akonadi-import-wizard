@@ -27,15 +27,15 @@ public:
     explicit ClawsMailImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
     ~ClawsMailImportData();
 
-    TypeSupportedOptions supportedOption() Q_DECL_OVERRIDE;
-    bool foundMailer() const Q_DECL_OVERRIDE;
+    TypeSupportedOptions supportedOption() override;
+    bool foundMailer() const override;
 
-    bool importMails() Q_DECL_OVERRIDE;
-    bool importAddressBook() Q_DECL_OVERRIDE;
-    bool importSettings() Q_DECL_OVERRIDE;
-    bool importFilters() Q_DECL_OVERRIDE;
+    bool importMails() override;
+    bool importAddressBook() override;
+    bool importSettings() override;
+    bool importFilters() override;
 
-    QString name() const Q_DECL_OVERRIDE;
+    QString name() const override;
 };
 
 #endif /* ClawsMailImportData_H */

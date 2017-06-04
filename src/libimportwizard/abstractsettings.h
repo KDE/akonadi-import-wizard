@@ -42,8 +42,8 @@ public:
     ~AbstractSettings();
 
 protected:
-    void addImportInfo(const QString &log) Q_DECL_OVERRIDE;
-    void addImportError(const QString &log) Q_DECL_OVERRIDE;
+    void addImportInfo(const QString &log) override;
+    void addImportError(const QString &log) override;
 
     void syncKmailConfig();
 

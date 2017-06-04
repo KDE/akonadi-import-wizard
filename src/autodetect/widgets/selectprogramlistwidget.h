@@ -32,7 +32,7 @@ public:
     void setNoProgramFound(bool noProgramFound);
 
 protected:
-    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *event) override;
 private:
     void generalPaletteChanged();
     QColor mTextColor;

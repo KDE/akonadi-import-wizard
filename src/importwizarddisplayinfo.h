@@ -30,18 +30,18 @@ public:
     explicit ImportWizardDisplayInfo(ImportWizard *wizard);
     ~ImportWizardDisplayInfo();
 
-    void calendarImportError(const QString &log) Q_DECL_OVERRIDE;
-    void settingsImportError(const QString &log) Q_DECL_OVERRIDE;
-    void addressbookImportError(const QString &log) Q_DECL_OVERRIDE;
-    void calendarImportInfo(const QString &log) Q_DECL_OVERRIDE;
-    void settingsImportInfo(const QString &log) Q_DECL_OVERRIDE;
-    void addressbookImportInfo(const QString &log) Q_DECL_OVERRIDE;
-    void filterImportError(const QString &log) Q_DECL_OVERRIDE;
-    void filterImportInfo(const QString &log) Q_DECL_OVERRIDE;
+    void calendarImportError(const QString &log) override;
+    void settingsImportError(const QString &log) override;
+    void addressbookImportError(const QString &log) override;
+    void calendarImportInfo(const QString &log) override;
+    void settingsImportInfo(const QString &log) override;
+    void addressbookImportInfo(const QString &log) override;
+    void filterImportError(const QString &log) override;
+    void filterImportInfo(const QString &log) override;
 
-    void initializeFilter(MailImporter::Filter &filter) Q_DECL_OVERRIDE;
+    void initializeFilter(MailImporter::Filter &filter) override;
 
-    QWidget *parentWidget() const Q_DECL_OVERRIDE;
+    QWidget *parentWidget() const override;
 private:
     ImportWizard *mImportWizard;
 };
