@@ -500,7 +500,7 @@ QString SylpheedSettings::readTransport(const KConfigGroup &accountConfig)
 
     if (!smtpserver.isEmpty()) {
         MailTransport::Transport *mt = createTransport();
-        mt->setType(MailTransport::Transport::EnumType::SMTP);
+        mt->setIdentifier(QStringLiteral("SMTP"));
         mt->setName(smtpserver);
         mt->setHost(smtpserver);
         int port = 0;

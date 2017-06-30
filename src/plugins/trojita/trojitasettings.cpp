@@ -139,7 +139,7 @@ void TrojitaSettings::readTransport()
                     mt->setEncryption(MailTransport::Transport::EnumEncryption::TLS);
                 }
             }
-            mt->setType(MailTransport::Transport::EnumType::SMTP);
+            mt->setIdentifier(QStringLiteral("SMTP"));
         } else {
             qCWarning(TROJITAPLUGIN_LOG) << " smtpMethod unknown " << smtpMethod;
         }
