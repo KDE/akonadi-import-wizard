@@ -53,13 +53,13 @@ ki18n_wrap_ui(importwizard_SRCS
 
 ecm_qt_declare_logging_category(importwizard_SRCS HEADER importwizard_debug.h IDENTIFIER IMPORTWIZARD_LOG CATEGORY_NAME org.kde.pim.importwizard)
 
-add_executable(importwizard
+add_executable(akonadiimportwizard
     ${importwizard_SRCS}
     ${importwizard_manual_SRCS}
     ${importwizard_autodetect_SRCS}
     )
 
-target_link_libraries(importwizard
+target_link_libraries(akonadiimportwizard
     KPimImportWizard
     KF5::AkonadiCore
     KF5::XmlGui
@@ -77,8 +77,8 @@ target_link_libraries(importwizard
     KF5::WidgetsAddons
     )
 
-install(TARGETS importwizard  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-install(PROGRAMS data/org.kde.importwizard.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(TARGETS akonadiimportwizard  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+install(PROGRAMS data/org.kde.akonadiimportwizard.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 add_subdirectory(manual/pics)
 add_subdirectory(plugins/)
