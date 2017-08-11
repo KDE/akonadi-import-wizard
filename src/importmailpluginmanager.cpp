@@ -28,8 +28,6 @@
 #include <QFileInfo>
 #include <QVector>
 
-Q_GLOBAL_STATIC(ImportMailPluginManager, s_instance)
-
 namespace {
 QString pluginVersion()
 {
@@ -49,7 +47,8 @@ ImportMailPluginManager::~ImportMailPluginManager()
 
 ImportMailPluginManager *ImportMailPluginManager::self()
 {
-    return s_instance;
+    static ImportMailPluginManager s_self;
+    return &s_self;
 }
 
 bool ImportMailPluginManager::initializePluginList()
