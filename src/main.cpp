@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
     migrate.setConfigFiles(QStringList() << QStringLiteral("importwizardrc"));
     migrate.migrate();
 
-    KLocalizedString::setApplicationDomain("importwizard");
+    KLocalizedString::setApplicationDomain("akonadiimportwizard");
     //FIXME: "wizards" are "assistents" in new KDE slang
 
     KAboutData aboutData(QStringLiteral("importwizard"),
