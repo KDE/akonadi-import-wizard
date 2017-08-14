@@ -278,9 +278,7 @@ int ThunderbirdSettings::adaptAutoResizeResolution(int index, const QString &con
             int val = lst.last().toInt();
             return val;
         }
-#if QT_VERSION >= QT_VERSION_CHECK(5,8,0)
         Q_FALLTHROUGH();
-#endif
     }
     default:
         return -1;
