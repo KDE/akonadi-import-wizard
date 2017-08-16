@@ -9,7 +9,6 @@ ecm_qt_declare_logging_category(balsaimporter_SRCS HEADER balsaplugin_debug.h
 kcoreaddons_add_plugin(balsaimporterplugin JSON balsaimporter.json SOURCES
     ${balsaimporter_SRCS} INSTALL_NAMESPACE importwizard)
 
-
 target_link_libraries(balsaimporterplugin
     KPim::ImportWizard
     KF5::XmlGui

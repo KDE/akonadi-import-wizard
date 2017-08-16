@@ -9,7 +9,7 @@ ecm_qt_declare_logging_category(thunderbirdimporter_SRCS HEADER thunderbirdplugi
     IDENTIFIER THUNDERBIRDPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.thunderbirdplugin)
 kcoreaddons_add_plugin(thunderbirdimporterplugin JSON thunderbirdimporter.json SOURCES
     ${thunderbirdimporter_SRCS} INSTALL_NAMESPACE importwizard)
-
+set_target_properties(thunderbirdimporterplugin PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/")
 
 target_link_libraries(thunderbirdimporterplugin
     KPim::ImportWizard
