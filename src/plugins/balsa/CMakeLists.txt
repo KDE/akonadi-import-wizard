@@ -8,6 +8,7 @@ ecm_qt_declare_logging_category(balsaimporter_SRCS HEADER balsaplugin_debug.h
 
 kcoreaddons_add_plugin(balsaimporterplugin JSON balsaimporter.json SOURCES
     ${balsaimporter_SRCS} INSTALL_NAMESPACE importwizard)
+set_target_properties(balsaimporterplugin PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/importwizard/")
 
 target_link_libraries(balsaimporterplugin
     KPim::ImportWizard

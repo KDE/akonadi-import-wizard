@@ -8,6 +8,7 @@ ecm_qt_declare_logging_category(trojitaimporter_SRCS HEADER trojitaplugin_debug.
     IDENTIFIER TROJITAPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.trojitaplugin)
 kcoreaddons_add_plugin(trojitaimporterplugin JSON trojitaimporter.json SOURCES
     ${trojitaimporter_SRCS} INSTALL_NAMESPACE importwizard)
+set_target_properties(trojitaimporterplugin PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/importwizard/")
 
 
 target_link_libraries(trojitaimporterplugin
