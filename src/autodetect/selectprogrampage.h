@@ -49,7 +49,7 @@ private:
     void slotItemDoubleClicked(QListWidgetItem *item);
 
     void slotSelectManualSelectionChanged(bool b);
-    Ui::SelectProgramPage *ui;
+    Ui::SelectProgramPage *ui = nullptr;
 };
 
 #endif // SELECTPROGRAMPAGE_H

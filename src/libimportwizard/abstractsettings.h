@@ -69,7 +69,7 @@ protected:
     void addToManualCheck(const QString &agentIdentifyName, bool manualCheck);
     int readKmailSettings(const QString &groupName, const QString &key);
 
-    KIdentityManagement::IdentityManager *mManager;
+    KIdentityManagement::IdentityManager *mManager = nullptr;
     KSharedConfigPtr mKmailConfig;
 };
 

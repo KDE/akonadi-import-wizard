@@ -29,7 +29,7 @@ public:
 
     Ui::ManualImportMailPage *widget() const;
 private:
-    Ui::ManualImportMailPage *mWidget;
+    Ui::ManualImportMailPage *mWidget = nullptr;
 };
 
 #endif

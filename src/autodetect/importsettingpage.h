@@ -40,7 +40,7 @@ Q_SIGNALS:
     void importSettingsClicked();
 
 private:
-    Ui::ImportSettingPage *ui;
+    Ui::ImportSettingPage *ui = nullptr;
 };
 
 #endif // IMPORTSETTINGPAGE_H

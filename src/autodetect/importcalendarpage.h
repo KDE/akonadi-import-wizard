@@ -42,7 +42,7 @@ Q_SIGNALS:
     void importCalendarClicked();
 
 private:
-    Ui::ImportCalendarPage *ui;
+    Ui::ImportCalendarPage *ui = nullptr;
 };
 
 #endif // IMPORTCALENDARPAGE_H

@@ -41,8 +41,8 @@ public:
     QWidget *parent() const override;
 
 private:
-    QWidget *m_parent;
-    ManualImportMailPage *mManualImportMailPage;
+    QWidget *m_parent = nullptr;
+    ManualImportMailPage *mManualImportMailPage = nullptr;
 };
 
 #endif /* IMPORTWIZARDFILTERINFOGUI_H */

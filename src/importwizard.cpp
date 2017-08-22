@@ -49,7 +49,6 @@
 ImportWizard::ImportWizard(WizardMode mode, QWidget *parent)
     : KAssistantDialog(parent)
     , mMode(mode)
-    , mSelectedPim(nullptr)
 {
     setModal(true);
     setWindowTitle(i18n("PIM Import Tool"));

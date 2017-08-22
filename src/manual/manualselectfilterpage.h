@@ -41,7 +41,7 @@ private Q_SLOTS:
     void filterSelected(int i);
 
 private:
-    Ui::ManualSelectFilterPage *mWidget;
+    Ui::ManualSelectFilterPage *mWidget = nullptr;
     QList<MailImporter::Filter *> mFilterList;
 };
 

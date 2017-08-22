@@ -49,7 +49,7 @@ Q_SIGNALS:
 
 private:
     void collectionChanged(const Akonadi::Collection &collection);
-    Ui::ImportMailPage *ui;
+    Ui::ImportMailPage *ui = nullptr;
 };
 
 #endif // IMPORTMAILPAGE_H

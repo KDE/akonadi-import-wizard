@@ -31,7 +31,6 @@
 using namespace Akonadi;
 using namespace LibImportWizard;
 AbstractBase::AbstractBase()
-    : mAbstractDisplayInfo(nullptr)
 {
     mCreateResource = new PimCommon::CreateResource();
     connect(mCreateResource, &PimCommon::CreateResource::createResourceInfo, this, &AbstractBase::slotCreateResourceInfo);

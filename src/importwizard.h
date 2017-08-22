@@ -95,32 +95,32 @@ private:
     QMap<QString, LibImportWizard::AbstractImporter *> mlistImport;
 
     WizardMode mMode;
-    LibImportWizard::AbstractImporter *mSelectedPim;
+    LibImportWizard::AbstractImporter *mSelectedPim = nullptr;
 
-    KPageWidgetItem *mSelectProgramPageItem;
-    KPageWidgetItem *mSelectComponentPageItem;
-    KPageWidgetItem *mImportMailPageItem;
-    KPageWidgetItem *mImportFilterPageItem;
-    KPageWidgetItem *mImportSettingPageItem;
-    KPageWidgetItem *mImportAddressbookPageItem;
-    KPageWidgetItem *mImportCalendarPageItem;
-    KPageWidgetItem *mImportFinishPageItem;
+    KPageWidgetItem *mSelectProgramPageItem = nullptr;
+    KPageWidgetItem *mSelectComponentPageItem = nullptr;
+    KPageWidgetItem *mImportMailPageItem = nullptr;
+    KPageWidgetItem *mImportFilterPageItem = nullptr;
+    KPageWidgetItem *mImportSettingPageItem = nullptr;
+    KPageWidgetItem *mImportAddressbookPageItem = nullptr;
+    KPageWidgetItem *mImportCalendarPageItem = nullptr;
+    KPageWidgetItem *mImportFinishPageItem = nullptr;
 
-    SelectProgramPage *mSelectProgramPage;
-    SelectComponentPage *mSelectComponentPage;
-    ImportMailPage *mImportMailPage;
-    ImportFilterPage *mImportFilterPage;
-    ImportSettingPage *mImportSettingPage;
-    ImportAddressbookPage *mImportAddressbookPage;
-    ImportFinishPage *mImportFinishPage;
-    ImportCalendarPage *mImportCalendarPage;
+    SelectProgramPage *mSelectProgramPage = nullptr;
+    SelectComponentPage *mSelectComponentPage = nullptr;
+    ImportMailPage *mImportMailPage = nullptr;
+    ImportFilterPage *mImportFilterPage = nullptr;
+    ImportSettingPage *mImportSettingPage = nullptr;
+    ImportAddressbookPage *mImportAddressbookPage = nullptr;
+    ImportFinishPage *mImportFinishPage = nullptr;
+    ImportCalendarPage *mImportCalendarPage = nullptr;
 
-    ManualSelectFilterPage *mSelfilterpage;
-    ManualImportMailPage *mImportpage;
-    KPageWidgetItem *mSelfilterpageItem;
-    KPageWidgetItem *mImportpageItem;
+    ManualSelectFilterPage *mSelfilterpage = nullptr;
+    ManualImportMailPage *mImportpage = nullptr;
+    KPageWidgetItem *mSelfilterpageItem = nullptr;
+    KPageWidgetItem *mImportpageItem = nullptr;
 
-    LibImportWizard::AbstractDisplayInfo *mAbstractDisplayInfo;
+    LibImportWizard::AbstractDisplayInfo *mAbstractDisplayInfo = nullptr;
 };
 
 #endif /* IMPORTWIZARD_H */

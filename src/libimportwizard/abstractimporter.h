@@ -85,8 +85,8 @@ protected:
     void addImportCalendarInfo(const QString &log) const;
 
     QString mPath;
-    AbstractDisplayInfo *mAbstractDisplayInfo;
-    QWidget *mParentWidget;
+    AbstractDisplayInfo *mAbstractDisplayInfo = nullptr;
+    QWidget *mParentWidget = nullptr;
 };
 }
 

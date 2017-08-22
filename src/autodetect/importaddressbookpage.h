@@ -42,7 +42,7 @@ Q_SIGNALS:
     void importAddressbookClicked();
 
 private:
-    Ui::ImportAddressbookPage *ui;
+    Ui::ImportAddressbookPage *ui = nullptr;
 };
 
 #endif // IMPORTADDRESSBOOKPAGE_H

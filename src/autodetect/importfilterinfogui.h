@@ -42,7 +42,7 @@ public:
     QWidget *parent() const override;
 
 private:
-    ImportMailPage *m_parent;
+    ImportMailPage *m_parent = nullptr;
 };
 
 #endif /* IMPORTFILTERINFOGUI_H */

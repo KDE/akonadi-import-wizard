@@ -43,7 +43,7 @@ public:
 
     QWidget *parentWidget() const override;
 private:
-    ImportWizard *mImportWizard;
+    ImportWizard *mImportWizard = nullptr;
 };
 
 #endif // IMPORTWIZARDDISPLAYINFO_H

@@ -46,12 +46,12 @@ protected:
     virtual void addImportInfo(const QString &log) = 0;
     virtual void addImportError(const QString &log) = 0;
 
-    AbstractDisplayInfo *mAbstractDisplayInfo;
+    AbstractDisplayInfo *mAbstractDisplayInfo = nullptr;
 
 private:
     void slotCreateResourceError(const QString &);
     void slotCreateResourceInfo(const QString &);
-    PimCommon::CreateResource *mCreateResource;
+    PimCommon::CreateResource *mCreateResource = nullptr;
 };
 }
 #endif // ABSTRACTBASE_H
