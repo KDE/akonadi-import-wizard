@@ -33,7 +33,7 @@ public:
     void readAddressBook();
 
 private:
-    QSettings *settings;
+    QSettings *settings = nullptr;
 };
 
 #endif /* TrojitaAddressBook_H */
