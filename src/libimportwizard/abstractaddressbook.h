@@ -31,7 +31,6 @@ class ContactGroup;
 
 class KJob;
 namespace LibImportWizard {
-class AbstractDisplayInfo;
 class LIBIMPORTWIZARD_EXPORT AbstractAddressBook : public LibImportWizard::AbstractBase
 {
     Q_OBJECT
