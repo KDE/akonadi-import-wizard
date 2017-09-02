@@ -15,8 +15,8 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef KSELFILTERPAGE_H
-#define KSELFILTERPAGE_H
+#ifndef MANUALSELECTFILTERPAGE_H
+#define MANUALSELECTFILTERPAGE_H
 
 #include "ui_manualselectfilterpage.h"
 #include <QList>
