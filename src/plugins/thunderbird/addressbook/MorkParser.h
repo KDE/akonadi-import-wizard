@@ -118,7 +118,7 @@ protected: // Data
 
     // All mork file data
     TableScopeMap mMork;
-    MorkCells *mCurrentCells;
+    MorkCells *mCurrentCells = nullptr;
 
     // Error status of last operation
     MorkErrors mError;
