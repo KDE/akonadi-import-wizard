@@ -29,7 +29,6 @@
 
 #include <KLocalizedString>
 #include <kpluginfactory.h>
-#include <KConfig>
 
 #include <QDir>
 

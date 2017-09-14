@@ -21,7 +21,6 @@
 #define IMPORTWIZARDDISPLAYINFO_H
 
 #include "abstractdisplayinfo.h"
-#include <QObject>
 
 class ImportWizard;
 class ImportWizardDisplayInfo : public LibImportWizard::AbstractDisplayInfo

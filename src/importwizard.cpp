@@ -36,7 +36,6 @@
 #include "mailimporter/filterinfo.h"
 #include <MailImporterAkonadi/FilterImporterAkonadi>
 
-#include <QAction>
 #include <KAboutData>
 #include <KLocalizedString>
 #include "importwizard_debug.h"

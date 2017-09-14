@@ -20,7 +20,6 @@
 #ifndef IMPORTWIZARDUTIL_H
 #define IMPORTWIZARDUTIL_H
 #include <QUrl>
-#include <QList>
 #include <QColor>
 #include <QString>
 #include "libimportwizard_export.h"
