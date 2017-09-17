@@ -21,6 +21,7 @@
         "Name[tr]": "SeaMonkey İçe Aktarıcı",
         "Name[uk]": "Засіб імпортування з SeaMonkey",
         "Name[x-test]": "xxSeaMonkey Importerxx",
+        "Name[zh_CN]": "SeaMonkey 导入器",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],
