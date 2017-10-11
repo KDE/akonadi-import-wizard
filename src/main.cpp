@@ -59,8 +59,6 @@ int main(int argc, char *argv[])
 
     QCommandLineParser parser;
     parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("mode"), i18n("Mode: %1", QStringLiteral("manual|automatic"))));
-    parser.addVersionOption();
-    parser.addHelpOption();
     aboutData.setupCommandLine(&parser);
     parser.process(app);
     aboutData.processCommandLine(&parser);
