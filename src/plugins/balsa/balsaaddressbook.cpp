@@ -45,7 +45,7 @@ BalsaAddressBook::~BalsaAddressBook()
 void BalsaAddressBook::importAddressBook()
 {
     KConfig config(mFileName);
-    const QStringList addressBookList = config.groupList().filter(QRegularExpression("address-book-\\d+"));
+    const QStringList addressBookList = config.groupList().filter(QRegularExpression(QStringLiteral("address-book-\\d+")));
     if (addressBookList.isEmpty()) {
         addAddressBookImportInfo(i18n("No addressbook found"));
     } else {
