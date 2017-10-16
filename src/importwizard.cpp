@@ -222,6 +222,7 @@ void ImportWizard::slotImportAddressbookClicked()
     addFinishInfo(i18n("Import addressbook from %1...", mSelectedPim->name()));
     mImportAddressbookPage->setImportButtonEnabled(false);
     const bool result = mSelectedPim->importAddressBook();
+    addFinishInfo(i18n("Import addressbook from %1: Done", mSelectedPim->name()));
     setValid(mImportAddressbookPageItem, result);
 }
 
@@ -230,6 +231,7 @@ void ImportWizard::slotImportFiltersClicked()
     addFinishInfo(i18n("Import filters from %1...", mSelectedPim->name()));
     mImportFilterPage->setImportButtonEnabled(false);
     const bool result = mSelectedPim->importFilters();
+    addFinishInfo(i18n("Import filters from %1: Done", mSelectedPim->name()));
     setValid(mImportFilterPageItem, result);
 }
 
@@ -238,6 +240,7 @@ void ImportWizard::slotImportMailsClicked()
     addFinishInfo(i18n("Import mails from %1...", mSelectedPim->name()));
     mImportMailPage->setImportButtonEnabled(false);
     const bool result = mSelectedPim->importMails();
+    addFinishInfo(i18n("Import mails from %1: Done", mSelectedPim->name()));
     setValid(mImportMailPageItem, result);
 }
 
@@ -246,6 +249,7 @@ void ImportWizard::slotImportSettingsClicked()
     addFinishInfo(i18n("Import settings from %1...", mSelectedPim->name()));
     mImportSettingPage->setImportButtonEnabled(false);
     const bool result = mSelectedPim->importSettings();
+    addFinishInfo(i18n("Import settings from %1: Done", mSelectedPim->name()));
     setValid(mImportSettingPageItem, result);
 }
 
@@ -254,6 +258,7 @@ void ImportWizard::slotImportCalendarClicked()
     addFinishInfo(i18n("Import calendar from %1...", mSelectedPim->name()));
     mImportCalendarPage->setImportButtonEnabled(false);
     const bool result = mSelectedPim->importCalendar();
+    addFinishInfo(i18n("Import calendar from %1: Done", mSelectedPim->name()));
     setValid(mImportCalendarPageItem, result);
 }
 

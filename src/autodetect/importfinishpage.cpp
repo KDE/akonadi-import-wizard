@@ -19,6 +19,7 @@
 
 #include "importfinishpage.h"
 #include "ui_importfinishpage.h"
+#include <QTime>
 
 ImportFinishPage::ImportFinishPage(QWidget *parent)
     : QWidget(parent)
@@ -34,7 +35,7 @@ ImportFinishPage::~ImportFinishPage()
 
 void ImportFinishPage::addImportInfo(const QString &log)
 {
-    ui->logFinish->addInfoLogEntry(log);
+    ui->logFinish->addInfoLogEntry(QStringLiteral("[%1] ").arg(QTime::currentTime().toString()) + log);
 }
 
 void ImportFinishPage::addImportError(const QString &log)
