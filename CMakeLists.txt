@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.1)
-set(PIM_VERSION "5.6.80")
+set(PIM_VERSION "5.6.90")
 project(AkonadiImportWizard VERSION ${PIM_VERSION})
 
 
@@ -37,7 +37,7 @@ endif()
 
 
 set(KDEPIM_VERSION_NUMBER "${PIM_VERSION}")
-set(KDEPIM_VERSION "${KDEPIM_VERSION_NUMBER}${KDEPIM_DEV_VERSION}")
+set(KDEPIM_VERSION "5.6.90")
 
 
 set(KMAILTRANSPORT_LIB_VERSION "5.6.80")
