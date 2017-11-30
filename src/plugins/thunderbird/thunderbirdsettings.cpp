@@ -762,13 +762,8 @@ void ThunderbirdSettings::readAccount()
         } else if (type == QLatin1String("none")) {
             //FIXME look at if we can implement it
             qCDebug(THUNDERBIRDPLUGIN_LOG) << " account type none!";
-        } else if (type == QLatin1String("movemail")) {
-            qCDebug(THUNDERBIRDPLUGIN_LOG) << " movemail accound found and not implemented in importthunderbird";
-        } else if (type == QLatin1String("rss")) {
-            qCDebug(THUNDERBIRDPLUGIN_LOG) << " rss resource needs to be implemented";
-            continue;
-        } else if (type == QLatin1String("nntp")) {
-            qCDebug(THUNDERBIRDPLUGIN_LOG) << " nntp resource need to be implemented";
+        } else if (type == QLatin1String("rss") || type == QLatin1String("nntp") || type == QLatin1String("movemail")) {
+            qCDebug(THUNDERBIRDPLUGIN_LOG) << QStringLiteral("%1 rss resource needs to be implemented").arg(type);
             continue;
         } else {
             qCDebug(THUNDERBIRDPLUGIN_LOG) << " type unknown : " << type;
