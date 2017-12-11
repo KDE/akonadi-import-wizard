@@ -90,7 +90,7 @@ add_definitions(-DQT_USE_QSTRINGBUILDER)
 add_definitions( -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 )
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
-endif(BUILD_TESTING)
+endif()
 
 add_subdirectory(src)
 
