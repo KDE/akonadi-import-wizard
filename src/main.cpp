@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2012-2017 Montel Laurent <montel@kde.org>
+   Copyright (C) 2012-2018 Montel Laurent <montel@kde.org>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
                          QStringLiteral(KDEPIM_VERSION),
                          i18n("PIM Import Tool"),
                          KAboutLicense::GPL_V2,
-                         i18n("Copyright © 2012-2017 ImportWizard authors"));
+                         i18n("Copyright © 2012-2018 ImportWizard authors"));
 
     aboutData.addAuthor(i18n("Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("kontact-import-wizard")));
