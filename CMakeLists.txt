@@ -34,13 +34,6 @@ if(DEFINED KDEPIM_DEV_VERSION)
     set(KDEPIM_DEV_VERSION " ${KDEPIM_DEV_VERSION}")
 endif()
 
-if(NOT CMAKE_VERSION VERSION_LESS "3.10.0")
-  # CMake 3.9+ warns about automoc on files without Q_OBJECT, and doesn't know about other macros.
-  # 3.10+ lets us provide more macro names that require automoc.
-  # Remove this when depending on a Frameworks or ECM version that solves this upstream.
-  list(APPEND CMAKE_AUTOMOC_MACRO_NAMES "K_PLUGIN_FACTORY_WITH_JSON")
-endif()
-
 
 set(KDEPIM_VERSION_NUMBER "${PIM_VERSION}")
 set(KDEPIM_VERSION "${KDEPIM_VERSION_NUMBER}${KDEPIM_DEV_VERSION}")
@@ -91,6 +84,13 @@ add_definitions( -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 )
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
 endif()
+if(NOT CMAKE_VERSION VERSION_LESS "3.10.0" AND KF5_VERSION VERSION_LESS "5.42.0")
+  # CMake 3.9+ warns about automoc on files without Q_OBJECT, and doesn't know about other macros.
+  # 3.10+ lets us provide more macro names that require automoc.
+  # KF5 >= 5.42 takes care itself of adding its macros in its cmake config files
+  list(APPEND CMAKE_AUTOMOC_MACRO_NAMES "K_PLUGIN_FACTORY_WITH_JSON")
+endif()
+
 
 add_subdirectory(src)
 
