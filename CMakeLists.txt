@@ -3,7 +3,7 @@ set(PIM_VERSION "5.7.40")
 project(AkonadiImportWizard VERSION ${PIM_VERSION})
 
 
-set(KF5_VERSION "5.41.0")
+set(KF5_VERSION "5.42.0")
 
 find_package(ECM ${KF5_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -83,12 +83,6 @@ add_definitions(-DQT_USE_QSTRINGBUILDER)
 add_definitions( -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 )
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
-endif()
-if(NOT CMAKE_VERSION VERSION_LESS "3.10.0" AND KF5_VERSION VERSION_LESS "5.42.0")
-  # CMake 3.9+ warns about automoc on files without Q_OBJECT, and doesn't know about other macros.
-  # 3.10+ lets us provide more macro names that require automoc.
-  # KF5 >= 5.42 takes care itself of adding its macros in its cmake config files
-  list(APPEND CMAKE_AUTOMOC_MACRO_NAMES "K_PLUGIN_FACTORY_WITH_JSON")
 endif()
 
 
