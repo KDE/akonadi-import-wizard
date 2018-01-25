@@ -57,23 +57,23 @@ void ThunderbirdSettings::importSettings()
     while (!stream.atEnd()) {
         const QString line = stream.readLine();
         if (line.startsWith(QStringLiteral("user_pref"))) {
-            if (line.contains(QStringLiteral("mail.smtpserver")) ||
-                    line.contains(QStringLiteral("mail.server.")) ||
-                    line.contains(QStringLiteral("mail.identity.")) ||
-                    line.contains(QStringLiteral("mail.account.")) ||
-                    line.contains(QStringLiteral("mail.accountmanager.")) ||
-                    line.contains(QStringLiteral("mailnews.")) ||
-                    line.contains(QStringLiteral("mail.compose.")) ||
-                    line.contains(QStringLiteral("mail.spellcheck")) ||
-                    line.contains(QStringLiteral("mail.SpellCheckBeforeSend")) ||
-                    line.contains(QStringLiteral("spellchecker.dictionary")) ||
-                    line.contains(QStringLiteral("ldap_")) ||
-                    line.contains(QStringLiteral("mail.biff.")) ||
-                    line.contains(QStringLiteral("mailnews.tags.")) ||
-                    line.contains(QStringLiteral("extensions.AutoResizeImage.")) ||
-                    line.contains(QStringLiteral("mail.phishing.")) ||
-                    line.contains(QStringLiteral("mail.display_glyph")) ||
-                    line.contains(QStringLiteral("extensions.sieve.account."))) {
+            if (line.contains(QLatin1String("mail.smtpserver")) ||
+                    line.contains(QLatin1String("mail.server.")) ||
+                    line.contains(QLatin1String("mail.identity.")) ||
+                    line.contains(QLatin1String("mail.account.")) ||
+                    line.contains(QLatin1String("mail.accountmanager.")) ||
+                    line.contains(QLatin1String("mailnews.")) ||
+                    line.contains(QLatin1String("mail.compose.")) ||
+                    line.contains(QLatin1String("mail.spellcheck")) ||
+                    line.contains(QLatin1String("mail.SpellCheckBeforeSend")) ||
+                    line.contains(QLatin1String("spellchecker.dictionary")) ||
+                    line.contains(QLatin1String("ldap_")) ||
+                    line.contains(QLatin1String("mail.biff.")) ||
+                    line.contains(QLatin1String("mailnews.tags.")) ||
+                    line.contains(QLatin1String("extensions.AutoResizeImage.")) ||
+                    line.contains(QLatin1String("mail.phishing.")) ||
+                    line.contains(QLatin1String("mail.display_glyph")) ||
+                    line.contains(QLatin1String("extensions.sieve.account."))) {
                 insertIntoMap(line);
             }
         } else {
@@ -1018,11 +1018,11 @@ void ThunderbirdSettings::insertIntoMap(const QString &line)
             mHashConfig.insert(key, value);
         }
     }
-    if (key.contains(QStringLiteral("ldap_")) && key.endsWith(QStringLiteral(".description"))) {
+    if (key.contains(QLatin1String("ldap_")) && key.endsWith(QStringLiteral(".description"))) {
         QString ldapAccountName = key;
         mLdapAccountList.append(ldapAccountName.remove(QStringLiteral(".description")));
     }
-    if (key.contains(QStringLiteral("mailnews.tags.")) &&
+    if (key.contains(QLatin1String("mailnews.tags.")) &&
             (key.endsWith(QStringLiteral(".color")) || key.endsWith(QStringLiteral(".tag")))) {
         QString name = key;
         name.remove(QStringLiteral("mailnews.tags."));

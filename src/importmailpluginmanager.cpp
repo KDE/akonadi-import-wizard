@@ -54,7 +54,7 @@ ImportMailPluginManager *ImportMailPluginManager::self()
 bool ImportMailPluginManager::initializePluginList()
 {
     const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("importwizard"), [](const KPluginMetaData &md) {
-        return md.serviceTypes().contains(QStringLiteral("ImportWizard/PluginMailImporter"));
+        return md.serviceTypes().contains(QLatin1String("ImportWizard/PluginMailImporter"));
     });
 
     QVectorIterator<KPluginMetaData> i(plugins);
