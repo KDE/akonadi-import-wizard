@@ -2,6 +2,7 @@
     "KPlugin": {
         "Id": "icedoveimporter",
         "Name": "Icedove Importer",
+        "Name[ar]": "مستورد «آيس‌دوڤ»",
         "Name[ca@valencia]": "Importador de l'Icedove",
         "Name[ca]": "Importador de l'Icedove",
         "Name[cs]": "Importér Icedove",

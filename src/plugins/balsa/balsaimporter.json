@@ -2,6 +2,7 @@
     "KPlugin": {
         "Id": "balsaimporter",
         "Name": "Balsa Importer",
+        "Name[ar]": "مستورد Balsa",
         "Name[ca@valencia]": "Importador del Balsa",
         "Name[ca]": "Importador del Balsa",
         "Name[cs]": "Importér Balsa",

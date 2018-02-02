@@ -2,6 +2,7 @@
     "KPlugin": {
         "Id": "trojitaimporter",
         "Name": "Trojita Importer",
+        "Name[ar]": "مستورد «تروجيتا»",
         "Name[ca@valencia]": "Importador del Trojita",
         "Name[ca]": "Importador del Trojita",
         "Name[cs]": "Importér Trojitá",
