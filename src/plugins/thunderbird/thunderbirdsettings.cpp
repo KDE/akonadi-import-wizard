@@ -224,10 +224,10 @@ void ThunderbirdSettings::readExtensionsSettings()
     const QString filteringRenamingPatternStr(QStringLiteral("extensions.AutoResizeImage.renamingPattern"));
     if (mHashConfig.contains(filteringRenamingPatternStr)) {
         QString filteringRenamingPattern = mHashConfig.value(filteringRenamingPatternStr).toString();
-        filteringRenamingPattern.replace(QStringLiteral("%3Fn"), QStringLiteral("%n"));
-        filteringRenamingPattern.replace(QStringLiteral("%3Ft"), QStringLiteral("%t"));
-        filteringRenamingPattern.replace(QStringLiteral("%3Fd"), QStringLiteral("%d"));
-        filteringRenamingPattern.replace(QStringLiteral("%3Fe"), QStringLiteral("%e"));
+        filteringRenamingPattern.replace(QLatin1String("%3Fn"), QLatin1String("%n"));
+        filteringRenamingPattern.replace(QLatin1String("%3Ft"), QLatin1String("%t"));
+        filteringRenamingPattern.replace(QLatin1String("%3Fd"), QLatin1String("%d"));
+        filteringRenamingPattern.replace(QLatin1String("%3Fe"), QLatin1String("%e"));
         addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("rename-resized-images-pattern"), filteringRenamingPattern);
     }
 
