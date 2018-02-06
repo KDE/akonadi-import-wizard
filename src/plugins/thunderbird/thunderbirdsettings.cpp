@@ -56,7 +56,7 @@ void ThunderbirdSettings::importSettings()
     QTextStream stream(&file);
     while (!stream.atEnd()) {
         const QString line = stream.readLine();
-        if (line.startsWith(QStringLiteral("user_pref"))) {
+        if (line.startsWith(QLatin1String("user_pref"))) {
             if (line.contains(QLatin1String("mail.smtpserver")) ||
                     line.contains(QLatin1String("mail.server.")) ||
                     line.contains(QLatin1String("mail.identity.")) ||
@@ -79,9 +79,9 @@ void ThunderbirdSettings::importSettings()
         } else {
             if (!line.startsWith(QLatin1Char('#')) ||
                     line.isEmpty() ||
-                    line.startsWith(QStringLiteral("/*")) ||
-                    line.startsWith(QStringLiteral(" */")) ||
-                    line.startsWith(QStringLiteral(" *"))) {
+                    line.startsWith(QLatin1String("/*")) ||
+                    line.startsWith(QLatin1String(" */")) ||
+                    line.startsWith(QLatin1String(" *"))) {
                 qCDebug(THUNDERBIRDPLUGIN_LOG) << " unstored line :" << line;
             }
 
@@ -1018,12 +1018,12 @@ void ThunderbirdSettings::insertIntoMap(const QString &line)
             mHashConfig.insert(key, value);
         }
     }
-    if (key.contains(QLatin1String("ldap_")) && key.endsWith(QStringLiteral(".description"))) {
+    if (key.contains(QLatin1String("ldap_")) && key.endsWith(QLatin1String(".description"))) {
         QString ldapAccountName = key;
         mLdapAccountList.append(ldapAccountName.remove(QStringLiteral(".description")));
     }
     if (key.contains(QLatin1String("mailnews.tags.")) &&
-            (key.endsWith(QStringLiteral(".color")) || key.endsWith(QStringLiteral(".tag")))) {
+            (key.endsWith(QLatin1String(".color")) || key.endsWith(QLatin1String(".tag")))) {
         QString name = key;
         name.remove(QStringLiteral("mailnews.tags."));
         name.remove(QStringLiteral(".color"));
@@ -1033,7 +1033,7 @@ void ThunderbirdSettings::insertIntoMap(const QString &line)
             tag = mHashTag.value(name);
             mHashTag.remove(name);
         }
-        if (key.endsWith(QStringLiteral(".color"))) {
+        if (key.endsWith(QLatin1String(".color"))) {
             tag.color = QColor(mHashConfig.value(key).toString());
         } else {
             tag.name = mHashConfig.value(key).toString();
