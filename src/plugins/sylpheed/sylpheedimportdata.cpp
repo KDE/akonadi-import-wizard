@@ -25,14 +25,12 @@
 
 #include "sylpheedsettings.h"
 #include "sylpheedaddressbook.h"
-
+#include "kcoreaddons_kdepim_compat.h"
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(SylpheedImporterFactory, "sylpheedimporter.json", registerPlugin<SylpheedImportData>();
-                           )
-
+K_PLUGIN_CLASS_WITH_JSON(SylpheedImportData, "sylpheedimporter.json")
 SylpheedImportData::SylpheedImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)
 {

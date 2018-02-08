@@ -26,13 +26,12 @@
 
 #include "MailCommon/FilterImporterExporter"
 #include <kpluginfactory.h>
-
+#include "kcoreaddons_kdepim_compat.h"
 #include <KLocalizedString>
 
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(Evolutionv3ImporterFactory, "evolutionv3importer.json", registerPlugin<Evolutionv3ImportData>();
-                           )
+K_PLUGIN_CLASS_WITH_JSON(Evolutionv3ImportData, "evolutionv3importer.json")
 
 Evolutionv3ImportData::Evolutionv3ImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)

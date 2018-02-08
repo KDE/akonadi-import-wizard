@@ -26,14 +26,13 @@
 #include "mailimporter/filterthunderbird.h"
 #include "mailimporter/filterinfo.h"
 #include "MailCommon/FilterImporterExporter"
-
+#include "kcoreaddons_kdepim_compat.h"
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(ThunderbirdImporterFactory, "thunderbirdimporter.json", registerPlugin<ThunderbirdImportData>();
-                           )
+K_PLUGIN_CLASS_WITH_JSON(ThunderbirdImportData, "thunderbirdimporter.json")
 
 ThunderbirdImportData::ThunderbirdImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)

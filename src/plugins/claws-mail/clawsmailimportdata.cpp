@@ -23,14 +23,13 @@
 #include "mailimporter/filterclawsmail.h"
 #include "MailCommon/FilterImporterClawsMail"
 #include "mailimporter/filterinfo.h"
-
+#include "kcoreaddons_kdepim_compat.h"
 #include <kpluginfactory.h>
 #include <KLocalizedString>
 
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(ClawsMailImporterFactory, "clawsmailimporter.json", registerPlugin<ClawsMailImportData>();
-                           )
+K_PLUGIN_CLASS_WITH_JSON(ClawsMailImportData, "clawsmailimporter.json")
 
 ClawsMailImportData::ClawsMailImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)

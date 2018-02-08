@@ -23,13 +23,12 @@
 #include "mailimporter/filterbalsa.h"
 #include "mailimporter/filterinfo.h"
 #include "MailCommon/FilterImporterBalsa"
-
+#include "kcoreaddons_kdepim_compat.h"
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(BalsaImporterFactory, "balsaimporter.json", registerPlugin<BalsaImportData>();
-                           )
+K_PLUGIN_CLASS_WITH_JSON(BalsaImportData, "balsaimporter.json")
 
 BalsaImportData::BalsaImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)
