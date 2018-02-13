@@ -52,7 +52,7 @@ public:
     };
 
     explicit ImportWizard(WizardMode mode, QWidget *parent = nullptr);
-    ~ImportWizard();
+    ~ImportWizard() override;
 
     void next() override;
     void reject() override;

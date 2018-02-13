@@ -27,7 +27,7 @@ class SelectProgramListWidget : public QListWidget
     Q_OBJECT
 public:
     explicit SelectProgramListWidget(QWidget *parent = nullptr);
-    ~SelectProgramListWidget();
+    ~SelectProgramListWidget() override;
 
     void setNoProgramFound(bool noProgramFound);
 

@@ -26,7 +26,7 @@ class ImportWizardFilterInfoGui : public MailImporter::FilterInfoGui
 {
 public:
     explicit ImportWizardFilterInfoGui(ManualImportMailPage *dlg, QWidget *parent);
-    ~ImportWizardFilterInfoGui();
+    ~ImportWizardFilterInfoGui() override;
 
     void setStatusMessage(const QString &status) override;
     void setFrom(const QString &from) override;

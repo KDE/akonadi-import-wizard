@@ -25,7 +25,7 @@ class IcedoveImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit IcedoveImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
-    ~IcedoveImportData();
+    ~IcedoveImportData() override;
 
     TypeSupportedOptions supportedOption() override;
     bool foundMailer() const override;

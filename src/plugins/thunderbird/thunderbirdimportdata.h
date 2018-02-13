@@ -25,7 +25,7 @@ class ThunderbirdImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit ThunderbirdImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
-    ~ThunderbirdImportData();
+    ~ThunderbirdImportData() override;
 
     TypeSupportedOptions supportedOption() override;
     bool foundMailer() const override;

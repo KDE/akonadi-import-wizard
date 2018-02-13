@@ -27,7 +27,7 @@ class ImportWizardDisplayInfo : public LibImportWizard::AbstractDisplayInfo
 {
 public:
     explicit ImportWizardDisplayInfo(ImportWizard *wizard);
-    ~ImportWizardDisplayInfo();
+    ~ImportWizardDisplayInfo() override;
 
     void calendarImportError(const QString &log) override;
     void settingsImportError(const QString &log) override;

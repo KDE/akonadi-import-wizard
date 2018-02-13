@@ -25,7 +25,7 @@ class ClawsMailImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit ClawsMailImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
-    ~ClawsMailImportData();
+    ~ClawsMailImportData() override;
 
     TypeSupportedOptions supportedOption() override;
     bool foundMailer() const override;

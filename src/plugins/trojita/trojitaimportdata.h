@@ -25,7 +25,7 @@ class TrojitaImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit TrojitaImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
-    ~TrojitaImportData();
+    ~TrojitaImportData() override;
 
     TypeSupportedOptions supportedOption() override;
     bool foundMailer() const override;

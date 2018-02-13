@@ -28,7 +28,7 @@ class LIBIMPORTWIZARD_EXPORT AbstractCalendar : public LibImportWizard::Abstract
     Q_OBJECT
 public:
     AbstractCalendar();
-    virtual ~AbstractCalendar();
+    ~AbstractCalendar() override;
 
 protected:
     void addEvenViewConfig(const QString &groupName, const QString &key, const QString &value);

@@ -25,7 +25,7 @@ class BalsaImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit BalsaImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
-    ~BalsaImportData();
+    ~BalsaImportData() override;
 
     TypeSupportedOptions supportedOption() override;
     bool foundMailer() const override;

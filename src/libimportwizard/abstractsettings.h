@@ -39,7 +39,7 @@ class LIBIMPORTWIZARD_EXPORT AbstractSettings : public LibImportWizard::Abstract
     Q_OBJECT
 public:
     AbstractSettings();
-    ~AbstractSettings();
+    ~AbstractSettings() override;
 
 protected:
     void addImportInfo(const QString &log) override;

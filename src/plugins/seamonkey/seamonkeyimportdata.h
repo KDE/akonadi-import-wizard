@@ -25,7 +25,7 @@ class SeaMonkeyImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit SeaMonkeyImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
-    ~SeaMonkeyImportData();
+    ~SeaMonkeyImportData() override;
 
     TypeSupportedOptions supportedOption() override;
     bool foundMailer() const override;

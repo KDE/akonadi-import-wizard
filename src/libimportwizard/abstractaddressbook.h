@@ -36,7 +36,7 @@ class LIBIMPORTWIZARD_EXPORT AbstractAddressBook : public LibImportWizard::Abstr
     Q_OBJECT
 public:
     AbstractAddressBook();
-    ~AbstractAddressBook();
+    ~AbstractAddressBook() override;
 
 protected:
     void createGroup(const KContacts::ContactGroup &group);

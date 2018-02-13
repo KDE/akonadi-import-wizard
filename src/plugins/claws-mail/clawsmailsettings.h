@@ -28,7 +28,7 @@ class ClawsMailSettings : public SylpheedSettings
 {
 public:
     ClawsMailSettings();
-    ~ClawsMailSettings();
+    ~ClawsMailSettings() override;
 
     void importSettings(const QString &filename, const QString &path) override;
 

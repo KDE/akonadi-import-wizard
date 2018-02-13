@@ -25,7 +25,7 @@ class SylpheedImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit SylpheedImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
-    ~SylpheedImportData();
+    ~SylpheedImportData() override;
 
     TypeSupportedOptions supportedOption() override;
     bool foundMailer() const override;

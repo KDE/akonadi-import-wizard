@@ -27,7 +27,7 @@ class ImportFilterInfoGui : public MailImporter::FilterInfoGui
 {
 public:
     explicit ImportFilterInfoGui(ImportMailPage *parent);
-    ~ImportFilterInfoGui();
+    ~ImportFilterInfoGui() override;
 
     void setStatusMessage(const QString &status) override;
     void setFrom(const QString &from) override;
