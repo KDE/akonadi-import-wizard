@@ -25,7 +25,7 @@
 
 #include "sylpheedsettings.h"
 #include "sylpheedaddressbook.h"
-#include "kcoreaddons_kdepim_compat.h"
+
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 #include <QDir>

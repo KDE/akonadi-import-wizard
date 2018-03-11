@@ -26,7 +26,7 @@
 #include "mailimporter/filterthunderbird.h"
 #include "mailimporter/filterinfo.h"
 #include "MailCommon/FilterImporterExporter"
-#include "kcoreaddons_kdepim_compat.h"
+
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 

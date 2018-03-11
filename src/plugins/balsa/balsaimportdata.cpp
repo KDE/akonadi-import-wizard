@@ -23,7 +23,7 @@
 #include "mailimporter/filterbalsa.h"
 #include "mailimporter/filterinfo.h"
 #include "MailCommon/FilterImporterBalsa"
-#include "kcoreaddons_kdepim_compat.h"
+
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 #include <QDir>

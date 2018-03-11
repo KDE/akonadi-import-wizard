@@ -23,7 +23,7 @@
 #include "mailimporter/filterclawsmail.h"
 #include "MailCommon/FilterImporterClawsMail"
 #include "mailimporter/filterinfo.h"
-#include "kcoreaddons_kdepim_compat.h"
+
 #include <kpluginfactory.h>
 #include <KLocalizedString>
 

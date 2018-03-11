@@ -22,7 +22,7 @@
 #include "trojitaaddressbook.h"
 #include "mailimporter/filterinfo.h"
 #include "mailimporter/othermailerutil.h"
-#include "kcoreaddons_kdepim_compat.h"
+
 #include <kpluginfactory.h>
 
 #include <QDir>
