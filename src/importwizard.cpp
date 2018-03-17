@@ -43,6 +43,7 @@
 #include <KHelpMenu>
 #include <AkonadiWidgets/controlgui.h>
 #include <MailCommon/MailKernel>
+#include <QAction>
 #include <QPushButton>
 
 ImportWizard::ImportWizard(WizardMode mode, QWidget *parent)
