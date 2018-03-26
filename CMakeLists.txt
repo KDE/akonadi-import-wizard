@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.1)
-set(PIM_VERSION "5.7.80")
+set(PIM_VERSION "5.7.90")
 project(AkonadiImportWizard VERSION ${PIM_VERSION})
 
 
