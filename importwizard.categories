@@ -1,11 +1,9 @@
-org.kde.pim.importwizard importwizard (importwizard)
-org.kde.pim.importwizard.lib importwizard (libimportwizard)
-org.kde.pim.importwizard.balsaplugin importwizard (balsa plugin)
-org.kde.pim.importwizard.evolutionplugin importwizard (evolution v3 plugin)
-org.kde.pim.importwizard.gearyplugin importwizard (geary plugin)
-org.kde.pim.importwizard.operaplugin importwizard (opera plugin)
-org.kde.pim.importwizard.trojitaplugin importwizard (trojita plugin)
-org.kde.pim.importwizard.thunderbirdplugin importwizard (thunderbird plugin)
-org.kde.pim.importwizard.sylpheedplugin importwizard (sylpheed plugin)
-org.kde.pim.importwizard.clawsmailplugin importwizard (claws-mail plugin)
+org.kde.pim.importwizard importwizard (importwizard) IDENTIFIER [IMPORTWIZARD_LOG]
+org.kde.pim.importwizard.lib importwizard (libimportwizard) IDENTIFIER [LIBIMPORTWIZARD_LOG]
+org.kde.pim.importwizard.balsaplugin importwizard (balsa plugin) IDENTIFIER [BALSAPLUGIN_LOG]
+org.kde.pim.importwizard.evolutionplugin importwizard (evolution v3 plugin) IDENTIFIER [EVOLUTIONPLUGIN_LOG]
+org.kde.pim.importwizard.trojitaplugin importwizard (trojita plugin) IDENTIFIER [TROJITAPLUGIN_LOG]
+org.kde.pim.importwizard.thunderbirdplugin importwizard (thunderbird plugin) IDENTIFIER [THUNDERBIRDPLUGIN_LOG]
+org.kde.pim.importwizard.sylpheedplugin importwizard (sylpheed plugin) IDENTIFIER [THUNDERBIRDPLUGIN_LOG]
+org.kde.pim.importwizard.clawsmailplugin importwizard (claws-mail plugin) IDENTIFIER [THUNDERBIRDPLUGIN_LOG]
 
