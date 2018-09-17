@@ -52,13 +52,13 @@ void BalsaSettings::importSettings()
         autoCheckDelay = grp.readEntry(QStringLiteral("AutoDelay"), -1);
     }
 
-    const QStringList mailBoxList = config.groupList().filter(QRegularExpression("mailbox-"));
+    const QStringList mailBoxList = config.groupList().filter(QRegularExpression(QStringLiteral("mailbox-")));
     for (const QString &mailBox : mailBoxList) {
         KConfigGroup grp = config.group(mailBox);
         readAccount(grp, autoCheck, autoCheckDelay);
     }
 
-    const QStringList smtpList = config.groupList().filter(QRegularExpression("smtp-server-"));
+    const QStringList smtpList = config.groupList().filter(QRegularExpression(QStringLiteral("smtp-server-")));
     for (const QString &smtp : smtpList) {
         KConfigGroup grp = config.group(smtp);
         readTransport(grp);
