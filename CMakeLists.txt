@@ -3,9 +3,9 @@ set(PIM_VERSION "5.10.40")
 project(AkonadiImportWizard VERSION ${PIM_VERSION})
 
 
-set(KF5_VERSION "5.53.0")
+set(KF5_MIN_VERSION "5.53.0")
 
-find_package(ECM ${KF5_VERSION} CONFIG REQUIRED)
+find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 include(ECMInstallIcons)
 
@@ -56,13 +56,13 @@ set(IDENTITYMANAGEMENT_LIB_VERSION "5.10.40")
 set(KCONTACTS_LIB_VERSION "5.10.40")
 
 # Find KF5 package
-find_package(KF5Wallet ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5Config ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5DBusAddons ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5Auth ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5DocTools ${KF5_VERSION} REQUIRED)
-find_package(KF5Crash ${KF5_VERSION} REQUIRED)
-find_package(KF5KIO ${KF5_VERSION} REQUIRED)
+find_package(KF5Wallet ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5Config ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5DBusAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5Auth ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5DocTools ${KF5_MIN_VERSION} REQUIRED)
+find_package(KF5Crash ${KF5_MIN_VERSION} REQUIRED)
+find_package(KF5KIO ${KF5_MIN_VERSION} REQUIRED)
 
 # Find KdepimLibs Package
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
