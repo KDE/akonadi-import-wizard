@@ -30,6 +30,7 @@
         "Name[uk]": "Засіб імпортування з Sylpheed",
         "Name[x-test]": "xxSylpheed Importerxx",
         "Name[zh_CN]": "Sylpheed 导入器",
+        "Name[zh_TW]": "Sylpheed 匯入程式",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],
