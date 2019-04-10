@@ -89,6 +89,10 @@ endif()
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
 endif()
+if (${KF5Config_VERSION} STRGREATER "5.56.0")
+        add_definitions(-DQT_NO_FOREACH)
+        MESSAGE(STATUS "compile without foreach")
+endif()
 
 
 add_subdirectory(src)
