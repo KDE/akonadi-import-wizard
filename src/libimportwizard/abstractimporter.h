@@ -21,7 +21,7 @@
 #define AbstractImporter_H
 #include <MailCommon/FilterImporterExporter>
 #include "libimportwizard_export.h"
-
+#include <QVector>
 namespace MailImporter {
 class FilterInfo;
 class Filter;
@@ -77,7 +77,7 @@ public:
 protected:
     void initializeFilter(MailImporter::Filter &filter);
 
-    void appendFilters(const QList<MailCommon::MailFilter *> &filters);
+    void appendFilters(const QVector<MailCommon::MailFilter *> &filters);
     void addImportFilterInfo(const QString &log) const;
     void addImportFilterError(const QString &log) const;
     bool addFilters(const QString &filterPath, MailCommon::FilterImporterExporter::FilterType type);

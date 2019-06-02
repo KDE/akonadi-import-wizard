@@ -74,7 +74,7 @@ bool AbstractImporter::addFilters(const QString &filterPath, MailCommon::FilterI
     if (QFileInfo::exists(filterPath)) {
         bool canceled = false;
         MailCommon::FilterImporterExporter importer(mAbstractDisplayInfo->parentWidget());
-        QList<MailCommon::MailFilter *> listFilter = importer.importFilters(canceled, type, filterPath);
+        QVector<MailCommon::MailFilter *> listFilter = importer.importFilters(canceled, type, filterPath);
         appendFilters(listFilter);
         if (canceled) {
             addImportFilterInfo(i18n("Importing of filters from \"%1\" was canceled.", filterPath));
@@ -88,7 +88,7 @@ bool AbstractImporter::addFilters(const QString &filterPath, MailCommon::FilterI
     }
 }
 
-void AbstractImporter::appendFilters(const QList<MailCommon::MailFilter *> &filters)
+void AbstractImporter::appendFilters(const QVector<MailCommon::MailFilter *> &filters)
 {
     if (!filters.isEmpty()) {
         MailCommon::FilterManager::instance()->appendFilters(filters, false);
