@@ -19,7 +19,7 @@
 #define MANUALSELECTFILTERPAGE_H
 
 #include "ui_manualselectfilterpage.h"
-#include <QList>
+#include <QVector>
 namespace MailImporter {
 class Filter;
 }
@@ -42,7 +42,7 @@ private Q_SLOTS:
 
 private:
     Ui::ManualSelectFilterPage *mWidget = nullptr;
-    QList<MailImporter::Filter *> mFilterList;
+    QVector<MailImporter::Filter *> mFilterList;
 };
 
 #endif
