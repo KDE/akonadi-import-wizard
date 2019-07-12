@@ -20,7 +20,9 @@
 #define IMPORTMAILPLUGINMANAGER_H
 
 #include <QObject>
+#include <QVector>
 #include <KPluginMetaData>
+
 namespace LibImportWizard {
 class AbstractImporter;
 }
