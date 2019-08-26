@@ -72,15 +72,15 @@ void EvolutionAddressBook::exportEvolutionAddressBook()
                 switch (i) {
                 case 0:
                     name = arg;
-                    name = name.remove(0, 1);
-                    name = name.remove(name.length() - 1, 1);
+                    name.remove(0, 1);
+                    name.remove(name.length() - 1, 1);
                     ++i;
                     //name
                     break;
                 case 1:
                     displayname = arg;
-                    displayname = displayname.remove(0, 1);
-                    displayname = displayname.remove(displayname.length() - 1, 1);
+                    displayname.remove(0, 1);
+                    displayname.remove(displayname.length() - 1, 1);
                     //display name
                     ++i;
                     break;
