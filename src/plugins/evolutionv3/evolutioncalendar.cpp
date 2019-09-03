@@ -127,7 +127,7 @@ void EvolutionCalendar::extractCalendarInfo(const QString &info)
                                 const QString propertyName = property.attribute(QStringLiteral("name"));
                                 if (propertyName == QLatin1String("custom-file-readonly")) {
                                     if (property.hasAttribute(QStringLiteral("value"))) {
-                                        if (property.attribute(QStringLiteral("value")) == QLatin1String("1")) {
+                                        if (property.attribute(QStringLiteral("value")) == QLatin1Char('1')) {
                                             settings.insert(QStringLiteral("ReadOnly"), true);
                                         }
                                     }
