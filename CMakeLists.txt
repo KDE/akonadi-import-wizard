@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-set(PIM_VERSION "5.12.40")
+set(PIM_VERSION "5.12.80")
 project(AkonadiImportWizard VERSION ${PIM_VERSION})
 
 
@@ -27,8 +27,8 @@ include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION alpha)
-set(KDE_APPLICATIONS_VERSION "19.11.70")
+set(KDEPIM_DEV_VERSION beta1)
+set(KDE_APPLICATIONS_VERSION "19.11.80")
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
