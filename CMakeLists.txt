@@ -27,7 +27,7 @@ include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION beta1)
+set(KDEPIM_DEV_VERSION rc)
 set(KDE_APPLICATIONS_VERSION "19.11.80")
 
 # add an extra space
