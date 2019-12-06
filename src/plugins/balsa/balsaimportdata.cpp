@@ -25,7 +25,7 @@
 #include "MailCommon/FilterImporterBalsa"
 
 #include <KLocalizedString>
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 #include <QDir>
 
 K_PLUGIN_CLASS_WITH_JSON(BalsaImportData, "balsaimporter.json")
