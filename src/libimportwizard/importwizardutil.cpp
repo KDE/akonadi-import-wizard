@@ -21,7 +21,7 @@
 #include <KSharedConfig>
 #include <KConfigGroup>
 #include "libimportwizard_debug.h"
-#include <kwallet.h>
+#include <KWallet>
 #include <AkonadiCore/Tag>
 #include <AkonadiCore/TagAttribute>
 #include <AkonadiCore/TagCreateJob>
