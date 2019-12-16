@@ -51,7 +51,7 @@ ImportWizard::ImportWizard(WizardMode mode, QWidget *parent)
     , mMode(mode)
 {
     setModal(true);
-    setWindowTitle(i18n("PIM Import Tool"));
+    setWindowTitle(i18nc("@title:window", "PIM Import Tool"));
     setStandardButtons(QDialogButtonBox::Cancel | QDialogButtonBox::Help);
     mAbstractDisplayInfo = new ImportWizardDisplayInfo(this);
 

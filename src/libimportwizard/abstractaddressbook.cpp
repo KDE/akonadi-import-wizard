@@ -46,7 +46,7 @@ bool AbstractAddressBook::selectAddressBook()
         QPointer<Akonadi::CollectionDialog> dlg = new Akonadi::CollectionDialog(mAbstractDisplayInfo ? mAbstractDisplayInfo->parentWidget() : nullptr);
         dlg->setMimeTypeFilter(mimeTypes);
         dlg->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
-        dlg->setWindowTitle(i18n("Select Address Book"));
+        dlg->setWindowTitle(i18nc("@title:window", "Select Address Book"));
         dlg->setDescription(i18n("Select the address book the new contact shall be saved in:"));
 
         if (dlg->exec() == QDialog::Accepted && dlg) {
