@@ -50,8 +50,16 @@ ki18n_wrap_ui(importwizard_SRCS
     ui/manual/manualselectfilterpage.ui
     )
 
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(importwizard_SRCS HEADER importwizard_debug.h IDENTIFIER IMPORTWIZARD_LOG CATEGORY_NAME org.kde.pim.importwizard)
+else()
+    ecm_qt_declare_logging_category(importwizard_SRCS HEADER importwizard_debug.h IDENTIFIER IMPORTWIZARD_LOG CATEGORY_NAME org.kde.pim.importwizard
+        DESCRIPTION "importwizard (importwizard)"
+        OLD_CATEGORY_NAMES log_importwizard
+        EXPORT IMPORTWIZARD
+    )
+endif()
 
-ecm_qt_declare_logging_category(importwizard_SRCS HEADER importwizard_debug.h IDENTIFIER IMPORTWIZARD_LOG CATEGORY_NAME org.kde.pim.importwizard)
 
 add_executable(akonadiimportwizard
     ${importwizard_SRCS}
