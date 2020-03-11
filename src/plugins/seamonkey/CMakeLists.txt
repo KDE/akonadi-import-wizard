@@ -6,16 +6,11 @@ set(seamonkeyimporter_SRCS
 
     )
 
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(seamonkeyimporter_SRCS HEADER thunderbirdplugin_debug.h
-        IDENTIFIER THUNDERBIRDPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.thunderbirdplugin)
-else()
-    ecm_qt_declare_logging_category(seamonkeyimporter_SRCS HEADER thunderbirdplugin_debug.h
+ecm_qt_declare_logging_category(seamonkeyimporter_SRCS HEADER thunderbirdplugin_debug.h
         IDENTIFIER THUNDERBIRDPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.thunderbirdplugin
         DESCRIPTION "importwizard (thunderbird plugin)"
         EXPORT IMPORTWIZARD
     )
-endif()
 
 kcoreaddons_add_plugin(seamonkeyimporterplugin JSON seamonkeyimporter.json SOURCES
     ${seamonkeyimporter_SRCS} INSTALL_NAMESPACE importwizard)

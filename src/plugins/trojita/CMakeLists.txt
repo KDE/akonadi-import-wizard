@@ -4,16 +4,11 @@ set(trojitaimporter_SRCS
     trojitasettings.cpp
     )
 
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(trojitaimporter_SRCS HEADER trojitaplugin_debug.h
-        IDENTIFIER TROJITAPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.trojitaplugin)
-else()
-    ecm_qt_declare_logging_category(trojitaimporter_SRCS HEADER trojitaplugin_debug.h
+ecm_qt_declare_logging_category(trojitaimporter_SRCS HEADER trojitaplugin_debug.h
         IDENTIFIER TROJITAPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.trojitaplugin
         DESCRIPTION "importwizard (trojita plugin)"
         EXPORT IMPORTWIZARD
     )
-endif()
 
 kcoreaddons_add_plugin(trojitaimporterplugin JSON trojitaimporter.json SOURCES
     ${trojitaimporter_SRCS} INSTALL_NAMESPACE importwizard)

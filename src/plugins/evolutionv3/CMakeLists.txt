@@ -5,16 +5,11 @@ set(evolutionv3importer_SRCS
     evolutioncalendar.cpp
     evolutionutil.cpp
     )
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(evolutionv3importer_SRCS HEADER evolutionv3plugin_debug.h
-        IDENTIFIER EVOLUTIONPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.evolutionplugin)
-else()
-    ecm_qt_declare_logging_category(evolutionv3importer_SRCS HEADER evolutionv3plugin_debug.h
+ecm_qt_declare_logging_category(evolutionv3importer_SRCS HEADER evolutionv3plugin_debug.h
         IDENTIFIER EVOLUTIONPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.evolutionplugin
         DESCRIPTION "importwizard (thunderbird plugin)"
         EXPORT IMPORTWIZARD
     )
-endif()
 
 
 kcoreaddons_add_plugin(evolutionv3importerplugin JSON evolutionv3importer.json SOURCES

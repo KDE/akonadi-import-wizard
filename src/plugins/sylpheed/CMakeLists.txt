@@ -4,16 +4,11 @@ set(sylpheedimporter_SRCS
     sylpheedsettings.cpp
     sylpheedsettingsutils.cpp
     )
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(sylpheedimporter_SRCS HEADER sylpheedplugin_debug.h
-        IDENTIFIER SYLPHEEDPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.sylpheedplugin)
-else()
-    ecm_qt_declare_logging_category(sylpheedimporter_SRCS HEADER sylpheedplugin_debug.h
+ecm_qt_declare_logging_category(sylpheedimporter_SRCS HEADER sylpheedplugin_debug.h
         IDENTIFIER SYLPHEEDPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.sylpheedplugin
         DESCRIPTION "importwizard (sylpheed plugin)"
         EXPORT IMPORTWIZARD
     )
-endif()
 
 kcoreaddons_add_plugin(sylpheedimporterplugin JSON sylpheedimporter.json SOURCES
     ${sylpheedimporter_SRCS} INSTALL_NAMESPACE importwizard)
