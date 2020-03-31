@@ -20,9 +20,9 @@
 #include "balsaimportdata.h"
 #include "balsasettings.h"
 #include "balsaaddressbook.h"
-#include "mailimporter/filterbalsa.h"
-#include "mailimporter/filterinfo.h"
-#include "MailCommon/FilterImporterBalsa"
+#include <MailImporter/FilterBalsa>
+#include <MailImporter/FilterInfo>
+#include <MailCommon/FilterImporterBalsa>
 
 #include <KLocalizedString>
 #include <KPluginFactory>

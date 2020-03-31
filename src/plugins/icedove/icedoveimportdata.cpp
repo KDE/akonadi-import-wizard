@@ -23,9 +23,9 @@
 #include "../thunderbird/thunderbirdsettings.h"
 #include "../thunderbird/thunderbirdaddressbook.h"
 
-#include "mailimporter/filtericedove.h"
-#include "mailimporter/filterinfo.h"
-#include "MailCommon/FilterImporterExporter"
+#include <MailImporter/FilterIcedove>
+#include <MailImporter/FilterInfo>
+#include <MailCommon/FilterImporterExporter>
 
 #include <KLocalizedString>
 #include <KPluginFactory>

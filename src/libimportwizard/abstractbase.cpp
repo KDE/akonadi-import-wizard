@@ -18,7 +18,7 @@
 */
 
 #include "abstractbase.h"
-#include "PimCommonAkonadi/CreateResource"
+#include <PimCommonAkonadi/CreateResource>
 
 #include <KSharedConfig>
 

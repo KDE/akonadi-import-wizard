@@ -19,7 +19,7 @@
 
 #include "evolutionsettings.h"
 #include "evolutionutil.h"
-#include "MailCommon/MailUtil"
+#include <MailCommon/MailUtil>
 #include <ImportWizard/ImportWizardUtil>
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>

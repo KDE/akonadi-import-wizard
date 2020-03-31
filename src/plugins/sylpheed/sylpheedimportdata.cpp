@@ -18,10 +18,10 @@
 */
 
 #include "sylpheedimportdata.h"
-#include "mailimporter/filtersylpheed.h"
-#include "mailimporter/filterinfo.h"
+#include <MailImporter/FilterSylpheed>
+#include <MailImporter/FilterInfo>
 
-#include "MailCommon/FilterImporterExporter"
+#include <MailCommon/FilterImporterExporter>
 
 #include "sylpheedsettings.h"
 #include "sylpheedaddressbook.h"

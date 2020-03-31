@@ -20,8 +20,8 @@
 #include "trojitaimportdata.h"
 #include "trojitasettings.h"
 #include "trojitaaddressbook.h"
-#include "mailimporter/filterinfo.h"
-#include "mailimporter/othermailerutil.h"
+#include <MailImporter/FilterInfo>
+#include <MailImporter/OtherMailerUtil>
 
 #include <KPluginFactory>
 

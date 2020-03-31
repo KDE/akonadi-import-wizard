@@ -20,8 +20,8 @@
 #include "balsasettings.h"
 #include "balsaplugin_debug.h"
 #include <mailtransport/transportmanager.h>
-#include "MailCommon/MailUtil"
-#include "messageviewer/kxface.h"
+#include <MailCommon/MailUtil>
+#include <MessageViewer/KXFace>
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>
 #include <KIdentityManagement/kidentitymanagement/signature.h>

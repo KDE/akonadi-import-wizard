@@ -23,9 +23,9 @@
 #include "thunderbirdaddressbook.h"
 #include "abstractdisplayinfo.h"
 
-#include "mailimporter/filterthunderbird.h"
-#include "mailimporter/filterinfo.h"
-#include "MailCommon/FilterImporterExporter"
+#include <MailImporter/FilterThunderbird>
+#include <MailImporter/FilterInfo>
+#include <MailCommon/FilterImporterExporter>
 
 #include <KLocalizedString>
 #include <KPluginFactory>

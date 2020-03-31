@@ -20,7 +20,7 @@
 #include "importfilterinfogui.h"
 #include "importmailpage.h"
 
-#include "mailimporter/importmailswidget.h"
+#include <MailImporter/ImportMailsWidget>
 
 #include <KMessageBox>
 #include <QApplication>

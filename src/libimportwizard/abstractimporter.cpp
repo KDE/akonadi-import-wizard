@@ -20,8 +20,8 @@
 #include "abstractimporter.h"
 #include "abstractdisplayinfo.h"
 
-#include "mailimporter/filterinfo.h"
-#include "MailCommon/FilterManager"
+#include <MailImporter/FilterInfo>
+#include <MailCommon/FilterManager>
 #include <MailImporterAkonadi/FilterImporterAkonadi>
 
 #include <QFileInfo>

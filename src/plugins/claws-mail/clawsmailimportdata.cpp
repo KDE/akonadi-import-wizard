@@ -20,9 +20,9 @@
 #include "clawsmailimportdata.h"
 #include "clawsmailsettings.h"
 #include "clawsmailaddressbook.h"
-#include "mailimporter/filterclawsmail.h"
-#include "MailCommon/FilterImporterClawsMail"
-#include "mailimporter/filterinfo.h"
+#include <MailImporter/FilterClawsMail>
+#include <MailCommon/FilterImporterClawsMail>
+#include <MailImporter/FilterInfo>
 
 #include <KPluginFactory>
 #include <KLocalizedString>

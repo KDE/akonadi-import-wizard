@@ -33,7 +33,7 @@
 #include "manual/manualselectfilterpage.h"
 #include "manual/importwizardfilterinfogui.h"
 
-#include "mailimporter/filterinfo.h"
+#include <MailImporter/FilterInfo>
 #include <MailImporterAkonadi/FilterImporterAkonadi>
 
 #include <KAboutData>
