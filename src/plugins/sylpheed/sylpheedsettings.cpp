@@ -19,7 +19,7 @@
 
 #include "sylpheedsettings.h"
 #include "sylpheedsettingsutils.h"
-#include <mailtransport/transportmanager.h>
+#include <MailTransport/TransportManager>
 #include <MailCommon/MailUtil>
 #include <QFileInfo>
 

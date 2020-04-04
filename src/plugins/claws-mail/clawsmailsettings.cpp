@@ -20,7 +20,7 @@
 #include "clawsmailsettings.h"
 #include <ImportWizard/ImportWizardUtil>
 
-#include <mailtransport/transportmanager.h>
+#include <MailTransport/TransportManager>
 #include <MailCommon/MailUtil>
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>

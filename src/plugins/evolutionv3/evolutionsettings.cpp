@@ -24,7 +24,7 @@
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>
 
-#include <mailtransport/transportmanager.h>
+#include <MailTransport/TransportManager>
 
 #include "evolutionv3plugin_debug.h"
 

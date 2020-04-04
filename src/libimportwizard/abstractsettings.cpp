@@ -21,7 +21,7 @@
 
 #include <KIdentityManagement/kidentitymanagement/identitymanager.h>
 #include <KIdentityManagement/kidentitymanagement/identity.h>
-#include <mailtransport/transportmanager.h>
+#include <MailTransport/TransportManager>
 
 #include <KLocalizedString>
 #include <KSharedConfig>

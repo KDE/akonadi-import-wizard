@@ -19,7 +19,7 @@
 
 #include "balsasettings.h"
 #include "balsaplugin_debug.h"
-#include <mailtransport/transportmanager.h>
+#include <MailTransport/TransportManager>
 #include <MailCommon/MailUtil>
 #include <MessageViewer/KXFace>
 
