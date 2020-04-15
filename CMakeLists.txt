@@ -89,6 +89,7 @@ if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
 endif()
 add_definitions(-DQT_NO_FOREACH)
+add_definitions(-DQT_NO_KEYWORDS)
 
 
 add_subdirectory(src)
