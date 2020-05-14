@@ -81,7 +81,7 @@ include_directories(${importwizard_SOURCE_DIR} ${importwizard_BINARY_DIR})
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 add_definitions(-DQT_USE_QSTRINGBUILDER)
 if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
-   add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00)
+   add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
    add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054600)
 endif()
 
