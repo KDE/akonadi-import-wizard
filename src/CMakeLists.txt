@@ -70,7 +70,6 @@ target_link_libraries(akonadiimportwizard
     KF5::MailImporterAkonadi
     KF5::PimCommon
     KF5::MailCommon
-    KF5::Libkdepim
     KF5::I18n
     KF5::CoreAddons
     KF5::Crash

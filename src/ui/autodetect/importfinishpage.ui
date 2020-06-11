@@ -31,15 +31,15 @@
     </widget>
    </item>
    <item>
-    <widget class="KPIM::CustomLogWidget" name="logFinish" native="true"/>
+    <widget class="PimCommon::CustomLogWidget" name="logFinish" native="true"/>
    </item>
   </layout>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KPIM::CustomLogWidget</class>
+   <class>PimCommon::CustomLogWidget</class>
    <extends>QWidget</extends>
-   <header location="global">Libkdepim/CustomLogWidget</header>
+   <header location="global">PimCommon/CustomLogWidget</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

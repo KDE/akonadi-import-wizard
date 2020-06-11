@@ -24,7 +24,7 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="KPIM::CustomLogWidget" name="logCalendar" native="true"/>
+    <widget class="PimCommon::CustomLogWidget" name="logCalendar" native="true"/>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -54,9 +54,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KPIM::CustomLogWidget</class>
+   <class>PimCommon::CustomLogWidget</class>
    <extends>QWidget</extends>
-   <header location="global">Libkdepim/CustomLogWidget</header>
+   <header location="global">PimCommon/CustomLogWidget</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
