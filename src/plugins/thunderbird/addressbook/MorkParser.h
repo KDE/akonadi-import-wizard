@@ -11,8 +11,8 @@
 ///
 ///////////////////////////////////////////////////////////////////
 
-#ifndef __MorkParser_h__
-#define __MorkParser_h__
+#ifndef MorkParser_h
+#define MorkParser_h
 
 #include <QMap>
 #include <QByteArray>
@@ -136,4 +136,4 @@ protected: // Data
     } nowParsing_;
 };
 
-#endif // __MorkParser_h__
+#endif // MorkParser_h
