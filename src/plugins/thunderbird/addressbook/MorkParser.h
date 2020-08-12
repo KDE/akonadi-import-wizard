@@ -1,15 +1,11 @@
-////////////////////////////////////////////////////////////////////
-///
-///   MorkParser.h - Mozilla Mork Format Parser/Reader
-///
-///   Copyright (C) 2007 ScalingWeb.com
-///   All rights reserved.
-///
-///   Authors: Yuriy Soroka <ysoroka@scalingweb.com>
-///               Anton Fedoruk <afedoruk@scalingweb.com>
-///
-///
-///////////////////////////////////////////////////////////////////
+/*
+   MorkParser.h - Mozilla Mork Format Parser/Reader
+   SPDX-FileCopyrightText: 2007 <ScalingWeb.com>
+   SPDX-FileContributor: Yuriy Soroka <ysoroka@scalingweb.com>
+   SPDX-FileContributor: Anton Fedoruk <afedoruk@scalingweb.com>
+
+   SPDX-License-Identifier: BSD-3-Clause
+*/
 
 #ifndef MorkParser_h
 #define MorkParser_h
