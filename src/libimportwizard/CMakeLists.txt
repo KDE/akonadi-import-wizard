@@ -87,7 +87,7 @@ install(TARGETS
 )
 
 
-install(TARGETS KPimImportWizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} ${LIBRARY_NAMELINK})
+install(TARGETS KPimImportWizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ecm_generate_headers(ImportWizard_CamelCase_HEADERS
     HEADER_NAMES
