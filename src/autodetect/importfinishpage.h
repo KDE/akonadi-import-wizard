@@ -23,7 +23,7 @@ public:
     void addImportError(const QString &log);
 
 private:
-    Ui::ImportFinishPage *ui = nullptr;
+    Ui::ImportFinishPage *const ui;
 };
 
 #endif // IMPORTFINISHPAGE_H

@@ -28,7 +28,7 @@ Q_SIGNALS:
     void importFiltersClicked();
 
 private:
-    Ui::ImportFilterPage *ui = nullptr;
+    Ui::ImportFilterPage *const ui;
 };
 
 #endif // IMPORTFILTERPAGE_H

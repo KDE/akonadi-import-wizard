@@ -36,7 +36,7 @@ private:
     void slotItemDoubleClicked(QListWidgetItem *item);
 
     void slotSelectManualSelectionChanged(bool b);
-    Ui::SelectProgramPage *ui = nullptr;
+    Ui::SelectProgramPage *const ui;
 };
 
 #endif // SELECTPROGRAMPAGE_H

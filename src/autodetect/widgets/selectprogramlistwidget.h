@@ -23,7 +23,7 @@ protected:
 private:
     void generalPaletteChanged();
     QColor mTextColor;
-    bool mNoProgramFound;
+    bool mNoProgramFound = false;
 };
 
 #endif // SELECTPROGRAMLISTWIDGET_H

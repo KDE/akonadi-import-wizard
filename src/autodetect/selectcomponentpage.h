@@ -31,7 +31,7 @@ private:
     void slotEverythingClicked(bool clicked);
     void slotComponentClicked();
     LibImportWizard::AbstractImporter::TypeSupportedOptions mOptions;
-    Ui::SelectComponentPage *ui = nullptr;
+    Ui::SelectComponentPage *const ui;
 };
 
 #endif // SELECTCOMPONENTPAGE_H

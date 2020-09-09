@@ -29,7 +29,7 @@ Q_SIGNALS:
     void importCalendarClicked();
 
 private:
-    Ui::ImportCalendarPage *ui = nullptr;
+    Ui::ImportCalendarPage *const ui;
 };
 
 #endif // IMPORTCALENDARPAGE_H

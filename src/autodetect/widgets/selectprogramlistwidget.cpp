@@ -11,7 +11,6 @@
 
 SelectProgramListWidget::SelectProgramListWidget(QWidget *parent)
     : QListWidget(parent)
-    , mNoProgramFound(false)
 {
 }
 
