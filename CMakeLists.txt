@@ -22,7 +22,7 @@ include(ECMGeneratePriFile)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
-include(KDECompilerSettings NO_POLICY_SCOPE)
+include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 

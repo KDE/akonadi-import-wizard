@@ -49,8 +49,8 @@ void EvolutionSettings::loadAccount(const QString &filename)
     for (QDomElement e = config.firstChildElement(); !e.isNull(); e = e.nextSiblingElement()) {
         const QString tag = e.tagName();
         if (tag == QLatin1String("entry")) {
-            if (e.hasAttribute("name")) {
-                const QString attr = e.attribute("name");
+            if (e.hasAttribute(QLatin1String("name"))) {
+                const QString attr = e.attribute(QLatin1String("name"));
                 if (attr == QLatin1String("accounts")) {
                     readAccount(e);
                 } else if (attr == QLatin1String("signatures")) {
@@ -273,7 +273,7 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                 } else if (identityTag == QLatin1String("organization")) {
                     newIdentity->setOrganization(identity.text());
                 } else if (identityTag == QLatin1String("signature")) {
-                    if (identity.hasAttribute("uid")) {
+                    if (identity.hasAttribute(QStringLiteral("uid"))) {
                         newIdentity->setSignature(mMapSignature.value(identity.attribute(QStringLiteral("uid"))));
                     }
                 } else if (identityTag == QLatin1String("reply-to")) {

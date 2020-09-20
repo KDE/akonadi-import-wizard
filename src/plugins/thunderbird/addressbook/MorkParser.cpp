@@ -225,7 +225,7 @@ bool MorkParser::parseCell()
     char cur = nextChar();
 
     // Process cell start with column (bColumn == true)
-    while (Result && cur != ')' && cur) {
+    while (Result && cur != QLatin1Char(')') && cur) {
         switch (cur) {
         case '^':
             // Oids
@@ -236,7 +236,7 @@ bool MorkParser::parseCell()
                 bColumn = false;
                 bValueOid = true;
             } else {
-                Text += cur;
+                Text += QLatin1Char(cur);
             }
 
             break;
@@ -245,7 +245,7 @@ bool MorkParser::parseCell()
             if (bColumn) {
                 bColumn = false;
             } else {
-                Text += cur;
+                Text += QLatin1Char(cur);
             }
             break;
         case '\\':
@@ -253,7 +253,7 @@ bool MorkParser::parseCell()
             // Get next two chars
             char NextChar = nextChar();
             if ('\r' != NextChar && '\n' != NextChar) {
-                Text += NextChar;
+                Text += QLatin1Char(NextChar);
             } else {
                 nextChar();
             }
@@ -263,17 +263,17 @@ bool MorkParser::parseCell()
         {
             // Get next two chars
             QString HexChar;
-            HexChar += nextChar();
-            HexChar += nextChar();
-            Text += (char)HexChar.toInt(nullptr, 16);
+            HexChar += QLatin1Char(nextChar());
+            HexChar += QLatin1Char(nextChar());
+            Text += QLatin1Char((char)HexChar.toInt(nullptr, 16));
             break;
         }
         default:
             // Just a char
             if (bColumn) {
-                Column += cur;
+                Column += QLatin1Char(cur);
             } else {
-                Text += cur;
+                Text += QLatin1Char(cur);
             }
             break;
         }
@@ -324,9 +324,9 @@ bool MorkParser::parseTable()
     char cur = nextChar();
 
     // Get id
-    while (cur != '{' && cur != '[' && cur != '}' && cur) {
+    while (cur != QLatin1Char('{') && cur != QLatin1Char('[') && cur != QLatin1Char('}') && cur) {
         if (!isWhiteSpace(cur)) {
-            TextId += cur;
+            TextId += QLatin1Char(cur);
         }
 
         cur = nextChar();
@@ -335,7 +335,7 @@ bool MorkParser::parseTable()
     parseScopeId(TextId, Id, Scope);
 
     // Parse the table
-    while (Result && cur != '}' && cur) {
+    while (Result && cur != QLatin1Char('}') && cur) {
         if (!isWhiteSpace(cur)) {
             switch (cur) {
             case '{':
@@ -351,10 +351,10 @@ bool MorkParser::parseTable()
             {
                 QString JustId;
                 while (!isWhiteSpace(cur) && cur) {
-                    JustId += cur;
+                    JustId += QLatin1Char(cur);
                     cur = nextChar();
 
-                    if (cur == '}') {
+                    if (cur == QLatin1Char('}')) {
                         return Result;
                     }
                 }
@@ -385,7 +385,7 @@ void MorkParser::parseScopeId(const QString &textId, int &Id, int &Scope) const
         QString tId = textId.mid(0, Pos);
         QString tSc = textId.mid(Pos + 1, textId.length() - Pos);
 
-        if (tSc.length() > 1 && tSc[ 0 ] == '^') {
+        if (tSc.length() > 1 && tSc[ 0 ] == QLatin1Char('^')) {
             // Delete '^'
             tSc.remove(0, 1);
         }
@@ -426,9 +426,9 @@ bool MorkParser::parseRow(int TableId, int TableScope)
     char cur = nextChar();
 
     // Get id
-    while (cur != '(' && cur != ']' && cur != '[' && cur) {
+    while (cur != QLatin1Char('(') && cur != QLatin1Char(']') && cur != QLatin1Char('[') && cur) {
         if (!isWhiteSpace(cur)) {
-            TextId += cur;
+            TextId += QLatin1Char(cur);
         }
 
         cur = nextChar();

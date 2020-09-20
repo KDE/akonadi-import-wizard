@@ -44,8 +44,8 @@ void EvolutionCalendar::loadCalendar(const QString &filename)
     for (QDomElement e = config.firstChildElement(); !e.isNull(); e = e.nextSiblingElement()) {
         const QString tag = e.tagName();
         if (tag == QLatin1String("entry")) {
-            if (e.hasAttribute("name")) {
-                const QString attr = e.attribute("name");
+            if (e.hasAttribute(QStringLiteral("name"))) {
+                const QString attr = e.attribute(QStringLiteral("name"));
                 if (attr == QLatin1String("sources")) {
                     readCalendar(e);
                 } else {
