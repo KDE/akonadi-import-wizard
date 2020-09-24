@@ -25,7 +25,6 @@
 
 #include <KAboutData>
 #include <KLocalizedString>
-#include <KSharedConfig>
 #include "importwizard_debug.h"
 #include <KMessageBox>
 #include <KHelpMenu>
