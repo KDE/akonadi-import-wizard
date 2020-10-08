@@ -6,7 +6,7 @@
 #ifndef SeaMonkeyImportData_H
 #define SeaMonkeyImportData_H
 
-#include <ImportWizard/AbstractImporter>
+#include "abstractimporter.h"
 
 class SeaMonkeyImportData : public LibImportWizard::AbstractImporter
 {

@@ -7,7 +7,8 @@
 #ifndef SYLPHEEDSETTINGS_H
 #define SYLPHEEDSETTINGS_H
 
-#include <ImportWizard/AbstractSettings>
+#include "abstractsettings.h"
+
 #include <QString>
 
 class KConfigGroup;

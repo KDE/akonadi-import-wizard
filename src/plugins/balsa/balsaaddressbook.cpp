@@ -5,7 +5,8 @@
 */
 
 #include "balsaaddressbook.h"
-#include <ImportWizard/ImportWizardUtil>
+
+#include "importwizardutil.h"
 
 #include <KContacts/Addressee>
 #include <KContacts/LDIFConverter>

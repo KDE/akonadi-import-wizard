@@ -7,7 +7,7 @@
 #ifndef THUNDERBIRDADDRESSBOOK_H
 #define THUNDERBIRDADDRESSBOOK_H
 
-#include <ImportWizard/AbstractAddressBook>
+#include "abstractaddressbook.h"
 #include <QDir>
 
 class ThunderBirdAddressBook : public LibImportWizard::AbstractAddressBook

@@ -6,7 +6,7 @@
 #ifndef BalsaImportData_H
 #define BalsaImportData_H
 
-#include <ImportWizard/AbstractImporter>
+#include "abstractimporter.h"
 
 class BalsaImportData : public LibImportWizard::AbstractImporter
 {

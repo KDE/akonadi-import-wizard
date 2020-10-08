@@ -7,7 +7,7 @@
 #ifndef TrojitaAddressBook_H
 #define TrojitaAddressBook_H
 
-#include <ImportWizard/AbstractAddressBook>
+#include "abstractaddressbook.h"
 #include <QHash>
 class QSettings;
 

@@ -5,7 +5,7 @@
 */
 
 #include "clawsmailsettings.h"
-#include <ImportWizard/ImportWizardUtil>
+#include "importwizardutil.h"
 
 #include <MailTransport/TransportManager>
 #include <MailCommon/MailUtil>
