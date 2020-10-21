@@ -70,7 +70,7 @@ for automatic detection or from &kmail; with <menuchoice><guimenu>File</guimenu>
 </note>
 
 <para>For information about other utilities to import mails please read the
-<ulink url="help:/pimsettingexporter">PIM Setting Exporter</ulink> handbook.</para>
+<ulink url="help:/pimdataexporter">PIM Data Exporter</ulink> handbook.</para>
 
 <sect2 id="detected-mailers">
 <title>Detected Mail Applications</title>
