@@ -13,7 +13,6 @@
 #include <KPluginFactory>
 
 #include <QFileInfo>
-#include <QVector>
 
 namespace {
 QString pluginVersion()

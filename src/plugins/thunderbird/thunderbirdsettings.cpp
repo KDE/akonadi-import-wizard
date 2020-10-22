@@ -7,7 +7,6 @@
 #include "thunderbirdsettings.h"
 #include <MailTransport/TransportManager>
 #include <MailCommon/MailUtil>
-#include "importwizardutil.h"
 
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>
@@ -16,7 +15,6 @@
 #include <QUrl>
 #include <KContacts/VCardConverter>
 #include <QTextStream>
-#include <QStringList>
 #include <QFile>
 #include "thunderbirdplugin_debug.h"
 #include <QStandardPaths>

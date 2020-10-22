@@ -11,7 +11,6 @@
 #include "sylpheedplugin_debug.h"
 #include <KLocalizedString>
 
-#include <QDir>
 #include <QDomDocument>
 
 SylpheedAddressBook::SylpheedAddressBook(const QDir &dir)

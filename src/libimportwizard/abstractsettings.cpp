@@ -11,7 +11,6 @@
 #include <MailTransport/TransportManager>
 
 #include <KLocalizedString>
-#include <KSharedConfig>
 
 #include <AkonadiCore/agenttype.h>
 #include <AkonadiCore/agentmanager.h>
