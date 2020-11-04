@@ -43,7 +43,7 @@ ImportWizard::ImportWizard(WizardMode mode, QWidget *parent)
     setStandardButtons(QDialogButtonBox::Cancel | QDialogButtonBox::Help);
     mAbstractDisplayInfo = new ImportWizardDisplayInfo(this);
 
-    ImportWizardKernel *kernel = new ImportWizardKernel(this);
+    auto *kernel = new ImportWizardKernel(this);
     CommonKernel->registerKernelIf(kernel);   //register KernelIf early, it is used by the Filter classes
     CommonKernel->registerSettingsIf(kernel);   //SettingsIf is used in FolderTreeWidget
     createAutomaticModePage();
@@ -332,9 +332,9 @@ void ImportWizard::next()
 
         finishButton()->setEnabled(false);
 
-        MailImporter::FilterInfo *info = new MailImporter::FilterInfo();
-        MailImporter::FilterImporterAkonadi *filterImporter = new MailImporter::FilterImporterAkonadi(info);
-        ImportWizardFilterInfoGui *infoGui = new ImportWizardFilterInfoGui(mImportpage, this);
+        auto *info = new MailImporter::FilterInfo();
+        auto *filterImporter = new MailImporter::FilterImporterAkonadi(info);
+        auto *infoGui = new ImportWizardFilterInfoGui(mImportpage, this);
         info->setFilterInfoGui(infoGui);
         info->setStatusMessage(i18n("Import in progress"));
         info->setRemoveDupMessage(mSelfilterpage->removeDupMsg_checked());

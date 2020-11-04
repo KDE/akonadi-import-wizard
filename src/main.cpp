@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
         }
     }
 
-    ImportWizard *wizard = new ImportWizard(mode);
+    auto *wizard = new ImportWizard(mode);
     wizard->show();
     const int ret = app.exec();
     delete wizard;
