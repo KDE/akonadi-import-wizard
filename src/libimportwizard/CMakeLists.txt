@@ -46,6 +46,9 @@ set(libimportwizard_abstract_SRCS
 set(libimportwizard_utils_SRCS
     importwizardutil.cpp
     )
+set(libimportwizard_wallet_SRCS
+    importwizardsavepasswordjob.cpp
+    )
 
 ecm_qt_declare_logging_category(libimportwizard_abstract_SRCS HEADER libimportwizard_debug.h IDENTIFIER LIBIMPORTWIZARD_LOG CATEGORY_NAME org.kde.pim.importwizard.lib
         DESCRIPTION "importwizard (libimportwizard)"
@@ -54,7 +57,7 @@ ecm_qt_declare_logging_category(libimportwizard_abstract_SRCS HEADER libimportwi
 
 
 
-add_library(KPimImportWizard ${libimportwizard_abstract_SRCS} ${libimportwizard_utils_SRCS})
+add_library(KPimImportWizard ${libimportwizard_abstract_SRCS} ${libimportwizard_utils_SRCS} ${libimportwizard_wallet_SRCS})
 
 add_library(KPim::ImportWizard ALIAS KPimImportWizard)
 
@@ -73,6 +76,7 @@ target_link_libraries(KPimImportWizard
     KF5::MailCommon
     KF5::MailImporter
     KF5::I18n
+    qt5keychain
     )
 
 set_target_properties(KPimImportWizard PROPERTIES

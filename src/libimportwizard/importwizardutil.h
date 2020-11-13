@@ -13,12 +13,6 @@
 
 struct LIBIMPORTWIZARD_EXPORT ldapStruct {
     ldapStruct()
-        : maxHint(-1)
-        , port(-1)
-        , limit(-1)
-        , timeout(-1)
-        , useSSL(false)
-        , useTLS(false)
     {
     }
 
@@ -28,12 +22,12 @@ struct LIBIMPORTWIZARD_EXPORT ldapStruct {
     QString fileName;
     QString description;
     QString password;
-    int maxHint;
-    int port;
-    int limit;
-    int timeout;
-    bool useSSL;
-    bool useTLS;
+    int maxHint = -1;
+    int port = -1;
+    int limit = -1;
+    int timeout = -1;
+    bool useSSL = false;
+    bool useTLS = false;
 };
 
 struct tagStruct {

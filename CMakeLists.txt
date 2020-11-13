@@ -56,7 +56,6 @@ set(IDENTITYMANAGEMENT_LIB_VERSION "5.15.80")
 set(GRANTLEETHEME_LIB_VERSION "5.15.80")
 
 # Find KF5 package
-find_package(KF5Wallet ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5Config ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5DBusAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5Auth ${KF5_MIN_VERSION} CONFIG REQUIRED)
@@ -77,12 +76,11 @@ find_package(KF5MessageViewer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5PimCommonAkonadi ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
 include_directories(${importwizard_SOURCE_DIR} ${importwizard_BINARY_DIR})
 
-#it will replace kwallet support
 find_package(Qt5Keychain CONFIG)
 set_package_properties(Qt5Keychain PROPERTIES
                                    DESCRIPTION "Provides support for secure credentials storage"
                                    URL "https://github.com/frankosterfeld/qtkeychain"
-                                   TYPE OPTIONAL)
+                                   TYPE REQUIRED)
 
 
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)

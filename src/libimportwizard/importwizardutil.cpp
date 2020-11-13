@@ -8,7 +8,7 @@
 #include <KSharedConfig>
 #include <KConfigGroup>
 #include "libimportwizard_debug.h"
-#include <KWallet>
+#include "importwizardsavepasswordjob.h"
 #include <AkonadiCore/Tag>
 #include <AkonadiCore/TagAttribute>
 #include <AkonadiCore/TagCreateJob>
@@ -80,30 +80,22 @@ void ImportWizardUtil::addAkonadiTag(const QVector<tagStruct> &tagList)
 
 void ImportWizardUtil::storePassword(const QString &name, ImportWizardUtil::ResourceType type, const QString &password)
 {
-    KWallet::Wallet *wallet = KWallet::Wallet::openWallet(KWallet::Wallet::NetworkWallet(), 0);
-    if (wallet && wallet->isOpen()) {
-        switch (type) {
-        case Imap:
-            if (!wallet->hasFolder(QStringLiteral("imap"))) {
-                wallet->createFolder(QStringLiteral("imap"));
-            }
-            wallet->setFolder(QStringLiteral("imap"));
-            wallet->writePassword(name + QLatin1String("rc"), password);
-            break;
-        case Pop3:
-            if (!wallet->hasFolder(QStringLiteral("pop3"))) {
-                wallet->createFolder(QStringLiteral("pop3"));
-            }
-            wallet->setFolder(QStringLiteral("pop3"));
-            wallet->writePassword(name, password);
-            break;
-        case Ldap:
-            if (!wallet->hasFolder(QStringLiteral("ldapclient"))) {
-                wallet->createFolder(QStringLiteral("ldapclient"));
-            }
-            wallet->setFolder(QStringLiteral("ldapclient"));
-            wallet->writePassword(name, password);
-        }
-        delete wallet;
+    auto *job = new ImportWizardSavePasswordJob;
+    switch (type) {
+    case Imap:
+        job->setName(QStringLiteral("imap"));
+        job->setPassword(password);
+        job->setKey(name + QLatin1String("rc"));
+        break;
+    case Pop3:
+        job->setName(QStringLiteral("pop3"));
+        job->setPassword(password);
+        job->setKey(name);
+        break;
+    case Ldap:
+        job->setName(QStringLiteral("ldapclient"));
+        job->setPassword(password);
+        job->setKey(name);
     }
+    job->start();
 }
