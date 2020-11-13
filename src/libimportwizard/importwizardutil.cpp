@@ -62,7 +62,7 @@ void ImportWizardUtil::mergeLdap(const ldapStruct &ldap)
         grp.writeEntry(QStringLiteral("SelectedSizeLimit%1").arg(numberOfLdapSelected), ldap.limit);
     }
     if (!ldap.password.isEmpty()) {
-        storeInKWallet(QStringLiteral("SelectedPwdBind%1").arg(numberOfLdapSelected), ImportWizardUtil::Ldap, ldap.password);
+        storePassword(QStringLiteral("SelectedPwdBind%1").arg(numberOfLdapSelected), ImportWizardUtil::Ldap, ldap.password);
     }
     grp.sync();
 }
@@ -78,39 +78,32 @@ void ImportWizardUtil::addAkonadiTag(const QVector<tagStruct> &tagList)
     }
 }
 
-void ImportWizardUtil::storeInKWallet(const QString &name, ImportWizardUtil::ResourceType type, const QString &password)
+void ImportWizardUtil::storePassword(const QString &name, ImportWizardUtil::ResourceType type, const QString &password)
 {
-    KWallet::Wallet *wallet = nullptr;
-    switch (type) {
-    case Imap:
-        wallet = KWallet::Wallet::openWallet(KWallet::Wallet::NetworkWallet(), 0);
-        if (wallet && wallet->isOpen()) {
+    KWallet::Wallet *wallet = KWallet::Wallet::openWallet(KWallet::Wallet::NetworkWallet(), 0);
+    if (wallet && wallet->isOpen()) {
+        switch (type) {
+        case Imap:
             if (!wallet->hasFolder(QStringLiteral("imap"))) {
                 wallet->createFolder(QStringLiteral("imap"));
             }
             wallet->setFolder(QStringLiteral("imap"));
             wallet->writePassword(name + QLatin1String("rc"), password);
-        }
-        break;
-    case Pop3:
-        wallet = KWallet::Wallet::openWallet(KWallet::Wallet::NetworkWallet(), 0);
-        if (wallet && wallet->isOpen()) {
+            break;
+        case Pop3:
             if (!wallet->hasFolder(QStringLiteral("pop3"))) {
                 wallet->createFolder(QStringLiteral("pop3"));
             }
             wallet->setFolder(QStringLiteral("pop3"));
             wallet->writePassword(name, password);
-        }
-        break;
-    case Ldap:
-        wallet = KWallet::Wallet::openWallet(KWallet::Wallet::LocalWallet(), 0);
-        if (wallet && wallet->isOpen()) {
+            break;
+        case Ldap:
             if (!wallet->hasFolder(QStringLiteral("ldapclient"))) {
                 wallet->createFolder(QStringLiteral("ldapclient"));
             }
             wallet->setFolder(QStringLiteral("ldapclient"));
             wallet->writePassword(name, password);
         }
+        delete wallet;
     }
-    delete wallet;
 }

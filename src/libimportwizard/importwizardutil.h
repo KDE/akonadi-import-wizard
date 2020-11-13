@@ -51,7 +51,7 @@ enum ResourceType {
 
 LIBIMPORTWIZARD_EXPORT void mergeLdap(const ldapStruct &ldap);
 LIBIMPORTWIZARD_EXPORT void addAkonadiTag(const QVector<tagStruct> &tagList);
-void storeInKWallet(const QString &name, ImportWizardUtil::ResourceType type, const QString &password);
+void storePassword(const QString &name, ImportWizardUtil::ResourceType type, const QString &password);
 }
 
 #endif // IMPORTWIZARDUTIL_H
