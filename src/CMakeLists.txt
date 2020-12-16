@@ -62,7 +62,9 @@ add_executable(akonadiimportwizard
     ${importwizard_manual_SRCS}
     ${importwizard_autodetect_SRCS}
     )
-
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+    set_target_properties(akonadiimportwizard PROPERTIES UNITY_BUILD ON)
+endif()
 target_link_libraries(akonadiimportwizard
     KPimImportWizard
     KF5::AkonadiCore

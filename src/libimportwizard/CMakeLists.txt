@@ -58,7 +58,9 @@ ecm_qt_declare_logging_category(libimportwizard_abstract_SRCS HEADER libimportwi
 
 
 add_library(KPimImportWizard ${libimportwizard_abstract_SRCS} ${libimportwizard_utils_SRCS} ${libimportwizard_wallet_SRCS})
-
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+    set_target_properties(KPimImportWizard PROPERTIES UNITY_BUILD ON)
+endif()
 add_library(KPim::ImportWizard ALIAS KPimImportWizard)
 
 
