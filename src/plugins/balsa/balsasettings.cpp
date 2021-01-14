@@ -55,7 +55,7 @@ void BalsaSettings::importSettings()
 
 void BalsaSettings::readAccount(const KConfigGroup &grp, bool autoCheck, int autoDelay)
 {
-    Q_UNUSED(autoDelay);
+    Q_UNUSED(autoDelay)
     const QString type = grp.readEntry(QStringLiteral("Type"));
     bool check = grp.readEntry(QStringLiteral("Check"), false);
     if (type == QLatin1String("LibBalsaMailboxPOP3")) {
@@ -65,7 +65,7 @@ void BalsaSettings::readAccount(const KConfigGroup &grp, bool autoCheck, int aut
         const QString name = grp.readEntry(QStringLiteral("Name"));
 
         //const bool apop = grp.readEntry(QStringLiteral("DisableApop"), false);
-        //Q_UNUSED(apop);
+        //Q_UNUSED(apop)
         const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_pop3_resource"), name, settings);
 
         addCheckMailOnStartup(agentIdentifyName, autoCheck);
@@ -183,12 +183,12 @@ void BalsaSettings::readGlobalSettings(const KConfig &config)
 #if 0
         if (messageDisplay.hasKey(QStringLiteral("WordWrap"))) {
             //bool wordWrap = messageDisplay.readEntry(QStringLiteral("WordWrap"), false);
-            //Q_UNUSED(wordWrap);
+            //Q_UNUSED(wordWrap)
             //TODO not implemented in kmail.
         }
         if (messageDisplay.hasKey(QStringLiteral("WordWrapLength"))) {
             const int wordWrapLength = messageDisplay.readEntry(QStringLiteral("WordWrapLength"), -1);
-            Q_UNUSED(wordWrapLength);
+            Q_UNUSED(wordWrapLength)
             //TODO not implemented in kmail
         }
 #endif

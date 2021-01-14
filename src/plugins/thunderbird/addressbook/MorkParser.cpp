@@ -280,7 +280,7 @@ bool MorkParser::parseCell()
 
         cur = nextChar();
     }
-    Q_UNUSED(bColumnOid);
+    Q_UNUSED(bColumnOid)
     // Apply column and text
     int ColumnId = Column.toInt(nullptr, 16);
 

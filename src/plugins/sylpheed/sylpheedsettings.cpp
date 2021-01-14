@@ -179,7 +179,7 @@ void SylpheedSettings::readDateFormat(const KConfigGroup &group)
 
 void SylpheedSettings::readTagColor(const KConfigGroup &group)
 {
-    Q_UNUSED(group);
+    Q_UNUSED(group)
     //TODO
 }
 
