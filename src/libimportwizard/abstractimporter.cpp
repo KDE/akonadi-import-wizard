@@ -7,12 +7,12 @@
 #include "abstractimporter.h"
 #include "abstractdisplayinfo.h"
 
-#include <MailImporter/FilterInfo>
 #include <MailCommon/FilterManager>
+#include <MailImporter/FilterInfo>
 #include <MailImporterAkonadi/FilterImporterAkonadi>
 
-#include <QFileInfo>
 #include <QFile>
+#include <QFileInfo>
 
 using namespace LibImportWizard;
 

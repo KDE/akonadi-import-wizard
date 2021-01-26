@@ -10,18 +10,18 @@
 #ifndef MorkParser_h
 #define MorkParser_h
 
-#include <QMap>
 #include <QByteArray>
+#include <QMap>
 #include <iostream>
 class QString;
 // Types
 
-typedef QMap< int, QString > MorkDict;
-typedef QMap< int, int > MorkCells;                                        // ColumnId : ValueId
-typedef QMap< int, MorkCells > MorkRowMap;                        // Row id
-typedef QMap< int, MorkRowMap > RowScopeMap;                // Row scope
-typedef QMap< int, RowScopeMap > MorkTableMap;                // Table id
-typedef QMap< int, MorkTableMap > TableScopeMap;        // Table Scope
+typedef QMap<int, QString> MorkDict;
+typedef QMap<int, int> MorkCells; // ColumnId : ValueId
+typedef QMap<int, MorkCells> MorkRowMap; // Row id
+typedef QMap<int, MorkRowMap> RowScopeMap; // Row scope
+typedef QMap<int, RowScopeMap> MorkTableMap; // Table id
+typedef QMap<int, MorkTableMap> TableScopeMap; // Table Scope
 
 // Mork header of supported format version
 const char MorkMagicHeader[] = "// <!-- <mdb:mork:z v=\"1.4\"/> -->";
@@ -29,31 +29,16 @@ const char MorkMagicHeader[] = "// <!-- <mdb:mork:z v=\"1.4\"/> -->";
 const char MorkDictColumnMeta[] = "<(a=c)>";
 
 // Error codes
-enum MorkErrors {
-    NoError = 0,
-    FailedToOpen,
-    UnsupportedVersion,
-    DefectedFormat
-};
+enum MorkErrors { NoError = 0, FailedToOpen, UnsupportedVersion, DefectedFormat };
 
 // Mork term types
-enum MorkTerm {
-    NoneTerm = 0,
-    DictTerm,
-    GroupTerm,
-    TableTerm,
-    RowTerm,
-    CellTerm,
-    CommentTerm,
-    LiteralTerm
-};
+enum MorkTerm { NoneTerm = 0, DictTerm, GroupTerm, TableTerm, RowTerm, CellTerm, CommentTerm, LiteralTerm };
 
 /// Class MorkParser
 
 class MorkParser
 {
 public:
-
     explicit MorkParser(int defaultScope = 0x80);
 
     ///
@@ -87,7 +72,6 @@ public:
     QString getColumn(int oid);
 
 protected: // Members
-
     void initVars();
 
     bool isWhiteSpace(char c) const;
@@ -107,7 +91,6 @@ protected: // Members
     bool parseGroup();
 
 protected: // Data
-
     // Columns in mork means value names
     MorkDict mColumns;
     MorkDict mValues;
@@ -127,9 +110,7 @@ protected: // Data
     int mDefaultScope;
 
     // Indicates intity is being parsed
-    enum {
-        NPColumns, NPValues, NPRows
-    } nowParsing_;
+    enum { NPColumns, NPValues, NPRows } nowParsing_;
 };
 
 #endif // MorkParser_h

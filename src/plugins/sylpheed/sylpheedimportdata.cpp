@@ -5,13 +5,13 @@
 */
 
 #include "sylpheedimportdata.h"
-#include <MailImporter/FilterSylpheed>
 #include <MailImporter/FilterInfo>
+#include <MailImporter/FilterSylpheed>
 
 #include <MailCommon/FilterImporterExporter>
 
-#include "sylpheedsettings.h"
 #include "sylpheedaddressbook.h"
+#include "sylpheedsettings.h"
 
 #include <KLocalizedString>
 #include <KPluginFactory>

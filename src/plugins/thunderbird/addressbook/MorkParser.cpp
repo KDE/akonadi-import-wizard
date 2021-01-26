@@ -30,8 +30,7 @@ bool MorkParser::open(const QString &path)
     QFile MorkFile(path);
 
     // Open file
-    if (!MorkFile.exists()
-        || !MorkFile.open(QIODevice::ReadOnly)) {
+    if (!MorkFile.exists() || !MorkFile.open(QIODevice::ReadOnly)) {
         mError = FailedToOpen;
         return false;
     }
@@ -145,7 +144,7 @@ char MorkParser::nextChar()
     char cur = 0;
 
     if (mMorkPos < mMorkData.length()) {
-        cur = mMorkData[ mMorkPos ];
+        cur = mMorkData[mMorkPos];
         mMorkPos++;
     }
 
@@ -169,8 +168,7 @@ bool MorkParser::parseDict()
         if (!isWhiteSpace(cur)) {
             switch (cur) {
             case '<':
-                if (mMorkData.mid(mMorkPos - 1, strlen(MorkDictColumnMeta))
-                    == MorkDictColumnMeta) {
+                if (mMorkData.mid(mMorkPos - 1, strlen(MorkDictColumnMeta)) == MorkDictColumnMeta) {
                     nowParsing_ = NPColumns;
                     mMorkPos += strlen(MorkDictColumnMeta) - 1;
                 }
@@ -248,8 +246,7 @@ bool MorkParser::parseCell()
                 Text += QLatin1Char(cur);
             }
             break;
-        case '\\':
-        {
+        case '\\': {
             // Get next two chars
             char NextChar = nextChar();
             if ('\r' != NextChar && '\n' != NextChar) {
@@ -259,8 +256,7 @@ bool MorkParser::parseCell()
             }
             break;
         }
-        case '$':
-        {
+        case '$': {
             // Get next two chars
             QString HexChar;
             HexChar += QLatin1Char(nextChar());
@@ -288,11 +284,11 @@ bool MorkParser::parseCell()
         // Dicts
         if (!Text.isEmpty()) {
             if (nowParsing_ == NPColumns) {
-                mColumns[ ColumnId ] = Text;
-                qCDebug(THUNDERBIRDPLUGIN_LOG)<<" column :"<<ColumnId<<" Text "<<Text;
+                mColumns[ColumnId] = Text;
+                qCDebug(THUNDERBIRDPLUGIN_LOG) << " column :" << ColumnId << " Text " << Text;
             } else {
-                mValues[ ColumnId ] = Text;
-                qCDebug(THUNDERBIRDPLUGIN_LOG)<<" ColumnId "<<ColumnId<<" Value : "<<Text;
+                mValues[ColumnId] = Text;
+                qCDebug(THUNDERBIRDPLUGIN_LOG) << " ColumnId " << ColumnId << " Value : " << Text;
             }
         }
     } else {
@@ -301,11 +297,11 @@ bool MorkParser::parseCell()
             int ValueId = Text.toInt(nullptr, 16);
 
             if (bValueOid) {
-                (*mCurrentCells)[ ColumnId ] = ValueId;
+                (*mCurrentCells)[ColumnId] = ValueId;
             } else {
                 mNextAddValueId--;
-                mValues[ mNextAddValueId ] = Text;
-                (*mCurrentCells)[ ColumnId ] = mNextAddValueId;
+                mValues[mNextAddValueId] = Text;
+                (*mCurrentCells)[ColumnId] = mNextAddValueId;
             }
         }
     }
@@ -347,8 +343,7 @@ bool MorkParser::parseTable()
             case '-':
             case '+':
                 break;
-            default:
-            {
+            default: {
                 QString JustId;
                 while (!isWhiteSpace(cur) && cur) {
                     JustId += QLatin1Char(cur);
@@ -385,7 +380,7 @@ void MorkParser::parseScopeId(const QString &textId, int &Id, int &Scope) const
         QString tId = textId.mid(0, Pos);
         QString tSc = textId.mid(Pos + 1, textId.length() - Pos);
 
-        if (tSc.length() > 1 && tSc[ 0 ] == QLatin1Char('^')) {
+        if (tSc.length() > 1 && tSc[0] == QLatin1Char('^')) {
             // Delete '^'
             tSc.remove(0, 1);
         }
@@ -410,7 +405,7 @@ void MorkParser::setCurrentRow(int TableScope, int TableId, int RowScope, int Ro
         TableScope = mDefaultScope;
     }
 
-    mCurrentCells = &(mMork[ abs(TableScope) ][ abs(TableId) ][ abs(RowScope) ][ abs(RowId) ]);
+    mCurrentCells = &(mMork[abs(TableScope)][abs(TableId)][abs(RowScope)][abs(RowId)]);
 }
 
 //        =============================================================

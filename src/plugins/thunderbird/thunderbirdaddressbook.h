@@ -18,6 +18,7 @@ public:
     ~ThunderBirdAddressBook();
 
     void importAddressBook();
+
 private:
     void readAddressBook(const QString &filename);
     QDir mDir;

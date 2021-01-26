@@ -6,10 +6,11 @@
 #ifndef SELECTCOMPONENTPAGE_H
 #define SELECTCOMPONENTPAGE_H
 
-#include <QWidget>
 #include "abstractimporter.h"
+#include <QWidget>
 
-namespace Ui {
+namespace Ui
+{
 class SelectComponentPage;
 }
 

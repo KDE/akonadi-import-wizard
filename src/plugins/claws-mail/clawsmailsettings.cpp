@@ -7,8 +7,8 @@
 #include "clawsmailsettings.h"
 #include "importwizardutil.h"
 
-#include <MailTransport/TransportManager>
 #include <MailCommon/MailUtil>
+#include <MailTransport/TransportManager>
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>
 #include <KIdentityManagement/kidentitymanagement/signature.h>
@@ -165,8 +165,7 @@ void ClawsMailSettings::readTagColor(const KConfigGroup &group)
     const QString customColorLabelPattern(QStringLiteral("custom_colorlabel%1"));
     QVector<tagStruct> listTag;
     for (int i = 1; i <= 15; ++i) {
-        if (group.hasKey(customColorPattern.arg(i))
-            && group.hasKey(customColorLabelPattern.arg(i))) {
+        if (group.hasKey(customColorPattern.arg(i)) && group.hasKey(customColorLabelPattern.arg(i))) {
             tagStruct tag;
             const QString colorStr = group.readEntry(customColorPattern.arg(i));
             const QString labelStr = group.readEntry(customColorLabelPattern.arg(i));

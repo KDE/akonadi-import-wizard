@@ -18,6 +18,7 @@ public:
     explicit ThunderbirdSettings(const QString &filename);
     ~ThunderbirdSettings();
     void importSettings();
+
 private:
     void readAccount();
     void readIdentity(const QString &account);

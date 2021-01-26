@@ -5,8 +5,8 @@
 */
 
 #include "trojitaimportdata.h"
-#include "trojitasettings.h"
 #include "trojitaaddressbook.h"
+#include "trojitasettings.h"
 #include <MailImporter/FilterInfo>
 #include <MailImporter/OtherMailerUtil>
 
@@ -66,7 +66,7 @@ bool TrojitaImportData::importAddressBook()
 LibImportWizard::AbstractImporter::TypeSupportedOptions TrojitaImportData::supportedOption()
 {
     TypeSupportedOptions options;
-    //options |=LibImportWizard::AbstractImporter::Mails;
+    // options |=LibImportWizard::AbstractImporter::Mails;
     options |= LibImportWizard::AbstractImporter::Settings;
     options |= LibImportWizard::AbstractImporter::AddressBooks;
     return options;

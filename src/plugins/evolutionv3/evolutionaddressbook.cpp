@@ -7,10 +7,10 @@
 #include "abstractdisplayinfo.h"
 
 #include "evolutionv3plugin_debug.h"
-#include <QProcess>
-#include <KMessageBox>
 #include <KLocalizedString>
+#include <KMessageBox>
 #include <QFileDialog>
+#include <QProcess>
 
 EvolutionAddressBook::EvolutionAddressBook()
 {
@@ -22,9 +22,12 @@ EvolutionAddressBook::~EvolutionAddressBook()
 
 void EvolutionAddressBook::exportEvolutionAddressBook()
 {
-    KMessageBox::information(mAbstractDisplayInfo->parentWidget(), i18n("Evolution address book will be exported as vCard. Import vCard in KAddressBook."), i18n("Export Evolution Address Book"));
+    KMessageBox::information(mAbstractDisplayInfo->parentWidget(),
+                             i18n("Evolution address book will be exported as vCard. Import vCard in KAddressBook."),
+                             i18n("Export Evolution Address Book"));
 
-    const QString directory = QFileDialog::getExistingDirectory(mAbstractDisplayInfo->parentWidget(), i18n("Select the directory where vCards will be stored."));
+    const QString directory =
+        QFileDialog::getExistingDirectory(mAbstractDisplayInfo->parentWidget(), i18n("Select the directory where vCards will be stored."));
     if (directory.isEmpty()) {
         return;
     }
@@ -51,7 +54,7 @@ void EvolutionAddressBook::exportEvolutionAddressBook()
             result.replace('\n', ',');
             const QString value(QString::fromLatin1(result.trimmed()));
             const QStringList listAddressBook = value.split(QLatin1Char(','));
-            //qCDebug(EVOLUTIONPLUGIN_LOG)<<" listAddressBook"<<listAddressBook;
+            // qCDebug(EVOLUTIONPLUGIN_LOG)<<" listAddressBook"<<listAddressBook;
             int i = 0;
             QString name;
             QString displayname;
@@ -62,13 +65,13 @@ void EvolutionAddressBook::exportEvolutionAddressBook()
                     name.remove(0, 1);
                     name.remove(name.length() - 1, 1);
                     ++i;
-                    //name
+                    // name
                     break;
                 case 1:
                     displayname = arg;
                     displayname.remove(0, 1);
                     displayname.remove(displayname.length() - 1, 1);
-                    //display name
+                    // display name
                     ++i;
                     break;
                 case 2:
@@ -82,7 +85,7 @@ void EvolutionAddressBook::exportEvolutionAddressBook()
                             addAddressBookImportError(i18n("Failed to export address book \"%1\".", displayname));
                         }
                     }
-                    i = 0; //reset
+                    i = 0; // reset
                     break;
                 }
             }

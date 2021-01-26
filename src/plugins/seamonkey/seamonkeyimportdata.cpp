@@ -6,13 +6,13 @@
 
 #include "seamonkeyimportdata.h"
 
-#include "abstractdisplayinfo.h"
-#include "../thunderbird/thunderbirdsettings.h"
 #include "../thunderbird/thunderbirdaddressbook.h"
+#include "../thunderbird/thunderbirdsettings.h"
+#include "abstractdisplayinfo.h"
 
-#include <MailImporter/FilterSeaMonkey>
-#include <MailImporter/FilterInfo>
 #include <MailCommon/FilterImporterExporter>
+#include <MailImporter/FilterInfo>
+#include <MailImporter/FilterSeaMonkey>
 
 #include <KLocalizedString>
 #include <KPluginFactory>

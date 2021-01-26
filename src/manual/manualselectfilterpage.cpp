@@ -8,22 +8,22 @@
 #include "manualselectfilterpage.h"
 
 // Filter includes
-#include <filtermbox.h>
-#include <filteroe.h>
-#include <filterpmail.h>
-#include <filterplain.h>
 #include <filterevolution.h>
-#include <filtermailapp.h>
 #include <filterevolution_v2.h>
-#include <filteropera.h>
-#include <filterthunderbird.h>
+#include <filtericedove.h>
 #include <filterkmail_maildir.h>
 #include <filterkmailarchive.h>
+#include <filterlnotes.h>
+#include <filtermailapp.h>
+#include <filtermailmangzip.h>
+#include <filtermbox.h>
+#include <filteroe.h>
+#include <filteropera.h>
+#include <filterplain.h>
+#include <filterpmail.h>
 #include <filtersylpheed.h>
 #include <filterthebat.h>
-#include <filterlnotes.h>
-#include <filtermailmangzip.h>
-#include <filtericedove.h>
+#include <filterthunderbird.h>
 
 #include <filters.h>
 
@@ -92,7 +92,7 @@ void ManualSelectFilterPage::addFilter(Filter *f)
     mFilterList.append(f);
     mWidget->mFilterCombo->addItem(f->name());
     if (mWidget->mFilterCombo->count() == 1) {
-        filterSelected(0);    // Setup description box with fist filter selected
+        filterSelected(0); // Setup description box with fist filter selected
     }
 }
 

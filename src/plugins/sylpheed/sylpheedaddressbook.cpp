@@ -38,7 +38,7 @@ void SylpheedAddressBook::importAddressBook()
 void SylpheedAddressBook::readAddressBook(const QString &filename)
 {
     QFile file(filename);
-    //qCDebug(SYLPHEEDPLUGIN_LOG)<<" import filename :"<<filename;
+    // qCDebug(SYLPHEEDPLUGIN_LOG)<<" import filename :"<<filename;
     if (!file.open(QIODevice::ReadOnly)) {
         qCDebug(SYLPHEEDPLUGIN_LOG) << " We can't open file" << filename;
         return;
@@ -48,8 +48,7 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
     int errorCol;
     QDomDocument doc;
     if (!doc.setContent(&file, &errorMsg, &errorRow, &errorCol)) {
-        qCDebug(SYLPHEEDPLUGIN_LOG) << "Unable to load document.Parse error in line " << errorRow
-                                    << ", col " << errorCol << ": " << errorMsg;
+        qCDebug(SYLPHEEDPLUGIN_LOG) << "Unable to load document.Parse error in line " << errorRow << ", col " << errorCol << ": " << errorMsg;
         return;
     }
     QDomElement domElement = doc.documentElement();
@@ -66,12 +65,12 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
     }
 
     for (; !e.isNull(); e = e.nextSiblingElement()) {
-        //TODO ?? const QString name = e.attribute(QStringLiteral("name"));
+        // TODO ?? const QString name = e.attribute(QStringLiteral("name"));
 
         const QString tag = e.tagName();
         if (tag == QLatin1String("person")) {
             KContacts::Addressee contact;
-            //uid="333304265" first-name="dd" last-name="ccc" nick-name="" cn="laurent"
+            // uid="333304265" first-name="dd" last-name="ccc" nick-name="" cn="laurent"
             QString uidPerson;
             if (e.hasAttribute(QStringLiteral("uid"))) {
                 uidPerson = e.attribute(QStringLiteral("uid"));
@@ -99,7 +98,7 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
                             if (addresslist.hasAttribute(QStringLiteral("email"))) {
                                 emails << addresslist.attribute(QStringLiteral("email"));
                             } else if (addresslist.hasAttribute(QStringLiteral("alias"))) {
-                                //TODO:
+                                // TODO:
                             } else if (addresslist.hasAttribute(QStringLiteral("uid"))) {
                                 uidAddress << addresslist.attribute(QStringLiteral("uid"));
                             }
@@ -111,7 +110,8 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
                         contact.setEmails(emails);
                     }
                 } else if (addressTag == QLatin1String("attribute-list")) {
-                    for (QDomElement attributelist = addressElement.firstChildElement(); !attributelist.isNull(); attributelist = attributelist.nextSiblingElement()) {
+                    for (QDomElement attributelist = addressElement.firstChildElement(); !attributelist.isNull();
+                         attributelist = attributelist.nextSiblingElement()) {
                         const QString tagAttributeList = attributelist.tagName();
                         if (tagAttributeList == QLatin1String("attribute")) {
                             if (attributelist.hasAttribute(QStringLiteral("name"))) {
@@ -137,7 +137,7 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
         } else if (tag == QLatin1String("group")) {
             QString name = e.attribute(QStringLiteral("name"));
             KContacts::ContactGroup group(name);
-            //TODO: create Group
+            // TODO: create Group
             for (QDomElement groupElement = e.firstChildElement(); !groupElement.isNull(); groupElement = groupElement.nextSiblingElement()) {
                 const QString groupTag = groupElement.tagName();
                 if (groupTag == QLatin1String("member-list")) {
@@ -153,11 +153,11 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
                                 eid = memberlist.attribute(QStringLiteral("eid"));
                             }
                             if (!pid.isEmpty() && !eid.isEmpty()) {
-                                //TODO
+                                // TODO
                             } else {
                                 qCDebug(SYLPHEEDPLUGIN_LOG) << " Problem with group" << name;
                             }
-                            //TODO
+                            // TODO
                         }
                     }
                 }

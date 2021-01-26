@@ -5,13 +5,13 @@
 */
 
 #include "importwizardutil.h"
-#include <KSharedConfig>
-#include <KConfigGroup>
-#include "libimportwizard_debug.h"
 #include "importwizardsavepasswordjob.h"
+#include "libimportwizard_debug.h"
 #include <AkonadiCore/Tag>
 #include <AkonadiCore/TagAttribute>
 #include <AkonadiCore/TagCreateJob>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 void ImportWizardUtil::mergeLdap(const ldapStruct &ldap)
 {
@@ -53,7 +53,7 @@ void ImportWizardUtil::mergeLdap(const ldapStruct &ldap)
     }
     grp.writeEntry(QStringLiteral("SelectedVersion%1").arg(numberOfLdapSelected), QString::number(3));
     grp.writeEntry(QStringLiteral("SelectedBind%1").arg(numberOfLdapSelected), ldap.dn);
-    //TODO: Verify selectedbase
+    // TODO: Verify selectedbase
     grp.writeEntry(QStringLiteral("SelectedBase%1").arg(numberOfLdapSelected), ldap.ldapUrl.path());
     if (ldap.timeout != -1) {
         grp.writeEntry(QStringLiteral("SelectedTimeLimit%1").arg(numberOfLdapSelected), ldap.timeout);

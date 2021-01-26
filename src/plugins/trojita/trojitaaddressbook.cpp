@@ -53,8 +53,8 @@ void TrojitaAddressBook::readAddressBook()
         if (birthDate.isValid()) {
             contactABC.setBirthday(birthDate);
         }
-        //TODO
-        //ADD(Photo, "photo");
+        // TODO
+        // ADD(Photo, "photo");
         addImportContactNote(contactABC, QStringLiteral("Trojita"));
         createContact(contactABC);
         settings->endGroup();

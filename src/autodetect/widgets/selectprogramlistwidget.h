@@ -20,6 +20,7 @@ public:
 
 protected:
     void paintEvent(QPaintEvent *event) override;
+
 private:
     void generalPaletteChanged();
     QColor mTextColor;

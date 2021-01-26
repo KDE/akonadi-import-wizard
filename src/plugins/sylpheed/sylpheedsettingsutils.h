@@ -7,10 +7,11 @@
 #ifndef SYLPHEEDSETTINGSUTILS_H
 #define SYLPHEEDSETTINGSUTILS_H
 
-#include <QString>
 #include <KConfigGroup>
+#include <QString>
 
-namespace SylpheedSettingsUtils {
+namespace SylpheedSettingsUtils
+{
 bool readConfig(const QString &key, const KConfigGroup &accountConfig, int &value, bool remove_underscore);
 bool readConfig(const QString &key, const KConfigGroup &accountConfig, QString &value, bool remove_underscore);
 }

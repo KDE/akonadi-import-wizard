@@ -9,10 +9,10 @@
 
 #include "evolutionv3plugin_debug.h"
 
-#include <QFile>
 #include <QDir>
 #include <QDomDocument>
 #include <QDomElement>
+#include <QFile>
 
 EvolutionCalendar::EvolutionCalendar()
 {
@@ -24,7 +24,7 @@ EvolutionCalendar::~EvolutionCalendar()
 
 void EvolutionCalendar::loadCalendar(const QString &filename)
 {
-    //Read gconf file
+    // Read gconf file
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
         qCDebug(EVOLUTIONPLUGIN_LOG) << " We can't open file" << filename;
@@ -68,8 +68,8 @@ void EvolutionCalendar::readCalendar(const QDomElement &calendar)
 
 void EvolutionCalendar::extractCalendarInfo(const QString &info)
 {
-    //qCDebug(IMPORTWIZARD_LOG)<<" info "<<info;
-    //Read QDomElement
+    // qCDebug(IMPORTWIZARD_LOG)<<" info "<<info;
+    // Read QDomElement
     QDomDocument cal;
     if (!EvolutionUtil::loadInDomDocument(info, cal)) {
         return;
@@ -90,8 +90,7 @@ void EvolutionCalendar::extractCalendarInfo(const QString &info)
             if (tag == QLatin1String("source")) {
                 QString name;
                 QMap<QString, QVariant> settings;
-                if (e.hasAttribute(QStringLiteral("uid"))) {
-                }
+                if (e.hasAttribute(QStringLiteral("uid"))) { }
                 if (e.hasAttribute(QStringLiteral("name"))) {
                     name = e.attribute(QStringLiteral("name"));
                     settings.insert(QStringLiteral("DisplayName"), name);
@@ -101,9 +100,9 @@ void EvolutionCalendar::extractCalendarInfo(const QString &info)
                     settings.insert(QStringLiteral("Path"), path);
                 }
                 if (e.hasAttribute(QStringLiteral("color_spec"))) {
-                    //const QString color = e.attribute(QStringLiteral("color_spec"));
-                    //Need id.
-                    //TODO: Need to get id for collection to add color.
+                    // const QString color = e.attribute(QStringLiteral("color_spec"));
+                    // Need id.
+                    // TODO: Need to get id for collection to add color.
                 }
                 QDomElement propertiesElement = e.firstChildElement();
                 if (!propertiesElement.isNull()) {

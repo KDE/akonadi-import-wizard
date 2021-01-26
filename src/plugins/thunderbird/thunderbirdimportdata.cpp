@@ -6,13 +6,13 @@
 
 #include "thunderbirdimportdata.h"
 
-#include "thunderbirdsettings.h"
-#include "thunderbirdaddressbook.h"
 #include "abstractdisplayinfo.h"
+#include "thunderbirdaddressbook.h"
+#include "thunderbirdsettings.h"
 
-#include <MailImporter/FilterThunderbird>
-#include <MailImporter/FilterInfo>
 #include <MailCommon/FilterImporterExporter>
+#include <MailImporter/FilterInfo>
+#include <MailImporter/FilterThunderbird>
 
 #include <KLocalizedString>
 #include <KPluginFactory>

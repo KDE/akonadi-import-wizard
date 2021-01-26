@@ -5,13 +5,13 @@
 */
 #include "importwizardkernel.h"
 
-#include <KIdentityManagement/kidentitymanagement/identitymanager.h>
-#include <MailCommon/FolderCollectionMonitor>
-#include <AkonadiCore/session.h>
-#include <AkonadiCore/entitytreemodel.h>
-#include <AkonadiCore/entitymimetypefiltermodel.h>
 #include <AkonadiCore/changerecorder.h>
+#include <AkonadiCore/entitymimetypefiltermodel.h>
+#include <AkonadiCore/entitytreemodel.h>
+#include <AkonadiCore/session.h>
+#include <KIdentityManagement/kidentitymanagement/identitymanager.h>
 #include <KSharedConfig>
+#include <MailCommon/FolderCollectionMonitor>
 
 ImportWizardKernel::ImportWizardKernel(QObject *parent)
     : QObject(parent)

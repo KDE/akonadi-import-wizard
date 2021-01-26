@@ -90,7 +90,7 @@ void TrojitaSettings::readImapAccount()
 #endif
     if (!name.isEmpty()) {
         const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, newSettings);
-        //Check by default
+        // Check by default
         addCheckMailOnStartup(agentIdentifyName, true);
     }
 }
@@ -102,7 +102,7 @@ void TrojitaSettings::readTransport()
     if (!smtpMethod.isEmpty()) {
         MailTransport::Transport *mt = createTransport();
         if (smtpMethod == QLatin1String("IMAP-SENDMAIL")) {
-            //see http://tools.ietf.org/html/draft-kundrat-imap-submit-01
+            // see http://tools.ietf.org/html/draft-kundrat-imap-submit-01
         } else if (smtpMethod == QLatin1String("SMTP") || smtpMethod == QLatin1String("SSMTP")) {
             if (settings->contains(QStringLiteral("msa.smtp.host"))) {
                 mt->setHost(settings->value(QStringLiteral("msa.smtp.host")).toString());
@@ -130,7 +130,7 @@ void TrojitaSettings::readTransport()
         } else {
             qCWarning(TROJITAPLUGIN_LOG) << " smtpMethod unknown " << smtpMethod;
         }
-        storeTransport(mt, true);   //only one smtp for the moment
+        storeTransport(mt, true); // only one smtp for the moment
     }
     settings->endGroup();
 }
@@ -155,7 +155,8 @@ void TrojitaSettings::readIdentity()
             signature.setText(signatureStr);
             identity->setSignature(signature);
         }
-        qCDebug(TROJITAPLUGIN_LOG) << " realName :" << realName << " address : " << address << " organisation : " << organisation << " signature: " << signatureStr;
+        qCDebug(TROJITAPLUGIN_LOG) << " realName :" << realName << " address : " << address << " organisation : " << organisation
+                                   << " signature: " << signatureStr;
         storeIdentity(identity);
     }
     settings->endArray();
@@ -163,5 +164,5 @@ void TrojitaSettings::readIdentity()
 
 void TrojitaSettings::readGlobalSettings()
 {
-    //TODO
+    // TODO
 }

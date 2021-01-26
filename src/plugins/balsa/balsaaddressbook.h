@@ -18,6 +18,7 @@ public:
     ~BalsaAddressBook();
 
     void importAddressBook();
+
 private:
     void readAddressBook(const KConfigGroup &grp);
     QString mFileName;

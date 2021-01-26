@@ -6,13 +6,13 @@
 
 #include "icedoveimportdata.h"
 
-#include "abstractdisplayinfo.h"
-#include "../thunderbird/thunderbirdsettings.h"
 #include "../thunderbird/thunderbirdaddressbook.h"
+#include "../thunderbird/thunderbirdsettings.h"
+#include "abstractdisplayinfo.h"
 
+#include <MailCommon/FilterImporterExporter>
 #include <MailImporter/FilterIcedove>
 #include <MailImporter/FilterInfo>
-#include <MailCommon/FilterImporterExporter>
 
 #include <KLocalizedString>
 #include <KPluginFactory>

@@ -4,14 +4,14 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+#include "importwizard.h"
 #include <KAboutData>
+#include <KCrash>
 #include <KDBusService>
 #include <KLocalizedString>
 #include <Kdelibs4ConfigMigrator>
-#include <KCrash>
 #include <QApplication>
 #include <QIcon>
-#include "importwizard.h"
 
 #include "importwizard-version.h"
 
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     migrate.migrate();
 
     KLocalizedString::setApplicationDomain("akonadiimportwizard");
-    //FIXME: "wizards" are "assistents" in new KDE slang
+    // FIXME: "wizards" are "assistents" in new KDE slang
 
     KAboutData aboutData(QStringLiteral("importwizard"),
                          i18n("PIM Import Tool"),
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
-    parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("mode"), i18n("Mode: %1", QStringLiteral("manual|automatic"))));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("mode"), i18n("Mode: %1", QStringLiteral("manual|automatic"))));
     aboutData.setupCommandLine(&parser);
     parser.process(app);
     aboutData.processCommandLine(&parser);

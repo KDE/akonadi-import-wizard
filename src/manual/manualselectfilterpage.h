@@ -9,7 +9,8 @@
 
 #include "ui_manualselectfilterpage.h"
 #include <QVector>
-namespace MailImporter {
+namespace MailImporter
+{
 class Filter;
 }
 
@@ -20,7 +21,7 @@ public:
     explicit ManualSelectFilterPage(QWidget *parent = nullptr);
     ~ManualSelectFilterPage();
 
-    void  addFilter(MailImporter::Filter *f);
+    void addFilter(MailImporter::Filter *f);
     MailImporter::Filter *getSelectedFilter() const;
     bool removeDupMsg_checked() const;
 

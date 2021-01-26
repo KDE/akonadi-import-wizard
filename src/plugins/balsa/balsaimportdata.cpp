@@ -5,11 +5,11 @@
 */
 
 #include "balsaimportdata.h"
-#include "balsasettings.h"
 #include "balsaaddressbook.h"
+#include "balsasettings.h"
+#include <MailCommon/FilterImporterBalsa>
 #include <MailImporter/FilterBalsa>
 #include <MailImporter/FilterInfo>
-#include <MailCommon/FilterImporterBalsa>
 
 #include <KLocalizedString>
 #include <KPluginFactory>

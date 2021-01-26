@@ -17,6 +17,7 @@ public:
     explicit TrojitaSettings(const QString &filename);
     ~TrojitaSettings();
     void importSettings();
+
 private:
     void readImapAccount();
     void readIdentity();

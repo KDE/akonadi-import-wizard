@@ -11,12 +11,10 @@ using namespace QKeychain;
 ImportWizardSavePasswordJob::ImportWizardSavePasswordJob(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ImportWizardSavePasswordJob::~ImportWizardSavePasswordJob()
 {
-
 }
 
 bool ImportWizardSavePasswordJob::canStart() const

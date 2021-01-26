@@ -6,13 +6,13 @@
 #include "abstractaddressbook.h"
 #include "abstractdisplayinfo.h"
 
-#include <KContacts/Addressee>
-#include <kcontacts/contactgroup.h>
-#include <KLocalizedString>
 #include "libimportwizard_debug.h"
-#include <AkonadiCore/ItemCreateJob>
 #include <AkonadiCore/Item>
+#include <AkonadiCore/ItemCreateJob>
 #include <AkonadiWidgets/CollectionDialog>
+#include <KContacts/Addressee>
+#include <KLocalizedString>
+#include <kcontacts/contactgroup.h>
 
 #include <QPointer>
 using namespace LibImportWizard;

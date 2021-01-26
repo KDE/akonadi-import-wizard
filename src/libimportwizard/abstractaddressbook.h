@@ -7,17 +7,19 @@
 #ifndef ABSTRACTADDRESSBOOK_H
 #define ABSTRACTADDRESSBOOK_H
 
-#include <AkonadiCore/Collection>
 #include "abstractbase.h"
 #include "libimportwizard_export.h"
+#include <AkonadiCore/Collection>
 
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 class ContactGroup;
 }
 
 class KJob;
-namespace LibImportWizard {
+namespace LibImportWizard
+{
 class LIBIMPORTWIZARD_EXPORT AbstractAddressBook : public LibImportWizard::AbstractBase
 {
     Q_OBJECT

@@ -5,26 +5,24 @@
 */
 
 #include "thunderbirdsettings.h"
-#include <MailTransport/TransportManager>
 #include <MailCommon/MailUtil>
-
+#include <MailTransport/TransportManager>
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>
 #include <KIdentityManagement/kidentitymanagement/signature.h>
 
-#include <QUrl>
-#include <KContacts/VCardConverter>
-#include <QTextStream>
-#include <QFile>
 #include "thunderbirdplugin_debug.h"
-#include <QStandardPaths>
-#include <QFileInfo>
+#include <KContacts/VCardConverter>
 #include <QDir>
+#include <QFile>
+#include <QFileInfo>
+#include <QStandardPaths>
+#include <QTextStream>
+#include <QUrl>
 
 ThunderbirdSettings::ThunderbirdSettings(const QString &filename)
     : mFileName(filename)
 {
-
 }
 
 ThunderbirdSettings::~ThunderbirdSettings()
@@ -42,34 +40,21 @@ void ThunderbirdSettings::importSettings()
     while (!stream.atEnd()) {
         const QString line = stream.readLine();
         if (line.startsWith(QLatin1String("user_pref"))) {
-            if (line.contains(QLatin1String("mail.smtpserver")) ||
-                    line.contains(QLatin1String("mail.server.")) ||
-                    line.contains(QLatin1String("mail.identity.")) ||
-                    line.contains(QLatin1String("mail.account.")) ||
-                    line.contains(QLatin1String("mail.accountmanager.")) ||
-                    line.contains(QLatin1String("mailnews.")) ||
-                    line.contains(QLatin1String("mail.compose.")) ||
-                    line.contains(QLatin1String("mail.spellcheck")) ||
-                    line.contains(QLatin1String("mail.SpellCheckBeforeSend")) ||
-                    line.contains(QLatin1String("spellchecker.dictionary")) ||
-                    line.contains(QLatin1String("ldap_")) ||
-                    line.contains(QLatin1String("mail.biff.")) ||
-                    line.contains(QLatin1String("mailnews.tags.")) ||
-                    line.contains(QLatin1String("extensions.AutoResizeImage.")) ||
-                    line.contains(QLatin1String("mail.phishing.")) ||
-                    line.contains(QLatin1String("mail.display_glyph")) ||
-                    line.contains(QLatin1String("extensions.sieve.account."))) {
+            if (line.contains(QLatin1String("mail.smtpserver")) || line.contains(QLatin1String("mail.server."))
+                || line.contains(QLatin1String("mail.identity.")) || line.contains(QLatin1String("mail.account."))
+                || line.contains(QLatin1String("mail.accountmanager.")) || line.contains(QLatin1String("mailnews."))
+                || line.contains(QLatin1String("mail.compose.")) || line.contains(QLatin1String("mail.spellcheck"))
+                || line.contains(QLatin1String("mail.SpellCheckBeforeSend")) || line.contains(QLatin1String("spellchecker.dictionary"))
+                || line.contains(QLatin1String("ldap_")) || line.contains(QLatin1String("mail.biff.")) || line.contains(QLatin1String("mailnews.tags."))
+                || line.contains(QLatin1String("extensions.AutoResizeImage.")) || line.contains(QLatin1String("mail.phishing."))
+                || line.contains(QLatin1String("mail.display_glyph")) || line.contains(QLatin1String("extensions.sieve.account."))) {
                 insertIntoMap(line);
             }
         } else {
-            if (!line.startsWith(QLatin1Char('#')) ||
-                    line.isEmpty() ||
-                    line.startsWith(QLatin1String("/*")) ||
-                    line.startsWith(QLatin1String(" */")) ||
-                    line.startsWith(QLatin1String(" *"))) {
+            if (!line.startsWith(QLatin1Char('#')) || line.isEmpty() || line.startsWith(QLatin1String("/*")) || line.startsWith(QLatin1String(" */"))
+                || line.startsWith(QLatin1String(" *"))) {
                 qCDebug(THUNDERBIRDPLUGIN_LOG) << " unstored line :" << line;
             }
-
         }
     }
     const QString mailAccountPreference = mHashConfig.value(QStringLiteral("mail.accountmanager.accounts")).toString();
@@ -85,10 +70,9 @@ void ThunderbirdSettings::importSettings()
     readExtensionsSettings();
 }
 
-
 void ThunderbirdSettings::readExtensionsSettings()
 {
-    //AutoResizeImage
+    // AutoResizeImage
     const QString filterPatternEnabledStr = QStringLiteral("extensions.AutoResizeImage.filterPatterns");
     if (mHashConfig.contains(filterPatternEnabledStr)) {
         const int filterPatternType = mHashConfig.value(filterPatternEnabledStr).toInt();
@@ -97,7 +81,7 @@ void ThunderbirdSettings::readExtensionsSettings()
     const QString filterPatternListStr = QStringLiteral("extensions.AutoResizeImage.filteringPatternsList");
     if (mHashConfig.contains(filterPatternListStr)) {
         const QString filterPatternList = mHashConfig.value(filterPatternListStr).toString();
-        //TODO decode it.
+        // TODO decode it.
         addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("filter-source-pattern"), filterPatternList);
     }
 
@@ -132,7 +116,7 @@ void ThunderbirdSettings::readExtensionsSettings()
         addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("minimum-height"), adaptedValue);
     }
 
-    //Default is true.
+    // Default is true.
     const QString reduceImageStr(QStringLiteral("extensions.AutoResizeImage.reduceImages"));
     if (mHashConfig.contains(reduceImageStr)) {
         const bool reduce = mHashConfig.value(reduceImageStr).toBool();
@@ -156,7 +140,7 @@ void ThunderbirdSettings::readExtensionsSettings()
         const bool confirmBeforeResizing = mHashConfig.value(confirmBeforeResizingStr).toBool();
         addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("ask-before-resizing"), confirmBeforeResizing);
     }
-    //extensions.AutoResizeImage.convertImages : not implemented in kmail
+    // extensions.AutoResizeImage.convertImages : not implemented in kmail
 
     const QString conversionFormatStr(QStringLiteral("extensions.AutoResizeImage.conversionFormat"));
     if (mHashConfig.contains(conversionFormatStr)) {
@@ -224,7 +208,7 @@ void ThunderbirdSettings::readExtensionsSettings()
     const QString filteringImageFormatsStr(QStringLiteral("extensions.AutoResizeImage.imageFormats"));
     if (mHashConfig.contains(filteringImageFormatsStr)) {
         const QString filteringImageFormats = mHashConfig.value(filteringImageFormatsStr).toString();
-        //convert it.
+        // convert it.
         addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("resize-image-with-formats-type"), filteringImageFormats);
     }
 
@@ -256,9 +240,9 @@ int ThunderbirdSettings::adaptAutoResizeResolution(int index, const QString &con
         return 2048;
     case 8:
         return 1024;
-    case 9: { //custom case
+    case 9: { // custom case
         if (mHashConfig.contains(configStrList)) {
-            const QString res =  mHashConfig.value(configStrList).toString();
+            const QString res = mHashConfig.value(configStrList).toString();
             const QStringList lst = res.split(QLatin1Char(';'));
             int val = lst.last().toInt();
             return val;
@@ -283,7 +267,7 @@ void ThunderbirdSettings::readTagSettings()
 
 void ThunderbirdSettings::readLdapSettings()
 {
-    //qCDebug(THUNDERBIRDPLUGIN_LOG)<<" mLdapAccountList:"<<mLdapAccountList;
+    // qCDebug(THUNDERBIRDPLUGIN_LOG)<<" mLdapAccountList:"<<mLdapAccountList;
     for (const QString &ldapAccountName : qAsConst(mLdapAccountList)) {
         ldapStruct ldap;
         const QString ldapDescription = QStringLiteral("%1.description").arg(ldapAccountName);
@@ -330,7 +314,7 @@ void ThunderbirdSettings::readGlobalSettings()
         const bool markMessageRead = mHashConfig.value(markMessageReadStr).toBool();
         addKmailConfig(QStringLiteral("Behaviour"), QStringLiteral("DelayedMarkAsRead"), markMessageRead);
     } else {
-        //Default value
+        // Default value
         addKmailConfig(QStringLiteral("Behaviour"), QStringLiteral("DelayedMarkAsRead"), true);
     }
     const QString markMessageReadIntervalStr = QStringLiteral("mailnews.mark_message_read.delay.interval");
@@ -341,7 +325,7 @@ void ThunderbirdSettings::readGlobalSettings()
             addKmailConfig(QStringLiteral("Behaviour"), QStringLiteral("DelayedMarkTime"), markMessageReadInterval);
         }
     } else {
-        //Default 5 seconds
+        // Default 5 seconds
         addKmailConfig(QStringLiteral("Behaviour"), QStringLiteral("DelayedMarkTime"), 5);
     }
 
@@ -357,7 +341,7 @@ void ThunderbirdSettings::readGlobalSettings()
     if (mHashConfig.contains(mailComposeAttachmentReminderKeywordsStr)) {
         const QString mailComposeAttachmentReminderKeywords = mHashConfig.value(mailComposeAttachmentReminderKeywordsStr).toString();
         addKmailConfig(QStringLiteral("Composer"), QStringLiteral("attachment-keywords"), mailComposeAttachmentReminderKeywords);
-    } //not default value keep kmail use one default value
+    } // not default value keep kmail use one default value
 
     const QString mailComposeAutosaveStr = QStringLiteral("mail.compose.autosave");
     if (mHashConfig.contains(mailComposeAutosaveStr)) {
@@ -373,11 +357,11 @@ void ThunderbirdSettings::readGlobalSettings()
                     addKmailConfig(QStringLiteral("Composer"), QStringLiteral("autosave"), 5);
                 }
             } else {
-                //Default value
+                // Default value
                 addKmailConfig(QStringLiteral("Composer"), QStringLiteral("autosave"), 5);
             }
         } else {
-            //Don't autosave
+            // Don't autosave
             addKmailConfig(QStringLiteral("Composer"), QStringLiteral("autosave"), 0);
         }
     }
@@ -395,18 +379,18 @@ void ThunderbirdSettings::readGlobalSettings()
         const bool mailAlertShowSubject = mHashConfig.value(mailAlertShowSubjectStr).toBool();
         addNewMailNotifier(QStringLiteral("General"), QStringLiteral("showSubject"), mailAlertShowSubject);
     } else {
-        //Default value in thunderbird
+        // Default value in thunderbird
         addNewMailNotifier(QStringLiteral("General"), QStringLiteral("showSubject"), true);
     }
 
     const QString mailAlertShowPreviewStr = QStringLiteral("mail.biff.alert.show_preview");
-    //TODO add show preview
+    // TODO add show preview
     if (mHashConfig.contains(mailAlertShowPreviewStr)) {
         const bool mailAlertShowPreview = mHashConfig.value(mailAlertShowPreviewStr).toBool();
-        //addNewMailNotifier(QStringLiteral("General"),QStringLiteral("showSubject"), mailAlertShowPreview);
+        // addNewMailNotifier(QStringLiteral("General"),QStringLiteral("showSubject"), mailAlertShowPreview);
     } else {
-        //Default value in thunderbird
-        //addNewMailNotifier(QStringLiteral("General"),QStringLiteral("showSubject"), true);
+        // Default value in thunderbird
+        // addNewMailNotifier(QStringLiteral("General"),QStringLiteral("showSubject"), true);
     }
 
     const QString mailAlertShowSenderStr = QStringLiteral("mail.biff.alert.show_sender");
@@ -414,7 +398,7 @@ void ThunderbirdSettings::readGlobalSettings()
         const bool mailAlertShowSender = mHashConfig.value(mailAlertShowSenderStr).toBool();
         addNewMailNotifier(QStringLiteral("General"), QStringLiteral("showFrom"), mailAlertShowSender);
     } else {
-        //Default value in thunderbird
+        // Default value in thunderbird
         addNewMailNotifier(QStringLiteral("General"), QStringLiteral("showFrom"), true);
     }
 
@@ -430,14 +414,14 @@ void ThunderbirdSettings::readGlobalSettings()
     if (mHashConfig.contains(mailSpellCheckLanguageStr)) {
         const QString mailSpellCheckLanguage = mHashConfig.value(mailSpellCheckLanguageStr).toString();
         addKmailConfig(QStringLiteral("Spelling"), QStringLiteral("defaultLanguage"), mailSpellCheckLanguage);
-        //TODO create map to convert thunderbird name to aspell name
+        // TODO create map to convert thunderbird name to aspell name
     }
 
     const QString mailPhishingDetectionStr = QStringLiteral("mail.phishing.detection.enabled");
     if (mHashConfig.contains(mailPhishingDetectionStr)) {
         const bool mailPhishingDetectionEnabled = mHashConfig.value(mailPhishingDetectionStr).toBool();
         addKmailConfig(QStringLiteral("Reader"), QStringLiteral("ScamDetectionEnabled"), mailPhishingDetectionEnabled);
-    } else { //Default
+    } else { // Default
         addKmailConfig(QStringLiteral("Reader"), QStringLiteral("ScamDetectionEnabled"), true);
     }
 
@@ -445,10 +429,9 @@ void ThunderbirdSettings::readGlobalSettings()
     if (mHashConfig.contains(mailDisplayGlyphStr)) {
         const bool mailDisplayGlyphEnabled = mHashConfig.value(mailDisplayGlyphStr).toBool();
         addKmailConfig(QStringLiteral("Reader"), QStringLiteral("ShowEmoticons"), mailDisplayGlyphEnabled);
-    } else { //Default
+    } else { // Default
         addKmailConfig(QStringLiteral("Reader"), QStringLiteral("ShowEmoticons"), true);
     }
-
 }
 
 void ThunderbirdSettings::importSieveSettings(QMap<QString, QVariant> &settings, const QString &userName, const QString &imapServerName)
@@ -457,11 +440,11 @@ void ThunderbirdSettings::importSieveSettings(QMap<QString, QVariant> &settings,
     userNameSieveConverted.replace(QLatin1Char('@'), QStringLiteral("%40"));
 
     const QString sieveKeyServerUserName = QStringLiteral("extensions.sieve.account.") + userNameSieveConverted + QLatin1Char('@') + imapServerName;
-    //user_pref("extensions.sieve.account.<username>@<server>.enabled", true);
+    // user_pref("extensions.sieve.account.<username>@<server>.enabled", true);
     if (mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".enabled"), false).toBool()) {
         settings.insert(QStringLiteral("SieveSupport"), true);
         settings.insert(QStringLiteral("SievePort"), mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".port"), 4190).toInt());
-        //TODO add more
+        // TODO add more
     }
 #if 0
     <group name="siever">
@@ -564,22 +547,22 @@ void ThunderbirdSettings::addAuth(QMap<QString, QVariant> &settings, const QStri
         if (found) {
             switch (authMethod) {
             case 0:
-                settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::PLAIN);   //????
+                settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::PLAIN); //????
                 break;
-            case 4: //Encrypted password ???
-                settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::LOGIN);   //????
+            case 4: // Encrypted password ???
+                settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::LOGIN); //????
                 qCDebug(THUNDERBIRDPLUGIN_LOG) << " authmethod == encrypt password";
                 break;
-            case 5: //GSSAPI
+            case 5: // GSSAPI
                 settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::GSSAPI);
                 break;
-            case 6: //NTLM
+            case 6: // NTLM
                 settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::NTLM);
                 break;
-            case 7: //TLS
+            case 7: // TLS
                 qCDebug(THUNDERBIRDPLUGIN_LOG) << " authmethod method == TLS"; //????
                 break;
-            case 10: //OAuth2 verify it.
+            case 10: // OAuth2 verify it.
                 settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::XOAUTH2);
                 qCDebug(THUNDERBIRDPLUGIN_LOG) << " authmethod method == OAuth2"; //????
                 break;
@@ -601,11 +584,11 @@ void ThunderbirdSettings::readAccount()
         const QString name = mHashConfig.value(accountName + QStringLiteral(".name")).toString();
 
         const QString type = mHashConfig.value(accountName + QStringLiteral(".type")).toString();
-        //TODO use it ?
-        //const QString directory = mHashConfig.value(accountName + QStringLiteral(".directory")).toString();
+        // TODO use it ?
+        // const QString directory = mHashConfig.value(accountName + QStringLiteral(".directory")).toString();
 
         const QString loginAtStartupStr = accountName + QStringLiteral(".login_at_startup");
-        bool loginAtStartup = true; //Default for thunderbird;
+        bool loginAtStartup = true; // Default for thunderbird;
         if (mHashConfig.contains(loginAtStartupStr)) {
             loginAtStartup = mHashConfig.value(loginAtStartupStr).toBool();
         }
@@ -626,7 +609,7 @@ void ThunderbirdSettings::readAccount()
                     settings.insert(QStringLiteral("DisconnectedModeEnabled"), offlineStatus);
                 }
             } else {
-                //default value == true
+                // default value == true
                 settings.insert(QStringLiteral("DisconnectedModeEnabled"), true);
             }
 
@@ -635,15 +618,15 @@ void ThunderbirdSettings::readAccount()
             if (found) {
                 switch (socketType) {
                 case 0:
-                    //None
+                    // None
                     settings.insert(QStringLiteral("Safety"), QStringLiteral("None"));
                     break;
                 case 2:
-                    //STARTTLS
+                    // STARTTLS
                     settings.insert(QStringLiteral("Safety"), QStringLiteral("STARTTLS"));
                     break;
                 case 3:
-                    //SSL/TLS
+                    // SSL/TLS
                     settings.insert(QStringLiteral("Safety"), QStringLiteral("SSL"));
                     break;
                 default:
@@ -665,19 +648,19 @@ void ThunderbirdSettings::readAccount()
                     settings.insert(QStringLiteral("IntervalCheckTime"), checkTime);
                 }
             } else {
-                //Default value from thunderbird
+                // Default value from thunderbird
                 settings.insert(QStringLiteral("IntervalCheckTime"), 10);
             }
             const QString trashFolderStr = accountName + QStringLiteral(".trash_folder_name");
             if (mHashConfig.contains(trashFolderStr)) {
-                settings.insert(QStringLiteral("TrashCollection"), MailCommon::Util::convertFolderPathToCollectionId(mHashConfig.value(trashFolderStr).toString()));
+                settings.insert(QStringLiteral("TrashCollection"),
+                                MailCommon::Util::convertFolderPathToCollectionId(mHashConfig.value(trashFolderStr).toString()));
             }
             importSieveSettings(settings, userName, serverName);
 
-
             const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, settings);
             addCheckMailOnStartup(agentIdentifyName, loginAtStartup);
-            //Not find a method to disable it in thunderbird
+            // Not find a method to disable it in thunderbird
             addToManualCheck(agentIdentifyName, true);
         } else if (type == QLatin1String("pop3")) {
             QMap<QString, QVariant> settings;
@@ -706,15 +689,15 @@ void ThunderbirdSettings::readAccount()
             if (found) {
                 switch (socketType) {
                 case 0:
-                    //None
-                    //nothing
+                    // None
+                    // nothing
                     break;
                 case 2:
-                    //STARTTLS
+                    // STARTTLS
                     settings.insert(QStringLiteral("UseTLS"), true);
                     break;
                 case 3:
-                    //SSL/TLS
+                    // SSL/TLS
                     settings.insert(QStringLiteral("UseSSL"), true);
                     break;
                 default:
@@ -736,16 +719,16 @@ void ThunderbirdSettings::readAccount()
                     settings.insert(QStringLiteral("IntervalCheckInterval"), checkTime);
                 }
             } else {
-                //Default value from thunderbird
+                // Default value from thunderbird
                 settings.insert(QStringLiteral("IntervalCheckInterval"), 10);
             }
 
             const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_pop3_resource"), name, settings);
             addCheckMailOnStartup(agentIdentifyName, loginAtStartup);
-            //Not find a method to disable it in thunderbird
+            // Not find a method to disable it in thunderbird
             addToManualCheck(agentIdentifyName, true);
         } else if (type == QLatin1String("none")) {
-            //FIXME look at if we can implement it
+            // FIXME look at if we can implement it
             qCDebug(THUNDERBIRDPLUGIN_LOG) << " account type none!";
         } else if (type == QLatin1String("rss") || type == QLatin1String("nntp") || type == QLatin1String("movemail")) {
             qCDebug(THUNDERBIRDPLUGIN_LOG) << QStringLiteral("%1 rss resource needs to be implemented").arg(type);
@@ -774,7 +757,7 @@ void ThunderbirdSettings::readTransport()
     const QStringList smtpList = mailSmtpServer.split(QLatin1Char(','));
     QString defaultSmtp = mHashConfig.value(QStringLiteral("mail.smtp.defaultserver")).toString();
     if (smtpList.count() == 1 && defaultSmtp.isEmpty()) {
-        //Be sure to define default smtp
+        // Be sure to define default smtp
         defaultSmtp = smtpList.at(0);
     }
 
@@ -796,19 +779,19 @@ void ThunderbirdSettings::readTransport()
         switch (authMethod) {
         case 0:
             break;
-        case 1: //No authentication
+        case 1: // No authentication
             mt->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN); //????
             break;
-        case 3: //Unencrypted password
+        case 3: // Unencrypted password
             mt->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::CLEAR); //???
             break;
-        case 4: //crypted password
+        case 4: // crypted password
             mt->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::LOGIN); //???
             break;
-        case 5: //GSSAPI
+        case 5: // GSSAPI
             mt->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::GSSAPI);
             break;
-        case 6: //NTLM
+        case 6: // NTLM
             mt->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::NTLM);
             break;
         default:
@@ -919,9 +902,9 @@ void ThunderbirdSettings::readIdentity(const QString &account)
         newIdentity->setDisabledFcc(!fccEnabled);
     }
 
-    //fcc_reply_follows_parent not implemented in kmail
-    //fcc_folder_picker_mode is just a flag for thunderbird. Not necessary during import.
-    //if ( mHashConfig.contains( identity + QStringLiteral( ".fcc_folder_picker_mode" ) ) )
+    // fcc_reply_follows_parent not implemented in kmail
+    // fcc_folder_picker_mode is just a flag for thunderbird. Not necessary during import.
+    // if ( mHashConfig.contains( identity + QStringLiteral( ".fcc_folder_picker_mode" ) ) )
     {
         if (mHashConfig.contains(identity + QStringLiteral(".fcc_folder"))) {
             const QString fccFolder = convertThunderbirdPath(mHashConfig.value(identity + QStringLiteral(".fcc_folder")).toString());
@@ -929,7 +912,7 @@ void ThunderbirdSettings::readIdentity(const QString &account)
         }
     }
 
-    //if ( mHashConfig.contains( identity + QStringLiteral( ".tmpl_folder_picker_mode" ) ) )
+    // if ( mHashConfig.contains( identity + QStringLiteral( ".tmpl_folder_picker_mode" ) ) )
     {
         if (mHashConfig.contains(identity + QStringLiteral(".stationery_folder"))) {
             const QString templateFolder = convertThunderbirdPath(mHashConfig.value(identity + QStringLiteral(".stationery_folder")).toString());
@@ -949,7 +932,8 @@ void ThunderbirdSettings::readIdentity(const QString &account)
         KContacts::VCardConverter converter;
         KContacts::Addressee addr = converter.parseVCard(vcard);
 
-        const QString filename = QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + QLatin1Char('/') + newIdentity->identityName() + QStringLiteral(".vcf");
+        const QString filename =
+            QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + QLatin1Char('/') + newIdentity->identityName() + QStringLiteral(".vcf");
         QFileInfo fileInfo(filename);
         QDir().mkpath(fileInfo.absolutePath());
         QFile file(filename);
@@ -968,7 +952,7 @@ void ThunderbirdSettings::readIdentity(const QString &account)
     }
 
     const QString composeHtmlStr(identity + QStringLiteral(".compose_html"));
-    //TODO: implement it in kmail
+    // TODO: implement it in kmail
 
     newIdentity->setSignature(signature);
 
@@ -990,7 +974,7 @@ void ThunderbirdSettings::insertIntoMap(const QString &line)
         if (valueStr.at(pos) == QLatin1Char('"')) {
             valueStr.remove(pos, 1);
         }
-        //Store as String
+        // Store as String
         mHashConfig.insert(key, valueStr);
     } else {
         if (valueStr == QLatin1String("true")) {
@@ -998,7 +982,7 @@ void ThunderbirdSettings::insertIntoMap(const QString &line)
         } else if (valueStr == QLatin1String("false")) {
             mHashConfig.insert(key, false);
         } else {
-            //Store as integer
+            // Store as integer
             const int value = valueStr.toInt();
             mHashConfig.insert(key, value);
         }
@@ -1007,8 +991,7 @@ void ThunderbirdSettings::insertIntoMap(const QString &line)
         QString ldapAccountName = key;
         mLdapAccountList.append(ldapAccountName.remove(QStringLiteral(".description")));
     }
-    if (key.contains(QLatin1String("mailnews.tags.")) &&
-            (key.endsWith(QLatin1String(".color")) || key.endsWith(QLatin1String(".tag")))) {
+    if (key.contains(QLatin1String("mailnews.tags.")) && (key.endsWith(QLatin1String(".color")) || key.endsWith(QLatin1String(".tag")))) {
         QString name = key;
         name.remove(QStringLiteral("mailnews.tags."));
         name.remove(QStringLiteral(".color"));

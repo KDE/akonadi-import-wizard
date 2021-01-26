@@ -6,8 +6,8 @@
 
 #include "abstractcalendar.h"
 #include "abstractdisplayinfo.h"
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
 using namespace LibImportWizard;
 
 AbstractCalendar::AbstractCalendar()
@@ -34,7 +34,7 @@ void AbstractCalendar::addImportError(const QString &log)
     }
 }
 
-//eventviewsrc for calendar color for example
+// eventviewsrc for calendar color for example
 void AbstractCalendar::addEvenViewConfig(const QString &groupName, const QString &key, const QString &value)
 {
     KSharedConfigPtr eventViewConfig = KSharedConfig::openConfig(QStringLiteral("eventviewsrc"));

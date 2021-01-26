@@ -5,14 +5,14 @@
 */
 
 #include "evolutionv3importdata.h"
-#include "evolutionsettings.h"
-#include "evolutioncalendar.h"
 #include "evolutionaddressbook.h"
+#include "evolutioncalendar.h"
+#include "evolutionsettings.h"
 #include <MailImporter/FilterEvolution_v3>
 #include <MailImporter/FilterInfo>
 
-#include <MailCommon/FilterImporterExporter>
 #include <KPluginFactory>
+#include <MailCommon/FilterImporterExporter>
 
 #include <KLocalizedString>
 

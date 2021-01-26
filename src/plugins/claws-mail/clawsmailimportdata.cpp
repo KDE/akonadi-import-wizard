@@ -5,14 +5,14 @@
 */
 
 #include "clawsmailimportdata.h"
-#include "clawsmailsettings.h"
 #include "clawsmailaddressbook.h"
-#include <MailImporter/FilterClawsMail>
+#include "clawsmailsettings.h"
 #include <MailCommon/FilterImporterClawsMail>
+#include <MailImporter/FilterClawsMail>
 #include <MailImporter/FilterInfo>
 
-#include <KPluginFactory>
 #include <KLocalizedString>
+#include <KPluginFactory>
 
 #include <QDir>
 

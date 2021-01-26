@@ -18,6 +18,7 @@ public:
     ~BalsaSettings();
 
     void importSettings();
+
 private:
     void readAccount(const KConfigGroup &grp, bool autoCheck, int autoDelay);
     void readIdentity(const KConfigGroup &grp);

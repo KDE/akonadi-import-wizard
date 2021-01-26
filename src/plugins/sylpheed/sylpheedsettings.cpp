@@ -6,20 +6,20 @@
 
 #include "sylpheedsettings.h"
 #include "sylpheedsettingsutils.h"
-#include <MailTransport/TransportManager>
 #include <MailCommon/MailUtil>
+#include <MailTransport/TransportManager>
 #include <QFileInfo>
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>
 #include <KIdentityManagement/kidentitymanagement/signature.h>
 
+#include "sylpheedplugin_debug.h"
 #include <KConfig>
 #include <KConfigGroup>
-#include "sylpheedplugin_debug.h"
 
-#include <QStringList>
 #include <QFile>
 #include <QRegularExpression>
+#include <QStringList>
 
 SylpheedSettings::SylpheedSettings()
 {
@@ -67,8 +67,8 @@ void SylpheedSettings::importSettings(const QString &filename, const QString &pa
 
 void SylpheedSettings::readCustomHeader(QFile *customHeaderFile)
 {
-    //In sylpheed we define custom header from account.
-    //In kmail it's global
+    // In sylpheed we define custom header from account.
+    // In kmail it's global
     QTextStream stream(customHeaderFile);
     QMap<QString, QString> header;
     while (!stream.atEnd()) {
@@ -157,7 +157,7 @@ void SylpheedSettings::readTemplateFormat(const KConfigGroup &group)
     }
     const QString forwardQuote = group.readEntry(QStringLiteral("forward_quote_mark"));
     if (!forwardQuote.isEmpty()) {
-        //Not implemented in kmail
+        // Not implemented in kmail
     }
     const QString replyQuoteFormat = group.readEntry(QStringLiteral("reply_quote_format"));
     if (!replyQuoteFormat.isEmpty()) {
@@ -180,7 +180,7 @@ void SylpheedSettings::readDateFormat(const KConfigGroup &group)
 void SylpheedSettings::readTagColor(const KConfigGroup &group)
 {
     Q_UNUSED(group)
-    //TODO
+    // TODO
 }
 
 void SylpheedSettings::readSettingsColor(const KConfigGroup &group)
@@ -240,7 +240,7 @@ QString SylpheedSettings::convertToKmailTemplate(const QString &templateStr)
 
     newTemplate.replace(QLatin1String("%fullname"), QLatin1String("%OFROMFNAME"));
     newTemplate.replace(QLatin1String("%N"), QLatin1String("%OFROMFNAME"));
-    //TODO add more variable
+    // TODO add more variable
     return newTemplate;
 }
 
@@ -249,15 +249,15 @@ void SylpheedSettings::readSignature(const KConfigGroup &accountConfig, KIdentit
     KIdentityManagement::Signature signature;
     const int signatureType = accountConfig.readEntry("signature_type", 0);
     switch (signatureType) {
-    case 0: //File
+    case 0: // File
         signature.setType(KIdentityManagement::Signature::FromFile);
         signature.setPath(accountConfig.readEntry("signature_path"), false);
         break;
-    case 1: //Output
+    case 1: // Output
         signature.setType(KIdentityManagement::Signature::FromCommand);
         signature.setPath(accountConfig.readEntry("signature_path"), true);
         break;
-    case 2: //Text
+    case 2: // Text
         signature.setType(KIdentityManagement::Signature::Inlined);
         signature.setText(accountConfig.readEntry("signature_text"));
         break;
@@ -280,7 +280,7 @@ void SylpheedSettings::readSignature(const KConfigGroup &accountConfig, KIdentit
         break;
     }
 
-    //TODO  const bool signatureBeforeQuote = ( accountConfig.readEntry( "signature_before_quote", 0 ) == 1 ); not implemented in kmail
+    // TODO  const bool signatureBeforeQuote = ( accountConfig.readEntry( "signature_before_quote", 0 ) == 1 ); not implemented in kmail
 
     identity->setSignature(signature);
 }
@@ -302,7 +302,7 @@ void SylpheedSettings::readPop3Account(const KConfigGroup &accountConfig, bool c
         const int sslPop = accountConfig.readEntry(QStringLiteral("ssl_pop"), 0);
         switch (sslPop) {
         case 0:
-            //Nothing
+            // Nothing
             break;
         case 1:
             settings.insert(QStringLiteral("UseSSL"), true);
@@ -329,7 +329,7 @@ void SylpheedSettings::readPop3Account(const KConfigGroup &accountConfig, bool c
     const QString password = accountConfig.readEntry(QStringLiteral("password"));
     settings.insert(QStringLiteral("Password"), password);
 
-    //use_apop_auth
+    // use_apop_auth
     if (accountConfig.hasKey(QStringLiteral("use_apop_auth"))) {
         const bool useApop = (accountConfig.readEntry(QStringLiteral("use_apop_auth"), 1) == 1);
         if (useApop) {
@@ -357,15 +357,15 @@ void SylpheedSettings::readImapAccount(const KConfigGroup &accountConfig, bool c
     const int sslimap = accountConfig.readEntry(QStringLiteral("ssl_imap"), 0);
     switch (sslimap) {
     case 0:
-        //None
+        // None
         settings.insert(QStringLiteral("Safety"), QStringLiteral("NONE"));
         break;
     case 1:
-        //SSL
+        // SSL
         settings.insert(QStringLiteral("Safety"), QStringLiteral("SSL"));
         break;
     case 2:
-        //TLS
+        // TLS
         settings.insert(QStringLiteral("Safety"), QStringLiteral("STARTTLS"));
         break;
     default:
@@ -387,13 +387,13 @@ void SylpheedSettings::readImapAccount(const KConfigGroup &accountConfig, bool c
     switch (auth) {
     case 0:
         break;
-    case 1: //Login
+    case 1: // Login
         settings.insert(QStringLiteral("Authentication"), MailTransport::Transport::EnumAuthenticationType::LOGIN);
         break;
-    case 2: //Cram-md5
+    case 2: // Cram-md5
         settings.insert(QStringLiteral("Authentication"), MailTransport::Transport::EnumAuthenticationType::CRAM_MD5);
         break;
-    case 4: //Plain
+    case 4: // Plain
         settings.insert(QStringLiteral("Authentication"), MailTransport::Transport::EnumAuthenticationType::PLAIN);
         break;
     default:
@@ -425,15 +425,15 @@ void SylpheedSettings::readAccount(const KConfigGroup &accountConfig, bool check
             readPop3Account(accountConfig, checkMailOnStartup, intervalCheckMail);
             break;
         case 3:
-            //imap
+            // imap
             readImapAccount(accountConfig, checkMailOnStartup, intervalCheckMail);
             break;
         case 4:
             qCDebug(SYLPHEEDPLUGIN_LOG) << " Add it when nntp resource will implemented";
-            //news
+            // news
             break;
         case 5:
-            //local
+            // local
             break;
         default:
             qCDebug(SYLPHEEDPLUGIN_LOG) << " protocol not defined" << protocol;
@@ -508,16 +508,16 @@ QString SylpheedSettings::readTransport(const KConfigGroup &accountConfig)
         if (accountConfig.readEntry(QStringLiteral("use_smtp_auth"), 0) == 1) {
             const int authMethod = accountConfig.readEntry(QStringLiteral("smtp_auth_method"), 0);
             switch (authMethod) {
-            case 0: //Automatic:
+            case 0: // Automatic:
                 mt->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN); //????
                 break;
-            case 1: //Login
+            case 1: // Login
                 mt->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::LOGIN);
                 break;
-            case 2: //Cram-MD5
+            case 2: // Cram-MD5
                 mt->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::CRAM_MD5);
                 break;
-            case 8: //Plain
+            case 8: // Plain
                 mt->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN);
                 break;
             default:

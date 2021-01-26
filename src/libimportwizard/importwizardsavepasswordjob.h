@@ -7,8 +7,8 @@
 #ifndef IMPORTWIZARDSAVEPASSWORDJOB_H
 #define IMPORTWIZARDSAVEPASSWORDJOB_H
 
-#include <QObject>
 #include "libimportwizard_export.h"
+#include <QObject>
 #include <qt5keychain/keychain.h>
 class LIBIMPORTWIZARD_EXPORT ImportWizardSavePasswordJob : public QObject
 {

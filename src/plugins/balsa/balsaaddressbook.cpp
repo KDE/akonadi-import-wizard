@@ -59,8 +59,8 @@ void BalsaAddressBook::readAddressBook(const KConfigGroup &grp)
         ldap.useTLS = (grp.readEntry(QStringLiteral("EnableTLS")) == QLatin1String("true"));
         ldap.ldapUrl = QUrl(grp.readEntry(QStringLiteral("Host")));
         ldap.port = ldap.ldapUrl.port();
-        //TODO: verify
-        const QString bookDN = grp.readEntry(QStringLiteral("BookDN"));  //TODO ?
+        // TODO: verify
+        const QString bookDN = grp.readEntry(QStringLiteral("BookDN")); // TODO ?
         ImportWizardUtil::mergeLdap(ldap);
         addAddressBookImportInfo(i18n("Ldap created"));
     } else if (type == QLatin1String("LibBalsaAddressBookGpe")) {

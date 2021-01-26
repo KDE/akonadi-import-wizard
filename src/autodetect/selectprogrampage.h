@@ -11,7 +11,8 @@
 
 class QListWidgetItem;
 
-namespace Ui {
+namespace Ui
+{
 class SelectProgramPage;
 }
 

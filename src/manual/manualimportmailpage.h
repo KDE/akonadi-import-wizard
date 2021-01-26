@@ -17,6 +17,7 @@ public:
     ~ManualImportMailPage();
 
     Ui::ManualImportMailPage *widget() const;
+
 private:
     Ui::ManualImportMailPage *mWidget = nullptr;
 };

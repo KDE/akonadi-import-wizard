@@ -7,16 +7,18 @@
 #ifndef ABSTRACTBASE_H
 #define ABSTRACTBASE_H
 
-#include <QObject>
 #include "libimportwizard_export.h"
 #include <QMap>
+#include <QObject>
 #include <QVariant>
 
-namespace PimCommon {
+namespace PimCommon
+{
 class CreateResource;
 }
 
-namespace LibImportWizard {
+namespace LibImportWizard
+{
 class AbstractDisplayInfo;
 class LIBIMPORTWIZARD_EXPORT AbstractBase : public QObject
 {

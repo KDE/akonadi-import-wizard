@@ -12,12 +12,14 @@
 #include <KSharedConfig>
 #include <QMap>
 
-namespace KIdentityManagement {
+namespace KIdentityManagement
+{
 class Identity;
 class IdentityManager;
 }
 
-namespace MailTransport {
+namespace MailTransport
+{
 class Transport;
 }
 

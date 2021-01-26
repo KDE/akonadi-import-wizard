@@ -22,6 +22,7 @@ public:
     bool importFilters() override;
     bool importAddressBook() override;
     QString name() const override;
+
 private:
     QString defaultProfile();
 

@@ -6,15 +6,15 @@
 #include "abstractsettings.h"
 #include "abstractdisplayinfo.h"
 
-#include <KIdentityManagement/kidentitymanagement/identitymanager.h>
 #include <KIdentityManagement/kidentitymanagement/identity.h>
+#include <KIdentityManagement/kidentitymanagement/identitymanager.h>
 #include <MailTransport/TransportManager>
 
 #include <KLocalizedString>
 
-#include <AkonadiCore/agenttype.h>
-#include <AkonadiCore/agentmanager.h>
 #include <AkonadiCore/agentinstancecreatejob.h>
+#include <AkonadiCore/agentmanager.h>
+#include <AkonadiCore/agenttype.h>
 
 #include <QMetaMethod>
 

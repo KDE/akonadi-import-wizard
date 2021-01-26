@@ -28,6 +28,7 @@ public:
     void initializeFilter(MailImporter::Filter &filter) override;
 
     QWidget *parentWidget() const override;
+
 private:
     ImportWizard *const mImportWizard;
 };

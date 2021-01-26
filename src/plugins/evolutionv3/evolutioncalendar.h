@@ -18,6 +18,7 @@ public:
     ~EvolutionCalendar();
 
     void loadCalendar(const QString &filename);
+
 private:
     void readCalendar(const QDomElement &calendar);
     void extractCalendarInfo(const QString &info);

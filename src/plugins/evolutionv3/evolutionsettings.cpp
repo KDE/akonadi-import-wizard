@@ -6,8 +6,8 @@
 
 #include "evolutionsettings.h"
 #include "evolutionutil.h"
-#include <MailCommon/MailUtil>
 #include "importwizardutil.h"
+#include <MailCommon/MailUtil>
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>
 
@@ -15,10 +15,10 @@
 
 #include "evolutionv3plugin_debug.h"
 
-#include <QFile>
 #include <QDir>
 #include <QDomDocument>
 #include <QDomElement>
+#include <QFile>
 
 EvolutionSettings::EvolutionSettings()
 {
@@ -30,7 +30,7 @@ EvolutionSettings::~EvolutionSettings()
 
 void EvolutionSettings::loadAccount(const QString &filename)
 {
-    //Read gconf file
+    // Read gconf file
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly)) {
         qCDebug(EVOLUTIONPLUGIN_LOG) << " We can't open file" << filename;
@@ -56,9 +56,9 @@ void EvolutionSettings::loadAccount(const QString &filename)
                 } else if (attr == QLatin1String("signatures")) {
                     readSignatures(e);
                 } else if (attr == QLatin1String("send_recv_all_on_start")) {
-                    //TODO: implement it.
+                    // TODO: implement it.
                 } else if (attr == QLatin1String("send_recv_on_start")) {
-                    //TODO: implement it.
+                    // TODO: implement it.
                 } else {
                     qCDebug(EVOLUTIONPLUGIN_LOG) << " attr unknown " << attr;
                 }
@@ -106,10 +106,10 @@ void EvolutionSettings::readLdap(const QString &ldapStr)
         qCDebug(EVOLUTIONPLUGIN_LOG) << "ldap not found";
         return;
     }
-    //Ldap server
+    // Ldap server
     if (domElement.attribute(QStringLiteral("base_uri")) == QLatin1String("ldap://")) {
         for (QDomElement e = domElement.firstChildElement(); !e.isNull(); e = e.nextSiblingElement()) {
-            //const QString name = e.attribute( QLatin1String( "name" ) ); We don't use it in kmail
+            // const QString name = e.attribute( QLatin1String( "name" ) ); We don't use it in kmail
 
             ldapStruct ldap;
             const QString relative_uri = e.attribute(QStringLiteral("relative_uri"));
@@ -144,11 +144,11 @@ void EvolutionSettings::readLdap(const QString &ldapStr)
                             } else if (propertyName == QLatin1String("auth")) {
                                 const QString value = property.attribute(QStringLiteral("value"));
                                 if (value == QLatin1String("ldap/simple-email")) {
-                                    //TODO:
+                                    // TODO:
                                 } else if (value == QLatin1String("none")) {
-                                    //TODO:
+                                    // TODO:
                                 } else if (value == QLatin1String("ldap/simple-binddn")) {
-                                    //TODO:
+                                    // TODO:
                                 } else {
                                     qCDebug(EVOLUTIONPLUGIN_LOG) << " Unknown auth value " << value;
                                 }
@@ -179,7 +179,7 @@ void EvolutionSettings::readSignatures(const QDomElement &account)
 
 void EvolutionSettings::extractSignatureInfo(const QString &info)
 {
-    //qCDebug(EVOLUTIONPLUGIN_LOG)<<" signature info "<<info;
+    // qCDebug(EVOLUTIONPLUGIN_LOG)<<" signature info "<<info;
     QDomDocument signature;
     if (!EvolutionUtil::loadInDomDocument(info, signature)) {
         return;
@@ -196,11 +196,11 @@ void EvolutionSettings::extractSignatureInfo(const QString &info)
 
         const QString tag = e.tagName();
         const QString uid = e.attribute(QStringLiteral("uid"));
-        const QString signatureName = e.attribute(QStringLiteral("name"));     //Use it ?
+        const QString signatureName = e.attribute(QStringLiteral("name")); // Use it ?
         const QString format = e.attribute(QStringLiteral("text"));
         const bool automatic = (e.attribute(QStringLiteral("auto")) == QLatin1String("true"));
         if (automatic) {
-            //TODO:
+            // TODO:
         } else {
             if (format == QLatin1String("text/html")) {
                 signature.setInlinedHtml(true);
@@ -237,7 +237,7 @@ void EvolutionSettings::readAccount(const QDomElement &account)
 void EvolutionSettings::extractAccountInfo(const QString &info)
 {
     qCDebug(EVOLUTIONPLUGIN_LOG) << " info " << info;
-    //Read QDomElement
+    // Read QDomElement
     QDomDocument account;
     if (!EvolutionUtil::loadInDomDocument(info, account)) {
         return;
@@ -284,7 +284,7 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
             }
         } else if (tag == QLatin1String("source")) {
             if (e.hasAttribute(QStringLiteral("save-passwd")) && e.attribute(QStringLiteral("save-passwd")) == QLatin1String("true")) {
-                //TODO
+                // TODO
             }
             int interval = -1;
             bool intervalCheck = false;
@@ -309,12 +309,12 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
 
                     const QStringList listArgument = path.split(QLatin1Char(';'));
 
-                    //imapx://name@pop3.xx.org:993/;security-method=ssl-on-alternate-port;namespace;shell-command=ssh%20-C%20-l%20%25u%20%25h%20exec%20/usr/sbin/imapd%20;use-shell-command=true
+                    // imapx://name@pop3.xx.org:993/;security-method=ssl-on-alternate-port;namespace;shell-command=ssh%20-C%20-l%20%25u%20%25h%20exec%20/usr/sbin/imapd%20;use-shell-command=true
                     if (scheme == QLatin1String("imap") || scheme == QLatin1String("imapx")) {
                         if (port > 0) {
                             settings.insert(QStringLiteral("ImapPort"), port);
                         }
-                        //Perhaps imapx is specific don't know
+                        // Perhaps imapx is specific don't know
                         if (intervalCheck) {
                             settings.insert(QStringLiteral("IntervalCheckEnabled"), true);
                         }
@@ -327,7 +327,7 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                         if (found) {
                             if (securityMethod == QLatin1String("none")) {
                                 settings.insert(QStringLiteral("Safety"), QStringLiteral("None"));
-                                //Nothing
+                                // Nothing
                             } else if (securityMethod == QLatin1String("ssl-on-alternate-port")) {
                                 settings.insert(QStringLiteral("Safety"), QStringLiteral("SSL"));
                             } else {
@@ -338,8 +338,9 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                         }
 
                         addAuth(settings, QStringLiteral("Authentication"), userName);
-                        const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, settings);
-                        //By default
+                        const QString agentIdentifyName =
+                            LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, settings);
+                        // By default
                         addCheckMailOnStartup(agentIdentifyName, enableManualCheck);
                         addToManualCheck(agentIdentifyName, enableManualCheck);
                     } else if (scheme == QLatin1String("pop")) {
@@ -350,7 +351,7 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                         const QString securityMethod = getSecurityMethod(listArgument, found);
                         if (found) {
                             if (securityMethod == QLatin1String("none")) {
-                                //Nothing
+                                // Nothing
                             } else if (securityMethod == QLatin1String("ssl-on-alternate-port")) {
                                 settings.insert(QStringLiteral("UseSSL"), true);
                             } else {
@@ -370,12 +371,13 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                             settings.insert(QStringLiteral("LeaveOnServer"), true);
                         }
                         addAuth(settings, QStringLiteral("AuthenticationMethod"), userName);
-                        const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_pop3_resource"), name, settings);
-                        //By default
+                        const QString agentIdentifyName =
+                            LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_pop3_resource"), name, settings);
+                        // By default
                         addCheckMailOnStartup(agentIdentifyName, enableManualCheck);
                         addToManualCheck(agentIdentifyName, enableManualCheck);
                     } else if (scheme == QLatin1String("spool") || scheme == QLatin1String("mbox")) {
-                        //mbox file
+                        // mbox file
                         settings.insert(QStringLiteral("Path"), path);
                         settings.insert(QStringLiteral("DisplayName"), name);
                         LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_mbox_resource"), name, settings);
@@ -383,7 +385,7 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                         settings.insert(QStringLiteral("Path"), path);
                         LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_maildir_resource"), name, settings);
                     } else if (scheme == QLatin1String("nntp")) {
-                        //FIXME in the future
+                        // FIXME in the future
                         qCDebug(EVOLUTIONPLUGIN_LOG) << " For the moment we can't import nntp resource";
                     } else {
                         qCDebug(EVOLUTIONPLUGIN_LOG) << " unknown scheme " << scheme;
@@ -394,7 +396,7 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
             }
         } else if (tag == QLatin1String("transport")) {
             if (e.hasAttribute(QStringLiteral("save-passwd")) && e.attribute(QStringLiteral("save-passwd")) == QLatin1String("true")) {
-                //TODO save to kwallet ?
+                // TODO save to kwallet ?
             }
 
             MailTransport::Transport *transport = createTransport();
@@ -408,9 +410,9 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                     if (scheme != QLatin1String("sendmail")) {
                         transport->setHost(smtpUrl.host());
                         transport->setName(smtpUrl.host());
-                        //TODO setUserName :
-                        //transport->setRequiresAuthentication(true);
-                        //transport->setUserName(....);
+                        // TODO setUserName :
+                        // transport->setRequiresAuthentication(true);
+                        // transport->setUserName(....);
                         const int port = smtpUrl.port();
                         if (port > 0) {
                             transport->setPort(port);
@@ -483,39 +485,32 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
         } else if (tag == QLatin1String("receipt-policy")) {
             if (e.hasAttribute(QStringLiteral("policy"))) {
                 const QString policy = e.attribute(QStringLiteral("policy"));
-                //TODO
+                // TODO
             }
         } else if (tag == QLatin1String("pgp")) {
-            if (e.hasAttribute(QStringLiteral("encrypt-to-self"))
-                && (e.attribute(QStringLiteral("encrypt-to-self")) == QLatin1String("true"))) {
-                //TODO
+            if (e.hasAttribute(QStringLiteral("encrypt-to-self")) && (e.attribute(QStringLiteral("encrypt-to-self")) == QLatin1String("true"))) {
+                // TODO
             }
-            if (e.hasAttribute(QStringLiteral("always-trust"))
-                && (e.attribute(QStringLiteral("always-trust")) == QLatin1String("true"))) {
-                //TODO
+            if (e.hasAttribute(QStringLiteral("always-trust")) && (e.attribute(QStringLiteral("always-trust")) == QLatin1String("true"))) {
+                // TODO
             }
-            if (e.hasAttribute(QStringLiteral("always-sign"))
-                && (e.attribute(QStringLiteral("always-sign")) == QLatin1String("true"))) {
-                //TODO
+            if (e.hasAttribute(QStringLiteral("always-sign")) && (e.attribute(QStringLiteral("always-sign")) == QLatin1String("true"))) {
+                // TODO
             }
-            if (e.hasAttribute(QStringLiteral("no-imip-sign"))
-                && (e.attribute(QStringLiteral("no-imip-sign")) == QLatin1String("true"))) {
-                //TODO
+            if (e.hasAttribute(QStringLiteral("no-imip-sign")) && (e.attribute(QStringLiteral("no-imip-sign")) == QLatin1String("true"))) {
+                // TODO
             }
         } else if (tag == QLatin1String("smime")) {
-            if (e.hasAttribute(QStringLiteral("sign-default"))
-                && (e.attribute(QStringLiteral("sign-default")) == QLatin1String("true"))) {
-                //TODO
+            if (e.hasAttribute(QStringLiteral("sign-default")) && (e.attribute(QStringLiteral("sign-default")) == QLatin1String("true"))) {
+                // TODO
             }
-            if (e.hasAttribute(QStringLiteral("encrypt-default"))
-                && (e.attribute(QStringLiteral("encrypt-default")) == QLatin1String("true"))) {
-                //TODO
+            if (e.hasAttribute(QStringLiteral("encrypt-default")) && (e.attribute(QStringLiteral("encrypt-default")) == QLatin1String("true"))) {
+                // TODO
             }
-            if (e.hasAttribute(QStringLiteral("encrypt-to-self"))
-                && (e.attribute(QStringLiteral("encrypt-to-self")) == QLatin1String("true"))) {
-                //TODO
+            if (e.hasAttribute(QStringLiteral("encrypt-to-self")) && (e.attribute(QStringLiteral("encrypt-to-self")) == QLatin1String("true"))) {
+                // TODO
             }
-            //TODO
+            // TODO
         } else {
             qCDebug(EVOLUTIONPLUGIN_LOG) << " tag not know :" << tag;
         }
@@ -570,7 +565,7 @@ void EvolutionSettings::addAuth(QMap<QString, QVariant> &settings, const QString
         } else if (authMethod == QLatin1String("LOGIN")) {
             settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::LOGIN);
         } else if (authMethod == QLatin1String("POPB4SMTP")) {
-            settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::APOP);   //????
+            settings.insert(argument, MailTransport::Transport::EnumAuthenticationType::APOP); //????
         } else {
             qCDebug(EVOLUTIONPLUGIN_LOG) << " smtp auth method unknown " << authMethod;
         }

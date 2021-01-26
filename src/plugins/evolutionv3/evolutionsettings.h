@@ -20,6 +20,7 @@ public:
     ~EvolutionSettings();
     void loadAccount(const QString &filename);
     void loadLdap(const QString &filename);
+
 private:
     void readAccount(const QDomElement &account);
     void readLdap(const QString &account);

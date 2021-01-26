@@ -11,11 +11,11 @@
 
 /* Classes which are exported only for unit tests */
 #ifdef BUILD_TESTING
-# ifndef LIBIMPORTWIZARD_TESTS_EXPORT
-#  define LIBIMPORTWIZARD_TESTS_EXPORT LIBIMPORTWIZARD_EXPORT
-# endif
+#ifndef LIBIMPORTWIZARD_TESTS_EXPORT
+#define LIBIMPORTWIZARD_TESTS_EXPORT LIBIMPORTWIZARD_EXPORT
+#endif
 #else /* not compiling tests */
-# define LIBIMPORTWIZARD_TESTS_EXPORT
+#define LIBIMPORTWIZARD_TESTS_EXPORT
 #endif
 
 #endif

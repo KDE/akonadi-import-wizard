@@ -4,32 +4,32 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "importwizard.h"
-#include "importwizardkernel.h"
-#include "autodetect/selectprogrampage.h"
-#include "autodetect/selectcomponentpage.h"
-#include "autodetect/importmailpage.h"
-#include "autodetect/importfilterpage.h"
-#include "autodetect/importsettingpage.h"
 #include "autodetect/importaddressbookpage.h"
 #include "autodetect/importcalendarpage.h"
+#include "autodetect/importfilterpage.h"
 #include "autodetect/importfinishpage.h"
+#include "autodetect/importmailpage.h"
+#include "autodetect/importsettingpage.h"
+#include "autodetect/selectcomponentpage.h"
+#include "autodetect/selectprogrampage.h"
 #include "importmailpluginmanager.h"
 #include "importwizarddisplayinfo.h"
+#include "importwizardkernel.h"
 
+#include "manual/importwizardfilterinfogui.h"
 #include "manual/manualimportmailpage.h"
 #include "manual/manualselectfilterpage.h"
-#include "manual/importwizardfilterinfogui.h"
 
 #include <MailImporter/FilterInfo>
 #include <MailImporterAkonadi/FilterImporterAkonadi>
 
-#include <KAboutData>
-#include <KLocalizedString>
-#include <KConfigGroup>
 #include "importwizard_debug.h"
-#include <KMessageBox>
-#include <KHelpMenu>
 #include <AkonadiWidgets/controlgui.h>
+#include <KAboutData>
+#include <KConfigGroup>
+#include <KHelpMenu>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <MailCommon/MailKernel>
 #include <QAction>
 #include <QPushButton>
@@ -44,8 +44,8 @@ ImportWizard::ImportWizard(WizardMode mode, QWidget *parent)
     mAbstractDisplayInfo = new ImportWizardDisplayInfo(this);
 
     auto *kernel = new ImportWizardKernel(this);
-    CommonKernel->registerKernelIf(kernel);   //register KernelIf early, it is used by the Filter classes
-    CommonKernel->registerSettingsIf(kernel);   //SettingsIf is used in FolderTreeWidget
+    CommonKernel->registerKernelIf(kernel); // register KernelIf early, it is used by the Filter classes
+    CommonKernel->registerSettingsIf(kernel); // SettingsIf is used in FolderTreeWidget
     createAutomaticModePage();
     createManualModePage();
     initializeImportModule();
@@ -71,7 +71,7 @@ ImportWizard::ImportWizard(WizardMode mode, QWidget *parent)
         KMessageBox::information(this, i18n("Close KMail before importing data. Some plugins will modify KMail config file."));
     }
     KHelpMenu *helpMenu = new KHelpMenu(this, KAboutData::applicationData(), true);
-    //Initialize menu
+    // Initialize menu
     QMenu *menu = helpMenu->menu();
     helpMenu->action(KHelpMenu::menuAboutApp)->setIcon(QIcon::fromTheme(QStringLiteral("kmail")));
     button(QDialogButtonBox::Help)->setMenu(menu);
@@ -149,7 +149,7 @@ void ImportWizard::slotCollectionChanged(const Akonadi::Collection &selectedColl
 void ImportWizard::reject()
 {
     if (currentPage() == mImportpageItem) {
-        MailImporter::FilterInfo::terminateASAP();    // ie. import in progress
+        MailImporter::FilterInfo::terminateASAP(); // ie. import in progress
     }
     KAssistantDialog::reject();
 }
@@ -368,11 +368,8 @@ void ImportWizard::back()
 {
     if (currentPage() == mSelectProgramPageItem) {
         return;
-    } else if (currentPage() == mImportFilterPageItem
-               || currentPage() == mImportSettingPageItem
-               || currentPage() == mImportAddressbookPageItem
-               || currentPage() == mImportCalendarPageItem
-               || currentPage() == mImportFinishPageItem) {
+    } else if (currentPage() == mImportFilterPageItem || currentPage() == mImportSettingPageItem || currentPage() == mImportAddressbookPageItem
+               || currentPage() == mImportCalendarPageItem || currentPage() == mImportFinishPageItem) {
         enableAllImportButton();
     }
     KAssistantDialog::back();

@@ -9,7 +9,8 @@
 #include "abstractimporter.h"
 
 #include <KAssistantDialog>
-namespace LibImportWizard {
+namespace LibImportWizard
+{
 class AbstractImporter;
 class AbstractDisplayInfo;
 }
@@ -25,17 +26,15 @@ class ImportCalendarPage;
 class ManualSelectFilterPage;
 class ManualImportMailPage;
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Collection;
 }
 class ImportWizard : public KAssistantDialog
 {
     Q_OBJECT
 public:
-    enum class WizardMode {
-        AutoDetect = 0,
-        Manual = 1
-    };
+    enum class WizardMode { AutoDetect = 0, Manual = 1 };
 
     explicit ImportWizard(WizardMode mode, QWidget *parent = nullptr);
     ~ImportWizard() override;

@@ -5,13 +5,13 @@
 */
 
 #include "importwizarddisplayinfo.h"
-#include "importwizard.h"
-#include "autodetect/importcalendarpage.h"
-#include "autodetect/importsettingpage.h"
 #include "autodetect/importaddressbookpage.h"
+#include "autodetect/importcalendarpage.h"
+#include "autodetect/importfilterinfogui.h"
 #include "autodetect/importfilterpage.h"
 #include "autodetect/importmailpage.h"
-#include "autodetect/importfilterinfogui.h"
+#include "autodetect/importsettingpage.h"
+#include "importwizard.h"
 
 #include <MailImporter/FilterInfo>
 #include <MailImporterAkonadi/FilterImporterAkonadi>

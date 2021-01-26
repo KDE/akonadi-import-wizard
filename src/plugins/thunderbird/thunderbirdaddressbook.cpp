@@ -7,10 +7,10 @@
 #include "thunderbirdaddressbook.h"
 #include "addressbook/MorkParser.h"
 
-#include <KLocalizedString>
-#include <KContacts/Addressee>
-#include <QUrl>
 #include "thunderbirdplugin_debug.h"
+#include <KContacts/Addressee>
+#include <KLocalizedString>
+#include <QUrl>
 
 ThunderBirdAddressBook::ThunderBirdAddressBook(const QDir &dir)
     : mDir(dir)
@@ -105,7 +105,7 @@ void ThunderBirdAddressBook::readAddressBook(const QString &filename)
                                     photo.setUrl(value);
                                     contact.setLogo(photo);
                                 } else if (column == QLatin1String("PhotoName")) {
-                                    //TODO: verify it
+                                    // TODO: verify it
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
                                 } else if (column == QLatin1String("DbRowID")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
@@ -226,7 +226,7 @@ void ThunderBirdAddressBook::readAddressBook(const QString &filename)
                                 } else {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " Columnn not implemented " << column;
                                 }
-                                //qCDebug(THUNDERBIRDPLUGIN_LOG)<<" value :"<<value<<" column"<<column;
+                                // qCDebug(THUNDERBIRDPLUGIN_LOG)<<" value :"<<value<<" column"<<column;
                             }
 
                             if (!homeAddr.isEmpty()) {

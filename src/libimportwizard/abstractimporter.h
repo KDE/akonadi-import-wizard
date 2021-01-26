@@ -6,33 +6,29 @@
 
 #ifndef AbstractImporter_H
 #define AbstractImporter_H
-#include <MailCommon/FilterImporterExporter>
 #include "libimportwizard_export.h"
+#include <MailCommon/FilterImporterExporter>
 #include <QVector>
-namespace MailImporter {
+namespace MailImporter
+{
 class FilterInfo;
 class Filter;
 }
 
-namespace MailCommon {
+namespace MailCommon
+{
 class MailFilter;
 class FilterImporterExporter;
 }
 
-namespace LibImportWizard {
+namespace LibImportWizard
+{
 class AbstractDisplayInfo;
 class LIBIMPORTWIZARD_EXPORT AbstractImporter : public QObject
 {
     Q_OBJECT
 public:
-    enum TypeSupportedOption {
-        None = 0,
-        Mails = 1,
-        Settings = 2,
-        Filters = 4,
-        AddressBooks = 8,
-        Calendars = 16
-    };
+    enum TypeSupportedOption { None = 0, Mails = 1, Settings = 2, Filters = 4, AddressBooks = 8, Calendars = 16 };
 
     Q_DECLARE_FLAGS(TypeSupportedOptions, TypeSupportedOption)
 
@@ -40,17 +36,17 @@ public:
     virtual ~AbstractImporter();
 
     /**
-    * Return true if mail found on system
-    */
+     * Return true if mail found on system
+     */
     virtual bool foundMailer() const = 0;
 
     /**
-    * Return type of data that we can import
-    */
+     * Return type of data that we can import
+     */
     virtual TypeSupportedOptions supportedOption() = 0;
     /**
-    * Return name for plugins
-    */
+     * Return name for plugins
+     */
     virtual QString name() const = 0;
 
     virtual bool importSettings();

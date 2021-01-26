@@ -5,16 +5,17 @@
 */
 
 #include "importmailpluginmanager.h"
-#include "importwizard_debug.h"
 #include "abstractimporter.h"
+#include "importwizard_debug.h"
 
-#include <KPluginMetaData>
-#include <KPluginLoader>
 #include <KPluginFactory>
+#include <KPluginLoader>
+#include <KPluginMetaData>
 
 #include <QFileInfo>
 
-namespace {
+namespace
+{
 QString pluginVersion()
 {
     return QStringLiteral("1.0");
@@ -48,9 +49,9 @@ bool ImportMailPluginManager::initializePluginList()
         ImportMailPluginManagerInfo info;
         const KPluginMetaData data = i.previous();
 
-        //1) get plugin data => name/description etc.
+        // 1) get plugin data => name/description etc.
         info.pluginData = createPluginMetaData(data);
-        //2) look at if plugin is activated
+        // 2) look at if plugin is activated
         info.metaDataFileNameBaseName = QFileInfo(data.fileName()).baseName();
         info.metaDataFileName = data.fileName();
         if (pluginVersion() == data.version()) {

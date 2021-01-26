@@ -6,10 +6,10 @@
 
 #ifndef IMPORTWIZARDUTIL_H
 #define IMPORTWIZARDUTIL_H
-#include <QUrl>
+#include "libimportwizard_export.h"
 #include <QColor>
 #include <QString>
-#include "libimportwizard_export.h"
+#include <QUrl>
 
 struct LIBIMPORTWIZARD_EXPORT ldapStruct {
     ldapStruct()
@@ -36,12 +36,9 @@ struct tagStruct {
 };
 Q_DECLARE_TYPEINFO(tagStruct, Q_MOVABLE_TYPE);
 
-namespace ImportWizardUtil {
-enum ResourceType {
-    Imap,
-    Pop3,
-    Ldap
-};
+namespace ImportWizardUtil
+{
+enum ResourceType { Imap, Pop3, Ldap };
 
 LIBIMPORTWIZARD_EXPORT void mergeLdap(const ldapStruct &ldap);
 LIBIMPORTWIZARD_EXPORT void addAkonadiTag(const QVector<tagStruct> &tagList);

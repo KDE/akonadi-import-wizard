@@ -6,8 +6,8 @@
 
 #include "balsasettings.h"
 #include "balsaplugin_debug.h"
-#include <MailTransport/TransportManager>
 #include <MailCommon/MailUtil>
+#include <MailTransport/TransportManager>
 #include <MessageViewer/KXFace>
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>
@@ -64,8 +64,8 @@ void BalsaSettings::readAccount(const KConfigGroup &grp, bool autoCheck, int aut
         settings.insert(QStringLiteral("Host"), server);
         const QString name = grp.readEntry(QStringLiteral("Name"));
 
-        //const bool apop = grp.readEntry(QStringLiteral("DisableApop"), false);
-        //Q_UNUSED(apop)
+        // const bool apop = grp.readEntry(QStringLiteral("DisableApop"), false);
+        // Q_UNUSED(apop)
         const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_pop3_resource"), name, settings);
 
         addCheckMailOnStartup(agentIdentifyName, autoCheck);
@@ -128,7 +128,7 @@ void BalsaSettings::readTransport(const KConfigGroup &grp)
     mt->setHost(server);
 
     const int tlsMode = grp.readEntry(QStringLiteral("TLSMode"), -1);
-    //TODO
+    // TODO
     switch (tlsMode) {
     case 0:
         break;
@@ -150,13 +150,13 @@ void BalsaSettings::readTransport(const KConfigGroup &grp)
         qCDebug(BALSAPLUGIN_LOG) << " unknown ssl value :" << ssl;
     }
 
-    //TODO const QString anonymous = grp.readEntry(QStringLiteral("Anonymous"));
+    // TODO const QString anonymous = grp.readEntry(QStringLiteral("Anonymous"));
 
-    //TODO
-    storeTransport(mt, /*( smtp == defaultSmtp )*/ true);   //FIXME
+    // TODO
+    storeTransport(mt, /*( smtp == defaultSmtp )*/ true); // FIXME
     mHashSmtp.insert(smtp, QString::number(mt->id()));
 
-    //TODO
+    // TODO
     /*
     Server=localhost:25
     Anonymous=false

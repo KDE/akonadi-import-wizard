@@ -11,11 +11,13 @@
 #include <QString>
 class QWidget;
 
-namespace MailImporter {
+namespace MailImporter
+{
 class Filter;
 }
 
-namespace LibImportWizard {
+namespace LibImportWizard
+{
 class LIBIMPORTWIZARD_EXPORT AbstractDisplayInfo
 {
 public:
