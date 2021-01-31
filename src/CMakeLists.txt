@@ -76,7 +76,7 @@ target_link_libraries(akonadiimportwizard
     KF5::CoreAddons
     KF5::Crash
     KF5::DBusAddons
-    Qt5::Widgets
+    Qt::Widgets
     KF5::ConfigCore
     KF5::WidgetsAddons
     )
