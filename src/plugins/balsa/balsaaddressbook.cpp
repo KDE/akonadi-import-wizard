@@ -15,6 +15,9 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <QUrl>
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+#include <QTextCodec>
+#endif
 
 #include "balsaplugin_debug.h"
 #include <QFile>
@@ -73,7 +76,11 @@ void BalsaAddressBook::readAddressBook(const KConfigGroup &grp)
             QFile file(path);
             if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
                 QTextStream stream(&file);
-                stream.setCodec("ISO 8859-1");
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+                stream.setCodec(QTextCodec::codecForName("ISO-8859-1"));
+#else
+                stream.setEncoding(QStringConverter::Encoding::Latin1);
+#endif
 
                 const QString wholeFile = stream.readAll();
                 const QDateTime dtDefault = QFileInfo(file).lastModified();
