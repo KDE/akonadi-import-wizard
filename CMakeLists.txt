@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
-set(PIM_VERSION "5.16.80")
+set(PIM_VERSION "5.17.40")
 project(AkonadiImportWizard VERSION ${PIM_VERSION})
 
 
-set(KF5_MIN_VERSION "5.79.0")
+set(KF5_MIN_VERSION "5.80.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -28,8 +28,8 @@ include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION beta)
-set(RELEASE_SERVICE_VERSION "21.03.80")
+set(KDEPIM_DEV_VERSION alpha)
+set(RELEASE_SERVICE_VERSION "21.07.40")
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
@@ -87,7 +87,7 @@ set_package_properties(Qt5Keychain PROPERTIES
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 add_definitions(-DQT_USE_QSTRINGBUILDER)
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055000)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055100)
 
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
