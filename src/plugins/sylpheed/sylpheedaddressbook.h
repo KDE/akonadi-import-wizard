@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SYLPHEEDADDRESSBOOK_H
-#define SYLPHEEDADDRESSBOOK_H
+#pragma once
 
 #include "abstractaddressbook.h"
 #include <QDir>
@@ -27,4 +26,3 @@ private:
     QDir mDir;
 };
 
-#endif /* SYLPHEEDADDRESSBOOK_H */

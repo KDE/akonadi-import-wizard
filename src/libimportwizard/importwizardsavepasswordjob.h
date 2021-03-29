@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef IMPORTWIZARDSAVEPASSWORDJOB_H
-#define IMPORTWIZARDSAVEPASSWORDJOB_H
+#pragma once
 
 #include "libimportwizard_export.h"
 #include <QObject>
@@ -37,4 +36,3 @@ private:
     QString mName;
 };
 
-#endif // IMPORTWIZARDSAVEPASSWORDJOB_H

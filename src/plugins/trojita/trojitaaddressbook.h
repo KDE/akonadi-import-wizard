@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TrojitaAddressBook_H
-#define TrojitaAddressBook_H
+#pragma once
 
 #include "abstractaddressbook.h"
 #include <QHash>
@@ -23,4 +22,3 @@ private:
     QSettings *settings = nullptr;
 };
 
-#endif /* TrojitaAddressBook_H */

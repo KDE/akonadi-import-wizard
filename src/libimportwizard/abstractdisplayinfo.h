@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ABSTRACTDISPLAYINFO_H
-#define ABSTRACTDISPLAYINFO_H
+#pragma once
 
 #include "libimportwizard_export.h"
 #include <QString>
@@ -39,4 +38,3 @@ public:
 };
 }
 
-#endif // ABSTRACTDISPLAYINFO_H

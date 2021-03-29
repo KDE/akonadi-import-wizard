@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef IMPORTADDRESSBOOKPAGE_H
-#define IMPORTADDRESSBOOKPAGE_H
+#pragma once
 
 #include <QWidget>
 
@@ -33,4 +32,3 @@ private:
     Ui::ImportAddressbookPage *const ui;
 };
 
-#endif // IMPORTADDRESSBOOKPAGE_H

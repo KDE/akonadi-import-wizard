@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef ClawsMailImportData_H
-#define ClawsMailImportData_H
+#pragma once
 
 #include "abstractimporter.h"
 
@@ -25,4 +24,3 @@ public:
     QString name() const override;
 };
 
-#endif /* ClawsMailImportData_H */

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EVOLUTIONADDRESSBOOK_H
-#define EVOLUTIONADDRESSBOOK_H
+#pragma once
 
 #include "abstractaddressbook.h"
 
@@ -18,4 +17,3 @@ public:
     void exportEvolutionAddressBook();
 };
 
-#endif // ABSTRACTADDRESSBOOK_H

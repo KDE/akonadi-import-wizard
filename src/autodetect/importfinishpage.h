@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef IMPORTFINISHPAGE_H
-#define IMPORTFINISHPAGE_H
+#pragma once
 
 #include <QWidget>
 
@@ -27,4 +26,3 @@ private:
     Ui::ImportFinishPage *const ui;
 };
 
-#endif // IMPORTFINISHPAGE_H

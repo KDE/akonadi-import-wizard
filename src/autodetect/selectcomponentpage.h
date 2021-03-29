@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef SELECTCOMPONENTPAGE_H
-#define SELECTCOMPONENTPAGE_H
+#pragma once
 
 #include "abstractimporter.h"
 #include <QWidget>
@@ -35,4 +34,3 @@ private:
     Ui::SelectComponentPage *const ui;
 };
 
-#endif // SELECTCOMPONENTPAGE_H

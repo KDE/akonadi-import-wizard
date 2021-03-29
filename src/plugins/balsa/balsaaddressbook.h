@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef BalsaAddressBook_H
-#define BalsaAddressBook_H
+#pragma once
 
 #include "abstractaddressbook.h"
 
@@ -24,4 +23,3 @@ private:
     QString mFileName;
 };
 
-#endif // BalsaAddressBook_H

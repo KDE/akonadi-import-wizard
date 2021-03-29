@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef IMPORTMAILPAGE_H
-#define IMPORTMAILPAGE_H
+#pragma once
 
 #include <QWidget>
 
@@ -42,4 +41,3 @@ private:
     Ui::ImportMailPage *const ui;
 };
 
-#endif // IMPORTMAILPAGE_H

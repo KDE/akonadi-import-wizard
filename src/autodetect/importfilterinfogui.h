@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef IMPORTFILTERINFOGUI_H
-#define IMPORTFILTERINFOGUI_H
+#pragma once
 
 #include "filterinfogui.h"
 class ImportMailPage;
@@ -32,4 +31,3 @@ private:
     ImportMailPage *const m_parent;
 };
 
-#endif /* IMPORTFILTERINFOGUI_H */

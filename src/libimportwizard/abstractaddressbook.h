@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ABSTRACTADDRESSBOOK_H
-#define ABSTRACTADDRESSBOOK_H
+#pragma once
 
 #include "abstractbase.h"
 #include "libimportwizard_export.h"
@@ -45,4 +44,3 @@ private:
     Akonadi::Collection mCollection;
 };
 }
-#endif // ABSTRACTADDRESSBOOK_H

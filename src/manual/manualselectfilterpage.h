@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MANUALSELECTFILTERPAGE_H
-#define MANUALSELECTFILTERPAGE_H
+#pragma once
 
 #include "ui_manualselectfilterpage.h"
 #include <QVector>
@@ -35,4 +34,3 @@ private:
     QVector<MailImporter::Filter *> mFilterList;
 };
 
-#endif

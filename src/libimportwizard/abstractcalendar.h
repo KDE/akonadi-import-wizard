@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ABSTRACTCALENDAR_H
-#define ABSTRACTCALENDAR_H
+#pragma once
 
 #include "abstractbase.h"
 #include "libimportwizard_export.h"
@@ -24,4 +23,3 @@ protected:
     void addImportError(const QString &log) override;
 };
 }
-#endif // ABSTRACTCALENDAR_H

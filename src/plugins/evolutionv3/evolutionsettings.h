@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EVOLUTIONSETTINGS_H
-#define EVOLUTIONSETTINGS_H
+#pragma once
 
 #include "abstractsettings.h"
 #include <KIdentityManagement/kidentitymanagement/signature.h>
@@ -34,4 +33,3 @@ private:
     QMap<QString, KIdentityManagement::Signature> mMapSignature;
 };
 
-#endif /* EVOLUTIONSETTINGS_H */

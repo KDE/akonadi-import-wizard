@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef IMPORTCALENDARPAGE_H
-#define IMPORTCALENDARPAGE_H
+#pragma once
 
 #include <QWidget>
 
@@ -33,4 +32,3 @@ private:
     Ui::ImportCalendarPage *const ui;
 };
 
-#endif // IMPORTCALENDARPAGE_H

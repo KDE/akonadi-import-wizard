@@ -7,8 +7,7 @@
    SPDX-License-Identifier: BSD-3-Clause
 */
 
-#ifndef MorkParser_h
-#define MorkParser_h
+#pragma once
 
 #include <QByteArray>
 #include <QMap>
@@ -113,4 +112,3 @@ protected: // Data
     enum { NPColumns, NPValues, NPRows } nowParsing_;
 };
 
-#endif // MorkParser_h

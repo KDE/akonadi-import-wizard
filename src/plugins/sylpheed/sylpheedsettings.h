@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SYLPHEEDSETTINGS_H
-#define SYLPHEEDSETTINGS_H
+#pragma once
 
 #include "abstractsettings.h"
 
@@ -40,4 +39,3 @@ protected:
     QString convertToKmailTemplate(const QString &templateStr);
 };
 
-#endif /* SYLPHEEDSETTINGS_H */

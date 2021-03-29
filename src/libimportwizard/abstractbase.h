@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ABSTRACTBASE_H
-#define ABSTRACTBASE_H
+#pragma once
 
 #include "libimportwizard_export.h"
 #include <QMap>
@@ -43,4 +42,3 @@ private:
     PimCommon::CreateResource *mCreateResource = nullptr;
 };
 }
-#endif // ABSTRACTBASE_H

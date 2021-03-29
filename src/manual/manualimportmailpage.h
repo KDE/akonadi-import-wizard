@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ManualImportMailPage_H
-#define ManualImportMailPage_H
+#pragma once
 
 #include "ui_manualimportmailpage.h"
 
@@ -22,4 +21,3 @@ private:
     Ui::ManualImportMailPage *mWidget = nullptr;
 };
 
-#endif

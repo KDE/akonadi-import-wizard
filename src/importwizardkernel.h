@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef IMPORTWIZARDKERNEL_H
-#define IMPORTWIZARDKERNEL_H
+#pragma once
 
 #include <MailCommon/MailInterfaces>
 
@@ -51,4 +50,3 @@ private:
     Akonadi::EntityMimeTypeFilterModel *mCollectionModel = nullptr;
 };
 
-#endif

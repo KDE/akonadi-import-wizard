@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ClawsMailSettings_H
-#define ClawsMailSettings_H
+#pragma once
 
 #include "../sylpheed/sylpheedsettings.h"
 
@@ -30,4 +29,3 @@ private:
     QString writeColor(const QColor &col);
 };
 
-#endif // ClawsMailSettings_H

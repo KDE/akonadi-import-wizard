@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef THUNDERBIRDIMPORTDATA_H
-#define THUNDERBIRDIMPORTDATA_H
+#pragma once
 
 #include "abstractimporter.h"
 
@@ -29,4 +28,3 @@ private:
     QString mDefaultProfile;
 };
 
-#endif /* THUNDERBIRDIMPORTDATA_H */

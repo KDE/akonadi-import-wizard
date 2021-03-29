@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef IMPORTSETTINGPAGE_H
-#define IMPORTSETTINGPAGE_H
+#pragma once
 
 #include <QWidget>
 
@@ -31,4 +30,3 @@ private:
     Ui::ImportSettingPage *const ui;
 };
 
-#endif // IMPORTSETTINGPAGE_H

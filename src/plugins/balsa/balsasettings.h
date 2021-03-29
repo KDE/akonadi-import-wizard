@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef BalsaSettings_H
-#define BalsaSettings_H
+#pragma once
 
 #include "abstractsettings.h"
 
@@ -29,4 +28,3 @@ private:
     QString mFileName;
 };
 
-#endif // BalsaSettings_H

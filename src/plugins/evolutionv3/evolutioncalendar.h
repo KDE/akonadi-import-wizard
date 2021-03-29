@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EVOLUTIONCALENDAR_H
-#define EVOLUTIONCALENDAR_H
+#pragma once
 
 #include "abstractcalendar.h"
 
@@ -25,4 +24,3 @@ private:
     QString mCalendarPath;
 };
 
-#endif // EVOLUTIONCALENDAR_H

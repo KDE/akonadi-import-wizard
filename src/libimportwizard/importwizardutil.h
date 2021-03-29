@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef IMPORTWIZARDUTIL_H
-#define IMPORTWIZARDUTIL_H
+#pragma once
 #include "libimportwizard_export.h"
 #include <QColor>
 #include <QString>
@@ -45,4 +44,3 @@ LIBIMPORTWIZARD_EXPORT void addAkonadiTag(const QVector<tagStruct> &tagList);
 void storePassword(const QString &name, ImportWizardUtil::ResourceType type, const QString &password);
 }
 
-#endif // IMPORTWIZARDUTIL_H

@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef IMPORTWIZARD_H
-#define IMPORTWIZARD_H
+#pragma once
 
 #include "abstractimporter.h"
 
@@ -108,4 +107,3 @@ private:
     LibImportWizard::AbstractDisplayInfo *mAbstractDisplayInfo = nullptr;
 };
 
-#endif /* IMPORTWIZARD_H */

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef IMPORTWIZARDDISPLAYINFO_H
-#define IMPORTWIZARDDISPLAYINFO_H
+#pragma once
 
 #include "abstractdisplayinfo.h"
 
@@ -33,4 +32,3 @@ private:
     ImportWizard *const mImportWizard;
 };
 
-#endif // IMPORTWIZARDDISPLAYINFO_H

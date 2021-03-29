@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SYLPHEEDSETTINGSUTILS_H
-#define SYLPHEEDSETTINGSUTILS_H
+#pragma once
 
 #include <KConfigGroup>
 #include <QString>
@@ -16,4 +15,3 @@ bool readConfig(const QString &key, const KConfigGroup &accountConfig, int &valu
 bool readConfig(const QString &key, const KConfigGroup &accountConfig, QString &value, bool remove_underscore);
 }
 
-#endif // SYLPHEEDSETTINGSUTILS_H

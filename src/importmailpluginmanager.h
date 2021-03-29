@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef IMPORTMAILPLUGINMANAGER_H
-#define IMPORTMAILPLUGINMANAGER_H
+#pragma once
 
 #include <KPluginMetaData>
 #include <QObject>
@@ -59,4 +58,3 @@ private:
     QVector<PluginUtilData> mPluginDataList;
 };
 
-#endif // IMPORTMAILPLUGINMANAGER_H

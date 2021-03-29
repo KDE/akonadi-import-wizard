@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ClawsMailAddressBook_H
-#define ClawsMailAddressBook_H
+#pragma once
 
 #include "../sylpheed/sylpheedaddressbook.h"
 #include <QDir>
@@ -17,4 +16,3 @@ public:
     ~ClawsMailAddressBook();
 };
 
-#endif // ClawsMailAddressBook_H

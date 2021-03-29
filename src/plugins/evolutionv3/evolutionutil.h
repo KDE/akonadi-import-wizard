@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EVOLUTIONUTIL_H
-#define EVOLUTIONUTIL_H
+#pragma once
 #include <QString>
 class QFile;
 class QDomDocument;
@@ -16,4 +15,3 @@ bool loadInDomDocument(QFile *file, QDomDocument &doc);
 bool loadInDomDocument(const QString &file, QDomDocument &doc);
 }
 
-#endif // EVOLUTIONUTIL_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AbstractImporter_H
-#define AbstractImporter_H
+#pragma once
 #include "libimportwizard_export.h"
 #include <MailCommon/FilterImporterExporter>
 #include <QVector>
@@ -73,4 +72,3 @@ protected:
 };
 }
 
-#endif /* AbstractImporter_H */

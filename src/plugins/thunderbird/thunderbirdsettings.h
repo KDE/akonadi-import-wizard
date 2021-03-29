@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef THUNDERBIRDSETTINGS_H
-#define THUNDERBIRDSETTINGS_H
+#pragma once
 
 #include "abstractsettings.h"
 #include "importwizardutil.h"
@@ -45,4 +44,3 @@ private:
     QString mFileName;
 };
 
-#endif /* THUNDERBIRDSETTINGS_H */

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef LIBIMPORTWIZARDPRIVATE_EXPORT_H
-#define LIBIMPORTWIZARDPRIVATE_EXPORT_H
+#pragma once
 
 #include "libimportwizard_export.h"
 
@@ -18,4 +17,3 @@
 #define LIBIMPORTWIZARD_TESTS_EXPORT
 #endif
 
-#endif

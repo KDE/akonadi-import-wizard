@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SELECTPROGRAMPAGE_H
-#define SELECTPROGRAMPAGE_H
+#pragma once
 
 #include <QWidget>
 
@@ -40,4 +39,3 @@ private:
     Ui::SelectProgramPage *const ui;
 };
 
-#endif // SELECTPROGRAMPAGE_H

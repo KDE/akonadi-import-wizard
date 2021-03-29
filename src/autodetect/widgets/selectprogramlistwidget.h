@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SELECTPROGRAMLISTWIDGET_H
-#define SELECTPROGRAMLISTWIDGET_H
+#pragma once
 
 #include <QListWidget>
 
@@ -27,4 +26,3 @@ private:
     bool mNoProgramFound = false;
 };
 
-#endif // SELECTPROGRAMLISTWIDGET_H
