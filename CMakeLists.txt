@@ -92,7 +92,7 @@ add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055200)
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
 endif()
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
