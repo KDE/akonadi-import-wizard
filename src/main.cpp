@@ -9,10 +9,12 @@
 #include <KCrash>
 #include <KDBusService>
 #include <KLocalizedString>
-#include <Kdelibs4ConfigMigrator>
 #include <QApplication>
 #include <QIcon>
-
+#include <kcoreaddons_version.h>
+#if KCOREADDONS_VERSION < QT_VERSION_CHECK(6, 0, 0)
+#include <Kdelibs4ConfigMigrator>
+#endif
 #include "importwizard-version.h"
 
 #include <QCommandLineParser>
@@ -24,9 +26,11 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     KCrash::initialize();
+#if KCOREADDONS_VERSION < QT_VERSION_CHECK(6, 0, 0)
     Kdelibs4ConfigMigrator migrate(QStringLiteral("importwizard"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("importwizardrc"));
     migrate.migrate();
+#endif
 
     KLocalizedString::setApplicationDomain("akonadiimportwizard");
     // FIXME: "wizards" are "assistents" in new KDE slang
