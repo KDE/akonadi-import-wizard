@@ -82,7 +82,7 @@ target_link_libraries(KPimImportWizard
     )
 
 set_target_properties(KPimImportWizard PROPERTIES
-    VERSION ${IMPORTWIZARD_VERSION_STRING}
+    VERSION ${IMPORTWIZARD_VERSION}
     SOVERSION ${IMPORTWIZARD_SOVERSION}
     EXPORT_NAME ImportWizard
 )
