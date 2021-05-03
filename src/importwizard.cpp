@@ -43,7 +43,7 @@ ImportWizard::ImportWizard(WizardMode mode, QWidget *parent)
     setStandardButtons(QDialogButtonBox::Cancel | QDialogButtonBox::Help);
     mAbstractDisplayInfo = new ImportWizardDisplayInfo(this);
 
-    auto *kernel = new ImportWizardKernel(this);
+    auto kernel = new ImportWizardKernel(this);
     CommonKernel->registerKernelIf(kernel); // register KernelIf early, it is used by the Filter classes
     CommonKernel->registerSettingsIf(kernel); // SettingsIf is used in FolderTreeWidget
     createAutomaticModePage();
@@ -70,7 +70,7 @@ ImportWizard::ImportWizard(WizardMode mode, QWidget *parent)
         checkModules();
         KMessageBox::information(this, i18n("Close KMail before importing data. Some plugins will modify KMail config file."));
     }
-    KHelpMenu *helpMenu = new KHelpMenu(this, KAboutData::applicationData(), true);
+    auto helpMenu = new KHelpMenu(this, KAboutData::applicationData(), true);
     // Initialize menu
     QMenu *menu = helpMenu->menu();
     helpMenu->action(KHelpMenu::menuAboutApp)->setIcon(QIcon::fromTheme(QStringLiteral("kmail")));
@@ -332,9 +332,9 @@ void ImportWizard::next()
 
         finishButton()->setEnabled(false);
 
-        auto *info = new MailImporter::FilterInfo();
-        auto *filterImporter = new MailImporter::FilterImporterAkonadi(info);
-        auto *infoGui = new ImportWizardFilterInfoGui(mImportpage, this);
+        auto info = new MailImporter::FilterInfo();
+        auto filterImporter = new MailImporter::FilterImporterAkonadi(info);
+        auto infoGui = new ImportWizardFilterInfoGui(mImportpage, this);
         info->setFilterInfoGui(infoGui);
         info->setStatusMessage(i18n("Import in progress"));
         info->setRemoveDupMessage(mSelfilterpage->removeDupMsg_checked());

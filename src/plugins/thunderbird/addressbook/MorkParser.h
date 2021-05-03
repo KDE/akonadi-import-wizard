@@ -15,12 +15,12 @@
 class QString;
 // Types
 
-typedef QMap<int, QString> MorkDict;
-typedef QMap<int, int> MorkCells; // ColumnId : ValueId
-typedef QMap<int, MorkCells> MorkRowMap; // Row id
-typedef QMap<int, MorkRowMap> RowScopeMap; // Row scope
-typedef QMap<int, RowScopeMap> MorkTableMap; // Table id
-typedef QMap<int, MorkTableMap> TableScopeMap; // Table Scope
+using MorkDict = QMap<int, QString>;
+using MorkCells = QMap<int, int>; // ColumnId : ValueId
+using MorkRowMap = QMap<int, MorkCells>; // Row id
+using RowScopeMap = QMap<int, MorkRowMap>; // Row scope
+using MorkTableMap = QMap<int, RowScopeMap>; // Table id
+using TableScopeMap = QMap<int, MorkTableMap>; // Table Scope
 
 // Mork header of supported format version
 const char MorkMagicHeader[] = "// <!-- <mdb:mork:z v=\"1.4\"/> -->";

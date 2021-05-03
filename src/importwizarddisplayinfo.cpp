@@ -73,11 +73,11 @@ void ImportWizardDisplayInfo::filterImportInfo(const QString &log)
 
 void ImportWizardDisplayInfo::initializeFilter(MailImporter::Filter &filter)
 {
-    auto *info = new MailImporter::FilterInfo();
-    auto *infoGui = new ImportFilterInfoGui(mImportWizard->importMailPage());
+    auto info = new MailImporter::FilterInfo();
+    auto infoGui = new ImportFilterInfoGui(mImportWizard->importMailPage());
     info->setFilterInfoGui(infoGui);
     info->clear(); // Clear info from last time
-    auto *filterImporter = new MailImporter::FilterImporterAkonadi(info);
+    auto filterImporter = new MailImporter::FilterImporterAkonadi(info);
     filterImporter->setRootCollection(mImportWizard->importMailPage()->selectedCollection());
     filter.setFilterImporter(filterImporter);
     filter.setFilterInfo(info);

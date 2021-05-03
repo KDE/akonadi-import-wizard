@@ -17,7 +17,7 @@ ImportWizardKernel::ImportWizardKernel(QObject *parent)
     : QObject(parent)
 {
     mIdentityManager = KIdentityManagement::IdentityManager::self();
-    Akonadi::Session *session = new Akonadi::Session("ImportWizard Kernel ETM", this);
+    auto session = new Akonadi::Session("ImportWizard Kernel ETM", this);
     mFolderCollectionMonitor = new MailCommon::FolderCollectionMonitor(session, this);
 
     mEntityTreeModel = new Akonadi::EntityTreeModel(folderCollectionMonitor(), this);

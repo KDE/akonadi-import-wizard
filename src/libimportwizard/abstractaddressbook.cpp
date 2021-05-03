@@ -55,7 +55,7 @@ void AbstractAddressBook::createGroup(const KContacts::ContactGroup &group)
         item.setPayload<KContacts::ContactGroup>(group);
         item.setMimeType(KContacts::ContactGroup::mimeType());
 
-        auto *job = new Akonadi::ItemCreateJob(item, mCollection);
+        auto job = new Akonadi::ItemCreateJob(item, mCollection);
         connect(job, &Akonadi::ItemCreateJob::result, this, &AbstractAddressBook::slotStoreDone);
     }
 }
@@ -76,7 +76,7 @@ void AbstractAddressBook::createContact(const KContacts::Addressee &address)
         Akonadi::Item item;
         item.setPayload<KContacts::Addressee>(address);
         item.setMimeType(KContacts::Addressee::mimeType());
-        auto *job = new Akonadi::ItemCreateJob(item, mCollection);
+        auto job = new Akonadi::ItemCreateJob(item, mCollection);
         connect(job, &Akonadi::ItemCreateJob::result, this, &AbstractAddressBook::slotStoreDone);
     }
 }

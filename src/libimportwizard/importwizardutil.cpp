@@ -80,7 +80,7 @@ void ImportWizardUtil::addAkonadiTag(const QVector<tagStruct> &tagList)
 
 void ImportWizardUtil::storePassword(const QString &name, ImportWizardUtil::ResourceType type, const QString &password)
 {
-    auto *job = new ImportWizardSavePasswordJob;
+    auto job = new ImportWizardSavePasswordJob;
     switch (type) {
     case Imap:
         job->setName(QStringLiteral("imap"));

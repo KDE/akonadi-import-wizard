@@ -58,7 +58,7 @@ void ImportFilterInfoGui::setOverall(int percent)
 
 void ImportFilterInfoGui::addInfoLogEntry(const QString &log)
 {
-    auto *item = new QListWidgetItem(log);
+    auto item = new QListWidgetItem(log);
     item->setForeground(Qt::blue);
     m_parent->mailWidget()->addItem(item);
     m_parent->mailWidget()->setLastCurrentItem();
@@ -67,7 +67,7 @@ void ImportFilterInfoGui::addInfoLogEntry(const QString &log)
 
 void ImportFilterInfoGui::addErrorLogEntry(const QString &log)
 {
-    auto *item = new QListWidgetItem(log);
+    auto item = new QListWidgetItem(log);
     item->setForeground(Qt::red);
     m_parent->mailWidget()->addItem(item);
     m_parent->mailWidget()->setLastCurrentItem();
