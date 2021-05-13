@@ -951,7 +951,7 @@ void ThunderbirdSettings::readIdentity(const QString &account)
         newIdentity->setPgpAutoSign(signMail);
     }
 
-    const QString composeHtmlStr(identity + QStringLiteral(".compose_html"));
+    // const QString composeHtmlStr(identity + QStringLiteral(".compose_html"));
     // TODO: implement it in kmail
 
     newIdentity->setSignature(signature);
