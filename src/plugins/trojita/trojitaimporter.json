@@ -39,9 +39,6 @@
         "Name[x-test]": "xxTrojita Importerxx",
         "Name[zh_CN]": "Trojita 导入器",
         "Name[zh_TW]": "Trojita 匯入程式",
-        "ServiceTypes": [
-            "ImportWizard/PluginMailImporter"
-        ],
         "Version": "1.0"
     }
 }

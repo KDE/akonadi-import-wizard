@@ -39,9 +39,6 @@
         "Name[x-test]": "xxClawsMail Importerxx",
         "Name[zh_CN]": "ClawsMail 导入器",
         "Name[zh_TW]": "ClawsMail 匯入程式",
-        "ServiceTypes": [
-            "ImportWizard/PluginMailImporter"
-        ],
         "Version": "1.0"
     }
 }

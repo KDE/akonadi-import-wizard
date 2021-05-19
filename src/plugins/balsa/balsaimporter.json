@@ -39,9 +39,6 @@
         "Name[x-test]": "xxBalsa Importerxx",
         "Name[zh_CN]": "Balsa 导入器",
         "Name[zh_TW]": "Balsa 匯入程式",
-        "ServiceTypes": [
-            "ImportWizard/PluginMailImporter"
-        ],
         "Version": "1.0"
     }
 }

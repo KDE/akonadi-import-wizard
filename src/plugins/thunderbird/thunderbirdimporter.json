@@ -39,9 +39,6 @@
         "Name[x-test]": "xxThunderbird Importerxx",
         "Name[zh_CN]": "Thunderbird 导入器",
         "Name[zh_TW]": "Thunderbird 匯入程式",
-        "ServiceTypes": [
-            "ImportWizard/PluginMailImporter"
-        ],
         "Version": "1.0"
     }
 }

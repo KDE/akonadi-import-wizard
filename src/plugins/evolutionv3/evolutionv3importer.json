@@ -39,9 +39,6 @@
         "Name[x-test]": "xxEvolution3 Importerxx",
         "Name[zh_CN]": "Evolution3 导入器",
         "Name[zh_TW]": "Evolution3 匯入程式",
-        "ServiceTypes": [
-            "ImportWizard/PluginMailImporter"
-        ],
         "Version": "1.0"
     }
 }
