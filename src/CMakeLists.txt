@@ -7,23 +7,17 @@ add_subdirectory(libimportwizard)
 
 file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/icons/*-apps-kontact-import-wizard.png")
 ecm_add_app_icon(importwizard_SRCS ICONS ${ICONS_SRCS})
+add_executable(akonadiimportwizard)
 
-set(importwizard_SRCS
+target_sources(akonadiimportwizard PRIVATE
     main.cpp
     importwizard.cpp
     importwizardkernel.cpp
     importmailpluginmanager.cpp
     importwizarddisplayinfo.cpp
-
-    )
-
-set(importwizard_manual_SRCS
     manual/manualimportmailpage.cpp
     manual/importwizardfilterinfogui.cpp
     manual/manualselectfilterpage.cpp
-    )
-
-set(importwizard_autodetect_SRCS
     autodetect/widgets/selectprogramlistwidget.cpp
     autodetect/selectprogrampage.cpp
     autodetect/importaddressbookpage.cpp
@@ -37,7 +31,7 @@ set(importwizard_autodetect_SRCS
     )
 
 
-ki18n_wrap_ui(importwizard_SRCS
+ki18n_wrap_ui(akonadiimportwizard
     ui/autodetect/selectprogrampage.ui
     ui/autodetect/importaddressbookpage.ui
     ui/autodetect/importfilterpage.ui
@@ -50,18 +44,13 @@ ki18n_wrap_ui(importwizard_SRCS
     ui/manual/manualselectfilterpage.ui
     )
 
-ecm_qt_declare_logging_category(importwizard_SRCS HEADER importwizard_debug.h IDENTIFIER IMPORTWIZARD_LOG CATEGORY_NAME org.kde.pim.importwizard
+ecm_qt_declare_logging_category(akonadiimportwizard HEADER importwizard_debug.h IDENTIFIER IMPORTWIZARD_LOG CATEGORY_NAME org.kde.pim.importwizard
         DESCRIPTION "importwizard (importwizard)"
         OLD_CATEGORY_NAMES log_importwizard
         EXPORT IMPORTWIZARD
     )
 
 
-add_executable(akonadiimportwizard
-    ${importwizard_SRCS}
-    ${importwizard_manual_SRCS}
-    ${importwizard_autodetect_SRCS}
-    )
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(akonadiimportwizard PROPERTIES UNITY_BUILD ON)
 endif()

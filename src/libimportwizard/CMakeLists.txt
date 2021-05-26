@@ -7,6 +7,8 @@ ecm_setup_version(PROJECT
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPimImportWizard")
 
+add_library(KPimImportWizard)
+add_library(KPim::ImportWizard ALIAS KPimImportWizard)
 
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimImportWizardConfig.cmake.in"
@@ -35,29 +37,22 @@ install(FILES
 
 
 
-set(libimportwizard_abstract_SRCS
+target_sources(KPimImportWizard PRIVATE
     abstractimporter.cpp
     abstractsettings.cpp
     abstractaddressbook.cpp
     abstractcalendar.cpp
     abstractbase.cpp
     abstractdisplayinfo.cpp
-    )
-set(libimportwizard_utils_SRCS
     importwizardutil.cpp
-    )
-set(libimportwizard_wallet_SRCS
     importwizardsavepasswordjob.cpp
     )
 
-ecm_qt_declare_logging_category(libimportwizard_abstract_SRCS HEADER libimportwizard_debug.h IDENTIFIER LIBIMPORTWIZARD_LOG CATEGORY_NAME org.kde.pim.importwizard.lib
+ecm_qt_declare_logging_category(KPimImportWizard HEADER libimportwizard_debug.h IDENTIFIER LIBIMPORTWIZARD_LOG CATEGORY_NAME org.kde.pim.importwizard.lib
         DESCRIPTION "importwizard (libimportwizard)"
         EXPORT IMPORTWIZARD
     )
 
-
-
-add_library(KPimImportWizard ${libimportwizard_abstract_SRCS} ${libimportwizard_utils_SRCS} ${libimportwizard_wallet_SRCS})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPimImportWizard PROPERTIES UNITY_BUILD ON)
 endif()
