@@ -22,8 +22,7 @@ ecm_qt_declare_logging_category(clawsmailimporter_SRCS HEADER clawsmailplugin_de
 
 
 
-kcoreaddons_add_plugin(clawsmailimporterplugin JSON clawsmailimporter.json SOURCES
-    ${clawsmailimporter_SRCS} INSTALL_NAMESPACE importwizard)
+kcoreaddons_add_plugin(clawsmailimporterplugin SOURCES ${clawsmailimporter_SRCS} INSTALL_NAMESPACE importwizard)
 set_target_properties(clawsmailimporterplugin PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/importwizard/")
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(clawsmailimporterplugin PROPERTIES UNITY_BUILD ON)
