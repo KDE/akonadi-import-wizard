@@ -87,7 +87,7 @@ void BalsaAddressBook::readAddressBook(const KConfigGroup &grp)
                 file.close();
 
                 KContacts::LDIFConverter::LDIFToAddressee(wholeFile, contacts, contactsGroup, dtDefault);
-                for (KContacts::Addressee contact : qAsConst(contacts)) {
+                for (KContacts::Addressee contact : std::as_const(contacts)) {
                     addImportContactNote(contact, QStringLiteral("Balsa"));
                     createContact(contact);
                 }

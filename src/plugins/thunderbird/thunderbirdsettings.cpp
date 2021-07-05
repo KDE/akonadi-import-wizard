@@ -258,7 +258,7 @@ void ThunderbirdSettings::readTagSettings()
 {
     QVector<tagStruct> v;
     v.reserve(mHashTag.size());
-    for (const tagStruct &tag : qAsConst(mHashTag)) {
+    for (const tagStruct &tag : std::as_const(mHashTag)) {
         v.push_back(tag);
     }
 
@@ -268,7 +268,7 @@ void ThunderbirdSettings::readTagSettings()
 void ThunderbirdSettings::readLdapSettings()
 {
     // qCDebug(THUNDERBIRDPLUGIN_LOG)<<" mLdapAccountList:"<<mLdapAccountList;
-    for (const QString &ldapAccountName : qAsConst(mLdapAccountList)) {
+    for (const QString &ldapAccountName : std::as_const(mLdapAccountList)) {
         ldapStruct ldap;
         const QString ldapDescription = QStringLiteral("%1.description").arg(ldapAccountName);
         if (mHashConfig.contains(ldapDescription)) {
@@ -576,7 +576,7 @@ void ThunderbirdSettings::addAuth(QMap<QString, QVariant> &settings, const QStri
 
 void ThunderbirdSettings::readAccount()
 {
-    for (const QString &account : qAsConst(mAccountList)) {
+    for (const QString &account : std::as_const(mAccountList)) {
         const QString serverName = mHashConfig.value(QStringLiteral("mail.account.%1").arg(account) + QStringLiteral(".server")).toString();
         const QString accountName = QStringLiteral("mail.server.%1").arg(serverName);
         const QString host = mHashConfig.value(accountName + QStringLiteral(".hostname")).toString();
