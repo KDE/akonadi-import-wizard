@@ -315,7 +315,8 @@ bool MorkParser::parseTable()
 {
     bool Result = true;
     QString TextId;
-    int Id = 0, Scope = 0;
+    int Id = 0;
+    int Scope = 0;
 
     char cur = nextChar();
 
@@ -354,7 +355,8 @@ bool MorkParser::parseTable()
                     }
                 }
 
-                int JustIdNum = 0, JustScopeNum = 0;
+                int JustIdNum = 0;
+                int JustScopeNum = 0;
                 parseScopeId(JustId, JustIdNum, JustScopeNum);
 
                 setCurrentRow(Scope, Id, JustScopeNum, JustIdNum);
@@ -415,7 +417,8 @@ bool MorkParser::parseRow(int TableId, int TableScope)
 {
     bool Result = true;
     QString TextId;
-    int Id = 0, Scope = 0;
+    int Id = 0;
+    int Scope = 0;
     nowParsing_ = NPRows;
 
     char cur = nextChar();
