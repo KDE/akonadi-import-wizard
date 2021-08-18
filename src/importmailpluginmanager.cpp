@@ -7,7 +7,7 @@
 #include "importmailpluginmanager.h"
 #include "abstractimporter.h"
 #include "importwizard_debug.h"
-
+#include "kcoreaddons_version.h"
 #include <KPluginFactory>
 #include <KPluginLoader>
 #include <KPluginMetaData>
@@ -40,7 +40,11 @@ ImportMailPluginManager *ImportMailPluginManager::self()
 
 bool ImportMailPluginManager::initializePluginList()
 {
+#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 85, 0)
     const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("importwizard"));
+#else
+    const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("importwizard"));
+#endif
 
     QVectorIterator<KPluginMetaData> i(plugins);
     i.toBack();
@@ -69,11 +73,18 @@ bool ImportMailPluginManager::initializePluginList()
 
 void ImportMailPluginManager::loadPlugin(ImportMailPluginManagerInfo *item)
 {
+#if KCOREADDONS_VERSION > QT_VERSION_CHECK(5, 85, 0)
+    const auto loadResult = KPluginFactory::instantiatePlugin<LibImportWizard::AbstractImporter>(KPluginMetaData(item->metaDataFileName), this);
+    if (loadResult) {
+        mPluginDataList.append(item->pluginData);
+    }
+#else
     KPluginLoader pluginLoader(item->metaDataFileName);
     if (pluginLoader.factory()) {
         item->plugin = pluginLoader.factory()->create<LibImportWizard::AbstractImporter>(this, QVariantList() << item->metaDataFileNameBaseName);
         mPluginDataList.append(item->pluginData);
     }
+#endif
 }
 
 QVector<LibImportWizard::AbstractImporter *> ImportMailPluginManager::pluginsList() const
