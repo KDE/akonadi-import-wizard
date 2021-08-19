@@ -36,6 +36,7 @@ public:
     QString metaDataFileNameBaseName;
     QString metaDataFileName;
     PluginUtilData pluginData;
+    KPluginMetaData data;
     LibImportWizard::AbstractImporter *plugin = nullptr;
 };
 

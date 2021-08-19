@@ -57,6 +57,7 @@ bool ImportMailPluginManager::initializePluginList()
         // 2) look at if plugin is activated
         info.metaDataFileNameBaseName = QFileInfo(data.fileName()).baseName();
         info.metaDataFileName = data.fileName();
+        info.data = data;
         if (pluginVersion() == data.version()) {
             info.plugin = nullptr;
             mPluginList.push_back(info);
@@ -74,8 +75,8 @@ bool ImportMailPluginManager::initializePluginList()
 void ImportMailPluginManager::loadPlugin(ImportMailPluginManagerInfo *item)
 {
 #if KCOREADDONS_VERSION > QT_VERSION_CHECK(5, 85, 0)
-    const auto loadResult = KPluginFactory::instantiatePlugin<LibImportWizard::AbstractImporter>(KPluginMetaData(item->metaDataFileName), this);
-    if (loadResult) {
+    if (auto plugin = KPluginFactory::instantiatePlugin<LibImportWizard::AbstractImporter>(item->data, this, QVariantList() << item->metaDataFileName).plugin) {
+        item->plugin = plugin;
         mPluginDataList.append(item->pluginData);
     }
 #else
