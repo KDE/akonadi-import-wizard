@@ -40,10 +40,10 @@ ImportMailPluginManager *ImportMailPluginManager::self()
 
 bool ImportMailPluginManager::initializePluginList()
 {
-#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 85, 0)
-    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("importwizard"));
-#else
+#if KCOREADDONS_VERSION > QT_VERSION_CHECK(5, 85, 0)
     const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("importwizard"));
+#else
+    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("importwizard"));
 #endif
 
     QVectorIterator<KPluginMetaData> i(plugins);
