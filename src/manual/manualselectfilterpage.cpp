@@ -46,7 +46,7 @@ ManualSelectFilterPage::ManualSelectFilterPage(QWidget *parent)
 {
     mWidget->setupUi(this);
     mWidget->mIntroSidebar->setPixmap(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("importwizard/pics/step1.png")));
-    connect(mWidget->mFilterCombo, QOverload<int>::of(&QComboBox::activated), this, &ManualSelectFilterPage::filterSelected);
+    connect(mWidget->mFilterCombo, qOverload<int>(&QComboBox::activated), this, &ManualSelectFilterPage::filterSelected);
 
     addFilter(new MailImporter::FilterKMailArchive);
     addFilter(new MailImporter::FilterMBox);
