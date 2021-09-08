@@ -7,9 +7,9 @@
 #include "importwizardutil.h"
 #include "importwizardsavepasswordjob.h"
 #include "libimportwizard_debug.h"
-#include <AkonadiCore/Tag>
-#include <AkonadiCore/TagAttribute>
-#include <AkonadiCore/TagCreateJob>
+#include <Akonadi/Tag>
+#include <Akonadi/TagAttribute>
+#include <Akonadi/TagCreateJob>
 #include <KConfigGroup>
 #include <KSharedConfig>
 

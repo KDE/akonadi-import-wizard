@@ -24,7 +24,7 @@
 #include <MailImporterAkonadi/FilterImporterAkonadi>
 
 #include "importwizard_debug.h"
-#include <AkonadiWidgets/controlgui.h>
+#include <Akonadi/ControlGui>
 #include <KAboutData>
 #include <KConfigGroup>
 #include <KHelpMenu>

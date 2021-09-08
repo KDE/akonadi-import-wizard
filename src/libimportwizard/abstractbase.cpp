@@ -9,9 +9,9 @@
 
 #include <KSharedConfig>
 
-#include <AkonadiCore/agentinstancecreatejob.h>
-#include <AkonadiCore/agentmanager.h>
-#include <AkonadiCore/agenttype.h>
+#include <Akonadi/AgentInstanceCreateJob>
+#include <Akonadi/AgentManager>
+#include <Akonadi/AgentType>
 
 #include <QMetaMethod>
 

@@ -7,9 +7,9 @@
 #include "abstractdisplayinfo.h"
 
 #include "libimportwizard_debug.h"
-#include <AkonadiCore/Item>
-#include <AkonadiCore/ItemCreateJob>
-#include <AkonadiWidgets/CollectionDialog>
+#include <Akonadi/CollectionDialog>
+#include <Akonadi/Item>
+#include <Akonadi/ItemCreateJob>
 #include <KContacts/Addressee>
 #include <KLocalizedString>
 #include <kcontacts/contactgroup.h>
