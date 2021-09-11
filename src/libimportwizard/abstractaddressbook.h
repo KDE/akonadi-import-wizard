@@ -8,7 +8,7 @@
 
 #include "abstractbase.h"
 #include "libimportwizard_export.h"
-#include <AkonadiCore/Collection>
+#include <Akonadi/Collection>
 
 namespace KContacts
 {
