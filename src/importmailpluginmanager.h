@@ -33,7 +33,6 @@ public:
     {
     }
 
-    QString metaDataFileNameBaseName;
     QString metaDataFileName;
     PluginUtilData pluginData;
     KPluginMetaData data;
