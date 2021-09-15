@@ -11,8 +11,8 @@
 #include <Akonadi/Item>
 #include <Akonadi/ItemCreateJob>
 #include <KContacts/Addressee>
+#include <KContacts/ContactGroup>
 #include <KLocalizedString>
-#include <kcontacts/contactgroup.h>
 
 #include <QPointer>
 using namespace LibImportWizard;

@@ -6,7 +6,7 @@
 
 #include "sylpheedaddressbook.h"
 #include <KContacts/Addressee>
-#include <kcontacts/contactgroup.h>
+#include <KContacts/ContactGroup>
 
 #include "sylpheedplugin_debug.h"
 #include <KLocalizedString>
