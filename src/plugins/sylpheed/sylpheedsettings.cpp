@@ -10,8 +10,8 @@
 #include <MailTransport/TransportManager>
 #include <QFileInfo>
 
-#include <KIdentityManagement/kidentitymanagement/identity.h>
-#include <KIdentityManagement/kidentitymanagement/signature.h>
+#include <KIdentityManagement/Identity>
+#include <KIdentityManagement/Signature>
 
 #include "sylpheedplugin_debug.h"
 #include <KConfig>

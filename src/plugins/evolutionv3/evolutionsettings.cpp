@@ -9,7 +9,7 @@
 #include "importwizardutil.h"
 #include <MailCommon/MailUtil>
 
-#include <KIdentityManagement/kidentitymanagement/identity.h>
+#include <KIdentityManagement/Identity>
 
 #include <MailTransport/TransportManager>
 

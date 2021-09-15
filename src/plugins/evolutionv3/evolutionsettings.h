@@ -7,7 +7,7 @@
 #pragma once
 
 #include "abstractsettings.h"
-#include <KIdentityManagement/kidentitymanagement/signature.h>
+#include <KIdentityManagement/Signature>
 #include <QString>
 
 class QDomElement;
