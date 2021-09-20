@@ -15,10 +15,5 @@
   build against older kdelibs releases.
 */
 
-#ifndef IMPORTWIZARD_VERSION_H
-#define IMPORTWIZARD_VERSION_H
-
-
+#pragma once
 #define KDEPIM_VERSION "@KDEPIM_VERSION@"
-
-#endif
