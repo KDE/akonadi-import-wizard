@@ -2,7 +2,6 @@
 
 configure_file(importwizard-version.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/importwizard-version.h @ONLY)
 add_subdirectory(icons)
-add_subdirectory(kconf_update)
 add_subdirectory(libimportwizard)
 
 file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/icons/*-apps-kontact-import-wizard.png")
