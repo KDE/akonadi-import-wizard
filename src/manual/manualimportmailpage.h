@@ -13,7 +13,7 @@ class ManualImportMailPage : public QWidget
     Q_OBJECT
 public:
     explicit ManualImportMailPage(QWidget *parent = nullptr);
-    ~ManualImportMailPage();
+    ~ManualImportMailPage() override;
 
     Ui::ManualImportMailPage *widget() const;
 

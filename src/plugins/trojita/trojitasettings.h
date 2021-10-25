@@ -14,7 +14,7 @@ class TrojitaSettings : public AbstractSettings
 {
 public:
     explicit TrojitaSettings(const QString &filename);
-    ~TrojitaSettings();
+    ~TrojitaSettings() override;
     void importSettings();
 
 private:

@@ -15,7 +15,7 @@ class ThunderbirdSettings : public AbstractSettings
 {
 public:
     explicit ThunderbirdSettings(const QString &filename);
-    ~ThunderbirdSettings();
+    ~ThunderbirdSettings() override;
     void importSettings();
 
 private:

@@ -14,7 +14,7 @@ class TrojitaAddressBook : public LibImportWizard::AbstractAddressBook
 {
 public:
     explicit TrojitaAddressBook(const QString &filename);
-    ~TrojitaAddressBook();
+    ~TrojitaAddressBook() override;
 
     void readAddressBook();
 

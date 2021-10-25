@@ -14,7 +14,7 @@ class ThunderBirdAddressBook : public LibImportWizard::AbstractAddressBook
     Q_OBJECT
 public:
     explicit ThunderBirdAddressBook(const QDir &dir);
-    ~ThunderBirdAddressBook();
+    ~ThunderBirdAddressBook() override;
 
     void importAddressBook();
 

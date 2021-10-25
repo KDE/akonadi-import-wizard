@@ -14,7 +14,7 @@ class BalsaSettings : public AbstractSettings
 {
 public:
     explicit BalsaSettings(const QString &filename);
-    ~BalsaSettings();
+    ~BalsaSettings() override;
 
     void importSettings();
 

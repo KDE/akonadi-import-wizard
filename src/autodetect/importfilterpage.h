@@ -18,7 +18,7 @@ class ImportFilterPage : public QWidget
     Q_OBJECT
 public:
     explicit ImportFilterPage(QWidget *parent = nullptr);
-    ~ImportFilterPage();
+    ~ImportFilterPage() override;
 
     void addImportInfo(const QString &log);
     void addImportError(const QString &log);

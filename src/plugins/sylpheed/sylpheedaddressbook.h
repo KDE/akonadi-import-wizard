@@ -16,7 +16,7 @@ class SylpheedAddressBook : public LibImportWizard::AbstractAddressBook
     Q_OBJECT
 public:
     explicit SylpheedAddressBook(const QDir &dir);
-    ~SylpheedAddressBook();
+    ~SylpheedAddressBook() override;
 
     void importAddressBook();
 

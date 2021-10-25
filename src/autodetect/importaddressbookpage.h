@@ -19,7 +19,7 @@ class ImportAddressbookPage : public QWidget
 
 public:
     explicit ImportAddressbookPage(QWidget *parent = nullptr);
-    ~ImportAddressbookPage();
+    ~ImportAddressbookPage() override;
 
     void addImportInfo(const QString &log);
     void addImportError(const QString &log);

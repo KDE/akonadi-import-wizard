@@ -16,7 +16,7 @@ class EvolutionSettings : public AbstractSettings
 {
 public:
     EvolutionSettings();
-    ~EvolutionSettings();
+    ~EvolutionSettings() override;
     void loadAccount(const QString &filename);
     void loadLdap(const QString &filename);
 

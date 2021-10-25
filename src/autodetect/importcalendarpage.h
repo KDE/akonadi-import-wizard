@@ -19,7 +19,7 @@ class ImportCalendarPage : public QWidget
 
 public:
     explicit ImportCalendarPage(QWidget *parent = nullptr);
-    ~ImportCalendarPage();
+    ~ImportCalendarPage() override;
 
     void addImportInfo(const QString &log);
     void addImportError(const QString &log);

@@ -14,7 +14,7 @@ class BalsaAddressBook : public LibImportWizard::AbstractAddressBook
 {
 public:
     explicit BalsaAddressBook(const QString &filename);
-    ~BalsaAddressBook();
+    ~BalsaAddressBook() override;
 
     void importAddressBook();
 

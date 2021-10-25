@@ -13,6 +13,6 @@ class ClawsMailAddressBook : public SylpheedAddressBook
 {
 public:
     explicit ClawsMailAddressBook(const QDir &dir);
-    ~ClawsMailAddressBook();
+    ~ClawsMailAddressBook() override;
 };
 

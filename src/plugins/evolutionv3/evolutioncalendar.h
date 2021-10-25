@@ -14,7 +14,7 @@ class EvolutionCalendar : public LibImportWizard::AbstractCalendar
 {
 public:
     EvolutionCalendar();
-    ~EvolutionCalendar();
+    ~EvolutionCalendar() override;
 
     void loadCalendar(const QString &filename);
 

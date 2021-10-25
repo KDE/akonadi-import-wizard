@@ -32,7 +32,7 @@ public:
     Q_DECLARE_FLAGS(TypeSupportedOptions, TypeSupportedOption)
 
     explicit AbstractImporter(QObject *parent);
-    virtual ~AbstractImporter();
+    ~AbstractImporter() override;
 
     /**
      * Return true if mail found on system

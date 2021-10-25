@@ -19,7 +19,7 @@ class SelectComponentPage : public QWidget
 
 public:
     explicit SelectComponentPage(QWidget *parent = nullptr);
-    ~SelectComponentPage();
+    ~SelectComponentPage() override;
 
     void setEnabledComponent(LibImportWizard::AbstractImporter::TypeSupportedOptions options);
     LibImportWizard::AbstractImporter::TypeSupportedOptions selectedComponents() const;

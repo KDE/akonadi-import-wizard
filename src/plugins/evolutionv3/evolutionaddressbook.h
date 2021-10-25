@@ -13,7 +13,7 @@ class EvolutionAddressBook : public LibImportWizard::AbstractAddressBook
     Q_OBJECT
 public:
     EvolutionAddressBook();
-    ~EvolutionAddressBook();
+    ~EvolutionAddressBook() override;
     void exportEvolutionAddressBook();
 };
 

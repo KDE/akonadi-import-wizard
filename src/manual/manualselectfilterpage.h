@@ -18,7 +18,7 @@ class ManualSelectFilterPage : public QWidget
     Q_OBJECT
 public:
     explicit ManualSelectFilterPage(QWidget *parent = nullptr);
-    ~ManualSelectFilterPage();
+    ~ManualSelectFilterPage() override;
 
     void addFilter(MailImporter::Filter *f);
     MailImporter::Filter *getSelectedFilter() const;

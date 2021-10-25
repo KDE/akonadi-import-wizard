@@ -24,7 +24,7 @@ class LIBIMPORTWIZARD_EXPORT AbstractBase : public QObject
     Q_OBJECT
 public:
     explicit AbstractBase();
-    virtual ~AbstractBase();
+    ~AbstractBase() override;
 
     QString createResource(const QString &resources, const QString &name, const QMap<QString, QVariant> &settings);
 

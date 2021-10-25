@@ -17,7 +17,7 @@ class SylpheedSettings : public AbstractSettings
 {
 public:
     SylpheedSettings();
-    ~SylpheedSettings();
+    ~SylpheedSettings() override;
     virtual void importSettings(const QString &filename, const QString &path);
 
 protected:

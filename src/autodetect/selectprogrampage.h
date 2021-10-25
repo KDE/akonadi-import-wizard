@@ -21,7 +21,7 @@ class SelectProgramPage : public QWidget
 
 public:
     explicit SelectProgramPage(QWidget *parent = nullptr);
-    ~SelectProgramPage();
+    ~SelectProgramPage() override;
 
     void setFoundProgram(const QStringList &list);
     void disableSelectProgram();

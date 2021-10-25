@@ -28,7 +28,7 @@ class ImportMailPage : public QWidget
     Q_OBJECT
 public:
     explicit ImportMailPage(QWidget *parent = nullptr);
-    ~ImportMailPage();
+    ~ImportMailPage() override;
     MailImporter::ImportMailsWidget *mailWidget();
     Akonadi::Collection selectedCollection() const;
     void setImportButtonEnabled(bool enabled);

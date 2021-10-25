@@ -18,7 +18,7 @@ class ImportSettingPage : public QWidget
     Q_OBJECT
 public:
     explicit ImportSettingPage(QWidget *parent = nullptr);
-    ~ImportSettingPage();
+    ~ImportSettingPage() override;
     void addImportInfo(const QString &log);
     void addImportError(const QString &log);
     void setImportButtonEnabled(bool enabled);

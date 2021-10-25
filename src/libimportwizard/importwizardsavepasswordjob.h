@@ -14,7 +14,7 @@ class LIBIMPORTWIZARD_EXPORT ImportWizardSavePasswordJob : public QObject
     Q_OBJECT
 public:
     explicit ImportWizardSavePasswordJob(QObject *parent = nullptr);
-    ~ImportWizardSavePasswordJob();
+    ~ImportWizardSavePasswordJob() override;
 
     Q_REQUIRED_RESULT bool canStart() const;
 

@@ -17,7 +17,7 @@ class ImportFinishPage : public QWidget
     Q_OBJECT
 public:
     explicit ImportFinishPage(QWidget *parent = nullptr);
-    ~ImportFinishPage();
+    ~ImportFinishPage() override;
 
     void addImportInfo(const QString &log);
     void addImportError(const QString &log);
