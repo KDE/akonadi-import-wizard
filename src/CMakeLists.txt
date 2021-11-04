@@ -27,6 +27,25 @@ target_sources(akonadiimportwizard PRIVATE
     autodetect/selectcomponentpage.cpp
     autodetect/importfilterinfogui.cpp
     autodetect/importcalendarpage.cpp
+
+    importmailpluginmanager.h
+    autodetect/importaddressbookpage.h
+    autodetect/selectprogrampage.h
+    autodetect/importfilterpage.h
+    autodetect/selectcomponentpage.h
+    autodetect/importfinishpage.h
+    autodetect/importmailpage.h
+    autodetect/widgets/selectprogramlistwidget.h
+    autodetect/importsettingpage.h
+    autodetect/importfilterinfogui.h
+    autodetect/importcalendarpage.h
+    importwizardkernel.h
+    importwizarddisplayinfo.h
+    libimportwizard_private_export.h
+    importwizard.h
+    manual/manualselectfilterpage.h
+    manual/manualimportmailpage.h
+    manual/importwizardfilterinfogui.h
     )
 
 

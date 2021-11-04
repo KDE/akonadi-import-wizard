@@ -3,7 +3,7 @@ set(seamonkeyimporter_SRCS
     ../thunderbird/thunderbirdaddressbook.cpp
     ../thunderbird/thunderbirdsettings.cpp
     ../thunderbird/addressbook/MorkParser.cpp
-
+    seamonkeyimportdata.h
     )
 
 ecm_qt_declare_logging_category(seamonkeyimporter_SRCS HEADER thunderbirdplugin_debug.h

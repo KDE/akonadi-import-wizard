@@ -2,6 +2,10 @@ set(balsaimporter_SRCS
     balsaaddressbook.cpp
     balsaimportdata.cpp
     balsasettings.cpp
+    balsasettings.h
+    balsaimportdata.h
+    balsaaddressbook.h
+
     )
 ecm_qt_declare_logging_category(balsaimporter_SRCS HEADER balsaplugin_debug.h
         IDENTIFIER BALSAPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.balsaplugin

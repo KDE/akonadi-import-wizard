@@ -5,6 +5,9 @@ set(clawsmailimporter_SRCS
     ../sylpheed/sylpheedaddressbook.cpp
     ../sylpheed/sylpheedsettings.cpp
     ../sylpheed/sylpheedsettingsutils.cpp
+    clawsmailimportdata.h
+    clawsmailaddressbook.h
+    clawsmailsettings.h
 
     )
 

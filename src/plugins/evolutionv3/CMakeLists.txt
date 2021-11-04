@@ -4,6 +4,11 @@ set(evolutionv3importer_SRCS
     evolutionsettings.cpp
     evolutioncalendar.cpp
     evolutionutil.cpp
+    evolutionsettings.h
+    evolutionv3importdata.h
+    evolutionutil.h
+    evolutioncalendar.h
+    evolutionaddressbook.h
     )
 ecm_qt_declare_logging_category(evolutionv3importer_SRCS HEADER evolutionv3plugin_debug.h
         IDENTIFIER EVOLUTIONPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.evolutionplugin

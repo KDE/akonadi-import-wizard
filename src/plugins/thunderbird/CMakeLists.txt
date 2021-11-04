@@ -3,6 +3,10 @@ set(thunderbirdimporter_SRCS
     thunderbirdimportdata.cpp
     thunderbirdsettings.cpp
     addressbook/MorkParser.cpp
+    thunderbirdaddressbook.h
+    thunderbirdimportdata.h
+    addressbook/MorkParser.h
+    thunderbirdsettings.h
     )
 ecm_qt_declare_logging_category(thunderbirdimporter_SRCS HEADER thunderbirdplugin_debug.h
         IDENTIFIER THUNDERBIRDPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.thunderbirdplugin

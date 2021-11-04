@@ -2,6 +2,9 @@ set(trojitaimporter_SRCS
     trojitaaddressbook.cpp
     trojitaimportdata.cpp
     trojitasettings.cpp
+    trojitasettings.h
+    trojitaimportdata.h
+    trojitaaddressbook.h
     )
 
 ecm_qt_declare_logging_category(trojitaimporter_SRCS HEADER trojitaplugin_debug.h

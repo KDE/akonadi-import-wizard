@@ -46,6 +46,14 @@ target_sources(KPimImportWizard PRIVATE
     abstractdisplayinfo.cpp
     importwizardutil.cpp
     importwizardsavepasswordjob.cpp
+    abstractsettings.h
+    abstractbase.h
+    importwizardutil.h
+    abstractaddressbook.h
+    importwizardsavepasswordjob.h
+    abstractimporter.h
+    abstractdisplayinfo.h
+    abstractcalendar.h
     )
 
 ecm_qt_declare_logging_category(KPimImportWizard HEADER libimportwizard_debug.h IDENTIFIER LIBIMPORTWIZARD_LOG CATEGORY_NAME org.kde.pim.importwizard.lib

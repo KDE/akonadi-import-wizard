@@ -3,6 +3,11 @@ set(sylpheedimporter_SRCS
     sylpheedimportdata.cpp
     sylpheedsettings.cpp
     sylpheedsettingsutils.cpp
+    sylpheedimportdata.h
+    sylpheedsettings.h
+    sylpheedaddressbook.h
+    sylpheedsettingsutils.h
+
     )
 ecm_qt_declare_logging_category(sylpheedimporter_SRCS HEADER sylpheedplugin_debug.h
         IDENTIFIER SYLPHEEDPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.sylpheedplugin

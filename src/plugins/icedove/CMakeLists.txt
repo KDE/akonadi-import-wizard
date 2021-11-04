@@ -3,7 +3,7 @@ set(icedoveimporter_SRCS
     ../thunderbird/thunderbirdaddressbook.cpp
     ../thunderbird/thunderbirdsettings.cpp
     ../thunderbird/addressbook/MorkParser.cpp
-
+    icedoveimportdata.h
     )
 
 ecm_qt_declare_logging_category(icedoveimporter_SRCS HEADER thunderbirdplugin_debug.h
