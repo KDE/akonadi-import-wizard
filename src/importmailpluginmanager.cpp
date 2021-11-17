@@ -7,9 +7,9 @@
 #include "importmailpluginmanager.h"
 #include "abstractimporter.h"
 #include "importwizard_debug.h"
-#include "kcoreaddons_version.h"
 #include <KPluginFactory>
 #include <KPluginMetaData>
+#include <kcoreaddons_version.h>
 
 #include <QFileInfo>
 
