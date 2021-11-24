@@ -11,9 +11,7 @@
 #include <QUrl>
 
 struct LIBIMPORTWIZARD_EXPORT ldapStruct {
-    ldapStruct()
-    {
-    }
+    ldapStruct() = default;
 
     QUrl ldapUrl;
     QString dn;

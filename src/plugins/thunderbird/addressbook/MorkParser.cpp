@@ -517,7 +517,7 @@ QString MorkParser::getValue(int oid)
     MorkDict::ConstIterator foundIter = mValues.constFind(oid);
 
     if (foundIter == mValues.constEnd()) {
-        return QString();
+        return {};
     }
 
     return *foundIter;
@@ -531,7 +531,7 @@ QString MorkParser::getColumn(int oid)
     MorkDict::ConstIterator foundIter = mColumns.constFind(oid);
 
     if (foundIter == mColumns.constEnd()) {
-        return QString();
+        return {};
     }
 
     return *foundIter;

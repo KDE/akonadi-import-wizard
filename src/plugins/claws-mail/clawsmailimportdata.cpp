@@ -24,9 +24,7 @@ ClawsMailImportData::ClawsMailImportData(QObject *parent, const QList<QVariant> 
     mPath = MailImporter::FilterClawsMail::defaultSettingsPath();
 }
 
-ClawsMailImportData::~ClawsMailImportData()
-{
-}
+ClawsMailImportData::~ClawsMailImportData() = default;
 
 bool ClawsMailImportData::foundMailer() const
 {

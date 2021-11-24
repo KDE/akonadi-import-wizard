@@ -14,9 +14,7 @@ SelectProgramListWidget::SelectProgramListWidget(QWidget *parent)
 {
 }
 
-SelectProgramListWidget::~SelectProgramListWidget()
-{
-}
+SelectProgramListWidget::~SelectProgramListWidget() = default;
 
 void SelectProgramListWidget::setNoProgramFound(bool noProgramFound)
 {

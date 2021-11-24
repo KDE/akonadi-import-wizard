@@ -18,9 +18,7 @@ SylpheedAddressBook::SylpheedAddressBook(const QDir &dir)
 {
 }
 
-SylpheedAddressBook::~SylpheedAddressBook()
-{
-}
+SylpheedAddressBook::~SylpheedAddressBook() = default;
 
 void SylpheedAddressBook::importAddressBook()
 {

@@ -23,9 +23,7 @@ BalsaSettings::BalsaSettings(const QString &filename)
 {
 }
 
-BalsaSettings::~BalsaSettings()
-{
-}
+BalsaSettings::~BalsaSettings() = default;
 
 void BalsaSettings::importSettings()
 {

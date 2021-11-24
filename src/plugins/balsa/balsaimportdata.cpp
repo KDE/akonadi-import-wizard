@@ -23,9 +23,7 @@ BalsaImportData::BalsaImportData(QObject *parent, const QList<QVariant> &)
     mPath = MailImporter::FilterBalsa::defaultSettingsPath();
 }
 
-BalsaImportData::~BalsaImportData()
-{
-}
+BalsaImportData::~BalsaImportData() = default;
 
 bool BalsaImportData::foundMailer() const
 {

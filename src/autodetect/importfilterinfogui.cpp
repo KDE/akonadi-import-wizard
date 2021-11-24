@@ -20,9 +20,7 @@ ImportFilterInfoGui::ImportFilterInfoGui(ImportMailPage *parent)
 {
 }
 
-ImportFilterInfoGui::~ImportFilterInfoGui()
-{
-}
+ImportFilterInfoGui::~ImportFilterInfoGui() = default;
 
 void ImportFilterInfoGui::setStatusMessage(const QString &status)
 {

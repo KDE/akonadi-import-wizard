@@ -17,9 +17,7 @@ class AbstractImporter;
 class PluginUtilData
 {
 public:
-    PluginUtilData()
-    {
-    }
+    PluginUtilData() = default;
 
     QStringList mExtraInfo;
     QString mIdentifier;
@@ -29,9 +27,7 @@ public:
 class ImportMailPluginManagerInfo
 {
 public:
-    ImportMailPluginManagerInfo()
-    {
-    }
+    ImportMailPluginManagerInfo() = default;
 
     QString metaDataFileName;
     PluginUtilData pluginData;

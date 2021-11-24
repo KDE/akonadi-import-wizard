@@ -13,9 +13,7 @@ ImportWizardSavePasswordJob::ImportWizardSavePasswordJob(QObject *parent)
 {
 }
 
-ImportWizardSavePasswordJob::~ImportWizardSavePasswordJob()
-{
-}
+ImportWizardSavePasswordJob::~ImportWizardSavePasswordJob() = default;
 
 bool ImportWizardSavePasswordJob::canStart() const
 {

@@ -25,9 +25,7 @@ IcedoveImportData::IcedoveImportData(QObject *parent, const QList<QVariant> &)
     mPath = MailImporter::FilterIcedove::defaultSettingsPath();
 }
 
-IcedoveImportData::~IcedoveImportData()
-{
-}
+IcedoveImportData::~IcedoveImportData() = default;
 
 QString IcedoveImportData::defaultProfile()
 {

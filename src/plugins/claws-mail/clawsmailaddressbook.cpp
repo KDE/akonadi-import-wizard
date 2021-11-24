@@ -12,6 +12,4 @@ ClawsMailAddressBook::ClawsMailAddressBook(const QDir &dir)
 {
 }
 
-ClawsMailAddressBook::~ClawsMailAddressBook()
-{
-}
+ClawsMailAddressBook::~ClawsMailAddressBook() = default;

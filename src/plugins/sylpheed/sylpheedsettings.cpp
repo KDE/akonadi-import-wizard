@@ -21,13 +21,9 @@
 #include <QRegularExpression>
 #include <QStringList>
 
-SylpheedSettings::SylpheedSettings()
-{
-}
+SylpheedSettings::SylpheedSettings() = default;
 
-SylpheedSettings::~SylpheedSettings()
-{
-}
+SylpheedSettings::~SylpheedSettings() = default;
 
 void SylpheedSettings::importSettings(const QString &filename, const QString &path)
 {
@@ -548,5 +544,5 @@ QString SylpheedSettings::readTransport(const KConfigGroup &accountConfig)
         storeTransport(mt, true);
         return QString::number(mt->id());
     }
-    return QString();
+    return {};
 }

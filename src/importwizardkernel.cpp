@@ -87,7 +87,7 @@ qreal ImportWizardKernel::closeToQuotaThreshold()
 QStringList ImportWizardKernel::customTemplates()
 {
     Q_ASSERT(false);
-    return QStringList();
+    return {};
 }
 
 bool ImportWizardKernel::excludeImportantMailFromExpiry()

@@ -22,9 +22,7 @@ ImportWizardDisplayInfo::ImportWizardDisplayInfo(ImportWizard *wizard)
     Q_ASSERT_X(mImportWizard, __FUNCTION__, "mImportWizard is null");
 }
 
-ImportWizardDisplayInfo::~ImportWizardDisplayInfo()
-{
-}
+ImportWizardDisplayInfo::~ImportWizardDisplayInfo() = default;
 
 void ImportWizardDisplayInfo::calendarImportError(const QString &log)
 {

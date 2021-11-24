@@ -8,9 +8,7 @@
 
 using namespace LibImportWizard;
 
-AbstractDisplayInfo::AbstractDisplayInfo()
-{
-}
+AbstractDisplayInfo::AbstractDisplayInfo() = default;
 
 void AbstractDisplayInfo::calendarImportError(const QString &log)
 {

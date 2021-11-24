@@ -21,9 +21,7 @@ AbstractAddressBook::AbstractAddressBook()
 {
 }
 
-AbstractAddressBook::~AbstractAddressBook()
-{
-}
+AbstractAddressBook::~AbstractAddressBook() = default;
 
 bool AbstractAddressBook::selectAddressBook()
 {

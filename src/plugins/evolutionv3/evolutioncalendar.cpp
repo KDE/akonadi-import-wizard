@@ -14,13 +14,9 @@
 #include <QDomElement>
 #include <QFile>
 
-EvolutionCalendar::EvolutionCalendar()
-{
-}
+EvolutionCalendar::EvolutionCalendar() = default;
 
-EvolutionCalendar::~EvolutionCalendar()
-{
-}
+EvolutionCalendar::~EvolutionCalendar() = default;
 
 void EvolutionCalendar::loadCalendar(const QString &filename)
 {

@@ -15,9 +15,7 @@ ImportWizardFilterInfoGui::ImportWizardFilterInfoGui(ManualImportMailPage *dlg, 
 {
 }
 
-ImportWizardFilterInfoGui::~ImportWizardFilterInfoGui()
-{
-}
+ImportWizardFilterInfoGui::~ImportWizardFilterInfoGui() = default;
 
 void ImportWizardFilterInfoGui::setStatusMessage(const QString &status)
 {

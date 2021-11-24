@@ -12,13 +12,9 @@
 #include <QFileDialog>
 #include <QProcess>
 
-EvolutionAddressBook::EvolutionAddressBook()
-{
-}
+EvolutionAddressBook::EvolutionAddressBook() = default;
 
-EvolutionAddressBook::~EvolutionAddressBook()
-{
-}
+EvolutionAddressBook::~EvolutionAddressBook() = default;
 
 void EvolutionAddressBook::exportEvolutionAddressBook()
 {

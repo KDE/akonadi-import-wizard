@@ -17,9 +17,7 @@ ThunderBirdAddressBook::ThunderBirdAddressBook(const QDir &dir)
 {
 }
 
-ThunderBirdAddressBook::~ThunderBirdAddressBook()
-{
-}
+ThunderBirdAddressBook::~ThunderBirdAddressBook() = default;
 
 void ThunderBirdAddressBook::importAddressBook()
 {

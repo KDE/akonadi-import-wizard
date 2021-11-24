@@ -25,9 +25,7 @@ SeaMonkeyImportData::SeaMonkeyImportData(QObject *parent, const QList<QVariant> 
     mPath = MailImporter::FilterSeaMonkey::defaultSettingsPath();
 }
 
-SeaMonkeyImportData::~SeaMonkeyImportData()
-{
-}
+SeaMonkeyImportData::~SeaMonkeyImportData() = default;
 
 QString SeaMonkeyImportData::defaultProfile()
 {

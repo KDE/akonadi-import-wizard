@@ -21,9 +21,7 @@ AbstractImporter::AbstractImporter(QObject *parent)
 {
 }
 
-AbstractImporter::~AbstractImporter()
-{
-}
+AbstractImporter::~AbstractImporter() = default;
 
 bool AbstractImporter::importSettings()
 {

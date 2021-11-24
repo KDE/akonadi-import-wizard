@@ -24,9 +24,7 @@ SylpheedImportData::SylpheedImportData(QObject *parent, const QList<QVariant> &)
     mPath = MailImporter::FilterSylpheed::defaultSettingsPath();
 }
 
-SylpheedImportData::~SylpheedImportData()
-{
-}
+SylpheedImportData::~SylpheedImportData() = default;
 
 bool SylpheedImportData::foundMailer() const
 {

@@ -10,13 +10,9 @@
 #include <KSharedConfig>
 using namespace LibImportWizard;
 
-AbstractCalendar::AbstractCalendar()
-{
-}
+AbstractCalendar::AbstractCalendar() = default;
 
-AbstractCalendar::~AbstractCalendar()
-{
-}
+AbstractCalendar::~AbstractCalendar() = default;
 
 void AbstractCalendar::addImportInfo(const QString &log)
 {

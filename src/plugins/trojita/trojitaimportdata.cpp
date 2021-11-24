@@ -22,9 +22,7 @@ TrojitaImportData::TrojitaImportData(QObject *parent, const QList<QVariant> &)
     mPath = MailImporter::OtherMailerUtil::trojitaDefaultPath();
 }
 
-TrojitaImportData::~TrojitaImportData()
-{
-}
+TrojitaImportData::~TrojitaImportData() = default;
 
 bool TrojitaImportData::foundMailer() const
 {

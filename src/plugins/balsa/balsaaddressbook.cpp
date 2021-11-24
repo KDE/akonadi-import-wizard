@@ -29,9 +29,7 @@ BalsaAddressBook::BalsaAddressBook(const QString &filename)
 {
 }
 
-BalsaAddressBook::~BalsaAddressBook()
-{
-}
+BalsaAddressBook::~BalsaAddressBook() = default;
 
 void BalsaAddressBook::importAddressBook()
 {

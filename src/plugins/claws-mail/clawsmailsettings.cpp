@@ -20,13 +20,9 @@
 
 #include <QRegularExpression>
 
-ClawsMailSettings::ClawsMailSettings()
-{
-}
+ClawsMailSettings::ClawsMailSettings() = default;
 
-ClawsMailSettings::~ClawsMailSettings()
-{
-}
+ClawsMailSettings::~ClawsMailSettings() = default;
 
 void ClawsMailSettings::importSettings(const QString &filename, const QString &path)
 {

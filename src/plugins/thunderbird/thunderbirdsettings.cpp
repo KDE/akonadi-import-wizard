@@ -25,9 +25,7 @@ ThunderbirdSettings::ThunderbirdSettings(const QString &filename)
 {
 }
 
-ThunderbirdSettings::~ThunderbirdSettings()
-{
-}
+ThunderbirdSettings::~ThunderbirdSettings() = default;
 
 void ThunderbirdSettings::importSettings()
 {

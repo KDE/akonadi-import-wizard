@@ -20,13 +20,9 @@
 #include <QDomElement>
 #include <QFile>
 
-EvolutionSettings::EvolutionSettings()
-{
-}
+EvolutionSettings::EvolutionSettings() = default;
 
-EvolutionSettings::~EvolutionSettings()
-{
-}
+EvolutionSettings::~EvolutionSettings() = default;
 
 void EvolutionSettings::loadAccount(const QString &filename)
 {
@@ -522,7 +518,7 @@ QString EvolutionSettings::getSecurityMethod(const QStringList &listArgument, bo
 {
     found = false;
     if (listArgument.isEmpty()) {
-        return QString();
+        return {};
     }
     for (const QString &str : listArgument) {
         if (str.contains(QLatin1String("security-method="))) {
@@ -534,7 +530,7 @@ QString EvolutionSettings::getSecurityMethod(const QStringList &listArgument, bo
             }
         }
     }
-    return QString();
+    return {};
 }
 
 QString EvolutionSettings::getAuthMethod(const QString &path, bool &found)
@@ -546,7 +542,7 @@ QString EvolutionSettings::getAuthMethod(const QString &path, bool &found)
         return securityMethod;
     }
     found = false;
-    return QString();
+    return {};
 }
 
 void EvolutionSettings::addAuth(QMap<QString, QVariant> &settings, const QString &argument, const QString &userName)

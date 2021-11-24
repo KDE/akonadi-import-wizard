@@ -27,9 +27,7 @@ ImportMailPluginManager::ImportMailPluginManager(QObject *parent)
     initializePluginList();
 }
 
-ImportMailPluginManager::~ImportMailPluginManager()
-{
-}
+ImportMailPluginManager::~ImportMailPluginManager() = default;
 
 ImportMailPluginManager *ImportMailPluginManager::self()
 {

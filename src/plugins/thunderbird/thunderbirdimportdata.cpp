@@ -27,9 +27,7 @@ ThunderbirdImportData::ThunderbirdImportData(QObject *parent, const QList<QVaria
     mPath = MailImporter::FilterThunderbird::defaultSettingsPath();
 }
 
-ThunderbirdImportData::~ThunderbirdImportData()
-{
-}
+ThunderbirdImportData::~ThunderbirdImportData() = default;
 
 QString ThunderbirdImportData::defaultProfile()
 {
