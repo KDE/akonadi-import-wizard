@@ -36,7 +36,7 @@ void ImportWizardSavePasswordJob::start()
         return;
     }
     auto writeJob = new WritePasswordJob(mName, this);
-    connect(writeJob, &Job::finished, this, &ImportWizardSavePasswordJob::slotPasswordWritten);
+    connect(writeJob, &WritePasswordJob::finished, this, &ImportWizardSavePasswordJob::slotPasswordWritten);
     writeJob->setKey(mKey);
     writeJob->setTextData(mPassword);
     writeJob->start();
