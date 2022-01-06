@@ -99,3 +99,4 @@ Terminal=false
 Categories=Qt;KDE;Utility;X-KDE-Utilities-PIM;
 X-DBUS-StartupType=Unique
 X-DBUS-ServiceName=org.kde.importwizard
+SingleMainWindow=true
