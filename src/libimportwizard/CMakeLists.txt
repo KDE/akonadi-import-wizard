@@ -67,7 +67,7 @@ endif()
 add_library(KPim::ImportWizard ALIAS KPimImportWizard)
 
 
-target_include_directories(KPimImportWizard INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KPim/ImportWizard;${KDE_INSTALL_INCLUDEDIR_KF5}/KPim/>")
+target_include_directories(KPimImportWizard INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KPim/ImportWizard;${KDE_INSTALL_INCLUDEDIR_KF}/KPim/>")
 
 
 generate_export_header(KPimImportWizard BASE_NAME libimportwizard)
@@ -81,9 +81,12 @@ target_link_libraries(KPimImportWizard
     KF5::MailCommon
     KF5::MailImporter
     KF5::I18n
-    qt5keychain
     )
-
+if (QT_MAJOR_VERSION STREQUAL "6")
+    target_link_libraries(KPimImportWizard PRIVATE qt6keychain)
+else()
+    target_link_libraries(KPimImportWizard PRIVATE qt5keychain)
+endif()
 set_target_properties(KPimImportWizard PROPERTIES
     VERSION ${IMPORTWIZARD_VERSION}
     SOVERSION ${IMPORTWIZARD_SOVERSION}
@@ -113,14 +116,14 @@ ecm_generate_headers(ImportWizard_CamelCase_HEADERS
 
 install(FILES
     ${ImportWizard_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KPim/ImportWizard/
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KPim/ImportWizard/
     COMPONENT Devel
     )
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/libimportwizard_export.h
     ${ImportWizard_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KPim/importwizard/
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KPim/importwizard/
     COMPONENT Devel
     )
 

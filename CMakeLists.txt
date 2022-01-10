@@ -50,7 +50,7 @@ set(KDEPIM_LIB_VERSION "${PIM_VERSION}")
 set(KDEPIM_LIB_SOVERSION "5")
 
 set(QT_REQUIRED_VERSION "5.15.2")
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Gui)
+find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Gui)
 set(MAILIMPORTER_VERSION "5.19.40")
 set(MAILCOMMON_LIB_VERSION "5.19.40")
 set(MESSAGELIB_LIB_VERSION "5.19.40")
@@ -77,8 +77,8 @@ find_package(KF5MessageViewer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5PimCommonAkonadi ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
 include_directories(${importwizard_SOURCE_DIR} ${importwizard_BINARY_DIR})
 
-find_package(Qt5Keychain CONFIG)
-set_package_properties(Qt5Keychain PROPERTIES
+find_package(Qt${QT_MAJOR_VERSION}Keychain CONFIG)
+set_package_properties(Qt${QT_MAJOR_VERSION}Keychain PROPERTIES
                                    DESCRIPTION "Provides support for secure credentials storage"
                                    URL "https://github.com/frankosterfeld/qtkeychain"
                                    TYPE REQUIRED)
