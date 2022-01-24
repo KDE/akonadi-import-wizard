@@ -108,7 +108,7 @@
   <customwidget>
    <class>MailImporter::ImportMailsWidget</class>
    <extends>QWidget</extends>
-   <header>importmailswidget.h</header>
+   <header>mailimporter/importmailswidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

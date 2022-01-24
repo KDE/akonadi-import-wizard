@@ -80,6 +80,7 @@ target_link_libraries(KPimImportWizard
     KF5::PimCommon
     KF5::MailCommon
     KF5::MailImporter
+    KF5::MailImporterAkonadi
     KF5::I18n
     )
 if (QT_MAJOR_VERSION STREQUAL "6")
