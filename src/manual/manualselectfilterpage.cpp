@@ -8,26 +8,26 @@
 #include "manualselectfilterpage.h"
 
 // Filter includes
-#include <mailimporter/filterevolution.h>
-#include <mailimporter/filterevolution_v2.h>
-#include <mailimporter/filtericedove.h>
-#include <mailimporter/filterkmail_maildir.h>
-#include <mailimporter/filterkmailarchive.h>
-#include <mailimporter/filterlnotes.h>
-#include <mailimporter/filtermailapp.h>
-#include <mailimporter/filtermailmangzip.h>
-#include <mailimporter/filtermbox.h>
-#include <mailimporter/filteroe.h>
-#include <mailimporter/filteropera.h>
-#include <mailimporter/filterplain.h>
-#include <mailimporter/filterpmail.h>
-#include <mailimporter/filtersylpheed.h>
-#include <mailimporter/filterthebat.h>
-#include <mailimporter/filterthunderbird.h>
+#include <MailImporter/FilterEvolution>
+#include <MailImporter/FilterEvolution_v2>
+#include <MailImporter/FilterIcedove>
+#include <MailImporter/FilterKMailArchive>
+#include <MailImporter/FilterKMail_maildir>
+#include <MailImporter/FilterLNotes>
+#include <MailImporter/FilterMBox>
+#include <MailImporter/FilterMailApp>
+#include <MailImporter/FilterMailmanGzip>
+#include <MailImporter/FilterOE>
+#include <MailImporter/FilterOpera>
+#include <MailImporter/FilterPMail>
+#include <MailImporter/FilterPlain>
+#include <MailImporter/FilterSylpheed>
+#include <MailImporter/FilterTheBat>
+#include <MailImporter/FilterThunderbird>
 
-#include <mailimporter/filters.h>
+#include <MailImporter/Filters>
 
-#include <mailimporter/filterevolution_v3.h>
+#include <MailImporter/FilterEvolution_v3>
 
 // KDE includes
 
