@@ -83,11 +83,7 @@ target_link_libraries(KPimImportWizard
     KF5::MailImporterAkonadi
     KF5::I18n
     )
-if (QT_MAJOR_VERSION STREQUAL "6")
-    target_link_libraries(KPimImportWizard PRIVATE qt6keychain)
-else()
-    target_link_libraries(KPimImportWizard PRIVATE qt5keychain)
-endif()
+target_link_libraries(KPimImportWizard PRIVATE qt${QT_MAJOR_VERSION}keychain)
 set_target_properties(KPimImportWizard PROPERTIES
     VERSION ${IMPORTWIZARD_VERSION}
     SOVERSION ${IMPORTWIZARD_SOVERSION}
