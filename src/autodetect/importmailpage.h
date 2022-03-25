@@ -40,4 +40,3 @@ private:
     void collectionChanged(const Akonadi::Collection &collection);
     Ui::ImportMailPage *const ui;
 };
-

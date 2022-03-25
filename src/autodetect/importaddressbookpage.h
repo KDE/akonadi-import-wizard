@@ -31,4 +31,3 @@ Q_SIGNALS:
 private:
     Ui::ImportAddressbookPage *const ui;
 };
-

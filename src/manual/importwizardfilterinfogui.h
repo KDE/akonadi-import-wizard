@@ -30,4 +30,3 @@ private:
     QWidget *const m_parent;
     ManualImportMailPage *const mManualImportMailPage;
 };
-

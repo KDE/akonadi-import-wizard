@@ -22,4 +22,3 @@ public:
 
     QString name() const override;
 };
-

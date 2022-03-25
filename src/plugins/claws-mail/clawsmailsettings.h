@@ -28,4 +28,3 @@ protected:
 private:
     QString writeColor(const QColor &col);
 };
-

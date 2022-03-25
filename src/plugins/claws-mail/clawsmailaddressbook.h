@@ -15,4 +15,3 @@ public:
     explicit ClawsMailAddressBook(const QDir &dir);
     ~ClawsMailAddressBook() override;
 };
-

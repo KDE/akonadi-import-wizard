@@ -22,4 +22,3 @@ public:
     bool importAddressBook() override;
     QString name() const override;
 };
-

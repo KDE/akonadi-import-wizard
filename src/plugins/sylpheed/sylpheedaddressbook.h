@@ -25,4 +25,3 @@ private:
     QHash<QString, QStringList> mAddressBookUid;
     QDir mDir;
 };
-

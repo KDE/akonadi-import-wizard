@@ -22,4 +22,3 @@ private:
     void readAddressBook(const QString &filename);
     QDir mDir;
 };
-

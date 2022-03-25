@@ -71,4 +71,3 @@ protected:
     QWidget *mParentWidget = nullptr;
 };
 }
-

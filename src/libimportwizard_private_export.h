@@ -16,4 +16,3 @@
 #else /* not compiling tests */
 #define LIBIMPORTWIZARD_TESTS_EXPORT
 #endif
-

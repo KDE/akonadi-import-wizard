@@ -60,4 +60,3 @@ protected:
     KIdentityManagement::IdentityManager *mManager = nullptr;
     KSharedConfigPtr mKmailConfig;
 };
-

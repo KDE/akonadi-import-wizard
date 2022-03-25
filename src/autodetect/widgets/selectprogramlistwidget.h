@@ -25,4 +25,3 @@ private:
     QColor mTextColor;
     bool mNoProgramFound = false;
 };
-

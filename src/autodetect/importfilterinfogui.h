@@ -30,4 +30,3 @@ public:
 private:
     ImportMailPage *const m_parent;
 };
-

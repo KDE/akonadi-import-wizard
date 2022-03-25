@@ -14,4 +14,3 @@ namespace EvolutionUtil
 bool loadInDomDocument(QFile *file, QDomDocument &doc);
 bool loadInDomDocument(const QString &file, QDomDocument &doc);
 }
-

@@ -38,4 +38,3 @@ private:
     void slotSelectManualSelectionChanged(bool b);
     Ui::SelectProgramPage *const ui;
 };
-

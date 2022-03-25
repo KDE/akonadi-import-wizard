@@ -33,4 +33,3 @@ private:
     Ui::ManualSelectFilterPage *mWidget = nullptr;
     QVector<MailImporter::Filter *> mFilterList;
 };
-

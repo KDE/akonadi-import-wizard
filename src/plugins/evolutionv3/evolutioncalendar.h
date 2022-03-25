@@ -23,4 +23,3 @@ private:
     void extractCalendarInfo(const QString &info);
     QString mCalendarPath;
 };
-

@@ -27,4 +27,3 @@ private:
 
     QString mDefaultProfile;
 };
-

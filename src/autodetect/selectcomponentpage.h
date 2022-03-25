@@ -33,4 +33,3 @@ private:
     LibImportWizard::AbstractImporter::TypeSupportedOptions mOptions;
     Ui::SelectComponentPage *const ui;
 };
-

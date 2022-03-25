@@ -41,4 +41,3 @@ LIBIMPORTWIZARD_EXPORT void mergeLdap(const ldapStruct &ldap);
 LIBIMPORTWIZARD_EXPORT void addAkonadiTag(const QVector<tagStruct> &tagList);
 void storePassword(const QString &name, ImportWizardUtil::ResourceType type, const QString &password);
 }
-

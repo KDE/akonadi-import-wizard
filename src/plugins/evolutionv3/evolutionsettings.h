@@ -32,4 +32,3 @@ private:
 
     QMap<QString, KIdentityManagement::Signature> mMapSignature;
 };
-

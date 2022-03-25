@@ -37,4 +37,3 @@ public:
     virtual void initializeFilter(MailImporter::Filter &filter);
 };
 }
-

@@ -111,4 +111,3 @@ protected: // Data
     // Indicates intity is being parsed
     enum { NPColumns, NPValues, NPRows } nowParsing_;
 };
-

@@ -29,4 +29,3 @@ Q_SIGNALS:
 private:
     Ui::ImportSettingPage *const ui;
 };
-

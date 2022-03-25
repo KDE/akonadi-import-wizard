@@ -30,4 +30,3 @@ Q_SIGNALS:
 private:
     Ui::ImportFilterPage *const ui;
 };
-

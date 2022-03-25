@@ -20,4 +20,3 @@ public:
 private:
     Ui::ManualImportMailPage *mWidget = nullptr;
 };
-

@@ -27,4 +27,3 @@ private:
     QHash<QString, QString> mHashSmtp;
     QString mFileName;
 };
-

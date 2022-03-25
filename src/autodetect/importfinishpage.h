@@ -25,4 +25,3 @@ public:
 private:
     Ui::ImportFinishPage *const ui;
 };
-

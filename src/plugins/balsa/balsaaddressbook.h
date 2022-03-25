@@ -22,4 +22,3 @@ private:
     void readAddressBook(const KConfigGroup &grp);
     QString mFileName;
 };
-

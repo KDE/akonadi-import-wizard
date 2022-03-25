@@ -106,4 +106,3 @@ private:
 
     LibImportWizard::AbstractDisplayInfo *mAbstractDisplayInfo = nullptr;
 };
-

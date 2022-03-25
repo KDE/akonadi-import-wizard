@@ -16,4 +16,3 @@ public:
     ~EvolutionAddressBook() override;
     void exportEvolutionAddressBook();
 };
-

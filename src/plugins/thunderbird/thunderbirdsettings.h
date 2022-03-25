@@ -43,4 +43,3 @@ private:
     QHash<QString, tagStruct> mHashTag;
     QString mFileName;
 };
-

@@ -22,4 +22,3 @@ public:
     bool importFilters() override;
     QString name() const override;
 };
-

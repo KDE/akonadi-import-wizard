@@ -31,4 +31,3 @@ public:
 private:
     ImportWizard *const mImportWizard;
 };
-

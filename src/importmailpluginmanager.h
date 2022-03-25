@@ -53,4 +53,3 @@ private:
     QVector<ImportMailPluginManagerInfo> mPluginList;
     QVector<PluginUtilData> mPluginDataList;
 };
-
