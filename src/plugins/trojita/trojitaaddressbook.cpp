@@ -14,7 +14,9 @@
 TrojitaAddressBook::TrojitaAddressBook(const QString &filename)
 {
     settings = new QSettings(filename, QSettings::IniFormat, this);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     settings->setIniCodec("UTF-8");
+#endif
 }
 
 TrojitaAddressBook::~TrojitaAddressBook()
