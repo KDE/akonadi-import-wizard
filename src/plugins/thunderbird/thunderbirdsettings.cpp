@@ -286,7 +286,7 @@ void ThunderbirdSettings::readLdapSettings()
         }
         const QString ldapMaxHits = QStringLiteral("%1.maxHits").arg(ldapAccountName);
         if (mHashConfig.contains(ldapMaxHits)) {
-            ldap.fileName = mHashConfig.value(ldapMaxHits).toInt();
+            ldap.maxHint = mHashConfig.value(ldapMaxHits).toInt();
         }
         const QString ldapUri = QStringLiteral("%1.uri").arg(ldapAccountName);
         if (mHashConfig.contains(ldapUri)) {
