@@ -37,7 +37,8 @@ ImportMailPluginManager *ImportMailPluginManager::self()
 
 bool ImportMailPluginManager::initializePluginList()
 {
-    const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("importwizard"));
+    const QVector<KPluginMetaData> plugins =
+        KPluginMetaData::findPlugins(QStringLiteral("pim" QT_STRINGIFY(QT_VERSION_MAJOR)) + QStringLiteral("/importwizard"));
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QVectorIterator<KPluginMetaData> i(plugins);
 #else
