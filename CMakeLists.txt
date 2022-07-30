@@ -87,7 +87,7 @@ set_package_properties(Qt${QT_MAJOR_VERSION}Keychain PROPERTIES
 
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 add_definitions(-DQT_USE_QSTRINGBUILDER)
-ecm_set_disabled_deprecation_versions(QT 5.15.2 KF 5.96.0)
+ecm_set_disabled_deprecation_versions(QT 5.15.2 KF 5.97.0)
 
 
 if(BUILD_TESTING)
