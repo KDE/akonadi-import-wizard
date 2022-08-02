@@ -52,7 +52,8 @@ int main(int argc, char *argv[])
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("mode"), i18n("Mode: %1", QStringLiteral("manual|automatic"))));
+    const QCommandLineOption modeOption(QStringList() << QStringLiteral("mode"), i18n("Mode: %1", QStringLiteral("manual|automatic")));
+    parser.addOption(modeOption);
     aboutData.setupCommandLine(&parser);
     parser.process(app);
     aboutData.processCommandLine(&parser);
@@ -60,7 +61,7 @@ int main(int argc, char *argv[])
     KDBusService service(KDBusService::Unique);
 
     ImportWizard::WizardMode mode = ImportWizard::WizardMode::AutoDetect;
-    if (parser.isSet(QStringLiteral("mode"))) {
+    if (parser.isSet(modeOption)) {
         if (!parser.positionalArguments().isEmpty()) {
             const QString modeStr = parser.positionalArguments().at(0);
             if (modeStr == QLatin1String("manual")) {
