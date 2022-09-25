@@ -11,8 +11,6 @@
 #include <KPluginMetaData>
 #include <kcoreaddons_version.h>
 
-#include <QFileInfo>
-
 namespace
 {
 QString pluginVersion()

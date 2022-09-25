@@ -11,7 +11,6 @@
 #include <MailTransport/TransportManager>
 
 #include <KIdentityManagement/Identity>
-#include <KIdentityManagement/Signature>
 
 #include "clawsmailplugin_debug.h"
 #include <KConfig>

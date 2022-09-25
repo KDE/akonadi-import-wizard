@@ -7,7 +7,6 @@
 #pragma once
 
 #include "abstractaddressbook.h"
-#include <QHash>
 class QSettings;
 
 class TrojitaAddressBook : public LibImportWizard::AbstractAddressBook
