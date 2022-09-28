@@ -23,7 +23,6 @@
 #include <MailImporter/FilterInfo>
 #include <MailImporterAkonadi/FilterImporterAkonadi>
 
-#include "importwizard_debug.h"
 #include <Akonadi/ControlGui>
 #include <KAboutData>
 #include <KConfigGroup>

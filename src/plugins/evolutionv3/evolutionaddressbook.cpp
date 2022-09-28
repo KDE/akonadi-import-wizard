@@ -6,7 +6,6 @@
 #include "evolutionaddressbook.h"
 #include "abstractdisplayinfo.h"
 
-#include "evolutionv3plugin_debug.h"
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QFileDialog>
