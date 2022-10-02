@@ -1,0 +1,550 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"PO-Revision-Date: 2022-01-08 10:45+0100\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 22.03.70\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Łukasz Wojniłowicz"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "lukasz.wojnilowicz@gmail.com"
+
+#: autodetect/widgets/selectprogramlistwidget.cpp:46
+#, kde-format
+msgid "No program found."
+msgstr "Nie znaleziono żadnego programu."
+
+#: importwizard.cpp:41
+#, kde-format
+msgctxt "@title:window"
+msgid "PIM Import Tool"
+msgstr "Narzędzie importu ZIO"
+
+#: importwizard.cpp:70
+#, kde-format
+msgid ""
+"Close KMail before importing data. Some plugins will modify KMail config "
+"file."
+msgstr ""
+"Zamknij KMail przed importowaniem danych. Pewne wtyczki zmienią plik "
+"ustawień KMail."
+
+#: importwizard.cpp:125
+#, kde-format
+msgid "Step 1: Select Filter"
+msgstr "Krok 1: Wybór filtra"
+
+#: importwizard.cpp:130
+#, kde-format
+msgid "Step 2: Importing..."
+msgstr "Krok 2: Importowanie..."
+
+#: importwizard.cpp:159
+#, kde-format
+msgid "Detect program"
+msgstr "Wybór programu"
+
+#: importwizard.cpp:164
+#, kde-format
+msgid "Select material to import"
+msgstr "Wybierz materiał do zaimportowania"
+
+#: importwizard.cpp:168
+#, kde-format
+msgid "Import mail messages"
+msgstr "Zaimportuj wiadomości pocztowe"
+
+#: importwizard.cpp:172
+#, kde-format
+msgid "Import mail filters"
+msgstr "Zaimportuj filtry pocztowe"
+
+#. i18n: ectx: property (text), widget (QPushButton, importSettings)
+#: importwizard.cpp:176 ui/autodetect/importsettingpage.ui:47
+#, kde-format
+msgid "Import settings"
+msgstr "Zaimportuj ustawienia"
+
+#: importwizard.cpp:180
+#, kde-format
+msgid "Import addressbooks"
+msgstr "Zaimportuj książki adresowe"
+
+#: importwizard.cpp:184
+#, kde-format
+msgid "Import calendars"
+msgstr "Zaimportuj kalendarze"
+
+#: importwizard.cpp:188
+#, kde-format
+msgid "Finish"
+msgstr "Zakończ"
+
+#: importwizard.cpp:210
+#, kde-format
+msgid "Import addressbook from %1..."
+msgstr "Importowanie książki adresowej z %1..."
+
+#: importwizard.cpp:213
+#, kde-format
+msgid "Import addressbook from %1: Done"
+msgstr "Importowanie książki adresowej z %1: Ukończono"
+
+#: importwizard.cpp:219
+#, kde-format
+msgid "Import filters from %1..."
+msgstr "Importowanie filtrów z %1..."
+
+#: importwizard.cpp:222
+#, kde-format
+msgid "Import filters from %1: Done"
+msgstr "Importowanie filtrów z %1: Ukończono"
+
+#: importwizard.cpp:228
+#, kde-format
+msgid "Import mails from %1..."
+msgstr "Importowanie wiadomości pocztowych z %1..."
+
+#: importwizard.cpp:231
+#, kde-format
+msgid "Import mails from %1: Done"
+msgstr "Importowanie wiadomości pocztowych z %1: Ukończono"
+
+#: importwizard.cpp:237
+#, kde-format
+msgid "Import settings from %1..."
+msgstr "Importowanie ustawień z %1..."
+
+#: importwizard.cpp:240
+#, kde-format
+msgid "Import settings from %1: Done"
+msgstr "Importowanie ustawień z %1: Ukończono"
+
+#: importwizard.cpp:246
+#, kde-format
+msgid "Import calendar from %1..."
+msgstr "Importowanie kalendarzy z %1..."
+
+#: importwizard.cpp:249
+#, kde-format
+msgid "Import calendar from %1: Done"
+msgstr "Importowanie kalendarzy z %1: Ukończono"
+
+#: importwizard.cpp:338 plugins/balsa/balsaimportdata.cpp:46
+#: plugins/claws-mail/clawsmailimportdata.cpp:47
+#: plugins/evolutionv3/evolutionv3importdata.cpp:66
+#: plugins/icedove/icedoveimportdata.cpp:79
+#: plugins/seamonkey/seamonkeyimportdata.cpp:79
+#: plugins/sylpheed/sylpheedimportdata.cpp:60
+#: plugins/thunderbird/thunderbirdimportdata.cpp:81
+#, kde-format
+msgid "Import in progress"
+msgstr "Importowanie w trakcie"
+
+#: importwizard.cpp:345 plugins/balsa/balsaimportdata.cpp:53
+#: plugins/claws-mail/clawsmailimportdata.cpp:55
+#: plugins/evolutionv3/evolutionv3importdata.cpp:74
+#: plugins/icedove/icedoveimportdata.cpp:87
+#: plugins/seamonkey/seamonkeyimportdata.cpp:87
+#: plugins/sylpheed/sylpheedimportdata.cpp:68
+#: plugins/thunderbird/thunderbirdimportdata.cpp:89
+#, kde-format
+msgid "Import finished"
+msgstr "Ukończono importowanie"
+
+#: libimportwizard/abstractaddressbook.cpp:28
+#, kde-format
+msgid "Creating new contact..."
+msgstr "Tworzenie nowego kontaktu..."
+
+#: libimportwizard/abstractaddressbook.cpp:34
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Address Book"
+msgstr "Wybierz książkę adresową"
+
+#: libimportwizard/abstractaddressbook.cpp:35
+#, kde-format
+msgid "Select the address book the new contact shall be saved in:"
+msgstr "Wybierz książkę adresową, w której zostanie zapisany nowy kontakt:"
+
+#: libimportwizard/abstractaddressbook.cpp:40
+#, kde-format
+msgid "Address Book was not selected."
+msgstr "Nie wybrano książki adresowej."
+
+#: libimportwizard/abstractaddressbook.cpp:67
+#, kde-format
+msgid "Imported from \"%1\""
+msgstr "Zaimportowano z \"%1\""
+
+#: libimportwizard/abstractaddressbook.cpp:86
+#, kde-format
+msgid "Error during contact creation: %1"
+msgstr "Błąd przy tworzeniu kontaktu: %1"
+
+#: libimportwizard/abstractaddressbook.cpp:89
+#, kde-format
+msgid "Contact creation complete"
+msgstr "Ukończono tworzenie kontaktu"
+
+#: libimportwizard/abstractimporter.cpp:65
+#, kde-format
+msgid "Importing of filters from \"%1\" was canceled."
+msgstr "Porzucono importowanie filtrów z \"%1\"."
+
+#: libimportwizard/abstractimporter.cpp:67
+#, kde-format
+msgid "1 filter was imported from \"%2\""
+msgid_plural "%1 filters were imported from \"%2\""
+msgstr[0] "zaimportowano 1 filtr z \"%2\""
+msgstr[1] "zaimportowano %1 filtry z \"%2\""
+msgstr[2] "zaimportowano %1 filtrów z \"%2\""
+
+#: libimportwizard/abstractimporter.cpp:71
+#, kde-format
+msgid "Filters file was not found"
+msgstr "Nie znaleziono plików filtrów"
+
+#: libimportwizard/abstractsettings.cpp:38
+#, kde-format
+msgid "Setting up identity..."
+msgstr "Ustawianie tożsamości..."
+
+#: libimportwizard/abstractsettings.cpp:46
+#, kde-format
+msgid "Identity set up."
+msgstr "Tożsamość została ustawiona."
+
+#: libimportwizard/abstractsettings.cpp:63
+#, kde-format
+msgid "Setting up transport..."
+msgstr "Ustawianie serwerów pocztowych..."
+
+#: libimportwizard/abstractsettings.cpp:75
+#, kde-format
+msgid "Transport set up."
+msgstr "Ustawiono serwery pocztowe."
+
+#: main.cpp:42 main.cpp:44
+#, kde-format
+msgid "PIM Import Tool"
+msgstr "Narzędzie importu ZIO"
+
+#: main.cpp:46
+#, kde-format
+msgid "Copyright © 2012-%1 ImportWizard authors"
+msgstr "Copyright © 2012-%1 Autorzy Pomocnika Importowania"
+
+#: main.cpp:48
+#, kde-format
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: main.cpp:48
+#, kde-format
+msgid "Maintainer"
+msgstr "Opiekun"
+
+#: main.cpp:54
+#, kde-format
+msgid "Mode: %1"
+msgstr "Tryb: %1"
+
+#: manual/manualselectfilterpage.cpp:85
+#, kde-format
+msgid "<p><i>Written by %1.</i></p>"
+msgstr "<p><i>Autorem jest %1.</i></p>"
+
+#: plugins/balsa/balsaaddressbook.cpp:39 plugins/balsa/balsaaddressbook.cpp:52
+#: plugins/sylpheed/sylpheedaddressbook.cpp:27
+#, kde-format
+msgid "No addressbook found"
+msgstr "Brak książki adresowej"
+
+#: plugins/balsa/balsaaddressbook.cpp:66
+#, kde-format
+msgid "Ldap created"
+msgstr "Utworzono Ldap"
+
+#: plugins/balsa/balsaaddressbook.cpp:100
+#, kde-format
+msgid "New addressbook created: %1"
+msgstr "Utworzono nową książkę adresową: %1"
+
+#: plugins/claws-mail/clawsmailimportdata.cpp:76
+#, kde-format
+msgid "Claws Mail settings not found."
+msgstr "Nie znaleziono ustawień Poczty Claws."
+
+#: plugins/evolutionv3/evolutionaddressbook.cpp:21
+#, kde-format
+msgid ""
+"Evolution address book will be exported as vCard. Import vCard in "
+"KAddressBook."
+msgstr ""
+"Książka adresowa Evolution zostanie wyeksportowana jako vCard. Zaimportuj "
+"vCard w Książce adresowej."
+
+#: plugins/evolutionv3/evolutionaddressbook.cpp:22
+#, kde-format
+msgid "Export Evolution Address Book"
+msgstr "Wyeksportuj książkę adresową Evolution"
+
+#: plugins/evolutionv3/evolutionaddressbook.cpp:25
+#, kde-format
+msgid "Select the directory where vCards will be stored."
+msgstr "Wybierz katalog przechowywania wizytówek vCard."
+
+#: plugins/evolutionv3/evolutionaddressbook.cpp:78
+#, kde-format
+msgid "Address book \"%1\" exported."
+msgstr "Wyeksportowano książkę adresową \"%1\"."
+
+#: plugins/evolutionv3/evolutionaddressbook.cpp:80
+#, kde-format
+msgid "Failed to export address book \"%1\"."
+msgstr "Nieudane eksportowanie książki adresowej \"%1\"."
+
+#: plugins/evolutionv3/evolutionv3importdata.cpp:57
+#, kde-format
+msgid "Evolution settings not found."
+msgstr "Nie znaleziono ustawień Evolution."
+
+#: plugins/evolutionv3/evolutionv3importdata.cpp:100
+#, kde-format
+msgid "Evolution calendar not found."
+msgstr "Nie znaleziono kalendarza Evolution."
+
+#: plugins/icedove/icedoveimportdata.cpp:69
+#, kde-format
+msgid "Icedove settings not found."
+msgstr "Nie znaleziono ustawień Icedove."
+
+#: plugins/seamonkey/seamonkeyimportdata.cpp:69
+#, kde-format
+msgid "SeaMonkey settings not found."
+msgstr "Nie znaleziono ustawień SeaMonkey."
+
+#: plugins/sylpheed/sylpheedaddressbook.cpp:61
+#, kde-format
+msgid "No contact found in %1"
+msgstr "Nie znaleziono kontaktu w %1"
+
+#: plugins/sylpheed/sylpheedimportdata.cpp:51
+#, kde-format
+msgid "Sylpheed settings not found."
+msgstr "Nie znaleziono ustawień Sylpheed."
+
+#: plugins/thunderbird/thunderbirdaddressbook.cpp:46
+#, kde-format
+msgid "Contacts file '%1' not found"
+msgstr "Nie znaleziono pliku kontaktów '%1'"
+
+#: plugins/thunderbird/thunderbirdimportdata.cpp:71
+#, kde-format
+msgid "Thunderbird settings not found."
+msgstr "Nie znaleziono ustawień Thunderbirda."
+
+#. i18n: ectx: property (text), widget (QPushButton, importAddressBook)
+#: ui/autodetect/importaddressbookpage.ui:47
+#, kde-format
+msgid "Import addressbook"
+msgstr "Zaimportuj książkę adresową"
+
+#. i18n: ectx: property (text), widget (QPushButton, importCalendar)
+#: ui/autodetect/importcalendarpage.ui:47
+#, kde-format
+msgid "Import calendar"
+msgstr "Zaimportuj kalendarz"
+
+#. i18n: ectx: property (text), widget (QPushButton, importFilters)
+#: ui/autodetect/importfilterpage.ui:47
+#, kde-format
+msgid "Import Filters"
+msgstr "Zaimportuj filtry"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/autodetect/importfinishpage.ui:29
+#, kde-format
+msgid "Summary:"
+msgstr "Podsumowanie:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/autodetect/importmailpage.ui:32 ui/manual/manualselectfilterpage.ui:136
+#, kde-format
+msgid "Please select the folder to import to:"
+msgstr "Wybierz, do którego katalogu importować:"
+
+#. i18n: ectx: property (text), widget (QPushButton, importMails)
+#: ui/autodetect/importmailpage.ui:60
+#, kde-format
+msgid "Import Mails"
+msgstr "Zaimportuj wiadomości"
+
+#. i18n: ectx: property (text), widget (QCheckBox, mails)
+#: ui/autodetect/selectcomponentpage.ui:49
+#, kde-format
+msgid "Mails"
+msgstr "Wiadomości"
+
+#. i18n: ectx: property (text), widget (QCheckBox, filters)
+#: ui/autodetect/selectcomponentpage.ui:59
+#, kde-format
+msgid "Filters"
+msgstr "Filtry"
+
+#. i18n: ectx: property (text), widget (QCheckBox, settings)
+#: ui/autodetect/selectcomponentpage.ui:69
+#, kde-format
+msgid "Settings"
+msgstr "Ustawienia"
+
+#. i18n: ectx: property (text), widget (QCheckBox, addressbooks)
+#: ui/autodetect/selectcomponentpage.ui:79
+#, kde-format
+msgid "Address Books"
+msgstr "Książki adresowe"
+
+#. i18n: ectx: property (text), widget (QCheckBox, calendars)
+#: ui/autodetect/selectcomponentpage.ui:89
+#, kde-format
+msgid "Calendars"
+msgstr "Kalendarze"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/autodetect/selectcomponentpage.ui:126
+#, kde-format
+msgid ""
+"This wizard will import mail messages, addressbook entries, filters and/or "
+"settings from other mail programs into KMail"
+msgstr ""
+"Pomocnik ten zaimportuje wiadomości pocztowe, kontakty w książce adresowej, "
+"filtry i/lub ustawienia z innych programów pocztowych do KMaila"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/autodetect/selectcomponentpage.ui:136
+#, kde-format
+msgid "Or select types of material to import:"
+msgstr "Lub wybierz typy materiału do zaimportowania:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, everything)
+#: ui/autodetect/selectcomponentpage.ui:143
+#, kde-format
+msgid "Import Everything"
+msgstr "Zaimportuj wszystko"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/autodetect/selectprogrampage.ui:53
+#, kde-format
+msgid "Please select the program from which you like to import:"
+msgstr "Wybierz program, z którego chcesz importować:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/autodetect/selectprogrampage.ui:86
+#, kde-format
+msgid "No program found"
+msgstr "Nie znaleziono żadnego programu"
+
+#. i18n: ectx: property (text), widget (QCheckBox, manualSelectionCheckBox)
+#: ui/autodetect/selectprogrampage.ui:112
+#, kde-format
+msgid "Manual Selection"
+msgstr "Ręczny wybór"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: ui/manual/manualimportmailpage.ui:96
+#, kde-format
+msgid "Click 'Back' to import more emails"
+msgstr "Naciśnij 'Wstecz', aby zaimportować więcej wiadomości"
+
+#. i18n: ectx: property (text), widget (QLabel, TextLabel6)
+#: ui/manual/manualselectfilterpage.ui:103
+#, kde-format
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'DejaVu Sans'; font-size:9pt; font-weight:600;\">Welcome to "
+"ImportWizard The Mail Import Tool</span><span style=\" font-family:'DejaVu "
+"Sans'; font-size:9pt;\"> <br /><br />This program will help you import your "
+"email from your previous email program.<br /><br />Please select the program "
+"you would like to import from. Next, select the folder you would like to "
+"import to, then click 'Next'.</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'DejaVu Sans'; font-size:9pt; font-weight:600;\">Witaj w Pomocniku "
+"Importu - narzędziu do importowania poczty</span><span style=\" font-"
+"family:'DejaVu Sans'; font-size:9pt;\"> <br /><br />Narzędzie to pomoże "
+"zaimportować pocztę z innych programów.<br /><br />Wybierz program, z "
+"którego chcesz importować. Następnie, wybierz katalog, do którego chcesz "
+"importować, następnie kliknij 'Dalej'.</span></p></body></html>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, remDupMsg)
+#: ui/manual/manualselectfilterpage.ui:146
+#, kde-format
+msgid "Remove &duplicate messages during import"
+msgstr "Usuń powielone wia&domości podczas importu"
+
+#~ msgid "importwizard"
+#~ msgstr "importwizard"
+
+#~ msgid "Resource type '%1' is not available."
+#~ msgstr "Typ zasobu '%1' jest niedostępny."
+
+#~ msgid "Resource '%1' is already set up."
+#~ msgstr "Zasób '%1' jest już ustawiony."
+
+#~ msgid "Creating resource instance for '%1'..."
+#~ msgstr "Tworzenie egzemplarza zasobu dla '%1'..."
+
+#~ msgid "Configuring resource instance..."
+#~ msgstr "Konfigurowanie egzemplarza zasobu..."
+
+#~ msgid "Unable to configure resource instance."
+#~ msgstr "Nie można skonfigurować egzemplarza zasobu."
+
+#~ msgid "Could not convert value of setting '%1' to required type %2."
+#~ msgstr "Nie można zmienić wartości ustawienia '%1' na wymagany typ %2."
+
+#~ msgid "Could not set setting '%1': %2"
+#~ msgstr "Nie można ustawić ustawienia '%1': %2"
+
+#~ msgid "Resource setup completed."
+#~ msgstr "Ukończono konfigurowanie zasobu."
+
+#~ msgid "Failed to create resource instance: %1"
+#~ msgstr "Nie udało się utworzyć egzemplarza zasobu: %1"

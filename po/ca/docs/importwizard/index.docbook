@@ -1,0 +1,279 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY i18n-importwizard "<application
+>Assistent d'importació</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE"
+> 
+]>
+
+<article id="importwizard" lang="&language;">
+
+<articleinfo id="importwizardinfo">
+
+<title
+>El manual de l'&i18n-importwizard;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+
+<date
+>27 de juliol de 2016</date>
+<releaseinfo
+>5.3.40 (Aplicacions 16.08)</releaseinfo>
+
+</articleinfo>
+
+<sect1 id="introduction">
+<title
+>Introducció</title>
+
+<para
+>L'&i18n-importwizard; permet importar missatges de correu electrònic, la configuració, la llibreta d'adreces i les dades del calendari detectades dels següents programes de correu:</para>
+
+<para
+><application
+>Trojitá</application
+>, <application
+>Evolution 1.x - 3.x</application
+>, <application
+>OS X Mail</application
+>, <application
+>Opera</application
+>, <application
+>Sylpheed</application
+>, <application
+>Thunderbird/Mozilla</application
+>, <application
+>The Bat!</application
+>, <application
+>Outlook Express</application
+>, <application
+>Balsa</application
+>, <application
+>Pegasus-Mail</application
+> i <application
+>Claws Mail</application
+> </para>
+
+<para
+>De manera addicional, podeu utilitzar la importació manual per als arxius: <application
+>Arxiu del KMail</application
+>, <application
+>mbox (Unix, Evolution)</application
+>, Directoris de correu del &kmail;, <application
+>Icedove</application
+>, <application
+>Lotus Notes</application
+>, <application
+>Text pla</application
+> i <application
+>Mailman</application
+>. </para>
+
+<para
+>Si no es detecten automàticament les dades de correu electrònic, llavors feu clic a <guibutton
+>Selecció manual</guibutton
+> a la finestra d'inici i utilitzeu les característiques de la <link linkend="manual-import"
+>Importació manual</link
+>. </para>
+
+<para
+>Podeu iniciar l'&i18n-importwizard; ja sigui des del llançador d'aplicacions o des del &kmail; amb <menuchoice
+><guimenu
+>Eines</guimenu
+><guimenuitem
+>Assistent d'importació...</guimenuitem
+></menuchoice
+> per a la detecció automàtica o des del &kmail; amb <menuchoice
+><guimenu
+>Fitxer</guimenu
+><guimenuitem
+>Importa els missatges</guimenuitem
+></menuchoice
+> per a una importació manual. </para>
+
+<note>
+<para
+>Tanqueu el &kmail; abans d'importar les dades. Alguns connectors modificaran el fitxer de configuració del &kmail;.</para>
+</note>
+
+<para
+>Per a obtenir informació sobre altres utilitats per a importar correus, llegiu el manual <ulink url="help:/pimdataexporter"
+>Exportador de dades PIM</ulink
+>.</para>
+
+<sect2 id="detected-mailers">
+<title
+>Aplicacions de correu detectades</title>
+
+<para
+>L'assistent d'importació detectarà totes les aplicacions de correu electrònic implementades, i en farà una llista a la finestra. Seleccioneu l'aplicació des de la qual voleu importar i feu clic al botó <guibutton
+>Següent</guibutton
+>. L'assistent us demanarà si ho voleu importar tot, o us donarà opcions per a seleccionar els tipus de material que voleu importar.</para>
+
+<screenshot>
+<screeninfo
+>Seleccionant què importar</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="import-selection.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Seleccionant què importar</phrase>
+    </textobject>
+    <caption>
+      <para
+>Seleccionant què importar</para>
+    </caption>
+  </mediaobject>
+</screenshot>
+
+<para
+>En funció de les seleccions del material a importar, veureu una o més de les següents pantalles:</para>
+
+<itemizedlist>
+
+<listitem
+><para
+>Per a importar els missatges de correu, necessitareu seleccionar la carpeta on els voleu importar. Un cop seleccionada, feu clic al botó <guibutton
+>Importa els correus</guibutton
+>. Una vegada la barra de progrés arribi al 100%, feu clic al botó <guibutton
+>Següent</guibutton
+> o al botó <guibutton
+>Finalitza</guibutton
+>, si es tractava de la vostra última selecció de material.</para
+></listitem>
+
+<listitem
+><para
+>Per a importar els filtres de correu, feu clic al botó <guibutton
+>Importa els filtres</guibutton
+>, perquè s'importi qualsevol filtre que hagi trobat, un cop completat, feu clic al botó <guibutton
+>Següent</guibutton
+> o al botó <guibutton
+>Finalitza</guibutton
+>, si es tractava de la vostra última selecció de material.</para
+></listitem>
+
+<listitem
+><para
+>Per a importar la configuració, feu clic al botó <guibutton
+>Importa la configuració</guibutton
+>. L'assistent us farà algunes preguntes, &pex;, quina carpeta utilitzar per a les carpetes de compte que no existeixen. L'assistent també crearà la vostra identitat. Un cop completat, feu clic al botó <guibutton
+>Següent</guibutton
+> o al botó <guibutton
+>Finalitza</guibutton
+>, si es tractava de la vostra última selecció de material.</para
+></listitem>
+
+<listitem
+><para
+>Per a importar la llibreta d'adreces o calendari, feu clic al botó <guibutton
+>Importa les llibretes d'adreces</guibutton
+> o <guibutton
+>Importa els calendaris</guibutton
+>, i s'importaran totes les llibretes d'adreces o calendaris que es trobin. Un cop completat, feu clic al botó <guibutton
+>Següent</guibutton
+>.</para
+></listitem>
+</itemizedlist>
+
+<para
+>Feu clic al botó <guibutton
+>Finalitza</guibutton
+> per a acabar i sortir de l'assistent. Si no voleu acabar amb l'assistent, podeu fer clic al botó <guibutton
+>Cancel·la</guibutton
+>.</para>
+
+</sect2>
+
+<sect2 id="manual-import">
+<title
+>Importació manual</title>
+
+<para>
+<screenshot>
+<screeninfo
+>Importació manual</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="manual-import.png" format="PNG"/>
+    </imageobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note
+><para
+>Si us plau, assegureu-vos que heu compactat les carpetes en els altres clients de correu electrònic.</para
+></note>
+<para
+>Seleccioneu el programa de correu electrònic anterior des de la llista desplegable. L'àrea de text central del diàleg s'actualitzarà amb instruccions especials (si escau), i la ubicació coneguda de l'emmagatzematge dels missatges de correu electrònic per a aquesta aplicació. Seguiu aquestes instruccions, a continuació, seleccioneu la carpeta on voleu importar els missatges.</para>
+<para
+>Si voleu eliminar els missatges duplicats, marqueu <guilabel
+>Elimina els missatges duplicats en importar</guilabel
+>. S'obrirà un diàleg de selecció de fitxers i haureu de seleccionar el fitxer/carpeta que s'indica a les instruccions. Feu clic al botó <guibutton
+>Següent</guibutton
+> per a completar la importació. Un cop finalitzada, podeu fer clic al botó <guibutton
+>Enrere</guibutton
+> per a importar des d'una altra aplicació o al botó <guibutton
+>Finalitza</guibutton
+> per a sortir. </para>
+</sect2>
+
+</sect1>
+
+<sect1 id="credits">
+
+<title
+>Crèdits i llicència</title>
+
+<para
+>&i18n-importwizard;</para>
+<para
+>Copyright del programa 2013 Laurent Montel montel@kde.org </para>
+<para
+>La secció d'importació d'aquest manual és una còpia modificada del manual del KMailCVT</para>
+<para
+>Copyright de la documentació &copy; 2013 Laurent Montel montel@kde.org i Scarlett Clark scarlett@scarlettgatelyclark.com </para>
+
+<para
+>Traductor/Revisor de la documentació: &credits.Antoni.Bella;</para
+> &underFDL; &underGPL; </sect1>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

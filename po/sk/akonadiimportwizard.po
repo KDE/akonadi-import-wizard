@@ -1,0 +1,521 @@
+# translation of importwizard.po to Slovak
+# Roman Paholik <wizzardsk@gmail.com>, 2012, 2013, 2014, 2015, 2016, 2017, 2022.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: importwizard\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"PO-Revision-Date: 2022-04-07 17:47+0200\n"
+"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Roman Paholík"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "wizzardsk@gmail.com"
+
+#: autodetect/widgets/selectprogramlistwidget.cpp:46
+#, kde-format
+msgid "No program found."
+msgstr "Nenájdený program."
+
+#: importwizard.cpp:41
+#, kde-format
+msgctxt "@title:window"
+msgid "PIM Import Tool"
+msgstr "Importovací nástroj PIM"
+
+#: importwizard.cpp:70
+#, kde-format
+msgid ""
+"Close KMail before importing data. Some plugins will modify KMail config "
+"file."
+msgstr ""
+"Zatvorte KMail pred importovaním dát. Niektoré pluginy menia konfiguračný "
+"súbor KMailu."
+
+#: importwizard.cpp:125
+#, kde-format
+msgid "Step 1: Select Filter"
+msgstr "Krok 1: Výber filtra"
+
+#: importwizard.cpp:130
+#, kde-format
+msgid "Step 2: Importing..."
+msgstr "Krok 2: Importovanie..."
+
+#: importwizard.cpp:159
+#, kde-format
+msgid "Detect program"
+msgstr "Detekovať program"
+
+#: importwizard.cpp:164
+#, kde-format
+msgid "Select material to import"
+msgstr "Vybrať materiál na import"
+
+#: importwizard.cpp:168
+#, kde-format
+msgid "Import mail messages"
+msgstr "Importovať mailové správy"
+
+#: importwizard.cpp:172
+#, kde-format
+msgid "Import mail filters"
+msgstr "Importovať mailové filtre"
+
+#. i18n: ectx: property (text), widget (QPushButton, importSettings)
+#: importwizard.cpp:176 ui/autodetect/importsettingpage.ui:47
+#, kde-format
+msgid "Import settings"
+msgstr "Importovať nastavenia"
+
+#: importwizard.cpp:180
+#, kde-format
+msgid "Import addressbooks"
+msgstr "Importovať adresáre"
+
+#: importwizard.cpp:184
+#, kde-format
+msgid "Import calendars"
+msgstr "Importovať kalendáre"
+
+#: importwizard.cpp:188
+#, kde-format
+msgid "Finish"
+msgstr "Dokončiť"
+
+#: importwizard.cpp:210
+#, kde-format
+msgid "Import addressbook from %1..."
+msgstr "Importovať adresáre z %1..."
+
+#: importwizard.cpp:213
+#, kde-format
+msgid "Import addressbook from %1: Done"
+msgstr "Import adresára z %1: Hotovo"
+
+#: importwizard.cpp:219
+#, kde-format
+msgid "Import filters from %1..."
+msgstr "Importovať filtre z %1..."
+
+#: importwizard.cpp:222
+#, kde-format
+msgid "Import filters from %1: Done"
+msgstr "Import filtrov z %1: Hotovo"
+
+#: importwizard.cpp:228
+#, kde-format
+msgid "Import mails from %1..."
+msgstr "Importovať maily z %1..."
+
+#: importwizard.cpp:231
+#, kde-format
+msgid "Import mails from %1: Done"
+msgstr "Import pošty z %1: Hotovo"
+
+#: importwizard.cpp:237
+#, kde-format
+msgid "Import settings from %1..."
+msgstr "Importovať nastavenia z %1..."
+
+#: importwizard.cpp:240
+#, kde-format
+msgid "Import settings from %1: Done"
+msgstr "Import nastavení z %1: Hotovo"
+
+#: importwizard.cpp:246
+#, kde-format
+msgid "Import calendar from %1..."
+msgstr "Importovať kalendár z %1..."
+
+#: importwizard.cpp:249
+#, kde-format
+msgid "Import calendar from %1: Done"
+msgstr "Import kalendára z %1: Hotovo"
+
+#: importwizard.cpp:338 plugins/balsa/balsaimportdata.cpp:46
+#: plugins/claws-mail/clawsmailimportdata.cpp:47
+#: plugins/evolutionv3/evolutionv3importdata.cpp:66
+#: plugins/icedove/icedoveimportdata.cpp:79
+#: plugins/seamonkey/seamonkeyimportdata.cpp:79
+#: plugins/sylpheed/sylpheedimportdata.cpp:60
+#: plugins/thunderbird/thunderbirdimportdata.cpp:81
+#, kde-format
+msgid "Import in progress"
+msgstr "Prebieha import"
+
+#: importwizard.cpp:345 plugins/balsa/balsaimportdata.cpp:53
+#: plugins/claws-mail/clawsmailimportdata.cpp:55
+#: plugins/evolutionv3/evolutionv3importdata.cpp:74
+#: plugins/icedove/icedoveimportdata.cpp:87
+#: plugins/seamonkey/seamonkeyimportdata.cpp:87
+#: plugins/sylpheed/sylpheedimportdata.cpp:68
+#: plugins/thunderbird/thunderbirdimportdata.cpp:89
+#, kde-format
+msgid "Import finished"
+msgstr "Import bol ukončený"
+
+#: libimportwizard/abstractaddressbook.cpp:28
+#, kde-format
+msgid "Creating new contact..."
+msgstr "Vytváram nový kontakt..."
+
+#: libimportwizard/abstractaddressbook.cpp:34
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Address Book"
+msgstr "Vybrať knihu adries"
+
+#: libimportwizard/abstractaddressbook.cpp:35
+#, kde-format
+msgid "Select the address book the new contact shall be saved in:"
+msgstr "Vyberte adresár, kam sa má uložiť nový kontakt:"
+
+#: libimportwizard/abstractaddressbook.cpp:40
+#, kde-format
+msgid "Address Book was not selected."
+msgstr "Adresár nebol vybraný."
+
+#: libimportwizard/abstractaddressbook.cpp:67
+#, kde-format
+msgid "Imported from \"%1\""
+msgstr "Importované z \"%1\""
+
+#: libimportwizard/abstractaddressbook.cpp:86
+#, kde-format
+msgid "Error during contact creation: %1"
+msgstr "Chyba počas vytvárania kontaktu: %1"
+
+#: libimportwizard/abstractaddressbook.cpp:89
+#, kde-format
+msgid "Contact creation complete"
+msgstr "Vytvorenie kontaktu ukončené"
+
+#: libimportwizard/abstractimporter.cpp:65
+#, kde-format
+msgid "Importing of filters from \"%1\" was canceled."
+msgstr "Import filtrov z \"%1\" bol zrušený."
+
+#: libimportwizard/abstractimporter.cpp:67
+#, kde-format
+msgid "1 filter was imported from \"%2\""
+msgid_plural "%1 filters were imported from \"%2\""
+msgstr[0] "1 filter bol importovaný z \"%2\""
+msgstr[1] "%1 filtre boli importované z \"%2\""
+msgstr[2] "%1 filtrov bolo importovaných z \"%2\""
+
+#: libimportwizard/abstractimporter.cpp:71
+#, kde-format
+msgid "Filters file was not found"
+msgstr "Súbor filtrov nenájdený."
+
+#: libimportwizard/abstractsettings.cpp:38
+#, kde-format
+msgid "Setting up identity..."
+msgstr "Pripravujem identitu..."
+
+#: libimportwizard/abstractsettings.cpp:46
+#, kde-format
+msgid "Identity set up."
+msgstr "Identita nastavená."
+
+#: libimportwizard/abstractsettings.cpp:63
+#, kde-format
+msgid "Setting up transport..."
+msgstr "Nastavujem prenos..."
+
+#: libimportwizard/abstractsettings.cpp:75
+#, kde-format
+msgid "Transport set up."
+msgstr "Prenos nastavený."
+
+#: main.cpp:42 main.cpp:44
+#, kde-format
+msgid "PIM Import Tool"
+msgstr "Importovací nástroj PIM"
+
+#: main.cpp:46
+#, kde-format
+msgid "Copyright © 2012-%1 ImportWizard authors"
+msgstr "Copyright © 2012-%1 Autori ImportWizard"
+
+#: main.cpp:48
+#, kde-format
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: main.cpp:48
+#, kde-format
+msgid "Maintainer"
+msgstr "Správca"
+
+#: main.cpp:54
+#, kde-format
+msgid "Mode: %1"
+msgstr "Režim: %1"
+
+#: manual/manualselectfilterpage.cpp:85
+#, kde-format
+msgid "<p><i>Written by %1.</i></p>"
+msgstr "<p><i>Napísal %1.</i></p>"
+
+#: plugins/balsa/balsaaddressbook.cpp:39 plugins/balsa/balsaaddressbook.cpp:52
+#: plugins/sylpheed/sylpheedaddressbook.cpp:27
+#, kde-format
+msgid "No addressbook found"
+msgstr "Nenašiel sa adresár kontaktov"
+
+#: plugins/balsa/balsaaddressbook.cpp:66
+#, kde-format
+msgid "Ldap created"
+msgstr "Ldap vytvorený"
+
+#: plugins/balsa/balsaaddressbook.cpp:100
+#, kde-format
+msgid "New addressbook created: %1"
+msgstr "Nový adresár kontaktov vytvorený: %1"
+
+#: plugins/claws-mail/clawsmailimportdata.cpp:76
+#, kde-format
+msgid "Claws Mail settings not found."
+msgstr "Nastavenia Claws Mail nenájdené."
+
+#: plugins/evolutionv3/evolutionaddressbook.cpp:21
+#, kde-format
+msgid ""
+"Evolution address book will be exported as vCard. Import vCard in "
+"KAddressBook."
+msgstr ""
+"Adresár Evolution bude exportovaný ako vCard. Importujte vCard v "
+"KAddressBooku."
+
+#: plugins/evolutionv3/evolutionaddressbook.cpp:22
+#, kde-format
+msgid "Export Evolution Address Book"
+msgstr "Exportovať adresár Evolution"
+
+#: plugins/evolutionv3/evolutionaddressbook.cpp:25
+#, kde-format
+msgid "Select the directory where vCards will be stored."
+msgstr "Vyberte adresár, kde majú byť uložené vCards."
+
+#: plugins/evolutionv3/evolutionaddressbook.cpp:78
+#, kde-format
+msgid "Address book \"%1\" exported."
+msgstr "Adresár \"%1\" exportovaný."
+
+#: plugins/evolutionv3/evolutionaddressbook.cpp:80
+#, kde-format
+msgid "Failed to export address book \"%1\"."
+msgstr "Zlyhal export adresára \"%1\"."
+
+#: plugins/evolutionv3/evolutionv3importdata.cpp:57
+#, kde-format
+msgid "Evolution settings not found."
+msgstr "Nastavenia Evolution nenájdené."
+
+#: plugins/evolutionv3/evolutionv3importdata.cpp:100
+#, kde-format
+msgid "Evolution calendar not found."
+msgstr "Kalendár Evolution nenájdený."
+
+#: plugins/icedove/icedoveimportdata.cpp:69
+#, kde-format
+msgid "Icedove settings not found."
+msgstr "Nastavenia Icedove nenájdené."
+
+#: plugins/seamonkey/seamonkeyimportdata.cpp:69
+#, kde-format
+msgid "SeaMonkey settings not found."
+msgstr "Nastavenia Ivedoce nenájdené."
+
+#: plugins/sylpheed/sylpheedaddressbook.cpp:61
+#, kde-format
+msgid "No contact found in %1"
+msgstr "Nenašiel sa žiadny kontakt v %1"
+
+#: plugins/sylpheed/sylpheedimportdata.cpp:51
+#, kde-format
+msgid "Sylpheed settings not found."
+msgstr "Nastavenia Sylpheed nenájdené."
+
+#: plugins/thunderbird/thunderbirdaddressbook.cpp:46
+#, kde-format
+msgid "Contacts file '%1' not found"
+msgstr "Súbor kontaktov '%1' nenájdený"
+
+#: plugins/thunderbird/thunderbirdimportdata.cpp:71
+#, kde-format
+msgid "Thunderbird settings not found."
+msgstr "Nastavenia Thunderbirdu nenájdené."
+
+#. i18n: ectx: property (text), widget (QPushButton, importAddressBook)
+#: ui/autodetect/importaddressbookpage.ui:47
+#, kde-format
+msgid "Import addressbook"
+msgstr "Importovať knihy adresárov"
+
+#. i18n: ectx: property (text), widget (QPushButton, importCalendar)
+#: ui/autodetect/importcalendarpage.ui:47
+#, kde-format
+msgid "Import calendar"
+msgstr "Import kalendára"
+
+#. i18n: ectx: property (text), widget (QPushButton, importFilters)
+#: ui/autodetect/importfilterpage.ui:47
+#, kde-format
+msgid "Import Filters"
+msgstr "Importovať filtre"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/autodetect/importfinishpage.ui:29
+#, kde-format
+msgid "Summary:"
+msgstr "Súhrn:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/autodetect/importmailpage.ui:32 ui/manual/manualselectfilterpage.ui:136
+#, kde-format
+msgid "Please select the folder to import to:"
+msgstr "Prosím vyberte priečinok, kam importovať:"
+
+#. i18n: ectx: property (text), widget (QPushButton, importMails)
+#: ui/autodetect/importmailpage.ui:60
+#, kde-format
+msgid "Import Mails"
+msgstr "Importovať maily"
+
+#. i18n: ectx: property (text), widget (QCheckBox, mails)
+#: ui/autodetect/selectcomponentpage.ui:49
+#, kde-format
+msgid "Mails"
+msgstr "Maily"
+
+#. i18n: ectx: property (text), widget (QCheckBox, filters)
+#: ui/autodetect/selectcomponentpage.ui:59
+#, kde-format
+msgid "Filters"
+msgstr "Filtre"
+
+#. i18n: ectx: property (text), widget (QCheckBox, settings)
+#: ui/autodetect/selectcomponentpage.ui:69
+#, kde-format
+msgid "Settings"
+msgstr "Nastavenia"
+
+#. i18n: ectx: property (text), widget (QCheckBox, addressbooks)
+#: ui/autodetect/selectcomponentpage.ui:79
+#, kde-format
+msgid "Address Books"
+msgstr "Adresáre"
+
+#. i18n: ectx: property (text), widget (QCheckBox, calendars)
+#: ui/autodetect/selectcomponentpage.ui:89
+#, kde-format
+msgid "Calendars"
+msgstr "Kalendáre"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/autodetect/selectcomponentpage.ui:126
+#, kde-format
+msgid ""
+"This wizard will import mail messages, addressbook entries, filters and/or "
+"settings from other mail programs into KMail"
+msgstr ""
+"Tento sprievodca importuje správy, položky adresára, filtre a/alebo "
+"nastavenia z iných mailových programov do KMailu"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/autodetect/selectcomponentpage.ui:136
+#, kde-format
+msgid "Or select types of material to import:"
+msgstr "Alebo vyberte typy materiálu na import:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, everything)
+#: ui/autodetect/selectcomponentpage.ui:143
+#, kde-format
+msgid "Import Everything"
+msgstr "Importovať všetko"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/autodetect/selectprogrampage.ui:53
+#, kde-format
+msgid "Please select the program from which you like to import:"
+msgstr "Prosím vyberte program, z ktorého chcete importovať:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/autodetect/selectprogrampage.ui:86
+#, kde-format
+msgid "No program found"
+msgstr "Nenájdený program"
+
+#. i18n: ectx: property (text), widget (QCheckBox, manualSelectionCheckBox)
+#: ui/autodetect/selectprogrampage.ui:112
+#, kde-format
+msgid "Manual Selection"
+msgstr "Ručný výber"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: ui/manual/manualimportmailpage.ui:96
+#, kde-format
+msgid "Click 'Back' to import more emails"
+msgstr "Kliknite 'Späť' na import viac e-mailov"
+
+#. i18n: ectx: property (text), widget (QLabel, TextLabel6)
+#: ui/manual/manualselectfilterpage.ui:103
+#, kde-format
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'DejaVu Sans'; font-size:9pt; font-weight:600;\">Welcome to "
+"ImportWizard The Mail Import Tool</span><span style=\" font-family:'DejaVu "
+"Sans'; font-size:9pt;\"> <br /><br />This program will help you import your "
+"email from your previous email program.<br /><br />Please select the program "
+"you would like to import from. Next, select the folder you would like to "
+"import to, then click 'Next'.</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'DejaVu Sans'; font-size:9pt; font-weight:600;\">Vitajte v nástroji "
+"na import správ ImportWizard</span> <span style=\" font-family:'DejaVu "
+"Sans'; font-size:9pt;\"> <br /><br /> Tento program vám pomôže importovať "
+"vaše e-maily z vášho predošlého e-mailového programu.<br /><br /> Prosím, "
+"vyberte program, z ktorého chcete importovať. Potom kliknite na priečinok, "
+"kam chcete importovať a kliknite na 'Ďalej'. </span></p></body></html>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, remDupMsg)
+#: ui/manual/manualselectfilterpage.ui:146
+#, kde-format
+msgid "Remove &duplicate messages during import"
+msgstr "Odstrániť &duplicitné správy počas importu"
+
+#~ msgid "importwizard"
+#~ msgstr "importwizard"

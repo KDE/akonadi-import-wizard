@@ -1,0 +1,297 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY i18n-importwizard "<application
+>PIM-Importprogramm</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % German "INCLUDE"
+> 
+]>
+
+<article id="importwizard" lang="&language;">
+
+<articleinfo id="importwizardinfo">
+
+<title
+>Das Handbuch zu &i18n-importwizard;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+><affiliation
+><address
+><email
+>lueck@hube-lueck.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+
+<date
+>2016-07-27</date>
+<releaseinfo
+>5.3.40 (Anwendungen 16.08)</releaseinfo>
+
+</articleinfo>
+
+<sect1 id="introduction">
+<title
+>Einführung</title>
+
+<para
+>Mit &i18n-importwizard; können E-Mails, Einstellungen, Adressbücher  und Kalenderdaten von folgenden E-Mail-Programmen in Ihren Benutzerkonto importiert werden:</para>
+
+<para
+><application
+>Trojitá</application
+>, <application
+>Evolution 1.x - 3.x</application
+>, <application
+>OS X Mail</application
+>, <application
+>Opera</application
+>, <application
+>Sylpheed</application
+>, <application
+>Thunderbird/Mozilla</application
+>, <application
+>The Bat!</application
+>, <application
+>Outlook Express</application
+>, <application
+>Balsa</application
+>, <application
+>Pegasus-Mail</application
+> und <application
+>Claws Mail</application
+> </para>
+
+<para
+>Außerdem können Sie den manuellen Import für <application
+>KMail-Archive</application
+>, <application
+>mbox (Unix, Evolution)</application
+>, &kmail;-Mailordner, <application
+>Icedove</application
+>, <application
+>Lotus Notes</application
+>, <application
+>Einfachen Text</application
+> und <application
+>Mailman</application
+>-Archive verwenden. </para>
+
+<para
+>Falls automatisch keine E-Mail-Daten erkannt werden, klicken Sie auf <guibutton
+>Manuelle Auswahl</guibutton
+> im Startfenster und verwenden die Funktion <link linkend="manual-import"
+>manueller Import</link
+>. </para>
+
+<para
+>Sie können &i18n-importwizard; entweder mit dem Anwendungs-Starter oder in &kmail; mit <menuchoice
+><guimenu
+>Extras</guimenu
+><guimenuitem
+>Import-Assistent ...</guimenuitem
+></menuchoice
+> zum automatischen Import oder in &kmail; mit <menuchoice
+><guimenu
+>Datei</guimenu
+><guimenuitem
+>Nachrichten importieren</guimenuitem
+></menuchoice
+> zum manuellen Import aufrufen. </para>
+
+<note>
+<para
+>Schließen Sie &kmail; vor dem Import von Daten. Einige Module werden die Einrichtungsdatei für &kmail; ändern.</para>
+</note>
+
+<para
+>Informationen über andere Dienstprogramme zum Import von E-Mails finden Sie im Handbuch von <ulink url="help:/pimdataexporter"
+>PIM-Daten-Export</ulink
+>.</para>
+
+<sect2 id="detected-mailers">
+<title
+>Erkannte E-Mail-Anwendungen</title>
+
+<para
+>Beim Start ermittelt dieser Assistent alle unterstützten E-Mail-Programme und zeigt sie im Dialog. Wählen Sie ein E-Mailprogramm, dessen Daten Sie importieren möchten und klicken Sie auf <guibutton
+>Weiter</guibutton
+>. Auf der nächsten Dialogseite müssen Sie angeben, ob alles oder nur bestimmte Daten importiert werden sollen.</para>
+
+<screenshot>
+<screeninfo
+>Importauswahl</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="import-selection.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Importauswahl</phrase>
+    </textobject>
+    <caption>
+      <para
+>Importauswahl</para>
+    </caption>
+  </mediaobject>
+</screenshot>
+
+<para
+>Abhängig von dieser Auswahl werden eine oder mehrere der folgenden Dialogseiten angezeigt.</para>
+
+<itemizedlist>
+
+<listitem
+><para
+>Um E-Mail-Nachrichten zu importieren, müssen Sie einen Zielordner für die importierten Nachrichten auswählen. Klicken Sie dann auf <guilabel
+>E-Mails importieren</guilabel
+>. Erreicht die Fortschrittsanzeige 100 %, klicken Sie auf <guibutton
+>Weiter</guibutton
+>, um noch mehr Daten zu importieren, oder auf <guibutton
+>Fertigstellen</guibutton
+>, wenn Sie das Importieren beenden möchten.</para
+></listitem>
+
+<listitem
+><para
+>Um Filter für E-Mails zu importieren, klicken Sie auf den Knopf <guilabel
+>Filter importieren</guilabel
+>, dann werden alle gefundenen Filter eingelesen. Ist das abgeschlossen, klicken Sie auf <guibutton
+>Weiter</guibutton
+>, um noch mehr Daten zu importieren, oder auf <guibutton
+>Fertigstellen</guibutton
+>, wenn Sie das Importieren beenden möchten.</para
+></listitem>
+
+<listitem
+><para
+>Um Einstellungen zu importieren, klicken Sie auf den Knopf <guilabel
+>Einstellungen importieren</guilabel
+>. Dann müssen Sie &eg; angeben, welche Ordner für nicht vorhandenen Postfächer benutzt werden sollen. Der Assistent erstellt auch alle Daten für Ihre Identität. Ist das Importieren abgeschlossen, klicken Sie auf <guibutton
+>Weiter</guibutton
+>, um noch mehr Daten zu importieren, oder auf <guibutton
+>Fertigstellen</guibutton
+>, wenn Sie das Importieren beenden möchten.</para
+></listitem>
+
+<listitem
+><para
+>Um Adressbücher zu importieren, klicken Sie auf den Knopf <guilabel
+>Adressbuch importieren</guilabel
+> oder <guibutton
+>Kalender importieren</guibutton
+>, dann werden alle gefundenen Adressbücher oder Kalender eingelesen. Ist das abgeschlossen, klicken Sie auf <guibutton
+>Weiter</guibutton
+>, um noch mehr Daten zu importieren, oder auf <guibutton
+>Fertigstellen</guibutton
+>, wenn Sie das Importieren beenden möchten.</para
+></listitem>
+</itemizedlist>
+
+<para
+>Klicken Sie auf den Knopf <guibutton
+>Fertigstellen</guibutton
+>, um den Import zu beenden und den Assistenten zu schließen. Sie können den Assistenten jederzeit schließen, indem Sie auf den Knopf <guibutton
+>Abbrechen</guibutton
+> drücken.</para>
+
+</sect2>
+
+<sect2 id="manual-import">
+<title
+>Manueller Import</title>
+
+<para>
+<screenshot>
+<screeninfo
+>Manueller Import</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="manual-import.png" format="PNG"/>
+    </imageobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note
+><para
+>Bereinigen Sie die Ordner im anderen E-Mail-Programm.</para
+></note>
+<para
+>Wählen Sie Ihr vorheriges E-Mailprogramm aus dem Auswahlfeld. Im mittleren Bereich des Dialogs werden je nach Programm aktualisierte spezielle Anweisungen und auch der Speicherort der E-Mails dieser Anwendung angezeigt. Folgen Sie diesen Anweisungen und wählen Sie dann den Ordner zum Import Ihrer E-Mails aus.</para>
+<para
+>Möchten Sie doppelte Nachrichten entfernen, kreuzen Sie <guilabel
+>Doppelte Nachrichten beim Importieren entfernen</guilabel
+> an. Ein Dateiauswahldialog erscheint, in dem Sie die Datei oder den Ordner entsprechend den Anweisungen auswählen. Klicken Sie auf <guibutton
+>Weiter</guibutton
+>, um den Import durchzuführen. Ist der Import beendet, wählen Sie <guibutton
+>Zurück</guibutton
+>, um von einer anderen Anwendung zu importieren oder <guibutton
+>Fertigstellen</guibutton
+>, um den Dialog zu schließen. </para>
+</sect2>
+
+</sect1>
+
+<sect1 id="credits">
+
+<title
+>Danksagungen und Lizenz</title>
+
+<para
+>&i18n-importwizard;</para>
+<para
+>Programm Copyright 2013 Laurent Montel montel@kde.org </para>
+<para
+>Der Abschnitt „Manueller Import“ ist einer überarbeitete Kopie des Handbuchs zu KMailCVT</para>
+<para
+>Dokumentation Copyright &copy; 2013 Laurent Montel montel@kde.org und Scarlett Clark scarlett@scarlettgatelyclark.com </para>
+
+<para
+>Übersetzung Burkhard Lück<email
+>lueck@hube-lueck.de</email
+></para
+> &underFDL; &underGPL; </sect1>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

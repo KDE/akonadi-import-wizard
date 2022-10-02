@@ -1,0 +1,277 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY i18n-importwizard "<application
+>Assistent voor importeren</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE"
+> 
+]>
+
+<article id="importwizard" lang="&language;">
+
+<articleinfo id="importwizardinfo">
+
+<title
+>Het handboek van &i18n-importwizard;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+
+<date
+>2016-07-27</date>
+<releaseinfo
+>5.3.40 (Applications 16.08)</releaseinfo>
+
+</articleinfo>
+
+<sect1 id="introduction">
+<title
+>Inleiding</title>
+
+<para
+>&i18n-importwizard; stelt u in staat om gegevens van e-mailberichten, instellingen, adresboek en agenda uit uw gebruikersaccount uit de volgende e-mailprogramma's te importeren.</para>
+
+<para
+><application
+>Trojitá</application
+>, <application
+>Evolution 1.x - 3.x</application
+>, <application
+>OS X Mail</application
+>, <application
+>Opera</application
+>, <application
+>Sylpheed</application
+>, <application
+>Thunderbird/Mozilla</application
+>, <application
+>The Bat!</application
+>, <application
+>Outlook Express</application
+>, <application
+>Balsa</application
+>, <application
+>Pegasus-Mail</application
+> en <application
+>Claws Mail</application
+> </para>
+
+<para
+>Daarnaast kunt u de handmatige import gebruiken voor <application
+>KMail Archive</application
+>, <application
+>mbox(Unix, Evolution)</application
+>, &kmail; Maildirs, <application
+>Icedove</application
+>, <application
+>Lotus Notes</application
+>, <application
+>Plain Text</application
+> en <application
+>Mailman</application
+> archieven. </para>
+
+<para
+>Als geen e-mailgegevens automatisch worden gedetecteerd klik dan op <guibutton
+>Handmatige selectie</guibutton
+> in het startvenster en gebruik de <link linkend="manual-import"
+>Handmatige import</link
+>-functies. </para>
+
+<para
+>U kunt &i18n-importwizard; direct starten met het startprogramma voor toepassingen of vanuit &kmail; met <menuchoice
+><guimenu
+>Hulpmiddelen</guimenu
+><guimenuitem
+>Assistent voor importeren</guimenuitem
+></menuchoice
+> voor automatische detectie of uit &kmail; met <menuchoice
+><guimenu
+>Bestand</guimenu
+> <guimenuitem
+>Berichten importeren</guimenuitem
+></menuchoice
+> voor handmatig importeren. </para>
+
+<note>
+<para
+>Sluit &kmail; alvorens gegevens te importeren. Sommige plug-ins zullen het configuratiebestand van &kmail; wijzigen.</para>
+</note>
+
+<para
+>Voor informatie over andere hulpmiddelen om e-mailberichten te importeren leest u <ulink url="help:/pimdataexporter"
+>Exportprogramma van PIM-gegevens</ulink
+> in het handboek.</para>
+
+<sect2 id="detected-mailers">
+<title
+>Gedetecteerde e-mailtoepassingen</title>
+
+<para
+>Bij het opstarten zal de assistent voor importeren alle ondersteunde e-mailtoepassingen detecteren en ze in een lijst in het venster aan u tonen. Selecteer de e-mailtoepassing waar vanaf u wilt importeren en klik op de knop <guibutton
+>Volgende</guibutton
+>. De assistent zal dan vragen of u alles wilt importeren of geeft u opties om te selecteren welke typen materialen u wilt importeren.</para>
+
+<screenshot>
+<screeninfo
+>Selectie voor importeren</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="import-selection.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Selectie voor importeren</phrase>
+    </textobject>
+    <caption>
+      <para
+>Selectie voor importeren</para>
+    </caption>
+  </mediaobject>
+</screenshot>
+
+<para
+>Afhankelijk van uw selecties in de materialen op het scherm voor importeren, zult u een of meer van de volgende schermen zien:</para>
+
+<itemizedlist>
+
+<listitem
+><para
+>Om e-mailberichten te importeren moet u de map selecteren waarin u uw e-mailberichten wilt importeren. Eenmaal geselecteerd, klik op de knop <guibutton
+>E-mailberichten importeren</guibutton
+>. Als de voortgangsbalk 100% bereikt, klik op de knop <guibutton
+>Volgende</guibutton
+> of de knop <guibutton
+>Beëindigen</guibutton
+>, als dit uw laatste selectie van materiaal was.</para
+></listitem>
+
+<listitem
+><para
+>Om E-mailfilters te importeren, klik op de knop <guibutton
+>Filters importeren</guibutton
+> en het zal alle filters importeren, die het heeft gevonden, eenmaal beëindigd, klik op de knop <guibutton
+>Volgende</guibutton
+> of de knop <guibutton
+>Beëindigen</guibutton
+>, als dit uw laatste selectie van materiaal was.</para
+></listitem>
+
+<listitem
+><para
+>Om instellingen te importeren, klik op de knop <guibutton
+>Instellingen importeren</guibutton
+>. De assistent zal u enkele vragen stellen &eg; welke map te gebruiken voor accountmappen die niet bestaan. De assistent zal ook uw identiteit aanmaken. eenmaal gereed, klik op de knop <guibutton
+>Volgende</guibutton
+> of de knop <guibutton
+>Beëindigen</guibutton
+>, als dit uw laatste selectie van materiaal was.</para
+></listitem>
+
+<listitem
+><para
+>Om adresboeken of agenda's te importeren, klik op de knop <guibutton
+>Adresboek importeren</guibutton
+> of de knop <guibutton
+>Agenda importeren</guibutton
+> en het zal alle adresboeken of agenda's importeren die het vindt. Eenmaal gereed, klik op de knop <guibutton
+>Volgende</guibutton
+>.</para
+></listitem>
+</itemizedlist>
+
+<para
+>Klik op de knop <guibutton
+>Beëindigen</guibutton
+> om af te sluiten en de assistent te verlaten. Als u de assistent op een willekeurig moment wilt verlaten, klik dan op de knop <guibutton
+>Annuleren</guibutton
+>.</para>
+
+</sect2>
+
+<sect2 id="manual-import">
+<title
+>Handmatig importeren</title>
+
+<para>
+<screenshot>
+<screeninfo
+>Handmatig importeren</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="manual-import.png" format="PNG"/>
+    </imageobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note
+><para
+>Controleer in de andere e-mailclient dat u uw mappen comprimeert.</para
+></note>
+<para
+>Selecteer uw vorige e-mailprogramma uit het afrolvak. Het centrale tekstgebied van de dialoog zal met speciale instructies (indien van toepassing) worden bijgewerkt met de bekende locaties van opslag van e-mailberichten voor die toepassing. Volg deze instructies en selecteer dan de map waarnaar u uw berichten wilt importeren.</para>
+<para
+>Als u dubbele berichten wilt verwijderen, activeer dan <guilabel
+>Dubbele berichten verwijderen bij importeren</guilabel
+>. Een dialoog  voor bestandsselectie zal verschijnen en u moet het bestand/map selecteren aangegeven in de instructies. Klik op de knop <guibutton
+>Volgende</guibutton
+> om het importeren te voltooien. Wanneer het importeren gereed is kunt u klikken op de knop <guibutton
+>Terug</guibutton
+> om uit een andere toepassing te importeren of op de knop <guibutton
+>Beëindigen</guibutton
+> om te eindigen. </para>
+</sect2>
+
+</sect1>
+
+<sect1 id="credits">
+
+<title
+>Dankbetuigingen en licentie</title>
+
+<para
+>&i18n-importwizard;</para>
+<para
+>Programma copyright 2013 Laurent Montel montel@kde.org </para>
+<para
+>De sectie Handmatig importeren is een gemodificeerde kopie van het KMailCVT handbook</para>
+<para
+>Documentatie Copyright &copy; 2013 Laurent Montel montel@kde.org en Scarlett Clark scarlett@scarlettgatelyclark.com </para>
+
+&meld.fouten;&vertaling.freek; &underFDL; &underGPL; </sect1>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

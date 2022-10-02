@@ -1,0 +1,296 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY i18n-importwizard "<application
+>Майстер імпортування</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Ukrainian "INCLUDE"
+> 
+]>
+
+<article id="importwizard" lang="&language;">
+
+<articleinfo id="importwizardinfo">
+
+<title
+>Підручник з програми &i18n-importwizard;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+
+<date
+>27 липня 2016 року</date>
+<releaseinfo
+>5.3.40 (Програми 16.08)</releaseinfo>
+
+</articleinfo>
+
+<sect1 id="introduction">
+<title
+>Вступ</title>
+
+<para
+>За допомогою програми «&i18n-importwizard;» ви зможете імпортувати повідомлення електронної пошти, параметри роботи та адресну книгу з інших програм для роботи з електронною поштою:</para>
+
+<para
+><application
+>Trojitá</application
+>, <application
+>Evolution 1.x - 3.x</application
+>, <application
+>OS X Mail</application
+>, <application
+>Opera</application
+>, <application
+>Sylpheed</application
+>, <application
+>Thunderbird/Mozilla</application
+>, <application
+>The Bat!</application
+>, <application
+>Outlook Express</application
+>, <application
+>Balsa</application
+>, <application
+>Pegasus-Mail</application
+> та <application
+>Claws Mail</application
+> </para>
+
+<para
+>Крім того, ви можете імпортувати вручну <application
+>архів KMail</application
+>, <application
+>mbox (Unix, Evolution)</application
+>, каталоги пошти &kmail;, дані <application
+>Icedove</application
+>, <application
+>Lotus Notes</application
+>, <application
+>простий текст</application
+> та архіви <application
+>Mailman</application
+>. </para>
+
+<para
+>Якщо дані електронної пошти не було виявлено автоматично, натисніть кнопку <guibutton
+>Вибір вручну</guibutton
+> у початковому вікні і скористайтеся можливостями з <link linkend="manual-import"
+>імпортування вручну</link
+>. </para>
+
+<para
+>Запустити програму «&i18n-importwizard;» можна або за допомогою меню стільничного середовища, або за допомогою пункту меню <menuchoice
+><guimenu
+>Інструменти</guimenu
+><guimenuitem
+>Майстер імпортування</guimenuitem
+></menuchoice
+> програми &kmail; для автоматичного виявлення даних або пункту <menuchoice
+><guimenu
+>Файл</guimenu
+> <guimenuitem
+>Імпортувати повідомлення</guimenuitem
+></menuchoice
+> для імпортування вручну. </para>
+
+<note>
+<para
+>Перш ніж розпочинати імпортування даних, завершіть роботу &kmail;. Це слід зробити, оскільки деякі додатки до програми вносять зміни до файла налаштувань &kmail;.</para>
+</note>
+
+<para
+>Додаткові відомості щодо інших програми для імпортування поштових повідомлень можна знайти у <ulink url="help:/pimdataexporter"
+>підручнику з експортування даних керування особистими даними</ulink
+>.</para>
+
+<sect2 id="detected-mailers">
+<title
+>Виявлені програми для роботи з електронною поштою</title>
+
+<para
+>Після запуску засіб імпортування виконає виявлення даних усіх підтримуваних програм для роботи з електронною поштою і покаже відповідний список у своєму вікні. Виберіть пункт програми, дані якої слід імпортувати, і натисніть кнопку <guibutton
+>Далі</guibutton
+>. Після цього майстер запитає вас, слід імпортувати усі дані чи лише визначену вами частину даних.</para>
+
+<screenshot>
+<screeninfo
+>Вибір параметрів імпортування</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="import-selection.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Вибір параметрів імпортування</phrase>
+    </textobject>
+    <caption>
+      <para
+>Вибір параметрів імпортування</para>
+    </caption>
+  </mediaobject>
+</screenshot>
+
+<para
+>Залежно від вибору типів даних на початковій сторінці імпортування, програма покаже вам одну або декілька сторінок налаштовування:</para>
+
+<itemizedlist>
+
+<listitem
+><para
+>Щоб виконати імпортування поштових повідомлень, вам слід вибрати теку, до якої має бути імпортовано ці повідомлення. Щойно теку буде вибрано, ви зможете натиснути кнопку <guibutton
+>Імпортувати пошту</guibutton
+>. Коли панель поступу покаже 100%, натисніть кнопку <guibutton
+>Далі</guibutton
+> або кнопку <guibutton
+>Завершити</guibutton
+>, якщо ви вибрали варіант імпортування лише повідомлень електронної пошти.</para
+></listitem>
+
+<listitem
+><para
+>Щоб виконати імпортування фільтрів пошти, натисніть кнопку <guibutton
+>Імпортувати фільтри</guibutton
+>. Програма імпортує усі знайдені фільтри. Щойно імпортування буде завершено, натисніть кнопку <guibutton
+>Далі</guibutton
+> або кнопку <guibutton
+>Завершити</guibutton
+>, якщо більше ніяких даних імпортувати не слід.</para
+></listitem>
+
+<listitem
+><para
+>Щоб виконати імпортування параметрів, натисніть кнопку <guibutton
+>Імпортувати параметри</guibutton
+>. Програма-майстер задасть вам декілька питань, наприклад щодо теки, яку слід використати для тек облікового запису, який ще не було створено. Майстер також надасть змогу створити запис профілю. Щойно імпортування буде завершено, натисніть кнопку <guibutton
+>Далі</guibutton
+> або кнопку <guibutton
+>Завершити</guibutton
+>, якщо більше ніяких даних імпортувати не слід.</para
+></listitem>
+
+<listitem
+><para
+>Щоб виконати імпортування адресних книг або календарів, натисніть кнопку <guibutton
+>Імпортувати адресну книгу</guibutton
+> або <guibutton
+>Імпортувати календар</guibutton
+>. Програма імпортує усі знайдені адресні книги або календарі. Щойно імпортування буде завершено, натисніть кнопку <guibutton
+>Далі</guibutton
+>.</para
+></listitem>
+</itemizedlist>
+
+<para
+>Натисніть кнопку <guibutton
+>Завершити</guibutton
+>, щоб завершити роботу майстра і вийти з нього. Якщо на будь-якому з кроків роботи ви захочете перервати роботу майстра, просто натисніть кнопку <guibutton
+>Скасувати</guibutton
+>.</para>
+
+</sect2>
+
+<sect2 id="manual-import">
+<title
+>Імпортування вручну</title>
+
+<para>
+<screenshot>
+<screeninfo
+>Імпортування вручну</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="manual-import.png" format="PNG"/>
+    </imageobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note
+><para
+>Будь ласка, не забудьте попередньо ущільнити теки у сторонній програмі для роботи з електронною поштою.</para
+></note>
+<para
+>Виберіть пункт з назвою вашої попередньої програми для роботи з електронною поштою зі спадного списку. Після цього у центральній частині вікна ви побачите оновлені настанови (якщо такі потрібні) щодо імпортування та відомі програмі місця, де можуть зберігатися дані. Виконайте настанови програми, а потім виберіть теку, куди слід імпортувати дані.</para>
+<para
+>Якщо ви хочете, щоб дублікати повідомлень під час імпортування було вилучено, позначте пункт <guilabel
+>Вилучати повідомлення-дублікати при імпортуванні</guilabel
+>. Програмою буде відкрито діалогове вікно вибору файла, у якому вам слід вибрати файл або теку, про які йде мова у настановах програми. Натисніть кнопку <guibutton
+>Далі</guibutton
+>, щоб завершити імпортування. Щойно імпортування даних буде завершено, ви зможете натиснути кнопку <guibutton
+>Назад</guibutton
+>, щоб імпортувати дані з іншої програми, або кнопку <guibutton
+>Завершити</guibutton
+>, щоб завершити роботу програми і закрити її вікно. </para>
+</sect2>
+
+</sect1>
+
+<sect1 id="credits">
+
+<title
+>Подяки і ліцензування</title>
+
+<para
+>&i18n-importwizard;</para>
+<para
+>Авторські права на програму належать Laurent Montel montel@kde.org, 2013 </para>
+<para
+>Розділ щодо імпортування вручну є видозміненою копією підручника з KMailCVT</para>
+<para
+>Авторські права на документацію належать Laurent Montel montel@kde.org та Scarlett Clark scarlett@scarlettgatelyclark.com, 2013 </para>
+
+<para
+>Переклад українською: Юрій Чорноіван<email
+>yurchor@ukr.net</email
+></para
+> 
+&underFDL; &underGPL; </sect1>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

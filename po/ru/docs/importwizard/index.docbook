@@ -1,0 +1,318 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY i18n-importwizard "<application
+>Средство импорта данных PIM</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Russian "INCLUDE"
+> 
+]>
+
+<article id="importwizard" lang="&language;">
+
+<articleinfo id="importwizardinfo">
+
+<title
+>Средство импорта данных PIM. Руководство пользователя</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Ольга</firstname
+><surname
+>Миронова</surname
+><affiliation
+><address
+><email
+>omiro@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Олег</firstname
+><surname
+>Баталов</surname
+><affiliation
+><address
+><email
+>olegbatalov@mail.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+> <othercredit role="reviewer"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><contrib
+>Рецензирование</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+
+<date
+>27 июля 2016 г.</date>
+<releaseinfo
+>5.3.40 (Приложения 16.08)</releaseinfo>
+
+</articleinfo>
+
+<sect1 id="introduction">
+<title
+>Введение</title>
+
+<para
+>Средство импорта данных PIM позволяет импортировать в учётную запись пользователя сообщения электронной почты, параметры настройки, адресную книгу и данные календаря из следующих приложений для работы почтой:</para>
+
+<para
+><application
+>Trojitá</application
+>, <application
+>Evolution 1.x - 3.x</application
+>, <application
+>OS X Mail</application
+>, <application
+>Opera</application
+>, <application
+>Sylpheed</application
+>, <application
+>Thunderbird/Mozilla</application
+>, <application
+>The Bat!</application
+>, <application
+>Outlook Express</application
+>, <application
+>Balsa</application
+>, <application
+>Pegasus-Mail</application
+> и <application
+>Claws Mail</application
+>. </para>
+
+<para
+>Кроме того, возможен импорт вручную архивов данных в форматах <application
+>KMail Archive</application
+>, <application
+>mbox (Unix, Evolution)</application
+>, &kmail; Maildirs, <application
+>Icedove</application
+>, <application
+>Lotus Notes</application
+>, <application
+>Plain Text</application
+> и <application
+>Mailman</application
+>. </para>
+
+<para
+>Если данные почтовых клиентов не обнаруживаются автоматически, отметьте флажком параметр <guibutton
+>Выбрать вручную</guibutton
+> в главном окне программы и воспользуйтесь возможностями <link linkend="manual-import"
+>Импорта вручную</link
+>. </para>
+
+<para
+>Средство импорта данных PIM можно запустить из меню запуска приложений или из почтового клиента &kmail;, выбрав для автоматического определения данных пункт меню <menuchoice
+><guimenu
+>Сервис</guimenu
+><guimenuitem
+>Импорт из другого почтового клиента...</guimenuitem
+></menuchoice
+>, а для импорта данных вручную — пункт меню <menuchoice
+><guimenu
+>Файл</guimenu
+> <guimenuitem
+>Импорт писем...</guimenuitem
+></menuchoice
+>. </para>
+
+<note>
+<para
+>Прежде чем импортировать данные, закройте почтовый клиент &kmail;. Некоторые модули импорта изменяют файл конфигурации &kmail;.</para>
+</note>
+
+<para
+>Более подробно другие возможности импорта сообщений электронной почты описаны в руководстве пользователя <ulink url="help:/pimsettingexporter"
+>PIM Setting Exporter</ulink
+>.</para>
+
+<sect2 id="detected-mailers">
+<title
+>Обнаруженные почтовые клиенты</title>
+
+<para
+>Во время запуска средство импорта данных обнаруживает все поддерживаемые почтовые программы и показывает их список. Выберите почтовый клиент, данные из которого необходимо импортировать, и нажмите кнопку <guibutton
+>Далее</guibutton
+>. Затем укажите, какие данные необходимо импортировать: можно выбрать импорт всех данных или импорт только выбранных типов данных.</para>
+
+<screenshot>
+<screeninfo
+>Выбор импортируемых данных</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="import-selection.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Выбор импортируемых данных</phrase>
+    </textobject>
+    <caption>
+      <para
+>Выбор импортируемых данных</para>
+    </caption>
+  </mediaobject>
+</screenshot>
+
+<para
+>В зависимости от сделанного выбора потребуется выполнить одно или несколько описанных ниже действий.</para>
+
+<itemizedlist>
+
+<listitem
+><para
+>Чтобы импортировать сообщения электронной почты, выберите папку, в которую следует импортировать данные. Затем нажмите кнопку <guibutton
+>Импортировать почту</guibutton
+>. После того, как индикатор выполнения покажет 100%, нажмите кнопку <guibutton
+>Далее</guibutton
+> или <guibutton
+>Готово</guibutton
+>, если импортировать другие данные не требуется.</para
+></listitem>
+
+<listitem
+><para
+>Чтобы импортировать фильтры сообщений, нажмите кнопку <guibutton
+>Импортировать фильтры</guibutton
+>, и все найденные фильтры будут импортированы. По окончании импорта нажмите кнопку <guibutton
+>Далее</guibutton
+> или <guibutton
+>Готово</guibutton
+>, если импортировать другие данные не требуется.</para
+></listitem>
+
+<listitem
+><para
+>Чтобы импортировать сохранённые параметры, нажмите кнопку <guibutton
+>Импорт параметров</guibutton
+>. Затем потребуется ответить на несколько вопросов, например, какую папку использовать для папок пользователя, которые не существуют. Также будет создан профиль пользователя. По окончании импорта нажмите кнопку <guibutton
+>Далее</guibutton
+> или <guibutton
+>Готово</guibutton
+>, если импортировать другие данные не требуется.</para
+></listitem>
+
+<listitem
+><para
+>Чтобы импортировать адресные книги, нажмите кнопку <guibutton
+>Импортировать адресную книгу</guibutton
+> или <guibutton
+>Импортировать календарь</guibutton
+>, после чего обнаруженные адресные книги и календари будут импортированы. По окончании импорта нажмите кнопку <guibutton
+>Далее</guibutton
+>.</para
+></listitem>
+</itemizedlist>
+
+<para
+>Для завершения работы нажмите кнопку <guibutton
+>Готово</guibutton
+>. Чтобы в любой момент времени остановить работу приложения, нажмите кнопку <guibutton
+>Отмена</guibutton
+>.</para>
+
+</sect2>
+
+<sect2 id="manual-import">
+<title
+>Импорт вручную</title>
+
+<para>
+<screenshot>
+<screeninfo
+>Импорт вручную</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="manual-import.png" format="PNG"/>
+    </imageobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note
+><para
+>Перед началом импортирования важно убедиться, что все переносимые папки были сжаты в исходном приложении для работы с электронной почтой.</para
+></note>
+<para
+>Выберите из раскрывающегося списка исходную почтовую программу. При этом в центральной части окна будут показаны особые инструкции (если они имеются), а также будет указано место хранения сообщений почты для данного приложения. Следуйте инструкциям и укажите папку, в которую следует импортировать данные.</para>
+<para
+>Для удаления повторяющихся писем отметьте флажком параметр <guilabel
+>Удалять при импорте повторяющиеся письма</guilabel
+>. Откроется диалог выбора файлов, в котором нужно выбрать файлы/папки, указанные в инструкциях. Для завершения  импорта нажмите кнопку <guibutton
+>Далее</guibutton
+>. По окончании импорта нажмите кнопку <guibutton
+>Назад</guibutton
+>, чтобы импортировать данные из другого приложения, или кнопку <guibutton
+>Готово</guibutton
+>, чтобы закрыть программу. </para>
+</sect2>
+
+</sect1>
+
+<sect1 id="credits">
+
+<title
+>Авторские права и лицензия</title>
+
+<para
+>&i18n-importwizard;</para>
+<para
+>Программа © Laurent Montel, montel@kde.org, 2013. </para>
+<para
+>Раздел «Импорт вручную» — это изменённая версия руководства пользователя KMailCVT.</para>
+<para
+>Документация &copy; Laurent Montel, montel@kde.org и Scarlett Clark, scarlett@scarlettgatelyclark.com, 2013. </para>
+
+<para
+>Ольга Миронова<email
+>omiro@basealt.ru</email
+></para
+> 
+&underFDL; &underGPL; </sect1>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

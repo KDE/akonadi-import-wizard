@@ -1,0 +1,299 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY i18n-importwizard "<application
+>Importguide</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Swedish "INCLUDE"
+> 
+]>
+
+<article id="importwizard" lang="&language;">
+
+<articleinfo id="importwizardinfo">
+
+<title
+>Handbok &i18n-importwizard;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+
+<date
+>2016-07-27</date>
+<releaseinfo
+>5.3.40 (Program 16.08)</releaseinfo>
+
+</articleinfo>
+
+<sect1 id="introduction">
+<title
+>Inledning</title>
+
+<para
+>&i18n-importwizard; gör det möjligt att importera detektera e-post, inställningar, adressbok och kalenderdata till användarkontot från följande brevprogram:</para>
+
+<para
+><application
+>Trojitá</application
+>, <application
+>Evolution 1.x - 3.x</application
+>, <application
+>OS X Mail</application
+>, <application
+>Opera</application
+>, <application
+>Sylpheed</application
+>, <application
+>Thunderbird/Mozilla</application
+>, <application
+>The Bat!</application
+>, <application
+>Outlook Express</application
+>, <application
+>Balsa</application
+>, <application
+>Pegasus-Mail</application
+> och <application
+>Claws Mail</application
+> </para>
+
+<para
+>Dessutom kan du använda manuell import för <application
+>KMail-arkiv</application
+>, <application
+>mbox (Unix, Evolution)</application
+>, &kmail; Maildirs, <application
+>Icedove</application
+>, <application
+>Lotus Notes</application
+>, <application
+>vanlig text</application
+> och <application
+>Mailman</application
+>-arkiv. </para>
+
+<para
+>Om ingen e-postdata detekteras automatiskt klicka på <guibutton
+>Manuellt val</guibutton
+> i startfönstret och använd funktionen för <link linkend="manual-import"
+>manuell import</link
+>. </para>
+
+<para
+>&i18n-importwizard; kan direkt startas med starta program eller från &kmail; med <menuchoice
+><guimenu
+>Verktyg</guimenu
+> <guimenuitem
+>Importguide</guimenuitem
+></menuchoice
+> för automatisk detektering eller från &kmail; med <menuchoice
+><guimenu
+>Arkiv</guimenu
+> <guimenuitem
+>Importera brev</guimenuitem
+></menuchoice
+> för manuell import. </para>
+
+<note>
+<para
+>Stäng &kmail; innan data importeras. Vissa insticksprogram ändrar &kmail;s inställningsfil.</para>
+</note>
+
+<para
+>För information om andra verktyg för att importera brev, läs handboken <ulink url="help:/pimdataexporter"
+>Export av data för personlig informationshantering</ulink
+>.</para>
+
+<sect2 id="detected-mailers">
+<title
+>Detekterade e-postprogram</title>
+
+<para
+>Vid start detekterar importguiden alla e-postprogram som stöds, och listar dem för dig i fönstret. Välj e-postprogrammet som du vill importera från, och klicka på knappen <guibutton
+>Nästa</guibutton
+>. Guiden frågar därefter om du vill importera allt, eller ger dig alternativ för att välja vilka typer av material du vill importera.</para>
+
+<screenshot>
+<screeninfo
+>Välja import</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="import-selection.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Välja import</phrase>
+    </textobject>
+    <caption>
+      <para
+>Välja import</para>
+    </caption>
+  </mediaobject>
+</screenshot>
+
+<para
+>Beroende på vad som väljes i fönstret Material att importera, visas en eller flera av följande fönster:</para>
+
+<itemizedlist>
+
+<listitem
+><para
+>För att <guibutton
+>Importera e-post</guibutton
+> måste man markera korgen som e-posten ska importeras till. När den väl är markerad, klicka på knappen <guibutton
+>Importera brev</guibutton
+>. När förloppsraden når 100 %, klicka på knappen <guibutton
+>Nästa</guibutton
+> eller <guibutton
+>Slutför</guibutton
+>, om detta var det sista materialvalet.</para
+></listitem>
+
+<listitem
+><para
+>För att importera e-postfilter klicka på <guibutton
+>Importera filter</guibutton
+> så importeras alla filter som hittades. När det väl är klart, klicka på knappen <guibutton
+>Nästa</guibutton
+> eller <guibutton
+>Slutför</guibutton
+>, om detta var det sista materialvalet.</para
+></listitem>
+
+<listitem
+><para
+>För att <guibutton
+>Importera inställningar</guibutton
+> klicka på knappen <guibutton
+>Importera inställningar</guibutton
+>. Guiden ställer ett antal frågor, t.ex. vilken korg som ska användas för korgar som inte finns i kontot. Guiden skapar också din identitet. När det väl är klart, klicka på knappen <guibutton
+>Nästa</guibutton
+> eller <guibutton
+>Slutför</guibutton
+>, om detta var det sista materialvalet.</para
+></listitem>
+
+<listitem
+><para
+>För att importera adressböcker klicka på knappen <guibutton
+>Importera adressbok</guibutton
+> eller <guibutton
+>Importera kalender</guibutton
+> så importeras alla adressböcker eller kalendrar som hittas. När det väl är klart, klicka på knappen <guibutton
+>Nästa</guibutton
+>.</para
+></listitem>
+</itemizedlist>
+
+<para
+>Klicka på knappen <guibutton
+>Slutför</guibutton
+> för att göra färdigt och avsluta guiden. Närhelst du vill lämna guiden, kan du klicka på knappen <guibutton
+>Avbryt</guibutton
+>.</para>
+
+</sect2>
+
+<sect2 id="manual-import">
+<title
+>Manuell import</title>
+
+<para>
+<screenshot>
+<screeninfo
+>Manuell import</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="manual-import.png" format="PNG"/>
+    </imageobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note
+><para
+>Försäkra dig om att du komprimerar dina korgar i den andra e-postklienten.</para
+></note>
+<para
+>Välj ditt tidigare e-postprogram i kombinationsrutan. Textområdet i mitten av dialogrutan uppdateras med särskilda instruktioner (om nödvändigt), och den kända platsen för e-postlagring för det programmet. Följ instruktionerna, och välj därefter korgen som du vill importera dina brev till.</para>
+<para
+>Om du vill ta bort duplicerade brev, markera <guilabel
+>Ta bort duplicerade brev under import</guilabel
+>. En filvalsdialogruta dyker upp och du måste välja filen eller katalogen som anges i instruktionerna. Klicka på knappen <guibutton
+>Nästa</guibutton
+> för att utföra importen. När importen är klar kan du klicka på knappen <guibutton
+>Tillbaka</guibutton
+> för att importera från ett annat program eller knappen <guibutton
+>Slutför</guibutton
+> för att avsluta. </para>
+</sect2>
+
+</sect1>
+
+<sect1 id="credits">
+
+<title
+>Tack till och licens</title>
+
+<para
+>&i18n-importwizard;</para>
+<para
+>Program copyright 2013 Laurent Montel montel@kde.org </para>
+<para
+>Avsnittet Manuel import är en ändrad kopia av KMailCVT-handboken</para>
+<para
+>Dokumentation Copyright &copy; 2013 Laurent Montel montel@kde.org och Scarlett Clark scarlett@scarlettgatelyclark.com </para>
+
+<para
+>Översättning Stefan Asserhäll <email
+>stefan.asserhall@bredband.net</email
+></para
+> &underFDL; &underGPL; </sect1>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

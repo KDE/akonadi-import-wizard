@@ -1,0 +1,295 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY i18n-importwizard "<application
+>Asistente de importación</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Spanish "INCLUDE"
+> 
+]>
+
+<article id="importwizard" lang="&language;">
+
+<articleinfo id="importwizardinfo">
+
+<title
+>El manual de &i18n-importwizard;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Javier</firstname
+><surname
+>Viñal</surname
+> <affiliation
+><address
+><email
+>fjvinal@gmail.com</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+
+<date
+>2016-07-27</date>
+<releaseinfo
+>5.3.40 (Aplicaciones 16.08)</releaseinfo>
+
+</articleinfo>
+
+<sect1 id="introduction">
+<title
+>Introducción</title>
+
+<para
+>&i18n-importwizard; permite importar correos, preferencias, libretas de direcciones y datos de calendario detectados en su cuenta de usuario desde los siguientes gestores de correo:</para>
+
+<para
+><application
+>Trojitá</application
+>, <application
+>Evolution 1.x - 3.x</application
+>, <application
+>OS X Mail</application
+>, <application
+>Opera</application
+>, <application
+>Sylpheed</application
+>, <application
+>Thunderbird/Mozilla</application
+>, <application
+>The Bat!</application
+>, <application
+>Outlook Express</application
+>, <application
+>Balsa</application
+>, <application
+>Pegasus-Mail</application
+>, and <application
+>Claws Mail</application
+> </para>
+
+<para
+>Además, usted puede usar la importación manual pra <application
+>Archivador de KMail</application
+>, <application
+>mbox (Unix, Evolution)</application
+>, buzones de &kmail; ,  <application
+>Icedove</application
+>, <application
+>Lotus Notes</application
+>, <application
+>texto sin formato</application
+> y archivos comprimidos de  <application
+>Mailman</application
+>. </para>
+
+<para
+>Si no se detectan automáticamente datos de correo, pulse sobre <guibutton
+>Selección  manual</guibutton
+> en la ventana de inicio y emplee las características de <link linkend="manual-import"
+>Importación manual</link
+>. </para>
+
+<para
+>Usted puede iniciar &i18n-importwizard; directamente desde el lanzador de aplicaciones, o bien desde &kmail; con <menuchoice
+><guimenu
+>Herramientas</guimenu
+><guimenuitem
+> Asistente de importación...</guimenuitem
+></menuchoice
+> para detección automática desde &kmail; con <menuchoice
+><guimenu
+>Archivo</guimenu
+>  <guimenuitem
+>Importar mensajes</guimenuitem
+></menuchoice
+> para importación manual. </para>
+
+<note>
+<para
+>Cierre &kmail; antes de importar datos. Algunos complementos modificarán el archivo de configuración de &kmail;.</para>
+</note>
+
+<para
+>Para más información sobre otras utilidades para importar correos, lea el manual <ulink url="help:/pimdataexporter"
+>Exportador de datos PIM</ulink
+>.</para>
+
+<sect2 id="detected-mailers">
+<title
+>Aplicaciones de correo detectadas</title>
+
+<para
+>Al inicio, el asistente de importación detectará todas las aplicaciones de correo reconocidas, y las listará para usted en la ventana. Seleccione la aplicación de correo desde la que quiere importar, y pulse el botón <guibutton
+>Siguiente</guibutton
+>. El asistente preguntará entonces si usted quiere importarlo todo, o dar opciones de seleccionar que tipos de materiales quiere usted importar.</para>
+
+<screenshot>
+<screeninfo
+>Selección de importación</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="import-selection.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Selección de importación</phrase>
+    </textobject>
+    <caption>
+      <para
+>Selección de importación</para>
+    </caption>
+  </mediaobject>
+</screenshot>
+
+<para
+>Dependiendo de sus selecciones en los materiales en la pantalla de importación, usted verá una o más de las siguientes pantallas:</para>
+
+<itemizedlist>
+
+<listitem
+><para
+>Para importar mensajes de correo, usted necesita seleccionar la carpeta en la que quiere que se importen sus mensajes de correo. Una vez seleccionada, pulse el botón <guibutton
+>Importar correos</guibutton
+>. Una vez que la barra de progreso alcanza el 100 %, pulse el botón <guibutton
+>Siguiente</guibutton
+>, o el botón <guibutton
+>Finalizar</guibutton
+>, si esta era su última selección de material.</para
+></listitem>
+
+<listitem
+><para
+>Para importar filtros de correo, pulse el botón <guibutton
+>Importar filtros</guibutton
+> e importará cualquier filtro que encuentre, una vez finalizado, pulse el botón <guibutton
+>Siguiente</guibutton
+> o el botón <guibutton
+>Finalizar </guibutton
+> si esta era su última selección de material.</para
+></listitem>
+
+<listitem
+><para
+>Para importar preferencias, pulse el botón <guibutton
+>Importar preferencias</guibutton
+>. El asistente le preguntará algunas cosas, &eg; qué carpeta usar para cuentas de carpetas que no existan. El asistente también creará una identidad.Una vez finalizado, pulse el botón <guibutton
+>Siguiente</guibutton
+> o el botón <guibutton
+>Finalizar </guibutton
+> si esta era su última selección de material.</para
+></listitem>
+
+<listitem
+><para
+>Para importar libretas de direcciones o calendarios, pulse el botón <guibutton
+>Importar libretas de direcciones</guibutton
+> o <guibutton
+>Importar calendario</guibutton
+>e importará todas las libretas de direcciones o calendarios que encuentre. Una vez completado, pulse el botón <guibutton
+>Siguiente</guibutton
+>.</para
+></listitem>
+</itemizedlist>
+
+<para
+>Pulse el botón <guibutton
+>Finalizar</guibutton
+> para completar y salir del asistente. Si en cualquier momento, usted quiere terminar el asistente, usted puede pulsar el botón <guibutton
+>Cancelar</guibutton
+>.</para>
+
+</sect2>
+
+<sect2 id="manual-import">
+<title
+>Importación manual</title>
+
+<para>
+<screenshot>
+<screeninfo
+>Importación manual</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="manual-import.png" format="PNG"/>
+    </imageobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note
+><para
+>Por favor, asegúrese de que usted comprime sus carpetas en otro cliente de correo.</para
+></note>
+<para
+>Seleccione su programa de correo anterior desde el menú desplegable. El cuadro de texto central del diálogo se actualizará con instrucciones especiales (si son aplicables) y la ubicación conocida del almacén de mensajes de correo para la aplicación. Siga esas instrucciones, a continuación, seleccione la carpeta en la que usted quiere importar sus mensajes.</para>
+<para
+>Si usted quiere eliminar mensajes duplicados, marque <guilabel
+>Eliminar mensajes  duplicados durante la importación</guilabel
+>. Aparecerá un diálogo de selección de archivos  y usted tendrá que seleccionar el archivo/carpeta indicado en las instrucciones. Pulse en el botón  <guibutton
+>Siguiente</guibutton
+> para completar la importación. Cuando la importación  finalice usted puede pulsar en el botón <guibutton
+>Retroceder</guibutton
+> para importar desde otra aplicación o en el botón <guibutton
+>Finalizar</guibutton
+> para salir. </para>
+</sect2>
+
+</sect1>
+
+<sect1 id="credits">
+
+<title
+>Créditos y licencia</title>
+
+<para
+>&i18n-importwizard;</para>
+<para
+>Derechos de autor del programa 2013 Laurent Montel montel@kde.org </para>
+<para
+>La sección de importación manual es una copia modificada del manual de KMailCVT</para>
+<para
+>Derechos de autor de la documentación &copy; 2013 Laurent Montel montel@kde.org y Scarlett Clark scarlett@scarlettgatelyclark.com </para>
+
+<para
+>Traducido por Javier Viñal <email
+>fjvinal@gmail.com</email
+></para
+> &underFDL; &underGPL; </sect1>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->
