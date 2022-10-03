@@ -514,7 +514,7 @@ msgstr ""
 "family:'DejaVu Sans'; font-size:9pt;\"> <br /><br />Este programa vos "
 "ajudarà a importar el vostre correu electrònic des del programa de correu "
 "electrònic anterior.<br /><br />Seleccioneu el programa des del qual voleu "
-"importar. Després, seleccioneu la carpeta a la qual voleu importar, i "
+"importar. Després, seleccioneu la carpeta cap a la qual voleu importar, i "
 "cliqueu «Següent».</span></p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, remDupMsg)
