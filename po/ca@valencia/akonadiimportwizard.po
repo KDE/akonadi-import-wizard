@@ -305,7 +305,7 @@ msgid ""
 "KAddressBook."
 msgstr ""
 "La llibreta d'adreces d'Evolution s'exportarà com a vCard. S'importarà la "
-"vCard a KAddressBook."
+"vCard en KAddressBook."
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:22
 #, kde-format
