@@ -4,19 +4,20 @@
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2012, 2013, 2014, 2015.
 # pan93412 <pan93412@gmail.com>, 2018.
 # Jeff Huang <s8321414@gmail.com>, 2020.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-29 00:47+0000\n"
-"PO-Revision-Date: 2020-09-17 13:51+0800\n"
-"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
+"PO-Revision-Date: 2022-12-30 19:38+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
@@ -248,10 +249,9 @@ msgid "PIM Import Tool"
 msgstr "個人資訊管理匯入工具"
 
 #: main.cpp:46
-#, fuzzy, kde-format
-#| msgid "Copyright © 2012-2020 ImportWizard authors"
+#, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
-msgstr "Copyright © 2012-2020 ImportWizard 開發團隊"
+msgstr "Copyright © 2012-%1 ImportWizard 開發團隊"
 
 #: main.cpp:48
 #, kde-format
