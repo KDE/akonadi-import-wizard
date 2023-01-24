@@ -75,17 +75,17 @@ endif()
 target_link_libraries(akonadiimportwizard
     KPimImportWizard
     KF5::AkonadiCore
-    KF5::XmlGui
+    KF${KF_MAJOR_VERSION}::XmlGui
     KF5::MailImporterAkonadi
     KF5::PimCommon
     KF5::MailCommon
-    KF5::I18n
-    KF5::CoreAddons
-    KF5::Crash
-    KF5::DBusAddons
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::CoreAddons
+    KF${KF_MAJOR_VERSION}::Crash
+    KF${KF_MAJOR_VERSION}::DBusAddons
     Qt::Widgets
-    KF5::ConfigCore
-    KF5::WidgetsAddons
+    KF${KF_MAJOR_VERSION}::ConfigCore
+    KF${KF_MAJOR_VERSION}::WidgetsAddons
     )
 
 install(TARGETS akonadiimportwizard  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

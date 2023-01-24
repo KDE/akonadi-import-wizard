@@ -26,9 +26,9 @@ set_target_properties(evolutionv3importerplugin PROPERTIES LIBRARY_OUTPUT_DIRECT
 
 target_link_libraries(evolutionv3importerplugin
     KPim::ImportWizard
-    KF5::XmlGui
-    KF5::I18n
-    KF5::Contacts
+    KF${KF_MAJOR_VERSION}::XmlGui
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::Contacts
     KF5::MailImporterAkonadi
     KF5::MailTransport
     KF5::MailCommon
