@@ -27,8 +27,8 @@ target_link_libraries(balsaimporterplugin
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::Contacts
     KPim${KF_MAJOR_VERSION}::MailImporterAkonadi
-    KF5::MailTransport
-    KF5::MailCommon
-    KF5::IdentityManagement
+    KPim${KF_MAJOR_VERSION}::MailTransport
+    KPim${KF_MAJOR_VERSION}::MailCommon
+    KPim${KF_MAJOR_VERSION}::IdentityManagement
     KF5::MessageViewer
     )

@@ -78,7 +78,7 @@ target_link_libraries(akonadiimportwizard
     KF${KF_MAJOR_VERSION}::XmlGui
     KPim${KF_MAJOR_VERSION}::MailImporterAkonadi
     KF5::PimCommon
-    KF5::MailCommon
+    KPim${KF_MAJOR_VERSION}::MailCommon
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::CoreAddons
     KF${KF_MAJOR_VERSION}::Crash

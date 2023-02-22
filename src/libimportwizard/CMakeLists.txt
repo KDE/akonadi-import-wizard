@@ -74,11 +74,11 @@ generate_export_header(KPimImportWizard BASE_NAME libimportwizard)
 
 target_link_libraries(KPimImportWizard
     PUBLIC
-    KF5::MailTransport
+    KPim${KF_MAJOR_VERSION}::MailTransport
     PRIVATE
     KF${KF_MAJOR_VERSION}::Archive
     KF5::PimCommon
-    KF5::MailCommon
+    KPim${KF_MAJOR_VERSION}::MailCommon
     KPim${KF_MAJOR_VERSION}::MailImporter
     KPim${KF_MAJOR_VERSION}::MailImporterAkonadi
     KF${KF_MAJOR_VERSION}::I18n
