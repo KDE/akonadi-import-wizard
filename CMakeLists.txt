@@ -82,7 +82,8 @@ find_package(KF5IdentityManagement ${IDENTITYMANAGEMENT_LIB_VERSION} CONFIG REQU
 find_package(KF5MailTransport ${KMAILTRANSPORT_LIB_VERSION} CONFIG REQUIRED)
 
 find_package(KF5MailCommon ${MAILCOMMON_LIB_VERSION} CONFIG REQUIRED)
-find_package(KF5MailImporterAkonadi ${MAILIMPORTER_VERSION} CONFIG REQUIRED)
+find_package(KPim${KF_MAJOR_VERSION}MailImporterAkonadi ${MAILIMPORTER_VERSION} CONFIG REQUIRED)
+
 find_package(KF5MessageViewer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5PimCommonAkonadi ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
 include_directories(${importwizard_SOURCE_DIR} ${importwizard_BINARY_DIR})

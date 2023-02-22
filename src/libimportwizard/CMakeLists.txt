@@ -79,8 +79,8 @@ target_link_libraries(KPimImportWizard
     KF${KF_MAJOR_VERSION}::Archive
     KF5::PimCommon
     KF5::MailCommon
-    KF5::MailImporter
-    KF5::MailImporterAkonadi
+    KPim${KF_MAJOR_VERSION}::MailImporter
+    KPim${KF_MAJOR_VERSION}::MailImporterAkonadi
     KF${KF_MAJOR_VERSION}::I18n
     )
 target_link_libraries(KPimImportWizard PRIVATE qt${QT_MAJOR_VERSION}keychain)
