@@ -22,7 +22,7 @@ endif()
 set_target_properties(balsaimporterplugin PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/importwizard/")
 
 target_link_libraries(balsaimporterplugin
-    KPim::ImportWizard
+    KPim${KF_MAJOR_VERSION}::ImportWizard
     KF${KF_MAJOR_VERSION}::XmlGui
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::Contacts
