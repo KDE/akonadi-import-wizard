@@ -126,7 +126,7 @@ install(FILES
     COMPONENT Devel
     )
 
-#if (QT_MAJOR_VERSION STREQUAL "5")
+if (QT_MAJOR_VERSION STREQUAL "5")
 ##
 # TODO: Backwards compatiblity. Remove in next major version
 ##
@@ -154,4 +154,4 @@ install(EXPORT KPim${KF_MAJOR_VERSION}ImportWizardTargets
     FILE KPim${KF_MAJOR_VERSION}ImportWizardTargets.cmake
     NAMESPACE KPim::
 )
-#endif()
+endif()
