@@ -33,5 +33,5 @@ target_link_libraries(evolutionv3importerplugin
     KPim${KF_MAJOR_VERSION}::MailTransport
     KPim${KF_MAJOR_VERSION}::MailCommon
     KPim${KF_MAJOR_VERSION}::IdentityManagement
-    KF5::MessageViewer
+    KPim${KF_MAJOR_VERSION}::MessageViewer
     )
