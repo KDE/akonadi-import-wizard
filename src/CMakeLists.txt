@@ -74,7 +74,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 target_link_libraries(akonadiimportwizard
     KPim${KF_MAJOR_VERSION}ImportWizard
-    KF5::AkonadiCore
+    KPim${KF_MAJOR_VERSION}::AkonadiCore
     KF${KF_MAJOR_VERSION}::XmlGui
     KPim${KF_MAJOR_VERSION}::MailImporterAkonadi
     KF5::PimCommon
