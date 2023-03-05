@@ -303,12 +303,12 @@ msgstr "لم يُعر على إعدادات «بردي كلاوس»."
 msgid ""
 "Evolution address book will be exported as vCard. Import vCard in "
 "KAddressBook."
-msgstr "سيُستورد دفتر عناوين «إڤلوشن» كَ‍ vCard. استورد vCard في «دفتر عناوينك»."
+msgstr "سيُستورد دفتر عناوين «إفلوشن» كَ‍ vCard. استورد vCard في «دفتر عناوينك»."
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:22
 #, kde-format
 msgid "Export Evolution Address Book"
-msgstr "صدّر دفتر عناوين «إڤلوشن»"
+msgstr "صدّر دفتر عناوين «إفلوشن»"
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:25
 #, kde-format
@@ -328,17 +328,17 @@ msgstr "فشل تصدير دفتر العناوين ”%1“."
 #: plugins/evolutionv3/evolutionv3importdata.cpp:57
 #, kde-format
 msgid "Evolution settings not found."
-msgstr "لم يُعثر على إعدادات «إڤلوشن»."
+msgstr "لم يُعثر على إعدادات «إفلوشن»."
 
 #: plugins/evolutionv3/evolutionv3importdata.cpp:100
 #, kde-format
 msgid "Evolution calendar not found."
-msgstr "لم يُعثر على تقويم «إڤلوشن»."
+msgstr "لم يُعثر على تقويم «إفلوشن»."
 
 #: plugins/icedove/icedoveimportdata.cpp:69
 #, kde-format
 msgid "Icedove settings not found."
-msgstr "لم يُعثر على إعدادات «آيس‌دوڤ»."
+msgstr "لم يُعثر على إعدادات «آيس‌دوف»."
 
 #: plugins/seamonkey/seamonkeyimportdata.cpp:69
 #, kde-format
