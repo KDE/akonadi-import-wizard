@@ -84,7 +84,7 @@ find_package(KPim${KF_MAJOR_VERSION}MailCommon ${MAILCOMMON_LIB_VERSION} CONFIG 
 find_package(KPim${KF_MAJOR_VERSION}MailImporterAkonadi ${MAILIMPORTER_VERSION} CONFIG REQUIRED)
 
 find_package(KPim${KF_MAJOR_VERSION}MessageViewer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
-find_package(KF5PimCommonAkonadi ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim${KF_MAJOR_VERSION}PimCommonAkonadi ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
 include_directories(${importwizard_SOURCE_DIR} ${importwizard_BINARY_DIR})
 
 find_package(Qt${QT_MAJOR_VERSION}Keychain CONFIG)

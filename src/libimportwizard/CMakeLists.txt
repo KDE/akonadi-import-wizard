@@ -79,7 +79,7 @@ target_link_libraries(KPim${KF_MAJOR_VERSION}ImportWizard
     KPim${KF_MAJOR_VERSION}::MailTransport
     PRIVATE
     KF${KF_MAJOR_VERSION}::Archive
-    KF5::PimCommon
+    KPim${KF_MAJOR_VERSION}::PimCommon
     KPim${KF_MAJOR_VERSION}::MailCommon
     KPim${KF_MAJOR_VERSION}::MailImporter
     KPim${KF_MAJOR_VERSION}::MailImporterAkonadi
