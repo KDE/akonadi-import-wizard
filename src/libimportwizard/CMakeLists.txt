@@ -65,7 +65,6 @@ ecm_qt_declare_logging_category(KPim${KF_MAJOR_VERSION}ImportWizard HEADER libim
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim${KF_MAJOR_VERSION}ImportWizard PROPERTIES UNITY_BUILD ON)
 endif()
-add_library(KPim${KF_MAJOR_VERSION}::ImportWizard ALIAS KPim${KF_MAJOR_VERSION}ImportWizard)
 
 
 target_include_directories(KPim${KF_MAJOR_VERSION}ImportWizard INTERFACE
