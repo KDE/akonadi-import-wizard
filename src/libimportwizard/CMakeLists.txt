@@ -32,7 +32,7 @@ install(EXPORT KPim${KF_MAJOR_VERSION}ImportWizardTargets
 
 install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/importwizard_version.h"
-    DESTINATION "${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/"
+    DESTINATION "${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/ImportWizard/"
     COMPONENT Devel
 )
 
@@ -114,14 +114,14 @@ ecm_generate_headers(ImportWizard_CamelCase_HEADERS
 
 install(FILES
     ${ImportWizard_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/ImportWizard/
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/ImportWizard/ImportWizard/
     COMPONENT Devel
     )
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/libimportwizard_export.h
     ${ImportWizard_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/importwizard/
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/ImportWizard/importwizard/
     COMPONENT Devel
     )
 
