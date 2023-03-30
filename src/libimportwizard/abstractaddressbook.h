@@ -39,8 +39,8 @@ protected:
     void addImportContactNote(KContacts::Addressee &address, const QString &applicationName);
 
 private:
-    void slotStoreDone(KJob *job);
-    bool selectAddressBook();
+    LIBIMPORTWIZARD_NO_EXPORT void slotStoreDone(KJob *job);
+    LIBIMPORTWIZARD_NO_EXPORT bool selectAddressBook();
     Akonadi::Collection mCollection;
 };
 }

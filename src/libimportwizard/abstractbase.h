@@ -37,8 +37,8 @@ protected:
     AbstractDisplayInfo *mAbstractDisplayInfo = nullptr;
 
 private:
-    void slotCreateResourceError(const QString &);
-    void slotCreateResourceInfo(const QString &);
+    LIBIMPORTWIZARD_NO_EXPORT void slotCreateResourceError(const QString &);
+    LIBIMPORTWIZARD_NO_EXPORT void slotCreateResourceInfo(const QString &);
     PimCommon::CreateResource *mCreateResource = nullptr;
 };
 }

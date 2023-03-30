@@ -34,7 +34,7 @@ public:
     void setName(const QString &name);
 
 private:
-    void slotPasswordWritten(QKeychain::Job *baseJob);
+    LIBIMPORTWIZARD_NO_EXPORT void slotPasswordWritten(QKeychain::Job *baseJob);
     QString mPassword;
     QString mKey;
     QString mName;
