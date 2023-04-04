@@ -3,15 +3,5 @@
 include(CMakeFindDependencyMacro)
 
 find_dependency(KPim6MailTransport "@KMAILTRANSPORT_LIB_VERSION@")
-
-if (@IMPORTWIZARD_KF5_COMPAT@)
-    message(WARNING "\n"
-                    "************* DEPRECATION WARNING *************\n"
-		    "Using find_package(KPimImportWizard) and KF5::ImportWizard targets is deprecated. "
-		    "Please use find_package(KPim6ImportWizard) and KPim6::ImportWizard instead. This backwards "
-                    "compatibility will be removed in the next major version.\n"
-                    "***********************************************\n")
-endif()
-
 include("${CMAKE_CURRENT_LIST_DIR}/KPim6ImportWizardTargets.cmake")
 
