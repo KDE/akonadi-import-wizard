@@ -4,6 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+#include "importwizard-version.h"
 #include "importwizard.h"
 #include <KAboutData>
 #include <KCrash>
@@ -11,29 +12,14 @@
 #include <KLocalizedString>
 #include <QApplication>
 #include <QIcon>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <Kdelibs4ConfigMigrator>
-#endif
-#include "importwizard-version.h"
 
 #include <QCommandLineParser>
 #include <cstdio>
 
 int main(int argc, char *argv[])
 {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling, true);
-#endif
     QApplication app(argc, argv);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
-#endif
     KCrash::initialize();
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    Kdelibs4ConfigMigrator migrate(QStringLiteral("importwizard"));
-    migrate.setConfigFiles(QStringList() << QStringLiteral("importwizardrc"));
-    migrate.migrate();
-#endif
 
     KLocalizedString::setApplicationDomain("akonadiimportwizard");
     // FIXME: "wizards" are "assistents" in new KDE slang
