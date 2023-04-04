@@ -3,8 +3,8 @@ set(PIM_VERSION "5.23.40")
 project(AkonadiImportWizard VERSION ${PIM_VERSION})
 
 
-set(KF_MIN_VERSION "5.105.0")
-
+set(KF_MIN_VERSION "5.240.0")
+set(QT_REQUIRED_VERSION "6.4.0")
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 include(ECMInstallIcons)
@@ -50,45 +50,37 @@ set(AKONADI_VERSION "5.23.40")
 set(KDEPIM_LIB_VERSION "${PIM_VERSION}")
 set(KDEPIM_LIB_SOVERSION "5")
 
-set(QT_REQUIRED_VERSION "5.15.2")
-if (QT_MAJOR_VERSION STREQUAL "6")
-    set(QT_REQUIRED_VERSION "6.4.0")
-    set(KF_MIN_VERSION "5.240.0")
-    set(KF_MAJOR_VERSION "6")
-else()
-    set(KF_MAJOR_VERSION "5")
-endif()
-find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Gui)
+find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Gui)
 set(MAILIMPORTER_VERSION "5.23.40")
 set(MAILCOMMON_LIB_VERSION "5.23.40")
 set(MESSAGELIB_LIB_VERSION "5.23.40")
 set(PIMCOMMON_LIB_VERSION "5.23.40")
 set(IDENTITYMANAGEMENT_LIB_VERSION "5.23.40")
 
-# Find KF5 package
-find_package(KF${KF_MAJOR_VERSION}Config ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}Auth ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}DocTools ${KF_MIN_VERSION} REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}Crash ${KF_MIN_VERSION} REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}KIO ${KF_MIN_VERSION} REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}Archive ${KF_MIN_VERSION} REQUIRED)
+# Find KF6 package
+find_package(KF6Config ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6Auth ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6DocTools ${KF_MIN_VERSION} REQUIRED)
+find_package(KF6Crash ${KF_MIN_VERSION} REQUIRED)
+find_package(KF6KIO ${KF_MIN_VERSION} REQUIRED)
+find_package(KF6Archive ${KF_MIN_VERSION} REQUIRED)
 
 # Find KdepimLibs Package
-find_package(KPim${KF_MAJOR_VERSION}Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
-find_package(KF${KF_MAJOR_VERSION}Contacts ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}IdentityManagement ${IDENTITYMANAGEMENT_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}MailTransport ${KMAILTRANSPORT_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
+find_package(KF6Contacts ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KPim6IdentityManagement ${IDENTITYMANAGEMENT_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6MailTransport ${KMAILTRANSPORT_LIB_VERSION} CONFIG REQUIRED)
 
-find_package(KPim${KF_MAJOR_VERSION}MailCommon ${MAILCOMMON_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}MailImporterAkonadi ${MAILIMPORTER_VERSION} CONFIG REQUIRED)
+find_package(KPim6MailCommon ${MAILCOMMON_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6MailImporterAkonadi ${MAILIMPORTER_VERSION} CONFIG REQUIRED)
 
-find_package(KPim${KF_MAJOR_VERSION}MessageViewer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim${KF_MAJOR_VERSION}PimCommonAkonadi ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6MessageViewer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6PimCommonAkonadi ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
 include_directories(${importwizard_SOURCE_DIR} ${importwizard_BINARY_DIR})
 
-find_package(Qt${QT_MAJOR_VERSION}Keychain CONFIG)
-set_package_properties(Qt${QT_MAJOR_VERSION}Keychain PROPERTIES
+find_package(Qt6Keychain CONFIG)
+set_package_properties(Qt6Keychain PROPERTIES
                                    DESCRIPTION "Provides support for secure credentials storage"
                                    URL "https://github.com/frankosterfeld/qtkeychain"
                                    TYPE REQUIRED)

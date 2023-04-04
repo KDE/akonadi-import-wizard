@@ -73,19 +73,19 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(akonadiimportwizard PROPERTIES UNITY_BUILD ON)
 endif()
 target_link_libraries(akonadiimportwizard
-    KPim${KF_MAJOR_VERSION}ImportWizard
-    KPim${KF_MAJOR_VERSION}::AkonadiCore
-    KF${KF_MAJOR_VERSION}::XmlGui
-    KPim${KF_MAJOR_VERSION}::MailImporterAkonadi
-    KPim${KF_MAJOR_VERSION}::PimCommon
-    KPim${KF_MAJOR_VERSION}::MailCommon
-    KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::CoreAddons
-    KF${KF_MAJOR_VERSION}::Crash
-    KF${KF_MAJOR_VERSION}::DBusAddons
+    KPim6ImportWizard
+    KPim6::AkonadiCore
+    KF6::XmlGui
+    KPim6::MailImporterAkonadi
+    KPim6::PimCommon
+    KPim6::MailCommon
+    KF6::I18n
+    KF6::CoreAddons
+    KF6::Crash
+    KF6::DBusAddons
     Qt::Widgets
-    KF${KF_MAJOR_VERSION}::ConfigCore
-    KF${KF_MAJOR_VERSION}::WidgetsAddons
+    KF6::ConfigCore
+    KF6::WidgetsAddons
     )
 
 install(TARGETS akonadiimportwizard  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
