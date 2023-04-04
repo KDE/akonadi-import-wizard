@@ -6,8 +6,8 @@
 #pragma once
 
 #include <KPluginMetaData>
+#include <QList>
 #include <QObject>
-#include <QVector>
 
 namespace LibImportWizard
 {
@@ -45,11 +45,11 @@ public:
     static ImportMailPluginManager *self();
     bool initializePluginList();
 
-    QVector<LibImportWizard::AbstractImporter *> pluginsList() const;
+    QList<LibImportWizard::AbstractImporter *> pluginsList() const;
 
 private:
     void loadPlugin(ImportMailPluginManagerInfo *item);
     PluginUtilData createPluginMetaData(const KPluginMetaData &metaData);
-    QVector<ImportMailPluginManagerInfo> mPluginList;
-    QVector<PluginUtilData> mPluginDataList;
+    QList<ImportMailPluginManagerInfo> mPluginList;
+    QList<PluginUtilData> mPluginDataList;
 };

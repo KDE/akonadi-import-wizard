@@ -7,7 +7,7 @@
 #pragma once
 #include "libimportwizard_export.h"
 #include <MailCommon/FilterImporterExporter>
-#include <QVector>
+#include <QList>
 namespace MailImporter
 {
 class FilterInfo;
@@ -59,7 +59,7 @@ public:
 protected:
     void initializeFilter(MailImporter::Filter &filter);
 
-    void appendFilters(const QVector<MailCommon::MailFilter *> &filters);
+    void appendFilters(const QList<MailCommon::MailFilter *> &filters);
     void addImportFilterInfo(const QString &log) const;
     void addImportFilterError(const QString &log) const;
     bool addFilters(const QString &filterPath, MailCommon::FilterImporterExporter::FilterType type);

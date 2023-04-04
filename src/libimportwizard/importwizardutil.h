@@ -38,6 +38,6 @@ namespace ImportWizardUtil
 enum ResourceType { Imap, Pop3, Ldap };
 
 LIBIMPORTWIZARD_EXPORT void mergeLdap(const ldapStruct &ldap);
-LIBIMPORTWIZARD_EXPORT void addAkonadiTag(const QVector<tagStruct> &tagList);
+LIBIMPORTWIZARD_EXPORT void addAkonadiTag(const QList<tagStruct> &tagList);
 void storePassword(const QString &name, ImportWizardUtil::ResourceType type, const QString &password);
 }

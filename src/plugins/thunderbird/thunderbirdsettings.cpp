@@ -254,7 +254,7 @@ int ThunderbirdSettings::adaptAutoResizeResolution(int index, const QString &con
 
 void ThunderbirdSettings::readTagSettings()
 {
-    QVector<tagStruct> v;
+    QList<tagStruct> v;
     v.reserve(mHashTag.size());
     for (const tagStruct &tag : std::as_const(mHashTag)) {
         v.push_back(tag);

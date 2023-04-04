@@ -191,7 +191,7 @@ void ImportWizard::createAutomaticModePage()
 
 void ImportWizard::initializeImportModule()
 {
-    const QVector<LibImportWizard::AbstractImporter *> lstPlugins = ImportMailPluginManager::self()->pluginsList();
+    const QList<LibImportWizard::AbstractImporter *> lstPlugins = ImportMailPluginManager::self()->pluginsList();
     for (LibImportWizard::AbstractImporter *abstractPlugin : lstPlugins) {
         if (abstractPlugin->foundMailer()) {
             abstractPlugin->setAbstractDisplayInfo(mAbstractDisplayInfo);

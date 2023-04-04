@@ -7,7 +7,7 @@
 #pragma once
 
 #include "ui_manualselectfilterpage.h"
-#include <QVector>
+#include <QList>
 namespace MailImporter
 {
 class Filter;
@@ -31,5 +31,5 @@ private Q_SLOTS:
 
 private:
     Ui::ManualSelectFilterPage *mWidget = nullptr;
-    QVector<MailImporter::Filter *> mFilterList;
+    QList<MailImporter::Filter *> mFilterList;
 };

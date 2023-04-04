@@ -35,10 +35,9 @@ ImportMailPluginManager *ImportMailPluginManager::self()
 
 bool ImportMailPluginManager::initializePluginList()
 {
-    const QVector<KPluginMetaData> plugins =
-        KPluginMetaData::findPlugins(QStringLiteral("pim" QT_STRINGIFY(QT_VERSION_MAJOR)) + QStringLiteral("/importwizard"));
+    const QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("pim" QT_STRINGIFY(QT_VERSION_MAJOR)) + QStringLiteral("/importwizard"));
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QVectorIterator<KPluginMetaData> i(plugins);
+    QListIterator<KPluginMetaData> i(plugins);
 #else
     QListIterator<KPluginMetaData> i(plugins);
 #endif
@@ -58,8 +57,8 @@ bool ImportMailPluginManager::initializePluginList()
             qCWarning(IMPORTWIZARD_LOG) << "Plugin " << data.name() << " doesn't have correction plugin version. It will not be loaded.";
         }
     }
-    QVector<ImportMailPluginManagerInfo>::iterator end(mPluginList.end());
-    for (QVector<ImportMailPluginManagerInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
+    QList<ImportMailPluginManagerInfo>::iterator end(mPluginList.end());
+    for (QList<ImportMailPluginManagerInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
         loadPlugin(&(*it));
     }
     return true;
@@ -73,11 +72,11 @@ void ImportMailPluginManager::loadPlugin(ImportMailPluginManagerInfo *item)
     }
 }
 
-QVector<LibImportWizard::AbstractImporter *> ImportMailPluginManager::pluginsList() const
+QList<LibImportWizard::AbstractImporter *> ImportMailPluginManager::pluginsList() const
 {
-    QVector<LibImportWizard::AbstractImporter *> lst;
-    QVector<ImportMailPluginManagerInfo>::ConstIterator end(mPluginList.constEnd());
-    for (QVector<ImportMailPluginManagerInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
+    QList<LibImportWizard::AbstractImporter *> lst;
+    QList<ImportMailPluginManagerInfo>::ConstIterator end(mPluginList.constEnd());
+    for (QList<ImportMailPluginManagerInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
         if (auto plugin = (*it).plugin) {
             lst << plugin;
         }

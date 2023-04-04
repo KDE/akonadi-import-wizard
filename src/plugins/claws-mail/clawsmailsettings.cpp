@@ -158,7 +158,7 @@ void ClawsMailSettings::readTagColor(const KConfigGroup &group)
 {
     const QString customColorPattern(QStringLiteral("custom_color%1"));
     const QString customColorLabelPattern(QStringLiteral("custom_colorlabel%1"));
-    QVector<tagStruct> listTag;
+    QList<tagStruct> listTag;
     for (int i = 1; i <= 15; ++i) {
         if (group.hasKey(customColorPattern.arg(i)) && group.hasKey(customColorLabelPattern.arg(i))) {
             tagStruct tag;
