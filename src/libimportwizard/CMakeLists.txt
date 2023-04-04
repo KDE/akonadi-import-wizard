@@ -6,7 +6,6 @@ ecm_setup_version(PROJECT
 )
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6ImportWizard")
-set(IMPORTWIZARD_KF6_COMPAT FALSE)
 
 add_library(KPim6ImportWizard)
 add_library(KPim6::ImportWizard ALIAS KPim6ImportWizard)
@@ -84,7 +83,7 @@ target_link_libraries(KPim6ImportWizard
     KPim6::MailImporterAkonadi
     KF6::I18n
     )
-target_link_libraries(KPim6ImportWizard PRIVATE qt${QT_MAJOR_VERSION}keychain)
+target_link_libraries(KPim6ImportWizard PRIVATE qt6keychain)
 set_target_properties(KPim6ImportWizard PROPERTIES
     VERSION ${IMPORTWIZARD_VERSION}
     SOVERSION ${IMPORTWIZARD_SOVERSION}
@@ -125,32 +124,3 @@ install(FILES
     COMPONENT Devel
     )
 
-if (QT_MAJOR_VERSION STREQUAL "5")
-##
-# TODO: Backwards compatiblity. Remove in next major version
-##
-set(CMAKECONFIG_INSTALL_DIR_KF6 "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPimImportWizard")
-set(IMPORTWIZARD_KF6_COMPAT TRUE)
-configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KPimImportWizardConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPimImportWizardConfig.cmake"
-    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR_KF6}
-)
-
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KPimImportWizardConfig.cmake"
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF6}"
-    COMPONENT Devel
-)
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6ImportWizardConfigVersion.cmake"
-    RENAME "KPimImportWizardConfigVersion.cmake"
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF6}"
-    COMPONENT Devel
-)
-install(EXPORT KPim6ImportWizardTargets
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF6}"
-    FILE KPim6ImportWizardTargets.cmake
-    NAMESPACE KPim::
-)
-endif()

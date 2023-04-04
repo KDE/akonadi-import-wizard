@@ -14,7 +14,7 @@ ecm_qt_declare_logging_category(thunderbirdimporter_SRCS HEADER thunderbirdplugi
         EXPORT IMPORTWIZARD
     )
 
-kcoreaddons_add_plugin(thunderbirdimporterplugin SOURCES ${thunderbirdimporter_SRCS} INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/importwizard)
+kcoreaddons_add_plugin(thunderbirdimporterplugin SOURCES ${thunderbirdimporter_SRCS} INSTALL_NAMESPACE pim6/importwizard)
 set_target_properties(thunderbirdimporterplugin PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/importwizard/")
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(thunderbirdimporterplugin PROPERTIES UNITY_BUILD ON)

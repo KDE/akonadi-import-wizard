@@ -15,7 +15,7 @@ ecm_qt_declare_logging_category(balsaimporter_SRCS HEADER balsaplugin_debug.h
 
 
 
-kcoreaddons_add_plugin(balsaimporterplugin SOURCES ${balsaimporter_SRCS} INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/importwizard)
+kcoreaddons_add_plugin(balsaimporterplugin SOURCES ${balsaimporter_SRCS} INSTALL_NAMESPACE pim6/importwizard)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(balsaimporterplugin PROPERTIES UNITY_BUILD ON)
 endif()
