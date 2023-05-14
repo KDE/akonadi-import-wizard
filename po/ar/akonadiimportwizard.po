@@ -50,12 +50,12 @@ msgstr "أغلق «بريدك» قبل استيراد البيانات. ستعد
 #: importwizard.cpp:125
 #, kde-format
 msgid "Step 1: Select Filter"
-msgstr "خطوة ١: اختر مرشّحًا"
+msgstr "خطوة 1: اختر مرشّحًا"
 
 #: importwizard.cpp:130
 #, kde-format
 msgid "Step 2: Importing..."
-msgstr "خطوة ٢: يستورد..."
+msgstr "خطوة 2: يستورد..."
 
 #: importwizard.cpp:159
 #, kde-format
