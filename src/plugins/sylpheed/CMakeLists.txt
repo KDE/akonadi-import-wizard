@@ -28,6 +28,6 @@ target_link_libraries(sylpheedimporterplugin
     KF6::Contacts
     KPim6::MailImporterAkonadi
     KPim6::MailTransport
-    KPim6::IdentityManagement
+    KPim6::IdentityManagementCore
     KPim6::MailCommon
     )

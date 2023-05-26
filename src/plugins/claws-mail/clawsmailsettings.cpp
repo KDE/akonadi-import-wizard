@@ -10,7 +10,7 @@
 #include <MailCommon/MailUtil>
 #include <MailTransport/TransportManager>
 
-#include <KIdentityManagement/Identity>
+#include <KIdentityManagementCore/Identity>
 
 #include "clawsmailplugin_debug.h"
 #include <KConfig>

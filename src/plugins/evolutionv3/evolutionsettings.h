@@ -7,7 +7,7 @@
 #pragma once
 
 #include "abstractsettings.h"
-#include <KIdentityManagement/Signature>
+#include <KIdentityManagementCore/Signature>
 #include <QString>
 
 class QDomElement;
@@ -30,5 +30,5 @@ private:
     QString getAuthMethod(const QString &path, bool &found);
     void addAuth(QMap<QString, QVariant> &settings, const QString &argument, const QString &userName);
 
-    QMap<QString, KIdentityManagement::Signature> mMapSignature;
+    QMap<QString, KIdentityManagementCore::Signature> mMapSignature;
 };

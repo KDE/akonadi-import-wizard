@@ -9,8 +9,8 @@
 
 #include <MailTransport/TransportManager>
 
-#include <KIdentityManagement/Identity>
-#include <KIdentityManagement/Signature>
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/Signature>
 
 #include "trojitaplugin_debug.h"
 
@@ -141,7 +141,7 @@ void TrojitaSettings::readIdentity()
     for (int i = 0; i < size; ++i) {
         settings->setArrayIndex(i);
         QString realName = settings->value(QStringLiteral("realName")).toString();
-        KIdentityManagement::Identity *identity = createIdentity(realName);
+        KIdentityManagementCore::Identity *identity = createIdentity(realName);
         identity->setFullName(realName);
         identity->setIdentityName(realName);
         const QString address = settings->value(QStringLiteral("address")).toString();
@@ -150,8 +150,8 @@ void TrojitaSettings::readIdentity()
         identity->setOrganization(organisation);
         QString signatureStr = settings->value(QStringLiteral("signature")).toString();
         if (!signatureStr.isEmpty()) {
-            KIdentityManagement::Signature signature;
-            signature.setType(KIdentityManagement::Signature::Inlined);
+            KIdentityManagementCore::Signature signature;
+            signature.setType(KIdentityManagementCore::Signature::Inlined);
             signature.setText(signatureStr);
             identity->setSignature(signature);
         }

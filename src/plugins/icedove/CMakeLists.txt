@@ -25,6 +25,6 @@ target_link_libraries(icedoveimporterplugin
     KF6::Contacts
     KPim6::MailImporterAkonadi
     KPim6::MailTransport
-    KPim6::IdentityManagement
+    KPim6::IdentityManagementCore
     KPim6::MailCommon
     )

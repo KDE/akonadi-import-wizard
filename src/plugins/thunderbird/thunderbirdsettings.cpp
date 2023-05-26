@@ -8,8 +8,8 @@
 #include <MailCommon/MailUtil>
 #include <MailTransport/TransportManager>
 
-#include <KIdentityManagement/Identity>
-#include <KIdentityManagement/Signature>
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/Signature>
 
 #include "thunderbirdplugin_debug.h"
 #include <KContacts/VCardConverter>
@@ -839,7 +839,7 @@ void ThunderbirdSettings::readIdentity(const QString &account)
 {
     const QString identity = QStringLiteral("mail.identity.%1").arg(account);
     QString fullName = mHashConfig.value(identity + QStringLiteral(".fullName")).toString();
-    KIdentityManagement::Identity *newIdentity = createIdentity(fullName);
+    KIdentityManagementCore::Identity *newIdentity = createIdentity(fullName);
 
     const QString smtpServer = mHashConfig.value(identity + QStringLiteral(".smtpServer")).toString();
     if (!smtpServer.isEmpty() && mHashSmtp.contains(smtpServer)) {
@@ -870,7 +870,7 @@ void ThunderbirdSettings::readIdentity(const QString &account)
     const QString replyTo = mHashConfig.value(identity + QStringLiteral(".reply_to")).toString();
     newIdentity->setReplyToAddr(replyTo);
 
-    KIdentityManagement::Signature signature;
+    KIdentityManagementCore::Signature signature;
     const bool signatureHtml = mHashConfig.value(identity + QStringLiteral(".htmlSigFormat")).toBool();
     if (signatureHtml) {
         signature.setInlinedHtml(true);
@@ -879,11 +879,11 @@ void ThunderbirdSettings::readIdentity(const QString &account)
     const bool attachSignature = mHashConfig.value(identity + QStringLiteral(".attach_signature")).toBool();
     if (attachSignature) {
         const QString fileSignature = mHashConfig.value(identity + QStringLiteral(".sig_file")).toString();
-        signature.setType(KIdentityManagement::Signature::FromFile);
+        signature.setType(KIdentityManagementCore::Signature::FromFile);
         signature.setPath(fileSignature, false);
     } else {
         const QString textSignature = mHashConfig.value(identity + QStringLiteral(".htmlSigText")).toString();
-        signature.setType(KIdentityManagement::Signature::Inlined);
+        signature.setType(KIdentityManagementCore::Signature::Inlined);
         signature.setText(textSignature);
     }
 

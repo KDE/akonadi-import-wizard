@@ -9,14 +9,14 @@
 #include <Akonadi/EntityMimeTypeFilterModel>
 #include <Akonadi/EntityTreeModel>
 #include <Akonadi/Session>
-#include <KIdentityManagement/IdentityManager>
+#include <KIdentityManagementCore/IdentityManager>
 #include <KSharedConfig>
 #include <MailCommon/FolderCollectionMonitor>
 
 ImportWizardKernel::ImportWizardKernel(QObject *parent)
     : QObject(parent)
 {
-    mIdentityManager = KIdentityManagement::IdentityManager::self();
+    mIdentityManager = KIdentityManagementCore::IdentityManager::self();
     auto session = new Akonadi::Session("ImportWizard Kernel ETM", this);
     mFolderCollectionMonitor = new MailCommon::FolderCollectionMonitor(session, this);
 
@@ -32,7 +32,7 @@ ImportWizardKernel::ImportWizardKernel(QObject *parent)
     mCollectionModel->setSortCaseSensitivity(Qt::CaseInsensitive);
 }
 
-KIdentityManagement::IdentityManager *ImportWizardKernel::identityManager()
+KIdentityManagementCore::IdentityManager *ImportWizardKernel::identityManager()
 {
     return mIdentityManager;
 }

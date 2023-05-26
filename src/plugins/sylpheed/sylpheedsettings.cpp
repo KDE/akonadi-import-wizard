@@ -10,8 +10,8 @@
 #include <MailTransport/TransportManager>
 #include <QFileInfo>
 
-#include <KIdentityManagement/Identity>
-#include <KIdentityManagement/Signature>
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/Signature>
 
 #include "sylpheedplugin_debug.h"
 #include <KConfig>
@@ -240,21 +240,21 @@ QString SylpheedSettings::convertToKmailTemplate(const QString &templateStr)
     return newTemplate;
 }
 
-void SylpheedSettings::readSignature(const KConfigGroup &accountConfig, KIdentityManagement::Identity *identity)
+void SylpheedSettings::readSignature(const KConfigGroup &accountConfig, KIdentityManagementCore::Identity *identity)
 {
-    KIdentityManagement::Signature signature;
+    KIdentityManagementCore::Signature signature;
     const int signatureType = accountConfig.readEntry("signature_type", 0);
     switch (signatureType) {
     case 0: // File
-        signature.setType(KIdentityManagement::Signature::FromFile);
+        signature.setType(KIdentityManagementCore::Signature::FromFile);
         signature.setPath(accountConfig.readEntry("signature_path"), false);
         break;
     case 1: // Output
-        signature.setType(KIdentityManagement::Signature::FromCommand);
+        signature.setType(KIdentityManagementCore::Signature::FromCommand);
         signature.setPath(accountConfig.readEntry("signature_path"), true);
         break;
     case 2: // Text
-        signature.setType(KIdentityManagement::Signature::Inlined);
+        signature.setType(KIdentityManagementCore::Signature::Inlined);
         signature.setText(accountConfig.readEntry("signature_text"));
         break;
     default:
@@ -441,7 +441,7 @@ void SylpheedSettings::readAccount(const KConfigGroup &accountConfig, bool check
 void SylpheedSettings::readIdentity(const KConfigGroup &accountConfig)
 {
     QString name = accountConfig.readEntry(QStringLiteral("name"));
-    KIdentityManagement::Identity *identity = createIdentity(name);
+    KIdentityManagementCore::Identity *identity = createIdentity(name);
 
     identity->setFullName(name);
     identity->setIdentityName(name);

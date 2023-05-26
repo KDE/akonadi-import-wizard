@@ -10,8 +10,8 @@
 #include <MailTransport/TransportManager>
 #include <MessageViewer/KXFace>
 
-#include <KIdentityManagement/Identity>
-#include <KIdentityManagement/Signature>
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/Signature>
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -84,7 +84,7 @@ void BalsaSettings::readAccount(const KConfigGroup &grp, bool autoCheck, int aut
 void BalsaSettings::readIdentity(const KConfigGroup &grp)
 {
     QString name = grp.readEntry(QStringLiteral("FullName"));
-    KIdentityManagement::Identity *newIdentity = createIdentity(name);
+    KIdentityManagementCore::Identity *newIdentity = createIdentity(name);
     newIdentity->setFullName(name);
     newIdentity->setPrimaryEmailAddress(grp.readEntry(QStringLiteral("Address")));
     newIdentity->setReplyToAddr(grp.readEntry(QStringLiteral("ReplyTo")));
@@ -99,12 +99,12 @@ void BalsaSettings::readIdentity(const KConfigGroup &grp)
 
     const QString signaturePath = grp.readEntry(QStringLiteral("SignaturePath"));
     if (!signaturePath.isEmpty()) {
-        KIdentityManagement::Signature signature;
+        KIdentityManagementCore::Signature signature;
         if (grp.readEntry(QStringLiteral("SigExecutable"), false)) {
             signature.setPath(signaturePath, true);
-            signature.setType(KIdentityManagement::Signature::FromCommand);
+            signature.setType(KIdentityManagementCore::Signature::FromCommand);
         } else {
-            signature.setType(KIdentityManagement::Signature::FromFile);
+            signature.setType(KIdentityManagementCore::Signature::FromFile);
         }
         newIdentity->setSignature(signature);
     }

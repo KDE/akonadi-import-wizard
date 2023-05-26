@@ -6,8 +6,8 @@
 #include "abstractsettings.h"
 #include "abstractdisplayinfo.h"
 
-#include <KIdentityManagement/Identity>
-#include <KIdentityManagement/IdentityManager>
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/IdentityManager>
 #include <MailTransport/TransportManager>
 
 #include <KLocalizedString>
@@ -22,7 +22,7 @@ using namespace Akonadi;
 
 AbstractSettings::AbstractSettings()
 {
-    mManager = KIdentityManagement::IdentityManager::self();
+    mManager = KIdentityManagementCore::IdentityManager::self();
     mKmailConfig = KSharedConfig::openConfig(QStringLiteral("kmail2rc"));
 }
 
@@ -31,15 +31,15 @@ AbstractSettings::~AbstractSettings()
     syncKmailConfig();
 }
 
-KIdentityManagement::Identity *AbstractSettings::createIdentity(QString &name)
+KIdentityManagementCore::Identity *AbstractSettings::createIdentity(QString &name)
 {
     name = uniqueIdentityName(name);
-    KIdentityManagement::Identity *identity = &mManager->newFromScratch(name);
+    KIdentityManagementCore::Identity *identity = &mManager->newFromScratch(name);
     addImportInfo(i18n("Setting up identity..."));
     return identity;
 }
 
-void AbstractSettings::storeIdentity(KIdentityManagement::Identity *identity)
+void AbstractSettings::storeIdentity(KIdentityManagementCore::Identity *identity)
 {
     mManager->setAsDefault(identity->uoid());
     mManager->commit();

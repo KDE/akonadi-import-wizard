@@ -28,7 +28,7 @@ protected:
     QString readTransport(const KConfigGroup &accountConfig);
     void readPop3Account(const KConfigGroup &accountConfig, bool checkMailOnStartup, int intervalCheckMail);
     void readImapAccount(const KConfigGroup &accountConfig, bool checkMailOnStartup, int intervalCheckMail);
-    void readSignature(const KConfigGroup &accountConfig, KIdentityManagement::Identity *identity);
+    void readSignature(const KConfigGroup &accountConfig, KIdentityManagementCore::Identity *identity);
 
     virtual void readSettingsColor(const KConfigGroup &group);
     virtual void readTemplateFormat(const KConfigGroup &group);

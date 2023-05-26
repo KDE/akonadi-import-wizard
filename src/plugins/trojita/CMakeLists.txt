@@ -28,5 +28,5 @@ target_link_libraries(trojitaimporterplugin
     KPim6::MailImporterAkonadi
     KPim6::MailTransport
     KPim6::MailCommon
-    KPim6::IdentityManagement
+    KPim6::IdentityManagementCore
     )

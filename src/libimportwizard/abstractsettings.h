@@ -11,7 +11,7 @@
 #include <KSharedConfig>
 #include <QMap>
 
-namespace KIdentityManagement
+namespace KIdentityManagementCore
 {
 class Identity;
 class IdentityManager;
@@ -39,13 +39,13 @@ protected:
 
     QString createResource(const QString &resources, const QString &name, const QMap<QString, QVariant> &settings);
 
-    KIdentityManagement::Identity *createIdentity(QString &name);
+    KIdentityManagementCore::Identity *createIdentity(QString &name);
 
     MailTransport::Transport *createTransport();
 
     void storeTransport(MailTransport::Transport *mt, bool isDefault = false);
 
-    void storeIdentity(KIdentityManagement::Identity *identity);
+    void storeIdentity(KIdentityManagementCore::Identity *identity);
 
     void addKmailConfig(const QString &groupName, const QString &key, const QString &value);
     void addKmailConfig(const QString &groupName, const QString &key, bool value);
@@ -57,6 +57,6 @@ protected:
     void addToManualCheck(const QString &agentIdentifyName, bool manualCheck);
     int readKmailSettings(const QString &groupName, const QString &key);
 
-    KIdentityManagement::IdentityManager *mManager = nullptr;
+    KIdentityManagementCore::IdentityManager *mManager = nullptr;
     KSharedConfigPtr mKmailConfig;
 };

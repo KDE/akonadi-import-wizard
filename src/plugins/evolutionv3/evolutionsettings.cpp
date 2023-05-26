@@ -9,7 +9,7 @@
 #include "importwizardutil.h"
 #include <MailCommon/MailUtil>
 
-#include <KIdentityManagement/Identity>
+#include <KIdentityManagementCore/Identity>
 
 #include <MailTransport/TransportManager>
 
@@ -188,7 +188,7 @@ void EvolutionSettings::extractSignatureInfo(const QString &info)
         return;
     }
     for (QDomElement e = domElement.firstChildElement(); !e.isNull(); e = e.nextSiblingElement()) {
-        KIdentityManagement::Signature signature;
+        KIdentityManagementCore::Signature signature;
 
         const QString tag = e.tagName();
         const QString uid = e.attribute(QStringLiteral("uid"));
@@ -207,10 +207,10 @@ void EvolutionSettings::extractSignatureInfo(const QString &info)
             if (tag == QLatin1String("filename")) {
                 if (e.hasAttribute(QStringLiteral("script")) && e.attribute(QStringLiteral("script")) == QLatin1String("true")) {
                     signature.setPath(e.text(), true);
-                    signature.setType(KIdentityManagement::Signature::FromCommand);
+                    signature.setType(KIdentityManagementCore::Signature::FromCommand);
                 } else {
                     signature.setPath(QDir::homePath() + QLatin1String("/.local/share/evolution/signatures/") + e.text(), false);
-                    signature.setType(KIdentityManagement::Signature::FromFile);
+                    signature.setType(KIdentityManagementCore::Signature::FromFile);
                 }
             }
         }
@@ -251,7 +251,7 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
         name = domElement.attribute(QStringLiteral("name"));
     }
 
-    KIdentityManagement::Identity *newIdentity = createIdentity(name);
+    KIdentityManagementCore::Identity *newIdentity = createIdentity(name);
 
     const bool enableManualCheck = (domElement.attribute(QStringLiteral("enabled")) == QLatin1String("true"));
 
