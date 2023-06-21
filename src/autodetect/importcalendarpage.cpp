@@ -34,3 +34,5 @@ void ImportCalendarPage::setImportButtonEnabled(bool enabled)
 {
     ui->importCalendar->setEnabled(enabled);
 }
+
+#include "moc_importcalendarpage.cpp"

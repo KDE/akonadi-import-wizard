@@ -72,3 +72,5 @@ LibImportWizard::AbstractImporter::TypeSupportedOptions SelectComponentPage::sel
         return newOptions;
     }
 }
+
+#include "moc_selectcomponentpage.cpp"

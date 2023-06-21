@@ -419,3 +419,5 @@ void ImportWizard::slotSelectManualSelectionChanged(bool b)
     mMode = b ? WizardMode::Manual : WizardMode::AutoDetect;
     updatePagesFromMode();
 }
+
+#include "moc_importwizard.cpp"

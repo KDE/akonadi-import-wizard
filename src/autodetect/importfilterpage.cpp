@@ -33,3 +33,5 @@ void ImportFilterPage::setImportButtonEnabled(bool enabled)
 {
     ui->importFilters->setEnabled(enabled);
 }
+
+#include "moc_importfilterpage.cpp"

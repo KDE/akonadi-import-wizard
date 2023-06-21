@@ -38,3 +38,5 @@ void AbstractCalendar::addEvenViewConfig(const QString &groupName, const QString
     group.writeEntry(key, value);
     group.sync();
 }
+
+#include "moc_abstractcalendar.cpp"

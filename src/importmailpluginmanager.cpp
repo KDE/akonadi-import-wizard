@@ -87,3 +87,5 @@ PluginUtilData ImportMailPluginManager::createPluginMetaData(const KPluginMetaDa
     pluginData.mIdentifier = metaData.pluginId();
     return pluginData;
 }
+
+#include "moc_importmailpluginmanager.cpp"

@@ -40,3 +40,5 @@ void ImportMailPage::setImportButtonEnabled(bool enabled)
 {
     ui->importMails->setEnabled(enabled);
 }
+
+#include "moc_importmailpage.cpp"

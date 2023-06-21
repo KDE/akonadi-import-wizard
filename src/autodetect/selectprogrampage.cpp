@@ -52,3 +52,5 @@ void SelectProgramPage::slotSelectManualSelectionChanged(bool b)
     ui->listProgramFound->setEnabled(!b);
     Q_EMIT selectManualSelectionChanged(b);
 }
+
+#include "moc_selectprogrampage.cpp"

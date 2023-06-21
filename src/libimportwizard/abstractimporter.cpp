@@ -116,3 +116,5 @@ void AbstractImporter::setAbstractDisplayInfo(AbstractDisplayInfo *info)
 {
     mAbstractDisplayInfo = info;
 }
+
+#include "moc_abstractimporter.cpp"

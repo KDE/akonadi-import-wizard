@@ -25,3 +25,5 @@ Ui::ManualImportMailPage *ManualImportMailPage::widget() const
 {
     return mWidget;
 }
+
+#include "moc_manualimportmailpage.cpp"

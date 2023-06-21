@@ -145,3 +145,5 @@ int AbstractSettings::readKmailSettings(const QString &groupName, const QString 
     int value = group.readEntry(key, -1);
     return value;
 }
+
+#include "moc_abstractsettings.cpp"

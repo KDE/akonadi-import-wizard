@@ -166,3 +166,5 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
         }
     }
 }
+
+#include "moc_sylpheedaddressbook.cpp"

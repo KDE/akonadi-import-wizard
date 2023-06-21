@@ -34,3 +34,5 @@ void ImportAddressbookPage::setImportButtonEnabled(bool enabled)
 {
     ui->importAddressBook->setEnabled(enabled);
 }
+
+#include "moc_importaddressbookpage.cpp"

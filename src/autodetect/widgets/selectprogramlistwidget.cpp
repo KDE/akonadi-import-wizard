@@ -48,3 +48,5 @@ void SelectProgramListWidget::paintEvent(QPaintEvent *event)
         QListWidget::paintEvent(event);
     }
 }
+
+#include "moc_selectprogramlistwidget.cpp"

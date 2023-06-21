@@ -79,3 +79,5 @@ void ImportWizardSavePasswordJob::setPassword(const QString &password)
 {
     mPassword = password;
 }
+
+#include "moc_importwizardsavepasswordjob.cpp"

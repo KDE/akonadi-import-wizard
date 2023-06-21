@@ -117,3 +117,5 @@ void AbstractAddressBook::cleanUp()
 {
     mCollection = Akonadi::Collection();
 }
+
+#include "moc_abstractaddressbook.cpp"

@@ -87,3 +87,5 @@ void EvolutionAddressBook::exportEvolutionAddressBook()
         }
     }
 }
+
+#include "moc_evolutionaddressbook.cpp"

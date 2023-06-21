@@ -247,3 +247,5 @@ void ThunderBirdAddressBook::readAddressBook(const QString &filename)
         }
     }
 }
+
+#include "moc_thunderbirdaddressbook.cpp"

@@ -110,3 +110,5 @@ Ui::ManualSelectFilterPage *ManualSelectFilterPage::widget() const
 {
     return mWidget;
 }
+
+#include "moc_manualselectfilterpage.cpp"
