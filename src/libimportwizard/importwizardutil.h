@@ -31,7 +31,7 @@ struct tagStruct {
     QString name;
     QColor color;
 };
-Q_DECLARE_TYPEINFO(tagStruct, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(tagStruct, Q_RELOCATABLE_TYPE);
 
 namespace ImportWizardUtil
 {
