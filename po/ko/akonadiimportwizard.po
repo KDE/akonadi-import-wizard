@@ -65,7 +65,7 @@ msgstr "프로그램 감지"
 #: importwizard.cpp:164
 #, kde-format
 msgid "Select material to import"
-msgstr "가져올 자원 선택"
+msgstr "가져올 리소스 선택"
 
 #: importwizard.cpp:168
 #, kde-format
