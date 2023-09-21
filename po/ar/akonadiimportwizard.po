@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2022-01-02 21:13+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -247,27 +247,27 @@ msgstr "يضبط النّقل..."
 msgid "Transport set up."
 msgstr "ضُبط النّقل."
 
-#: main.cpp:42 main.cpp:44
+#: main.cpp:28 main.cpp:30
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "أداة استيراد PIM"
 
-#: main.cpp:46
+#: main.cpp:32
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "الحقوق محفوظة ©2012-%1 لمؤلّفي «مرشد الاستيراد»"
 
-#: main.cpp:48
+#: main.cpp:34
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:48
+#: main.cpp:34
 #, kde-format
 msgid "Maintainer"
 msgstr "المصين"
 
-#: main.cpp:54
+#: main.cpp:40
 #, kde-format
 msgid "Mode: %1"
 msgstr "الوضع: %1"
@@ -277,18 +277,18 @@ msgstr "الوضع: %1"
 msgid "<p><i>Written by %1.</i></p>"
 msgstr "<p><i>كتبه %1.</i></p>"
 
-#: plugins/balsa/balsaaddressbook.cpp:39 plugins/balsa/balsaaddressbook.cpp:52
+#: plugins/balsa/balsaaddressbook.cpp:36 plugins/balsa/balsaaddressbook.cpp:49
 #: plugins/sylpheed/sylpheedaddressbook.cpp:27
 #, kde-format
 msgid "No addressbook found"
 msgstr "لم يُعثر على دفتر عناوين"
 
-#: plugins/balsa/balsaaddressbook.cpp:66
+#: plugins/balsa/balsaaddressbook.cpp:63
 #, kde-format
 msgid "Ldap created"
 msgstr "أُنشئ LDAP"
 
-#: plugins/balsa/balsaaddressbook.cpp:100
+#: plugins/balsa/balsaaddressbook.cpp:93
 #, kde-format
 msgid "New addressbook created: %1"
 msgstr "أُنشئ دفتر عناوين جديد: %1"

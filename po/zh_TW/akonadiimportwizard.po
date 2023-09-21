@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2022-12-30 19:38+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -243,27 +243,27 @@ msgstr "設定郵件傳遞帳號中..."
 msgid "Transport set up."
 msgstr "郵件傳遞帳號已設定。"
 
-#: main.cpp:42 main.cpp:44
+#: main.cpp:28 main.cpp:30
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "個人資訊管理匯入工具"
 
-#: main.cpp:46
+#: main.cpp:32
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "Copyright © 2012-%1 ImportWizard 開發團隊"
 
-#: main.cpp:48
+#: main.cpp:34
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:48
+#: main.cpp:34
 #, kde-format
 msgid "Maintainer"
 msgstr "維護者"
 
-#: main.cpp:54
+#: main.cpp:40
 #, kde-format
 msgid "Mode: %1"
 msgstr "模式：%1"
@@ -273,18 +273,18 @@ msgstr "模式：%1"
 msgid "<p><i>Written by %1.</i></p>"
 msgstr "<p><i>這個過濾器是由 %1 所撰寫</i></p>"
 
-#: plugins/balsa/balsaaddressbook.cpp:39 plugins/balsa/balsaaddressbook.cpp:52
+#: plugins/balsa/balsaaddressbook.cpp:36 plugins/balsa/balsaaddressbook.cpp:49
 #: plugins/sylpheed/sylpheedaddressbook.cpp:27
 #, kde-format
 msgid "No addressbook found"
 msgstr "找不到通訊錄"
 
-#: plugins/balsa/balsaaddressbook.cpp:66
+#: plugins/balsa/balsaaddressbook.cpp:63
 #, kde-format
 msgid "Ldap created"
 msgstr "Ldap 已建立"
 
-#: plugins/balsa/balsaaddressbook.cpp:100
+#: plugins/balsa/balsaaddressbook.cpp:93
 #, kde-format
 msgid "New addressbook created: %1"
 msgstr "已新增通訊錄：%1"

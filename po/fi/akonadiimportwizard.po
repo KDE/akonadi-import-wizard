@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: importwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2022-01-27 20:51+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -245,27 +245,27 @@ msgstr "Asetetaan postinvälitystä…"
 msgid "Transport set up."
 msgstr "Postinvälitys asetettu."
 
-#: main.cpp:42 main.cpp:44
+#: main.cpp:28 main.cpp:30
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "PIMin tuontityökalu"
 
-#: main.cpp:46
+#: main.cpp:32
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "Tekijänoikeudet © 2012–%1 ImportWizardin tekijät"
 
-#: main.cpp:48
+#: main.cpp:34
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:48
+#: main.cpp:34
 #, kde-format
 msgid "Maintainer"
 msgstr "Ylläpitäjä"
 
-#: main.cpp:54
+#: main.cpp:40
 #, kde-format
 msgid "Mode: %1"
 msgstr "Tila: %1"
@@ -275,18 +275,18 @@ msgstr "Tila: %1"
 msgid "<p><i>Written by %1.</i></p>"
 msgstr "<p><i>Tehnyt %1.</i></p>"
 
-#: plugins/balsa/balsaaddressbook.cpp:39 plugins/balsa/balsaaddressbook.cpp:52
+#: plugins/balsa/balsaaddressbook.cpp:36 plugins/balsa/balsaaddressbook.cpp:49
 #: plugins/sylpheed/sylpheedaddressbook.cpp:27
 #, kde-format
 msgid "No addressbook found"
 msgstr "Osoitekirjaa ei löytynyt"
 
-#: plugins/balsa/balsaaddressbook.cpp:66
+#: plugins/balsa/balsaaddressbook.cpp:63
 #, kde-format
 msgid "Ldap created"
 msgstr "Ldap luotiin"
 
-#: plugins/balsa/balsaaddressbook.cpp:100
+#: plugins/balsa/balsaaddressbook.cpp:93
 #, kde-format
 msgid "New addressbook created: %1"
 msgstr "Luotiin uusi osoitekirja: %1"

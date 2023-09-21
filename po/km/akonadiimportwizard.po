@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: importwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2012-12-25 16:30+0700\n"
 "Last-Translator: sutha <sutha@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros>\n"
@@ -256,28 +256,28 @@ msgstr "កំពុង​រៀបចំ​ការ​ធ្វើ​ដំណ
 msgid "Transport set up."
 msgstr "បាន​រៀបចំ​ការ​ធ្វើ​ដំណើរ ។"
 
-#: main.cpp:42 main.cpp:44
+#: main.cpp:28 main.cpp:30
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "ឧបករណ៍​នាំចូល​របស់ PIM"
 
-#: main.cpp:46
+#: main.cpp:32
 #, fuzzy, kde-format
 #| msgid "Copyright © 2012 importwizard authors"
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "រក្សាសិទ្ធិ​ឆ្នាំ ២០១២ ដោយ​អ្នក​និពន្ធ​អ្នកជំនួយការ​នាំចូល"
 
-#: main.cpp:48
+#: main.cpp:34
 #, kde-format
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:48
+#: main.cpp:34
 #, kde-format
 msgid "Maintainer"
 msgstr "អ្នក​ថែទាំ"
 
-#: main.cpp:54
+#: main.cpp:40
 #, kde-format
 msgid "Mode: %1"
 msgstr ""
@@ -287,19 +287,19 @@ msgstr ""
 msgid "<p><i>Written by %1.</i></p>"
 msgstr ""
 
-#: plugins/balsa/balsaaddressbook.cpp:39 plugins/balsa/balsaaddressbook.cpp:52
+#: plugins/balsa/balsaaddressbook.cpp:36 plugins/balsa/balsaaddressbook.cpp:49
 #: plugins/sylpheed/sylpheedaddressbook.cpp:27
 #, fuzzy, kde-format
 #| msgid "Import addressbook"
 msgid "No addressbook found"
 msgstr "នាំចូល​សៀវភៅ​អាសយដ្ឋាន"
 
-#: plugins/balsa/balsaaddressbook.cpp:66
+#: plugins/balsa/balsaaddressbook.cpp:63
 #, kde-format
 msgid "Ldap created"
 msgstr ""
 
-#: plugins/balsa/balsaaddressbook.cpp:100
+#: plugins/balsa/balsaaddressbook.cpp:93
 #, fuzzy, kde-format
 #| msgid "Import addressbook from %1..."
 msgid "New addressbook created: %1"
