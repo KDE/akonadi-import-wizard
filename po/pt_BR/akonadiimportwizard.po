@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiimportwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2022-01-04 11:22-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -307,7 +307,9 @@ msgstr ""
 "no KAddressBook."
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Export Evolution Address Book"
+msgctxt "@title:window"
 msgid "Export Evolution Address Book"
 msgstr "Exportar o livro de endereços do Evolution"
 

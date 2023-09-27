@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2022-02-20 21:42+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -302,7 +302,9 @@ msgstr ""
 "에볼루션 주소록을 vCard로 내보내며, vCard를 KAddressBook에서 가져옵니다."
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Export Evolution Address Book"
+msgctxt "@title:window"
 msgid "Export Evolution Address Book"
 msgstr "에볼루션 주소록 내보내기"
 

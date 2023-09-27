@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2015-12-29 20:26+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -323,7 +323,9 @@ msgstr ""
 "KAddressBook."
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Export Evolution Address Book"
+msgctxt "@title:window"
 msgid "Export Evolution Address Book"
 msgstr "Eksportuoti Evolution adresų knygą"
 

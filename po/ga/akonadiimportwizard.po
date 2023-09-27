@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: importwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2012-02-27 21:35-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -311,9 +311,11 @@ msgid ""
 msgstr ""
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select Address Book"
+msgctxt "@title:window"
 msgid "Export Evolution Address Book"
-msgstr ""
+msgstr "Roghnaigh Leabhar Seoltaí"
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:25
 #, kde-format
