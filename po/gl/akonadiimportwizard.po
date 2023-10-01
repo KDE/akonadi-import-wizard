@@ -3,14 +3,14 @@
 # Xosé <xosecalvo@gmail.com>, 2012, 2014.
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2013, 2015, 2016.
 # Marce Villarino <mvillarino@kde-espana.org>, 2013, 2014.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2023.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-29 00:47+0000\n"
-"PO-Revision-Date: 2023-06-23 20:56+0200\n"
+"PO-Revision-Date: 2023-09-30 10:27+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -176,7 +176,7 @@ msgstr "Rematou a importación"
 #: libimportwizard/abstractaddressbook.cpp:28
 #, kde-format
 msgid "Creating new contact..."
-msgstr "Estase a crear un contacto novo…"
+msgstr "Creando un contacto novo…"
 
 #: libimportwizard/abstractaddressbook.cpp:34
 #, kde-format
@@ -229,7 +229,7 @@ msgstr "Non se atopou o ficheiro de filtros"
 #: libimportwizard/abstractsettings.cpp:38
 #, kde-format
 msgid "Setting up identity..."
-msgstr "Estase a configurar a identidade…"
+msgstr "Configurando a identidade…"
 
 #: libimportwizard/abstractsettings.cpp:46
 #, kde-format
@@ -239,7 +239,7 @@ msgstr "Configurouse a identidade."
 #: libimportwizard/abstractsettings.cpp:63
 #, kde-format
 msgid "Setting up transport..."
-msgstr "Estase a configurar o transporte…"
+msgstr "Configurando o transporte…"
 
 #: libimportwizard/abstractsettings.cpp:75
 #, kde-format
@@ -264,7 +264,7 @@ msgstr "Laurent Montel"
 #: main.cpp:48
 #, kde-format
 msgid "Maintainer"
-msgstr "Mantedor"
+msgstr "Mantemento."
 
 #: main.cpp:54
 #, kde-format
@@ -324,7 +324,7 @@ msgstr "Exportouse a axenda de enderezos «%1»."
 #: plugins/evolutionv3/evolutionaddressbook.cpp:80
 #, kde-format
 msgid "Failed to export address book \"%1\"."
-msgstr "Non se puido exportar a axenda de enderezos «%1»."
+msgstr "Non foi posíbel exportar a axenda de enderezos «%1»."
 
 #: plugins/evolutionv3/evolutionv3importdata.cpp:57
 #, kde-format
@@ -394,7 +394,7 @@ msgstr "Resumo:"
 #: ui/autodetect/importmailpage.ui:32 ui/manual/manualselectfilterpage.ui:136
 #, kde-format
 msgid "Please select the folder to import to:"
-msgstr "Escolla o cartafol de destino dos datos importados:"
+msgstr "Escolla o cartafol no que importar:"
 
 #. i18n: ectx: property (text), widget (QPushButton, importMails)
 #: ui/autodetect/importmailpage.ui:60
@@ -406,31 +406,31 @@ msgstr "Importar os correos"
 #: ui/autodetect/selectcomponentpage.ui:49
 #, kde-format
 msgid "Mails"
-msgstr "Correos"
+msgstr "Mensaxes de correo."
 
 #. i18n: ectx: property (text), widget (QCheckBox, filters)
 #: ui/autodetect/selectcomponentpage.ui:59
 #, kde-format
 msgid "Filters"
-msgstr "Filtros"
+msgstr "Filtros."
 
 #. i18n: ectx: property (text), widget (QCheckBox, settings)
 #: ui/autodetect/selectcomponentpage.ui:69
 #, kde-format
 msgid "Settings"
-msgstr "Configuración"
+msgstr "Configuración."
 
 #. i18n: ectx: property (text), widget (QCheckBox, addressbooks)
 #: ui/autodetect/selectcomponentpage.ui:79
 #, kde-format
 msgid "Address Books"
-msgstr "Axendas de enderezos"
+msgstr "Axendas de enderezos."
 
 #. i18n: ectx: property (text), widget (QCheckBox, calendars)
 #: ui/autodetect/selectcomponentpage.ui:89
 #, kde-format
 msgid "Calendars"
-msgstr "Calendarios"
+msgstr "Calendarios."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/autodetect/selectcomponentpage.ui:126
@@ -452,13 +452,13 @@ msgstr "Ou seleccione os tipos de material para importar:"
 #: ui/autodetect/selectcomponentpage.ui:143
 #, kde-format
 msgid "Import Everything"
-msgstr "Importalo todo"
+msgstr "Importalo todo."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/autodetect/selectprogrampage.ui:53
 #, kde-format
 msgid "Please select the program from which you like to import:"
-msgstr "Seleccione o programa do que quere importar datos:"
+msgstr "Seleccione o programa do que quere importar:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/autodetect/selectprogrampage.ui:86
@@ -470,7 +470,7 @@ msgstr "Non se atopou ningún programa"
 #: ui/autodetect/selectprogrampage.ui:112
 #, kde-format
 msgid "Manual Selection"
-msgstr "Selección manual"
+msgstr "Selección manual."
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: ui/manual/manualimportmailpage.ui:96
@@ -508,7 +508,7 @@ msgstr ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "family:'DejaVu Sans'; font-size:9pt; font-weight:600;\">Benvida/o ao "
-"ImportWizard - A ferramenta de importación de correo</span><span style=\" "
+"ImportWizard, a ferramenta de importación de correo</span><span style=\" "
 "font-family:'DejaVu Sans'; font-size:9pt;\"> <br /><br />Este programa axuda "
 "a importar a Akonadi o correo do seu programa de correo anterior.<br /><br /"
 ">Escolla o programa do que quere importar. A continuación, seleccione o "
@@ -518,7 +518,7 @@ msgstr ""
 #: ui/manual/manualselectfilterpage.ui:146
 #, kde-format
 msgid "Remove &duplicate messages during import"
-msgstr "Retirar as mensaxes &duplicadas mentres se importan"
+msgstr "Retirar as mensaxes &duplicadas mentres se importan."
 
 #~ msgid "importwizard"
 #~ msgstr "Asistente de importación"
