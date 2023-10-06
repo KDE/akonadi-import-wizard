@@ -16,17 +16,17 @@ public:
     explicit ImportWizardSavePasswordJob(QObject *parent = nullptr);
     ~ImportWizardSavePasswordJob() override;
 
-    Q_REQUIRED_RESULT bool canStart() const;
+    [[nodiscard]] bool canStart() const;
 
     void start();
 
-    Q_REQUIRED_RESULT QString password() const;
+    [[nodiscard]] QString password() const;
     void setPassword(const QString &password);
 
-    Q_REQUIRED_RESULT QString key() const;
+    [[nodiscard]] QString key() const;
     void setKey(const QString &key);
 
-    Q_REQUIRED_RESULT QString name() const;
+    [[nodiscard]] QString name() const;
     void setName(const QString &name);
 
 private:
