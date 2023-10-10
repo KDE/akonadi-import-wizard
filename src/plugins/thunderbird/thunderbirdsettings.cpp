@@ -245,7 +245,7 @@ int ThunderbirdSettings::adaptAutoResizeResolution(int index, const QString &con
             int val = lst.last().toInt();
             return val;
         }
-        Q_FALLTHROUGH();
+        [[fallthrough]];
     }
     default:
         return -1;
