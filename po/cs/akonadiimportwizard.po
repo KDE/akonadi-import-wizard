@@ -302,11 +302,10 @@ msgid ""
 msgstr ""
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:22
-#, fuzzy, kde-format
-#| msgid "Export Evolution Address Book"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export Evolution Address Book"
-msgstr "Exportovat Evolution do knihy adres"
+msgstr ""
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:25
 #, kde-format
