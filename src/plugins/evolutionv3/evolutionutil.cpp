@@ -13,11 +13,10 @@
 
 bool EvolutionUtil::loadInDomDocument(QFile *file, QDomDocument &doc)
 {
-    QString errorMsg;
-    int errorRow;
-    int errorCol;
-    if (!doc.setContent(file, &errorMsg, &errorRow, &errorCol)) {
-        qCDebug(EVOLUTIONPLUGIN_LOG) << "Unable to load document.Parse error in line " << errorRow << ", col " << errorCol << ": " << errorMsg;
+    const QDomDocument::ParseResult parseResult = doc.setContent(file);
+    if (!parseResult) {
+        qCDebug(EVOLUTIONPLUGIN_LOG) << "Unable to load document.Parse error in line " << parseResult.errorLine << ", col " << parseResult.errorColumn << ": "
+                                     << qPrintable(parseResult.errorMessage);
         return false;
     }
     return true;
@@ -25,11 +24,10 @@ bool EvolutionUtil::loadInDomDocument(QFile *file, QDomDocument &doc)
 
 bool EvolutionUtil::loadInDomDocument(const QString &file, QDomDocument &doc)
 {
-    QString errorMsg;
-    int errorRow;
-    int errorCol;
-    if (!doc.setContent(file, &errorMsg, &errorRow, &errorCol)) {
-        qCDebug(EVOLUTIONPLUGIN_LOG) << "Unable to load document.Parse error in line " << errorRow << ", col " << errorCol << ": " << errorMsg;
+    const QDomDocument::ParseResult parseResult = doc.setContent(file);
+    if (!parseResult) {
+        qCDebug(EVOLUTIONPLUGIN_LOG) << "Unable to load document.Parse error in line " << parseResult.errorLine << ", col " << parseResult.errorColumn << ": "
+                                     << qPrintable(parseResult.errorMessage);
         return false;
     }
     return true;

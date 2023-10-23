@@ -41,12 +41,11 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
         qCDebug(SYLPHEEDPLUGIN_LOG) << " We can't open file" << filename;
         return;
     }
-    QString errorMsg;
-    int errorRow;
-    int errorCol;
     QDomDocument doc;
-    if (!doc.setContent(&file, &errorMsg, &errorRow, &errorCol)) {
-        qCDebug(SYLPHEEDPLUGIN_LOG) << "Unable to load document.Parse error in line " << errorRow << ", col " << errorCol << ": " << errorMsg;
+    const QDomDocument::ParseResult parseResult = doc.setContent(&file);
+    if (!parseResult) {
+        qCDebug(SYLPHEEDPLUGIN_LOG) << "Unable to load document.Parse error in line " << parseResult.errorLine << ", col " << parseResult.errorColumn << ": "
+                                    << qPrintable(parseResult.errorMessage);
         return;
     }
     QDomElement domElement = doc.documentElement();
