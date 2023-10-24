@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-27 01:41+0000\n"
+"POT-Creation-Date: 2023-10-24 01:41+0000\n"
 "PO-Revision-Date: 2022-02-25 12:00+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -354,7 +354,7 @@ msgstr "Файл конфигурации Icedove не найден."
 msgid "SeaMonkey settings not found."
 msgstr "Файл конфигурации SeaMonkey не найден."
 
-#: plugins/sylpheed/sylpheedaddressbook.cpp:61
+#: plugins/sylpheed/sylpheedaddressbook.cpp:60
 #, kde-format
 msgid "No contact found in %1"
 msgstr "В файле %1 не найдены контакты"

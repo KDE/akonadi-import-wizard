@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiimportwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-27 01:41+0000\n"
+"POT-Creation-Date: 2023-10-24 01:41+0000\n"
 "PO-Revision-Date: 2023-10-05 18:24-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -347,7 +347,7 @@ msgstr "As configurações do Icedove não foram encontradas."
 msgid "SeaMonkey settings not found."
 msgstr "As configurações do SeaMonkey não foram encontradas."
 
-#: plugins/sylpheed/sylpheedaddressbook.cpp:61
+#: plugins/sylpheed/sylpheedaddressbook.cpp:60
 #, kde-format
 msgid "No contact found in %1"
 msgstr "Nenhum contato encontrado em %1"

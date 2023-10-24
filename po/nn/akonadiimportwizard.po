@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_importing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-27 01:41+0000\n"
+"POT-Creation-Date: 2023-10-24 01:41+0000\n"
 "PO-Revision-Date: 2022-06-19 14:07+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -356,7 +356,7 @@ msgstr "Fann ikkje Icedove-innstillingar."
 msgid "SeaMonkey settings not found."
 msgstr "Fann ikkje SeaMonkey-innstillingar."
 
-#: plugins/sylpheed/sylpheedaddressbook.cpp:61
+#: plugins/sylpheed/sylpheedaddressbook.cpp:60
 #, kde-format
 msgid "No contact found in %1"
 msgstr "Fann ingen kontaktar i %1"

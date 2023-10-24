@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-27 01:41+0000\n"
+"POT-Creation-Date: 2023-10-24 01:41+0000\n"
 "PO-Revision-Date: 2020-01-02 11:47+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -346,7 +346,7 @@ msgstr "Icedove'i seadistusi ei leitud."
 msgid "SeaMonkey settings not found."
 msgstr "Seamonkey seadistusi ei leitud."
 
-#: plugins/sylpheed/sylpheedaddressbook.cpp:61
+#: plugins/sylpheed/sylpheedaddressbook.cpp:60
 #, kde-format
 msgid "No contact found in %1"
 msgstr "%1 ei paista sisaldavat ühtegi kontakti"

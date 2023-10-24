@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-27 01:41+0000\n"
+"POT-Creation-Date: 2023-10-24 01:41+0000\n"
 "PO-Revision-Date: 2023-10-21 13:51\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -341,7 +341,7 @@ msgstr "找不到的 Icedove 设置。"
 msgid "SeaMonkey settings not found."
 msgstr "找不到的 SeaMonkey 设置。"
 
-#: plugins/sylpheed/sylpheedaddressbook.cpp:61
+#: plugins/sylpheed/sylpheedaddressbook.cpp:60
 #, kde-format
 msgid "No contact found in %1"
 msgstr "在 %1 中未找到联系人"

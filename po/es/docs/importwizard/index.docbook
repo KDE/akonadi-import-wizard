@@ -91,7 +91,7 @@
 > </para>
 
 <para
->Además, usted puede usar la importación manual pra <application
+>Además, puede usar la importación manual para <application
 >Archivador de KMail</application
 >, <application
 >mbox (Unix, Evolution)</application
@@ -113,7 +113,7 @@
 >. </para>
 
 <para
->Usted puede iniciar &i18n-importwizard; directamente desde el lanzador de aplicaciones, o bien desde &kmail; con <menuchoice
+>Puede iniciar &i18n-importwizard; directamente desde el lanzador de aplicaciones, o bien desde &kmail; con <menuchoice
 ><guimenu
 >Herramientas</guimenu
 ><guimenuitem
@@ -142,9 +142,9 @@
 >Aplicaciones de correo detectadas</title>
 
 <para
->Al inicio, el asistente de importación detectará todas las aplicaciones de correo reconocidas, y las listará para usted en la ventana. Seleccione la aplicación de correo desde la que quiere importar, y pulse el botón <guibutton
+>Al inicio, el asistente de importación detectará todas las aplicaciones de correo reconocidas y las mostrará en la ventana. Seleccione la aplicación de correo de la que quiera importar y pulse el botón <guibutton
 >Siguiente</guibutton
->. El asistente preguntará entonces si usted quiere importarlo todo, o dar opciones de seleccionar que tipos de materiales quiere usted importar.</para>
+>. El asistente le preguntará entonces si quiere importarlo todo, o le dará la opción de seleccionar los tipos de materiales quiere importar.</para>
 
 <screenshot>
 <screeninfo
@@ -165,13 +165,13 @@
 </screenshot>
 
 <para
->Dependiendo de sus selecciones en los materiales en la pantalla de importación, usted verá una o más de las siguientes pantallas:</para>
+>Dependiendo de sus selecciones en los materiales en la pantalla de importación, verá una o más de las siguientes pantallas:</para>
 
 <itemizedlist>
 
 <listitem
 ><para
->Para importar mensajes de correo, usted necesita seleccionar la carpeta en la que quiere que se importen sus mensajes de correo. Una vez seleccionada, pulse el botón <guibutton
+>Para importar mensajes de correo, necesita seleccionar la carpeta en la que quiere que se importen sus mensajes de correo. Una vez seleccionada, pulse el botón <guibutton
 >Importar correos</guibutton
 >. Una vez que la barra de progreso alcanza el 100 %, pulse el botón <guibutton
 >Siguiente</guibutton
@@ -217,7 +217,7 @@
 <para
 >Pulse el botón <guibutton
 >Finalizar</guibutton
-> para completar y salir del asistente. Si en cualquier momento, usted quiere terminar el asistente, usted puede pulsar el botón <guibutton
+> para completar y salir del asistente. Si en cualquier momento quiere terminar el asistente, pulse el botón <guibutton
 >Cancelar</guibutton
 >.</para>
 
@@ -241,18 +241,18 @@
 
 <note
 ><para
->Por favor, asegúrese de que usted comprime sus carpetas en otro cliente de correo.</para
+>Asegúrese de que ha compactado las carpetas en el otro cliente de correo.</para
 ></note>
 <para
->Seleccione su programa de correo anterior desde el menú desplegable. El cuadro de texto central del diálogo se actualizará con instrucciones especiales (si son aplicables) y la ubicación conocida del almacén de mensajes de correo para la aplicación. Siga esas instrucciones, a continuación, seleccione la carpeta en la que usted quiere importar sus mensajes.</para>
+>Seleccione su programa de correo anterior desde el menú desplegable. El cuadro de texto central del diálogo se actualizará con instrucciones especiales (si son aplicables) y la ubicación conocida del almacén de mensajes de correo para la aplicación. Siga esas instrucciones y luego seleccione la carpeta en la que desee importar los mensajes.</para>
 <para
->Si usted quiere eliminar mensajes duplicados, marque <guilabel
->Eliminar mensajes  duplicados durante la importación</guilabel
->. Aparecerá un diálogo de selección de archivos  y usted tendrá que seleccionar el archivo/carpeta indicado en las instrucciones. Pulse en el botón  <guibutton
+>Si quiere eliminar mensajes duplicados, marque <guilabel
+>Eliminar mensajes duplicados durante la importación</guilabel
+>. Aparecerá un diálogo de selección de archivos donde tendrá que seleccionar el archivo/carpeta indicado en las instrucciones. Pulse el botón  <guibutton
 >Siguiente</guibutton
-> para completar la importación. Cuando la importación  finalice usted puede pulsar en el botón <guibutton
+> para completar la importación. Cuando la importación finalice, puede pulsar en el botón <guibutton
 >Retroceder</guibutton
-> para importar desde otra aplicación o en el botón <guibutton
+> para importar de otra aplicación o el botón <guibutton
 >Finalizar</guibutton
 > para salir. </para>
 </sect2>
@@ -274,9 +274,9 @@
 >Derechos de autor de la documentación &copy; 2013 Laurent Montel montel@kde.org y Scarlett Clark scarlett@scarlettgatelyclark.com </para>
 
 <para
->Traducido por Javier Viñal <email
+>Documentación traducida por Javier Viñal <email
 >fjvinal@gmail.com</email
-></para
+>.</para
 > &underFDL; &underGPL; </sect1>
 
 </article>
