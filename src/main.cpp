@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
     KCrash::initialize();
 
-    KLocalizedString::setApplicationDomain("akonadiimportwizard");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("akonadiimportwizard"));
     // FIXME: "wizards" are "assistents" in new KDE slang
 
     KAboutData aboutData(QStringLiteral("importwizard"),
