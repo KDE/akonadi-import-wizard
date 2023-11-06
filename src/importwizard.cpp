@@ -85,7 +85,7 @@ ImportWizard::~ImportWizard()
 
 void ImportWizard::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "FolderSelectionDialog");
+    KConfigGroup group(KSharedConfig::openConfig(), QLatin1String("FolderSelectionDialog"));
     if (group.hasKey("LastSelectedFolder")) {
         mSelfilterpage->widget()->mCollectionRequestor->setCollection(CommonKernel->collectionFromId(group.readEntry("LastSelectedFolder", -1)));
     }
@@ -93,7 +93,7 @@ void ImportWizard::readConfig()
 
 void ImportWizard::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "FolderSelectionDialog");
+    KConfigGroup group(KSharedConfig::openConfig(), QLatin1String("FolderSelectionDialog"));
     group.writeEntry("LastSelectedFolder", mSelfilterpage->widget()->mCollectionRequestor->collection().id());
     group.sync();
 }

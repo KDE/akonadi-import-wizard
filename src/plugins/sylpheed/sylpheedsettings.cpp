@@ -32,8 +32,8 @@ void SylpheedSettings::importSettings(const QString &filename, const QString &pa
     const QString sylpheedrc = path + QLatin1String("/sylpheedrc");
     if (QFileInfo::exists(sylpheedrc)) {
         KConfig configCommon(sylpheedrc);
-        if (configCommon.hasGroup("Common")) {
-            KConfigGroup common = configCommon.group("Common");
+        if (configCommon.hasGroup(QLatin1String("Common"))) {
+            KConfigGroup common = configCommon.group(QLatin1String("Common"));
             checkMailOnStartup = (common.readEntry("check_on_startup", 1) == 1);
 
             if (common.readEntry(QStringLiteral("autochk_newmail"), 1) == 1) {

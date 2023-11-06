@@ -30,8 +30,8 @@ void ClawsMailSettings::importSettings(const QString &filename, const QString &p
     const QString clawsmailrc = path + QLatin1String("/clawsrc");
     if (QFileInfo::exists(clawsmailrc)) {
         KConfig configCommon(clawsmailrc);
-        if (configCommon.hasGroup("Common")) {
-            KConfigGroup common = configCommon.group("Common");
+        if (configCommon.hasGroup(QLatin1String("Common"))) {
+            KConfigGroup common = configCommon.group(QLatin1String("Common"));
             checkMailOnStartup = (common.readEntry("check_on_startup", 1) == 1);
             if (common.readEntry(QStringLiteral("autochk_newmail"), 1) == 1) {
                 intervalCheckMail = common.readEntry(QStringLiteral("autochk_interval"), -1);
