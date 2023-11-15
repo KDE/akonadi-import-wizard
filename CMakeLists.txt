@@ -92,7 +92,7 @@ endif()
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 add_definitions(-DQT_USE_QSTRINGBUILDER)
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
-ecm_set_disabled_deprecation_versions(QT 6.6 KF 5.240.0)
+ecm_set_disabled_deprecation_versions(QT 6.6 KF 5.245.0)
 
 
 if(BUILD_TESTING)
