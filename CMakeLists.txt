@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
-set(PIM_VERSION "5.240.90")
+set(PIM_VERSION "5.240.95")
 project(AkonadiImportWizard VERSION ${PIM_VERSION})
 
 
@@ -31,8 +31,8 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMDeprecationSettings)
 
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION rc1)
-set(RELEASE_SERVICE_VERSION "24.01.90")
+set(KDEPIM_DEV_VERSION rc2)
+set(RELEASE_SERVICE_VERSION "24.01.95")
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
