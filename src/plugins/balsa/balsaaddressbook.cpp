@@ -51,19 +51,19 @@ void BalsaAddressBook::readAddressBook(const KConfigGroup &grp)
     }
     const QString name = grp.readEntry(QStringLiteral("Name"));
 
-    if (type == QLatin1String("LibBalsaAddressBookLdap")) {
+    if (type == QLatin1StringView("LibBalsaAddressBookLdap")) {
         ldapStruct ldap;
         ldap.dn = grp.readEntry(QStringLiteral("BaseDN"));
-        ldap.useTLS = (grp.readEntry(QStringLiteral("EnableTLS")) == QLatin1String("true"));
+        ldap.useTLS = (grp.readEntry(QStringLiteral("EnableTLS")) == QLatin1StringView("true"));
         ldap.ldapUrl = QUrl(grp.readEntry(QStringLiteral("Host")));
         ldap.port = ldap.ldapUrl.port();
         // TODO: verify
         const QString bookDN = grp.readEntry(QStringLiteral("BookDN")); // TODO ?
         ImportWizardUtil::mergeLdap(ldap);
         addAddressBookImportInfo(i18n("Ldap created"));
-    } else if (type == QLatin1String("LibBalsaAddressBookGpe")) {
+    } else if (type == QLatin1StringView("LibBalsaAddressBookGpe")) {
         qCDebug(BALSAPLUGIN_LOG) << " Import it !";
-    } else if (type == QLatin1String("LibBalsaAddressBookLdif")) {
+    } else if (type == QLatin1StringView("LibBalsaAddressBookLdif")) {
         const QString path = grp.readEntry(QStringLiteral("Path"));
         if (!path.isEmpty()) {
             KContacts::Addressee::List contacts;
@@ -84,7 +84,7 @@ void BalsaAddressBook::readAddressBook(const KConfigGroup &grp)
                 }
             }
         }
-    } else if (type == QLatin1String("LibBalsaAddressBookVcard")) {
+    } else if (type == QLatin1StringView("LibBalsaAddressBookVcard")) {
         const QString path = grp.readEntry(QStringLiteral("Path"));
         if (!path.isEmpty()) {
             QMap<QString, QVariant> settings;

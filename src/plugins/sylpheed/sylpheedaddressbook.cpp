@@ -65,7 +65,7 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
         // TODO ?? const QString name = e.attribute(QStringLiteral("name"));
 
         const QString tag = e.tagName();
-        if (tag == QLatin1String("person")) {
+        if (tag == QLatin1StringView("person")) {
             KContacts::Addressee contact;
             // uid="333304265" first-name="dd" last-name="ccc" nick-name="" cn="laurent"
             QString uidPerson;
@@ -87,11 +87,11 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
             QStringList uidAddress;
             for (QDomElement addressElement = e.firstChildElement(); !addressElement.isNull(); addressElement = addressElement.nextSiblingElement()) {
                 const QString addressTag = addressElement.tagName();
-                if (addressTag == QLatin1String("address-list")) {
+                if (addressTag == QLatin1StringView("address-list")) {
                     QStringList emails;
                     for (QDomElement addresslist = addressElement.firstChildElement(); !addresslist.isNull(); addresslist = addresslist.nextSiblingElement()) {
                         const QString tagAddressList = addresslist.tagName();
-                        if (tagAddressList == QLatin1String("address")) {
+                        if (tagAddressList == QLatin1StringView("address")) {
                             if (addresslist.hasAttribute(QStringLiteral("email"))) {
                                 emails << addresslist.attribute(QStringLiteral("email"));
                             } else if (addresslist.hasAttribute(QStringLiteral("alias"))) {
@@ -106,11 +106,11 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
                     if (!emails.isEmpty()) {
                         contact.setEmails(emails);
                     }
-                } else if (addressTag == QLatin1String("attribute-list")) {
+                } else if (addressTag == QLatin1StringView("attribute-list")) {
                     for (QDomElement attributelist = addressElement.firstChildElement(); !attributelist.isNull();
                          attributelist = attributelist.nextSiblingElement()) {
                         const QString tagAttributeList = attributelist.tagName();
-                        if (tagAttributeList == QLatin1String("attribute")) {
+                        if (tagAttributeList == QLatin1StringView("attribute")) {
                             if (attributelist.hasAttribute(QStringLiteral("name"))) {
                                 const QString name = attributelist.attribute(QStringLiteral("name"));
                                 const QString value = attributelist.text();
@@ -131,16 +131,16 @@ void SylpheedAddressBook::readAddressBook(const QString &filename)
             }
             addImportContactNote(contact, QStringLiteral("Sylpheed"));
             createContact(contact);
-        } else if (tag == QLatin1String("group")) {
+        } else if (tag == QLatin1StringView("group")) {
             QString name = e.attribute(QStringLiteral("name"));
             KContacts::ContactGroup group(name);
             // TODO: create Group
             for (QDomElement groupElement = e.firstChildElement(); !groupElement.isNull(); groupElement = groupElement.nextSiblingElement()) {
                 const QString groupTag = groupElement.tagName();
-                if (groupTag == QLatin1String("member-list")) {
+                if (groupTag == QLatin1StringView("member-list")) {
                     for (QDomElement memberlist = groupElement.firstChildElement(); !memberlist.isNull(); memberlist = memberlist.nextSiblingElement()) {
                         const QString tagMemberList = memberlist.tagName();
-                        if (tagMemberList == QLatin1String("member")) {
+                        if (tagMemberList == QLatin1StringView("member")) {
                             QString pid;
                             QString eid;
                             if (memberlist.hasAttribute(QStringLiteral("pid"))) {

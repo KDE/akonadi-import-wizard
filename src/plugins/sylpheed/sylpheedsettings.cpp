@@ -29,10 +29,10 @@ void SylpheedSettings::importSettings(const QString &filename, const QString &pa
 {
     bool checkMailOnStartup = true;
     int intervalCheckMail = -1;
-    const QString sylpheedrc = path + QLatin1String("/sylpheedrc");
+    const QString sylpheedrc = path + QLatin1StringView("/sylpheedrc");
     if (QFileInfo::exists(sylpheedrc)) {
         KConfig configCommon(sylpheedrc);
-        if (configCommon.hasGroup(QLatin1String("Common"))) {
+        if (configCommon.hasGroup(QLatin1StringView("Common"))) {
             KConfigGroup common = configCommon.group(QStringLiteral("Common"));
             checkMailOnStartup = (common.readEntry("check_on_startup", 1) == 1);
 
@@ -50,7 +50,7 @@ void SylpheedSettings::importSettings(const QString &filename, const QString &pa
         readAccount(group, checkMailOnStartup, intervalCheckMail);
         readIdentity(group);
     }
-    const QString customheaderrc = path + QLatin1String("/customheaderrc");
+    const QString customheaderrc = path + QLatin1StringView("/customheaderrc");
     QFile customHeaderFile(customheaderrc);
     if (customHeaderFile.exists()) {
         if (!customHeaderFile.open(QIODevice::ReadOnly)) {
@@ -201,41 +201,41 @@ void SylpheedSettings::readSettingsColor(const KConfigGroup &group)
 QString SylpheedSettings::convertToKmailTemplate(const QString &templateStr)
 {
     QString newTemplate = templateStr;
-    newTemplate.replace(QLatin1String("%date"), QLatin1String("%DATE"));
-    newTemplate.replace(QLatin1String("%d"), QLatin1String("%DATE"));
-    newTemplate.replace(QLatin1String("%from"), QLatin1String("%OTONAME"));
-    newTemplate.replace(QLatin1String("%f"), QLatin1String("%OTONAME"));
-    newTemplate.replace(QLatin1String("%to"), QLatin1String("%TONAME"));
-    newTemplate.replace(QLatin1String("%t"), QLatin1String("%TONAME"));
-    newTemplate.replace(QLatin1String("%cc"), QLatin1String("%CCNAME"));
-    newTemplate.replace(QLatin1String("%c"), QLatin1String("%CCNAME"));
+    newTemplate.replace(QLatin1StringView("%date"), QLatin1String("%DATE"));
+    newTemplate.replace(QLatin1StringView("%d"), QLatin1String("%DATE"));
+    newTemplate.replace(QLatin1StringView("%from"), QLatin1String("%OTONAME"));
+    newTemplate.replace(QLatin1StringView("%f"), QLatin1String("%OTONAME"));
+    newTemplate.replace(QLatin1StringView("%to"), QLatin1String("%TONAME"));
+    newTemplate.replace(QLatin1StringView("%t"), QLatin1String("%TONAME"));
+    newTemplate.replace(QLatin1StringView("%cc"), QLatin1String("%CCNAME"));
+    newTemplate.replace(QLatin1StringView("%c"), QLatin1String("%CCNAME"));
 
-    newTemplate.replace(QLatin1String("%email"), QLatin1String("%OFROMNAME"));
-    newTemplate.replace(QLatin1String("%A"), QLatin1String("%OFROMNAME"));
+    newTemplate.replace(QLatin1StringView("%email"), QLatin1String("%OFROMNAME"));
+    newTemplate.replace(QLatin1StringView("%A"), QLatin1String("%OFROMNAME"));
 
-    newTemplate.replace(QLatin1String("%cursor"), QLatin1String("%CURSOR"));
-    newTemplate.replace(QLatin1String("%X"), QLatin1String("%CURSOR"));
+    newTemplate.replace(QLatin1StringView("%cursor"), QLatin1String("%CURSOR"));
+    newTemplate.replace(QLatin1StringView("%X"), QLatin1String("%CURSOR"));
 
-    newTemplate.replace(QLatin1String("%msg"), QLatin1String("%TEXT"));
-    newTemplate.replace(QLatin1String("%M"), QLatin1String("%TEXT"));
+    newTemplate.replace(QLatin1StringView("%msg"), QLatin1String("%TEXT"));
+    newTemplate.replace(QLatin1StringView("%M"), QLatin1String("%TEXT"));
 
-    newTemplate.replace(QLatin1String("%quoted_msg"), QLatin1String("%QUOTE"));
-    newTemplate.replace(QLatin1String("%Q"), QLatin1String("%QUOTE"));
+    newTemplate.replace(QLatin1StringView("%quoted_msg"), QLatin1String("%QUOTE"));
+    newTemplate.replace(QLatin1StringView("%Q"), QLatin1String("%QUOTE"));
 
-    newTemplate.replace(QLatin1String("%subject"), QLatin1String("%OFULLSUBJECT"));
-    newTemplate.replace(QLatin1String("%s"), QLatin1String("%OFULLSUBJECT"));
+    newTemplate.replace(QLatin1StringView("%subject"), QLatin1String("%OFULLSUBJECT"));
+    newTemplate.replace(QLatin1StringView("%s"), QLatin1String("%OFULLSUBJECT"));
 
-    newTemplate.replace(QLatin1String("%messageid"), QLatin1String("%MSGID"));
-    newTemplate.replace(QLatin1String("%i"), QLatin1String("%MSGID"));
+    newTemplate.replace(QLatin1StringView("%messageid"), QLatin1String("%MSGID"));
+    newTemplate.replace(QLatin1StringView("%i"), QLatin1String("%MSGID"));
 
-    newTemplate.replace(QLatin1String("%firstname"), QLatin1String("%OFROMNAME"));
-    newTemplate.replace(QLatin1String("%F"), QLatin1String("%OFROMNAME"));
+    newTemplate.replace(QLatin1StringView("%firstname"), QLatin1String("%OFROMNAME"));
+    newTemplate.replace(QLatin1StringView("%F"), QLatin1String("%OFROMNAME"));
 
-    newTemplate.replace(QLatin1String("%lastname"), QLatin1String("%OFROMLNAME"));
-    newTemplate.replace(QLatin1String("%L"), QLatin1String("%OFROMLNAME"));
+    newTemplate.replace(QLatin1StringView("%lastname"), QLatin1String("%OFROMLNAME"));
+    newTemplate.replace(QLatin1StringView("%L"), QLatin1String("%OFROMLNAME"));
 
-    newTemplate.replace(QLatin1String("%fullname"), QLatin1String("%OFROMFNAME"));
-    newTemplate.replace(QLatin1String("%N"), QLatin1String("%OFROMFNAME"));
+    newTemplate.replace(QLatin1StringView("%fullname"), QLatin1String("%OFROMFNAME"));
+    newTemplate.replace(QLatin1StringView("%N"), QLatin1String("%OFROMFNAME"));
     // TODO add more variable
     return newTemplate;
 }

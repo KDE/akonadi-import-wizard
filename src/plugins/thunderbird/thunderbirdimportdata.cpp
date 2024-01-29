@@ -62,7 +62,7 @@ QString ThunderbirdImportData::name() const
 
 bool ThunderbirdImportData::importSettings()
 {
-    const QString accountFile = mPath + defaultProfile() + QLatin1String("/prefs.js");
+    const QString accountFile = mPath + defaultProfile() + QLatin1StringView("/prefs.js");
     if (QFileInfo::exists(accountFile)) {
         ThunderbirdSettings account(accountFile);
         account.setAbstractDisplayInfo(mAbstractDisplayInfo);
@@ -79,7 +79,7 @@ bool ThunderbirdImportData::importMails()
     MailImporter::FilterThunderbird thunderbird;
     initializeFilter(thunderbird);
     thunderbird.filterInfo()->setStatusMessage(i18n("Import in progress"));
-    const QString mailsPath = mPath + defaultProfile() + QLatin1String("/Mail/Local Folders/");
+    const QString mailsPath = mPath + defaultProfile() + QLatin1StringView("/Mail/Local Folders/");
     QDir directory(mailsPath);
     if (directory.exists()) {
         thunderbird.importMails(mailsPath);
@@ -106,7 +106,7 @@ bool ThunderbirdImportData::importFilters()
         const QStringList subDirMail = dirMail.entryList(QDir::AllDirs | QDir::NoDotAndDotDot, QDir::Name);
         bool foundFilterFile = false;
         for (const QString &file : subDirMail) {
-            const QString filterFile(subMailPath + QLatin1Char('/') + file + QLatin1String("/msgFilterRules.dat"));
+            const QString filterFile(subMailPath + QLatin1Char('/') + file + QLatin1StringView("/msgFilterRules.dat"));
             if (QFileInfo::exists(filterFile)) {
                 foundFilterFile = true;
                 const bool added = addFilters(filterFile, MailCommon::FilterImporterExporter::ThunderBirdFilter);

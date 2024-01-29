@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
     if (parser.isSet(modeOption)) {
         if (!parser.positionalArguments().isEmpty()) {
             const QString modeStr = parser.positionalArguments().at(0);
-            if (modeStr == QLatin1String("manual")) {
+            if (modeStr == QLatin1StringView("manual")) {
                 mode = ImportWizard::WizardMode::Manual;
             }
         }

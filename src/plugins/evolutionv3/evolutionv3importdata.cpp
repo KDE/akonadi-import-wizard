@@ -44,12 +44,12 @@ QString Evolutionv3ImportData::name() const
 
 bool Evolutionv3ImportData::importSettings()
 {
-    const QString accountFile = QDir::homePath() + QLatin1String("/.gconf/apps/evolution/mail/%gconf.xml");
+    const QString accountFile = QDir::homePath() + QLatin1StringView("/.gconf/apps/evolution/mail/%gconf.xml");
     if (QFileInfo::exists(accountFile)) {
         EvolutionSettings account;
         account.setAbstractDisplayInfo(mAbstractDisplayInfo);
         account.loadAccount(accountFile);
-        const QString ldapFile = QDir::homePath() + QLatin1String("/.gconf/apps/evolution/addressbook/%gconf.xml");
+        const QString ldapFile = QDir::homePath() + QLatin1StringView("/.gconf/apps/evolution/addressbook/%gconf.xml");
         if (QFileInfo::exists(ldapFile)) {
             account.loadLdap(ldapFile);
         }
@@ -77,7 +77,7 @@ bool Evolutionv3ImportData::importMails()
 
 bool Evolutionv3ImportData::importFilters()
 {
-    const QString filterPath = QDir::homePath() + QLatin1String("/.config/evolution/mail/filter.xml");
+    const QString filterPath = QDir::homePath() + QLatin1StringView("/.config/evolution/mail/filter.xml");
     return addFilters(filterPath, MailCommon::FilterImporterExporter::EvolutionFilter);
 }
 
@@ -91,7 +91,7 @@ bool Evolutionv3ImportData::importAddressBook()
 
 bool Evolutionv3ImportData::importCalendar()
 {
-    const QString calendarFile = QDir::homePath() + QLatin1String("/.gconf/apps/evolution/calendar/%gconf.xml");
+    const QString calendarFile = QDir::homePath() + QLatin1StringView("/.gconf/apps/evolution/calendar/%gconf.xml");
     if (QFileInfo::exists(calendarFile)) {
         EvolutionCalendar calendar;
         calendar.setAbstractDisplayInfo(mAbstractDisplayInfo);

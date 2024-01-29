@@ -42,7 +42,7 @@ QString SylpheedImportData::name() const
 
 bool SylpheedImportData::importSettings()
 {
-    const QString accountFile = mPath + QLatin1String("/accountrc");
+    const QString accountFile = mPath + QLatin1StringView("/accountrc");
     if (QFileInfo::exists(accountFile)) {
         SylpheedSettings account;
         account.setAbstractDisplayInfo(mAbstractDisplayInfo);
@@ -71,7 +71,7 @@ bool SylpheedImportData::importMails()
 
 bool SylpheedImportData::importFilters()
 {
-    const QString filterPath = mPath + QLatin1String("/filter.xml");
+    const QString filterPath = mPath + QLatin1StringView("/filter.xml");
     return addFilters(filterPath, MailCommon::FilterImporterExporter::SylpheedFilter);
 }
 

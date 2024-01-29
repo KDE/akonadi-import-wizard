@@ -36,13 +36,13 @@ void EvolutionCalendar::loadCalendar(const QString &filename)
         qCDebug(EVOLUTIONPLUGIN_LOG) << "No config found";
         return;
     }
-    mCalendarPath = QDir::homePath() + QLatin1String("/.local/share/evolution/calendar/");
+    mCalendarPath = QDir::homePath() + QLatin1StringView("/.local/share/evolution/calendar/");
     for (QDomElement e = config.firstChildElement(); !e.isNull(); e = e.nextSiblingElement()) {
         const QString tag = e.tagName();
-        if (tag == QLatin1String("entry")) {
+        if (tag == QLatin1StringView("entry")) {
             if (e.hasAttribute(QStringLiteral("name"))) {
                 const QString attr = e.attribute(QStringLiteral("name"));
-                if (attr == QLatin1String("sources")) {
+                if (attr == QLatin1StringView("sources")) {
                     readCalendar(e);
                 } else {
                     qCDebug(EVOLUTIONPLUGIN_LOG) << " attr unknown " << attr;
@@ -55,7 +55,7 @@ void EvolutionCalendar::loadCalendar(const QString &filename)
 void EvolutionCalendar::readCalendar(const QDomElement &calendar)
 {
     for (QDomElement calendarConfig = calendar.firstChildElement(); !calendarConfig.isNull(); calendarConfig = calendarConfig.nextSiblingElement()) {
-        if (calendarConfig.tagName() == QLatin1String("li")) {
+        if (calendarConfig.tagName() == QLatin1StringView("li")) {
             const QDomElement stringValue = calendarConfig.firstChildElement();
             extractCalendarInfo(stringValue.text());
         }
@@ -80,10 +80,10 @@ void EvolutionCalendar::extractCalendarInfo(const QString &info)
     if (domElement.hasAttribute(QStringLiteral("base_uri"))) {
         base_uri = domElement.attribute(QStringLiteral("base_uri"));
     }
-    if (base_uri == QLatin1String("local:")) {
+    if (base_uri == QLatin1StringView("local:")) {
         for (QDomElement e = domElement.firstChildElement(); !e.isNull(); e = e.nextSiblingElement()) {
             const QString tag = e.tagName();
-            if (tag == QLatin1String("source")) {
+            if (tag == QLatin1StringView("source")) {
                 QString name;
                 QMap<QString, QVariant> settings;
                 if (e.hasAttribute(QStringLiteral("uid"))) { }
@@ -92,7 +92,7 @@ void EvolutionCalendar::extractCalendarInfo(const QString &info)
                     settings.insert(QStringLiteral("DisplayName"), name);
                 }
                 if (e.hasAttribute(QStringLiteral("relative_uri"))) {
-                    const QString path = mCalendarPath + e.attribute(QStringLiteral("relative_uri")) + QLatin1String("/calendar.ics");
+                    const QString path = mCalendarPath + e.attribute(QStringLiteral("relative_uri")) + QLatin1StringView("/calendar.ics");
                     settings.insert(QStringLiteral("Path"), path);
                 }
                 if (e.hasAttribute(QStringLiteral("color_spec"))) {
@@ -104,16 +104,16 @@ void EvolutionCalendar::extractCalendarInfo(const QString &info)
                 if (!propertiesElement.isNull()) {
                     for (QDomElement property = propertiesElement.firstChildElement(); !property.isNull(); property = property.nextSiblingElement()) {
                         const QString propertyTag = property.tagName();
-                        if (propertyTag == QLatin1String("property")) {
+                        if (propertyTag == QLatin1StringView("property")) {
                             if (property.hasAttribute(QStringLiteral("name"))) {
                                 const QString propertyName = property.attribute(QStringLiteral("name"));
-                                if (propertyName == QLatin1String("custom-file-readonly")) {
+                                if (propertyName == QLatin1StringView("custom-file-readonly")) {
                                     if (property.hasAttribute(QStringLiteral("value"))) {
                                         if (property.attribute(QStringLiteral("value")) == QLatin1Char('1')) {
                                             settings.insert(QStringLiteral("ReadOnly"), true);
                                         }
                                     }
-                                } else if (propertyName == QLatin1String("alarm")) {
+                                } else if (propertyName == QLatin1StringView("alarm")) {
                                     qCDebug(EVOLUTIONPLUGIN_LOG) << " need to implement alarm property";
                                 } else {
                                     qCDebug(EVOLUTIONPLUGIN_LOG) << " property unknown :" << propertyName;
@@ -129,11 +129,11 @@ void EvolutionCalendar::extractCalendarInfo(const QString &info)
                 qCDebug(EVOLUTIONPLUGIN_LOG) << " tag unknown :" << tag;
             }
         }
-    } else if (base_uri == QLatin1String("webcal://")) {
+    } else if (base_uri == QLatin1StringView("webcal://")) {
         qCDebug(EVOLUTIONPLUGIN_LOG) << " need to implement webcal protocol";
-    } else if (base_uri == QLatin1String("google://")) {
+    } else if (base_uri == QLatin1StringView("google://")) {
         qCDebug(EVOLUTIONPLUGIN_LOG) << " need to implement google protocol";
-    } else if (base_uri == QLatin1String("caldav://")) {
+    } else if (base_uri == QLatin1StringView("caldav://")) {
         qCDebug(EVOLUTIONPLUGIN_LOG) << " need to implement caldav protocol";
     } else {
         qCDebug(EVOLUTIONPLUGIN_LOG) << " base_uri unknown" << base_uri;

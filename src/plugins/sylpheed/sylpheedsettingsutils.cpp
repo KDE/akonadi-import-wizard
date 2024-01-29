@@ -12,7 +12,7 @@ bool SylpheedSettingsUtils::readConfig(const QString &key, const KConfigGroup &a
     if (remove_underscore) {
         cleanedKey.remove(QLatin1Char('_'));
     }
-    const QString useKey = QLatin1String("set_") + cleanedKey;
+    const QString useKey = QLatin1StringView("set_") + cleanedKey;
     if (accountConfig.hasKey(useKey) && (accountConfig.readEntry(useKey, 0) == 1)) {
         value = accountConfig.readEntry(key, 0);
         return true;
@@ -26,7 +26,7 @@ bool SylpheedSettingsUtils::readConfig(const QString &key, const KConfigGroup &a
     if (remove_underscore) {
         cleanedKey.remove(QLatin1Char('_'));
     }
-    const QString useKey = QLatin1String("set_") + cleanedKey;
+    const QString useKey = QLatin1StringView("set_") + cleanedKey;
     if (accountConfig.hasKey(useKey) && (accountConfig.readEntry(useKey, 0) == 1)) {
         value = accountConfig.readEntry(key);
         return true;

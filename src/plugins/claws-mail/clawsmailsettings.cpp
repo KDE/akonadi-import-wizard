@@ -27,10 +27,10 @@ void ClawsMailSettings::importSettings(const QString &filename, const QString &p
 {
     bool checkMailOnStartup = true;
     int intervalCheckMail = -1;
-    const QString clawsmailrc = path + QLatin1String("/clawsrc");
+    const QString clawsmailrc = path + QLatin1StringView("/clawsrc");
     if (QFileInfo::exists(clawsmailrc)) {
         KConfig configCommon(clawsmailrc);
-        if (configCommon.hasGroup(QLatin1String("Common"))) {
+        if (configCommon.hasGroup(QLatin1StringView("Common"))) {
             KConfigGroup common = configCommon.group(QStringLiteral("Common"));
             checkMailOnStartup = (common.readEntry("check_on_startup", 1) == 1);
             if (common.readEntry(QStringLiteral("autochk_newmail"), 1) == 1) {
@@ -47,7 +47,7 @@ void ClawsMailSettings::importSettings(const QString &filename, const QString &p
         readAccount(group, checkMailOnStartup, intervalCheckMail);
         readIdentity(group);
     }
-    const QString customheaderrc = path + QLatin1String("/customheaderrc");
+    const QString customheaderrc = path + QLatin1StringView("/customheaderrc");
     QFile customHeaderFile(customheaderrc);
     if (customHeaderFile.exists()) {
         if (!customHeaderFile.open(QIODevice::ReadOnly)) {

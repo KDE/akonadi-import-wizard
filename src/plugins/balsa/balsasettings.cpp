@@ -56,7 +56,7 @@ void BalsaSettings::readAccount(const KConfigGroup &grp, bool autoCheck, int aut
     Q_UNUSED(autoDelay)
     const QString type = grp.readEntry(QStringLiteral("Type"));
     bool check = grp.readEntry(QStringLiteral("Check"), false);
-    if (type == QLatin1String("LibBalsaMailboxPOP3")) {
+    if (type == QLatin1StringView("LibBalsaMailboxPOP3")) {
         QMap<QString, QVariant> settings;
         const QString server = grp.readEntry(QStringLiteral("Server"));
         settings.insert(QStringLiteral("Host"), server);
@@ -68,7 +68,7 @@ void BalsaSettings::readAccount(const KConfigGroup &grp, bool autoCheck, int aut
 
         addCheckMailOnStartup(agentIdentifyName, autoCheck);
         addToManualCheck(agentIdentifyName, check);
-    } else if (type == QLatin1String("LibBalsaMailboxImap")) {
+    } else if (type == QLatin1StringView("LibBalsaMailboxImap")) {
         QMap<QString, QVariant> settings;
         const QString server = grp.readEntry(QStringLiteral("Server"));
         settings.insert(QStringLiteral("ImapServer"), server);
@@ -140,9 +140,9 @@ void BalsaSettings::readTransport(const KConfigGroup &grp)
     }
 
     const QString ssl = grp.readEntry(QStringLiteral("SSL"));
-    if (ssl == QLatin1String("true")) {
+    if (ssl == QLatin1StringView("true")) {
         mt->setEncryption(MailTransport::Transport::EnumEncryption::SSL);
-    } else if (ssl == QLatin1String("false")) {
+    } else if (ssl == QLatin1StringView("false")) {
         mt->setEncryption(MailTransport::Transport::EnumEncryption::None);
     } else {
         qCDebug(BALSAPLUGIN_LOG) << " unknown ssl value :" << ssl;

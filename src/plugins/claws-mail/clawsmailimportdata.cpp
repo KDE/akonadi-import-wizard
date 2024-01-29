@@ -58,7 +58,7 @@ bool ClawsMailImportData::importMails()
 
 bool ClawsMailImportData::importAddressBook()
 {
-    const QDir addressbookDir(mPath + QLatin1String("addrbook/"));
+    const QDir addressbookDir(mPath + QLatin1StringView("addrbook/"));
     ClawsMailAddressBook account(addressbookDir);
     account.setAbstractDisplayInfo(mAbstractDisplayInfo);
     account.importAddressBook();
@@ -67,7 +67,7 @@ bool ClawsMailImportData::importAddressBook()
 
 bool ClawsMailImportData::importSettings()
 {
-    const QString accountFile = mPath + QLatin1String("accountrc");
+    const QString accountFile = mPath + QLatin1StringView("accountrc");
     if (QFileInfo::exists(accountFile)) {
         ClawsMailSettings account;
         account.setAbstractDisplayInfo(mAbstractDisplayInfo);
@@ -80,7 +80,7 @@ bool ClawsMailImportData::importSettings()
 
 bool ClawsMailImportData::importFilters()
 {
-    const QString filterPath(mPath + QLatin1String("matcherrc"));
+    const QString filterPath(mPath + QLatin1StringView("matcherrc"));
     return addFilters(filterPath, MailCommon::FilterImporterExporter::ClawsMailFilter);
 }
 

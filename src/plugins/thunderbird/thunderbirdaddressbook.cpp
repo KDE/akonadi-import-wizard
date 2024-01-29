@@ -22,18 +22,18 @@ ThunderBirdAddressBook::~ThunderBirdAddressBook() = default;
 void ThunderBirdAddressBook::importAddressBook()
 {
     const QString path = mDir.path();
-    readAddressBook(path + QLatin1String("/impab.mab"));
+    readAddressBook(path + QLatin1StringView("/impab.mab"));
     const QStringList filesimportab = mDir.entryList(QStringList(QStringLiteral("impab-[0-9]*.map")), QDir::Files, QDir::Name);
     for (const QString &file : filesimportab) {
         readAddressBook(path + QLatin1Char('/') + file);
     }
-    readAddressBook(path + QLatin1String("/abook.mab"));
+    readAddressBook(path + QLatin1StringView("/abook.mab"));
 
     const QStringList files = mDir.entryList(QStringList(QStringLiteral("abook-[0-9]*.map")), QDir::Files, QDir::Name);
     for (const QString &file : files) {
         readAddressBook(path + QLatin1Char('/') + file);
     }
-    readAddressBook(path + QLatin1String("/history.mab"));
+    readAddressBook(path + QLatin1StringView("/history.mab"));
 
     cleanUp();
 }
@@ -71,154 +71,154 @@ void ThunderBirdAddressBook::readAddressBook(const QString &filename)
                                 const QString value = mork.getValue(cellsIter.value());
                                 const QString column = mork.getColumn(cellsIter.key());
                                 qCDebug(THUNDERBIRDPLUGIN_LOG) << "column :" << column << " value :" << value;
-                                if (column == QLatin1String("LastModifiedDate")) {
+                                if (column == QLatin1StringView("LastModifiedDate")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("RecordKey")) {
+                                } else if (column == QLatin1StringView("RecordKey")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("AddrCharSet")) {
+                                } else if (column == QLatin1StringView("AddrCharSet")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("LastRecordKey")) {
+                                } else if (column == QLatin1StringView("LastRecordKey")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("ns:addrbk:db:table:kind:pab")) {
+                                } else if (column == QLatin1StringView("ns:addrbk:db:table:kind:pab")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("ListName")) {
+                                } else if (column == QLatin1StringView("ListName")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("ListNickName")) {
+                                } else if (column == QLatin1StringView("ListNickName")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("ListDescription")) {
+                                } else if (column == QLatin1StringView("ListDescription")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("ListTotalAddresses")) {
+                                } else if (column == QLatin1StringView("ListTotalAddresses")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("LowercaseListName")) {
+                                } else if (column == QLatin1StringView("LowercaseListName")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("ns:addrbk:db:table:kind:deleted")) {
+                                } else if (column == QLatin1StringView("ns:addrbk:db:table:kind:deleted")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("PhotoType")) {
+                                } else if (column == QLatin1StringView("PhotoType")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("PreferDisplayName")) {
+                                } else if (column == QLatin1StringView("PreferDisplayName")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("PhotoURI")) {
+                                } else if (column == QLatin1StringView("PhotoURI")) {
                                     KContacts::Picture photo;
                                     photo.setUrl(value);
                                     contact.setLogo(photo);
-                                } else if (column == QLatin1String("PhotoName")) {
+                                } else if (column == QLatin1StringView("PhotoName")) {
                                     // TODO: verify it
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("DbRowID")) {
+                                } else if (column == QLatin1StringView("DbRowID")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("ns:addrbk:db:row:scope:card:all")) {
+                                } else if (column == QLatin1StringView("ns:addrbk:db:row:scope:card:all")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("ns:addrbk:db:row:scope:list:all")) {
+                                } else if (column == QLatin1StringView("ns:addrbk:db:row:scope:list:all")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("ns:addrbk:db:row:scope:data:all")) {
+                                } else if (column == QLatin1StringView("ns:addrbk:db:row:scope:data:all")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("FirstName")) {
+                                } else if (column == QLatin1StringView("FirstName")) {
                                     contact.setName(value);
-                                } else if (column == QLatin1String("LastName")) {
+                                } else if (column == QLatin1StringView("LastName")) {
                                     contact.setFamilyName(value);
-                                } else if (column == QLatin1String("PhoneticFirstName")) {
+                                } else if (column == QLatin1StringView("PhoneticFirstName")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("PhoneticLastName")) {
+                                } else if (column == QLatin1StringView("PhoneticLastName")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("DisplayName")) {
+                                } else if (column == QLatin1StringView("DisplayName")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("NickName")) {
+                                } else if (column == QLatin1StringView("NickName")) {
                                     contact.setNickName(value);
-                                } else if (column == QLatin1String("PrimaryEmail")) {
+                                } else if (column == QLatin1StringView("PrimaryEmail")) {
                                     contact.setEmails(QStringList() << value);
-                                } else if (column == QLatin1String("LowercasePrimaryEmail")) {
+                                } else if (column == QLatin1StringView("LowercasePrimaryEmail")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("SecondEmail")) {
+                                } else if (column == QLatin1StringView("SecondEmail")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("PreferMailFormat")) {
+                                } else if (column == QLatin1StringView("PreferMailFormat")) {
                                     contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("MailPreferedFormatting"), value);
-                                } else if (column == QLatin1String("PopularityIndex")) {
+                                } else if (column == QLatin1StringView("PopularityIndex")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("AllowRemoteContent")) {
+                                } else if (column == QLatin1StringView("AllowRemoteContent")) {
                                     contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("MailAllowToRemoteContent"), value);
-                                } else if (column == QLatin1String("WorkPhone")) {
+                                } else if (column == QLatin1StringView("WorkPhone")) {
                                     contact.insertPhoneNumber(KContacts::PhoneNumber(value, KContacts::PhoneNumber::Work));
-                                } else if (column == QLatin1String("HomePhone")) {
+                                } else if (column == QLatin1StringView("HomePhone")) {
                                     contact.insertPhoneNumber(KContacts::PhoneNumber(value, KContacts::PhoneNumber::Home));
-                                } else if (column == QLatin1String("FaxNumber")) {
+                                } else if (column == QLatin1StringView("FaxNumber")) {
                                     contact.insertPhoneNumber(KContacts::PhoneNumber(value, KContacts::PhoneNumber::Fax));
-                                } else if (column == QLatin1String("PagerNumber")) {
+                                } else if (column == QLatin1StringView("PagerNumber")) {
                                     contact.insertPhoneNumber(KContacts::PhoneNumber(value, KContacts::PhoneNumber::Pager));
-                                } else if (column == QLatin1String("CellularNumber")) {
+                                } else if (column == QLatin1StringView("CellularNumber")) {
                                     contact.insertPhoneNumber(KContacts::PhoneNumber(value, KContacts::PhoneNumber::Cell));
-                                } else if (column == QLatin1String("WorkPhoneType")) {
+                                } else if (column == QLatin1StringView("WorkPhoneType")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("HomePhoneType")) {
+                                } else if (column == QLatin1StringView("HomePhoneType")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("FaxNumberType")) {
+                                } else if (column == QLatin1StringView("FaxNumberType")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("PagerNumberType")) {
+                                } else if (column == QLatin1StringView("PagerNumberType")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("CellularNumberType")) {
+                                } else if (column == QLatin1StringView("CellularNumberType")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("HomeAddress")) {
+                                } else if (column == QLatin1StringView("HomeAddress")) {
                                     homeAddr.setStreet(value);
-                                } else if (column == QLatin1String("HomeAddress2")) {
+                                } else if (column == QLatin1StringView("HomeAddress2")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("HomeCity")) {
+                                } else if (column == QLatin1StringView("HomeCity")) {
                                     homeAddr.setLocality(value);
-                                } else if (column == QLatin1String("HomeState")) {
+                                } else if (column == QLatin1StringView("HomeState")) {
                                     homeAddr.setRegion(value);
-                                } else if (column == QLatin1String("HomeZipCode")) {
+                                } else if (column == QLatin1StringView("HomeZipCode")) {
                                     homeAddr.setPostalCode(value);
-                                } else if (column == QLatin1String("HomeCountry")) {
+                                } else if (column == QLatin1StringView("HomeCountry")) {
                                     homeAddr.setCountry(value);
-                                } else if (column == QLatin1String("WorkAddress")) {
+                                } else if (column == QLatin1StringView("WorkAddress")) {
                                     workAddr.setStreet(value);
-                                } else if (column == QLatin1String("WorkAddress2")) {
+                                } else if (column == QLatin1StringView("WorkAddress2")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("WorkCity")) {
+                                } else if (column == QLatin1StringView("WorkCity")) {
                                     workAddr.setLocality(value);
-                                } else if (column == QLatin1String("WorkState")) {
+                                } else if (column == QLatin1StringView("WorkState")) {
                                     workAddr.setRegion(value);
-                                } else if (column == QLatin1String("WorkZipCode")) {
+                                } else if (column == QLatin1StringView("WorkZipCode")) {
                                     workAddr.setPostalCode(value);
-                                } else if (column == QLatin1String("WorkCountry")) {
+                                } else if (column == QLatin1StringView("WorkCountry")) {
                                     workAddr.setCountry(value);
-                                } else if (column == QLatin1String("JobTitle")) {
+                                } else if (column == QLatin1StringView("JobTitle")) {
                                     contact.setTitle(value);
-                                } else if (column == QLatin1String("Department")) {
+                                } else if (column == QLatin1StringView("Department")) {
                                     contact.setDepartment(value);
-                                } else if (column == QLatin1String("Company")) {
+                                } else if (column == QLatin1StringView("Company")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("_AimScreenName")) {
+                                } else if (column == QLatin1StringView("_AimScreenName")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("AnniversaryYear")) {
+                                } else if (column == QLatin1StringView("AnniversaryYear")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("AnniversaryMonth")) {
+                                } else if (column == QLatin1StringView("AnniversaryMonth")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("AnniversaryDay")) {
+                                } else if (column == QLatin1StringView("AnniversaryDay")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("SpouseName")) {
+                                } else if (column == QLatin1StringView("SpouseName")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("FamilyName")) {
+                                } else if (column == QLatin1StringView("FamilyName")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("WebPage1")) {
+                                } else if (column == QLatin1StringView("WebPage1")) {
                                     KContacts::ResourceLocatorUrl url;
                                     url.setUrl(QUrl(value));
                                     contact.setUrl(url);
-                                } else if (column == QLatin1String("WebPage2")) {
+                                } else if (column == QLatin1StringView("WebPage2")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
-                                } else if (column == QLatin1String("BirthYear")) {
+                                } else if (column == QLatin1StringView("BirthYear")) {
                                     birthyear = value.toInt();
-                                } else if (column == QLatin1String("BirthMonth")) {
+                                } else if (column == QLatin1StringView("BirthMonth")) {
                                     birthmonth = value.toInt();
-                                } else if (column == QLatin1String("BirthDay")) {
+                                } else if (column == QLatin1StringView("BirthDay")) {
                                     birthday = value.toInt();
-                                } else if (column == QLatin1String("Custom1")) {
+                                } else if (column == QLatin1StringView("Custom1")) {
                                     contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("Custom1"), value);
-                                } else if (column == QLatin1String("Custom2")) {
+                                } else if (column == QLatin1StringView("Custom2")) {
                                     contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("Custom2"), value);
-                                } else if (column == QLatin1String("Custom3")) {
+                                } else if (column == QLatin1StringView("Custom3")) {
                                     contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("Custom3"), value);
-                                } else if (column == QLatin1String("Custom4")) {
+                                } else if (column == QLatin1StringView("Custom4")) {
                                     contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("Custom4"), value);
-                                } else if (column == QLatin1String("Notes")) {
+                                } else if (column == QLatin1StringView("Notes")) {
                                     contact.setNote(value);
                                 } else {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " Columnn not implemented " << column;

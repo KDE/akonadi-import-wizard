@@ -42,7 +42,7 @@ void ImportWizardUtil::mergeLdap(const ldapStruct &ldap)
         grp.writeEntry(QStringLiteral("SelectedSecurity%1").arg(numberOfLdapSelected), QStringLiteral("None"));
     }
 
-    if (ldap.saslMech == QLatin1String("GSSAPI")) {
+    if (ldap.saslMech == QLatin1StringView("GSSAPI")) {
         grp.writeEntry(QStringLiteral("SelectedMech%1").arg(numberOfLdapSelected), QStringLiteral("GSSAPI"));
         grp.writeEntry(QStringLiteral("SelectedAuth%1").arg(numberOfLdapSelected), QStringLiteral("SASL"));
     } else if (ldap.saslMech.isEmpty()) {
@@ -85,7 +85,7 @@ void ImportWizardUtil::storePassword(const QString &name, ImportWizardUtil::Reso
     case Imap:
         job->setName(QStringLiteral("imap"));
         job->setPassword(password);
-        job->setKey(name + QLatin1String("rc"));
+        job->setKey(name + QLatin1StringView("rc"));
         break;
     case Pop3:
         job->setName(QStringLiteral("pop3"));
