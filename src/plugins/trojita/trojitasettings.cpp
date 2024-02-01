@@ -103,7 +103,7 @@ void TrojitaSettings::readTransport()
         MailTransport::Transport *mt = createTransport();
         if (smtpMethod == QLatin1StringView("IMAP-SENDMAIL")) {
             // see http://tools.ietf.org/html/draft-kundrat-imap-submit-01
-        } else if (smtpMethod == QLatin1StringView("SMTP") || smtpMethod == QLatin1String("SSMTP")) {
+        } else if (smtpMethod == QLatin1StringView("SMTP") || smtpMethod == QLatin1StringView("SSMTP")) {
             if (settings->contains(QStringLiteral("msa.smtp.host"))) {
                 mt->setHost(settings->value(QStringLiteral("msa.smtp.host")).toString());
             }

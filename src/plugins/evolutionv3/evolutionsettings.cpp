@@ -306,7 +306,7 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                     const QStringList listArgument = path.split(QLatin1Char(';'));
 
                     // imapx://name@pop3.xx.org:993/;security-method=ssl-on-alternate-port;namespace;shell-command=ssh%20-C%20-l%20%25u%20%25h%20exec%20/usr/sbin/imapd%20;use-shell-command=true
-                    if (scheme == QLatin1StringView("imap") || scheme == QLatin1String("imapx")) {
+                    if (scheme == QLatin1StringView("imap") || scheme == QLatin1StringView("imapx")) {
                         if (port > 0) {
                             settings.insert(QStringLiteral("ImapPort"), port);
                         }
@@ -372,12 +372,12 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                         // By default
                         addCheckMailOnStartup(agentIdentifyName, enableManualCheck);
                         addToManualCheck(agentIdentifyName, enableManualCheck);
-                    } else if (scheme == QLatin1StringView("spool") || scheme == QLatin1String("mbox")) {
+                    } else if (scheme == QLatin1StringView("spool") || scheme == QLatin1StringView("mbox")) {
                         // mbox file
                         settings.insert(QStringLiteral("Path"), path);
                         settings.insert(QStringLiteral("DisplayName"), name);
                         LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_mbox_resource"), name, settings);
-                    } else if (scheme == QLatin1StringView("maildir") || scheme == QLatin1String("spooldir")) {
+                    } else if (scheme == QLatin1StringView("maildir") || scheme == QLatin1StringView("spooldir")) {
                         settings.insert(QStringLiteral("Path"), path);
                         LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_maildir_resource"), name, settings);
                     } else if (scheme == QLatin1StringView("nntp")) {

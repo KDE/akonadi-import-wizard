@@ -201,41 +201,41 @@ void SylpheedSettings::readSettingsColor(const KConfigGroup &group)
 QString SylpheedSettings::convertToKmailTemplate(const QString &templateStr)
 {
     QString newTemplate = templateStr;
-    newTemplate.replace(QLatin1StringView("%date"), QLatin1String("%DATE"));
-    newTemplate.replace(QLatin1StringView("%d"), QLatin1String("%DATE"));
-    newTemplate.replace(QLatin1StringView("%from"), QLatin1String("%OTONAME"));
-    newTemplate.replace(QLatin1StringView("%f"), QLatin1String("%OTONAME"));
-    newTemplate.replace(QLatin1StringView("%to"), QLatin1String("%TONAME"));
-    newTemplate.replace(QLatin1StringView("%t"), QLatin1String("%TONAME"));
-    newTemplate.replace(QLatin1StringView("%cc"), QLatin1String("%CCNAME"));
-    newTemplate.replace(QLatin1StringView("%c"), QLatin1String("%CCNAME"));
+    newTemplate.replace(QLatin1StringView("%date"), QLatin1StringView("%DATE"));
+    newTemplate.replace(QLatin1StringView("%d"), QLatin1StringView("%DATE"));
+    newTemplate.replace(QLatin1StringView("%from"), QLatin1StringView("%OTONAME"));
+    newTemplate.replace(QLatin1StringView("%f"), QLatin1StringView("%OTONAME"));
+    newTemplate.replace(QLatin1StringView("%to"), QLatin1StringView("%TONAME"));
+    newTemplate.replace(QLatin1StringView("%t"), QLatin1StringView("%TONAME"));
+    newTemplate.replace(QLatin1StringView("%cc"), QLatin1StringView("%CCNAME"));
+    newTemplate.replace(QLatin1StringView("%c"), QLatin1StringView("%CCNAME"));
 
-    newTemplate.replace(QLatin1StringView("%email"), QLatin1String("%OFROMNAME"));
-    newTemplate.replace(QLatin1StringView("%A"), QLatin1String("%OFROMNAME"));
+    newTemplate.replace(QLatin1StringView("%email"), QLatin1StringView("%OFROMNAME"));
+    newTemplate.replace(QLatin1StringView("%A"), QLatin1StringView("%OFROMNAME"));
 
-    newTemplate.replace(QLatin1StringView("%cursor"), QLatin1String("%CURSOR"));
-    newTemplate.replace(QLatin1StringView("%X"), QLatin1String("%CURSOR"));
+    newTemplate.replace(QLatin1StringView("%cursor"), QLatin1StringView("%CURSOR"));
+    newTemplate.replace(QLatin1StringView("%X"), QLatin1StringView("%CURSOR"));
 
-    newTemplate.replace(QLatin1StringView("%msg"), QLatin1String("%TEXT"));
-    newTemplate.replace(QLatin1StringView("%M"), QLatin1String("%TEXT"));
+    newTemplate.replace(QLatin1StringView("%msg"), QLatin1StringView("%TEXT"));
+    newTemplate.replace(QLatin1StringView("%M"), QLatin1StringView("%TEXT"));
 
-    newTemplate.replace(QLatin1StringView("%quoted_msg"), QLatin1String("%QUOTE"));
-    newTemplate.replace(QLatin1StringView("%Q"), QLatin1String("%QUOTE"));
+    newTemplate.replace(QLatin1StringView("%quoted_msg"), QLatin1StringView("%QUOTE"));
+    newTemplate.replace(QLatin1StringView("%Q"), QLatin1StringView("%QUOTE"));
 
-    newTemplate.replace(QLatin1StringView("%subject"), QLatin1String("%OFULLSUBJECT"));
-    newTemplate.replace(QLatin1StringView("%s"), QLatin1String("%OFULLSUBJECT"));
+    newTemplate.replace(QLatin1StringView("%subject"), QLatin1StringView("%OFULLSUBJECT"));
+    newTemplate.replace(QLatin1StringView("%s"), QLatin1StringView("%OFULLSUBJECT"));
 
-    newTemplate.replace(QLatin1StringView("%messageid"), QLatin1String("%MSGID"));
-    newTemplate.replace(QLatin1StringView("%i"), QLatin1String("%MSGID"));
+    newTemplate.replace(QLatin1StringView("%messageid"), QLatin1StringView("%MSGID"));
+    newTemplate.replace(QLatin1StringView("%i"), QLatin1StringView("%MSGID"));
 
-    newTemplate.replace(QLatin1StringView("%firstname"), QLatin1String("%OFROMNAME"));
-    newTemplate.replace(QLatin1StringView("%F"), QLatin1String("%OFROMNAME"));
+    newTemplate.replace(QLatin1StringView("%firstname"), QLatin1StringView("%OFROMNAME"));
+    newTemplate.replace(QLatin1StringView("%F"), QLatin1StringView("%OFROMNAME"));
 
-    newTemplate.replace(QLatin1StringView("%lastname"), QLatin1String("%OFROMLNAME"));
-    newTemplate.replace(QLatin1StringView("%L"), QLatin1String("%OFROMLNAME"));
+    newTemplate.replace(QLatin1StringView("%lastname"), QLatin1StringView("%OFROMLNAME"));
+    newTemplate.replace(QLatin1StringView("%L"), QLatin1StringView("%OFROMLNAME"));
 
-    newTemplate.replace(QLatin1StringView("%fullname"), QLatin1String("%OFROMFNAME"));
-    newTemplate.replace(QLatin1StringView("%N"), QLatin1String("%OFROMFNAME"));
+    newTemplate.replace(QLatin1StringView("%fullname"), QLatin1StringView("%OFROMFNAME"));
+    newTemplate.replace(QLatin1StringView("%N"), QLatin1StringView("%OFROMFNAME"));
     // TODO add more variable
     return newTemplate;
 }

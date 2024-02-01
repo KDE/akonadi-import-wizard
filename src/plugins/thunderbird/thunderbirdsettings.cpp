@@ -38,18 +38,19 @@ void ThunderbirdSettings::importSettings()
     while (!stream.atEnd()) {
         const QString line = stream.readLine();
         if (line.startsWith(QLatin1StringView("user_pref"))) {
-            if (line.contains(QLatin1StringView("mail.smtpserver")) || line.contains(QLatin1String("mail.server."))
-                || line.contains(QLatin1StringView("mail.identity.")) || line.contains(QLatin1String("mail.account."))
-                || line.contains(QLatin1StringView("mail.accountmanager.")) || line.contains(QLatin1String("mailnews."))
-                || line.contains(QLatin1StringView("mail.compose.")) || line.contains(QLatin1String("mail.spellcheck"))
-                || line.contains(QLatin1StringView("mail.SpellCheckBeforeSend")) || line.contains(QLatin1String("spellchecker.dictionary"))
-                || line.contains(QLatin1StringView("ldap_")) || line.contains(QLatin1String("mail.biff.")) || line.contains(QLatin1String("mailnews.tags."))
-                || line.contains(QLatin1StringView("extensions.AutoResizeImage.")) || line.contains(QLatin1String("mail.phishing."))
-                || line.contains(QLatin1StringView("mail.display_glyph")) || line.contains(QLatin1String("extensions.sieve.account."))) {
+            if (line.contains(QLatin1StringView("mail.smtpserver")) || line.contains(QLatin1StringView("mail.server."))
+                || line.contains(QLatin1StringView("mail.identity.")) || line.contains(QLatin1StringView("mail.account."))
+                || line.contains(QLatin1StringView("mail.accountmanager.")) || line.contains(QLatin1StringView("mailnews."))
+                || line.contains(QLatin1StringView("mail.compose.")) || line.contains(QLatin1StringView("mail.spellcheck"))
+                || line.contains(QLatin1StringView("mail.SpellCheckBeforeSend")) || line.contains(QLatin1StringView("spellchecker.dictionary"))
+                || line.contains(QLatin1StringView("ldap_")) || line.contains(QLatin1StringView("mail.biff."))
+                || line.contains(QLatin1StringView("mailnews.tags.")) || line.contains(QLatin1StringView("extensions.AutoResizeImage."))
+                || line.contains(QLatin1StringView("mail.phishing.")) || line.contains(QLatin1StringView("mail.display_glyph"))
+                || line.contains(QLatin1StringView("extensions.sieve.account."))) {
                 insertIntoMap(line);
             }
         } else {
-            if (!line.startsWith(QLatin1Char('#')) || line.isEmpty() || line.startsWith(QLatin1StringView("/*")) || line.startsWith(QLatin1String(" */"))
+            if (!line.startsWith(QLatin1Char('#')) || line.isEmpty() || line.startsWith(QLatin1StringView("/*")) || line.startsWith(QLatin1StringView(" */"))
                 || line.startsWith(QLatin1StringView(" *"))) {
                 qCDebug(THUNDERBIRDPLUGIN_LOG) << " unstored line :" << line;
             }
@@ -191,10 +192,10 @@ void ThunderbirdSettings::readExtensionsSettings()
     const QString filteringRenamingPatternStr(QStringLiteral("extensions.AutoResizeImage.renamingPattern"));
     if (mHashConfig.contains(filteringRenamingPatternStr)) {
         QString filteringRenamingPattern = mHashConfig.value(filteringRenamingPatternStr).toString();
-        filteringRenamingPattern.replace(QLatin1StringView("%3Fn"), QLatin1String("%n"));
-        filteringRenamingPattern.replace(QLatin1StringView("%3Ft"), QLatin1String("%t"));
-        filteringRenamingPattern.replace(QLatin1StringView("%3Fd"), QLatin1String("%d"));
-        filteringRenamingPattern.replace(QLatin1StringView("%3Fe"), QLatin1String("%e"));
+        filteringRenamingPattern.replace(QLatin1StringView("%3Fn"), QLatin1StringView("%n"));
+        filteringRenamingPattern.replace(QLatin1StringView("%3Ft"), QLatin1StringView("%t"));
+        filteringRenamingPattern.replace(QLatin1StringView("%3Fd"), QLatin1StringView("%d"));
+        filteringRenamingPattern.replace(QLatin1StringView("%3Fe"), QLatin1StringView("%e"));
         addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("rename-resized-images-pattern"), filteringRenamingPattern);
     }
 
@@ -728,7 +729,7 @@ void ThunderbirdSettings::readAccount()
         } else if (type == QLatin1StringView("none")) {
             // FIXME look at if we can implement it
             qCDebug(THUNDERBIRDPLUGIN_LOG) << " account type none!";
-        } else if (type == QLatin1StringView("rss") || type == QLatin1String("nntp") || type == QLatin1String("movemail")) {
+        } else if (type == QLatin1StringView("rss") || type == QLatin1StringView("nntp") || type == QLatin1StringView("movemail")) {
             qCDebug(THUNDERBIRDPLUGIN_LOG) << QStringLiteral("%1 rss resource needs to be implemented").arg(type);
             continue;
         } else {
@@ -985,11 +986,11 @@ void ThunderbirdSettings::insertIntoMap(const QString &line)
             mHashConfig.insert(key, value);
         }
     }
-    if (key.contains(QLatin1StringView("ldap_")) && key.endsWith(QLatin1String(".description"))) {
+    if (key.contains(QLatin1StringView("ldap_")) && key.endsWith(QLatin1StringView(".description"))) {
         QString ldapAccountName = key;
         mLdapAccountList.append(ldapAccountName.remove(QStringLiteral(".description")));
     }
-    if (key.contains(QLatin1StringView("mailnews.tags.")) && (key.endsWith(QLatin1String(".color")) || key.endsWith(QLatin1String(".tag")))) {
+    if (key.contains(QLatin1StringView("mailnews.tags.")) && (key.endsWith(QLatin1StringView(".color")) || key.endsWith(QLatin1StringView(".tag")))) {
         QString name = key;
         name.remove(QStringLiteral("mailnews.tags."));
         name.remove(QStringLiteral(".color"));
