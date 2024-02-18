@@ -57,6 +57,7 @@ set(MAILCOMMON_LIB_VERSION "6.0.40")
 set(MESSAGELIB_LIB_VERSION "6.0.40")
 set(PIMCOMMON_LIB_VERSION "6.0.40")
 set(IDENTITYMANAGEMENT_LIB_VERSION "6.0.40")
+set(QT6KEYCHAIN_LIB_VERSION "0.14.1")
 
 # Find KF6 package
 find_package(KF6Config ${KF_MIN_VERSION} CONFIG REQUIRED)
@@ -80,7 +81,7 @@ find_package(KPim6MessageViewer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6PimCommonAkonadi ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
 include_directories(${importwizard_SOURCE_DIR} ${importwizard_BINARY_DIR})
 
-find_package(Qt6Keychain CONFIG)
+find_package(Qt6Keychain ${QT6KEYCHAIN_LIB_VERSION} CONFIG)
 set_package_properties(Qt6Keychain PROPERTIES
                                    DESCRIPTION "Provides support for secure credentials storage"
                                    URL "https://github.com/frankosterfeld/qtkeychain"
