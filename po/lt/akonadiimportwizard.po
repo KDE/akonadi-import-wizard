@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-24 01:41+0000\n"
-"PO-Revision-Date: 2024-02-02 14:56+0200\n"
+"PO-Revision-Date: 2024-02-20 13:48+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -24,25 +24,23 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Liudas Ališauskas"
+msgstr "Liudas Ališauskas, Moo"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "liudas@akmc.lt"
+msgstr "liudas@akmc.lt, <>"
 
 #: autodetect/widgets/selectprogramlistwidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "No program found"
+#, kde-format
 msgid "No program found."
-msgstr "Nerasta programų"
+msgstr "Nerasta jokių programų."
 
 #: importwizard.cpp:41
-#, fuzzy, kde-format
-#| msgid "PIM Import Tool"
+#, kde-format
 msgctxt "@title:window"
 msgid "PIM Import Tool"
-msgstr "PIM importo įrankis"
+msgstr "PIM importavimo įrankis"
 
 #: importwizard.cpp:70
 #, kde-format
@@ -51,17 +49,17 @@ msgid ""
 "file."
 msgstr ""
 "Prieš importuodami duomenis, užverkite KMail. Kai kurie įskiepiai pakeis "
-"KMail konfigūracijos failus."
+"KMail konfigūracijos failą."
 
 #: importwizard.cpp:125
 #, kde-format
 msgid "Step 1: Select Filter"
-msgstr ""
+msgstr "Žingsnis 1: Pasirinkti filtrą"
 
 #: importwizard.cpp:130
 #, kde-format
 msgid "Step 2: Importing..."
-msgstr ""
+msgstr "Žingsnis 2: Importavimas..."
 
 #: importwizard.cpp:159
 #, kde-format
@@ -71,7 +69,7 @@ msgstr "Aptikti programą"
 #: importwizard.cpp:164
 #, kde-format
 msgid "Select material to import"
-msgstr "Pasirinkite importuotinas vertybes"
+msgstr "Pasirinkite medžiagą, kurią importuoti"
 
 #: importwizard.cpp:168
 #, kde-format
@@ -87,7 +85,7 @@ msgstr "Importuoti pašto filtrus"
 #: importwizard.cpp:176 ui/autodetect/importsettingpage.ui:47
 #, kde-format
 msgid "Import settings"
-msgstr "Importavimo nuostatos"
+msgstr "Importuoti nuostatas"
 
 #: importwizard.cpp:180
 #, kde-format
@@ -110,10 +108,9 @@ msgid "Import addressbook from %1..."
 msgstr "Importuoti adresų knygą iš %1..."
 
 #: importwizard.cpp:213
-#, fuzzy, kde-format
-#| msgid "Import addressbook from %1..."
+#, kde-format
 msgid "Import addressbook from %1: Done"
-msgstr "Importuoti adresų knygą iš %1..."
+msgstr "Importuoti adresų knygą iš %1: Atlikta"
 
 #: importwizard.cpp:219
 #, kde-format
@@ -121,10 +118,9 @@ msgid "Import filters from %1..."
 msgstr "Importuoti filtrus iš %1..."
 
 #: importwizard.cpp:222
-#, fuzzy, kde-format
-#| msgid "Import filters from %1..."
+#, kde-format
 msgid "Import filters from %1: Done"
-msgstr "Importuoti filtrus iš %1..."
+msgstr "Importuoti filtrus iš %1: Atlikta"
 
 #: importwizard.cpp:228
 #, kde-format
@@ -132,10 +128,9 @@ msgid "Import mails from %1..."
 msgstr "Importuoti laiškus iš %1..."
 
 #: importwizard.cpp:231
-#, fuzzy, kde-format
-#| msgid "Import mails from %1..."
+#, kde-format
 msgid "Import mails from %1: Done"
-msgstr "Importuoti laiškus iš %1..."
+msgstr "Importuoti laiškus iš %1: Atlikta"
 
 #: importwizard.cpp:237
 #, kde-format
@@ -143,10 +138,9 @@ msgid "Import settings from %1..."
 msgstr "Importuoti nuostatas iš %1..."
 
 #: importwizard.cpp:240
-#, fuzzy, kde-format
-#| msgid "Import settings from %1..."
+#, kde-format
 msgid "Import settings from %1: Done"
-msgstr "Importuoti nuostatas iš %1..."
+msgstr "Importuoti nuostatas iš %1: Atlikta"
 
 #: importwizard.cpp:246
 #, kde-format
@@ -154,10 +148,9 @@ msgid "Import calendar from %1..."
 msgstr "Importuoti kalendorių iš %1..."
 
 #: importwizard.cpp:249
-#, fuzzy, kde-format
-#| msgid "Import calendar from %1..."
+#, kde-format
 msgid "Import calendar from %1: Done"
-msgstr "Importuoti kalendorių iš %1..."
+msgstr "Importuoti kalendorių iš %1: Atlikta"
 
 #: importwizard.cpp:338 plugins/balsa/balsaimportdata.cpp:46
 #: plugins/claws-mail/clawsmailimportdata.cpp:47
@@ -184,14 +177,13 @@ msgstr "Importavimas baigtas"
 #: libimportwizard/abstractaddressbook.cpp:28
 #, kde-format
 msgid "Creating new contact..."
-msgstr "Kuriamas naujas kontaktas..."
+msgstr "Kuriamas naujas adresatas..."
 
 #: libimportwizard/abstractaddressbook.cpp:34
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
-msgstr "Parinkti adresų knygą"
+msgstr "Pasirinkti adresų knygą"
 
 #: libimportwizard/abstractaddressbook.cpp:35
 #, kde-format
@@ -201,35 +193,33 @@ msgstr "Pasirinkite į kurią adresų knygą įrašyti naująjį adresatą:"
 #: libimportwizard/abstractaddressbook.cpp:40
 #, kde-format
 msgid "Address Book was not selected."
-msgstr "Adresų knygelė nebuvo neparinkta."
+msgstr "Nebuvo pasirinkta adresų knyga."
 
 #: libimportwizard/abstractaddressbook.cpp:67
-#, fuzzy, kde-format
-#| msgid "Import calendar from %1..."
+#, kde-format
 msgid "Imported from \"%1\""
-msgstr "Importuoti kalendorių iš %1..."
+msgstr "Importuota iš „%1“"
 
 #: libimportwizard/abstractaddressbook.cpp:86
 #, kde-format
 msgid "Error during contact creation: %1"
-msgstr "Klaida kuriant kontaktą: %1"
+msgstr "Klaida kuriant adresatą: %1"
 
 #: libimportwizard/abstractaddressbook.cpp:89
 #, kde-format
 msgid "Contact creation complete"
-msgstr "Kontakto kūrimas baigtas"
+msgstr "Adresato kūrimas baigtas"
 
 #: libimportwizard/abstractimporter.cpp:65
-#, fuzzy, kde-format
-#| msgid "Import Filters"
+#, kde-format
 msgid "Importing of filters from \"%1\" was canceled."
-msgstr "Importavimo filtrai"
+msgstr "Filtrų importavimo iš „%1“ buvo atsisakyta."
 
 #: libimportwizard/abstractimporter.cpp:67
 #, kde-format
 msgid "1 filter was imported from \"%2\""
 msgid_plural "%1 filters were imported from \"%2\""
-msgstr[0] "1 filtras buvo importuotas iš  „%2“"
+msgstr[0] "1 filtras buvo importuotas iš „%2“"
 msgstr[1] "%1 filtrai buvo importuoti iš „%2“"
 msgstr[2] "%1 filtrų buvo importuota iš „%2“"
 msgstr[3] "%1 filtras buvo importuotas iš „%2“"
@@ -247,7 +237,7 @@ msgstr "Nustatoma tapatybė..."
 #: libimportwizard/abstractsettings.cpp:46
 #, kde-format
 msgid "Identity set up."
-msgstr "Tapatybės nustatymas."
+msgstr "Tapatybės nustatyta."
 
 #: libimportwizard/abstractsettings.cpp:63
 #, kde-format
@@ -257,18 +247,17 @@ msgstr "Nustatomas perdavimas..."
 #: libimportwizard/abstractsettings.cpp:75
 #, kde-format
 msgid "Transport set up."
-msgstr "Perdavimo nustatymas."
+msgstr "Perdavimas nustatytas."
 
 #: main.cpp:28 main.cpp:30
 #, kde-format
 msgid "PIM Import Tool"
-msgstr "PIM importo įrankis"
+msgstr "PIM importavimo įrankis"
 
 #: main.cpp:32
-#, fuzzy, kde-format
-#| msgid "Copyright © 2012-2013 importwizard authors"
+#, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
-msgstr "Autorinės teisės © 2012-2013 importovedlys autoriai"
+msgstr "Autorių teisės © 2012–%1 ImportWizard autoriai"
 
 #: main.cpp:34
 #, kde-format
@@ -278,40 +267,38 @@ msgstr "Laurent Montel"
 #: main.cpp:34
 #, kde-format
 msgid "Maintainer"
-msgstr "Palaikytojas"
+msgstr "Prižiūrėtojas"
 
 #: main.cpp:40
 #, kde-format
 msgid "Mode: %1"
-msgstr ""
+msgstr "Veiksena: %1"
 
 #: manual/manualselectfilterpage.cpp:85
 #, kde-format
 msgid "<p><i>Written by %1.</i></p>"
-msgstr ""
+msgstr "<p><i>Parašė %1.</i></p>"
 
 #: plugins/balsa/balsaaddressbook.cpp:36 plugins/balsa/balsaaddressbook.cpp:49
 #: plugins/sylpheed/sylpheedaddressbook.cpp:27
-#, fuzzy, kde-format
-#| msgid "Import addressbook"
+#, kde-format
 msgid "No addressbook found"
-msgstr "Importuoti adresų knygą"
+msgstr "Nerasta jokių adresų knygų"
 
 #: plugins/balsa/balsaaddressbook.cpp:63
 #, kde-format
 msgid "Ldap created"
-msgstr ""
+msgstr "Ldap sukurta"
 
 #: plugins/balsa/balsaaddressbook.cpp:93
-#, fuzzy, kde-format
-#| msgid "Import addressbook from %1..."
+#, kde-format
 msgid "New addressbook created: %1"
-msgstr "Importuoti adresų knygą iš %1..."
+msgstr "Sukurta nauja adresų knyga: %1"
 
 #: plugins/claws-mail/clawsmailimportdata.cpp:76
 #, kde-format
 msgid "Claws Mail settings not found."
-msgstr "Claws Mail nuostatos nerasti."
+msgstr "Nerastos Claws Mail nuostatos."
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:21
 #, kde-format
@@ -323,8 +310,7 @@ msgstr ""
 "KAddressBook."
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:22
-#, fuzzy, kde-format
-#| msgid "Export Evolution Address Book"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export Evolution Address Book"
 msgstr "Eksportuoti Evolution adresų knygą"
@@ -332,7 +318,7 @@ msgstr "Eksportuoti Evolution adresų knygą"
 #: plugins/evolutionv3/evolutionaddressbook.cpp:25
 #, kde-format
 msgid "Select the directory where vCards will be stored."
-msgstr "Nurodykite direktoriją, kurioje vCards bus saugomos."
+msgstr "Pasirinkite katalogą, kuriame bus saugomos vCards."
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:78
 #, kde-format
@@ -347,7 +333,7 @@ msgstr "Nepavyko eksportuoti adresų knygos „%1“."
 #: plugins/evolutionv3/evolutionv3importdata.cpp:57
 #, kde-format
 msgid "Evolution settings not found."
-msgstr "Nerasti Evolution nuostatos."
+msgstr "Nerastos Evolution nuostatos."
 
 #: plugins/evolutionv3/evolutionv3importdata.cpp:100
 #, kde-format
@@ -355,37 +341,34 @@ msgid "Evolution calendar not found."
 msgstr "Nerastas Evolution kalendorius."
 
 #: plugins/icedove/icedoveimportdata.cpp:69
-#, fuzzy, kde-format
-#| msgid "Sylpheed settings not found."
+#, kde-format
 msgid "Icedove settings not found."
-msgstr "Sylpheed nuostatos nerasti."
+msgstr "Nerastos Icedove nuostatos."
 
 #: plugins/seamonkey/seamonkeyimportdata.cpp:69
-#, fuzzy, kde-format
-#| msgid "Sylpheed settings not found."
+#, kde-format
 msgid "SeaMonkey settings not found."
-msgstr "Sylpheed nuostatos nerasti."
+msgstr "Nerastos SeaMonkey nuostatos."
 
 #: plugins/sylpheed/sylpheedaddressbook.cpp:60
 #, kde-format
 msgid "No contact found in %1"
-msgstr "Nerasta kontaktų šaltinyje %1"
+msgstr "Nerasta jokių adresatų ties %1"
 
 #: plugins/sylpheed/sylpheedimportdata.cpp:51
 #, kde-format
 msgid "Sylpheed settings not found."
-msgstr "Sylpheed nuostatos nerasti."
+msgstr "Nerastos Sylpheed nuostatos."
 
 #: plugins/thunderbird/thunderbirdaddressbook.cpp:46
-#, fuzzy, kde-format
-#| msgid "Filters file was not found"
+#, kde-format
 msgid "Contacts file '%1' not found"
-msgstr "Nerastas filtrų failas"
+msgstr "Nerastas adresatų failas „%1“"
 
 #: plugins/thunderbird/thunderbirdimportdata.cpp:71
 #, kde-format
 msgid "Thunderbird settings not found."
-msgstr "Thunderbird nuostatos nerasti."
+msgstr "Nerastos Thunderbird nuostatos."
 
 #. i18n: ectx: property (text), widget (QPushButton, importAddressBook)
 #: ui/autodetect/importaddressbookpage.ui:47
@@ -403,7 +386,7 @@ msgstr "Importuoti kalendorių"
 #: ui/autodetect/importfilterpage.ui:47
 #, kde-format
 msgid "Import Filters"
-msgstr "Importavimo filtrai"
+msgstr "Importuoti filtrus"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/autodetect/importfinishpage.ui:29
@@ -460,14 +443,14 @@ msgid ""
 "This wizard will import mail messages, addressbook entries, filters and/or "
 "settings from other mail programs into KMail"
 msgstr ""
-"Šis vedlys importuos laiškus, adresų knygos įrašus, filtrus ir/arba "
-"nuostatas iš kitų pašto programų į KMail"
+"Šis vediklis importuos į KMail laiškus, adresų knygos įrašus, filtrus ir/"
+"arba nuostatas iš kitų pašto programų"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/autodetect/selectcomponentpage.ui:136
 #, kde-format
 msgid "Or select types of material to import:"
-msgstr "Arba pasirinkite importuotinų vertybių tipus:"
+msgstr "Arba pasirinkite medžiagos, kurią importuosite, tipus:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, everything)
 #: ui/autodetect/selectcomponentpage.ui:143
@@ -483,22 +466,21 @@ msgstr "Pasirinkite programą, iš kurios norite importuoti:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/autodetect/selectprogrampage.ui:86
-#, fuzzy, kde-format
-#| msgid "No program found"
+#, kde-format
 msgid "No program found"
-msgstr "Nerasta programų"
+msgstr "Nerasta jokių programų"
 
 #. i18n: ectx: property (text), widget (QCheckBox, manualSelectionCheckBox)
 #: ui/autodetect/selectprogrampage.ui:112
 #, kde-format
 msgid "Manual Selection"
-msgstr ""
+msgstr "Rankinis pasirinkimas"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: ui/manual/manualimportmailpage.ui:96
 #, kde-format
 msgid "Click 'Back' to import more emails"
-msgstr ""
+msgstr "Spustelėkite „Atgal“, norėdami importuoti daugiau el. laiškų"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel6)
 #: ui/manual/manualselectfilterpage.ui:103
@@ -520,9 +502,25 @@ msgid ""
 "you would like to import from. Next, select the folder you would like to "
 "import to, then click 'Next'.</span></p></body></html>"
 msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'DejaVu Sans'; font-size:9pt; font-weight:600;\">Sveiki atvykę į "
+"ImportWizard pašto importavimo įrankį</span><span style=\" font-"
+"family:'DejaVu Sans'; font-size:9pt;\"> <br /><br />Ši programa jums padės "
+"importuoti el. paštą iš ankstesnės el. pašto programos.<br /><br /"
+">Pasirinkite programą, iš kurios norėtumėte importuoti. Tuomet, pasirinkite "
+"aplanką, į kurį norėtumėte importuoti ir spustelėkite „Kitas“.</span></p></"
+"body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, remDupMsg)
 #: ui/manual/manualselectfilterpage.ui:146
 #, kde-format
 msgid "Remove &duplicate messages during import"
-msgstr ""
+msgstr "Importavimo metu šalinti laiškų &dublikatus"
