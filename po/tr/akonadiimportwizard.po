@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-24 01:41+0000\n"
-"PO-Revision-Date: 2024-02-09 17:45+0300\n"
+"PO-Revision-Date: 2024-03-13 19:57+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.95\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -56,7 +56,7 @@ msgstr "1. adım: Süzgeç seç"
 #: importwizard.cpp:130
 #, kde-format
 msgid "Step 2: Importing..."
-msgstr "2. adım: İçe aktarılıyor..."
+msgstr "2. adım: İçe aktarılıyor…"
 
 #: importwizard.cpp:159
 #, kde-format
@@ -102,7 +102,7 @@ msgstr "Bitir"
 #: importwizard.cpp:210
 #, kde-format
 msgid "Import addressbook from %1..."
-msgstr "%1 konumundan adres defteri içe aktar..."
+msgstr "%1 konumundan adres defteri içe aktarılıyor…"
 
 #: importwizard.cpp:213
 #, kde-format
@@ -112,7 +112,7 @@ msgstr "%1 konumundan adres defterini içe aktar: Tamalandı"
 #: importwizard.cpp:219
 #, kde-format
 msgid "Import filters from %1..."
-msgstr "%1 konumundan süzgeçleri içe aktar..."
+msgstr "%1 konumundan süzgeçler içe aktarılıyor…"
 
 #: importwizard.cpp:222
 #, kde-format
@@ -122,7 +122,7 @@ msgstr "%1 konumundan süzgeçleri içe aktar: Tamamlandı"
 #: importwizard.cpp:228
 #, kde-format
 msgid "Import mails from %1..."
-msgstr "%1 konumundan postaları içe aktar..."
+msgstr "%1 konumundan postalar içe aktarılıyor…"
 
 #: importwizard.cpp:231
 #, kde-format
@@ -132,7 +132,7 @@ msgstr "%1 konumundan postaları içe aktar: Tamamlandı"
 #: importwizard.cpp:237
 #, kde-format
 msgid "Import settings from %1..."
-msgstr "%1 konumundan ayarları içe aktar..."
+msgstr "%1 konumundan ayarlar içe aktarılıyor…"
 
 #: importwizard.cpp:240
 #, kde-format
@@ -142,7 +142,7 @@ msgstr "%1 konumundan ayarları içe aktar: Tamamlandı"
 #: importwizard.cpp:246
 #, kde-format
 msgid "Import calendar from %1..."
-msgstr "%1 konumundan takvimi içe aktar..."
+msgstr "%1 konumundan takvim içe aktarılıyor…"
 
 #: importwizard.cpp:249
 #, kde-format
@@ -174,7 +174,7 @@ msgstr "İçe aktarma tamamlandı"
 #: libimportwizard/abstractaddressbook.cpp:28
 #, kde-format
 msgid "Creating new contact..."
-msgstr "Yeni kişi oluşturuluyor..."
+msgstr "Yeni kişi oluşturuluyor…"
 
 #: libimportwizard/abstractaddressbook.cpp:34
 #, kde-format
@@ -195,7 +195,7 @@ msgstr "Adres Defteri."
 #: libimportwizard/abstractaddressbook.cpp:67
 #, kde-format
 msgid "Imported from \"%1\""
-msgstr "%1 dosyasından içe aktarıldı"
+msgstr "“%1” dosyasından içe aktarıldı"
 
 #: libimportwizard/abstractaddressbook.cpp:86
 #, kde-format
@@ -210,14 +210,14 @@ msgstr "Kişi oluşturma tamamlandı"
 #: libimportwizard/abstractimporter.cpp:65
 #, kde-format
 msgid "Importing of filters from \"%1\" was canceled."
-msgstr "\"%1\" üzerinden süzgeçleri içe aktarma iptal edildi."
+msgstr "“%1” üzerinden süzgeçleri içe aktarma iptal edildi."
 
 #: libimportwizard/abstractimporter.cpp:67
 #, kde-format
 msgid "1 filter was imported from \"%2\""
 msgid_plural "%1 filters were imported from \"%2\""
-msgstr[0] "\"%2\" dosyasından %1 süzgeç içe aktarıldı"
-msgstr[1] "\"%2\" dosyasından %1 süzgeç içe aktarıldı"
+msgstr[0] "“%2” dosyasından %1 süzgeç içe aktarıldı"
+msgstr[1] "“%2” dosyasından %1 süzgeç içe aktarıldı"
 
 #: libimportwizard/abstractimporter.cpp:71
 #, kde-format
@@ -227,7 +227,7 @@ msgstr "Süzgeç dosyası bulunamadı"
 #: libimportwizard/abstractsettings.cpp:38
 #, kde-format
 msgid "Setting up identity..."
-msgstr "Kimlik ayarlanıyor..."
+msgstr "Kimlik ayarlanıyor…"
 
 #: libimportwizard/abstractsettings.cpp:46
 #, kde-format
@@ -237,7 +237,7 @@ msgstr "Kimlik ayarlandı."
 #: libimportwizard/abstractsettings.cpp:63
 #, kde-format
 msgid "Setting up transport..."
-msgstr "Taşıma ayarlanıyor..."
+msgstr "Taşıma ayarlanıyor…"
 
 #: libimportwizard/abstractsettings.cpp:75
 #, kde-format
@@ -252,7 +252,7 @@ msgstr "PIM İçe Aktarma Aracı"
 #: main.cpp:32
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
-msgstr "Telif Hakkı © 2012-%1 ImportWizard yazarları"
+msgstr "Telif Hakkı © 2012–%1 ImportWizard yazarları"
 
 #: main.cpp:34
 #, kde-format
@@ -318,12 +318,12 @@ msgstr "vCard’ların depolanacağı dizini seçin."
 #: plugins/evolutionv3/evolutionaddressbook.cpp:78
 #, kde-format
 msgid "Address book \"%1\" exported."
-msgstr "\"%1\" adres defteri dışa aktarıldı."
+msgstr "Adres defteri “%1” dışa aktarıldı."
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:80
 #, kde-format
 msgid "Failed to export address book \"%1\"."
-msgstr "\"%1\" adres defteri dışa aktarılamadı."
+msgstr "Adres defteri “%1” dışa aktarılamadı."
 
 #: plugins/evolutionv3/evolutionv3importdata.cpp:57
 #, kde-format
@@ -358,7 +358,7 @@ msgstr "Sylpheed ayarları bulunamadı."
 #: plugins/thunderbird/thunderbirdaddressbook.cpp:46
 #, kde-format
 msgid "Contacts file '%1' not found"
-msgstr "'%1' bağlantılar dosyası bulunamadı"
+msgstr "“%1” kişi dosyası bulunamadı"
 
 #: plugins/thunderbird/thunderbirdimportdata.cpp:71
 #, kde-format
@@ -507,11 +507,11 @@ msgstr ""
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
 "family:’DejaVu Sans’; font-size:9pt; font-weight:600;\">KMailCVT’ye Hoş "
-"Geldiniz- Posta İçe Aktarma Aracı</span><span style=\" font-family:’DejaVu "
+"Geldiniz — Posta İçe Aktarma Aracı</span><span style=\" font-family:’DejaVu "
 "Sans’; font-size:9pt;\"> <br /><br />Bu program, e-postanızı önceki e-posta "
 "programından içe aktarmanıza yardım edecek.<br /><br />Lütfen içe "
-"aktarılacak programı seçin. Artından içe aktarmak istediğiniz klasörü "
-"seçtikten sonra ’İleri’ tıklayın.</span></p></body></html>"
+"aktarılacak programı seçin. Ardından içe aktarmak istediğiniz klasörü "
+"seçtikten sonra ’İleri’ye tıklayın.</span></p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, remDupMsg)
 #: ui/manual/manualselectfilterpage.ui:146
