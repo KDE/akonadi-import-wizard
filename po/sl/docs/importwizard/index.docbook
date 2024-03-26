@@ -1,0 +1,295 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY i18n-importwizard "<application
+>Import Wizard</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Slovenian "INCLUDE"
+> 
+]>
+
+<article id="importwizard" lang="&language;">
+
+<articleinfo id="importwizardinfo">
+
+<title
+>&i18n-importwizard; Priročnik</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+<othercredit role="translator"
+><contrib
+>Prevod</contrib
+><firstname
+>Luka</firstname
+><surname
+></surname
+>Puhar<affiliation
+><address
+><email
+>puhar.luka@gmail.com</email
+></address
+></affiliation
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+
+<date
+>27.07.2016</date>
+<releaseinfo
+>5.3.40 (Aplikacije 16.08)</releaseinfo>
+
+</articleinfo>
+
+<sect1 id="introduction">
+<title
+>Uvod</title>
+
+<para
+>&i18n-importwizard; omogoča uvoz e-poštnih sporočil, nastavitev, imenikov in koledarskih podatkov, zaznanih v vašem uporabniškem računu, iz naslednjih poštnih storitev:</para>
+
+<para
+><application
+>Trojitá</application
+>, <application
+>Evolution 1.x - 3.x</application
+>, <application
+>OS X Mail</application
+>, <application
+>Opera</application
+>, <application
+>Sylpheed</application
+>, <application
+>Thunderbird/Mozilla</application
+>, <application
+>The Bat!</application
+>, <application
+>Outlook Express</application
+>, <application
+>Balsa</application
+>, <application
+>Pegasus-Mail</application
+>, and <application
+>Claws Mail</application
+> </para>
+
+<para
+>Poleg tega lahko uporabite ročni uvoz za <application
+>KMail Archive</application
+>, <application
+>mbox (Unix, Evolution)</application
+>, &kmail; Maildirs, <application
+>Icedove</application
+>, <application
+>Lotus Notes</application
+>, <application
+>Plain Text</application
+> in <application
+>Mailman</application
+> arhive. </para>
+
+<para
+>Če se podatki o pošti ne zaznajo samodejno, v začetnem oknu kliknite <guibutton
+>Ročni izbor</guibutton
+> in uporabite <link linkend="manual-import"
+>Ročni uvoz</link
+> lastnosti. </para>
+
+<para
+>&i18n-importwizard; lahko zaženete neposredno iz zaganjalnika aplikacije ali iz &kmail; s <menuchoice
+><guimenu
+>Orodja</guimenu
+><guimenuitem
+>Čarovnik za uvoz</guimenuitem
+></menuchoice
+> za samodejno odkrivanje ali iz &kmail; z <menuchoice
+><guimenu
+>Datoteka</guimenu
+> <guimenuitem
+>Uvozi sporočila</guimenuitem
+></menuchoice
+> za ročni uvoz. </para>
+
+<note>
+<para
+>Zaprite &kmail; pred uvozom podatkov. Nekateri vtičniki spremenijo konfiguracijsko datoteko &kmail;.</para>
+</note>
+
+<para
+>Za informacije o drugih orodjih za uvoz pošte preberite priročnik <ulink url="help:/pimdataexporter"
+>PIM Data Exporter</ulink
+>.</para>
+
+<sect2 id="detected-mailers">
+<title
+>Odkrite poštne aplikacije</title>
+
+<para
+>Ob zagonu bo čarovnik za uvoz zaznal vse podprte e-poštne aplikacije in jih navedel v oknu. Izberite e-poštni program, iz katerega želite uvoziti, in kliknite gumb <guibutton
+>Naprej</guibutton
+>. Čarovnik vas bo nato vprašal, ali želite uvoziti vse ali pa boste lahko izbrali vrste materialov, ki jih želite uvoziti.</para>
+
+<screenshot>
+<screeninfo
+>Izbira uvoza</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="import-selection.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Izbira uvoza</phrase>
+    </textobject>
+    <caption>
+      <para
+>Izbira uvoza</para>
+    </caption>
+  </mediaobject>
+</screenshot>
+
+<para
+>Odvisno od izbire na zaslonu Materiali za uvoz se prikaže eden ali več naslednjih zaslonov:</para>
+
+<itemizedlist>
+
+<listitem
+><para
+>Če želite uvoziti e-poštna sporočila, morate izbrati mapo, v katero želite uvoziti e-poštna sporočila. Ko je izbran, kliknite gumb <guibutton
+>Uvozi pošto</guibutton
+>. Ko vrstica napredka doseže 100 %, kliknite gumb <guibutton
+>Naprej</guibutton
+> ali <guibutton
+>Končaj</guibutton
+>, če je bil to vaš zadnji izbor materiala.</para
+></listitem>
+
+<listitem
+><para
+>Če želite uvoziti poštne filtre, kliknite gumb <guibutton
+>Uvozi filtre</guibutton
+> in uvozil bo vse najdene filtre, ko bo končal, kliknite gumb <guibutton
+>Naslednji</guibutton
+> ali gumb <guibutton
+>Končaj</guibutton
+>, če je bil to vaš zadnji izbor materiala.</para
+></listitem>
+
+<listitem
+><para
+>Če želite uvoziti nastavitve, kliknite gumb <guibutton
+>Uvozi nastavitve</guibutton
+>. Čarovnik vam bo zastavil nekaj vprašanj, &eg; katero mapo uporabiti za mape računov, ki ne obstajajo. Čarovnik bo ustvaril tudi vašo identiteto. Po končanem delu kliknite gumb <guibutton
+>Naprej</guibutton
+> ali <guibutton
+>Končaj</guibutton
+>, če je bil to vaš zadnji izbor materiala.</para
+></listitem>
+
+<listitem
+><para
+>Če želite uvoziti imenike ali koledarje, kliknite gumb <guibutton
+>Uvozi imenik</guibutton
+> ali <guibutton
+>Uvozi koledar</guibutton
+> in uvozi vse najdene imenike ali koledarje. Po končanem delu kliknite gumb <guibutton
+>Naprej</guibutton
+>.</para
+></listitem>
+</itemizedlist>
+
+<para
+>Kliknite gumb <guibutton
+>Končaj</guibutton
+> za dokončanje in izhod iz čarovnika. Če kadar koli želite končati čarovnika, lahko kliknete gumb <guibutton
+>Prekini</guibutton
+>.</para>
+
+</sect2>
+
+<sect2 id="manual-import">
+<title
+>Ročni uvoz</title>
+
+<para>
+<screenshot>
+<screeninfo
+>Ročni uvoz</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="manual-import.png" format="PNG"/>
+    </imageobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note
+><para
+>Poskrbite, da bodo mape v drugem odjemalcu e-pošte kompaktne.</para
+></note>
+<para
+>V spustnem oknu izberite prejšnji e-poštni program. V osrednjem besedilnem področju pogovornega okna se posodobijo posebna navodila (če je primerno) in znana lokacija shranjevanja e-poštnih sporočil za to aplikacijo. Sledite tem navodilom in izberite mapo, v katero želite uvoziti sporočila.</para>
+<para
+>Če želite odstraniti podvojena sporočila, preverite možnost <guilabel
+>Odstrani podvojena sporočila med uvozom</guilabel
+>. Pojavilo se bo pogovorno okno za izbiro datoteke, v katerem morate izbrati datoteko ali mapo, navedeno v navodilih. Kliknite gumb <guibutton
+>Naprej</guibutton
+> za dokončanje uvoza. Ko je uvoz končan, lahko kliknete gumb <guibutton
+>Nazaj</guibutton
+> za uvoz iz druge aplikacije ali gumb <guibutton
+>Končaj</guibutton
+> za izhod. </para>
+</sect2>
+
+</sect1>
+
+<sect1 id="credits">
+
+<title
+>Zasluge in licenca</title>
+
+<para
+>&i18n-importwizard;</para>
+<para
+>Avtorske pravice programa 2013 Laurent Montel montel@kde.org </para>
+<para
+>Oddelek Priročnik Uvoz je spremenjena kopija priročnika KMailCVT</para>
+<para
+>Dokumentacija Avtorske pravice &copy; 2013 Laurent Montel montel@kde.org in Scarlett Clark scarlett@scarlettgatelyclark.com </para>
+
+<para
+>Prevod: Luka Puhar<email
+>puhar.luka@gmail.com</email
+></para
+> &underFDL; &underGPL; </sect1>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->
