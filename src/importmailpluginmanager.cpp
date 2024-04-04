@@ -9,7 +9,6 @@
 #include "importwizard_debug.h"
 #include <KPluginFactory>
 #include <KPluginMetaData>
-#include <kcoreaddons_version.h>
 
 namespace
 {
