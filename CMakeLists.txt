@@ -57,7 +57,7 @@ set(MAILCOMMON_LIB_VERSION "6.0.40")
 set(MESSAGELIB_LIB_VERSION "6.0.40")
 set(PIMCOMMON_LIB_VERSION "6.0.40")
 set(IDENTITYMANAGEMENT_LIB_VERSION "6.0.40")
-set(QT6KEYCHAIN_LIB_VERSION "0.14.1")
+set(QT6KEYCHAIN_LIB_VERSION "0.14.2")
 
 # Find KF6 package
 find_package(KF6Config ${KF_MIN_VERSION} CONFIG REQUIRED)
@@ -86,11 +86,6 @@ set_package_properties(Qt6Keychain PROPERTIES
                                    DESCRIPTION "Provides support for secure credentials storage"
                                    URL "https://github.com/frankosterfeld/qtkeychain"
                                    TYPE REQUIRED)
-if (Qt6Keychain_VERSION VERSION_LESS 0.14.2)
-     MESSAGE(STATUS "Qt6KeyChain version is less 0.14.2. It will not support KWallet 6... It will not able to load password. Please update it.")
-endif()
-
-
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 add_definitions(-DQT_USE_QSTRINGBUILDER)
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
