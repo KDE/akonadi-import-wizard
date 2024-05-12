@@ -59,7 +59,7 @@ msgstr "Pas 1: Seleccionar el filtre"
 #: importwizard.cpp:130
 #, kde-format
 msgid "Step 2: Importing..."
-msgstr "Pas 2: Importar..."
+msgstr "Pas 2: Importar…"
 
 #: importwizard.cpp:159
 #, kde-format
@@ -105,7 +105,7 @@ msgstr "Finalitza"
 #: importwizard.cpp:210
 #, kde-format
 msgid "Import addressbook from %1..."
-msgstr "Importa la llibreta d'adreces des de %1..."
+msgstr "Importa la llibreta d'adreces des de %1…"
 
 #: importwizard.cpp:213
 #, kde-format
@@ -115,7 +115,7 @@ msgstr "Importa la llibreta d'adreces des de %1: Fet"
 #: importwizard.cpp:219
 #, kde-format
 msgid "Import filters from %1..."
-msgstr "Importa els filtres des de %1..."
+msgstr "Importa els filtres des de %1…"
 
 #: importwizard.cpp:222
 #, kde-format
@@ -125,7 +125,7 @@ msgstr "Importa els filtres des de %1: Fet"
 #: importwizard.cpp:228
 #, kde-format
 msgid "Import mails from %1..."
-msgstr "Importa els correus des de %1..."
+msgstr "Importa els correus des de %1…"
 
 #: importwizard.cpp:231
 #, kde-format
@@ -135,7 +135,7 @@ msgstr "Importa els correus des de %1: Fet"
 #: importwizard.cpp:237
 #, kde-format
 msgid "Import settings from %1..."
-msgstr "Importa la configuració des de %1..."
+msgstr "Importa la configuració des de %1…"
 
 #: importwizard.cpp:240
 #, kde-format
@@ -145,7 +145,7 @@ msgstr "Importa la configuració des de %1: Fet"
 #: importwizard.cpp:246
 #, kde-format
 msgid "Import calendar from %1..."
-msgstr "Importa un calendari des de %1..."
+msgstr "Importa un calendari des de %1…"
 
 #: importwizard.cpp:249
 #, kde-format
@@ -177,7 +177,7 @@ msgstr "Importació finalitzada"
 #: libimportwizard/abstractaddressbook.cpp:28
 #, kde-format
 msgid "Creating new contact..."
-msgstr "S'està creant un contacte nou..."
+msgstr "S'està creant un contacte nou…"
 
 #: libimportwizard/abstractaddressbook.cpp:34
 #, kde-format
@@ -230,7 +230,7 @@ msgstr "No s'ha trobat el fitxer «filters»"
 #: libimportwizard/abstractsettings.cpp:38
 #, kde-format
 msgid "Setting up identity..."
-msgstr "S'està configurant la identitat..."
+msgstr "S'està configurant la identitat…"
 
 #: libimportwizard/abstractsettings.cpp:46
 #, kde-format
@@ -240,7 +240,7 @@ msgstr "S'ha configurat la identitat."
 #: libimportwizard/abstractsettings.cpp:63
 #, kde-format
 msgid "Setting up transport..."
-msgstr "S'està configurant el transport..."
+msgstr "S'està configurant el transport…"
 
 #: libimportwizard/abstractsettings.cpp:75
 #, kde-format
