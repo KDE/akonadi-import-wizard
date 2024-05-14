@@ -1,21 +1,21 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the akonadi-import-wizard package.
 #
-# SPDX-FileCopyrightText: 2022, 2023 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-import-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-24 01:41+0000\n"
-"PO-Revision-Date: 2023-09-30 10:32+0200\n"
+"PO-Revision-Date: 2024-05-13 22:08+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: \n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -55,7 +55,7 @@ msgstr "Стъпка 1: Избиране на филтър"
 #: importwizard.cpp:130
 #, kde-format
 msgid "Step 2: Importing..."
-msgstr "Стъпка 2: Импортиране..."
+msgstr "Стъпка 2: Импортиране…"
 
 #: importwizard.cpp:159
 #, kde-format
@@ -101,7 +101,7 @@ msgstr "Завършено"
 #: importwizard.cpp:210
 #, kde-format
 msgid "Import addressbook from %1..."
-msgstr "Импортиране на адресна книга от %1..."
+msgstr "Импортиране на адресна книга от %1…"
 
 #: importwizard.cpp:213
 #, kde-format
@@ -111,7 +111,7 @@ msgstr "Импортиране на адресна книга от %1: Гото�
 #: importwizard.cpp:219
 #, kde-format
 msgid "Import filters from %1..."
-msgstr "Импортиране на филтри от %1..."
+msgstr "Импортиране на филтри от %1…"
 
 #: importwizard.cpp:222
 #, kde-format
@@ -121,7 +121,7 @@ msgstr "Импортиране на филтри от %1: Готово"
 #: importwizard.cpp:228
 #, kde-format
 msgid "Import mails from %1..."
-msgstr "Импортиране на имейли от %1..."
+msgstr "Импортиране на имейли от %1…"
 
 #: importwizard.cpp:231
 #, kde-format
@@ -131,7 +131,7 @@ msgstr "Импортиране на имейли от %1: Готово"
 #: importwizard.cpp:237
 #, kde-format
 msgid "Import settings from %1..."
-msgstr "Импортиране на настройки от %1..."
+msgstr "Импортиране на настройки от %1…"
 
 #: importwizard.cpp:240
 #, kde-format
@@ -141,7 +141,7 @@ msgstr "Импортиране на настройки от %1: Готово"
 #: importwizard.cpp:246
 #, kde-format
 msgid "Import calendar from %1..."
-msgstr "Импортиране на календар от %1..."
+msgstr "Импортиране на календар от %1…"
 
 #: importwizard.cpp:249
 #, kde-format
@@ -173,7 +173,7 @@ msgstr "Импортирането приключи"
 #: libimportwizard/abstractaddressbook.cpp:28
 #, kde-format
 msgid "Creating new contact..."
-msgstr "Създава се нов контакт..."
+msgstr "Създава се нов контакт…"
 
 #: libimportwizard/abstractaddressbook.cpp:34
 #, kde-format
@@ -226,7 +226,7 @@ msgstr "Файлът с филтри не бе намерен"
 #: libimportwizard/abstractsettings.cpp:38
 #, kde-format
 msgid "Setting up identity..."
-msgstr "Настройване на самоличността..."
+msgstr "Настройване на самоличността…"
 
 #: libimportwizard/abstractsettings.cpp:46
 #, kde-format
@@ -236,7 +236,7 @@ msgstr "Създадена самоличност."
 #: libimportwizard/abstractsettings.cpp:63
 #, kde-format
 msgid "Setting up transport..."
-msgstr "Настройване на транспорта..."
+msgstr "Настройване на транспорта…"
 
 #: libimportwizard/abstractsettings.cpp:75
 #, kde-format
