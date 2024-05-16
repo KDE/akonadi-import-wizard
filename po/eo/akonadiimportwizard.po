@@ -1,15 +1,15 @@
 # translation of akonadiimportwizard.pot to esperanto
 # Copyright (C) 2021 Free Software Foundation, Inc.
 # This file is distributed under the same license as the akonadi-import-wizard package.
-# Oliver Kellogg <okellogg@users.sourceforge.net, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-import-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-24 01:41+0000\n"
+"POT-Creation-Date: 2024-05-16 00:38+0000\n"
 "PO-Revision-Date: 2023-10-09 07:06+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr "Oliver Kellogg"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "okellogg@users.sourceforge.net"
+msgstr "olivermkellogg@gmail.com"
 
 #: autodetect/widgets/selectprogramlistwidget.cpp:46
 #, kde-format
@@ -255,7 +255,9 @@ msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "Kopirajto © 2012-%1 ImportWizard-aŭtoroj"
 
 #: main.cpp:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Laurent Montel"
+msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
