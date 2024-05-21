@@ -87,7 +87,9 @@ target_link_libraries(akonadiimportwizard
     KF6::ConfigCore
     KF6::WidgetsAddons
     )
-
+if(TARGET KF6::IconThemes)
+    target_link_libraries(akonadiimportwizard KF6::IconThemes)
+endif()
 install(TARGETS akonadiimportwizard  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(PROGRAMS data/org.kde.akonadiimportwizard.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 

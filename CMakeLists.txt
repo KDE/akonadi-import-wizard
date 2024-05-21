@@ -67,6 +67,7 @@ find_package(KF6DocTools ${KF_MIN_VERSION} REQUIRED)
 find_package(KF6Crash ${KF_MIN_VERSION} REQUIRED)
 find_package(KF6KIO ${KF_MIN_VERSION} REQUIRED)
 find_package(KF6Archive ${KF_MIN_VERSION} REQUIRED)
+find_package(KF6IconThemes ${KF_MIN_VERSION} CONFIG REQUIRED)
 
 # Find KdepimLibs Package
 find_package(KPim6Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
