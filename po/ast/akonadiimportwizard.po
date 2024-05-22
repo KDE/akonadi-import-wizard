@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-import-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:38+0000\n"
+"POT-Creation-Date: 2024-05-22 00:39+0000\n"
 "PO-Revision-Date: 2023-11-07 21:26+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -241,28 +241,28 @@ msgstr ""
 msgid "Transport set up."
 msgstr ""
 
-#: main.cpp:28 main.cpp:30
+#: main.cpp:47 main.cpp:49
 #, kde-format
 msgid "PIM Import Tool"
 msgstr ""
 
-#: main.cpp:32
+#: main.cpp:51
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr ""
 
-#: main.cpp:34
+#: main.cpp:53
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr ""
 
-#: main.cpp:34
+#: main.cpp:53
 #, kde-format
 msgid "Maintainer"
 msgstr ""
 
-#: main.cpp:40
+#: main.cpp:59
 #, kde-format
 msgid "Mode: %1"
 msgstr ""

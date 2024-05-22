@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: importwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:38+0000\n"
+"POT-Creation-Date: 2024-05-22 00:39+0000\n"
 "PO-Revision-Date: 2023-09-27 17:48+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -243,29 +243,29 @@ msgstr "Impostazione trasporto..."
 msgid "Transport set up."
 msgstr "Trasporto impostato."
 
-#: main.cpp:28 main.cpp:30
+#: main.cpp:47 main.cpp:49
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "Strumento di importazione di PIM"
 
-#: main.cpp:32
+#: main.cpp:51
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "Copyright © 2012-%1 gli autori di ImportWizard"
 
-#: main.cpp:34
+#: main.cpp:53
 #, fuzzy, kde-format
 #| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:34
+#: main.cpp:53
 #, kde-format
 msgid "Maintainer"
 msgstr "Responsabile"
 
-#: main.cpp:40
+#: main.cpp:59
 #, kde-format
 msgid "Mode: %1"
 msgstr "Modalità: %1"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:38+0000\n"
+"POT-Creation-Date: 2024-05-22 00:39+0000\n"
 "PO-Revision-Date: 2024-05-16 13:28+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -244,28 +244,28 @@ msgstr "Taşıma ayarlanıyor…"
 msgid "Transport set up."
 msgstr "Taşıma ayarlandı."
 
-#: main.cpp:28 main.cpp:30
+#: main.cpp:47 main.cpp:49
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "PIM İçe Aktarma Aracı"
 
-#: main.cpp:32
+#: main.cpp:51
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "Telif Hakkı © 2012–%1 ImportWizard yazarları"
 
-#: main.cpp:34
+#: main.cpp:53
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:34
+#: main.cpp:53
 #, kde-format
 msgid "Maintainer"
 msgstr "Projeyi Yürüten"
 
-#: main.cpp:40
+#: main.cpp:59
 #, kde-format
 msgid "Mode: %1"
 msgstr "Kip: %1"
