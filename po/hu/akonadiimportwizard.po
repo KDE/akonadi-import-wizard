@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:39+0000\n"
+"POT-Creation-Date: 2024-06-06 00:39+0000\n"
 "PO-Revision-Date: 2024-05-16 11:12+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -267,7 +267,9 @@ msgid "Maintainer"
 msgstr "Karbantartó"
 
 #: main.cpp:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mode: %1"
+msgctxt "@info:shell"
 msgid "Mode: %1"
 msgstr "Mód: %1"
 

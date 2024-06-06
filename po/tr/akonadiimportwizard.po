@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:39+0000\n"
+"POT-Creation-Date: 2024-06-06 00:39+0000\n"
 "PO-Revision-Date: 2024-05-16 13:28+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -266,7 +266,9 @@ msgid "Maintainer"
 msgstr "Projeyi Yürüten"
 
 #: main.cpp:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mode: %1"
+msgctxt "@info:shell"
 msgid "Mode: %1"
 msgstr "Kip: %1"
 

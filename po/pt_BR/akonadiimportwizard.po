@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiimportwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:39+0000\n"
+"POT-Creation-Date: 2024-06-06 00:39+0000\n"
 "PO-Revision-Date: 2023-10-05 18:24-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -269,7 +269,9 @@ msgid "Maintainer"
 msgstr "Mantenedor"
 
 #: main.cpp:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mode: %1"
+msgctxt "@info:shell"
 msgid "Mode: %1"
 msgstr "Modo: %1"
 

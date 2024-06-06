@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiimportwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:39+0000\n"
+"POT-Creation-Date: 2024-06-06 00:39+0000\n"
 "PO-Revision-Date: 2024-05-16 09:06+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -270,7 +270,9 @@ msgid "Maintainer"
 msgstr "Супровідник"
 
 #: main.cpp:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mode: %1"
+msgctxt "@info:shell"
 msgid "Mode: %1"
 msgstr "Режим: %1"
 
