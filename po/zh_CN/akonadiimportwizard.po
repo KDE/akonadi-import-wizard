@@ -263,8 +263,7 @@ msgid "Maintainer"
 msgstr "维护者"
 
 #: main.cpp:59
-#, fuzzy, kde-format
-#| msgid "Mode: %1"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Mode: %1"
 msgstr "模式：%1"
