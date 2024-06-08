@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-import-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-06 00:39+0000\n"
-"PO-Revision-Date: 2024-05-30 19:19+0200\n"
+"PO-Revision-Date: 2024-06-07 10:08+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -265,8 +265,7 @@ msgid "Maintainer"
 msgstr "Поддръжка"
 
 #: main.cpp:59
-#, fuzzy, kde-format
-#| msgid "Mode: %1"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Mode: %1"
 msgstr "Режим: %1"
