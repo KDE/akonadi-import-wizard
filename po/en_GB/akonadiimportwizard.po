@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-06 00:39+0000\n"
-"PO-Revision-Date: 2024-05-17 19:40+0100\n"
+"PO-Revision-Date: 2024-06-08 12:26+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -265,8 +265,7 @@ msgid "Maintainer"
 msgstr "Maintainer"
 
 #: main.cpp:59
-#, fuzzy, kde-format
-#| msgid "Mode: %1"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Mode: %1"
 msgstr "Mode: %1"
