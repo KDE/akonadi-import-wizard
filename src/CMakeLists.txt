@@ -46,7 +46,7 @@ target_sources(akonadiimportwizard PRIVATE
     manual/manualselectfilterpage.h
     manual/manualimportmailpage.h
     manual/importwizardfilterinfogui.h
-    )
+)
 
 
 ki18n_wrap_ui(akonadiimportwizard
@@ -60,16 +60,16 @@ ki18n_wrap_ui(akonadiimportwizard
     ui/autodetect/importcalendarpage.ui
     ui/manual/manualimportmailpage.ui
     ui/manual/manualselectfilterpage.ui
-    )
+)
 
 ecm_qt_declare_logging_category(akonadiimportwizard HEADER importwizard_debug.h IDENTIFIER IMPORTWIZARD_LOG CATEGORY_NAME org.kde.pim.importwizard
         DESCRIPTION "importwizard (importwizard)"
         OLD_CATEGORY_NAMES log_importwizard
         EXPORT IMPORTWIZARD
-    )
+)
 
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(akonadiimportwizard PROPERTIES UNITY_BUILD ON)
 endif()
 target_link_libraries(akonadiimportwizard
@@ -86,7 +86,7 @@ target_link_libraries(akonadiimportwizard
     Qt::Widgets
     KF6::ConfigCore
     KF6::WidgetsAddons
-    )
+)
 if(TARGET KF6::IconThemes)
     target_link_libraries(akonadiimportwizard KF6::IconThemes)
 endif()

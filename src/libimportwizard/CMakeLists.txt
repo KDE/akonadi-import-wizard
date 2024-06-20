@@ -54,14 +54,14 @@ target_sources(KPim6ImportWizard PRIVATE
     abstractimporter.h
     abstractdisplayinfo.h
     abstractcalendar.h
-    )
+)
 
 ecm_qt_declare_logging_category(KPim6ImportWizard HEADER libimportwizard_debug.h IDENTIFIER LIBIMPORTWIZARD_LOG CATEGORY_NAME org.kde.pim.importwizard.lib
         DESCRIPTION "importwizard (libimportwizard)"
         EXPORT IMPORTWIZARD
-    )
+)
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim6ImportWizard PROPERTIES UNITY_BUILD ON)
 endif()
 
@@ -82,7 +82,7 @@ target_link_libraries(KPim6ImportWizard
     KPim6::MailImporter
     KPim6::MailImporterAkonadi
     KF6::I18n
-    )
+)
 target_link_libraries(KPim6ImportWizard PRIVATE qt6keychain)
 set_target_properties(KPim6ImportWizard PROPERTIES
     VERSION ${IMPORTWIZARD_VERSION}
@@ -109,18 +109,18 @@ ecm_generate_headers(ImportWizard_CamelCase_HEADERS
     ImportWizardUtil
     PREFIX ImportWizard
     REQUIRED_HEADERS ImportWizard_HEADERS
-    )
+)
 
 install(FILES
     ${ImportWizard_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/ImportWizard/ImportWizard/
     COMPONENT Devel
-    )
+)
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/libimportwizard_export.h
     ${ImportWizard_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/ImportWizard/importwizard/
     COMPONENT Devel
-    )
+)
 
