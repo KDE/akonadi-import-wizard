@@ -22,7 +22,7 @@ void EvolutionAddressBook::exportEvolutionAddressBook()
                              i18nc("@title:window", "Export Evolution Address Book"));
 
     const QString directory =
-        QFileDialog::getExistingDirectory(mAbstractDisplayInfo->parentWidget(), i18n("Select the directory where vCards will be stored."));
+        QFileDialog::getExistingDirectory(mAbstractDisplayInfo->parentWidget(), i18nc("@title:window", "Select the directory where vCards will be stored."));
     if (directory.isEmpty()) {
         return;
     }
