@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2023-10-08 22:21+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -312,7 +312,9 @@ msgid "Export Evolution Address Book"
 msgstr "에볼루션 주소록 내보내기"
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select the directory where vCards will be stored."
+msgctxt "@title:window"
 msgid "Select the directory where vCards will be stored."
 msgstr "vCard를 저장할 디렉터리를 지정합니다."
 

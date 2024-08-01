@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-import-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2024-06-07 10:08+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -312,7 +312,9 @@ msgid "Export Evolution Address Book"
 msgstr "Експортиране на адресна книга на Evolution"
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select the directory where vCards will be stored."
+msgctxt "@title:window"
 msgid "Select the directory where vCards will be stored."
 msgstr "Избиране на директорията, в която ще се съхраняват vCards."
 

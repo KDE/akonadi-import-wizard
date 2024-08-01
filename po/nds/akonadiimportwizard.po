@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: importwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2014-04-16 00:48+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -326,7 +326,9 @@ msgid "Export Evolution Address Book"
 msgstr "Evolution-Adressbook exporteren"
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select the directory where vCards will be stored."
+msgctxt "@title:window"
 msgid "Select the directory where vCards will be stored."
 msgstr "Den Orner utsöken, binnen den de VCards afleggt warrt"
 

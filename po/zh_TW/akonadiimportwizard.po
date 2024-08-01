@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2024-06-09 19:08+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -310,7 +310,9 @@ msgid "Export Evolution Address Book"
 msgstr "匯出 Evolution 通訊錄"
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select the directory where vCards will be stored."
+msgctxt "@title:window"
 msgid "Select the directory where vCards will be stored."
 msgstr "請選擇 vcard 檔要存放的目錄。"
 
