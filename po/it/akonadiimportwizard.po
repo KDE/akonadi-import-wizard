@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: importwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-06-07 10:07+0200\n"
+"PO-Revision-Date: 2024-08-01 21:56+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -312,8 +312,7 @@ msgid "Export Evolution Address Book"
 msgstr "Esportazione rubrica di Evolution"
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:25
-#, fuzzy, kde-format
-#| msgid "Select the directory where vCards will be stored."
+#, kde-format
 msgctxt "@title:window"
 msgid "Select the directory where vCards will be stored."
 msgstr "Seleziona la cartella dove memorizzare le vCard."
