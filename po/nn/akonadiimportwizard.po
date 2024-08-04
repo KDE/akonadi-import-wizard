@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kmail_importing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-26 15:11+0200\n"
+"PO-Revision-Date: 2024-08-02 21:13+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -322,8 +322,7 @@ msgid "Export Evolution Address Book"
 msgstr "Eksporter Evolution-adressebok"
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:25
-#, fuzzy, kde-format
-#| msgid "Select the directory where vCards will be stored."
+#, kde-format
 msgctxt "@title:window"
 msgid "Select the directory where vCards will be stored."
 msgstr "Vel mappa der du vil lagra vCard-filene."
