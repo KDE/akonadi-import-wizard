@@ -31,7 +31,6 @@ int main(int argc, char *argv[])
     KIconTheme::initTheme();
 #endif
     QApplication app(argc, argv);
-    KCrash::initialize();
 #if HAVE_STYLE_MANAGER
     KStyleManager::initStyle();
 #else // !HAVE_STYLE_MANAGER
@@ -54,6 +53,7 @@ int main(int argc, char *argv[])
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("kontact-import-wizard")));
     aboutData.setProductName(QByteArrayLiteral("kmail2/import wizard"));
     KAboutData::setApplicationData(aboutData);
+    KCrash::initialize();
 
     QCommandLineParser parser;
     const QCommandLineOption modeOption(QStringList() << QStringLiteral("mode"), i18nc("@info:shell", "Mode: %1", QStringLiteral("manual|automatic")));
