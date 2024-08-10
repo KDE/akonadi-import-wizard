@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: importwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:39+0000\n"
+"POT-Creation-Date: 2024-08-10 02:39+0000\n"
 "PO-Revision-Date: 2012-12-25 16:30+0700\n"
 "Last-Translator: sutha <sutha@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros>\n"
@@ -256,25 +256,25 @@ msgstr "កំពុង​រៀបចំ​ការ​ធ្វើ​ដំណ
 msgid "Transport set up."
 msgstr "បាន​រៀបចំ​ការ​ធ្វើ​ដំណើរ ។"
 
-#: main.cpp:47 main.cpp:49
+#: main.cpp:46 main.cpp:48
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "ឧបករណ៍​នាំចូល​របស់ PIM"
 
-#: main.cpp:51
+#: main.cpp:50
 #, fuzzy, kde-format
 #| msgid "Copyright © 2012 importwizard authors"
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "រក្សាសិទ្ធិ​ឆ្នាំ ២០១២ ដោយ​អ្នក​និពន្ធ​អ្នកជំនួយការ​នាំចូល"
 
-#: main.cpp:53
+#: main.cpp:52
 #, fuzzy, kde-format
 #| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:53
+#: main.cpp:52
 #, kde-format
 msgid "Maintainer"
 msgstr "អ្នក​ថែទាំ"
