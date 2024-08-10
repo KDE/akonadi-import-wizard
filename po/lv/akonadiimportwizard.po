@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-import-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2024-08-10 00:41+0000\n"
 "PO-Revision-Date: 2024-05-28 09:54+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -245,23 +245,23 @@ msgstr "Iestata transportu..."
 msgid "Transport set up."
 msgstr "Transports ir iestatīts."
 
-#: main.cpp:47 main.cpp:49
+#: main.cpp:46 main.cpp:48
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "PIM importēšanas rīks"
 
-#: main.cpp:51
+#: main.cpp:50
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "Autortiesības © 2012–%1 „ImportWizard“ autori"
 
-#: main.cpp:53
+#: main.cpp:52
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:53
+#: main.cpp:52
 #, kde-format
 msgid "Maintainer"
 msgstr "Uzturētājs"

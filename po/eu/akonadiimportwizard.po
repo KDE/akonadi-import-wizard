@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-import-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2024-08-10 00:41+0000\n"
 "PO-Revision-Date: 2024-08-02 23:10+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -246,23 +246,23 @@ msgstr "Garraioa ezartzen..."
 msgid "Transport set up."
 msgstr "Garraioa ezarrita."
 
-#: main.cpp:47 main.cpp:49
+#: main.cpp:46 main.cpp:48
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "PIM inportatzeko tresna"
 
-#: main.cpp:51
+#: main.cpp:50
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "Copyright © 2012-%1 ImportWizard-en egileek"
 
-#: main.cpp:53
+#: main.cpp:52
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:53
+#: main.cpp:52
 #, kde-format
 msgid "Maintainer"
 msgstr "Mantentzailea"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2024-08-10 00:41+0000\n"
 "PO-Revision-Date: 2024-07-29 12:23+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -244,23 +244,23 @@ msgstr "Opsætning af transport..."
 msgid "Transport set up."
 msgstr "Transport er sat op."
 
-#: main.cpp:47 main.cpp:49
+#: main.cpp:46 main.cpp:48
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "Importværktøj til personlig information (PIM)"
 
-#: main.cpp:51
+#: main.cpp:50
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "Ophavsret © 2012-%1 importguide-udviklerne"
 
-#: main.cpp:53
+#: main.cpp:52
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:53
+#: main.cpp:52
 #, kde-format
 msgid "Maintainer"
 msgstr "Vedligeholder"

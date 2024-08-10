@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: importwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2024-08-10 00:41+0000\n"
 "PO-Revision-Date: 2012-02-27 21:35-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -251,24 +251,24 @@ msgstr ""
 msgid "Transport set up."
 msgstr ""
 
-#: main.cpp:47 main.cpp:49
+#: main.cpp:46 main.cpp:48
 #, kde-format
 msgid "PIM Import Tool"
 msgstr ""
 
-#: main.cpp:51
+#: main.cpp:50
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr ""
 
-#: main.cpp:53
+#: main.cpp:52
 #, fuzzy, kde-format
 #| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:53
+#: main.cpp:52
 #, kde-format
 msgid "Maintainer"
 msgstr "Cothaitheoir"

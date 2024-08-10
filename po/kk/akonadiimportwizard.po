@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2024-08-10 00:41+0000\n"
 "PO-Revision-Date: 2013-09-25 05:32+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -252,25 +252,25 @@ msgstr "Тасымалдау жолын орнату..."
 msgid "Transport set up."
 msgstr "Тасымалдауын орнатылды."
 
-#: main.cpp:47 main.cpp:49
+#: main.cpp:46 main.cpp:48
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "PIM импорт құралы"
 
-#: main.cpp:51
+#: main.cpp:50
 #, fuzzy, kde-format
 #| msgid "Copyright © 2012-2013 importwizard authors"
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "Copyright © 2012-2013 importwizard авторлары"
 
-#: main.cpp:53
+#: main.cpp:52
 #, fuzzy, kde-format
 #| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:53
+#: main.cpp:52
 #, kde-format
 msgid "Maintainer"
 msgstr "Желілдірушісі"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: importwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2024-08-10 00:41+0000\n"
 "PO-Revision-Date: 2014-04-16 00:48+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -254,25 +254,25 @@ msgstr "Överdreegmetood warrt opstellt..."
 msgid "Transport set up."
 msgstr "Överdreegmetood opstellt."
 
-#: main.cpp:47 main.cpp:49
+#: main.cpp:46 main.cpp:48
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "PIM-Importwarktüüch"
 
-#: main.cpp:51
+#: main.cpp:50
 #, fuzzy, kde-format
 #| msgid "Copyright © 2012-2013-2014 importwizard authors"
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "Copyright © 2012-2013-2014 de Schrievers vun Importwizard"
 
-#: main.cpp:53
+#: main.cpp:52
 #, fuzzy, kde-format
 #| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:53
+#: main.cpp:52
 #, kde-format
 msgid "Maintainer"
 msgstr "Pleger"
