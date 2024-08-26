@@ -257,7 +257,6 @@ msgstr ""
 
 #: main.cpp:52
 #, fuzzy, kde-format
-#| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -310,14 +309,12 @@ msgstr ""
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:22
 #, fuzzy, kde-format
-#| msgid "Export Evolution Address Book"
 msgctxt "@title:window"
 msgid "Export Evolution Address Book"
 msgstr "Eksporter Evolution adressebok"
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:25
 #, fuzzy, kde-format
-#| msgid "Select the directory where vCards will be stored."
 msgctxt "@title:window"
 msgid "Select the directory where vCards will be stored."
 msgstr "Velg mappa der vcard-data blir lagret."
