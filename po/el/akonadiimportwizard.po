@@ -257,8 +257,7 @@ msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "Πνευματικά δικαιώματα © 2012-%1 οι συγγραφείς του importwizard"
 
 #: main.cpp:52
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -269,8 +268,7 @@ msgid "Maintainer"
 msgstr "Συντηρητής"
 
 #: main.cpp:59
-#, fuzzy, kde-format
-#| msgid "Mode: %1"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Mode: %1"
 msgstr "Λειτουργία: %1"
@@ -317,8 +315,7 @@ msgid "Export Evolution Address Book"
 msgstr "Εξαγωγή βιβλίου διευθύνσεων του Evolution"
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:25
-#, fuzzy, kde-format
-#| msgid "Select the directory where vCards will be stored."
+#, kde-format
 msgctxt "@title:window"
 msgid "Select the directory where vCards will be stored."
 msgstr "Επιλογή καταλόγου όπου θα αποθηκευτούν τα vcards."
