@@ -28,7 +28,6 @@ ImportWizardKernel::ImportWizardKernel(QObject *parent)
     mCollectionModel->setSourceModel(mEntityTreeModel);
     mCollectionModel->addMimeTypeInclusionFilter(Akonadi::Collection::mimeType());
     mCollectionModel->setHeaderGroup(Akonadi::EntityTreeModel::CollectionTreeHeaders);
-    mCollectionModel->setDynamicSortFilter(true);
     mCollectionModel->setSortCaseSensitivity(Qt::CaseInsensitive);
 }
 
