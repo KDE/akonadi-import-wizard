@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-import-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-10 00:41+0000\n"
-"PO-Revision-Date: 2024-09-28 17:51+0700\n"
+"PO-Revision-Date: 2024-10-01 19:27+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -70,12 +70,12 @@ msgstr "Pilih material untuk mengimpor"
 #: importwizard.cpp:168
 #, kde-format
 msgid "Import mail messages"
-msgstr "Impor pesan mail"
+msgstr "Impor pesan surat"
 
 #: importwizard.cpp:172
 #, kde-format
 msgid "Import mail filters"
-msgstr "Impor filter mail"
+msgstr "Impor filter surat"
 
 #. i18n: ectx: property (text), widget (QPushButton, importSettings)
 #: importwizard.cpp:176 ui/autodetect/importsettingpage.ui:47
@@ -116,37 +116,37 @@ msgstr "Impor filter dari %1..."
 #: importwizard.cpp:222
 #, kde-format
 msgid "Import filters from %1: Done"
-msgstr ""
+msgstr "Impor filter dari %1: Kelar"
 
 #: importwizard.cpp:228
 #, kde-format
 msgid "Import mails from %1..."
-msgstr ""
+msgstr "Impor surat dari %1..."
 
 #: importwizard.cpp:231
 #, kde-format
 msgid "Import mails from %1: Done"
-msgstr ""
+msgstr "Impor surat dari %1: Kelar"
 
 #: importwizard.cpp:237
 #, kde-format
 msgid "Import settings from %1..."
-msgstr ""
+msgstr "Impor pengaturan dari %1..."
 
 #: importwizard.cpp:240
 #, kde-format
 msgid "Import settings from %1: Done"
-msgstr ""
+msgstr "Impor pengaturan dari %1: Kelar"
 
 #: importwizard.cpp:246
 #, kde-format
 msgid "Import calendar from %1..."
-msgstr ""
+msgstr "Impor kalender dari %1..."
 
 #: importwizard.cpp:249
 #, kde-format
 msgid "Import calendar from %1: Done"
-msgstr ""
+msgstr "Impor kalender dari %1: Kelar"
 
 #: importwizard.cpp:338 plugins/balsa/balsaimportdata.cpp:46
 #: plugins/claws-mail/clawsmailimportdata.cpp:47
@@ -157,7 +157,7 @@ msgstr ""
 #: plugins/thunderbird/thunderbirdimportdata.cpp:81
 #, kde-format
 msgid "Import in progress"
-msgstr ""
+msgstr "Impor sedang dalam progres"
 
 #: importwizard.cpp:345 plugins/balsa/balsaimportdata.cpp:53
 #: plugins/claws-mail/clawsmailimportdata.cpp:55
@@ -168,133 +168,133 @@ msgstr ""
 #: plugins/thunderbird/thunderbirdimportdata.cpp:89
 #, kde-format
 msgid "Import finished"
-msgstr ""
+msgstr "Impor selesai"
 
 #: libimportwizard/abstractaddressbook.cpp:28
 #, kde-format
 msgid "Creating new contact..."
-msgstr ""
+msgstr "Membuat kontak baru..."
 
 #: libimportwizard/abstractaddressbook.cpp:34
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
-msgstr ""
+msgstr "Pilih Buku Alamat"
 
 #: libimportwizard/abstractaddressbook.cpp:35
 #, kde-format
 msgid "Select the address book the new contact shall be saved in:"
-msgstr ""
+msgstr "Pilih buku alamat kontak baru yang harus disimpan di dalam:"
 
 #: libimportwizard/abstractaddressbook.cpp:40
 #, kde-format
 msgid "Address Book was not selected."
-msgstr ""
+msgstr "Buku Alamat belum dipilih."
 
 #: libimportwizard/abstractaddressbook.cpp:67
 #, kde-format
 msgid "Imported from \"%1\""
-msgstr ""
+msgstr "Diimpor dari \"%1\""
 
 #: libimportwizard/abstractaddressbook.cpp:86
 #, kde-format
 msgid "Error during contact creation: %1"
-msgstr ""
+msgstr "Galat ketika pembuatan kontak: %1"
 
 #: libimportwizard/abstractaddressbook.cpp:89
 #, kde-format
 msgid "Contact creation complete"
-msgstr ""
+msgstr "Pembuatan kontak sudah tuntas"
 
 #: libimportwizard/abstractimporter.cpp:65
 #, kde-format
 msgid "Importing of filters from \"%1\" was canceled."
-msgstr ""
+msgstr "Pengimporan filter dari \"%1\" telah dibatalkan."
 
 #: libimportwizard/abstractimporter.cpp:67
 #, kde-format
 msgid "1 filter was imported from \"%2\""
 msgid_plural "%1 filters were imported from \"%2\""
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 filter telah diimpor dari \"%2\""
+msgstr[1] "%1 filter telah diimpor dari \"%2\""
 
 #: libimportwizard/abstractimporter.cpp:71
 #, kde-format
 msgid "Filters file was not found"
-msgstr ""
+msgstr "File filter tidak ditemukan"
 
 #: libimportwizard/abstractsettings.cpp:38
 #, kde-format
 msgid "Setting up identity..."
-msgstr ""
+msgstr "Mempersiapkan identitas..."
 
 #: libimportwizard/abstractsettings.cpp:46
 #, kde-format
 msgid "Identity set up."
-msgstr ""
+msgstr "Identitas disiapkan."
 
 #: libimportwizard/abstractsettings.cpp:63
 #, kde-format
 msgid "Setting up transport..."
-msgstr ""
+msgstr "Mempersiapkan transportasi..."
 
 #: libimportwizard/abstractsettings.cpp:75
 #, kde-format
 msgid "Transport set up."
-msgstr ""
+msgstr "Transportasi disiapkan."
 
 #: main.cpp:46 main.cpp:48
 #, kde-format
 msgid "PIM Import Tool"
-msgstr ""
+msgstr "Alat Impor PIM"
 
 #: main.cpp:50
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
-msgstr ""
+msgstr "Hak cipta © 2012-%1 penulis ImportWizard"
 
 #: main.cpp:52
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
-msgstr ""
+msgstr "Laurent Montel"
 
 #: main.cpp:52
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Pemelihara"
 
 #: main.cpp:59
 #, kde-format
 msgctxt "@info:shell"
 msgid "Mode: %1"
-msgstr ""
+msgstr "Mode: %1"
 
 #: manual/manualselectfilterpage.cpp:85
 #, kde-format
 msgid "<p><i>Written by %1.</i></p>"
-msgstr ""
+msgstr "<p><i>Ditulis oleh %1.</i></p>"
 
 #: plugins/balsa/balsaaddressbook.cpp:36 plugins/balsa/balsaaddressbook.cpp:49
 #: plugins/sylpheed/sylpheedaddressbook.cpp:27
 #, kde-format
 msgid "No addressbook found"
-msgstr ""
+msgstr "Tidak ditemukan buku_alamat"
 
 #: plugins/balsa/balsaaddressbook.cpp:63
 #, kde-format
 msgid "Ldap created"
-msgstr ""
+msgstr "Dibuat ldap"
 
 #: plugins/balsa/balsaaddressbook.cpp:93
 #, kde-format
 msgid "New addressbook created: %1"
-msgstr ""
+msgstr "Buku_alamat baru, dibuat: %1"
 
 #: plugins/claws-mail/clawsmailimportdata.cpp:76
 #, kde-format
 msgid "Claws Mail settings not found."
-msgstr ""
+msgstr "Pengaturan Mail Claws tidak ditemukan."
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:21
 #, kde-format
@@ -302,134 +302,136 @@ msgid ""
 "Evolution address book will be exported as vCard. Import vCard in "
 "KAddressBook."
 msgstr ""
+"Buku alamat Evolution akan diekspor sebagai vCard. Impor vCard dalam "
+"KAddressBook."
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:22
 #, kde-format
 msgctxt "@title:window"
 msgid "Export Evolution Address Book"
-msgstr ""
+msgstr "Ekspor Buku Alamat Evolution"
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Select the directory where vCards will be stored."
-msgstr ""
+msgstr "Pilih direktori di mana vCards akan disimpan."
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:78
 #, kde-format
 msgid "Address book \"%1\" exported."
-msgstr ""
+msgstr "Buku alamat \"%1\" diekspor."
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:80
 #, kde-format
 msgid "Failed to export address book \"%1\"."
-msgstr ""
+msgstr "Gagal mengekspor buku alamat \"%1\"."
 
 #: plugins/evolutionv3/evolutionv3importdata.cpp:57
 #, kde-format
 msgid "Evolution settings not found."
-msgstr ""
+msgstr "Pengaturan Evolution tidak ditemukan."
 
 #: plugins/evolutionv3/evolutionv3importdata.cpp:100
 #, kde-format
 msgid "Evolution calendar not found."
-msgstr ""
+msgstr "Kalender Evolution tidak ditemukan."
 
 #: plugins/icedove/icedoveimportdata.cpp:69
 #, kde-format
 msgid "Icedove settings not found."
-msgstr ""
+msgstr "Pengaturan Icedove tidak ditemukan."
 
 #: plugins/seamonkey/seamonkeyimportdata.cpp:69
 #, kde-format
 msgid "SeaMonkey settings not found."
-msgstr ""
+msgstr "Pengaturan SeaMonkey tidak ditemukan."
 
 #: plugins/sylpheed/sylpheedaddressbook.cpp:60
 #, kde-format
 msgid "No contact found in %1"
-msgstr ""
+msgstr "Tidak menemukan kontak di %1"
 
 #: plugins/sylpheed/sylpheedimportdata.cpp:51
 #, kde-format
 msgid "Sylpheed settings not found."
-msgstr ""
+msgstr "Pengaturan Sylpheed tidak ditemukan."
 
 #: plugins/thunderbird/thunderbirdaddressbook.cpp:46
 #, kde-format
 msgid "Contacts file '%1' not found"
-msgstr ""
+msgstr "File kontak '%1' tidak ditemukan"
 
 #: plugins/thunderbird/thunderbirdimportdata.cpp:71
 #, kde-format
 msgid "Thunderbird settings not found."
-msgstr ""
+msgstr "Pengaturan Thunderbird tidak ditemukan."
 
 #. i18n: ectx: property (text), widget (QPushButton, importAddressBook)
 #: ui/autodetect/importaddressbookpage.ui:47
 #, kde-format
 msgid "Import addressbook"
-msgstr ""
+msgstr "Impor buku_alamat"
 
 #. i18n: ectx: property (text), widget (QPushButton, importCalendar)
 #: ui/autodetect/importcalendarpage.ui:47
 #, kde-format
 msgid "Import calendar"
-msgstr ""
+msgstr "Impor kalender"
 
 #. i18n: ectx: property (text), widget (QPushButton, importFilters)
 #: ui/autodetect/importfilterpage.ui:47
 #, kde-format
 msgid "Import Filters"
-msgstr ""
+msgstr "Filter Impor"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/autodetect/importfinishpage.ui:29
 #, kde-format
 msgid "Summary:"
-msgstr ""
+msgstr "Ringkasan:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/autodetect/importmailpage.ui:32 ui/manual/manualselectfilterpage.ui:136
 #, kde-format
 msgid "Please select the folder to import to:"
-msgstr ""
+msgstr "Silakan pilih folder untuk impor ke:"
 
 #. i18n: ectx: property (text), widget (QPushButton, importMails)
 #: ui/autodetect/importmailpage.ui:60
 #, kde-format
 msgid "Import Mails"
-msgstr ""
+msgstr "Impor Surat"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mails)
 #: ui/autodetect/selectcomponentpage.ui:49
 #, kde-format
 msgid "Mails"
-msgstr ""
+msgstr "Surat"
 
 #. i18n: ectx: property (text), widget (QCheckBox, filters)
 #: ui/autodetect/selectcomponentpage.ui:59
 #, kde-format
 msgid "Filters"
-msgstr ""
+msgstr "Filter"
 
 #. i18n: ectx: property (text), widget (QCheckBox, settings)
 #: ui/autodetect/selectcomponentpage.ui:69
 #, kde-format
 msgid "Settings"
-msgstr ""
+msgstr "Pengaturan"
 
 #. i18n: ectx: property (text), widget (QCheckBox, addressbooks)
 #: ui/autodetect/selectcomponentpage.ui:79
 #, kde-format
 msgid "Address Books"
-msgstr ""
+msgstr "Buku Alamat"
 
 #. i18n: ectx: property (text), widget (QCheckBox, calendars)
 #: ui/autodetect/selectcomponentpage.ui:89
 #, kde-format
 msgid "Calendars"
-msgstr ""
+msgstr "Kalender"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/autodetect/selectcomponentpage.ui:126
@@ -438,42 +440,44 @@ msgid ""
 "This wizard will import mail messages, addressbook entries, filters and/or "
 "settings from other mail programs into KMail"
 msgstr ""
+"Wizard ini akan mengimpor pesan surat, seluruh buku_alamat, filter dan/atau "
+"pengaturan dari program surat lainnya ke dalam KMail"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/autodetect/selectcomponentpage.ui:136
 #, kde-format
 msgid "Or select types of material to import:"
-msgstr ""
+msgstr "Atau pilih jenis material untuk impor:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, everything)
 #: ui/autodetect/selectcomponentpage.ui:143
 #, kde-format
 msgid "Import Everything"
-msgstr ""
+msgstr "Impor Semuanya"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/autodetect/selectprogrampage.ui:53
 #, kde-format
 msgid "Please select the program from which you like to import:"
-msgstr ""
+msgstr "Silakan pilih program dari yang Anda mau impor:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/autodetect/selectprogrampage.ui:86
 #, kde-format
 msgid "No program found"
-msgstr ""
+msgstr "Tidak ada program yang ditemukan"
 
 #. i18n: ectx: property (text), widget (QCheckBox, manualSelectionCheckBox)
 #: ui/autodetect/selectprogrampage.ui:112
 #, kde-format
 msgid "Manual Selection"
-msgstr ""
+msgstr "Seleksi Manual"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: ui/manual/manualimportmailpage.ui:96
 #, kde-format
 msgid "Click 'Back' to import more emails"
-msgstr ""
+msgstr "Klik 'Kembali' untuk mengimpor e-surat selebihnya"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel6)
 #: ui/manual/manualselectfilterpage.ui:103
@@ -495,9 +499,25 @@ msgid ""
 "you would like to import from. Next, select the folder you would like to "
 "import to, then click 'Next'.</span></p></body></html>"
 msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'DejaVu Sans'; font-size:9pt; font-weight:600;\">Selamat Datang di "
+"ImportWizard si Alat Pengimpor Surat</span><span style=\" font-"
+"family:'DejaVu Sans'; font-size:9pt;\"> <br /><br />Program ini akan "
+"membantu Anda mengimpor e-surat dari program email Anda sebelumnya.<br /"
+"><br />Silakan pilih program yang mau Anda impor dari. Selanjutnya, pilih "
+"folder yang mau Anda impor ke, kemudian klik 'Selanjutnya'.</span></p></"
+"body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, remDupMsg)
 #: ui/manual/manualselectfilterpage.ui:146
 #, kde-format
 msgid "Remove &duplicate messages during import"
-msgstr ""
+msgstr "Hapus pesan &duplikat selama impor"
