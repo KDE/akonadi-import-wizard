@@ -28,10 +28,24 @@ const char MorkMagicHeader[] = "// <!-- <mdb:mork:z v=\"1.4\"/> -->";
 const char MorkDictColumnMeta[] = "<(a=c)>";
 
 // Error codes
-enum MorkErrors { NoError = 0, FailedToOpen, UnsupportedVersion, DefectedFormat };
+enum MorkErrors {
+    NoError = 0,
+    FailedToOpen,
+    UnsupportedVersion,
+    DefectedFormat
+};
 
 // Mork term types
-enum MorkTerm { NoneTerm = 0, DictTerm, GroupTerm, TableTerm, RowTerm, CellTerm, CommentTerm, LiteralTerm };
+enum MorkTerm {
+    NoneTerm = 0,
+    DictTerm,
+    GroupTerm,
+    TableTerm,
+    RowTerm,
+    CellTerm,
+    CommentTerm,
+    LiteralTerm
+};
 
 /// Class MorkParser
 
@@ -109,5 +123,9 @@ protected: // Data
     int mDefaultScope;
 
     // Indicates intity is being parsed
-    enum { NPColumns, NPValues, NPRows } nowParsing_;
+    enum {
+        NPColumns,
+        NPValues,
+        NPRows
+    } nowParsing_;
 };

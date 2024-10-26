@@ -27,7 +27,14 @@ class LIBIMPORTWIZARD_EXPORT AbstractImporter : public QObject
 {
     Q_OBJECT
 public:
-    enum TypeSupportedOption { None = 0, Mails = 1, Settings = 2, Filters = 4, AddressBooks = 8, Calendars = 16 };
+    enum TypeSupportedOption {
+        None = 0,
+        Mails = 1,
+        Settings = 2,
+        Filters = 4,
+        AddressBooks = 8,
+        Calendars = 16
+    };
 
     Q_DECLARE_FLAGS(TypeSupportedOptions, TypeSupportedOption)
 

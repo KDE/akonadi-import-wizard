@@ -35,7 +35,11 @@ Q_DECLARE_TYPEINFO(tagStruct, Q_RELOCATABLE_TYPE);
 
 namespace ImportWizardUtil
 {
-enum ResourceType { Imap, Pop3, Ldap };
+enum ResourceType {
+    Imap,
+    Pop3,
+    Ldap
+};
 
 LIBIMPORTWIZARD_EXPORT void mergeLdap(const ldapStruct &ldap);
 LIBIMPORTWIZARD_EXPORT void addAkonadiTag(const QList<tagStruct> &tagList);

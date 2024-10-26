@@ -33,7 +33,10 @@ class ImportWizard : public KAssistantDialog
 {
     Q_OBJECT
 public:
-    enum class WizardMode { AutoDetect = 0, Manual = 1 };
+    enum class WizardMode {
+        AutoDetect = 0,
+        Manual = 1
+    };
 
     explicit ImportWizard(WizardMode mode, QWidget *parent = nullptr);
     ~ImportWizard() override;
