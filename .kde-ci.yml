@@ -14,4 +14,3 @@ Dependencies:
     'pim/messagelib' : '@same'
     'pim/pimcommon' : '@same'
     'third-party/qtkeychain': '@latest-kf6'
-    'frameworks/kauth': '@latest-kf6'
