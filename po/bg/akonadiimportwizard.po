@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadi-import-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-10 02:39+0000\n"
-"PO-Revision-Date: 2024-06-07 10:08+0200\n"
+"PO-Revision-Date: 2024-11-06 23:58+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -194,7 +194,7 @@ msgstr "Адресната книга не е избрана."
 #: libimportwizard/abstractaddressbook.cpp:67
 #, kde-format
 msgid "Imported from \"%1\""
-msgstr "Импортирано от \"%1\""
+msgstr "Импортирано от „%1“"
 
 #: libimportwizard/abstractaddressbook.cpp:86
 #, kde-format
@@ -209,14 +209,14 @@ msgstr "Създаването на контакт завърши"
 #: libimportwizard/abstractimporter.cpp:65
 #, kde-format
 msgid "Importing of filters from \"%1\" was canceled."
-msgstr "Импортирането на филтри от \"%1\" бе отменено."
+msgstr "Импортирането на филтри от „%1“ бе отменено."
 
 #: libimportwizard/abstractimporter.cpp:67
 #, kde-format
 msgid "1 filter was imported from \"%2\""
 msgid_plural "%1 filters were imported from \"%2\""
-msgstr[0] "1 филтър е импортиран от \"%2\""
-msgstr[1] "%1 филтри са импортирани от \"%2\""
+msgstr[0] "1 филтър е импортиран от „%2“"
+msgstr[1] "%1 филтри са импортирани от „%2“"
 
 #: libimportwizard/abstractimporter.cpp:71
 #, kde-format
@@ -319,12 +319,12 @@ msgstr "Избиране на директорията, в която ще се 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:78
 #, kde-format
 msgid "Address book \"%1\" exported."
-msgstr "Адресната книга \"%1\" е експортирана."
+msgstr "Адресната книга „%1“ е експортирана."
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:80
 #, kde-format
 msgid "Failed to export address book \"%1\"."
-msgstr "Неуспешно експортиране на адресна книга \"%1\"."
+msgstr "Неуспешно експортиране на адресна книга „%1“."
 
 #: plugins/evolutionv3/evolutionv3importdata.cpp:57
 #, kde-format
@@ -359,7 +359,7 @@ msgstr "Настройките на Sylpheed не са намерени."
 #: plugins/thunderbird/thunderbirdaddressbook.cpp:46
 #, kde-format
 msgid "Contacts file '%1' not found"
-msgstr "Файлът с контакти \"%1\" не е намерен"
+msgstr "Файлът с контакти „%1“ не е намерен"
 
 #: plugins/thunderbird/thunderbirdimportdata.cpp:71
 #, kde-format
@@ -507,13 +507,13 @@ msgstr ""
 "weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"family:'DejaVu Sans'; font-size:9pt; font-weight:600;\">Welcome to "
-"ImportWizard The Mail Import Tool</span><span style=\" font-family:'DejaVu "
-"Sans'; font-size:9pt;\"><br /><br />Тази програма ще ви помогне да "
-"импортирате имейлите  си от предишната програма за електронна поща. <br /"
-"><br />Моля, изберете програмата, от която искате да импортирате. След това "
-"изберете папката, в която искате да импортирате, след което щракнете върху "
-"\"Напред\"</span></p></body></html>"
+"family:'DejaVu Sans'; font-size:9pt; font-weight:600;\">Добре дошли "
+"вImportWizard Инструментът за импортиране на поща</span><span style=\" font-"
+"family:'DejaVu Sans'; font-size:9pt;\"><br /><br />Тази програма ще ви "
+"помогне да импортирате имейлите  си от предишната програма за електронна "
+"поща. <br /><br />Моля, изберете програмата, от която искате да импортирате. "
+"След това изберете папката, в която искате да импортирате, след което "
+"щракнете върху \"Напред\"</span></p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, remDupMsg)
 #: ui/manual/manualselectfilterpage.ui:146
