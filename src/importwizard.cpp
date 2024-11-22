@@ -69,7 +69,12 @@ ImportWizard::ImportWizard(WizardMode mode, QWidget *parent)
         checkModules();
         KMessageBox::information(this, i18n("Close KMail before importing data. Some plugins will modify KMail config file."));
     }
+#if KXMLGUI_VERSION >= QT_VERSION_CHECK(6, 9, 0)
+    auto helpMenu = new KHelpMenu(this, KAboutData::applicationData());
+    helpMenu->setShowWhatsThis(true);
+#else
     auto helpMenu = new KHelpMenu(this, KAboutData::applicationData(), true);
+#endif
     // Initialize menu
     QMenu *menu = helpMenu->menu();
     helpMenu->action(KHelpMenu::menuAboutApp)->setIcon(QIcon::fromTheme(QStringLiteral("kmail")));
