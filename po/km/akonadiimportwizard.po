@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: importwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-10 00:41+0000\n"
+"POT-Creation-Date: 2024-11-23 00:40+0000\n"
 "PO-Revision-Date: 2012-12-25 16:30+0700\n"
 "Last-Translator: sutha <sutha@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros>\n"
@@ -51,113 +51,113 @@ msgid ""
 msgstr ""
 "បិទ KMail មុន​ពេល​នាំចូល​ទិន្ន័យ ។ កម្មវិធី​មួយ​ចំនួន​នឹង​កែប្រែ​ឯកសារ​ការ​កំណត់​រចនាសម្ព័ន្ធ​របស់ KMail ។"
 
-#: importwizard.cpp:125
+#: importwizard.cpp:130
 #, kde-format
 msgid "Step 1: Select Filter"
 msgstr ""
 
-#: importwizard.cpp:130
+#: importwizard.cpp:135
 #, kde-format
 msgid "Step 2: Importing..."
 msgstr ""
 
-#: importwizard.cpp:159
+#: importwizard.cpp:164
 #, kde-format
 msgid "Detect program"
 msgstr "លុប​កម្មវិធី"
 
-#: importwizard.cpp:164
+#: importwizard.cpp:169
 #, kde-format
 msgid "Select material to import"
 msgstr "ជ្រើស​វត្ថុ​ធាតុ​ដើម្បី​នាំចូល"
 
-#: importwizard.cpp:168
+#: importwizard.cpp:173
 #, kde-format
 msgid "Import mail messages"
 msgstr "នាំចូល​សារ​ទាំងអស់"
 
-#: importwizard.cpp:172
+#: importwizard.cpp:177
 #, kde-format
 msgid "Import mail filters"
 msgstr "នាំចូល​តម្រង​សារ"
 
 #. i18n: ectx: property (text), widget (QPushButton, importSettings)
-#: importwizard.cpp:176 ui/autodetect/importsettingpage.ui:47
+#: importwizard.cpp:181 ui/autodetect/importsettingpage.ui:47
 #, kde-format
 msgid "Import settings"
 msgstr "នាំចូល​ការ​កំណត់"
 
-#: importwizard.cpp:180
+#: importwizard.cpp:185
 #, kde-format
 msgid "Import addressbooks"
 msgstr "នាំចូល​សៀវភៅ​អាសយដ្ឋាន"
 
-#: importwizard.cpp:184
+#: importwizard.cpp:189
 #, kde-format
 msgid "Import calendars"
 msgstr "នាំចូល​ប្រតិទិន"
 
-#: importwizard.cpp:188
+#: importwizard.cpp:193
 #, kde-format
 msgid "Finish"
 msgstr "បញ្ចប់"
 
-#: importwizard.cpp:210
+#: importwizard.cpp:215
 #, kde-format
 msgid "Import addressbook from %1..."
 msgstr "នាំចូល​សៀវភៅ​អាសយដ្ឋាន​ពី %1..."
 
-#: importwizard.cpp:213
+#: importwizard.cpp:218
 #, fuzzy, kde-format
 #| msgid "Import addressbook from %1..."
 msgid "Import addressbook from %1: Done"
 msgstr "នាំចូល​សៀវភៅ​អាសយដ្ឋាន​ពី %1..."
 
-#: importwizard.cpp:219
+#: importwizard.cpp:224
 #, kde-format
 msgid "Import filters from %1..."
 msgstr "នាំចូល​តម្រង​ពី %1..."
 
-#: importwizard.cpp:222
+#: importwizard.cpp:227
 #, fuzzy, kde-format
 #| msgid "Import filters from %1..."
 msgid "Import filters from %1: Done"
 msgstr "នាំចូល​តម្រង​ពី %1..."
 
-#: importwizard.cpp:228
+#: importwizard.cpp:233
 #, kde-format
 msgid "Import mails from %1..."
 msgstr "នាំចូល​សារ​ពី %1..."
 
-#: importwizard.cpp:231
+#: importwizard.cpp:236
 #, fuzzy, kde-format
 #| msgid "Import mails from %1..."
 msgid "Import mails from %1: Done"
 msgstr "នាំចូល​សារ​ពី %1..."
 
-#: importwizard.cpp:237
+#: importwizard.cpp:242
 #, kde-format
 msgid "Import settings from %1..."
 msgstr "នាំចូល​ការ​កំណត់​ពី %1..."
 
-#: importwizard.cpp:240
+#: importwizard.cpp:245
 #, fuzzy, kde-format
 #| msgid "Import settings from %1..."
 msgid "Import settings from %1: Done"
 msgstr "នាំចូល​ការ​កំណត់​ពី %1..."
 
-#: importwizard.cpp:246
+#: importwizard.cpp:251
 #, kde-format
 msgid "Import calendar from %1..."
 msgstr "នាំចូល​ប្រតិទិន​ពី %1..."
 
-#: importwizard.cpp:249
+#: importwizard.cpp:254
 #, fuzzy, kde-format
 #| msgid "Import calendar from %1..."
 msgid "Import calendar from %1: Done"
 msgstr "នាំចូល​ប្រតិទិន​ពី %1..."
 
-#: importwizard.cpp:338 plugins/balsa/balsaimportdata.cpp:46
+#: importwizard.cpp:343 plugins/balsa/balsaimportdata.cpp:46
 #: plugins/claws-mail/clawsmailimportdata.cpp:47
 #: plugins/evolutionv3/evolutionv3importdata.cpp:66
 #: plugins/icedove/icedoveimportdata.cpp:79
@@ -168,7 +168,7 @@ msgstr "នាំចូល​ប្រតិទិន​ពី %1..."
 msgid "Import in progress"
 msgstr "ការ​នាំចូល​កំពុង​ដំណើរការ"
 
-#: importwizard.cpp:345 plugins/balsa/balsaimportdata.cpp:53
+#: importwizard.cpp:350 plugins/balsa/balsaimportdata.cpp:53
 #: plugins/claws-mail/clawsmailimportdata.cpp:55
 #: plugins/evolutionv3/evolutionv3importdata.cpp:74
 #: plugins/icedove/icedoveimportdata.cpp:87

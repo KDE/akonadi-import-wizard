@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-import-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-10 00:41+0000\n"
+"POT-Creation-Date: 2024-11-23 00:40+0000\n"
 "PO-Revision-Date: 2024-08-01 05:54+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -48,108 +48,108 @@ msgstr ""
 "მონაცემების შემოტანის წინ საჭროა KMail-ის დახურვა. ზოგიერთ დამატებას KMail-"
 "ის კონფიგურაციის ცვლილება შეიძლება დასჭირდეს."
 
-#: importwizard.cpp:125
+#: importwizard.cpp:130
 #, kde-format
 msgid "Step 1: Select Filter"
 msgstr "ნაბიჯი 1: აირჩიეთ ფილტრი"
 
-#: importwizard.cpp:130
+#: importwizard.cpp:135
 #, kde-format
 msgid "Step 2: Importing..."
 msgstr "ნაბიჯი 2: შემოტანა..."
 
-#: importwizard.cpp:159
+#: importwizard.cpp:164
 #, kde-format
 msgid "Detect program"
 msgstr "პროგრამის პოვნა"
 
-#: importwizard.cpp:164
+#: importwizard.cpp:169
 #, kde-format
 msgid "Select material to import"
 msgstr "აირჩიეთ შემოსატანი მასალა"
 
-#: importwizard.cpp:168
+#: importwizard.cpp:173
 #, kde-format
 msgid "Import mail messages"
 msgstr "ელფოსტის შეტყობინებების შემოტანა"
 
-#: importwizard.cpp:172
+#: importwizard.cpp:177
 #, kde-format
 msgid "Import mail filters"
 msgstr "ელფოსტის ფილტრების შემოტანა"
 
 #. i18n: ectx: property (text), widget (QPushButton, importSettings)
-#: importwizard.cpp:176 ui/autodetect/importsettingpage.ui:47
+#: importwizard.cpp:181 ui/autodetect/importsettingpage.ui:47
 #, kde-format
 msgid "Import settings"
 msgstr "პარამეტრების შემოტანა"
 
-#: importwizard.cpp:180
+#: importwizard.cpp:185
 #, kde-format
 msgid "Import addressbooks"
 msgstr "მისამართის წიგნების შემოტანა"
 
-#: importwizard.cpp:184
+#: importwizard.cpp:189
 #, kde-format
 msgid "Import calendars"
 msgstr "კალენდრების შემოტანა"
 
-#: importwizard.cpp:188
+#: importwizard.cpp:193
 #, kde-format
 msgid "Finish"
 msgstr "დასრულება"
 
-#: importwizard.cpp:210
+#: importwizard.cpp:215
 #, kde-format
 msgid "Import addressbook from %1..."
 msgstr "მისამართების წიგნის შემოტანა %1-დან..."
 
-#: importwizard.cpp:213
+#: importwizard.cpp:218
 #, kde-format
 msgid "Import addressbook from %1: Done"
 msgstr "მისამართების წიგნის შემოტანა %1-დან: დასრულდა"
 
-#: importwizard.cpp:219
+#: importwizard.cpp:224
 #, kde-format
 msgid "Import filters from %1..."
 msgstr "ფილტრების შემოტანა %1-დან..."
 
-#: importwizard.cpp:222
+#: importwizard.cpp:227
 #, kde-format
 msgid "Import filters from %1: Done"
 msgstr "ფილტრების შემოტანა %1-დან: დასრულდა"
 
-#: importwizard.cpp:228
+#: importwizard.cpp:233
 #, kde-format
 msgid "Import mails from %1..."
 msgstr "ელფოსტების შემოტანა %1-დან..."
 
-#: importwizard.cpp:231
+#: importwizard.cpp:236
 #, kde-format
 msgid "Import mails from %1: Done"
 msgstr "ელფოსტების შემოტანა %1-დან: დასრულდა"
 
-#: importwizard.cpp:237
+#: importwizard.cpp:242
 #, kde-format
 msgid "Import settings from %1..."
 msgstr "პარამეტრები შემოტანა %1-დან..."
 
-#: importwizard.cpp:240
+#: importwizard.cpp:245
 #, kde-format
 msgid "Import settings from %1: Done"
 msgstr "პარამეტრები შემოტანა %1-დან: დასრულდა"
 
-#: importwizard.cpp:246
+#: importwizard.cpp:251
 #, kde-format
 msgid "Import calendar from %1..."
 msgstr "კალენდრის შემოტანა %1-დან..."
 
-#: importwizard.cpp:249
+#: importwizard.cpp:254
 #, kde-format
 msgid "Import calendar from %1: Done"
 msgstr "კალენდრის შემოტანა %1-დან: დასრულდა"
 
-#: importwizard.cpp:338 plugins/balsa/balsaimportdata.cpp:46
+#: importwizard.cpp:343 plugins/balsa/balsaimportdata.cpp:46
 #: plugins/claws-mail/clawsmailimportdata.cpp:47
 #: plugins/evolutionv3/evolutionv3importdata.cpp:66
 #: plugins/icedove/icedoveimportdata.cpp:79
@@ -160,7 +160,7 @@ msgstr "კალენდრის შემოტანა %1-დან: დ�
 msgid "Import in progress"
 msgstr "მიმდინარეობს შემოტანა"
 
-#: importwizard.cpp:345 plugins/balsa/balsaimportdata.cpp:53
+#: importwizard.cpp:350 plugins/balsa/balsaimportdata.cpp:53
 #: plugins/claws-mail/clawsmailimportdata.cpp:55
 #: plugins/evolutionv3/evolutionv3importdata.cpp:74
 #: plugins/icedove/icedoveimportdata.cpp:87

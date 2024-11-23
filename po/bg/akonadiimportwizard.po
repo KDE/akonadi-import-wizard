@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-import-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-10 00:41+0000\n"
+"POT-Creation-Date: 2024-11-23 00:40+0000\n"
 "PO-Revision-Date: 2024-11-09 20:09+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -47,108 +47,108 @@ msgstr ""
 "Затворете KMail, преди да импортирате данни. Някои приставки ще модифицират "
 "конфигурационния файл на KMail."
 
-#: importwizard.cpp:125
+#: importwizard.cpp:130
 #, kde-format
 msgid "Step 1: Select Filter"
 msgstr "Стъпка 1: Избиране на филтър"
 
-#: importwizard.cpp:130
+#: importwizard.cpp:135
 #, kde-format
 msgid "Step 2: Importing..."
 msgstr "Стъпка 2: Импортиране…"
 
-#: importwizard.cpp:159
+#: importwizard.cpp:164
 #, kde-format
 msgid "Detect program"
 msgstr "Програма за откриване"
 
-#: importwizard.cpp:164
+#: importwizard.cpp:169
 #, kde-format
 msgid "Select material to import"
 msgstr "Избиране на материал за импортиране"
 
-#: importwizard.cpp:168
+#: importwizard.cpp:173
 #, kde-format
 msgid "Import mail messages"
 msgstr "Импортиране на пощенски съобщения"
 
-#: importwizard.cpp:172
+#: importwizard.cpp:177
 #, kde-format
 msgid "Import mail filters"
 msgstr "Импортиране на филтри за поща"
 
 #. i18n: ectx: property (text), widget (QPushButton, importSettings)
-#: importwizard.cpp:176 ui/autodetect/importsettingpage.ui:47
+#: importwizard.cpp:181 ui/autodetect/importsettingpage.ui:47
 #, kde-format
 msgid "Import settings"
 msgstr "Настройки на импортирането "
 
-#: importwizard.cpp:180
+#: importwizard.cpp:185
 #, kde-format
 msgid "Import addressbooks"
 msgstr "Импортиране на адресни книги"
 
-#: importwizard.cpp:184
+#: importwizard.cpp:189
 #, kde-format
 msgid "Import calendars"
 msgstr "Импортиране на календари"
 
-#: importwizard.cpp:188
+#: importwizard.cpp:193
 #, kde-format
 msgid "Finish"
 msgstr "Завършено"
 
-#: importwizard.cpp:210
+#: importwizard.cpp:215
 #, kde-format
 msgid "Import addressbook from %1..."
 msgstr "Импортиране на адресна книга от %1…"
 
-#: importwizard.cpp:213
+#: importwizard.cpp:218
 #, kde-format
 msgid "Import addressbook from %1: Done"
 msgstr "Импортиране на адресна книга от %1: Готово"
 
-#: importwizard.cpp:219
+#: importwizard.cpp:224
 #, kde-format
 msgid "Import filters from %1..."
 msgstr "Импортиране на филтри от %1…"
 
-#: importwizard.cpp:222
+#: importwizard.cpp:227
 #, kde-format
 msgid "Import filters from %1: Done"
 msgstr "Импортиране на филтри от %1: Готово"
 
-#: importwizard.cpp:228
+#: importwizard.cpp:233
 #, kde-format
 msgid "Import mails from %1..."
 msgstr "Импортиране на имейли от %1…"
 
-#: importwizard.cpp:231
+#: importwizard.cpp:236
 #, kde-format
 msgid "Import mails from %1: Done"
 msgstr "Импортиране на имейли от %1: Готово"
 
-#: importwizard.cpp:237
+#: importwizard.cpp:242
 #, kde-format
 msgid "Import settings from %1..."
 msgstr "Импортиране на настройки от %1…"
 
-#: importwizard.cpp:240
+#: importwizard.cpp:245
 #, kde-format
 msgid "Import settings from %1: Done"
 msgstr "Импортиране на настройки от %1: Готово"
 
-#: importwizard.cpp:246
+#: importwizard.cpp:251
 #, kde-format
 msgid "Import calendar from %1..."
 msgstr "Импортиране на календар от %1…"
 
-#: importwizard.cpp:249
+#: importwizard.cpp:254
 #, kde-format
 msgid "Import calendar from %1: Done"
 msgstr "Импортиране на календар от %1: Готово"
 
-#: importwizard.cpp:338 plugins/balsa/balsaimportdata.cpp:46
+#: importwizard.cpp:343 plugins/balsa/balsaimportdata.cpp:46
 #: plugins/claws-mail/clawsmailimportdata.cpp:47
 #: plugins/evolutionv3/evolutionv3importdata.cpp:66
 #: plugins/icedove/icedoveimportdata.cpp:79
@@ -159,7 +159,7 @@ msgstr "Импортиране на календар от %1: Готово"
 msgid "Import in progress"
 msgstr "Протича импортиране"
 
-#: importwizard.cpp:345 plugins/balsa/balsaimportdata.cpp:53
+#: importwizard.cpp:350 plugins/balsa/balsaimportdata.cpp:53
 #: plugins/claws-mail/clawsmailimportdata.cpp:55
 #: plugins/evolutionv3/evolutionv3importdata.cpp:74
 #: plugins/icedove/icedoveimportdata.cpp:87

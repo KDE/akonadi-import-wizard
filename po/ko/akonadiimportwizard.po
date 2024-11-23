@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-10 00:41+0000\n"
+"POT-Creation-Date: 2024-11-23 00:40+0000\n"
 "PO-Revision-Date: 2024-08-19 21:43+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -47,108 +47,108 @@ msgstr ""
 "데이터를 가져오기 전에 KMail을 닫으십시오. 일부 플러그인은 KMail 설정 파일을 "
 "편집합니다."
 
-#: importwizard.cpp:125
+#: importwizard.cpp:130
 #, kde-format
 msgid "Step 1: Select Filter"
 msgstr "단계 1: 필터 선택"
 
-#: importwizard.cpp:130
+#: importwizard.cpp:135
 #, kde-format
 msgid "Step 2: Importing..."
 msgstr "단계 2: 가져오는 중..."
 
-#: importwizard.cpp:159
+#: importwizard.cpp:164
 #, kde-format
 msgid "Detect program"
 msgstr "프로그램 감지"
 
-#: importwizard.cpp:164
+#: importwizard.cpp:169
 #, kde-format
 msgid "Select material to import"
 msgstr "가져올 리소스 선택"
 
-#: importwizard.cpp:168
+#: importwizard.cpp:173
 #, kde-format
 msgid "Import mail messages"
 msgstr "메일 메시지 가져오기"
 
-#: importwizard.cpp:172
+#: importwizard.cpp:177
 #, kde-format
 msgid "Import mail filters"
 msgstr "메일 필터 가져오기"
 
 #. i18n: ectx: property (text), widget (QPushButton, importSettings)
-#: importwizard.cpp:176 ui/autodetect/importsettingpage.ui:47
+#: importwizard.cpp:181 ui/autodetect/importsettingpage.ui:47
 #, kde-format
 msgid "Import settings"
 msgstr "설정 가져오기"
 
-#: importwizard.cpp:180
+#: importwizard.cpp:185
 #, kde-format
 msgid "Import addressbooks"
 msgstr "주소록 가져오기"
 
-#: importwizard.cpp:184
+#: importwizard.cpp:189
 #, kde-format
 msgid "Import calendars"
 msgstr "달력 가져오기"
 
-#: importwizard.cpp:188
+#: importwizard.cpp:193
 #, kde-format
 msgid "Finish"
 msgstr "완료"
 
-#: importwizard.cpp:210
+#: importwizard.cpp:215
 #, kde-format
 msgid "Import addressbook from %1..."
 msgstr "%1에서 주소록 가져오는 중..."
 
-#: importwizard.cpp:213
+#: importwizard.cpp:218
 #, kde-format
 msgid "Import addressbook from %1: Done"
 msgstr "%1에서 주소록 가져오는 중: 완료"
 
-#: importwizard.cpp:219
+#: importwizard.cpp:224
 #, kde-format
 msgid "Import filters from %1..."
 msgstr "%1에서 필터 가져오는 중..."
 
-#: importwizard.cpp:222
+#: importwizard.cpp:227
 #, kde-format
 msgid "Import filters from %1: Done"
 msgstr "%1에서 필터 가져오는 중: 완료"
 
-#: importwizard.cpp:228
+#: importwizard.cpp:233
 #, kde-format
 msgid "Import mails from %1..."
 msgstr "%1에서 메일 가져오는 중..."
 
-#: importwizard.cpp:231
+#: importwizard.cpp:236
 #, kde-format
 msgid "Import mails from %1: Done"
 msgstr "%1에서 메일 가져오는 중: 완료"
 
-#: importwizard.cpp:237
+#: importwizard.cpp:242
 #, kde-format
 msgid "Import settings from %1..."
 msgstr "%1에서 설정 가져오는 중..."
 
-#: importwizard.cpp:240
+#: importwizard.cpp:245
 #, kde-format
 msgid "Import settings from %1: Done"
 msgstr "%1에서 설정 가져오는 중: 완료"
 
-#: importwizard.cpp:246
+#: importwizard.cpp:251
 #, kde-format
 msgid "Import calendar from %1..."
 msgstr "%1에서 달력 가져오는 중..."
 
-#: importwizard.cpp:249
+#: importwizard.cpp:254
 #, kde-format
 msgid "Import calendar from %1: Done"
 msgstr "%1에서 달력 가져오는 중: 완료"
 
-#: importwizard.cpp:338 plugins/balsa/balsaimportdata.cpp:46
+#: importwizard.cpp:343 plugins/balsa/balsaimportdata.cpp:46
 #: plugins/claws-mail/clawsmailimportdata.cpp:47
 #: plugins/evolutionv3/evolutionv3importdata.cpp:66
 #: plugins/icedove/icedoveimportdata.cpp:79
@@ -159,7 +159,7 @@ msgstr "%1에서 달력 가져오는 중: 완료"
 msgid "Import in progress"
 msgstr "가져오는 중"
 
-#: importwizard.cpp:345 plugins/balsa/balsaimportdata.cpp:53
+#: importwizard.cpp:350 plugins/balsa/balsaimportdata.cpp:53
 #: plugins/claws-mail/clawsmailimportdata.cpp:55
 #: plugins/evolutionv3/evolutionv3importdata.cpp:74
 #: plugins/icedove/icedoveimportdata.cpp:87
