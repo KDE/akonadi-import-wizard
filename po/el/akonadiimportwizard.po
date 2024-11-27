@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-23 00:40+0000\n"
+"POT-Creation-Date: 2024-11-27 00:40+0000\n"
 "PO-Revision-Date: 2024-02-05 22:23+0200\n"
 "Last-Translator: George Stefanakis <george.stefanakis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -246,28 +246,28 @@ msgstr "Ρύθμιση μεταφοράς..."
 msgid "Transport set up."
 msgstr "Η μεταφορά ρυθμίστηκε."
 
-#: main.cpp:46 main.cpp:48
+#: main.cpp:32 main.cpp:34
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "Εργαλείο εισαγωγής PIM"
 
-#: main.cpp:50
+#: main.cpp:36
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "Πνευματικά δικαιώματα © 2012-%1 οι συγγραφείς του importwizard"
 
-#: main.cpp:52
+#: main.cpp:38
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:52
+#: main.cpp:38
 #, kde-format
 msgid "Maintainer"
 msgstr "Συντηρητής"
 
-#: main.cpp:59
+#: main.cpp:45
 #, kde-format
 msgctxt "@info:shell"
 msgid "Mode: %1"

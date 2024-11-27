@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-23 00:40+0000\n"
+"POT-Creation-Date: 2024-11-27 00:40+0000\n"
 "PO-Revision-Date: 2024-08-01 12:43+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -245,28 +245,28 @@ msgstr "Verzenden instellen..."
 msgid "Transport set up."
 msgstr "Verzenden ingesteld."
 
-#: main.cpp:46 main.cpp:48
+#: main.cpp:32 main.cpp:34
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "PIM-hulpprogramma voor importeren"
 
-#: main.cpp:50
+#: main.cpp:36
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "Copyright © 2012-%1 auteurs van ImportWizard"
 
-#: main.cpp:52
+#: main.cpp:38
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:52
+#: main.cpp:38
 #, kde-format
 msgid "Maintainer"
 msgstr "Onderhouder"
 
-#: main.cpp:59
+#: main.cpp:45
 #, kde-format
 msgctxt "@info:shell"
 msgid "Mode: %1"

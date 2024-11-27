@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: importwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-23 00:40+0000\n"
+"POT-Creation-Date: 2024-11-27 00:40+0000\n"
 "PO-Revision-Date: 2023-11-22 18:42+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -245,29 +245,29 @@ msgstr "Asetetaan postinvälitystä…"
 msgid "Transport set up."
 msgstr "Postinvälitys asetettu."
 
-#: main.cpp:46 main.cpp:48
+#: main.cpp:32 main.cpp:34
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "PIMin tuontityökalu"
 
-#: main.cpp:50
+#: main.cpp:36
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "Tekijänoikeudet © 2012–%1 ImportWizardin tekijät"
 
-#: main.cpp:52
+#: main.cpp:38
 #, fuzzy, kde-format
 #| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:52
+#: main.cpp:38
 #, kde-format
 msgid "Maintainer"
 msgstr "Ylläpitäjä"
 
-#: main.cpp:59
+#: main.cpp:45
 #, fuzzy, kde-format
 #| msgid "Mode: %1"
 msgctxt "@info:shell"

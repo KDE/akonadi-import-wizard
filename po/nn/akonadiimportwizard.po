@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_importing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-23 00:40+0000\n"
+"POT-Creation-Date: 2024-11-27 00:40+0000\n"
 "PO-Revision-Date: 2024-08-02 21:13+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -253,28 +253,28 @@ msgstr "Set opp overføring …"
 msgid "Transport set up."
 msgstr "Overføring ferdig sett opp."
 
-#: main.cpp:46 main.cpp:48
+#: main.cpp:32 main.cpp:34
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "Importverktøy for PIM-data"
 
-#: main.cpp:50
+#: main.cpp:36
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "© 2012–%1 ImportWizard-utviklarane"
 
-#: main.cpp:52
+#: main.cpp:38
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:52
+#: main.cpp:38
 #, kde-format
 msgid "Maintainer"
 msgstr "Vedlikehaldar"
 
-#: main.cpp:59
+#: main.cpp:45
 #, kde-format
 msgctxt "@info:shell"
 msgid "Mode: %1"

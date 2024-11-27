@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-23 00:40+0000\n"
+"POT-Creation-Date: 2024-11-27 00:40+0000\n"
 "PO-Revision-Date: 2020-01-02 11:47+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -243,30 +243,30 @@ msgstr "Kirjade saatmise viisi määramine..."
 msgid "Transport set up."
 msgstr "Kirjade saatmise viis on määratud."
 
-#: main.cpp:46 main.cpp:48
+#: main.cpp:32 main.cpp:34
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "PIM importimise tööriist"
 
-#: main.cpp:50
+#: main.cpp:36
 #, fuzzy, kde-format
 #| msgid "Copyright © 2012-2020 ImportWizard authors"
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "Autoriõigus © 2012-2020: ImportWizardi autorid"
 
-#: main.cpp:52
+#: main.cpp:38
 #, fuzzy, kde-format
 #| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:52
+#: main.cpp:38
 #, kde-format
 msgid "Maintainer"
 msgstr "Hooldaja"
 
-#: main.cpp:59
+#: main.cpp:45
 #, fuzzy, kde-format
 #| msgid "Mode: %1"
 msgctxt "@info:shell"
