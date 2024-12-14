@@ -1,0 +1,521 @@
+# Sanskrit translations for akonadi-import-wizard package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the akonadi-import-wizard package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: akonadi-import-wizard\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-11-27 00:40+0000\n"
+"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>2);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "भवतः नामानि"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "भवतः ईमेलपत्राणि"
+
+#: autodetect/widgets/selectprogramlistwidget.cpp:46
+#, kde-format
+msgid "No program found."
+msgstr "कोऽपि कार्यक्रमः न लब्धः।"
+
+#: importwizard.cpp:41
+#, kde-format
+msgctxt "@title:window"
+msgid "PIM Import Tool"
+msgstr "PIM आयातसाधनम्"
+
+#: importwizard.cpp:70
+#, kde-format
+msgid ""
+"Close KMail before importing data. Some plugins will modify KMail config "
+"file."
+msgstr ""
+"दत्तांशस्य आयातात् पूर्वं KMail बन्दं कुर्वन्तु । केचन प्लगिन्स् KMail config सञ्चिकां "
+"परिवर्तयिष्यन्ति ।"
+
+#: importwizard.cpp:130
+#, kde-format
+msgid "Step 1: Select Filter"
+msgstr "Step 1: Filter इति चिनोतु"
+
+#: importwizard.cpp:135
+#, kde-format
+msgid "Step 2: Importing..."
+msgstr "Step 2: आयातः..."
+
+#: importwizard.cpp:164
+#, kde-format
+msgid "Detect program"
+msgstr "कार्यक्रमस्य अन्वेषणं कुर्वन्तु"
+
+#: importwizard.cpp:169
+#, kde-format
+msgid "Select material to import"
+msgstr "आयातार्थं सामग्रीं चिनोतु"
+
+#: importwizard.cpp:173
+#, kde-format
+msgid "Import mail messages"
+msgstr "मेलसन्देशान् आयातयन्तु"
+
+#: importwizard.cpp:177
+#, kde-format
+msgid "Import mail filters"
+msgstr "मेल-छिद्रकान् आयातयन्तु"
+
+#. i18n: ectx: property (text), widget (QPushButton, importSettings)
+#: importwizard.cpp:181 ui/autodetect/importsettingpage.ui:47
+#, kde-format
+msgid "Import settings"
+msgstr "सेटिंग्स् आयातयन्तु"
+
+#: importwizard.cpp:185
+#, kde-format
+msgid "Import addressbooks"
+msgstr "पतापुस्तकानि आयातयन्तु"
+
+#: importwizard.cpp:189
+#, kde-format
+msgid "Import calendars"
+msgstr "पञ्चाङ्गानि आयातयन्तु"
+
+#: importwizard.cpp:193
+#, kde-format
+msgid "Finish"
+msgstr "समापन"
+
+#: importwizard.cpp:215
+#, kde-format
+msgid "Import addressbook from %1..."
+msgstr "%1 तः पतापुस्तिका आयातयन्तु..."
+
+#: importwizard.cpp:218
+#, kde-format
+msgid "Import addressbook from %1: Done"
+msgstr "%1 तः पतापुस्तिकाम् आयातयन्तु: कृतम्"
+
+#: importwizard.cpp:224
+#, kde-format
+msgid "Import filters from %1..."
+msgstr "%1 तः फ़िल्टर् आयातयन्तु..."
+
+#: importwizard.cpp:227
+#, kde-format
+msgid "Import filters from %1: Done"
+msgstr "%1 तः फ़िल्टर् आयातयन्तु: कृतम्"
+
+#: importwizard.cpp:233
+#, kde-format
+msgid "Import mails from %1..."
+msgstr "%1 तः मेलम् आयातयन्तु..."
+
+#: importwizard.cpp:236
+#, kde-format
+msgid "Import mails from %1: Done"
+msgstr "%1 तः मेलम् आयातयन्तु: कृतम्"
+
+#: importwizard.cpp:242
+#, kde-format
+msgid "Import settings from %1..."
+msgstr "%1 तः सेटिङ्ग्स् आयातयन्तु..."
+
+#: importwizard.cpp:245
+#, kde-format
+msgid "Import settings from %1: Done"
+msgstr "%1 तः सेटिङ्ग्स् आयातयन्तु: कृतम्"
+
+#: importwizard.cpp:251
+#, kde-format
+msgid "Import calendar from %1..."
+msgstr "%1 तः पञ्चाङ्गं आयातयन्तु..."
+
+#: importwizard.cpp:254
+#, kde-format
+msgid "Import calendar from %1: Done"
+msgstr "%1 तः पञ्चाङ्गम् आयातयन्तु: कृतम्"
+
+#: importwizard.cpp:343 plugins/balsa/balsaimportdata.cpp:46
+#: plugins/claws-mail/clawsmailimportdata.cpp:47
+#: plugins/evolutionv3/evolutionv3importdata.cpp:66
+#: plugins/icedove/icedoveimportdata.cpp:79
+#: plugins/seamonkey/seamonkeyimportdata.cpp:79
+#: plugins/sylpheed/sylpheedimportdata.cpp:60
+#: plugins/thunderbird/thunderbirdimportdata.cpp:81
+#, kde-format
+msgid "Import in progress"
+msgstr "आयातः प्रचलति"
+
+#: importwizard.cpp:350 plugins/balsa/balsaimportdata.cpp:53
+#: plugins/claws-mail/clawsmailimportdata.cpp:55
+#: plugins/evolutionv3/evolutionv3importdata.cpp:74
+#: plugins/icedove/icedoveimportdata.cpp:87
+#: plugins/seamonkey/seamonkeyimportdata.cpp:87
+#: plugins/sylpheed/sylpheedimportdata.cpp:68
+#: plugins/thunderbird/thunderbirdimportdata.cpp:89
+#, kde-format
+msgid "Import finished"
+msgstr "आयातः समाप्तः"
+
+#: libimportwizard/abstractaddressbook.cpp:28
+#, kde-format
+msgid "Creating new contact..."
+msgstr "नवीन सम्पर्कस्य निर्माणं..."
+
+#: libimportwizard/abstractaddressbook.cpp:34
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Address Book"
+msgstr "पतापुस्तकं चिनोतु"
+
+#: libimportwizard/abstractaddressbook.cpp:35
+#, kde-format
+msgid "Select the address book the new contact shall be saved in:"
+msgstr ""
+"नूतनः सम्पर्कः यस्मिन् पतापुस्तिकायां रक्षितः भविष्यति तस्मिन् पतापुस्तिकायां चयनं कुर्वन्तु:"
+
+#: libimportwizard/abstractaddressbook.cpp:40
+#, kde-format
+msgid "Address Book was not selected."
+msgstr "पतापुस्तिका न चयनिता आसीत्।"
+
+#: libimportwizard/abstractaddressbook.cpp:67
+#, kde-format
+msgid "Imported from \"%1\""
+msgstr "\"%1\" तः आयातितम् ।"
+
+#: libimportwizard/abstractaddressbook.cpp:86
+#, kde-format
+msgid "Error during contact creation: %1"
+msgstr "सम्पर्कनिर्माणकाले त्रुटिः: %1"
+
+#: libimportwizard/abstractaddressbook.cpp:89
+#, kde-format
+msgid "Contact creation complete"
+msgstr "सम्पर्क निर्माण सम्पन्न"
+
+#: libimportwizard/abstractimporter.cpp:65
+#, kde-format
+msgid "Importing of filters from \"%1\" was canceled."
+msgstr "\"%1\" तः फ़िल्टरस्य आयातः रद्दः अभवत् ।"
+
+#: libimportwizard/abstractimporter.cpp:67
+#, kde-format
+msgid "1 filter was imported from \"%2\""
+msgid_plural "%1 filters were imported from \"%2\""
+msgstr[0] "\"%2\" तः १ फ़िल्टर आयातितम् ।"
+msgstr[1] "%1 फ़िल्टर् \"%2\" तः आयाताः ।"
+
+#: libimportwizard/abstractimporter.cpp:71
+#, kde-format
+msgid "Filters file was not found"
+msgstr "Filters सञ्चिका न प्राप्ता"
+
+#: libimportwizard/abstractsettings.cpp:38
+#, kde-format
+msgid "Setting up identity..."
+msgstr "परिचयस्य स्थापना..."
+
+#: libimportwizard/abstractsettings.cpp:46
+#, kde-format
+msgid "Identity set up."
+msgstr "परिचयः स्थापितः।"
+
+#: libimportwizard/abstractsettings.cpp:63
+#, kde-format
+msgid "Setting up transport..."
+msgstr "परिवहनस्य स्थापना..."
+
+#: libimportwizard/abstractsettings.cpp:75
+#, kde-format
+msgid "Transport set up."
+msgstr "परिवहनं स्थापितं।"
+
+#: main.cpp:32 main.cpp:34
+#, kde-format
+msgid "PIM Import Tool"
+msgstr "PIM आयातसाधनम्"
+
+#: main.cpp:36
+#, kde-format
+msgid "Copyright © 2012-%1 ImportWizard authors"
+msgstr "प्रतिलिपिधर्मः © 2012-%1 ImportWizard लेखकाः"
+
+#: main.cpp:38
+#, kde-format
+msgctxt "@info:credit"
+msgid "Laurent Montel"
+msgstr "लॉरेण्ट् मोंटेल्"
+
+#: main.cpp:38
+#, kde-format
+msgid "Maintainer"
+msgstr "परिपालकः"
+
+#: main.cpp:45
+#, kde-format
+msgctxt "@info:shell"
+msgid "Mode: %1"
+msgstr "मोडः %1"
+
+#: manual/manualselectfilterpage.cpp:85
+#, kde-format
+msgid "<p><i>Written by %1.</i></p>"
+msgstr "<p><i>%1 इत्यनेन लिखितम् ।</i></p>"
+
+#: plugins/balsa/balsaaddressbook.cpp:36 plugins/balsa/balsaaddressbook.cpp:49
+#: plugins/sylpheed/sylpheedaddressbook.cpp:27
+#, kde-format
+msgid "No addressbook found"
+msgstr "न पतापुस्तिका प्राप्ता"
+
+#: plugins/balsa/balsaaddressbook.cpp:63
+#, kde-format
+msgid "Ldap created"
+msgstr "ल्दाप् सृष्टवान्"
+
+#: plugins/balsa/balsaaddressbook.cpp:93
+#, kde-format
+msgid "New addressbook created: %1"
+msgstr "नूतनं पतापुस्तिका निर्मितम्: %1"
+
+#: plugins/claws-mail/clawsmailimportdata.cpp:76
+#, kde-format
+msgid "Claws Mail settings not found."
+msgstr "Claws Mail सेटिंग्स् न प्राप्ताः।"
+
+#: plugins/evolutionv3/evolutionaddressbook.cpp:21
+#, kde-format
+msgid ""
+"Evolution address book will be exported as vCard. Import vCard in "
+"KAddressBook."
+msgstr ""
+"Evolution address book vCard इति निर्यातितं भविष्यति । KAddressBook मध्ये vCard "
+"आयातयन्तु।"
+
+#: plugins/evolutionv3/evolutionaddressbook.cpp:22
+#, kde-format
+msgctxt "@title:window"
+msgid "Export Evolution Address Book"
+msgstr "निर्यात विकास पता पुस्तिका"
+
+#: plugins/evolutionv3/evolutionaddressbook.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Select the directory where vCards will be stored."
+msgstr "यत्र vCards संगृहीतं भविष्यति तत् निर्देशिकां चिनोतु ।"
+
+#: plugins/evolutionv3/evolutionaddressbook.cpp:78
+#, kde-format
+msgid "Address book \"%1\" exported."
+msgstr "पतापुस्तिका \"%1\" निर्यातिता ।"
+
+#: plugins/evolutionv3/evolutionaddressbook.cpp:80
+#, kde-format
+msgid "Failed to export address book \"%1\"."
+msgstr "\"%1\" इति पतापुस्तकस्य निर्यातं कर्तुं असफलम् ।"
+
+#: plugins/evolutionv3/evolutionv3importdata.cpp:57
+#, kde-format
+msgid "Evolution settings not found."
+msgstr "विकाससेटिंग्स् न प्राप्ताः।"
+
+#: plugins/evolutionv3/evolutionv3importdata.cpp:100
+#, kde-format
+msgid "Evolution calendar not found."
+msgstr "विकासपञ्चाङ्गः न प्राप्तः।"
+
+#: plugins/icedove/icedoveimportdata.cpp:69
+#, kde-format
+msgid "Icedove settings not found."
+msgstr "Icedove सेटिंग्स् न प्राप्ताः।"
+
+#: plugins/seamonkey/seamonkeyimportdata.cpp:69
+#, kde-format
+msgid "SeaMonkey settings not found."
+msgstr "SeaMonkey सेटिंग्स् न प्राप्ताः।"
+
+#: plugins/sylpheed/sylpheedaddressbook.cpp:60
+#, kde-format
+msgid "No contact found in %1"
+msgstr "%1 इत्यत्र कोऽपि सम्पर्कः न प्राप्तः"
+
+#: plugins/sylpheed/sylpheedimportdata.cpp:51
+#, kde-format
+msgid "Sylpheed settings not found."
+msgstr "सिल्फीड् सेटिंग्स् न प्राप्ताः।"
+
+#: plugins/thunderbird/thunderbirdaddressbook.cpp:46
+#, kde-format
+msgid "Contacts file '%1' not found"
+msgstr "सम्पर्कसञ्चिका '%1' न प्राप्ता"
+
+#: plugins/thunderbird/thunderbirdimportdata.cpp:71
+#, kde-format
+msgid "Thunderbird settings not found."
+msgstr "Thunderbird सेटिंग्स् न प्राप्ताः।"
+
+#. i18n: ectx: property (text), widget (QPushButton, importAddressBook)
+#: ui/autodetect/importaddressbookpage.ui:47
+#, kde-format
+msgid "Import addressbook"
+msgstr "पतापुस्तिका आयात करें"
+
+#. i18n: ectx: property (text), widget (QPushButton, importCalendar)
+#: ui/autodetect/importcalendarpage.ui:47
+#, kde-format
+msgid "Import calendar"
+msgstr "पञ्चाङ्गम् आयातयन्तु"
+
+#. i18n: ectx: property (text), widget (QPushButton, importFilters)
+#: ui/autodetect/importfilterpage.ui:47
+#, kde-format
+msgid "Import Filters"
+msgstr "आयात फ़िल्टर"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/autodetect/importfinishpage.ui:29
+#, kde-format
+msgid "Summary:"
+msgstr "संक्षेपः:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/autodetect/importmailpage.ui:32 ui/manual/manualselectfilterpage.ui:136
+#, kde-format
+msgid "Please select the folder to import to:"
+msgstr "कृपया आयातार्थं पुटं चिनोतु:"
+
+#. i18n: ectx: property (text), widget (QPushButton, importMails)
+#: ui/autodetect/importmailpage.ui:60
+#, kde-format
+msgid "Import Mails"
+msgstr "मेल आयात करें"
+
+#. i18n: ectx: property (text), widget (QCheckBox, mails)
+#: ui/autodetect/selectcomponentpage.ui:49
+#, kde-format
+msgid "Mails"
+msgstr "मेल"
+
+#. i18n: ectx: property (text), widget (QCheckBox, filters)
+#: ui/autodetect/selectcomponentpage.ui:59
+#, kde-format
+msgid "Filters"
+msgstr "फ़िल्टर"
+
+#. i18n: ectx: property (text), widget (QCheckBox, settings)
+#: ui/autodetect/selectcomponentpage.ui:69
+#, kde-format
+msgid "Settings"
+msgstr "सेटिंग्स्"
+
+#. i18n: ectx: property (text), widget (QCheckBox, addressbooks)
+#: ui/autodetect/selectcomponentpage.ui:79
+#, kde-format
+msgid "Address Books"
+msgstr "पता पुस्तकें"
+
+#. i18n: ectx: property (text), widget (QCheckBox, calendars)
+#: ui/autodetect/selectcomponentpage.ui:89
+#, kde-format
+msgid "Calendars"
+msgstr "पञ्चाङ्गाः"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/autodetect/selectcomponentpage.ui:126
+#, kde-format
+msgid ""
+"This wizard will import mail messages, addressbook entries, filters and/or "
+"settings from other mail programs into KMail"
+msgstr ""
+"एषः विजार्डः अन्येभ्यः मेलप्रोग्रामेभ्यः मेलसन्देशान्, पतापुस्तिकाप्रविष्टयः, फ़िल्टर् तथा/वा "
+"सेटिंग्स् KMail मध्ये आयातयिष्यति"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/autodetect/selectcomponentpage.ui:136
+#, kde-format
+msgid "Or select types of material to import:"
+msgstr "अथवा आयातार्थं सामग्रीप्रकारान् चिनोतु : १."
+
+#. i18n: ectx: property (text), widget (QCheckBox, everything)
+#: ui/autodetect/selectcomponentpage.ui:143
+#, kde-format
+msgid "Import Everything"
+msgstr "सर्वं आयातयतु"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/autodetect/selectprogrampage.ui:53
+#, kde-format
+msgid "Please select the program from which you like to import:"
+msgstr "कृपया यस्मात् कार्यक्रमात् आयातं कर्तुम् इच्छति तत् चिनोतु:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/autodetect/selectprogrampage.ui:86
+#, kde-format
+msgid "No program found"
+msgstr "कोऽपि कार्यक्रमः न लब्धः"
+
+#. i18n: ectx: property (text), widget (QCheckBox, manualSelectionCheckBox)
+#: ui/autodetect/selectprogrampage.ui:112
+#, kde-format
+msgid "Manual Selection"
+msgstr "मैनुअल चयन"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: ui/manual/manualimportmailpage.ui:96
+#, kde-format
+msgid "Click 'Back' to import more emails"
+msgstr "अधिकानि ईमेल-पत्राणि आयातयितुं 'Back' नुदन्तु"
+
+#. i18n: ectx: property (text), widget (QLabel, TextLabel6)
+#: ui/manual/manualselectfilterpage.ui:103
+#, kde-format
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"family:'DejaVu Sans'; font-size:9pt; font-weight:600;\">Welcome to "
+"ImportWizard The Mail Import Tool</span><span style=\" font-family:'DejaVu "
+"Sans'; font-size:9pt;\"> <br /><br />This program will help you import your "
+"email from your previous email program.<br /><br />Please select the program "
+"you would like to import from. Next, select the folder you would like to "
+"import to, then click 'Next'.</span></p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\"><html><head><meta name=\"qrichtext\" content=\"1\" /"
+"><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\"><p style=\" margin-top:0px; margin-"
+"bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
+"indent:0px;\"> <span style=\" font-family:'DejaVu Sans'; font-size:9pt; font-"
+"weight:600;\">ImportWizard The Mail Import Tool इत्यत्र स्वागतम्</span> <span "
+"style=\" font-family:'DejaVu Sans'; font-size:9pt;\"><br /><br />एषः "
+"कार्यक्रमः भवतः पूर्वस्य ईमेलकार्यक्रमात् भवतः ईमेल आयातयितुं साहाय्यं करिष्यति ।<br /><br /"
+"> कृपया यस्मात् कार्यक्रमात् आयातं कर्तुम् इच्छति तत् चिनोतु । तदनन्तरं यस्मिन् पुटे आयातुम् "
+"इच्छति तत् चिनोतु, ततः &#39;Next&#39; नुदतु ।</span></p></body></html>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, remDupMsg)
+#: ui/manual/manualselectfilterpage.ui:146
+#, kde-format
+msgid "Remove &duplicate messages during import"
+msgstr "आयातस्य समये सन्देशान् &डुप्लिकेट् कृत्वा निष्कासयन्तु"
