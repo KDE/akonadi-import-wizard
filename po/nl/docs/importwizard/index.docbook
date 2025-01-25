@@ -2,7 +2,7 @@
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
   <!ENTITY i18n-importwizard "<application
->Assistent voor importeren</application
+>Importassistent</application
 >">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % Dutch "INCLUDE"
