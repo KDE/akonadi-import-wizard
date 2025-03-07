@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: importwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-27 00:40+0000\n"
+"POT-Creation-Date: 2025-03-07 00:42+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -45,112 +45,112 @@ msgid ""
 "file."
 msgstr ""
 
-#: importwizard.cpp:130
+#: importwizard.cpp:126
 #, kde-format
 msgid "Step 1: Select Filter"
 msgstr ""
 
-#: importwizard.cpp:135
+#: importwizard.cpp:131
 #, kde-format
 msgid "Step 2: Importing..."
 msgstr ""
 
-#: importwizard.cpp:164
+#: importwizard.cpp:160
 #, kde-format
 msgid "Detect program"
 msgstr ""
 
-#: importwizard.cpp:169
+#: importwizard.cpp:165
 #, kde-format
 msgid "Select material to import"
 msgstr ""
 
-#: importwizard.cpp:173
+#: importwizard.cpp:169
 #, kde-format
 msgid "Import mail messages"
 msgstr ""
 
-#: importwizard.cpp:177
+#: importwizard.cpp:173
 #, kde-format
 msgid "Import mail filters"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, importSettings)
-#: importwizard.cpp:181 ui/autodetect/importsettingpage.ui:47
+#: importwizard.cpp:177 ui/autodetect/importsettingpage.ui:47
 #, kde-format
 msgid "Import settings"
 msgstr "ئىمپورت قىلىش تەڭشەكلىرى"
 
-#: importwizard.cpp:185
+#: importwizard.cpp:181
 #, kde-format
 msgid "Import addressbooks"
 msgstr ""
 
-#: importwizard.cpp:189
+#: importwizard.cpp:185
 #, kde-format
 msgid "Import calendars"
 msgstr ""
 
-#: importwizard.cpp:193
+#: importwizard.cpp:189
 #, kde-format
 msgid "Finish"
 msgstr "تامام"
 
-#: importwizard.cpp:215
+#: importwizard.cpp:211
 #, kde-format
 msgid "Import addressbook from %1..."
 msgstr ""
 
-#: importwizard.cpp:218
+#: importwizard.cpp:214
 #, fuzzy, kde-format
 #| msgid "Import in progress"
 msgid "Import addressbook from %1: Done"
 msgstr "ئىمپورت قىلىۋاتىدۇ"
 
-#: importwizard.cpp:224
+#: importwizard.cpp:220
 #, kde-format
 msgid "Import filters from %1..."
 msgstr ""
 
-#: importwizard.cpp:227
+#: importwizard.cpp:223
 #, fuzzy, kde-format
 #| msgid "Filters"
 msgid "Import filters from %1: Done"
 msgstr "سۈزگۈچ"
 
-#: importwizard.cpp:233
+#: importwizard.cpp:229
 #, kde-format
 msgid "Import mails from %1..."
 msgstr ""
 
-#: importwizard.cpp:236
+#: importwizard.cpp:232
 #, kde-format
 msgid "Import mails from %1: Done"
 msgstr ""
 
-#: importwizard.cpp:242
+#: importwizard.cpp:238
 #, kde-format
 msgid "Import settings from %1..."
 msgstr ""
 
-#: importwizard.cpp:245
+#: importwizard.cpp:241
 #, fuzzy, kde-format
 #| msgid "Import settings"
 msgid "Import settings from %1: Done"
 msgstr "ئىمپورت قىلىش تەڭشەكلىرى"
 
-#: importwizard.cpp:251
+#: importwizard.cpp:247
 #, kde-format
 msgid "Import calendar from %1..."
 msgstr ""
 
-#: importwizard.cpp:254
+#: importwizard.cpp:250
 #, fuzzy, kde-format
 #| msgid "Import finished"
 msgid "Import calendar from %1: Done"
 msgstr "ئىمپورت قىلىش تاماملاندى"
 
-#: importwizard.cpp:343 plugins/balsa/balsaimportdata.cpp:46
+#: importwizard.cpp:339 plugins/balsa/balsaimportdata.cpp:46
 #: plugins/claws-mail/clawsmailimportdata.cpp:47
 #: plugins/evolutionv3/evolutionv3importdata.cpp:66
 #: plugins/icedove/icedoveimportdata.cpp:79
@@ -161,7 +161,7 @@ msgstr "ئىمپورت قىلىش تاماملاندى"
 msgid "Import in progress"
 msgstr "ئىمپورت قىلىۋاتىدۇ"
 
-#: importwizard.cpp:350 plugins/balsa/balsaimportdata.cpp:53
+#: importwizard.cpp:346 plugins/balsa/balsaimportdata.cpp:53
 #: plugins/claws-mail/clawsmailimportdata.cpp:55
 #: plugins/evolutionv3/evolutionv3importdata.cpp:74
 #: plugins/icedove/icedoveimportdata.cpp:87
