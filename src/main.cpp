@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
     aboutData.addAuthor(i18nc("@info:credit", "Laurent Montel"), i18n("Maintainer"), QStringLiteral("montel@kde.org"));
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("kontact-import-wizard")));
     aboutData.setProductName(QByteArrayLiteral("kmail2/import wizard"));
+    aboutData.setDesktopFileName(QStringLiteral("org.kde.akonadiimportwizard"));
     KAboutData::setApplicationData(aboutData);
     KCrash::initialize();
 
