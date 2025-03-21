@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-07 00:42+0000\n"
+"POT-Creation-Date: 2025-03-21 02:39+0000\n"
 "PO-Revision-Date: 2013-09-25 05:32+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -275,7 +275,7 @@ msgstr "Laurent Montel"
 msgid "Maintainer"
 msgstr "Желілдірушісі"
 
-#: main.cpp:45
+#: main.cpp:46
 #, kde-format
 msgctxt "@info:shell"
 msgid "Mode: %1"

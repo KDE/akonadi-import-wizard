@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: importwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-07 00:42+0000\n"
+"POT-Creation-Date: 2025-03-21 02:39+0000\n"
 "PO-Revision-Date: 2024-08-01 21:56+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -264,7 +264,7 @@ msgstr "Laurent Montel"
 msgid "Maintainer"
 msgstr "Responsabile"
 
-#: main.cpp:45
+#: main.cpp:46
 #, kde-format
 msgctxt "@info:shell"
 msgid "Mode: %1"

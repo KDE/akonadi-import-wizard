@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_importing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-07 00:42+0000\n"
+"POT-Creation-Date: 2025-03-21 02:39+0000\n"
 "PO-Revision-Date: 2024-08-02 21:13+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -274,7 +274,7 @@ msgstr "Laurent Montel"
 msgid "Maintainer"
 msgstr "Vedlikehaldar"
 
-#: main.cpp:45
+#: main.cpp:46
 #, kde-format
 msgctxt "@info:shell"
 msgid "Mode: %1"

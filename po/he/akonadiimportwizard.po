@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-import-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-07 00:42+0000\n"
+"POT-Creation-Date: 2025-03-21 02:39+0000\n"
 "PO-Revision-Date: 2024-08-01 08:29+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -267,7 +267,7 @@ msgstr "לורנט מונטל"
 msgid "Maintainer"
 msgstr "מתחזק"
 
-#: main.cpp:45
+#: main.cpp:46
 #, kde-format
 msgctxt "@info:shell"
 msgid "Mode: %1"
