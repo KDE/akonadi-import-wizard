@@ -827,7 +827,7 @@ void ThunderbirdSettings::readTransport()
     }
 }
 
-QString convertThunderbirdPath(const QString &path)
+static QString convertThunderbirdPath(const QString &path)
 {
     QString newPath;
     QUrl url(path);
