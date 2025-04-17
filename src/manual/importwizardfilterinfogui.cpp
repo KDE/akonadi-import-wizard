@@ -9,8 +9,7 @@
 #include <QApplication>
 
 ImportWizardFilterInfoGui::ImportWizardFilterInfoGui(ManualImportMailPage *dlg, QWidget *parent)
-    : MailImporter::FilterInfoGui()
-    , m_parent(parent)
+    : m_parent(parent)
     , mManualImportMailPage(dlg)
 {
 }

@@ -15,8 +15,7 @@
 #include <QListWidgetItem>
 
 ImportFilterInfoGui::ImportFilterInfoGui(ImportMailPage *parent)
-    : MailImporter::FilterInfoGui()
-    , m_parent(parent)
+    : m_parent(parent)
 {
 }
 
