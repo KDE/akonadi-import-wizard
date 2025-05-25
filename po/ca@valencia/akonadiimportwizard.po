@@ -483,7 +483,7 @@ msgstr "Selecció manual"
 #: ui/manual/manualimportmailpage.ui:96
 #, kde-format
 msgid "Click 'Back' to import more emails"
-msgstr "Cliqueu «Arrere» per a importar més correus"
+msgstr "Cliqueu damunt «Arrere» per a importar més correus"
 
 #. i18n: ectx: property (text), widget (QLabel, TextLabel6)
 #: ui/manual/manualselectfilterpage.ui:103
@@ -520,7 +520,7 @@ msgstr ""
 "ajudarà a importar el vostre correu electrònic des del programa de correu "
 "electrònic anterior.<br /><br />Seleccioneu el programa des del qual voleu "
 "importar. Després, seleccioneu la carpeta cap a la qual voleu importar, i "
-"cliqueu «Següent».</span></p></body></html>"
+"cliqueu damunt «Següent».</span></p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, remDupMsg)
 #: ui/manual/manualselectfilterpage.ui:146
