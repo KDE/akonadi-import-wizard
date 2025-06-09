@@ -122,7 +122,7 @@ protected: // Data
     int mNextAddValueId;
     int mDefaultScope;
 
-    // Indicates intity is being parsed
+    // Indicates entity is being parsed
     enum {
         NPColumns,
         NPValues,

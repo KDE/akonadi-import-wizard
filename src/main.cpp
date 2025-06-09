@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     KStyleManager::initStyle();
 
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("akonadiimportwizard"));
-    // FIXME: "wizards" are "assistents" in new KDE slang
+    // FIXME: "wizards" are "assistants" in new KDE slang
 
     KAboutData aboutData(QStringLiteral("importwizard"),
                          i18n("PIM Import Tool"),

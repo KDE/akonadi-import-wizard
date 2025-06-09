@@ -3,7 +3,7 @@
 "dtd/kdedbx45.dtd" [
   <!ENTITY i18n-importwizard "<application>Import Wizard</application>">
   <!ENTITY % addindex "IGNORE">
-  <!ENTITY % English "INCLUDE"> 
+  <!ENTITY % English "INCLUDE">
 ]>
 
 <article id="importwizard" lang="&language;">
@@ -101,21 +101,21 @@ you will see one or more of the following screens:</para>
 <itemizedlist>
 
 <listitem><para>To import mail messages, you need to
-select the folder you want your email messages to import into. 
+select the folder you want your email messages to import into.
 Once selected, click the <guibutton>Import Mails</guibutton> button.
-Once the progress bar reaches 100%, click the <guibutton>Next</guibutton> button, 
-or the <guibutton>Finish</guibutton> button, if this was your last material 
+Once the progress bar reaches 100%, click the <guibutton>Next</guibutton> button,
+or the <guibutton>Finish</guibutton> button, if this was your last material
 selection.</para></listitem>
 
 <listitem><para>To import mail filters, click the <guibutton>Import
-Filters</guibutton> button and it will import any filters it found, once finished click 
-the <guibutton>Next</guibutton> button, or the <guibutton>Finish</guibutton> button, 
+Filters</guibutton> button and it will import any filters it found, once finished click
+the <guibutton>Next</guibutton> button, or the <guibutton>Finish</guibutton> button,
 if this was your last material selection.</para></listitem>
 
 <listitem><para>To import settings, click the <guibutton>Import
-Settings</guibutton> button. The wizard will ask you some questions &eg; which folder 
-to use for account folders that do not exist. The wizard will also create your identity. 
-Once complete, click the <guibutton>Next</guibutton> button, or the <guibutton>Finish</guibutton> 
+Settings</guibutton> button. The wizard will ask you some questions &eg; which folder
+to use for account folders that do not exist. The wizard will also create your identity.
+Once complete, click the <guibutton>Next</guibutton> button, or the <guibutton>Finish</guibutton>
 button, if this was your last material selection.</para></listitem>
 
 <listitem><para>To import address books or calendars, click the <guibutton>Import
@@ -124,8 +124,8 @@ will import all address books or calendars it finds.
 Once complete, click the <guibutton>Next</guibutton> button.</para></listitem>
 </itemizedlist>
 
-<para>Click the <guibutton>Finish</guibutton> button to complete and exit the wizard. 
-If at any time you wish to end the wizard, you can click the <guibutton>Cancel</guibutton> 
+<para>Click the <guibutton>Finish</guibutton> button to complete and exit the wizard.
+If at any time you wish to end the wizard, you can click the <guibutton>Cancel</guibutton>
 button.</para>
 
 </sect2>

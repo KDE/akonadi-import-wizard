@@ -784,7 +784,7 @@ void ThunderbirdSettings::readTransport()
         case 3: // Unencrypted password
             mt->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::CLEAR); //???
             break;
-        case 4: // crypted password
+        case 4: // encrypted password
             mt->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::LOGIN); //???
             break;
         case 5: // GSSAPI

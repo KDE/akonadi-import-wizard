@@ -6,4 +6,3 @@ add_subdirectory(claws-mail)
 add_subdirectory(thunderbird)
 add_subdirectory(icedove)
 add_subdirectory(seamonkey)
-

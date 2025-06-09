@@ -221,7 +221,7 @@ void ThunderBirdAddressBook::readAddressBook(const QString &filename)
                                 } else if (column == QLatin1StringView("Notes")) {
                                     contact.setNote(value);
                                 } else {
-                                    qCDebug(THUNDERBIRDPLUGIN_LOG) << " Columnn not implemented " << column;
+                                    qCDebug(THUNDERBIRDPLUGIN_LOG) << " Column not implemented " << column;
                                 }
                                 // qCDebug(THUNDERBIRDPLUGIN_LOG)<<" value :"<<value<<" column"<<column;
                             }
