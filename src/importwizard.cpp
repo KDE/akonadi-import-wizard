@@ -4,6 +4,8 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "importwizard.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "autodetect/importaddressbookpage.h"
 #include "autodetect/importcalendarpage.h"
 #include "autodetect/importfilterpage.h"
@@ -73,7 +75,7 @@ ImportWizard::ImportWizard(WizardMode mode, QWidget *parent)
     helpMenu->setShowWhatsThis(true);
     // Initialize menu
     QMenu *menu = helpMenu->menu();
-    helpMenu->action(KHelpMenu::menuAboutApp)->setIcon(QIcon::fromTheme(QStringLiteral("kmail")));
+    helpMenu->action(KHelpMenu::menuAboutApp)->setIcon(QIcon::fromTheme(u"kmail"_s));
     button(QDialogButtonBox::Help)->setMenu(menu);
     updatePagesFromMode();
     readConfig();
@@ -86,7 +88,7 @@ ImportWizard::~ImportWizard()
 
 void ImportWizard::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), QStringLiteral("FolderSelectionDialog"));
+    KConfigGroup group(KSharedConfig::openConfig(), u"FolderSelectionDialog"_s);
     if (group.hasKey("LastSelectedFolder")) {
         mSelfilterpage->widget()->mCollectionRequestor->setCollection(CommonKernel->collectionFromId(group.readEntry("LastSelectedFolder", -1)));
     }
@@ -94,7 +96,7 @@ void ImportWizard::readConfig()
 
 void ImportWizard::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), QStringLiteral("FolderSelectionDialog"));
+    KConfigGroup group(KSharedConfig::openConfig(), u"FolderSelectionDialog"_s);
     group.writeEntry("LastSelectedFolder", mSelfilterpage->widget()->mCollectionRequestor->collection().id());
     group.sync();
 }

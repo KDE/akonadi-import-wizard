@@ -5,6 +5,7 @@
 */
 
 #include "seamonkeyimportdata.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "../thunderbird/thunderbirdaddressbook.h"
 #include "../thunderbird/thunderbirdsettings.h"
@@ -55,7 +56,7 @@ bool SeaMonkeyImportData::importAddressBook()
 
 QString SeaMonkeyImportData::name() const
 {
-    return QStringLiteral("SeaMonkey");
+    return u"SeaMonkey"_s;
 }
 
 bool SeaMonkeyImportData::importSettings()
@@ -99,12 +100,12 @@ bool SeaMonkeyImportData::importFilters()
     }
 
     for (const QString &mailPath : subDir) {
-        const QString subMailPath(path + QLatin1Char('/') + mailPath);
+        const QString subMailPath(path + u'/' + mailPath);
         QDir dirMail(subMailPath);
         const QStringList subDirMail = dirMail.entryList(QDir::AllDirs | QDir::NoDotAndDotDot, QDir::Name);
         bool foundFilterFile = false;
         for (const QString &file : subDirMail) {
-            const QString filterFile(subMailPath + QLatin1Char('/') + file + QLatin1StringView("/msgFilterRules.dat"));
+            const QString filterFile(subMailPath + u'/' + file + QLatin1StringView("/msgFilterRules.dat"));
             if (QFileInfo::exists(filterFile)) {
                 foundFilterFile = true;
                 const bool added = addFilters(filterFile, MailCommon::FilterImporterExporter::SeaMonkeyFilter);

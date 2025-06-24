@@ -5,6 +5,8 @@
 */
 
 #include "clawsmailimportdata.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "clawsmailaddressbook.h"
 #include "clawsmailsettings.h"
 #include <MailCommon/FilterImporterClawsMail>
@@ -37,7 +39,7 @@ bool ClawsMailImportData::foundMailer() const
 
 QString ClawsMailImportData::name() const
 {
-    return QStringLiteral("Claws Mails");
+    return u"Claws Mails"_s;
 }
 
 bool ClawsMailImportData::importMails()

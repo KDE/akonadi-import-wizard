@@ -5,6 +5,8 @@
 */
 
 #include "importwizardutil.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "importwizardsavepasswordjob.h"
 #include "libimportwizard_debug.h"
 #include <Akonadi/Tag>
@@ -15,54 +17,54 @@
 
 void ImportWizardUtil::mergeLdap(const ldapStruct &ldap)
 {
-    KSharedConfigPtr ldapConfig = KSharedConfig::openConfig(QStringLiteral("kabldaprc"));
+    KSharedConfigPtr ldapConfig = KSharedConfig::openConfig(u"kabldaprc"_s);
     int numberOfLdapSelected = 0;
     KConfigGroup grp;
-    if (ldapConfig->hasGroup(QStringLiteral("LDAP"))) {
-        grp = ldapConfig->group(QStringLiteral("LDAP"));
-        numberOfLdapSelected = grp.readEntry(QStringLiteral("NumSelectedHosts"), 0);
-        grp.writeEntry(QStringLiteral("NumSelectedHosts"), (numberOfLdapSelected + 1));
+    if (ldapConfig->hasGroup(u"LDAP"_s)) {
+        grp = ldapConfig->group(u"LDAP"_s);
+        numberOfLdapSelected = grp.readEntry(u"NumSelectedHosts"_s, 0);
+        grp.writeEntry(u"NumSelectedHosts"_s, (numberOfLdapSelected + 1));
     } else {
-        grp = ldapConfig->group(QStringLiteral("LDAP"));
-        grp.writeEntry(QStringLiteral("NumSelectedHosts"), 1);
+        grp = ldapConfig->group(u"LDAP"_s);
+        grp.writeEntry(u"NumSelectedHosts"_s, 1);
 
-        KConfigGroup ldapSeach = ldapConfig->group(QStringLiteral("LDAPSearch"));
-        ldapSeach.writeEntry(QStringLiteral("SearchType"), 0);
+        KConfigGroup ldapSeach = ldapConfig->group(u"LDAPSearch"_s);
+        ldapSeach.writeEntry(u"SearchType"_s, 0);
     }
     const int port = ldap.port;
     if (port != -1) {
-        grp.writeEntry(QStringLiteral("SelectedPort%1").arg(numberOfLdapSelected), port);
+        grp.writeEntry(u"SelectedPort%1"_s.arg(numberOfLdapSelected), port);
     }
-    grp.writeEntry(QStringLiteral("SelectedHost%1").arg(numberOfLdapSelected), ldap.ldapUrl.host());
+    grp.writeEntry(u"SelectedHost%1"_s.arg(numberOfLdapSelected), ldap.ldapUrl.host());
     if (ldap.useSSL) {
-        grp.writeEntry(QStringLiteral("SelectedSecurity%1").arg(numberOfLdapSelected), QStringLiteral("SSL"));
+        grp.writeEntry(u"SelectedSecurity%1"_s.arg(numberOfLdapSelected), u"SSL"_s);
     } else if (ldap.useTLS) {
-        grp.writeEntry(QStringLiteral("SelectedSecurity%1").arg(numberOfLdapSelected), QStringLiteral("TLS"));
+        grp.writeEntry(u"SelectedSecurity%1"_s.arg(numberOfLdapSelected), u"TLS"_s);
     } else {
-        grp.writeEntry(QStringLiteral("SelectedSecurity%1").arg(numberOfLdapSelected), QStringLiteral("None"));
+        grp.writeEntry(u"SelectedSecurity%1"_s.arg(numberOfLdapSelected), u"None"_s);
     }
 
     if (ldap.saslMech == QLatin1StringView("GSSAPI")) {
-        grp.writeEntry(QStringLiteral("SelectedMech%1").arg(numberOfLdapSelected), QStringLiteral("GSSAPI"));
-        grp.writeEntry(QStringLiteral("SelectedAuth%1").arg(numberOfLdapSelected), QStringLiteral("SASL"));
+        grp.writeEntry(u"SelectedMech%1"_s.arg(numberOfLdapSelected), u"GSSAPI"_s);
+        grp.writeEntry(u"SelectedAuth%1"_s.arg(numberOfLdapSelected), u"SASL"_s);
     } else if (ldap.saslMech.isEmpty()) {
-        grp.writeEntry(QStringLiteral("SelectedMech%1").arg(numberOfLdapSelected), QStringLiteral("PLAIN"));
-        grp.writeEntry(QStringLiteral("SelectedAuth%1").arg(numberOfLdapSelected), QStringLiteral("Simple"));
+        grp.writeEntry(u"SelectedMech%1"_s.arg(numberOfLdapSelected), u"PLAIN"_s);
+        grp.writeEntry(u"SelectedAuth%1"_s.arg(numberOfLdapSelected), u"Simple"_s);
     } else {
         qCDebug(LIBIMPORTWIZARD_LOG) << " Mech SASL undefined" << ldap.saslMech;
     }
-    grp.writeEntry(QStringLiteral("SelectedVersion%1").arg(numberOfLdapSelected), QString::number(3));
-    grp.writeEntry(QStringLiteral("SelectedBind%1").arg(numberOfLdapSelected), ldap.dn);
+    grp.writeEntry(u"SelectedVersion%1"_s.arg(numberOfLdapSelected), QString::number(3));
+    grp.writeEntry(u"SelectedBind%1"_s.arg(numberOfLdapSelected), ldap.dn);
     // TODO: Verify selectedbase
-    grp.writeEntry(QStringLiteral("SelectedBase%1").arg(numberOfLdapSelected), ldap.ldapUrl.path());
+    grp.writeEntry(u"SelectedBase%1"_s.arg(numberOfLdapSelected), ldap.ldapUrl.path());
     if (ldap.timeout != -1) {
-        grp.writeEntry(QStringLiteral("SelectedTimeLimit%1").arg(numberOfLdapSelected), ldap.timeout);
+        grp.writeEntry(u"SelectedTimeLimit%1"_s.arg(numberOfLdapSelected), ldap.timeout);
     }
     if (ldap.limit != -1) {
-        grp.writeEntry(QStringLiteral("SelectedSizeLimit%1").arg(numberOfLdapSelected), ldap.limit);
+        grp.writeEntry(u"SelectedSizeLimit%1"_s.arg(numberOfLdapSelected), ldap.limit);
     }
     if (!ldap.password.isEmpty()) {
-        storePassword(QStringLiteral("SelectedPwdBind%1").arg(numberOfLdapSelected), ImportWizardUtil::Ldap, ldap.password);
+        storePassword(u"SelectedPwdBind%1"_s.arg(numberOfLdapSelected), ImportWizardUtil::Ldap, ldap.password);
     }
     grp.sync();
 }
@@ -83,17 +85,17 @@ void ImportWizardUtil::storePassword(const QString &name, ImportWizardUtil::Reso
     auto job = new ImportWizardSavePasswordJob;
     switch (type) {
     case Imap:
-        job->setName(QStringLiteral("imap"));
+        job->setName(u"imap"_s);
         job->setPassword(password);
         job->setKey(name + QLatin1StringView("rc"));
         break;
     case Pop3:
-        job->setName(QStringLiteral("pop3"));
+        job->setName(u"pop3"_s);
         job->setPassword(password);
         job->setKey(name);
         break;
     case Ldap:
-        job->setName(QStringLiteral("ldapclient"));
+        job->setName(u"ldapclient"_s);
         job->setPassword(password);
         job->setKey(name);
     }

@@ -5,6 +5,8 @@
 */
 
 #include "evolutionv3importdata.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "evolutionaddressbook.h"
 #include "evolutioncalendar.h"
 #include "evolutionsettings.h"
@@ -39,7 +41,7 @@ bool Evolutionv3ImportData::foundMailer() const
 
 QString Evolutionv3ImportData::name() const
 {
-    return QStringLiteral("Evolution 3.x");
+    return u"Evolution 3.x"_s;
 }
 
 bool Evolutionv3ImportData::importSettings()

@@ -5,6 +5,8 @@
 */
 
 #include "thunderbirdsettings.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <MailCommon/MailUtil>
 #include <MailTransport/TransportManager>
 
@@ -50,17 +52,17 @@ void ThunderbirdSettings::importSettings()
                 insertIntoMap(line);
             }
         } else {
-            if (!line.startsWith(QLatin1Char('#')) || line.isEmpty() || line.startsWith(QLatin1StringView("/*")) || line.startsWith(QLatin1StringView(" */"))
+            if (!line.startsWith(u'#') || line.isEmpty() || line.startsWith(QLatin1StringView("/*")) || line.startsWith(QLatin1StringView(" */"))
                 || line.startsWith(QLatin1StringView(" *"))) {
                 qCDebug(THUNDERBIRDPLUGIN_LOG) << " unstored line :" << line;
             }
         }
     }
-    const QString mailAccountPreference = mHashConfig.value(QStringLiteral("mail.accountmanager.accounts")).toString();
+    const QString mailAccountPreference = mHashConfig.value(u"mail.accountmanager.accounts"_s).toString();
     if (mailAccountPreference.isEmpty()) {
         return;
     }
-    mAccountList = mailAccountPreference.split(QLatin1Char(','));
+    mAccountList = mailAccountPreference.split(u',');
     readTransport();
     readAccount();
     readGlobalSettings();
@@ -72,104 +74,104 @@ void ThunderbirdSettings::importSettings()
 void ThunderbirdSettings::readExtensionsSettings()
 {
     // AutoResizeImage
-    const QString filterPatternEnabledStr = QStringLiteral("extensions.AutoResizeImage.filterPatterns");
+    const QString filterPatternEnabledStr = u"extensions.AutoResizeImage.filterPatterns"_s;
     if (mHashConfig.contains(filterPatternEnabledStr)) {
         const int filterPatternType = mHashConfig.value(filterPatternEnabledStr).toInt();
-        addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("filter-source-type"), filterPatternType);
+        addKmailConfig(u"AutoResizeImage"_s, u"filter-source-type"_s, filterPatternType);
     }
-    const QString filterPatternListStr = QStringLiteral("extensions.AutoResizeImage.filteringPatternsList");
+    const QString filterPatternListStr = u"extensions.AutoResizeImage.filteringPatternsList"_s;
     if (mHashConfig.contains(filterPatternListStr)) {
         const QString filterPatternList = mHashConfig.value(filterPatternListStr).toString();
         // TODO decode it.
-        addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("filter-source-pattern"), filterPatternList);
+        addKmailConfig(u"AutoResizeImage"_s, u"filter-source-pattern"_s, filterPatternList);
     }
 
-    const QString enlargeImagesStr = QStringLiteral("extensions.AutoResizeImage.enlargeImages");
+    const QString enlargeImagesStr = u"extensions.AutoResizeImage.enlargeImages"_s;
     if (mHashConfig.contains(enlargeImagesStr)) {
         const bool enlargeImages = mHashConfig.value(enlargeImagesStr).toBool();
-        addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("enlarge-image-to-minimum"), enlargeImages);
+        addKmailConfig(u"AutoResizeImage"_s, u"enlarge-image-to-minimum"_s, enlargeImages);
     }
 
-    const QString maxResolutionXStr = QStringLiteral("extensions.AutoResizeImage.maxResolutionX");
+    const QString maxResolutionXStr = u"extensions.AutoResizeImage.maxResolutionX"_s;
     if (mHashConfig.contains(maxResolutionXStr)) {
         const int val = mHashConfig.value(maxResolutionXStr).toInt();
-        int adaptedValue = adaptAutoResizeResolution(val, QStringLiteral("extensions.AutoResizeImage.maxResolutionXList"));
-        addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("maximum-width"), adaptedValue);
+        int adaptedValue = adaptAutoResizeResolution(val, u"extensions.AutoResizeImage.maxResolutionXList"_s);
+        addKmailConfig(u"AutoResizeImage"_s, u"maximum-width"_s, adaptedValue);
     }
-    const QString maxResolutionYStr = QStringLiteral("extensions.AutoResizeImage.maxResolutionY");
+    const QString maxResolutionYStr = u"extensions.AutoResizeImage.maxResolutionY"_s;
     if (mHashConfig.contains(maxResolutionYStr)) {
         const int val = mHashConfig.value(maxResolutionYStr).toInt();
-        int adaptedValue = adaptAutoResizeResolution(val, QStringLiteral("extensions.AutoResizeImage.maxResolutionYList"));
-        addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("maximum-height"), adaptedValue);
+        int adaptedValue = adaptAutoResizeResolution(val, u"extensions.AutoResizeImage.maxResolutionYList"_s);
+        addKmailConfig(u"AutoResizeImage"_s, u"maximum-height"_s, adaptedValue);
     }
-    const QString minResolutionXStr = QStringLiteral("extensions.AutoResizeImage.minResolutionX");
+    const QString minResolutionXStr = u"extensions.AutoResizeImage.minResolutionX"_s;
     if (mHashConfig.contains(minResolutionXStr)) {
         const int val = mHashConfig.value(minResolutionXStr).toInt();
-        int adaptedValue = adaptAutoResizeResolution(val, QStringLiteral("extensions.AutoResizeImage.minResolutionXList"));
-        addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("minimum-width"), adaptedValue);
+        int adaptedValue = adaptAutoResizeResolution(val, u"extensions.AutoResizeImage.minResolutionXList"_s);
+        addKmailConfig(u"AutoResizeImage"_s, u"minimum-width"_s, adaptedValue);
     }
-    const QString minResolutionYStr = QStringLiteral("extensions.AutoResizeImage.minResolutionY");
+    const QString minResolutionYStr = u"extensions.AutoResizeImage.minResolutionY"_s;
     if (mHashConfig.contains(minResolutionYStr)) {
         const int val = mHashConfig.value(minResolutionYStr).toInt();
-        int adaptedValue = adaptAutoResizeResolution(val, QStringLiteral("extensions.AutoResizeImage.minResolutionYList"));
-        addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("minimum-height"), adaptedValue);
+        int adaptedValue = adaptAutoResizeResolution(val, u"extensions.AutoResizeImage.minResolutionYList"_s);
+        addKmailConfig(u"AutoResizeImage"_s, u"minimum-height"_s, adaptedValue);
     }
 
     // Default is true.
-    const QString reduceImageStr(QStringLiteral("extensions.AutoResizeImage.reduceImages"));
+    const QString reduceImageStr(u"extensions.AutoResizeImage.reduceImages"_s);
     if (mHashConfig.contains(reduceImageStr)) {
         const bool reduce = mHashConfig.value(reduceImageStr).toBool();
-        addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("reduce-image-to-maximum"), reduce);
+        addKmailConfig(u"AutoResizeImage"_s, u"reduce-image-to-maximum"_s, reduce);
     } else {
-        addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("reduce-image-to-maximum"), false);
+        addKmailConfig(u"AutoResizeImage"_s, u"reduce-image-to-maximum"_s, false);
     }
 
-    const QString filterMinimumStr(QStringLiteral("extensions.AutoResizeImage.filterMinimumSize"));
+    const QString filterMinimumStr(u"extensions.AutoResizeImage.filterMinimumSize"_s);
     if (mHashConfig.contains(filterMinimumStr)) {
         const bool filterMinimum = mHashConfig.value(filterMinimumStr).toBool();
-        addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("skip-image-lower-size-enabled"), filterMinimum);
+        addKmailConfig(u"AutoResizeImage"_s, u"skip-image-lower-size-enabled"_s, filterMinimum);
     }
-    const QString skipMinimumSizeStr(QStringLiteral("extensions.AutoResizeImage.minimumSize"));
+    const QString skipMinimumSizeStr(u"extensions.AutoResizeImage.minimumSize"_s);
     if (mHashConfig.contains(skipMinimumSizeStr)) {
         const int skipMinimumSize = mHashConfig.value(skipMinimumSizeStr).toInt();
-        addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("skip-image-lower-size"), skipMinimumSize);
+        addKmailConfig(u"AutoResizeImage"_s, u"skip-image-lower-size"_s, skipMinimumSize);
     }
-    const QString confirmBeforeResizingStr(QStringLiteral("extensions.AutoResizeImage.confirmResizing"));
+    const QString confirmBeforeResizingStr(u"extensions.AutoResizeImage.confirmResizing"_s);
     if (mHashConfig.contains(confirmBeforeResizingStr)) {
         const bool confirmBeforeResizing = mHashConfig.value(confirmBeforeResizingStr).toBool();
-        addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("ask-before-resizing"), confirmBeforeResizing);
+        addKmailConfig(u"AutoResizeImage"_s, u"ask-before-resizing"_s, confirmBeforeResizing);
     }
     // extensions.AutoResizeImage.convertImages : not implemented in kmail
 
-    const QString conversionFormatStr(QStringLiteral("extensions.AutoResizeImage.conversionFormat"));
+    const QString conversionFormatStr(u"extensions.AutoResizeImage.conversionFormat"_s);
     if (mHashConfig.contains(conversionFormatStr)) {
         QString conversionFormat = mHashConfig.value(conversionFormatStr).toString();
         if (conversionFormat == QLatin1StringView("png")) {
-            conversionFormat = QStringLiteral("PNG");
+            conversionFormat = u"PNG"_s;
         } else {
-            conversionFormat = QStringLiteral("JPG");
+            conversionFormat = u"JPG"_s;
         }
-        addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("write-format"), conversionFormat);
+        addKmailConfig(u"AutoResizeImage"_s, u"write-format"_s, conversionFormat);
     }
 
-    const QString filterRecipientsStr(QStringLiteral("extensions.AutoResizeImage.filterRecipients"));
+    const QString filterRecipientsStr(u"extensions.AutoResizeImage.filterRecipients"_s);
     if (mHashConfig.contains(filterRecipientsStr)) {
         const int filterRecipients = mHashConfig.value(filterRecipientsStr).toInt();
         switch (filterRecipients) {
         case 0:
-            addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("FilterRecipientType"), QStringLiteral("NoFilter"));
+            addKmailConfig(u"AutoResizeImage"_s, u"FilterRecipientType"_s, QStringLiteral("NoFilter"));
             break;
         case 1:
-            addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("FilterRecipientType"), QStringLiteral("ResizeEachEmailsContainsPattern"));
+            addKmailConfig(u"AutoResizeImage"_s, u"FilterRecipientType"_s, QStringLiteral("ResizeEachEmailsContainsPattern"));
             break;
         case 2:
-            addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("FilterRecipientType"), QStringLiteral("ResizeOneEmailContainsPattern"));
+            addKmailConfig(u"AutoResizeImage"_s, u"FilterRecipientType"_s, QStringLiteral("ResizeOneEmailContainsPattern"));
             break;
         case 3:
-            addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("FilterRecipientType"), QStringLiteral("DontResizeEachEmailsContainsPattern"));
+            addKmailConfig(u"AutoResizeImage"_s, u"FilterRecipientType"_s, QStringLiteral("DontResizeEachEmailsContainsPattern"));
             break;
         case 4:
-            addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("FilterRecipientType"), QStringLiteral("DontResizeOneEmailContainsPattern"));
+            addKmailConfig(u"AutoResizeImage"_s, u"FilterRecipientType"_s, QStringLiteral("DontResizeOneEmailContainsPattern"));
             break;
         default:
             qCDebug(THUNDERBIRDPLUGIN_LOG) << " unknown FilterRecipientType: " << filterRecipients;
@@ -177,44 +179,44 @@ void ThunderbirdSettings::readExtensionsSettings()
         }
     }
 
-    const QString filteringRecipientsPatternsWhiteListStr(QStringLiteral("extensions.AutoResizeImage.filteringRecipientsPatternsWhiteList"));
+    const QString filteringRecipientsPatternsWhiteListStr(u"extensions.AutoResizeImage.filteringRecipientsPatternsWhiteList"_s);
     if (mHashConfig.contains(filteringRecipientsPatternsWhiteListStr)) {
         const QString filteringRecipientsPatternsWhiteList = mHashConfig.value(filteringRecipientsPatternsWhiteListStr).toString();
-        addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("resize-emails-pattern"), filteringRecipientsPatternsWhiteList);
+        addKmailConfig(u"AutoResizeImage"_s, u"resize-emails-pattern"_s, filteringRecipientsPatternsWhiteList);
     }
 
-    const QString filteringRecipientsPatternsBlackListStr(QStringLiteral("extensions.AutoResizeImage.filteringRecipientsPatternsBlackList"));
+    const QString filteringRecipientsPatternsBlackListStr(u"extensions.AutoResizeImage.filteringRecipientsPatternsBlackList"_s);
     if (mHashConfig.contains(filteringRecipientsPatternsBlackListStr)) {
         const QString filteringRecipientsPatternsBlackList = mHashConfig.value(filteringRecipientsPatternsBlackListStr).toString();
-        addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("do-not-resize-emails-pattern"), filteringRecipientsPatternsBlackList);
+        addKmailConfig(u"AutoResizeImage"_s, u"do-not-resize-emails-pattern"_s, filteringRecipientsPatternsBlackList);
     }
 
-    const QString filteringRenamingPatternStr(QStringLiteral("extensions.AutoResizeImage.renamingPattern"));
+    const QString filteringRenamingPatternStr(u"extensions.AutoResizeImage.renamingPattern"_s);
     if (mHashConfig.contains(filteringRenamingPatternStr)) {
         QString filteringRenamingPattern = mHashConfig.value(filteringRenamingPatternStr).toString();
         filteringRenamingPattern.replace(QLatin1StringView("%3Fn"), QLatin1StringView("%n"));
         filteringRenamingPattern.replace(QLatin1StringView("%3Ft"), QLatin1StringView("%t"));
         filteringRenamingPattern.replace(QLatin1StringView("%3Fd"), QLatin1StringView("%d"));
         filteringRenamingPattern.replace(QLatin1StringView("%3Fe"), QLatin1StringView("%e"));
-        addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("rename-resized-images-pattern"), filteringRenamingPattern);
+        addKmailConfig(u"AutoResizeImage"_s, u"rename-resized-images-pattern"_s, filteringRenamingPattern);
     }
 
-    const QString filteringRenamingImageStr(QStringLiteral("extensions.AutoResizeImage.renameResizedImages"));
+    const QString filteringRenamingImageStr(u"extensions.AutoResizeImage.renameResizedImages"_s);
     if (mHashConfig.contains(filteringRenamingImageStr)) {
-        addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("rename-resized-images"), true);
+        addKmailConfig(u"AutoResizeImage"_s, u"rename-resized-images"_s, true);
     }
 
-    const QString filteringImageFormatsStr(QStringLiteral("extensions.AutoResizeImage.imageFormats"));
+    const QString filteringImageFormatsStr(u"extensions.AutoResizeImage.imageFormats"_s);
     if (mHashConfig.contains(filteringImageFormatsStr)) {
         const QString filteringImageFormats = mHashConfig.value(filteringImageFormatsStr).toString();
         // convert it.
-        addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("resize-image-with-formats-type"), filteringImageFormats);
+        addKmailConfig(u"AutoResizeImage"_s, u"resize-image-with-formats-type"_s, filteringImageFormats);
     }
 
-    const QString filteringImageFormatsEnabledStr(QStringLiteral("extensions.AutoResizeImage.filterFormats"));
+    const QString filteringImageFormatsEnabledStr(u"extensions.AutoResizeImage.filterFormats"_s);
     if (mHashConfig.contains(filteringImageFormatsEnabledStr)) {
         const bool filteringImageFormatsEnabled = mHashConfig.value(filteringImageFormatsEnabledStr).toBool();
-        addKmailConfig(QStringLiteral("AutoResizeImage"), QStringLiteral("resize-image-with-formats"), filteringImageFormatsEnabled);
+        addKmailConfig(u"AutoResizeImage"_s, u"resize-image-with-formats"_s, filteringImageFormatsEnabled);
     }
 }
 
@@ -242,7 +244,7 @@ int ThunderbirdSettings::adaptAutoResizeResolution(int index, const QString &con
     case 9: { // custom case
         if (mHashConfig.contains(configStrList)) {
             const QString res = mHashConfig.value(configStrList).toString();
-            const QStringList lst = res.split(QLatin1Char(';'));
+            const QStringList lst = res.split(u';');
             int val = lst.last().toInt();
             return val;
         }
@@ -269,27 +271,27 @@ void ThunderbirdSettings::readLdapSettings()
     // qCDebug(THUNDERBIRDPLUGIN_LOG)<<" mLdapAccountList:"<<mLdapAccountList;
     for (const QString &ldapAccountName : std::as_const(mLdapAccountList)) {
         ldapStruct ldap;
-        const QString ldapDescription = QStringLiteral("%1.description").arg(ldapAccountName);
+        const QString ldapDescription = u"%1.description"_s.arg(ldapAccountName);
         if (mHashConfig.contains(ldapDescription)) {
             ldap.description = mHashConfig.value(ldapDescription).toString();
         }
-        const QString ldapAuthDn = QStringLiteral("%1.auth.dn").arg(ldapAccountName);
+        const QString ldapAuthDn = u"%1.auth.dn"_s.arg(ldapAccountName);
         if (mHashConfig.contains(ldapAuthDn)) {
             ldap.dn = mHashConfig.value(ldapAuthDn).toString();
         }
-        const QString ldapAuthSaslMech = QStringLiteral("%1.auth.saslmech").arg(ldapAccountName);
+        const QString ldapAuthSaslMech = u"%1.auth.saslmech"_s.arg(ldapAccountName);
         if (mHashConfig.contains(ldapAuthSaslMech)) {
             ldap.saslMech = mHashConfig.value(ldapAuthSaslMech).toString();
         }
-        const QString ldapFilename = QStringLiteral("%1.filename").arg(ldapAccountName);
+        const QString ldapFilename = u"%1.filename"_s.arg(ldapAccountName);
         if (mHashConfig.contains(ldapFilename)) {
             ldap.fileName = mHashConfig.value(ldapFilename).toString();
         }
-        const QString ldapMaxHits = QStringLiteral("%1.maxHits").arg(ldapAccountName);
+        const QString ldapMaxHits = u"%1.maxHits"_s.arg(ldapAccountName);
         if (mHashConfig.contains(ldapMaxHits)) {
             ldap.maxHint = mHashConfig.value(ldapMaxHits).toInt();
         }
-        const QString ldapUri = QStringLiteral("%1.uri").arg(ldapAccountName);
+        const QString ldapUri = u"%1.uri"_s.arg(ldapAccountName);
         if (mHashConfig.contains(ldapUri)) {
             ldap.ldapUrl = QUrl(mHashConfig.value(ldapUri).toString());
             ldap.port = ldap.ldapUrl.port();
@@ -308,141 +310,141 @@ void ThunderbirdSettings::readLdapSettings()
 
 void ThunderbirdSettings::readGlobalSettings()
 {
-    const QString markMessageReadStr = QStringLiteral("mailnews.mark_message_read.delay");
+    const QString markMessageReadStr = u"mailnews.mark_message_read.delay"_s;
     if (mHashConfig.contains(markMessageReadStr)) {
         const bool markMessageRead = mHashConfig.value(markMessageReadStr).toBool();
-        addKmailConfig(QStringLiteral("Behaviour"), QStringLiteral("DelayedMarkAsRead"), markMessageRead);
+        addKmailConfig(u"Behaviour"_s, u"DelayedMarkAsRead"_s, markMessageRead);
     } else {
         // Default value
-        addKmailConfig(QStringLiteral("Behaviour"), QStringLiteral("DelayedMarkAsRead"), true);
+        addKmailConfig(u"Behaviour"_s, u"DelayedMarkAsRead"_s, true);
     }
-    const QString markMessageReadIntervalStr = QStringLiteral("mailnews.mark_message_read.delay.interval");
+    const QString markMessageReadIntervalStr = u"mailnews.mark_message_read.delay.interval"_s;
     if (mHashConfig.contains(markMessageReadIntervalStr)) {
         bool found = false;
         const int markMessageReadInterval = mHashConfig.value(markMessageReadIntervalStr).toInt(&found);
         if (found) {
-            addKmailConfig(QStringLiteral("Behaviour"), QStringLiteral("DelayedMarkTime"), markMessageReadInterval);
+            addKmailConfig(u"Behaviour"_s, u"DelayedMarkTime"_s, markMessageReadInterval);
         }
     } else {
         // Default 5 seconds
-        addKmailConfig(QStringLiteral("Behaviour"), QStringLiteral("DelayedMarkTime"), 5);
+        addKmailConfig(u"Behaviour"_s, u"DelayedMarkTime"_s, 5);
     }
 
-    const QString mailComposeAttachmentReminderStr = QStringLiteral("mail.compose.attachment_reminder");
+    const QString mailComposeAttachmentReminderStr = u"mail.compose.attachment_reminder"_s;
     if (mHashConfig.contains(mailComposeAttachmentReminderStr)) {
         const bool mailComposeAttachmentReminder = mHashConfig.value(mailComposeAttachmentReminderStr).toBool();
-        addKmailConfig(QStringLiteral("Composer"), QStringLiteral("showForgottenAttachmentWarning"), mailComposeAttachmentReminder);
+        addKmailConfig(u"Composer"_s, u"showForgottenAttachmentWarning"_s, mailComposeAttachmentReminder);
     } else {
-        addKmailConfig(QStringLiteral("Composer"), QStringLiteral("showForgottenAttachmentWarning"), true);
+        addKmailConfig(u"Composer"_s, u"showForgottenAttachmentWarning"_s, true);
     }
 
-    const QString mailComposeAttachmentReminderKeywordsStr = QStringLiteral("mail.compose.attachment_reminder_keywords");
+    const QString mailComposeAttachmentReminderKeywordsStr = u"mail.compose.attachment_reminder_keywords"_s;
     if (mHashConfig.contains(mailComposeAttachmentReminderKeywordsStr)) {
         const QString mailComposeAttachmentReminderKeywords = mHashConfig.value(mailComposeAttachmentReminderKeywordsStr).toString();
-        addKmailConfig(QStringLiteral("Composer"), QStringLiteral("attachment-keywords"), mailComposeAttachmentReminderKeywords);
+        addKmailConfig(u"Composer"_s, u"attachment-keywords"_s, mailComposeAttachmentReminderKeywords);
     } // not default value keep kmail use one default value
 
-    const QString mailComposeAutosaveStr = QStringLiteral("mail.compose.autosave");
+    const QString mailComposeAutosaveStr = u"mail.compose.autosave"_s;
     if (mHashConfig.contains(mailComposeAutosaveStr)) {
         const bool mailComposeAutosave = mHashConfig.value(mailComposeAutosaveStr).toBool();
         if (mailComposeAutosave) {
-            const QString mailComposeAutosaveintervalStr = QStringLiteral("mail.compose.autosaveinterval");
+            const QString mailComposeAutosaveintervalStr = u"mail.compose.autosaveinterval"_s;
             if (mHashConfig.contains(mailComposeAutosaveintervalStr)) {
                 bool found = false;
                 const int mailComposeAutosaveinterval = mHashConfig.value(mailComposeAutosaveintervalStr).toInt(&found);
                 if (found) {
-                    addKmailConfig(QStringLiteral("Composer"), QStringLiteral("autosave"), mailComposeAutosaveinterval);
+                    addKmailConfig(u"Composer"_s, u"autosave"_s, mailComposeAutosaveinterval);
                 } else {
-                    addKmailConfig(QStringLiteral("Composer"), QStringLiteral("autosave"), 5);
+                    addKmailConfig(u"Composer"_s, u"autosave"_s, 5);
                 }
             } else {
                 // Default value
-                addKmailConfig(QStringLiteral("Composer"), QStringLiteral("autosave"), 5);
+                addKmailConfig(u"Composer"_s, u"autosave"_s, 5);
             }
         } else {
             // Don't autosave
-            addKmailConfig(QStringLiteral("Composer"), QStringLiteral("autosave"), 0);
+            addKmailConfig(u"Composer"_s, u"autosave"_s, 0);
         }
     }
 
-    const QString mailSpellCheckInlineStr = QStringLiteral("mail.spellcheck.inline");
+    const QString mailSpellCheckInlineStr = u"mail.spellcheck.inline"_s;
     if (mHashConfig.contains(mailSpellCheckInlineStr)) {
         const bool mailSpellCheckInline = mHashConfig.value(mailSpellCheckInlineStr).toBool();
-        addKmailConfig(QStringLiteral("Spelling"), QStringLiteral("backgroundCheckerEnabled"), mailSpellCheckInline);
+        addKmailConfig(u"Spelling"_s, u"backgroundCheckerEnabled"_s, mailSpellCheckInline);
     } else {
-        addKmailConfig(QStringLiteral("Spelling"), QStringLiteral("backgroundCheckerEnabled"), false);
+        addKmailConfig(u"Spelling"_s, u"backgroundCheckerEnabled"_s, false);
     }
 
-    const QString mailAlertShowSubjectStr = QStringLiteral("mail.biff.alert.show_subject");
+    const QString mailAlertShowSubjectStr = u"mail.biff.alert.show_subject"_s;
     if (mHashConfig.contains(mailAlertShowSubjectStr)) {
         const bool mailAlertShowSubject = mHashConfig.value(mailAlertShowSubjectStr).toBool();
-        addNewMailNotifier(QStringLiteral("General"), QStringLiteral("showSubject"), mailAlertShowSubject);
+        addNewMailNotifier(u"General"_s, u"showSubject"_s, mailAlertShowSubject);
     } else {
         // Default value in thunderbird
-        addNewMailNotifier(QStringLiteral("General"), QStringLiteral("showSubject"), true);
+        addNewMailNotifier(u"General"_s, u"showSubject"_s, true);
     }
 
-    const QString mailAlertShowPreviewStr = QStringLiteral("mail.biff.alert.show_preview");
+    const QString mailAlertShowPreviewStr = u"mail.biff.alert.show_preview"_s;
     // TODO add show preview
     if (mHashConfig.contains(mailAlertShowPreviewStr)) {
         const bool mailAlertShowPreview = mHashConfig.value(mailAlertShowPreviewStr).toBool();
-        // addNewMailNotifier(QStringLiteral("General"),QStringLiteral("showSubject"), mailAlertShowPreview);
+        // addNewMailNotifier(u"General"_s,u"showSubject"_s, mailAlertShowPreview);
     } else {
         // Default value in thunderbird
-        // addNewMailNotifier(QStringLiteral("General"),QStringLiteral("showSubject"), true);
+        // addNewMailNotifier(u"General"_s,u"showSubject"_s, true);
     }
 
-    const QString mailAlertShowSenderStr = QStringLiteral("mail.biff.alert.show_sender");
+    const QString mailAlertShowSenderStr = u"mail.biff.alert.show_sender"_s;
     if (mHashConfig.contains(mailAlertShowSenderStr)) {
         const bool mailAlertShowSender = mHashConfig.value(mailAlertShowSenderStr).toBool();
-        addNewMailNotifier(QStringLiteral("General"), QStringLiteral("showFrom"), mailAlertShowSender);
+        addNewMailNotifier(u"General"_s, u"showFrom"_s, mailAlertShowSender);
     } else {
         // Default value in thunderbird
-        addNewMailNotifier(QStringLiteral("General"), QStringLiteral("showFrom"), true);
+        addNewMailNotifier(u"General"_s, u"showFrom"_s, true);
     }
 
-    const QString mailSpellCheckBeforeSendStr = QStringLiteral("mail.SpellCheckBeforeSend");
+    const QString mailSpellCheckBeforeSendStr = u"mail.SpellCheckBeforeSend"_s;
     if (mHashConfig.contains(mailSpellCheckBeforeSendStr)) {
         const bool mailSpellCheckBeforeSend = mHashConfig.value(mailSpellCheckBeforeSendStr).toBool();
-        addKmailConfig(QStringLiteral("Composer"), QStringLiteral("check-spelling-before-send"), mailSpellCheckBeforeSend);
+        addKmailConfig(u"Composer"_s, u"check-spelling-before-send"_s, mailSpellCheckBeforeSend);
     } else {
-        addKmailConfig(QStringLiteral("Composer"), QStringLiteral("check-spelling-before-send"), false);
+        addKmailConfig(u"Composer"_s, u"check-spelling-before-send"_s, false);
     }
 
-    const QString mailSpellCheckLanguageStr = QStringLiteral("spellchecker.dictionary");
+    const QString mailSpellCheckLanguageStr = u"spellchecker.dictionary"_s;
     if (mHashConfig.contains(mailSpellCheckLanguageStr)) {
         const QString mailSpellCheckLanguage = mHashConfig.value(mailSpellCheckLanguageStr).toString();
-        addKmailConfig(QStringLiteral("Spelling"), QStringLiteral("defaultLanguage"), mailSpellCheckLanguage);
+        addKmailConfig(u"Spelling"_s, u"defaultLanguage"_s, mailSpellCheckLanguage);
         // TODO create map to convert thunderbird name to aspell name
     }
 
-    const QString mailPhishingDetectionStr = QStringLiteral("mail.phishing.detection.enabled");
+    const QString mailPhishingDetectionStr = u"mail.phishing.detection.enabled"_s;
     if (mHashConfig.contains(mailPhishingDetectionStr)) {
         const bool mailPhishingDetectionEnabled = mHashConfig.value(mailPhishingDetectionStr).toBool();
-        addKmailConfig(QStringLiteral("Reader"), QStringLiteral("ScamDetectionEnabled"), mailPhishingDetectionEnabled);
+        addKmailConfig(u"Reader"_s, u"ScamDetectionEnabled"_s, mailPhishingDetectionEnabled);
     } else { // Default
-        addKmailConfig(QStringLiteral("Reader"), QStringLiteral("ScamDetectionEnabled"), true);
+        addKmailConfig(u"Reader"_s, u"ScamDetectionEnabled"_s, true);
     }
 
-    const QString mailDisplayGlyphStr = QStringLiteral("mail.display_glyph");
+    const QString mailDisplayGlyphStr = u"mail.display_glyph"_s;
     if (mHashConfig.contains(mailDisplayGlyphStr)) {
         const bool mailDisplayGlyphEnabled = mHashConfig.value(mailDisplayGlyphStr).toBool();
-        addKmailConfig(QStringLiteral("Reader"), QStringLiteral("ShowEmoticons"), mailDisplayGlyphEnabled);
+        addKmailConfig(u"Reader"_s, u"ShowEmoticons"_s, mailDisplayGlyphEnabled);
     } else { // Default
-        addKmailConfig(QStringLiteral("Reader"), QStringLiteral("ShowEmoticons"), true);
+        addKmailConfig(u"Reader"_s, u"ShowEmoticons"_s, true);
     }
 }
 
 void ThunderbirdSettings::importSieveSettings(QMap<QString, QVariant> &settings, const QString &userName, const QString &imapServerName)
 {
     QString userNameSieveConverted = userName;
-    userNameSieveConverted.replace(QLatin1Char('@'), QStringLiteral("%40"));
+    userNameSieveConverted.replace(u'@', u"%40"_s);
 
-    const QString sieveKeyServerUserName = QStringLiteral("extensions.sieve.account.") + userNameSieveConverted + QLatin1Char('@') + imapServerName;
+    const QString sieveKeyServerUserName = u"extensions.sieve.account."_s + userNameSieveConverted + u'@' + imapServerName;
     // user_pref("extensions.sieve.account.<username>@<server>.enabled", true);
-    if (mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".enabled"), false).toBool()) {
-        settings.insert(QStringLiteral("SieveSupport"), true);
-        settings.insert(QStringLiteral("SievePort"), mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".port"), 4190).toInt());
+    if (mHashConfig.value(sieveKeyServerUserName + u".enabled"_s, false).toBool()) {
+        settings.insert(u"SieveSupport"_s, true);
+        settings.insert(u"SievePort"_s, mHashConfig.value(sieveKeyServerUserName + u".port"_s, 4190).toInt());
         // TODO add more
     }
 #if 0
@@ -482,7 +484,7 @@ void ThunderbirdSettings::importSieveSettings(QMap<QString, QVariant> &settings,
 
 #endif
 #if 0
-    if (mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".enabled"), false).toBool()) {
+    if (mHashConfig.value(sieveKeyServerUserName + u".enabled"_s, false).toBool()) {
         //TODO
         //user_pref("extensions.sieve.account.<username>@<server>.TLS", true);
         //user_pref("extensions.sieve.account.<username>@<server>.TLS.forced", true);
@@ -495,18 +497,18 @@ void ThunderbirdSettings::importSieveSettings(QMap<QString, QVariant> &settings,
         //2 custom
         //Default == 4190
         //user_pref("extensions.sieve.account.<username>@<server>.port", 1255);
-        config.sieveSettings.port = mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".port"), 4190).toInt();
+        config.sieveSettings.port = mHashConfig.value(sieveKeyServerUserName + u".port"_s, 4190).toInt();
         //not necessary to import this one : user_pref("extensions.sieve.account.<username>@<server>.port.type", 1);
 
         //user_pref("extensions.sieve.account.<username>@<server>.hostname", "sdfsfsqsdf");
-        const QString sieveHostName = mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".hostname")).toString();
+        const QString sieveHostName = mHashConfig.value(sieveKeyServerUserName + u".hostname"_s).toString();
         if (sieveHostName.isEmpty()) {
             config.sieveSettings.serverName = imapServerName;
         } else {
             config.sieveSettings.serverName = sieveHostName;
         }
 
-        const QString sieveUserName = mHashConfig.value(sieveKeyServerUserName + QStringLiteral(".login.username")).toString();
+        const QString sieveUserName = mHashConfig.value(sieveKeyServerUserName + u".login.username"_s).toString();
         //user_pref("extensions.sieve.account.<username>@<server>.login.username", "newuser");
         if (sieveUserName.isEmpty()) {
             config.sieveSettings.userName = userName;
@@ -518,9 +520,9 @@ void ThunderbirdSettings::importSieveSettings(QMap<QString, QVariant> &settings,
 
 
         ////FIXME qCDebug(SIEVEEDITOR_LOG) << "imap account " << accountName;
-        const QString name = mHashConfig.value(accountName + QStringLiteral(".name")).toString();
+        const QString name = mHashConfig.value(accountName + u".name"_s).toString();
         bool found;
-        const int sievePort = mHashConfig.value(accountName + QStringLiteral(".port")).toInt(&found);
+        const int sievePort = mHashConfig.value(accountName + u".port"_s).toInt(&found);
         if (found) {
             config.sieveImapAccountSettings.setPort(sievePort);
         }
@@ -541,8 +543,8 @@ void ThunderbirdSettings::importSieveSettings(QMap<QString, QVariant> &settings,
 void ThunderbirdSettings::addAuth(QMap<QString, QVariant> &settings, const QString &argument, const QString &accountName)
 {
     bool found = false;
-    if (mHashConfig.contains(accountName + QStringLiteral(".authMethod"))) {
-        const int authMethod = mHashConfig.value(accountName + QStringLiteral(".authMethod")).toInt(&found);
+    if (mHashConfig.contains(accountName + u".authMethod"_s)) {
+        const int authMethod = mHashConfig.value(accountName + u".authMethod"_s).toInt(&found);
         if (found) {
             switch (authMethod) {
             case 0:
@@ -576,17 +578,17 @@ void ThunderbirdSettings::addAuth(QMap<QString, QVariant> &settings, const QStri
 void ThunderbirdSettings::readAccount()
 {
     for (const QString &account : std::as_const(mAccountList)) {
-        const QString serverName = mHashConfig.value(QStringLiteral("mail.account.%1").arg(account) + QStringLiteral(".server")).toString();
-        const QString accountName = QStringLiteral("mail.server.%1").arg(serverName);
-        const QString host = mHashConfig.value(accountName + QStringLiteral(".hostname")).toString();
-        const QString userName = mHashConfig.value(accountName + QStringLiteral(".userName")).toString();
-        const QString name = mHashConfig.value(accountName + QStringLiteral(".name")).toString();
+        const QString serverName = mHashConfig.value(u"mail.account.%1"_s.arg(account) + u".server"_s).toString();
+        const QString accountName = u"mail.server.%1"_s.arg(serverName);
+        const QString host = mHashConfig.value(accountName + u".hostname"_s).toString();
+        const QString userName = mHashConfig.value(accountName + u".userName"_s).toString();
+        const QString name = mHashConfig.value(accountName + u".name"_s).toString();
 
-        const QString type = mHashConfig.value(accountName + QStringLiteral(".type")).toString();
+        const QString type = mHashConfig.value(accountName + u".type"_s).toString();
         // TODO use it ?
-        // const QString directory = mHashConfig.value(accountName + QStringLiteral(".directory")).toString();
+        // const QString directory = mHashConfig.value(accountName + u".directory"_s).toString();
 
-        const QString loginAtStartupStr = accountName + QStringLiteral(".login_at_startup");
+        const QString loginAtStartupStr = accountName + u".login_at_startup"_s;
         bool loginAtStartup = true; // Default for thunderbird;
         if (mHashConfig.contains(loginAtStartupStr)) {
             loginAtStartup = mHashConfig.value(loginAtStartupStr).toBool();
@@ -594,97 +596,96 @@ void ThunderbirdSettings::readAccount()
         bool found = false;
         if (type == QLatin1StringView("imap")) {
             QMap<QString, QVariant> settings;
-            settings.insert(QStringLiteral("ImapServer"), host);
-            settings.insert(QStringLiteral("UserName"), userName);
-            const int port = mHashConfig.value(accountName + QStringLiteral(".port")).toInt(&found);
+            settings.insert(u"ImapServer"_s, host);
+            settings.insert(u"UserName"_s, userName);
+            const int port = mHashConfig.value(accountName + u".port"_s).toInt(&found);
             if (found) {
-                settings.insert(QStringLiteral("ImapPort"), port);
+                settings.insert(u"ImapPort"_s, port);
             }
-            addAuth(settings, QStringLiteral("Authentication"), accountName);
-            const QString offline = accountName + QStringLiteral(".offline_download");
+            addAuth(settings, u"Authentication"_s, accountName);
+            const QString offline = accountName + u".offline_download"_s;
             if (mHashConfig.contains(offline)) {
                 const bool offlineStatus = mHashConfig.value(offline).toBool();
                 if (offlineStatus) {
-                    settings.insert(QStringLiteral("DisconnectedModeEnabled"), offlineStatus);
+                    settings.insert(u"DisconnectedModeEnabled"_s, offlineStatus);
                 }
             } else {
                 // default value == true
-                settings.insert(QStringLiteral("DisconnectedModeEnabled"), true);
+                settings.insert(u"DisconnectedModeEnabled"_s, true);
             }
 
             found = false;
-            const int socketType = mHashConfig.value(accountName + QStringLiteral(".socketType")).toInt(&found);
+            const int socketType = mHashConfig.value(accountName + u".socketType"_s).toInt(&found);
             if (found) {
                 switch (socketType) {
                 case 0:
                     // None
-                    settings.insert(QStringLiteral("Safety"), QStringLiteral("None"));
+                    settings.insert(u"Safety"_s, u"None"_s);
                     break;
                 case 2:
                     // STARTTLS
-                    settings.insert(QStringLiteral("Safety"), QStringLiteral("STARTTLS"));
+                    settings.insert(u"Safety"_s, u"STARTTLS"_s);
                     break;
                 case 3:
                     // SSL/TLS
-                    settings.insert(QStringLiteral("Safety"), QStringLiteral("SSL"));
+                    settings.insert(u"Safety"_s, u"SSL"_s);
                     break;
                 default:
                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " socketType " << socketType;
                     break;
                 }
             }
-            const QString checkNewMailStr = accountName + QStringLiteral(".check_new_mail");
+            const QString checkNewMailStr = accountName + u".check_new_mail"_s;
             if (mHashConfig.contains(checkNewMailStr)) {
                 const bool checkNewMail = mHashConfig.value(checkNewMailStr).toBool();
-                settings.insert(QStringLiteral("IntervalCheckEnabled"), checkNewMail);
+                settings.insert(u"IntervalCheckEnabled"_s, checkNewMail);
             }
 
-            const QString checkTimeStr = accountName + QStringLiteral(".check_time");
+            const QString checkTimeStr = accountName + u".check_time"_s;
             if (mHashConfig.contains(checkTimeStr)) {
                 found = false;
                 const int checkTime = mHashConfig.value(checkTimeStr).toInt(&found);
                 if (found) {
-                    settings.insert(QStringLiteral("IntervalCheckTime"), checkTime);
+                    settings.insert(u"IntervalCheckTime"_s, checkTime);
                 }
             } else {
                 // Default value from thunderbird
-                settings.insert(QStringLiteral("IntervalCheckTime"), 10);
+                settings.insert(u"IntervalCheckTime"_s, 10);
             }
-            const QString trashFolderStr = accountName + QStringLiteral(".trash_folder_name");
+            const QString trashFolderStr = accountName + u".trash_folder_name"_s;
             if (mHashConfig.contains(trashFolderStr)) {
-                settings.insert(QStringLiteral("TrashCollection"),
-                                MailCommon::Util::convertFolderPathToCollectionId(mHashConfig.value(trashFolderStr).toString()));
+                settings.insert(u"TrashCollection"_s, MailCommon::Util::convertFolderPathToCollectionId(mHashConfig.value(trashFolderStr).toString()));
             }
             importSieveSettings(settings, userName, serverName);
 
-            const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, settings);
+            const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(u"akonadi_imap_resource"_s, name, settings);
             addCheckMailOnStartup(agentIdentifyName, loginAtStartup);
             // Not find a method to disable it in thunderbird
             addToManualCheck(agentIdentifyName, true);
         } else if (type == QLatin1StringView("pop3")) {
             QMap<QString, QVariant> settings;
-            settings.insert(QStringLiteral("Host"), host);
-            settings.insert(QStringLiteral("Login"), userName);
+            settings.insert(u"Host"_s, host);
+            settings.insert(u"Login"_s, userName);
 
-            const bool leaveOnServer = mHashConfig.value(accountName + QStringLiteral(".leave_on_server")).toBool();
+            const bool leaveOnServer = mHashConfig.value(accountName + u".leave_on_server"_s).toBool();
             if (leaveOnServer) {
-                settings.insert(QStringLiteral("LeaveOnServer"), leaveOnServer);
+                settings.insert(u"LeaveOnServer"_s, leaveOnServer);
             }
 
             found = false;
-            const int numberDayToLeave = mHashConfig.value(accountName + QStringLiteral(".num_days_to_leave_on_server")).toInt(&found);
+            const int numberDayToLeave = mHashConfig.value(accountName + u".num_days_to_leave_on_server"_s).toInt(&found);
             if (found) {
-                settings.insert(QStringLiteral("LeaveOnServerDays"), numberDayToLeave);
+                settings.insert(u"LeaveOnServerDays"_s, numberDayToLeave);
             }
 
             found = false;
-            const int port = mHashConfig.value(accountName + QStringLiteral(".port")).toInt(&found);
+            const int port = mHashConfig.value(accountName + u".port"_s).toInt(&found);
             if (found) {
-                settings.insert(QStringLiteral("Port"), port);
+                settings.insert(u"Port"_s, port);
             }
 
             found = false;
-            const int socketType = mHashConfig.value(accountName + QStringLiteral(".socketType")).toInt(&found);
+            const int socketType = mHashConfig.value(accountName + u".socketType"_s).toInt(&found);
             if (found) {
                 switch (socketType) {
                 case 0:
@@ -693,36 +694,36 @@ void ThunderbirdSettings::readAccount()
                     break;
                 case 2:
                     // STARTTLS
-                    settings.insert(QStringLiteral("UseTLS"), true);
+                    settings.insert(u"UseTLS"_s, true);
                     break;
                 case 3:
                     // SSL/TLS
-                    settings.insert(QStringLiteral("UseSSL"), true);
+                    settings.insert(u"UseSSL"_s, true);
                     break;
                 default:
                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " socketType " << socketType;
                     break;
                 }
             }
-            addAuth(settings, QStringLiteral("AuthenticationMethod"), accountName);
-            const QString checkNewMailStr = accountName + QStringLiteral(".check_new_mail");
+            addAuth(settings, u"AuthenticationMethod"_s, accountName);
+            const QString checkNewMailStr = accountName + u".check_new_mail"_s;
             if (mHashConfig.contains(checkNewMailStr)) {
                 const bool checkNewMail = mHashConfig.value(checkNewMailStr).toBool();
-                settings.insert(QStringLiteral("IntervalCheckEnabled"), checkNewMail);
+                settings.insert(u"IntervalCheckEnabled"_s, checkNewMail);
             }
-            const QString checkTimeStr = accountName + QStringLiteral(".check_time");
+            const QString checkTimeStr = accountName + u".check_time"_s;
             if (mHashConfig.contains(checkTimeStr)) {
                 found = false;
                 const int checkTime = mHashConfig.value(checkTimeStr).toInt(&found);
                 if (found) {
-                    settings.insert(QStringLiteral("IntervalCheckInterval"), checkTime);
+                    settings.insert(u"IntervalCheckInterval"_s, checkTime);
                 }
             } else {
                 // Default value from thunderbird
-                settings.insert(QStringLiteral("IntervalCheckInterval"), 10);
+                settings.insert(u"IntervalCheckInterval"_s, 10);
             }
 
-            const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_pop3_resource"), name, settings);
+            const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(u"akonadi_pop3_resource"_s, name, settings);
             addCheckMailOnStartup(agentIdentifyName, loginAtStartup);
             // Not find a method to disable it in thunderbird
             addToManualCheck(agentIdentifyName, true);
@@ -730,16 +731,16 @@ void ThunderbirdSettings::readAccount()
             // FIXME look at if we can implement it
             qCDebug(THUNDERBIRDPLUGIN_LOG) << " account type none!";
         } else if (type == QLatin1StringView("rss") || type == QLatin1StringView("nntp") || type == QLatin1StringView("movemail")) {
-            qCDebug(THUNDERBIRDPLUGIN_LOG) << QStringLiteral("%1 rss resource needs to be implemented").arg(type);
+            qCDebug(THUNDERBIRDPLUGIN_LOG) << u"%1 rss resource needs to be implemented"_s.arg(type);
             continue;
         } else {
             qCDebug(THUNDERBIRDPLUGIN_LOG) << " type unknown : " << type;
             continue;
         }
 
-        const QString identityConfig = QStringLiteral("mail.account.%1").arg(account) + QStringLiteral(".identities");
+        const QString identityConfig = u"mail.account.%1"_s.arg(account) + u".identities"_s;
         if (mHashConfig.contains(identityConfig)) {
-            const QStringList idList = mHashConfig.value(identityConfig).toString().split(QLatin1Char(','));
+            const QStringList idList = mHashConfig.value(identityConfig).toString().split(u',');
             for (const QString &id : idList) {
                 readIdentity(id);
             }
@@ -749,32 +750,32 @@ void ThunderbirdSettings::readAccount()
 
 void ThunderbirdSettings::readTransport()
 {
-    const QString mailSmtpServer = mHashConfig.value(QStringLiteral("mail.smtpservers")).toString();
+    const QString mailSmtpServer = mHashConfig.value(u"mail.smtpservers"_s).toString();
     if (mailSmtpServer.isEmpty()) {
         return;
     }
-    const QStringList smtpList = mailSmtpServer.split(QLatin1Char(','));
-    QString defaultSmtp = mHashConfig.value(QStringLiteral("mail.smtp.defaultserver")).toString();
+    const QStringList smtpList = mailSmtpServer.split(u',');
+    QString defaultSmtp = mHashConfig.value(u"mail.smtp.defaultserver"_s).toString();
     if (smtpList.count() == 1 && defaultSmtp.isEmpty()) {
         // Be sure to define default smtp
         defaultSmtp = smtpList.at(0);
     }
 
     for (const QString &smtp : smtpList) {
-        const QString smtpName = QStringLiteral("mail.smtpserver.%1").arg(smtp);
+        const QString smtpName = u"mail.smtpserver.%1"_s.arg(smtp);
         MailTransport::Transport *mt = createTransport();
-        mt->setIdentifier(QStringLiteral("SMTP"));
-        const QString name = mHashConfig.value(smtpName + QStringLiteral(".description")).toString();
+        mt->setIdentifier(u"SMTP"_s);
+        const QString name = mHashConfig.value(smtpName + u".description"_s).toString();
         mt->setName(name);
-        const QString hostName = mHashConfig.value(smtpName + QStringLiteral(".hostname")).toString();
+        const QString hostName = mHashConfig.value(smtpName + u".hostname"_s).toString();
         mt->setHost(hostName);
 
-        const int port = mHashConfig.value(smtpName + QStringLiteral(".port")).toInt();
+        const int port = mHashConfig.value(smtpName + u".port"_s).toInt();
         if (port > 0) {
             mt->setPort(port);
         }
 
-        const int authMethod = mHashConfig.value(smtpName + QStringLiteral(".authMethod")).toInt();
+        const int authMethod = mHashConfig.value(smtpName + u".authMethod"_s).toInt();
         switch (authMethod) {
         case 0:
             break;
@@ -798,7 +799,7 @@ void ThunderbirdSettings::readTransport()
             break;
         }
 
-        const int trySsl = mHashConfig.value(smtpName + QStringLiteral(".try_ssl")).toInt();
+        const int trySsl = mHashConfig.value(smtpName + u".try_ssl"_s).toInt();
         switch (trySsl) {
         case 0:
             mt->setEncryption(MailTransport::Transport::EnumEncryption::None);
@@ -814,7 +815,7 @@ void ThunderbirdSettings::readTransport()
             break;
         }
 
-        const QString userName = mHashConfig.value(smtpName + QStringLiteral(".username")).toString();
+        const QString userName = mHashConfig.value(smtpName + u".username"_s).toString();
         if (!userName.isEmpty()) {
             mt->setUserName(userName);
             if (authMethod > 1) {
@@ -838,66 +839,66 @@ static QString convertThunderbirdPath(const QString &path)
 
 void ThunderbirdSettings::readIdentity(const QString &account)
 {
-    const QString identity = QStringLiteral("mail.identity.%1").arg(account);
-    QString fullName = mHashConfig.value(identity + QStringLiteral(".fullName")).toString();
+    const QString identity = u"mail.identity.%1"_s.arg(account);
+    QString fullName = mHashConfig.value(identity + u".fullName"_s).toString();
     KIdentityManagementCore::Identity *newIdentity = createIdentity(fullName);
 
-    const QString smtpServer = mHashConfig.value(identity + QStringLiteral(".smtpServer")).toString();
+    const QString smtpServer = mHashConfig.value(identity + u".smtpServer"_s).toString();
     if (!smtpServer.isEmpty() && mHashSmtp.contains(smtpServer)) {
         newIdentity->setTransport(mHashSmtp.value(smtpServer));
     }
 
-    const QString userEmail = mHashConfig.value(identity + QStringLiteral(".useremail")).toString();
+    const QString userEmail = mHashConfig.value(identity + u".useremail"_s).toString();
     newIdentity->setPrimaryEmailAddress(userEmail);
 
     newIdentity->setFullName(fullName);
     newIdentity->setIdentityName(fullName);
 
-    const QString organization = mHashConfig.value(identity + QStringLiteral(".organization")).toString();
+    const QString organization = mHashConfig.value(identity + u".organization"_s).toString();
     newIdentity->setOrganization(organization);
 
-    bool doBcc = mHashConfig.value(identity + QStringLiteral(".doBcc")).toBool();
+    bool doBcc = mHashConfig.value(identity + u".doBcc"_s).toBool();
     if (doBcc) {
-        const QString bcc = mHashConfig.value(identity + QStringLiteral(".doBccList")).toString();
+        const QString bcc = mHashConfig.value(identity + u".doBccList"_s).toString();
         newIdentity->setBcc(bcc);
     }
 
-    bool doCc = mHashConfig.value(identity + QStringLiteral(".doCc")).toBool();
+    bool doCc = mHashConfig.value(identity + u".doCc"_s).toBool();
     if (doCc) {
-        const QString cc = mHashConfig.value(identity + QStringLiteral(".doCcList")).toString();
+        const QString cc = mHashConfig.value(identity + u".doCcList"_s).toString();
         newIdentity->setCc(cc);
     }
 
-    const QString replyTo = mHashConfig.value(identity + QStringLiteral(".reply_to")).toString();
+    const QString replyTo = mHashConfig.value(identity + u".reply_to"_s).toString();
     newIdentity->setReplyToAddr(replyTo);
 
     KIdentityManagementCore::Signature signature;
-    const bool signatureHtml = mHashConfig.value(identity + QStringLiteral(".htmlSigFormat")).toBool();
+    const bool signatureHtml = mHashConfig.value(identity + u".htmlSigFormat"_s).toBool();
     if (signatureHtml) {
         signature.setInlinedHtml(true);
     }
 
-    const bool attachSignature = mHashConfig.value(identity + QStringLiteral(".attach_signature")).toBool();
+    const bool attachSignature = mHashConfig.value(identity + u".attach_signature"_s).toBool();
     if (attachSignature) {
-        const QString fileSignature = mHashConfig.value(identity + QStringLiteral(".sig_file")).toString();
+        const QString fileSignature = mHashConfig.value(identity + u".sig_file"_s).toString();
         signature.setType(KIdentityManagementCore::Signature::FromFile);
         signature.setPath(fileSignature, false);
     } else {
-        const QString textSignature = mHashConfig.value(identity + QStringLiteral(".htmlSigText")).toString();
+        const QString textSignature = mHashConfig.value(identity + u".htmlSigText"_s).toString();
         signature.setType(KIdentityManagementCore::Signature::Inlined);
         signature.setText(textSignature);
     }
 
-    if (mHashConfig.contains(identity + QStringLiteral(".drafts_folder_picker_mode"))) {
-        const int useSpecificDraftFolder = mHashConfig.value(identity + QStringLiteral(".drafts_folder_picker_mode")).toInt();
+    if (mHashConfig.contains(identity + u".drafts_folder_picker_mode"_s)) {
+        const int useSpecificDraftFolder = mHashConfig.value(identity + u".drafts_folder_picker_mode"_s).toInt();
         if (useSpecificDraftFolder == 1) {
-            const QString draftFolder = convertThunderbirdPath(mHashConfig.value(identity + QStringLiteral(".draft_folder")).toString());
+            const QString draftFolder = convertThunderbirdPath(mHashConfig.value(identity + u".draft_folder"_s).toString());
             newIdentity->setDrafts(draftFolder);
         }
     }
 
-    if (mHashConfig.contains(identity + QStringLiteral(".fcc"))) {
-        const bool fccEnabled = mHashConfig.value(identity + QStringLiteral(".fcc")).toBool();
+    if (mHashConfig.contains(identity + u".fcc"_s)) {
+        const bool fccEnabled = mHashConfig.value(identity + u".fcc"_s).toBool();
         newIdentity->setDisabledFcc(!fccEnabled);
     }
 
@@ -905,34 +906,33 @@ void ThunderbirdSettings::readIdentity(const QString &account)
     // fcc_folder_picker_mode is just a flag for thunderbird. Not necessary during import.
     // if ( mHashConfig.contains( identity + QStringLiteral( ".fcc_folder_picker_mode" ) ) )
     {
-        if (mHashConfig.contains(identity + QStringLiteral(".fcc_folder"))) {
-            const QString fccFolder = convertThunderbirdPath(mHashConfig.value(identity + QStringLiteral(".fcc_folder")).toString());
+        if (mHashConfig.contains(identity + u".fcc_folder"_s)) {
+            const QString fccFolder = convertThunderbirdPath(mHashConfig.value(identity + u".fcc_folder"_s).toString());
             newIdentity->setFcc(fccFolder);
         }
     }
 
     // if ( mHashConfig.contains( identity + QStringLiteral( ".tmpl_folder_picker_mode" ) ) )
     {
-        if (mHashConfig.contains(identity + QStringLiteral(".stationery_folder"))) {
-            const QString templateFolder = convertThunderbirdPath(mHashConfig.value(identity + QStringLiteral(".stationery_folder")).toString());
+        if (mHashConfig.contains(identity + u".stationery_folder"_s)) {
+            const QString templateFolder = convertThunderbirdPath(mHashConfig.value(identity + u".stationery_folder"_s).toString());
             newIdentity->setTemplates(templateFolder);
         }
     }
 
-    const QString attachVcardStr(identity + QStringLiteral(".attach_vcard"));
+    const QString attachVcardStr(identity + u".attach_vcard"_s);
     if (mHashConfig.contains(attachVcardStr)) {
         const bool attachVcard = mHashConfig.value(attachVcardStr).toBool();
         newIdentity->setAttachVcard(attachVcard);
     }
-    const QString attachVcardContentStr(identity + QStringLiteral(".escapedVCard"));
+    const QString attachVcardContentStr(identity + u".escapedVCard"_s);
     if (mHashConfig.contains(attachVcardContentStr)) {
         const QString str = mHashConfig.value(attachVcardContentStr).toString();
         QByteArray vcard = QByteArray::fromPercentEncoding(str.toLocal8Bit());
         KContacts::VCardConverter converter;
         KContacts::Addressee addr = converter.parseVCard(vcard);
 
-        const QString filename =
-            QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + QLatin1Char('/') + newIdentity->identityName() + QStringLiteral(".vcf");
+        const QString filename = QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + u'/' + newIdentity->identityName() + u".vcf"_s;
         QFileInfo fileInfo(filename);
         QDir().mkpath(fileInfo.absolutePath());
         QFile file(filename);
@@ -944,13 +944,13 @@ void ThunderbirdSettings::readIdentity(const QString &account)
             newIdentity->setVCardFile(filename);
         }
     }
-    const QString signMailStr(identity + QStringLiteral(".sign_mail"));
+    const QString signMailStr(identity + u".sign_mail"_s);
     if (mHashConfig.contains(signMailStr)) {
         const bool signMail = mHashConfig.value(signMailStr).toBool();
         newIdentity->setPgpAutoSign(signMail);
     }
 
-    // const QString composeHtmlStr(identity + QStringLiteral(".compose_html"));
+    // const QString composeHtmlStr(identity + u".compose_html"_s);
     // TODO: implement it in kmail
 
     newIdentity->setSignature(signature);
@@ -961,16 +961,16 @@ void ThunderbirdSettings::readIdentity(const QString &account)
 void ThunderbirdSettings::insertIntoMap(const QString &line)
 {
     QString newLine = line;
-    newLine.remove(QStringLiteral("user_pref(\""));
-    newLine.remove(QStringLiteral(");"));
-    const int pos = newLine.indexOf(QLatin1Char(','));
+    newLine.remove(u"user_pref(\""_s);
+    newLine.remove(u");"_s);
+    const int pos = newLine.indexOf(u',');
     QString key = newLine.left(pos);
     key.remove(key.length() - 1, 1);
     QString valueStr = newLine.right(newLine.length() - pos - 2);
-    if (valueStr.at(0) == QLatin1Char('"')) {
+    if (valueStr.at(0) == u'"') {
         valueStr.remove(0, 1);
         const int pos(valueStr.length() - 1);
-        if (valueStr.at(pos) == QLatin1Char('"')) {
+        if (valueStr.at(pos) == u'"') {
             valueStr.remove(pos, 1);
         }
         // Store as String
@@ -988,13 +988,13 @@ void ThunderbirdSettings::insertIntoMap(const QString &line)
     }
     if (key.contains(QLatin1StringView("ldap_")) && key.endsWith(QLatin1StringView(".description"))) {
         QString ldapAccountName = key;
-        mLdapAccountList.append(ldapAccountName.remove(QStringLiteral(".description")));
+        mLdapAccountList.append(ldapAccountName.remove(u".description"_s));
     }
     if (key.contains(QLatin1StringView("mailnews.tags.")) && (key.endsWith(QLatin1StringView(".color")) || key.endsWith(QLatin1StringView(".tag")))) {
         QString name = key;
-        name.remove(QStringLiteral("mailnews.tags."));
-        name.remove(QStringLiteral(".color"));
-        name.remove(QStringLiteral(".tag"));
+        name.remove(u"mailnews.tags."_s);
+        name.remove(u".color"_s);
+        name.remove(u".tag"_s);
         tagStruct tag;
         if (mHashTag.contains(name)) {
             tag = mHashTag.value(name);
@@ -1012,7 +1012,7 @@ void ThunderbirdSettings::insertIntoMap(const QString &line)
 
 void ThunderbirdSettings::addNewMailNotifier(const QString &group, const QString &key, bool value)
 {
-    KConfig config(QStringLiteral("akonadi_newmailnotifier_agentrc"));
+    KConfig config(u"akonadi_newmailnotifier_agentrc"_s);
     KConfigGroup grp = config.group(group);
     grp.writeEntry(key, value);
 }

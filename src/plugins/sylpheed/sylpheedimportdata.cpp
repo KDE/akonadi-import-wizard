@@ -5,6 +5,8 @@
 */
 
 #include "sylpheedimportdata.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <MailImporter/FilterInfo>
 #include <MailImporter/FilterSylpheed>
 
@@ -37,7 +39,7 @@ bool SylpheedImportData::foundMailer() const
 
 QString SylpheedImportData::name() const
 {
-    return QStringLiteral("Sylpheed");
+    return u"Sylpheed"_s;
 }
 
 bool SylpheedImportData::importSettings()

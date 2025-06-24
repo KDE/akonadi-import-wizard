@@ -5,6 +5,8 @@
 */
 
 #include "trojitaimportdata.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "trojitaaddressbook.h"
 #include "trojitasettings.h"
 #include <MailImporter/FilterInfo>
@@ -35,7 +37,7 @@ bool TrojitaImportData::foundMailer() const
 
 QString TrojitaImportData::name() const
 {
-    return QStringLiteral("Trojita");
+    return u"Trojita"_s;
 }
 
 bool TrojitaImportData::importMails()

@@ -5,6 +5,7 @@
 */
 
 #include "thunderbirdimportdata.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "abstractdisplayinfo.h"
 #include "thunderbirdaddressbook.h"
@@ -57,7 +58,7 @@ bool ThunderbirdImportData::importAddressBook()
 
 QString ThunderbirdImportData::name() const
 {
-    return QStringLiteral("Thunderbird");
+    return u"Thunderbird"_s;
 }
 
 bool ThunderbirdImportData::importSettings()
@@ -101,12 +102,12 @@ bool ThunderbirdImportData::importFilters()
     }
 
     for (const QString &mailPath : subDir) {
-        const QString subMailPath(path + QLatin1Char('/') + mailPath);
+        const QString subMailPath(path + u'/' + mailPath);
         QDir dirMail(subMailPath);
         const QStringList subDirMail = dirMail.entryList(QDir::AllDirs | QDir::NoDotAndDotDot, QDir::Name);
         bool foundFilterFile = false;
         for (const QString &file : subDirMail) {
-            const QString filterFile(subMailPath + QLatin1Char('/') + file + QLatin1StringView("/msgFilterRules.dat"));
+            const QString filterFile(subMailPath + u'/' + file + QLatin1StringView("/msgFilterRules.dat"));
             if (QFileInfo::exists(filterFile)) {
                 foundFilterFile = true;
                 const bool added = addFilters(filterFile, MailCommon::FilterImporterExporter::ThunderBirdFilter);

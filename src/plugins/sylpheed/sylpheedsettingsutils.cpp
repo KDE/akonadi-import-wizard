@@ -5,12 +5,13 @@
 */
 
 #include "sylpheedsettingsutils.h"
+using namespace Qt::Literals::StringLiterals;
 
 bool SylpheedSettingsUtils::readConfig(const QString &key, const KConfigGroup &accountConfig, int &value, bool remove_underscore)
 {
     QString cleanedKey(key);
     if (remove_underscore) {
-        cleanedKey.remove(QLatin1Char('_'));
+        cleanedKey.remove(u'_');
     }
     const QString useKey = QLatin1StringView("set_") + cleanedKey;
     if (accountConfig.hasKey(useKey) && (accountConfig.readEntry(useKey, 0) == 1)) {
@@ -24,7 +25,7 @@ bool SylpheedSettingsUtils::readConfig(const QString &key, const KConfigGroup &a
 {
     QString cleanedKey(key);
     if (remove_underscore) {
-        cleanedKey.remove(QLatin1Char('_'));
+        cleanedKey.remove(u'_');
     }
     const QString useKey = QLatin1StringView("set_") + cleanedKey;
     if (accountConfig.hasKey(useKey) && (accountConfig.readEntry(useKey, 0) == 1)) {

@@ -5,6 +5,8 @@
 */
 
 #include "evolutionsettings.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "evolutionutil.h"
 #include "importwizardutil.h"
 #include <MailCommon/MailUtil>
@@ -45,8 +47,8 @@ void EvolutionSettings::loadAccount(const QString &filename)
     for (QDomElement e = config.firstChildElement(); !e.isNull(); e = e.nextSiblingElement()) {
         const QString tag = e.tagName();
         if (tag == QLatin1StringView("entry")) {
-            if (e.hasAttribute(QStringLiteral("name"))) {
-                const QString attr = e.attribute(QStringLiteral("name"));
+            if (e.hasAttribute(u"name"_s)) {
+                const QString attr = e.attribute(u"name"_s);
                 if (attr == QLatin1StringView("accounts")) {
                     readAccount(e);
                 } else if (attr == QLatin1StringView("signatures")) {
@@ -103,13 +105,13 @@ void EvolutionSettings::readLdap(const QString &ldapStr)
         return;
     }
     // Ldap server
-    if (domElement.attribute(QStringLiteral("base_uri")) == QLatin1StringView("ldap://")) {
+    if (domElement.attribute(u"base_uri"_s) == QLatin1StringView("ldap://")) {
         for (QDomElement e = domElement.firstChildElement(); !e.isNull(); e = e.nextSiblingElement()) {
             // const QString name = e.attribute( QLatin1StringView( "name" ) ); We don't use it in kmail
 
             ldapStruct ldap;
-            const QString relative_uri = e.attribute(QStringLiteral("relative_uri"));
-            const QString uri = e.attribute(QStringLiteral("uri"));
+            const QString relative_uri = e.attribute(u"relative_uri"_s);
+            const QString uri = e.attribute(u"uri"_s);
             QUrl url(uri);
             ldap.port = url.port();
             ldap.ldapUrl = url;
@@ -120,12 +122,12 @@ void EvolutionSettings::readLdap(const QString &ldapStr)
                 for (QDomElement property = propertiesElement.firstChildElement(); !property.isNull(); property = property.nextSiblingElement()) {
                     const QString propertyTag = property.tagName();
                     if (propertyTag == QLatin1StringView("property")) {
-                        if (property.hasAttribute(QStringLiteral("name"))) {
-                            const QString propertyName = property.attribute(QStringLiteral("name"));
+                        if (property.hasAttribute(u"name"_s)) {
+                            const QString propertyName = property.attribute(u"name"_s);
                             if (propertyName == QLatin1StringView("timeout")) {
-                                ldap.timeout = property.attribute(QStringLiteral("value")).toInt();
+                                ldap.timeout = property.attribute(u"value"_s).toInt();
                             } else if (propertyName == QLatin1StringView("ssl")) {
-                                const QString value = property.attribute(QStringLiteral("value"));
+                                const QString value = property.attribute(u"value"_s);
                                 if (value == QLatin1StringView("always")) {
                                     ldap.useSSL = true;
                                 } else if (value == QLatin1StringView("whenever_possible")) {
@@ -134,11 +136,11 @@ void EvolutionSettings::readLdap(const QString &ldapStr)
                                     qCDebug(EVOLUTIONPLUGIN_LOG) << " ssl attribute unknown" << value;
                                 }
                             } else if (propertyName == QLatin1StringView("limit")) {
-                                ldap.limit = property.attribute(QStringLiteral("value")).toInt();
+                                ldap.limit = property.attribute(u"value"_s).toInt();
                             } else if (propertyName == QLatin1StringView("binddn")) {
-                                ldap.dn = property.attribute(QStringLiteral("value"));
+                                ldap.dn = property.attribute(u"value"_s);
                             } else if (propertyName == QLatin1StringView("auth")) {
-                                const QString value = property.attribute(QStringLiteral("value"));
+                                const QString value = property.attribute(u"value"_s);
                                 if (value == QLatin1StringView("ldap/simple-email")) {
                                     // TODO:
                                 } else if (value == QLatin1StringView("none")) {
@@ -191,10 +193,10 @@ void EvolutionSettings::extractSignatureInfo(const QString &info)
         KIdentityManagementCore::Signature signature;
 
         const QString tag = e.tagName();
-        const QString uid = e.attribute(QStringLiteral("uid"));
-        const QString signatureName = e.attribute(QStringLiteral("name")); // Use it ?
-        const QString format = e.attribute(QStringLiteral("text"));
-        const bool automatic = (e.attribute(QStringLiteral("auto")) == QLatin1StringView("true"));
+        const QString uid = e.attribute(u"uid"_s);
+        const QString signatureName = e.attribute(u"name"_s); // Use it ?
+        const QString format = e.attribute(u"text"_s);
+        const bool automatic = (e.attribute(u"auto"_s) == QLatin1StringView("true"));
         if (automatic) {
             // TODO:
         } else {
@@ -205,7 +207,7 @@ void EvolutionSettings::extractSignatureInfo(const QString &info)
             }
 
             if (tag == QLatin1StringView("filename")) {
-                if (e.hasAttribute(QStringLiteral("script")) && e.attribute(QStringLiteral("script")) == QLatin1StringView("true")) {
+                if (e.hasAttribute(u"script"_s) && e.attribute(u"script"_s) == QLatin1StringView("true")) {
                     signature.setPath(e.text(), true);
                     signature.setType(KIdentityManagementCore::Signature::FromCommand);
                 } else {
@@ -247,13 +249,13 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
     }
 
     QString name;
-    if (domElement.hasAttribute(QStringLiteral("name"))) {
-        name = domElement.attribute(QStringLiteral("name"));
+    if (domElement.hasAttribute(u"name"_s)) {
+        name = domElement.attribute(u"name"_s);
     }
 
     KIdentityManagementCore::Identity *newIdentity = createIdentity(name);
 
-    const bool enableManualCheck = (domElement.attribute(QStringLiteral("enabled")) == QLatin1StringView("true"));
+    const bool enableManualCheck = (domElement.attribute(u"enabled"_s) == QLatin1StringView("true"));
 
     for (QDomElement e = domElement.firstChildElement(); !e.isNull(); e = e.nextSiblingElement()) {
         const QString tag = e.tagName();
@@ -269,8 +271,8 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                 } else if (identityTag == QLatin1StringView("organization")) {
                     newIdentity->setOrganization(identity.text());
                 } else if (identityTag == QLatin1StringView("signature")) {
-                    if (identity.hasAttribute(QStringLiteral("uid"))) {
-                        newIdentity->setSignature(mMapSignature.value(identity.attribute(QStringLiteral("uid"))));
+                    if (identity.hasAttribute(u"uid"_s)) {
+                        newIdentity->setSignature(mMapSignature.value(identity.attribute(u"uid"_s)));
                     }
                 } else if (identityTag == QLatin1StringView("reply-to")) {
                     newIdentity->setReplyToAddr(identity.text());
@@ -279,16 +281,16 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                 }
             }
         } else if (tag == QLatin1StringView("source")) {
-            if (e.hasAttribute(QStringLiteral("save-passwd")) && e.attribute(QStringLiteral("save-passwd")) == QLatin1StringView("true")) {
+            if (e.hasAttribute(u"save-passwd"_s) && e.attribute(u"save-passwd"_s) == QLatin1StringView("true")) {
                 // TODO
             }
             int interval = -1;
             bool intervalCheck = false;
-            if (e.hasAttribute(QStringLiteral("auto-check"))) {
-                intervalCheck = (e.attribute(QStringLiteral("auto-check")) == QLatin1StringView("true"));
+            if (e.hasAttribute(u"auto-check"_s)) {
+                intervalCheck = (e.attribute(u"auto-check"_s) == QLatin1StringView("true"));
             }
-            if (e.hasAttribute(QStringLiteral("auto-check-timeout"))) {
-                interval = e.attribute(QStringLiteral("auto-check-timeout")).toInt();
+            if (e.hasAttribute(u"auto-check-timeout"_s)) {
+                interval = e.attribute(u"auto-check-timeout"_s).toInt();
             }
             for (QDomElement server = e.firstChildElement(); !server.isNull(); server = server.nextSiblingElement()) {
                 const QString serverTag = server.tagName();
@@ -303,45 +305,44 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                     qCDebug(EVOLUTIONPLUGIN_LOG) << " path !" << path;
                     const QString userName = serverUrl.userInfo();
 
-                    const QStringList listArgument = path.split(QLatin1Char(';'));
+                    const QStringList listArgument = path.split(u';');
 
                     // imapx://name@pop3.xx.org:993/;security-method=ssl-on-alternate-port;namespace;shell-command=ssh%20-C%20-l%20%25u%20%25h%20exec%20/usr/sbin/imapd%20;use-shell-command=true
                     if (scheme == QLatin1StringView("imap") || scheme == QLatin1StringView("imapx")) {
                         if (port > 0) {
-                            settings.insert(QStringLiteral("ImapPort"), port);
+                            settings.insert(u"ImapPort"_s, port);
                         }
                         // Perhaps imapx is specific don't know
                         if (intervalCheck) {
-                            settings.insert(QStringLiteral("IntervalCheckEnabled"), true);
+                            settings.insert(u"IntervalCheckEnabled"_s, true);
                         }
                         if (interval > -1) {
-                            settings.insert(QStringLiteral("IntervalCheckTime"), interval);
+                            settings.insert(u"IntervalCheckTime"_s, interval);
                         }
 
                         bool found = false;
                         const QString securityMethod = getSecurityMethod(listArgument, found);
                         if (found) {
                             if (securityMethod == QLatin1StringView("none")) {
-                                settings.insert(QStringLiteral("Safety"), QStringLiteral("None"));
+                                settings.insert(u"Safety"_s, u"None"_s);
                                 // Nothing
                             } else if (securityMethod == QLatin1StringView("ssl-on-alternate-port")) {
-                                settings.insert(QStringLiteral("Safety"), QStringLiteral("SSL"));
+                                settings.insert(u"Safety"_s, u"SSL"_s);
                             } else {
                                 qCDebug(EVOLUTIONPLUGIN_LOG) << " security method unknown : " << path;
                             }
                         } else {
-                            settings.insert(QStringLiteral("Safety"), QStringLiteral("STARTTLS"));
+                            settings.insert(u"Safety"_s, u"STARTTLS"_s);
                         }
 
-                        addAuth(settings, QStringLiteral("Authentication"), userName);
-                        const QString agentIdentifyName =
-                            LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, settings);
+                        addAuth(settings, u"Authentication"_s, userName);
+                        const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(u"akonadi_imap_resource"_s, name, settings);
                         // By default
                         addCheckMailOnStartup(agentIdentifyName, enableManualCheck);
                         addToManualCheck(agentIdentifyName, enableManualCheck);
                     } else if (scheme == QLatin1StringView("pop")) {
                         if (port > 0) {
-                            settings.insert(QStringLiteral("Port"), port);
+                            settings.insert(u"Port"_s, port);
                         }
                         bool found = false;
                         const QString securityMethod = getSecurityMethod(listArgument, found);
@@ -349,37 +350,36 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                             if (securityMethod == QLatin1StringView("none")) {
                                 // Nothing
                             } else if (securityMethod == QLatin1StringView("ssl-on-alternate-port")) {
-                                settings.insert(QStringLiteral("UseSSL"), true);
+                                settings.insert(u"UseSSL"_s, true);
                             } else {
                                 qCDebug(EVOLUTIONPLUGIN_LOG) << " security method unknown : " << path;
                             }
                         } else {
-                            settings.insert(QStringLiteral("UseTLS"), true);
+                            settings.insert(u"UseTLS"_s, true);
                         }
 
                         if (intervalCheck) {
-                            settings.insert(QStringLiteral("IntervalCheckEnabled"), true);
+                            settings.insert(u"IntervalCheckEnabled"_s, true);
                         }
                         if (interval > -1) {
-                            settings.insert(QStringLiteral("IntervalCheckInterval"), interval);
+                            settings.insert(u"IntervalCheckInterval"_s, interval);
                         }
-                        if (e.hasAttribute(QStringLiteral("keep-on-server")) && e.attribute(QStringLiteral("keep-on-server")) == QLatin1StringView("true")) {
-                            settings.insert(QStringLiteral("LeaveOnServer"), true);
+                        if (e.hasAttribute(u"keep-on-server"_s) && e.attribute(u"keep-on-server"_s) == QLatin1StringView("true")) {
+                            settings.insert(u"LeaveOnServer"_s, true);
                         }
-                        addAuth(settings, QStringLiteral("AuthenticationMethod"), userName);
-                        const QString agentIdentifyName =
-                            LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_pop3_resource"), name, settings);
+                        addAuth(settings, u"AuthenticationMethod"_s, userName);
+                        const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(u"akonadi_pop3_resource"_s, name, settings);
                         // By default
                         addCheckMailOnStartup(agentIdentifyName, enableManualCheck);
                         addToManualCheck(agentIdentifyName, enableManualCheck);
                     } else if (scheme == QLatin1StringView("spool") || scheme == QLatin1StringView("mbox")) {
                         // mbox file
-                        settings.insert(QStringLiteral("Path"), path);
-                        settings.insert(QStringLiteral("DisplayName"), name);
-                        LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_mbox_resource"), name, settings);
+                        settings.insert(u"Path"_s, path);
+                        settings.insert(u"DisplayName"_s, name);
+                        LibImportWizard::AbstractBase::createResource(u"akonadi_mbox_resource"_s, name, settings);
                     } else if (scheme == QLatin1StringView("maildir") || scheme == QLatin1StringView("spooldir")) {
-                        settings.insert(QStringLiteral("Path"), path);
-                        LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_maildir_resource"), name, settings);
+                        settings.insert(u"Path"_s, path);
+                        LibImportWizard::AbstractBase::createResource(u"akonadi_maildir_resource"_s, name, settings);
                     } else if (scheme == QLatin1StringView("nntp")) {
                         // FIXME in the future
                         qCDebug(EVOLUTIONPLUGIN_LOG) << " For the moment we can't import nntp resource";
@@ -391,12 +391,12 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
                 }
             }
         } else if (tag == QLatin1StringView("transport")) {
-            if (e.hasAttribute(QStringLiteral("save-passwd")) && e.attribute(QStringLiteral("save-passwd")) == QLatin1StringView("true")) {
+            if (e.hasAttribute(u"save-passwd"_s) && e.attribute(u"save-passwd"_s) == QLatin1StringView("true")) {
                 // TODO save to kwallet ?
             }
 
             MailTransport::Transport *transport = createTransport();
-            transport->setIdentifier(QStringLiteral("SMTP"));
+            transport->setIdentifier(u"SMTP"_s);
             for (QDomElement smtp = e.firstChildElement(); !smtp.isNull(); smtp = smtp.nextSiblingElement()) {
                 const QString smtpTag = smtp.tagName();
                 if (smtpTag == QLatin1StringView("url")) {
@@ -439,7 +439,7 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
 
                         const QString path = smtpUrl.path();
                         found = false;
-                        const QStringList listArgument = path.split(QLatin1Char(';'));
+                        const QStringList listArgument = path.split(u';');
                         const QString securityMethod = getSecurityMethod(listArgument, found);
                         if (found) {
                             if (securityMethod == QLatin1StringView("none")) {
@@ -459,13 +459,13 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
             }
             storeTransport(transport, true);
         } else if (tag == QLatin1StringView("drafts-folder")) {
-            const QString selectedFolder = MailCommon::Util::convertFolderPathToCollectionStr(e.text().remove(QStringLiteral("folder://")));
+            const QString selectedFolder = MailCommon::Util::convertFolderPathToCollectionStr(e.text().remove(u"folder://"_s));
             newIdentity->setDrafts(selectedFolder);
         } else if (tag == QLatin1StringView("sent-folder")) {
-            const QString selectedFolder = MailCommon::Util::convertFolderPathToCollectionStr(e.text().remove(QStringLiteral("folder://")));
+            const QString selectedFolder = MailCommon::Util::convertFolderPathToCollectionStr(e.text().remove(u"folder://"_s));
             newIdentity->setFcc(selectedFolder);
         } else if (tag == QLatin1StringView("auto-cc")) {
-            if (e.hasAttribute(QStringLiteral("always")) && (e.attribute(QStringLiteral("always")) == QLatin1StringView("true"))) {
+            if (e.hasAttribute(u"always"_s) && (e.attribute(u"always"_s) == QLatin1StringView("true"))) {
                 QDomElement recipient = e.firstChildElement();
                 const QString text = recipient.text();
                 newIdentity->setCc(text);
@@ -473,37 +473,37 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
         } else if (tag == QLatin1StringView("reply-to")) {
             newIdentity->setReplyToAddr(e.text());
         } else if (tag == QLatin1StringView("auto-bcc")) {
-            if (e.hasAttribute(QStringLiteral("always")) && (e.attribute(QStringLiteral("always")) == QLatin1StringView("true"))) {
+            if (e.hasAttribute(u"always"_s) && (e.attribute(u"always"_s) == QLatin1StringView("true"))) {
                 QDomElement recipient = e.firstChildElement();
                 const QString text = recipient.text();
                 newIdentity->setBcc(text);
             }
         } else if (tag == QLatin1StringView("receipt-policy")) {
-            if (e.hasAttribute(QStringLiteral("policy"))) {
-                const QString policy = e.attribute(QStringLiteral("policy"));
+            if (e.hasAttribute(u"policy"_s)) {
+                const QString policy = e.attribute(u"policy"_s);
                 // TODO
             }
         } else if (tag == QLatin1StringView("pgp")) {
-            if (e.hasAttribute(QStringLiteral("encrypt-to-self")) && (e.attribute(QStringLiteral("encrypt-to-self")) == QLatin1StringView("true"))) {
+            if (e.hasAttribute(u"encrypt-to-self"_s) && (e.attribute(u"encrypt-to-self"_s) == QLatin1StringView("true"))) {
                 // TODO
             }
-            if (e.hasAttribute(QStringLiteral("always-trust")) && (e.attribute(QStringLiteral("always-trust")) == QLatin1StringView("true"))) {
+            if (e.hasAttribute(u"always-trust"_s) && (e.attribute(u"always-trust"_s) == QLatin1StringView("true"))) {
                 // TODO
             }
-            if (e.hasAttribute(QStringLiteral("always-sign")) && (e.attribute(QStringLiteral("always-sign")) == QLatin1StringView("true"))) {
+            if (e.hasAttribute(u"always-sign"_s) && (e.attribute(u"always-sign"_s) == QLatin1StringView("true"))) {
                 // TODO
             }
-            if (e.hasAttribute(QStringLiteral("no-imip-sign")) && (e.attribute(QStringLiteral("no-imip-sign")) == QLatin1StringView("true"))) {
+            if (e.hasAttribute(u"no-imip-sign"_s) && (e.attribute(u"no-imip-sign"_s) == QLatin1StringView("true"))) {
                 // TODO
             }
         } else if (tag == QLatin1StringView("smime")) {
-            if (e.hasAttribute(QStringLiteral("sign-default")) && (e.attribute(QStringLiteral("sign-default")) == QLatin1StringView("true"))) {
+            if (e.hasAttribute(u"sign-default"_s) && (e.attribute(u"sign-default"_s) == QLatin1StringView("true"))) {
                 // TODO
             }
-            if (e.hasAttribute(QStringLiteral("encrypt-default")) && (e.attribute(QStringLiteral("encrypt-default")) == QLatin1StringView("true"))) {
+            if (e.hasAttribute(u"encrypt-default"_s) && (e.attribute(u"encrypt-default"_s) == QLatin1StringView("true"))) {
                 // TODO
             }
-            if (e.hasAttribute(QStringLiteral("encrypt-to-self")) && (e.attribute(QStringLiteral("encrypt-to-self")) == QLatin1StringView("true"))) {
+            if (e.hasAttribute(u"encrypt-to-self"_s) && (e.attribute(u"encrypt-to-self"_s) == QLatin1StringView("true"))) {
                 // TODO
             }
             // TODO

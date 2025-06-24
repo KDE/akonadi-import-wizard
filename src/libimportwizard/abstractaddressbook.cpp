@@ -4,6 +4,8 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "abstractaddressbook.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "abstractdisplayinfo.h"
 
 #include "libimportwizard_debug.h"
@@ -62,7 +64,7 @@ void AbstractAddressBook::addImportContactNote(KContacts::Addressee &address, co
 {
     QString currentNote = address.note();
     if (!currentNote.isEmpty()) {
-        currentNote += QLatin1Char('\n');
+        currentNote += u'\n';
     }
     currentNote += i18n("Imported from \"%1\"", applicationName);
     address.setNote(currentNote);

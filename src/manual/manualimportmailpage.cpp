@@ -5,6 +5,7 @@
 */
 
 #include "manualimportmailpage.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <QStandardPaths>
 
@@ -13,7 +14,7 @@ ManualImportMailPage::ManualImportMailPage(QWidget *parent)
 {
     mWidget = new Ui::ManualImportMailPage;
     mWidget->setupUi(this);
-    mWidget->mIntroSidebar->setPixmap(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("importwizard/pics/step1.png")));
+    mWidget->mIntroSidebar->setPixmap(QStandardPaths::locate(QStandardPaths::GenericDataLocation, u"importwizard/pics/step1.png"_s));
 }
 
 ManualImportMailPage::~ManualImportMailPage()

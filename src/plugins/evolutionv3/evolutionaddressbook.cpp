@@ -4,6 +4,8 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "evolutionaddressbook.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "abstractdisplayinfo.h"
 
 #include <KLocalizedString>
@@ -29,7 +31,7 @@ void EvolutionAddressBook::exportEvolutionAddressBook()
     QFile evolutionFile;
     bool found = false;
     for (int i = 0; i < 9; ++i) {
-        evolutionFile.setFileName(QStringLiteral("/usr/lib/evolution/3.%1/evolution-addressbook-export").arg(i));
+        evolutionFile.setFileName(u"/usr/lib/evolution/3.%1/evolution-addressbook-export"_s.arg(i));
         if (evolutionFile.exists()) {
             found = true;
             break;
@@ -37,7 +39,7 @@ void EvolutionAddressBook::exportEvolutionAddressBook()
     }
     if (found) {
         QStringList arguments;
-        arguments << QStringLiteral("-l");
+        arguments << u"-l"_s;
         QProcess proc;
         proc.start(evolutionFile.fileName(), arguments);
         if (!proc.waitForFinished()) {
@@ -48,7 +50,7 @@ void EvolutionAddressBook::exportEvolutionAddressBook()
         if (!result.isEmpty()) {
             result.replace('\n', ',');
             const QString value(QString::fromLatin1(result.trimmed()));
-            const QStringList listAddressBook = value.split(QLatin1Char(','));
+            const QStringList listAddressBook = value.split(u',');
             // qCDebug(EVOLUTIONPLUGIN_LOG)<<" listAddressBook"<<listAddressBook;
             int i = 0;
             QString name;
@@ -72,7 +74,7 @@ void EvolutionAddressBook::exportEvolutionAddressBook()
                 case 2:
                     if (!displayname.isEmpty() && !name.isEmpty()) {
                         arguments.clear();
-                        arguments << QStringLiteral("--format=vcard") << name << QStringLiteral("--output=%1/%2.vcard").arg(directory, displayname);
+                        arguments << u"--format=vcard"_s << name << u"--output=%1/%2.vcard"_s.arg(directory, displayname);
                         proc.start(evolutionFile.fileName(), arguments);
                         if (proc.waitForFinished()) {
                             addAddressBookImportInfo(i18n("Address book \"%1\" exported.", displayname));

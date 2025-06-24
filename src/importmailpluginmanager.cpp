@@ -5,6 +5,8 @@
 */
 
 #include "importmailpluginmanager.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "abstractimporter.h"
 #include "importwizard_debug.h"
 #include <KPluginFactory>
@@ -14,7 +16,7 @@ namespace
 {
 QString pluginVersion()
 {
-    return QStringLiteral("1.0");
+    return u"1.0"_s;
 }
 }
 
@@ -34,7 +36,7 @@ ImportMailPluginManager *ImportMailPluginManager::self()
 
 bool ImportMailPluginManager::initializePluginList()
 {
-    const QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("pim6/importwizard"));
+    const QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(u"pim6/importwizard"_s);
     QListIterator<KPluginMetaData> i(plugins);
     i.toBack();
     while (i.hasPrevious()) {

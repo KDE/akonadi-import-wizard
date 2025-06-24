@@ -5,6 +5,7 @@
 */
 
 #include "selectprogramlistwidget.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 #include <QPainter>

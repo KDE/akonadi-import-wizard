@@ -5,6 +5,8 @@
 */
 
 #include "evolutioncalendar.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "evolutionutil.h"
 
 #include "evolutionv3plugin_debug.h"
@@ -40,8 +42,8 @@ void EvolutionCalendar::loadCalendar(const QString &filename)
     for (QDomElement e = config.firstChildElement(); !e.isNull(); e = e.nextSiblingElement()) {
         const QString tag = e.tagName();
         if (tag == QLatin1StringView("entry")) {
-            if (e.hasAttribute(QStringLiteral("name"))) {
-                const QString attr = e.attribute(QStringLiteral("name"));
+            if (e.hasAttribute(u"name"_s)) {
+                const QString attr = e.attribute(u"name"_s);
                 if (attr == QLatin1StringView("sources")) {
                     readCalendar(e);
                 } else {
@@ -77,8 +79,8 @@ void EvolutionCalendar::extractCalendarInfo(const QString &info)
         return;
     }
     QString base_uri;
-    if (domElement.hasAttribute(QStringLiteral("base_uri"))) {
-        base_uri = domElement.attribute(QStringLiteral("base_uri"));
+    if (domElement.hasAttribute(u"base_uri"_s)) {
+        base_uri = domElement.attribute(u"base_uri"_s);
     }
     if (base_uri == QLatin1StringView("local:")) {
         for (QDomElement e = domElement.firstChildElement(); !e.isNull(); e = e.nextSiblingElement()) {
@@ -86,17 +88,17 @@ void EvolutionCalendar::extractCalendarInfo(const QString &info)
             if (tag == QLatin1StringView("source")) {
                 QString name;
                 QMap<QString, QVariant> settings;
-                if (e.hasAttribute(QStringLiteral("uid"))) { }
-                if (e.hasAttribute(QStringLiteral("name"))) {
-                    name = e.attribute(QStringLiteral("name"));
-                    settings.insert(QStringLiteral("DisplayName"), name);
+                if (e.hasAttribute(u"uid"_s)) { }
+                if (e.hasAttribute(u"name"_s)) {
+                    name = e.attribute(u"name"_s);
+                    settings.insert(u"DisplayName"_s, name);
                 }
-                if (e.hasAttribute(QStringLiteral("relative_uri"))) {
-                    const QString path = mCalendarPath + e.attribute(QStringLiteral("relative_uri")) + QLatin1StringView("/calendar.ics");
-                    settings.insert(QStringLiteral("Path"), path);
+                if (e.hasAttribute(u"relative_uri"_s)) {
+                    const QString path = mCalendarPath + e.attribute(u"relative_uri"_s) + QLatin1StringView("/calendar.ics");
+                    settings.insert(u"Path"_s, path);
                 }
-                if (e.hasAttribute(QStringLiteral("color_spec"))) {
-                    // const QString color = e.attribute(QStringLiteral("color_spec"));
+                if (e.hasAttribute(u"color_spec"_s)) {
+                    // const QString color = e.attribute(u"color_spec"_s);
                     // Need id.
                     // TODO: Need to get id for collection to add color.
                 }
@@ -105,12 +107,12 @@ void EvolutionCalendar::extractCalendarInfo(const QString &info)
                     for (QDomElement property = propertiesElement.firstChildElement(); !property.isNull(); property = property.nextSiblingElement()) {
                         const QString propertyTag = property.tagName();
                         if (propertyTag == QLatin1StringView("property")) {
-                            if (property.hasAttribute(QStringLiteral("name"))) {
-                                const QString propertyName = property.attribute(QStringLiteral("name"));
+                            if (property.hasAttribute(u"name"_s)) {
+                                const QString propertyName = property.attribute(u"name"_s);
                                 if (propertyName == QLatin1StringView("custom-file-readonly")) {
-                                    if (property.hasAttribute(QStringLiteral("value"))) {
-                                        if (property.attribute(QStringLiteral("value")) == QLatin1Char('1')) {
-                                            settings.insert(QStringLiteral("ReadOnly"), true);
+                                    if (property.hasAttribute(u"value"_s)) {
+                                        if (property.attribute(u"value"_s) == u'1') {
+                                            settings.insert(u"ReadOnly"_s, true);
                                         }
                                     }
                                 } else if (propertyName == QLatin1StringView("alarm")) {
@@ -124,7 +126,7 @@ void EvolutionCalendar::extractCalendarInfo(const QString &info)
                         }
                     }
                 }
-                LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_ical_resource"), name, settings);
+                LibImportWizard::AbstractBase::createResource(u"akonadi_ical_resource"_s, name, settings);
             } else {
                 qCDebug(EVOLUTIONPLUGIN_LOG) << " tag unknown :" << tag;
             }

@@ -5,6 +5,8 @@
 */
 
 #include "importfinishpage.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "ui_importfinishpage.h"
 #include <QTime>
 
@@ -22,7 +24,7 @@ ImportFinishPage::~ImportFinishPage()
 
 void ImportFinishPage::addImportInfo(const QString &log)
 {
-    ui->logFinish->addInfoLogEntry(QStringLiteral("[%1] ").arg(QTime::currentTime().toString()) + log);
+    ui->logFinish->addInfoLogEntry(u"[%1] "_s.arg(QTime::currentTime().toString()) + log);
 }
 
 void ImportFinishPage::addImportError(const QString &log)

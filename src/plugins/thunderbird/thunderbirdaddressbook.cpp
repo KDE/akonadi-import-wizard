@@ -5,6 +5,8 @@
 */
 
 #include "thunderbirdaddressbook.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "addressbook/MorkParser.h"
 
 #include "thunderbirdplugin_debug.h"
@@ -23,15 +25,15 @@ void ThunderBirdAddressBook::importAddressBook()
 {
     const QString path = mDir.path();
     readAddressBook(path + QLatin1StringView("/impab.mab"));
-    const QStringList filesimportab = mDir.entryList(QStringList(QStringLiteral("impab-[0-9]*.map")), QDir::Files, QDir::Name);
+    const QStringList filesimportab = mDir.entryList(QStringList(u"impab-[0-9]*.map"_s), QDir::Files, QDir::Name);
     for (const QString &file : filesimportab) {
-        readAddressBook(path + QLatin1Char('/') + file);
+        readAddressBook(path + u'/' + file);
     }
     readAddressBook(path + QLatin1StringView("/abook.mab"));
 
-    const QStringList files = mDir.entryList(QStringList(QStringLiteral("abook-[0-9]*.map")), QDir::Files, QDir::Name);
+    const QStringList files = mDir.entryList(QStringList(u"abook-[0-9]*.map"_s), QDir::Files, QDir::Name);
     for (const QString &file : files) {
-        readAddressBook(path + QLatin1Char('/') + file);
+        readAddressBook(path + u'/' + file);
     }
     readAddressBook(path + QLatin1StringView("/history.mab"));
 
@@ -131,11 +133,11 @@ void ThunderBirdAddressBook::readAddressBook(const QString &filename)
                                 } else if (column == QLatin1StringView("SecondEmail")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
                                 } else if (column == QLatin1StringView("PreferMailFormat")) {
-                                    contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("MailPreferedFormatting"), value);
+                                    contact.insertCustom(u"KADDRESSBOOK"_s, u"MailPreferedFormatting"_s, value);
                                 } else if (column == QLatin1StringView("PopularityIndex")) {
                                     qCDebug(THUNDERBIRDPLUGIN_LOG) << " column " << column << " found but not imported. Need to look at how to import it";
                                 } else if (column == QLatin1StringView("AllowRemoteContent")) {
-                                    contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("MailAllowToRemoteContent"), value);
+                                    contact.insertCustom(u"KADDRESSBOOK"_s, u"MailAllowToRemoteContent"_s, value);
                                 } else if (column == QLatin1StringView("WorkPhone")) {
                                     contact.insertPhoneNumber(KContacts::PhoneNumber(value, KContacts::PhoneNumber::Work));
                                 } else if (column == QLatin1StringView("HomePhone")) {
@@ -211,13 +213,13 @@ void ThunderBirdAddressBook::readAddressBook(const QString &filename)
                                 } else if (column == QLatin1StringView("BirthDay")) {
                                     birthday = value.toInt();
                                 } else if (column == QLatin1StringView("Custom1")) {
-                                    contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("Custom1"), value);
+                                    contact.insertCustom(u"KADDRESSBOOK"_s, u"Custom1"_s, value);
                                 } else if (column == QLatin1StringView("Custom2")) {
-                                    contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("Custom2"), value);
+                                    contact.insertCustom(u"KADDRESSBOOK"_s, u"Custom2"_s, value);
                                 } else if (column == QLatin1StringView("Custom3")) {
-                                    contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("Custom3"), value);
+                                    contact.insertCustom(u"KADDRESSBOOK"_s, u"Custom3"_s, value);
                                 } else if (column == QLatin1StringView("Custom4")) {
-                                    contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("Custom4"), value);
+                                    contact.insertCustom(u"KADDRESSBOOK"_s, u"Custom4"_s, value);
                                 } else if (column == QLatin1StringView("Notes")) {
                                     contact.setNote(value);
                                 } else {
@@ -237,7 +239,7 @@ void ThunderBirdAddressBook::readAddressBook(const QString &filename)
                             if (birthDate.isValid()) {
                                 contact.setBirthday(birthDate);
                             }
-                            addImportContactNote(contact, QStringLiteral("Thunderbird"));
+                            addImportContactNote(contact, u"Thunderbird"_s);
                             createContact(contact);
                             qCDebug(THUNDERBIRDPLUGIN_LOG) << "-----------------------";
                         }

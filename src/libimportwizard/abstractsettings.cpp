@@ -4,6 +4,8 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "abstractsettings.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "abstractdisplayinfo.h"
 
 #include <KIdentityManagementCore/Identity>
@@ -23,7 +25,7 @@ using namespace Akonadi;
 AbstractSettings::AbstractSettings()
 {
     mManager = KIdentityManagementCore::IdentityManager::self();
-    mKmailConfig = KSharedConfig::openConfig(QStringLiteral("kmail2rc"));
+    mKmailConfig = KSharedConfig::openConfig(u"kmail2rc"_s);
 }
 
 AbstractSettings::~AbstractSettings()
@@ -51,7 +53,7 @@ QString AbstractSettings::uniqueIdentityName(const QString &name)
     QString newName(name);
     int i = 0;
     while (!mManager->isUnique(newName)) {
-        newName = QStringLiteral("%1_%2").arg(name).arg(i);
+        newName = u"%1_%2"_s.arg(name).arg(i);
         ++i;
     }
     return newName;
@@ -96,8 +98,8 @@ void AbstractSettings::addCheckMailOnStartup(const QString &agentIdentifyName, b
     if (agentIdentifyName.isEmpty()) {
         return;
     }
-    const QString groupName = QStringLiteral("Resource %1").arg(agentIdentifyName);
-    addKmailConfig(groupName, QStringLiteral("CheckOnStartup"), loginAtStartup);
+    const QString groupName = u"Resource %1"_s.arg(agentIdentifyName);
+    addKmailConfig(groupName, u"CheckOnStartup"_s, loginAtStartup);
 }
 
 void AbstractSettings::addToManualCheck(const QString &agentIdentifyName, bool manualCheck)
@@ -105,15 +107,15 @@ void AbstractSettings::addToManualCheck(const QString &agentIdentifyName, bool m
     if (agentIdentifyName.isEmpty()) {
         return;
     }
-    const QString groupName = QStringLiteral("Resource %1").arg(agentIdentifyName);
-    addKmailConfig(groupName, QStringLiteral("IncludeInManualChecks"), manualCheck);
+    const QString groupName = u"Resource %1"_s.arg(agentIdentifyName);
+    addKmailConfig(groupName, u"IncludeInManualChecks"_s, manualCheck);
 }
 
 void AbstractSettings::addComposerHeaderGroup(const QString &groupName, const QString &name, const QString &value)
 {
     KConfigGroup group = mKmailConfig->group(groupName);
-    group.writeEntry(QStringLiteral("name"), name);
-    group.writeEntry(QStringLiteral("value"), value);
+    group.writeEntry(u"name"_s, name);
+    group.writeEntry(u"value"_s, value);
 }
 
 void AbstractSettings::addKmailConfig(const QString &groupName, const QString &key, const QString &value)

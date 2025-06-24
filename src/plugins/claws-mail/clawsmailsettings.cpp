@@ -5,6 +5,8 @@
 */
 
 #include "clawsmailsettings.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "importwizardutil.h"
 
 #include <MailCommon/MailUtil>
@@ -31,16 +33,16 @@ void ClawsMailSettings::importSettings(const QString &filename, const QString &p
     if (QFileInfo::exists(clawsmailrc)) {
         KConfig configCommon(clawsmailrc);
         if (configCommon.hasGroup(QLatin1StringView("Common"))) {
-            KConfigGroup common = configCommon.group(QStringLiteral("Common"));
+            KConfigGroup common = configCommon.group(u"Common"_s);
             checkMailOnStartup = (common.readEntry("check_on_startup", 1) == 1);
-            if (common.readEntry(QStringLiteral("autochk_newmail"), 1) == 1) {
-                intervalCheckMail = common.readEntry(QStringLiteral("autochk_interval"), -1);
+            if (common.readEntry(u"autochk_newmail"_s, 1) == 1) {
+                intervalCheckMail = common.readEntry(u"autochk_interval"_s, -1);
             }
             readGlobalSettings(common);
         }
     }
     KConfig config(filename);
-    const QStringList accountList = config.groupList().filter(QRegularExpression(QStringLiteral("Account: \\d+")));
+    const QStringList accountList = config.groupList().filter(QRegularExpression(u"Account: \\d+"_s));
     const QStringList::const_iterator end(accountList.constEnd());
     for (QStringList::const_iterator it = accountList.constBegin(); it != end; ++it) {
         KConfigGroup group = config.group(*it);
@@ -66,7 +68,7 @@ void ClawsMailSettings::readSettingsColor(const KConfigGroup &group)
         if (!colorLevel1.isEmpty()) {
             const QColor col = QColor(colorLevel1);
             if (col.isValid()) {
-                addKmailConfig(QStringLiteral("Reader"), QStringLiteral("QuotedText1"), writeColor(col));
+                addKmailConfig(u"Reader"_s, u"QuotedText1"_s, writeColor(col));
             }
             //[Reader]  QuotedText1
         }
@@ -74,7 +76,7 @@ void ClawsMailSettings::readSettingsColor(const KConfigGroup &group)
         if (!colorLevel2.isEmpty()) {
             const QColor col = QColor(colorLevel2);
             if (col.isValid()) {
-                addKmailConfig(QStringLiteral("Reader"), QStringLiteral("QuotedText2"), writeColor(col));
+                addKmailConfig(u"Reader"_s, u"QuotedText2"_s, writeColor(col));
             }
             //[Reader]  QuotedText2
         }
@@ -82,29 +84,29 @@ void ClawsMailSettings::readSettingsColor(const KConfigGroup &group)
         if (!colorLevel3.isEmpty()) {
             const QColor col = QColor(colorLevel3);
             if (col.isValid()) {
-                addKmailConfig(QStringLiteral("Reader"), QStringLiteral("QuotedText3"), writeColor(col));
+                addKmailConfig(u"Reader"_s, u"QuotedText3"_s, writeColor(col));
             }
             //[Reader]  QuotedText3
         }
-        const QString misspellColor = group.readEntry(QStringLiteral("misspelled_color"));
+        const QString misspellColor = group.readEntry(u"misspelled_color"_s);
         if (!misspellColor.isEmpty()) {
             const QColor col = QColor(misspellColor);
             if (col.isValid()) {
-                addKmailConfig(QStringLiteral("Reader"), QStringLiteral("MisspelledColor"), writeColor(col));
+                addKmailConfig(u"Reader"_s, u"MisspelledColor"_s, writeColor(col));
             }
         }
-        const QString uriColor = group.readEntry(QStringLiteral("uri_color"));
+        const QString uriColor = group.readEntry(u"uri_color"_s);
         if (!uriColor.isEmpty()) {
             const QColor col(uriColor);
             if (col.isValid()) {
-                addKmailConfig(QStringLiteral("Reader"), QStringLiteral("LinkColor"), writeColor(col));
+                addKmailConfig(u"Reader"_s, u"LinkColor"_s, writeColor(col));
             }
         }
-        const QString newColor = group.readEntry(QStringLiteral("color_new"));
+        const QString newColor = group.readEntry(u"color_new"_s);
         if (!newColor.isEmpty()) {
             const QColor col(newColor);
             if (col.isValid()) {
-                addKmailConfig(QStringLiteral("MessageListView::Colors"), QStringLiteral("UnreadMessageColor"), writeColor(col));
+                addKmailConfig(u"MessageListView::Colors"_s, u"UnreadMessageColor"_s, writeColor(col));
             }
         }
     }
@@ -119,45 +121,45 @@ QString ClawsMailSettings::writeColor(const QColor &col)
     if (col.alpha() != 255) {
         list.insert(3, QString::number(col.alpha()));
     }
-    return list.join(QLatin1Char(','));
+    return list.join(u',');
 }
 
 void ClawsMailSettings::readTemplateFormat(const KConfigGroup &group)
 {
     SylpheedSettings::readTemplateFormat(group);
-    const QString composerNewMessage = group.readEntry(QStringLiteral("compose_body_format"));
+    const QString composerNewMessage = group.readEntry(u"compose_body_format"_s);
     if (!composerNewMessage.isEmpty()) {
-        addKmailConfig(QStringLiteral("TemplateParser"), QStringLiteral("TemplateNewMessage"), convertToKmailTemplate(composerNewMessage));
+        addKmailConfig(u"TemplateParser"_s, u"TemplateNewMessage"_s, convertToKmailTemplate(composerNewMessage));
     }
 }
 
 void ClawsMailSettings::readGlobalSettings(const KConfigGroup &group)
 {
     SylpheedSettings::readGlobalSettings(group);
-    if (group.readEntry(QStringLiteral("check_while_typing"), 0) == 1) {
-        addKmailConfig(QStringLiteral("Spelling"), QStringLiteral("backgroundCheckerEnabled"), true);
+    if (group.readEntry(u"check_while_typing"_s, 0) == 1) {
+        addKmailConfig(u"Spelling"_s, u"backgroundCheckerEnabled"_s, true);
     }
-    const int markAsRead = group.readEntry(QStringLiteral("mark_as_read_delay"), -1);
+    const int markAsRead = group.readEntry(u"mark_as_read_delay"_s, -1);
     if (markAsRead != -1) {
-        addKmailConfig(QStringLiteral("Behaviour"), QStringLiteral("DelayedMarkTime"), markAsRead);
-        addKmailConfig(QStringLiteral("Behaviour"), QStringLiteral("DelayedMarkAsRead"), true);
+        addKmailConfig(u"Behaviour"_s, u"DelayedMarkTime"_s, markAsRead);
+        addKmailConfig(u"Behaviour"_s, u"DelayedMarkAsRead"_s, true);
     }
 
-    const int warnLargeFileInserting = group.readEntry(QStringLiteral("warn_large_insert"), 0);
+    const int warnLargeFileInserting = group.readEntry(u"warn_large_insert"_s, 0);
     if (warnLargeFileInserting == 0) {
-        addKmailConfig(QStringLiteral("Composer"), QStringLiteral("MaximumAttachmentSize"), -1);
+        addKmailConfig(u"Composer"_s, u"MaximumAttachmentSize"_s, -1);
     } else {
-        const int warnLargeFileSize = group.readEntry(QStringLiteral("warn_large_insert_size"), -1);
+        const int warnLargeFileSize = group.readEntry(u"warn_large_insert_size"_s, -1);
         if (warnLargeFileSize > 0) {
-            addKmailConfig(QStringLiteral("Composer"), QStringLiteral("MaximumAttachmentSize"), warnLargeFileSize * 1024);
+            addKmailConfig(u"Composer"_s, u"MaximumAttachmentSize"_s, warnLargeFileSize * 1024);
         }
     }
 }
 
 void ClawsMailSettings::readTagColor(const KConfigGroup &group)
 {
-    const QString customColorPattern(QStringLiteral("custom_color%1"));
-    const QString customColorLabelPattern(QStringLiteral("custom_colorlabel%1"));
+    const QString customColorPattern(u"custom_color%1"_s);
+    const QString customColorLabelPattern(u"custom_colorlabel%1"_s);
     QList<tagStruct> listTag;
     for (int i = 1; i <= 15; ++i) {
         if (group.hasKey(customColorPattern.arg(i)) && group.hasKey(customColorLabelPattern.arg(i))) {

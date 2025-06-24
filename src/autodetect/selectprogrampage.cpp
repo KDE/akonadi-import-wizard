@@ -5,6 +5,8 @@
 */
 
 #include "selectprogrampage.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "ui_selectprogrampage.h"
 
 SelectProgramPage::SelectProgramPage(QWidget *parent)

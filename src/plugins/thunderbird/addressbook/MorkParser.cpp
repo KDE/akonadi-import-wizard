@@ -8,6 +8,8 @@
 */
 
 #include "MorkParser.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <QFile>
 #include <QIODevice>
 //        =============================================================
@@ -223,7 +225,7 @@ bool MorkParser::parseCell()
     char cur = nextChar();
 
     // Process cell start with column (bColumn == true)
-    while (Result && cur != QLatin1Char(')') && cur) {
+    while (Result && cur != u')' && cur) {
         switch (cur) {
         case '^':
             // Oids
@@ -321,7 +323,7 @@ bool MorkParser::parseTable()
     char cur = nextChar();
 
     // Get id
-    while (cur != QLatin1Char('{') && cur != QLatin1Char('[') && cur != QLatin1Char('}') && cur) {
+    while (cur != QLatin1Char('{') && cur != u'[' && cur != u'}' && cur) {
         if (!isWhiteSpace(cur)) {
             TextId += QLatin1Char(cur);
         }
@@ -332,7 +334,7 @@ bool MorkParser::parseTable()
     parseScopeId(TextId, Id, Scope);
 
     // Parse the table
-    while (Result && cur != QLatin1Char('}') && cur) {
+    while (Result && cur != u'}' && cur) {
         if (!isWhiteSpace(cur)) {
             switch (cur) {
             case '{':
@@ -350,7 +352,7 @@ bool MorkParser::parseTable()
                     JustId += QLatin1Char(cur);
                     cur = nextChar();
 
-                    if (cur == QLatin1Char('}')) {
+                    if (cur == u'}') {
                         return Result;
                     }
                 }
@@ -378,11 +380,11 @@ void MorkParser::parseScopeId(const QString &textId, int &Id, int &Scope) const
 {
     int Pos = 0;
 
-    if ((Pos = textId.indexOf(QLatin1Char(':'))) >= 0) {
+    if ((Pos = textId.indexOf(u':')) >= 0) {
         QString tId = textId.mid(0, Pos);
         QString tSc = textId.mid(Pos + 1, textId.length() - Pos);
 
-        if (tSc.length() > 1 && tSc[0] == QLatin1Char('^')) {
+        if (tSc.length() > 1 && tSc[0] == u'^') {
             // Delete '^'
             tSc.remove(0, 1);
         }
@@ -424,7 +426,7 @@ bool MorkParser::parseRow(int TableId, int TableScope)
     char cur = nextChar();
 
     // Get id
-    while (cur != QLatin1Char('(') && cur != QLatin1Char(']') && cur != QLatin1Char('[') && cur) {
+    while (cur != QLatin1Char('(') && cur != u']' && cur != u'[' && cur) {
         if (!isWhiteSpace(cur)) {
             TextId += QLatin1Char(cur);
         }

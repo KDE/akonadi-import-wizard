@@ -4,6 +4,8 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "selectcomponentpage.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "ui_selectcomponentpage.h"
 
 SelectComponentPage::SelectComponentPage(QWidget *parent)

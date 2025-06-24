@@ -5,6 +5,8 @@
 */
 
 #include "balsaimportdata.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "balsaaddressbook.h"
 #include "balsasettings.h"
 #include <MailCommon/FilterImporterBalsa>
@@ -36,7 +38,7 @@ bool BalsaImportData::foundMailer() const
 
 QString BalsaImportData::name() const
 {
-    return QStringLiteral("Balsa");
+    return u"Balsa"_s;
 }
 
 bool BalsaImportData::importMails()
@@ -56,7 +58,7 @@ bool BalsaImportData::importMails()
 
 bool BalsaImportData::importAddressBook()
 {
-    const QString addressbookFile(mPath + QStringLiteral("config"));
+    const QString addressbookFile(mPath + u"config"_s);
     BalsaAddressBook addressbook(addressbookFile);
     addressbook.setAbstractDisplayInfo(mAbstractDisplayInfo);
     addressbook.importAddressBook();
@@ -65,7 +67,7 @@ bool BalsaImportData::importAddressBook()
 
 bool BalsaImportData::importSettings()
 {
-    const QString settingFile(mPath + QStringLiteral("config"));
+    const QString settingFile(mPath + u"config"_s);
     BalsaSettings settings(settingFile);
     settings.setAbstractDisplayInfo(mAbstractDisplayInfo);
     settings.importSettings();
@@ -74,7 +76,7 @@ bool BalsaImportData::importSettings()
 
 bool BalsaImportData::importFilters()
 {
-    const QString filterPath = mPath + QStringLiteral("config");
+    const QString filterPath = mPath + u"config"_s;
     return addFilters(filterPath, MailCommon::FilterImporterExporter::BalsaFilter);
 }
 

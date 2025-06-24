@@ -6,6 +6,7 @@
 
 // Local includes
 #include "manualselectfilterpage.h"
+using namespace Qt::Literals::StringLiterals;
 
 // Filter includes
 #include <MailImporter/FilterEvolution>
@@ -45,7 +46,7 @@ ManualSelectFilterPage::ManualSelectFilterPage(QWidget *parent)
     , mWidget(new Ui::ManualSelectFilterPage)
 {
     mWidget->setupUi(this);
-    mWidget->mIntroSidebar->setPixmap(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("importwizard/pics/step1.png")));
+    mWidget->mIntroSidebar->setPixmap(QStandardPaths::locate(QStandardPaths::GenericDataLocation, u"importwizard/pics/step1.png"_s));
     connect(mWidget->mFilterCombo, &QComboBox::activated, this, &ManualSelectFilterPage::filterSelected);
 
     addFilter(new MailImporter::FilterKMailArchive);
