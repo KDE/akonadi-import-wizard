@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadiimportwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-21 00:42+0000\n"
+"POT-Creation-Date: 2025-06-25 00:43+0000\n"
 "PO-Revision-Date: 2024-08-01 20:14+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -30,18 +30,18 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
-#: autodetect/widgets/selectprogramlistwidget.cpp:46
+#: autodetect/widgets/selectprogramlistwidget.cpp:47
 #, kde-format
 msgid "No program found."
 msgstr "Програми не знайдено."
 
-#: importwizard.cpp:41
+#: importwizard.cpp:43
 #, kde-format
 msgctxt "@title:window"
 msgid "PIM Import Tool"
 msgstr "Засіб імпортування особистих даних"
 
-#: importwizard.cpp:70
+#: importwizard.cpp:72
 #, kde-format
 msgid ""
 "Close KMail before importing data. Some plugins will modify KMail config "
@@ -50,161 +50,161 @@ msgstr ""
 "Перш ніж імпортувати дані, завершіть роботу KMail. Деякі з додатків внесуть "
 "зміни до файла налаштувань KMail."
 
-#: importwizard.cpp:126
+#: importwizard.cpp:128
 #, kde-format
 msgid "Step 1: Select Filter"
 msgstr "Крок 1. Вибір фільтра"
 
-#: importwizard.cpp:131
+#: importwizard.cpp:133
 #, kde-format
 msgid "Step 2: Importing..."
 msgstr "Крок 2. Імпортування…"
 
-#: importwizard.cpp:160
+#: importwizard.cpp:162
 #, kde-format
 msgid "Detect program"
 msgstr "Виявлення програми"
 
-#: importwizard.cpp:165
+#: importwizard.cpp:167
 #, kde-format
 msgid "Select material to import"
 msgstr "Виберіть дані, які слід імпортувати"
 
-#: importwizard.cpp:169
+#: importwizard.cpp:171
 #, kde-format
 msgid "Import mail messages"
 msgstr "Імпортування поштових повідомлень"
 
-#: importwizard.cpp:173
+#: importwizard.cpp:175
 #, kde-format
 msgid "Import mail filters"
 msgstr "Імпортування фільтрів пошти"
 
 #. i18n: ectx: property (text), widget (QPushButton, importSettings)
-#: importwizard.cpp:177 ui/autodetect/importsettingpage.ui:47
+#: importwizard.cpp:179 ui/autodetect/importsettingpage.ui:47
 #, kde-format
 msgid "Import settings"
 msgstr "Імпортування налаштувань"
 
-#: importwizard.cpp:181
+#: importwizard.cpp:183
 #, kde-format
 msgid "Import addressbooks"
 msgstr "Імпортування адресних книг"
 
-#: importwizard.cpp:185
+#: importwizard.cpp:187
 #, kde-format
 msgid "Import calendars"
 msgstr "Імпортування календарів"
 
-#: importwizard.cpp:189
+#: importwizard.cpp:191
 #, kde-format
 msgid "Finish"
 msgstr "Завершити"
 
-#: importwizard.cpp:211
+#: importwizard.cpp:213
 #, kde-format
 msgid "Import addressbook from %1..."
 msgstr "Імпортування адресної книги з %1…"
 
-#: importwizard.cpp:214
+#: importwizard.cpp:216
 #, kde-format
 msgid "Import addressbook from %1: Done"
 msgstr "Імпортування адресної книги з %1: виконано"
 
-#: importwizard.cpp:220
+#: importwizard.cpp:222
 #, kde-format
 msgid "Import filters from %1..."
 msgstr "Імпортування фільтрів пошти з %1…"
 
-#: importwizard.cpp:223
+#: importwizard.cpp:225
 #, kde-format
 msgid "Import filters from %1: Done"
 msgstr "Імпортування фільтрів пошти з %1: виконано"
 
-#: importwizard.cpp:229
+#: importwizard.cpp:231
 #, kde-format
 msgid "Import mails from %1..."
 msgstr "Імпортування пошти з %1…"
 
-#: importwizard.cpp:232
+#: importwizard.cpp:234
 #, kde-format
 msgid "Import mails from %1: Done"
 msgstr "Імпортування пошти з %1: виконано"
 
-#: importwizard.cpp:238
+#: importwizard.cpp:240
 #, kde-format
 msgid "Import settings from %1..."
 msgstr "Імпортування налаштувань з %1…"
 
-#: importwizard.cpp:241
+#: importwizard.cpp:243
 #, kde-format
 msgid "Import settings from %1: Done"
 msgstr "Імпортування налаштувань з %1: виконано"
 
-#: importwizard.cpp:247
+#: importwizard.cpp:249
 #, kde-format
 msgid "Import calendar from %1..."
 msgstr "Імпортування календаря з %1…"
 
-#: importwizard.cpp:250
+#: importwizard.cpp:252
 #, kde-format
 msgid "Import calendar from %1: Done"
 msgstr "Імпортування календаря з %1: виконано"
 
-#: importwizard.cpp:339 plugins/balsa/balsaimportdata.cpp:46
-#: plugins/claws-mail/clawsmailimportdata.cpp:47
-#: plugins/evolutionv3/evolutionv3importdata.cpp:66
-#: plugins/icedove/icedoveimportdata.cpp:79
-#: plugins/seamonkey/seamonkeyimportdata.cpp:79
-#: plugins/sylpheed/sylpheedimportdata.cpp:60
-#: plugins/thunderbird/thunderbirdimportdata.cpp:81
+#: importwizard.cpp:341 plugins/balsa/balsaimportdata.cpp:48
+#: plugins/claws-mail/clawsmailimportdata.cpp:49
+#: plugins/evolutionv3/evolutionv3importdata.cpp:68
+#: plugins/icedove/icedoveimportdata.cpp:80
+#: plugins/seamonkey/seamonkeyimportdata.cpp:80
+#: plugins/sylpheed/sylpheedimportdata.cpp:62
+#: plugins/thunderbird/thunderbirdimportdata.cpp:82
 #, kde-format
 msgid "Import in progress"
 msgstr "Триває імпортування"
 
-#: importwizard.cpp:346 plugins/balsa/balsaimportdata.cpp:53
-#: plugins/claws-mail/clawsmailimportdata.cpp:55
-#: plugins/evolutionv3/evolutionv3importdata.cpp:74
-#: plugins/icedove/icedoveimportdata.cpp:87
-#: plugins/seamonkey/seamonkeyimportdata.cpp:87
-#: plugins/sylpheed/sylpheedimportdata.cpp:68
-#: plugins/thunderbird/thunderbirdimportdata.cpp:89
+#: importwizard.cpp:348 plugins/balsa/balsaimportdata.cpp:55
+#: plugins/claws-mail/clawsmailimportdata.cpp:57
+#: plugins/evolutionv3/evolutionv3importdata.cpp:76
+#: plugins/icedove/icedoveimportdata.cpp:88
+#: plugins/seamonkey/seamonkeyimportdata.cpp:88
+#: plugins/sylpheed/sylpheedimportdata.cpp:70
+#: plugins/thunderbird/thunderbirdimportdata.cpp:90
 #, kde-format
 msgid "Import finished"
 msgstr "Імпортування завершено"
 
-#: libimportwizard/abstractaddressbook.cpp:28
+#: libimportwizard/abstractaddressbook.cpp:30
 #, kde-format
 msgid "Creating new contact..."
 msgstr "Створення запису контакту…"
 
-#: libimportwizard/abstractaddressbook.cpp:34
+#: libimportwizard/abstractaddressbook.cpp:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
 msgstr "Виберіть адресну книгу"
 
-#: libimportwizard/abstractaddressbook.cpp:35
+#: libimportwizard/abstractaddressbook.cpp:37
 #, kde-format
 msgid "Select the address book the new contact shall be saved in:"
 msgstr "Виберіть адресну книгу, у якій слід зберегти новий запис контакту:"
 
-#: libimportwizard/abstractaddressbook.cpp:40
+#: libimportwizard/abstractaddressbook.cpp:42
 #, kde-format
 msgid "Address Book was not selected."
 msgstr "Не було вибрано адресної книги."
 
-#: libimportwizard/abstractaddressbook.cpp:67
+#: libimportwizard/abstractaddressbook.cpp:69
 #, kde-format
 msgid "Imported from \"%1\""
 msgstr "Імпортовано з «%1»"
 
-#: libimportwizard/abstractaddressbook.cpp:86
+#: libimportwizard/abstractaddressbook.cpp:88
 #, kde-format
 msgid "Error during contact creation: %1"
 msgstr "Помилка під час створення запису контакту: %1"
 
-#: libimportwizard/abstractaddressbook.cpp:89
+#: libimportwizard/abstractaddressbook.cpp:91
 #, kde-format
 msgid "Contact creation complete"
 msgstr "Створення запису контакту завершено"
@@ -228,80 +228,80 @@ msgstr[3] "З «%2» було імпортовано один фільтр"
 msgid "Filters file was not found"
 msgstr "Файл фільтрів не знайдено"
 
-#: libimportwizard/abstractsettings.cpp:38
+#: libimportwizard/abstractsettings.cpp:40
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Налаштування профілю…"
 
-#: libimportwizard/abstractsettings.cpp:46
+#: libimportwizard/abstractsettings.cpp:48
 #, kde-format
 msgid "Identity set up."
 msgstr "Профіль налаштовано."
 
-#: libimportwizard/abstractsettings.cpp:63
+#: libimportwizard/abstractsettings.cpp:65
 #, kde-format
 msgid "Setting up transport..."
 msgstr "Налаштування пересилання…"
 
-#: libimportwizard/abstractsettings.cpp:75
+#: libimportwizard/abstractsettings.cpp:77
 #, kde-format
 msgid "Transport set up."
 msgstr "Пересилання налаштовано."
 
-#: main.cpp:32 main.cpp:34
+#: main.cpp:34 main.cpp:36
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "Засіб імпортування особистих даних"
 
-#: main.cpp:36
+#: main.cpp:38
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "© Розробники ImportWizard, 2012–%1"
 
-#: main.cpp:38
+#: main.cpp:40
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:38
+#: main.cpp:40
 #, kde-format
 msgid "Maintainer"
 msgstr "Супровідник"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgctxt "@info:shell"
 msgid "Mode: %1"
 msgstr "Режим: %1"
 
-#: manual/manualselectfilterpage.cpp:85
+#: manual/manualselectfilterpage.cpp:86
 #, kde-format
 msgid "<p><i>Written by %1.</i></p>"
 msgstr "<p><i>Написано %1.</i></p>"
 
-#: plugins/balsa/balsaaddressbook.cpp:36 plugins/balsa/balsaaddressbook.cpp:49
-#: plugins/sylpheed/sylpheedaddressbook.cpp:27
+#: plugins/balsa/balsaaddressbook.cpp:37 plugins/balsa/balsaaddressbook.cpp:50
+#: plugins/sylpheed/sylpheedaddressbook.cpp:29
 #, kde-format
 msgid "No addressbook found"
 msgstr "Не знайдено адресної книги"
 
-#: plugins/balsa/balsaaddressbook.cpp:63
+#: plugins/balsa/balsaaddressbook.cpp:64
 #, kde-format
 msgid "Ldap created"
 msgstr "Створено запис LDAP"
 
-#: plugins/balsa/balsaaddressbook.cpp:93
+#: plugins/balsa/balsaaddressbook.cpp:94
 #, kde-format
 msgid "New addressbook created: %1"
 msgstr "Створено адресну книгу: %1"
 
-#: plugins/claws-mail/clawsmailimportdata.cpp:76
+#: plugins/claws-mail/clawsmailimportdata.cpp:78
 #, kde-format
 msgid "Claws Mail settings not found."
 msgstr "Налаштування Claws Mail не знайдено."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:21
+#: plugins/evolutionv3/evolutionaddressbook.cpp:23
 #, kde-format
 msgid ""
 "Evolution address book will be exported as vCard. Import vCard in "
@@ -310,64 +310,64 @@ msgstr ""
 "Адресну книгу Evolution буде експортовано у форматі vCard. Імпортуйте дані "
 "vCard до KAddressBook."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:22
+#: plugins/evolutionv3/evolutionaddressbook.cpp:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Export Evolution Address Book"
 msgstr "Експортування адресної книги Evolution"
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:25
+#: plugins/evolutionv3/evolutionaddressbook.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Select the directory where vCards will be stored."
 msgstr "Виберіть каталог, у якому зберігатимуться файли vcard."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:78
+#: plugins/evolutionv3/evolutionaddressbook.cpp:80
 #, kde-format
 msgid "Address book \"%1\" exported."
 msgstr "Адресну книгу «%1» експортовано."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:80
+#: plugins/evolutionv3/evolutionaddressbook.cpp:82
 #, kde-format
 msgid "Failed to export address book \"%1\"."
 msgstr "Не вдалося експортувати адресну книгу «%1»."
 
-#: plugins/evolutionv3/evolutionv3importdata.cpp:57
+#: plugins/evolutionv3/evolutionv3importdata.cpp:59
 #, kde-format
 msgid "Evolution settings not found."
 msgstr "Налаштування Evolution не знайдено."
 
-#: plugins/evolutionv3/evolutionv3importdata.cpp:100
+#: plugins/evolutionv3/evolutionv3importdata.cpp:102
 #, kde-format
 msgid "Evolution calendar not found."
 msgstr "Календар Evolution не знайдено."
 
-#: plugins/icedove/icedoveimportdata.cpp:69
+#: plugins/icedove/icedoveimportdata.cpp:70
 #, kde-format
 msgid "Icedove settings not found."
 msgstr "Налаштування Icedove не знайдено."
 
-#: plugins/seamonkey/seamonkeyimportdata.cpp:69
+#: plugins/seamonkey/seamonkeyimportdata.cpp:70
 #, kde-format
 msgid "SeaMonkey settings not found."
 msgstr "Налаштування SeaMonkey не знайдено."
 
-#: plugins/sylpheed/sylpheedaddressbook.cpp:60
+#: plugins/sylpheed/sylpheedaddressbook.cpp:62
 #, kde-format
 msgid "No contact found in %1"
 msgstr "У %1 записів контактів не виявлено"
 
-#: plugins/sylpheed/sylpheedimportdata.cpp:51
+#: plugins/sylpheed/sylpheedimportdata.cpp:53
 #, kde-format
 msgid "Sylpheed settings not found."
 msgstr "Налаштування Sylpheed не знайдено."
 
-#: plugins/thunderbird/thunderbirdaddressbook.cpp:46
+#: plugins/thunderbird/thunderbirdaddressbook.cpp:48
 #, kde-format
 msgid "Contacts file '%1' not found"
 msgstr "Файл контактів із назвою «%1» не знайдено"
 
-#: plugins/thunderbird/thunderbirdimportdata.cpp:71
+#: plugins/thunderbird/thunderbirdimportdata.cpp:72
 #, kde-format
 msgid "Thunderbird settings not found."
 msgstr "Налаштування Thunderbird не знайдено."

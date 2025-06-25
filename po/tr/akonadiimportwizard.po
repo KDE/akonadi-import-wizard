@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-21 00:42+0000\n"
+"POT-Creation-Date: 2025-06-25 00:43+0000\n"
 "PO-Revision-Date: 2025-03-07 23:23+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -28,18 +28,18 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "necdetyucel@gmail.com"
 
-#: autodetect/widgets/selectprogramlistwidget.cpp:46
+#: autodetect/widgets/selectprogramlistwidget.cpp:47
 #, kde-format
 msgid "No program found."
 msgstr "Program bulunamadı."
 
-#: importwizard.cpp:41
+#: importwizard.cpp:43
 #, kde-format
 msgctxt "@title:window"
 msgid "PIM Import Tool"
 msgstr "PIM İçe Aktarma Aracı"
 
-#: importwizard.cpp:70
+#: importwizard.cpp:72
 #, kde-format
 msgid ""
 "Close KMail before importing data. Some plugins will modify KMail config "
@@ -48,161 +48,161 @@ msgstr ""
 "Verileri içe aktarmadan önce K Posta’yı kapatın. Bazı eklentiler K Posta "
 "yapılandırma dosyasında değişiklik yapacak."
 
-#: importwizard.cpp:126
+#: importwizard.cpp:128
 #, kde-format
 msgid "Step 1: Select Filter"
 msgstr "1. adım: Süzgeç seç"
 
-#: importwizard.cpp:131
+#: importwizard.cpp:133
 #, kde-format
 msgid "Step 2: Importing..."
 msgstr "2. adım: İçe aktarılıyor…"
 
-#: importwizard.cpp:160
+#: importwizard.cpp:162
 #, kde-format
 msgid "Detect program"
 msgstr "Program Algıla"
 
-#: importwizard.cpp:165
+#: importwizard.cpp:167
 #, kde-format
 msgid "Select material to import"
 msgstr "İçe aktarılacak malzemeyi seç"
 
-#: importwizard.cpp:169
+#: importwizard.cpp:171
 #, kde-format
 msgid "Import mail messages"
 msgstr "Posta iletileri içe aktar"
 
-#: importwizard.cpp:173
+#: importwizard.cpp:175
 #, kde-format
 msgid "Import mail filters"
 msgstr "Posta süzgeçleri içe aktar"
 
 #. i18n: ectx: property (text), widget (QPushButton, importSettings)
-#: importwizard.cpp:177 ui/autodetect/importsettingpage.ui:47
+#: importwizard.cpp:179 ui/autodetect/importsettingpage.ui:47
 #, kde-format
 msgid "Import settings"
 msgstr "Ayarlar içe aktar"
 
-#: importwizard.cpp:181
+#: importwizard.cpp:183
 #, kde-format
 msgid "Import addressbooks"
 msgstr "Adres defteri içe aktar"
 
-#: importwizard.cpp:185
+#: importwizard.cpp:187
 #, kde-format
 msgid "Import calendars"
 msgstr "Takvim içe aktar"
 
-#: importwizard.cpp:189
+#: importwizard.cpp:191
 #, kde-format
 msgid "Finish"
 msgstr "Bitir"
 
-#: importwizard.cpp:211
+#: importwizard.cpp:213
 #, kde-format
 msgid "Import addressbook from %1..."
 msgstr "%1 konumundan adres defteri içe aktarılıyor…"
 
-#: importwizard.cpp:214
+#: importwizard.cpp:216
 #, kde-format
 msgid "Import addressbook from %1: Done"
 msgstr "%1 konumundan adres defterini içe aktar: Tamalandı"
 
-#: importwizard.cpp:220
+#: importwizard.cpp:222
 #, kde-format
 msgid "Import filters from %1..."
 msgstr "%1 konumundan süzgeçler içe aktarılıyor…"
 
-#: importwizard.cpp:223
+#: importwizard.cpp:225
 #, kde-format
 msgid "Import filters from %1: Done"
 msgstr "%1 konumundan süzgeçleri içe aktar: Tamamlandı"
 
-#: importwizard.cpp:229
+#: importwizard.cpp:231
 #, kde-format
 msgid "Import mails from %1..."
 msgstr "%1 konumundan postalar içe aktarılıyor…"
 
-#: importwizard.cpp:232
+#: importwizard.cpp:234
 #, kde-format
 msgid "Import mails from %1: Done"
 msgstr "%1 konumundan postaları içe aktar: Tamamlandı"
 
-#: importwizard.cpp:238
+#: importwizard.cpp:240
 #, kde-format
 msgid "Import settings from %1..."
 msgstr "%1 konumundan ayarlar içe aktarılıyor…"
 
-#: importwizard.cpp:241
+#: importwizard.cpp:243
 #, kde-format
 msgid "Import settings from %1: Done"
 msgstr "%1 konumundan ayarları içe aktar: Tamamlandı"
 
-#: importwizard.cpp:247
+#: importwizard.cpp:249
 #, kde-format
 msgid "Import calendar from %1..."
 msgstr "%1 konumundan takvim içe aktarılıyor…"
 
-#: importwizard.cpp:250
+#: importwizard.cpp:252
 #, kde-format
 msgid "Import calendar from %1: Done"
 msgstr "%1 konumundan takvimi içe aktar: Tamamlandı"
 
-#: importwizard.cpp:339 plugins/balsa/balsaimportdata.cpp:46
-#: plugins/claws-mail/clawsmailimportdata.cpp:47
-#: plugins/evolutionv3/evolutionv3importdata.cpp:66
-#: plugins/icedove/icedoveimportdata.cpp:79
-#: plugins/seamonkey/seamonkeyimportdata.cpp:79
-#: plugins/sylpheed/sylpheedimportdata.cpp:60
-#: plugins/thunderbird/thunderbirdimportdata.cpp:81
+#: importwizard.cpp:341 plugins/balsa/balsaimportdata.cpp:48
+#: plugins/claws-mail/clawsmailimportdata.cpp:49
+#: plugins/evolutionv3/evolutionv3importdata.cpp:68
+#: plugins/icedove/icedoveimportdata.cpp:80
+#: plugins/seamonkey/seamonkeyimportdata.cpp:80
+#: plugins/sylpheed/sylpheedimportdata.cpp:62
+#: plugins/thunderbird/thunderbirdimportdata.cpp:82
 #, kde-format
 msgid "Import in progress"
 msgstr "İçe aktarma sürüyor"
 
-#: importwizard.cpp:346 plugins/balsa/balsaimportdata.cpp:53
-#: plugins/claws-mail/clawsmailimportdata.cpp:55
-#: plugins/evolutionv3/evolutionv3importdata.cpp:74
-#: plugins/icedove/icedoveimportdata.cpp:87
-#: plugins/seamonkey/seamonkeyimportdata.cpp:87
-#: plugins/sylpheed/sylpheedimportdata.cpp:68
-#: plugins/thunderbird/thunderbirdimportdata.cpp:89
+#: importwizard.cpp:348 plugins/balsa/balsaimportdata.cpp:55
+#: plugins/claws-mail/clawsmailimportdata.cpp:57
+#: plugins/evolutionv3/evolutionv3importdata.cpp:76
+#: plugins/icedove/icedoveimportdata.cpp:88
+#: plugins/seamonkey/seamonkeyimportdata.cpp:88
+#: plugins/sylpheed/sylpheedimportdata.cpp:70
+#: plugins/thunderbird/thunderbirdimportdata.cpp:90
 #, kde-format
 msgid "Import finished"
 msgstr "İçe aktarma tamamlandı"
 
-#: libimportwizard/abstractaddressbook.cpp:28
+#: libimportwizard/abstractaddressbook.cpp:30
 #, kde-format
 msgid "Creating new contact..."
 msgstr "Yeni kişi oluşturuluyor…"
 
-#: libimportwizard/abstractaddressbook.cpp:34
+#: libimportwizard/abstractaddressbook.cpp:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
 msgstr "Adres Defteri Seç"
 
-#: libimportwizard/abstractaddressbook.cpp:35
+#: libimportwizard/abstractaddressbook.cpp:37
 #, kde-format
 msgid "Select the address book the new contact shall be saved in:"
 msgstr "Yeni kişinin kaydedileceği adres defterini seçin:"
 
-#: libimportwizard/abstractaddressbook.cpp:40
+#: libimportwizard/abstractaddressbook.cpp:42
 #, kde-format
 msgid "Address Book was not selected."
 msgstr "Adres Defteri."
 
-#: libimportwizard/abstractaddressbook.cpp:67
+#: libimportwizard/abstractaddressbook.cpp:69
 #, kde-format
 msgid "Imported from \"%1\""
 msgstr "“%1” dosyasından içe aktarıldı"
 
-#: libimportwizard/abstractaddressbook.cpp:86
+#: libimportwizard/abstractaddressbook.cpp:88
 #, kde-format
 msgid "Error during contact creation: %1"
 msgstr "Kişi oluşturulurken hata oluştu: %1"
 
-#: libimportwizard/abstractaddressbook.cpp:89
+#: libimportwizard/abstractaddressbook.cpp:91
 #, kde-format
 msgid "Contact creation complete"
 msgstr "Kişi oluşturma tamamlandı"
@@ -224,80 +224,80 @@ msgstr[1] "“%2” dosyasından %1 süzgeç içe aktarıldı"
 msgid "Filters file was not found"
 msgstr "Süzgeç dosyası bulunamadı"
 
-#: libimportwizard/abstractsettings.cpp:38
+#: libimportwizard/abstractsettings.cpp:40
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Kimlik ayarlanıyor…"
 
-#: libimportwizard/abstractsettings.cpp:46
+#: libimportwizard/abstractsettings.cpp:48
 #, kde-format
 msgid "Identity set up."
 msgstr "Kimlik ayarlandı."
 
-#: libimportwizard/abstractsettings.cpp:63
+#: libimportwizard/abstractsettings.cpp:65
 #, kde-format
 msgid "Setting up transport..."
 msgstr "Taşıma ayarlanıyor…"
 
-#: libimportwizard/abstractsettings.cpp:75
+#: libimportwizard/abstractsettings.cpp:77
 #, kde-format
 msgid "Transport set up."
 msgstr "Taşıma ayarlandı."
 
-#: main.cpp:32 main.cpp:34
+#: main.cpp:34 main.cpp:36
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "PIM İçe Aktarma Aracı"
 
-#: main.cpp:36
+#: main.cpp:38
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "Telif Hakkı © 2012–%1 ImportWizard yazarları"
 
-#: main.cpp:38
+#: main.cpp:40
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:38
+#: main.cpp:40
 #, kde-format
 msgid "Maintainer"
 msgstr "Bakımcı"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgctxt "@info:shell"
 msgid "Mode: %1"
 msgstr "Kip: %1"
 
-#: manual/manualselectfilterpage.cpp:85
+#: manual/manualselectfilterpage.cpp:86
 #, kde-format
 msgid "<p><i>Written by %1.</i></p>"
 msgstr "<p><i>%1 tarafından yazılmıştır.</i></p>"
 
-#: plugins/balsa/balsaaddressbook.cpp:36 plugins/balsa/balsaaddressbook.cpp:49
-#: plugins/sylpheed/sylpheedaddressbook.cpp:27
+#: plugins/balsa/balsaaddressbook.cpp:37 plugins/balsa/balsaaddressbook.cpp:50
+#: plugins/sylpheed/sylpheedaddressbook.cpp:29
 #, kde-format
 msgid "No addressbook found"
 msgstr "Adres defteri bulunamadı"
 
-#: plugins/balsa/balsaaddressbook.cpp:63
+#: plugins/balsa/balsaaddressbook.cpp:64
 #, kde-format
 msgid "Ldap created"
 msgstr "Ldap oluşturuldu"
 
-#: plugins/balsa/balsaaddressbook.cpp:93
+#: plugins/balsa/balsaaddressbook.cpp:94
 #, kde-format
 msgid "New addressbook created: %1"
 msgstr "Yeni adres defteri oluşturuldu: %1"
 
-#: plugins/claws-mail/clawsmailimportdata.cpp:76
+#: plugins/claws-mail/clawsmailimportdata.cpp:78
 #, kde-format
 msgid "Claws Mail settings not found."
 msgstr "Claws Mail ayarları bulunamadı."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:21
+#: plugins/evolutionv3/evolutionaddressbook.cpp:23
 #, kde-format
 msgid ""
 "Evolution address book will be exported as vCard. Import vCard in "
@@ -306,64 +306,64 @@ msgstr ""
 "Evolution adres defteri vCard olarak dışa aktarılacak. vCard’ı K Adres "
 "Defteri içine aktarın."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:22
+#: plugins/evolutionv3/evolutionaddressbook.cpp:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Export Evolution Address Book"
 msgstr "Evolution Adres Defterini Dışa Aktar"
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:25
+#: plugins/evolutionv3/evolutionaddressbook.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Select the directory where vCards will be stored."
 msgstr "vCard Depolama Dizini"
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:78
+#: plugins/evolutionv3/evolutionaddressbook.cpp:80
 #, kde-format
 msgid "Address book \"%1\" exported."
 msgstr "Adres defteri “%1” dışa aktarıldı."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:80
+#: plugins/evolutionv3/evolutionaddressbook.cpp:82
 #, kde-format
 msgid "Failed to export address book \"%1\"."
 msgstr "Adres defteri “%1” dışa aktarılamadı."
 
-#: plugins/evolutionv3/evolutionv3importdata.cpp:57
+#: plugins/evolutionv3/evolutionv3importdata.cpp:59
 #, kde-format
 msgid "Evolution settings not found."
 msgstr "Evolution ayarları bulunamadı."
 
-#: plugins/evolutionv3/evolutionv3importdata.cpp:100
+#: plugins/evolutionv3/evolutionv3importdata.cpp:102
 #, kde-format
 msgid "Evolution calendar not found."
 msgstr "Evolution takvimi bulunamadı."
 
-#: plugins/icedove/icedoveimportdata.cpp:69
+#: plugins/icedove/icedoveimportdata.cpp:70
 #, kde-format
 msgid "Icedove settings not found."
 msgstr "Icedove ayarları bulunamadı."
 
-#: plugins/seamonkey/seamonkeyimportdata.cpp:69
+#: plugins/seamonkey/seamonkeyimportdata.cpp:70
 #, kde-format
 msgid "SeaMonkey settings not found."
 msgstr "SeaMonkey ayarları bulunamadı."
 
-#: plugins/sylpheed/sylpheedaddressbook.cpp:60
+#: plugins/sylpheed/sylpheedaddressbook.cpp:62
 #, kde-format
 msgid "No contact found in %1"
 msgstr "%1 konumunda hiç bağlantı bulunamadı"
 
-#: plugins/sylpheed/sylpheedimportdata.cpp:51
+#: plugins/sylpheed/sylpheedimportdata.cpp:53
 #, kde-format
 msgid "Sylpheed settings not found."
 msgstr "Sylpheed ayarları bulunamadı."
 
-#: plugins/thunderbird/thunderbirdaddressbook.cpp:46
+#: plugins/thunderbird/thunderbirdaddressbook.cpp:48
 #, kde-format
 msgid "Contacts file '%1' not found"
 msgstr "“%1” kişi dosyası bulunamadı"
 
-#: plugins/thunderbird/thunderbirdimportdata.cpp:71
+#: plugins/thunderbird/thunderbirdimportdata.cpp:72
 #, kde-format
 msgid "Thunderbird settings not found."
 msgstr "Thunderbird ayarları bulunamadı."

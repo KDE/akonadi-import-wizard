@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: importwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-21 00:42+0000\n"
+"POT-Creation-Date: 2025-06-25 00:43+0000\n"
 "PO-Revision-Date: 2014-04-16 00:48+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -29,20 +29,20 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s_dibbern@web.de"
 
-#: autodetect/widgets/selectprogramlistwidget.cpp:46
+#: autodetect/widgets/selectprogramlistwidget.cpp:47
 #, fuzzy, kde-format
 #| msgid "No program found"
 msgid "No program found."
 msgstr "Keen Programm funnen"
 
-#: importwizard.cpp:41
+#: importwizard.cpp:43
 #, fuzzy, kde-format
 #| msgid "PIM Import Tool"
 msgctxt "@title:window"
 msgid "PIM Import Tool"
 msgstr "PIM-Importwarktüüch"
 
-#: importwizard.cpp:70
+#: importwizard.cpp:72
 #, kde-format
 msgid ""
 "Close KMail before importing data. Some plugins will modify KMail config "
@@ -51,167 +51,167 @@ msgstr ""
 "Maak KMail to, ehr Du Daten importeerst. En Reeg Modulen ännert de KMail-"
 "Instellendatei."
 
-#: importwizard.cpp:126
+#: importwizard.cpp:128
 #, kde-format
 msgid "Step 1: Select Filter"
 msgstr ""
 
-#: importwizard.cpp:131
+#: importwizard.cpp:133
 #, kde-format
 msgid "Step 2: Importing..."
 msgstr ""
 
-#: importwizard.cpp:160
+#: importwizard.cpp:162
 #, kde-format
 msgid "Detect program"
 msgstr "Programm opdecken"
 
-#: importwizard.cpp:165
+#: importwizard.cpp:167
 #, kde-format
 msgid "Select material to import"
 msgstr "Daten utsöken, de Du importeren wullt"
 
-#: importwizard.cpp:169
+#: importwizard.cpp:171
 #, kde-format
 msgid "Import mail messages"
 msgstr "Nettbreven importeren"
 
-#: importwizard.cpp:173
+#: importwizard.cpp:175
 #, kde-format
 msgid "Import mail filters"
 msgstr "Nettpostfiltern importeren"
 
 #. i18n: ectx: property (text), widget (QPushButton, importSettings)
-#: importwizard.cpp:177 ui/autodetect/importsettingpage.ui:47
+#: importwizard.cpp:179 ui/autodetect/importsettingpage.ui:47
 #, kde-format
 msgid "Import settings"
 msgstr "Importinstellen"
 
-#: importwizard.cpp:181
+#: importwizard.cpp:183
 #, kde-format
 msgid "Import addressbooks"
 msgstr "Adressböker importeren"
 
-#: importwizard.cpp:185
+#: importwizard.cpp:187
 #, kde-format
 msgid "Import calendars"
 msgstr "Kalenners importeren"
 
-#: importwizard.cpp:189
+#: importwizard.cpp:191
 #, kde-format
 msgid "Finish"
 msgstr "Fardig maken"
 
-#: importwizard.cpp:211
+#: importwizard.cpp:213
 #, kde-format
 msgid "Import addressbook from %1..."
 msgstr "Adressbook vun %1 importeren..."
 
-#: importwizard.cpp:214
+#: importwizard.cpp:216
 #, fuzzy, kde-format
 #| msgid "Import addressbook from %1..."
 msgid "Import addressbook from %1: Done"
 msgstr "Adressbook vun %1 importeren..."
 
-#: importwizard.cpp:220
+#: importwizard.cpp:222
 #, kde-format
 msgid "Import filters from %1..."
 msgstr "Filtern vun %1 importeren..."
 
-#: importwizard.cpp:223
+#: importwizard.cpp:225
 #, fuzzy, kde-format
 #| msgid "Import filters from %1..."
 msgid "Import filters from %1: Done"
 msgstr "Filtern vun %1 importeren..."
 
-#: importwizard.cpp:229
+#: importwizard.cpp:231
 #, kde-format
 msgid "Import mails from %1..."
 msgstr "Nettpost vun %1 importeren..."
 
-#: importwizard.cpp:232
+#: importwizard.cpp:234
 #, fuzzy, kde-format
 #| msgid "Import mails from %1..."
 msgid "Import mails from %1: Done"
 msgstr "Nettpost vun %1 importeren..."
 
-#: importwizard.cpp:238
+#: importwizard.cpp:240
 #, kde-format
 msgid "Import settings from %1..."
 msgstr "Instellen vun %1 importeren..."
 
-#: importwizard.cpp:241
+#: importwizard.cpp:243
 #, fuzzy, kde-format
 #| msgid "Import settings from %1..."
 msgid "Import settings from %1: Done"
 msgstr "Instellen vun %1 importeren..."
 
-#: importwizard.cpp:247
+#: importwizard.cpp:249
 #, kde-format
 msgid "Import calendar from %1..."
 msgstr "Kalenner vun %1 importeren..."
 
-#: importwizard.cpp:250
+#: importwizard.cpp:252
 #, fuzzy, kde-format
 #| msgid "Import calendar from %1..."
 msgid "Import calendar from %1: Done"
 msgstr "Kalenner vun %1 importeren..."
 
-#: importwizard.cpp:339 plugins/balsa/balsaimportdata.cpp:46
-#: plugins/claws-mail/clawsmailimportdata.cpp:47
-#: plugins/evolutionv3/evolutionv3importdata.cpp:66
-#: plugins/icedove/icedoveimportdata.cpp:79
-#: plugins/seamonkey/seamonkeyimportdata.cpp:79
-#: plugins/sylpheed/sylpheedimportdata.cpp:60
-#: plugins/thunderbird/thunderbirdimportdata.cpp:81
+#: importwizard.cpp:341 plugins/balsa/balsaimportdata.cpp:48
+#: plugins/claws-mail/clawsmailimportdata.cpp:49
+#: plugins/evolutionv3/evolutionv3importdata.cpp:68
+#: plugins/icedove/icedoveimportdata.cpp:80
+#: plugins/seamonkey/seamonkeyimportdata.cpp:80
+#: plugins/sylpheed/sylpheedimportdata.cpp:62
+#: plugins/thunderbird/thunderbirdimportdata.cpp:82
 #, kde-format
 msgid "Import in progress"
 msgstr "Import löppt"
 
-#: importwizard.cpp:346 plugins/balsa/balsaimportdata.cpp:53
-#: plugins/claws-mail/clawsmailimportdata.cpp:55
-#: plugins/evolutionv3/evolutionv3importdata.cpp:74
-#: plugins/icedove/icedoveimportdata.cpp:87
-#: plugins/seamonkey/seamonkeyimportdata.cpp:87
-#: plugins/sylpheed/sylpheedimportdata.cpp:68
-#: plugins/thunderbird/thunderbirdimportdata.cpp:89
+#: importwizard.cpp:348 plugins/balsa/balsaimportdata.cpp:55
+#: plugins/claws-mail/clawsmailimportdata.cpp:57
+#: plugins/evolutionv3/evolutionv3importdata.cpp:76
+#: plugins/icedove/icedoveimportdata.cpp:88
+#: plugins/seamonkey/seamonkeyimportdata.cpp:88
+#: plugins/sylpheed/sylpheedimportdata.cpp:70
+#: plugins/thunderbird/thunderbirdimportdata.cpp:90
 #, kde-format
 msgid "Import finished"
 msgstr "Import afslaten"
 
-#: libimportwizard/abstractaddressbook.cpp:28
+#: libimportwizard/abstractaddressbook.cpp:30
 #, kde-format
 msgid "Creating new contact..."
 msgstr "Nieg Kontakt warrt opstellt..."
 
-#: libimportwizard/abstractaddressbook.cpp:34
+#: libimportwizard/abstractaddressbook.cpp:36
 #, fuzzy, kde-format
 #| msgid "Select Address Book"
 msgctxt "@title:window"
 msgid "Select Address Book"
 msgstr "Adressbook utsöken"
 
-#: libimportwizard/abstractaddressbook.cpp:35
+#: libimportwizard/abstractaddressbook.cpp:37
 #, kde-format
 msgid "Select the address book the new contact shall be saved in:"
 msgstr "Dat Adressbook utsöken, binnen dat en nieg Kontakt sekert warrt:"
 
-#: libimportwizard/abstractaddressbook.cpp:40
+#: libimportwizard/abstractaddressbook.cpp:42
 #, kde-format
 msgid "Address Book was not selected."
 msgstr "Keen Adressbook weer utsöcht."
 
-#: libimportwizard/abstractaddressbook.cpp:67
+#: libimportwizard/abstractaddressbook.cpp:69
 #, kde-format
 msgid "Imported from \"%1\""
 msgstr "Ut \"%1\" importeert"
 
-#: libimportwizard/abstractaddressbook.cpp:86
+#: libimportwizard/abstractaddressbook.cpp:88
 #, kde-format
 msgid "Error during contact creation: %1"
 msgstr "Fehler bi't Opstellen vun en Kontakt: %1"
 
-#: libimportwizard/abstractaddressbook.cpp:89
+#: libimportwizard/abstractaddressbook.cpp:91
 #, kde-format
 msgid "Contact creation complete"
 msgstr "Kontaktenopstellen afslaten"
@@ -234,82 +234,82 @@ msgstr[1] "%1 Filtern wöörn ut \"%2\" importeet"
 msgid "Filters file was not found"
 msgstr "Filterdatei lett sik nich finnen"
 
-#: libimportwizard/abstractsettings.cpp:38
+#: libimportwizard/abstractsettings.cpp:40
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Identiteet warrt inricht..."
 
-#: libimportwizard/abstractsettings.cpp:46
+#: libimportwizard/abstractsettings.cpp:48
 #, kde-format
 msgid "Identity set up."
 msgstr "Identiteet wöör inricht."
 
-#: libimportwizard/abstractsettings.cpp:63
+#: libimportwizard/abstractsettings.cpp:65
 #, kde-format
 msgid "Setting up transport..."
 msgstr "Överdreegmetood warrt opstellt..."
 
-#: libimportwizard/abstractsettings.cpp:75
+#: libimportwizard/abstractsettings.cpp:77
 #, kde-format
 msgid "Transport set up."
 msgstr "Överdreegmetood opstellt."
 
-#: main.cpp:32 main.cpp:34
+#: main.cpp:34 main.cpp:36
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "PIM-Importwarktüüch"
 
-#: main.cpp:36
+#: main.cpp:38
 #, fuzzy, kde-format
 #| msgid "Copyright © 2012-2013-2014 importwizard authors"
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "Copyright © 2012-2013-2014 de Schrievers vun Importwizard"
 
-#: main.cpp:38
+#: main.cpp:40
 #, fuzzy, kde-format
 #| msgid "Laurent Montel"
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:38
+#: main.cpp:40
 #, kde-format
 msgid "Maintainer"
 msgstr "Pleger"
 
-#: main.cpp:46
+#: main.cpp:48
 #, kde-format
 msgctxt "@info:shell"
 msgid "Mode: %1"
 msgstr ""
 
-#: manual/manualselectfilterpage.cpp:85
+#: manual/manualselectfilterpage.cpp:86
 #, kde-format
 msgid "<p><i>Written by %1.</i></p>"
 msgstr ""
 
-#: plugins/balsa/balsaaddressbook.cpp:36 plugins/balsa/balsaaddressbook.cpp:49
-#: plugins/sylpheed/sylpheedaddressbook.cpp:27
+#: plugins/balsa/balsaaddressbook.cpp:37 plugins/balsa/balsaaddressbook.cpp:50
+#: plugins/sylpheed/sylpheedaddressbook.cpp:29
 #, kde-format
 msgid "No addressbook found"
 msgstr "Keen Adressbook funnen"
 
-#: plugins/balsa/balsaaddressbook.cpp:63
+#: plugins/balsa/balsaaddressbook.cpp:64
 #, kde-format
 msgid "Ldap created"
 msgstr "LDAP opstellt"
 
-#: plugins/balsa/balsaaddressbook.cpp:93
+#: plugins/balsa/balsaaddressbook.cpp:94
 #, kde-format
 msgid "New addressbook created: %1"
 msgstr "Nieg Adressbook opstellt: %1"
 
-#: plugins/claws-mail/clawsmailimportdata.cpp:76
+#: plugins/claws-mail/clawsmailimportdata.cpp:78
 #, kde-format
 msgid "Claws Mail settings not found."
 msgstr "Claws-Mail-Instellen laat sik nich finnen."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:21
+#: plugins/evolutionv3/evolutionaddressbook.cpp:23
 #, kde-format
 msgid ""
 "Evolution address book will be exported as vCard. Import vCard in "
@@ -318,69 +318,69 @@ msgstr ""
 "Evolution-Adressbook warrt as VCard exporteert. Importeren vun VCard na "
 "KAddressbook."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:22
+#: plugins/evolutionv3/evolutionaddressbook.cpp:24
 #, fuzzy, kde-format
 #| msgid "Export Evolution Address Book"
 msgctxt "@title:window"
 msgid "Export Evolution Address Book"
 msgstr "Evolution-Adressbook exporteren"
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:25
+#: plugins/evolutionv3/evolutionaddressbook.cpp:27
 #, fuzzy, kde-format
 #| msgid "Select the directory where vCards will be stored."
 msgctxt "@title:window"
 msgid "Select the directory where vCards will be stored."
 msgstr "Den Orner utsöken, binnen den de VCards afleggt warrt"
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:78
+#: plugins/evolutionv3/evolutionaddressbook.cpp:80
 #, kde-format
 msgid "Address book \"%1\" exported."
 msgstr "Adressbook \"%1\" exporteert."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:80
+#: plugins/evolutionv3/evolutionaddressbook.cpp:82
 #, kde-format
 msgid "Failed to export address book \"%1\"."
 msgstr "Adressbook \"%1\" lett sik nich exporteren"
 
-#: plugins/evolutionv3/evolutionv3importdata.cpp:57
+#: plugins/evolutionv3/evolutionv3importdata.cpp:59
 #, kde-format
 msgid "Evolution settings not found."
 msgstr "Evolution-Instellen laat sik nich finnen."
 
-#: plugins/evolutionv3/evolutionv3importdata.cpp:100
+#: plugins/evolutionv3/evolutionv3importdata.cpp:102
 #, kde-format
 msgid "Evolution calendar not found."
 msgstr "Evolution-Kalenner lett sik nich finnen."
 
-#: plugins/icedove/icedoveimportdata.cpp:69
+#: plugins/icedove/icedoveimportdata.cpp:70
 #, fuzzy, kde-format
 #| msgid "Sylpheed settings not found."
 msgid "Icedove settings not found."
 msgstr "Sylpheed-Instellen laat sik nich finnen."
 
-#: plugins/seamonkey/seamonkeyimportdata.cpp:69
+#: plugins/seamonkey/seamonkeyimportdata.cpp:70
 #, fuzzy, kde-format
 #| msgid "Sylpheed settings not found."
 msgid "SeaMonkey settings not found."
 msgstr "Sylpheed-Instellen laat sik nich finnen."
 
-#: plugins/sylpheed/sylpheedaddressbook.cpp:60
+#: plugins/sylpheed/sylpheedaddressbook.cpp:62
 #, kde-format
 msgid "No contact found in %1"
 msgstr "Keen Kontakt funnen binnen %1"
 
-#: plugins/sylpheed/sylpheedimportdata.cpp:51
+#: plugins/sylpheed/sylpheedimportdata.cpp:53
 #, kde-format
 msgid "Sylpheed settings not found."
 msgstr "Sylpheed-Instellen laat sik nich finnen."
 
-#: plugins/thunderbird/thunderbirdaddressbook.cpp:46
+#: plugins/thunderbird/thunderbirdaddressbook.cpp:48
 #, fuzzy, kde-format
 #| msgid "Filters file was not found"
 msgid "Contacts file '%1' not found"
 msgstr "Filterdatei lett sik nich finnen"
 
-#: plugins/thunderbird/thunderbirdimportdata.cpp:71
+#: plugins/thunderbird/thunderbirdimportdata.cpp:72
 #, kde-format
 msgid "Thunderbird settings not found."
 msgstr "Thunderbird-Instellen laat sik nich finnen."
