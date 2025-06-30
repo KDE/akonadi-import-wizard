@@ -1,15 +1,15 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for akonadiimportwizard.po package.
+# Copyright (C) 2012-2025 This file is copyright:
+# This file is distributed under the same license as the akonadi-import-wizard package.
 #
-# Javier Viñal <fjvinal@gmail.com>, 2012, 2013, 2014.
-# Javier Vinal <fjvinalgmail.com>, 2012, 2014, 2015, 2016, 2017, 2018.
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2012, 2013, 2014, 2015, 2016, 2017, 2018 Javier Viñal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: akonadiimportwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-21 02:39+0000\n"
-"PO-Revision-Date: 2024-08-01 04:44+0200\n"
+"PO-Revision-Date: 2025-06-29 13:57+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -57,7 +57,7 @@ msgstr "Paso 1: seleccionar filtro"
 #: importwizard.cpp:131
 #, kde-format
 msgid "Step 2: Importing..."
-msgstr "Paso 2: importando..."
+msgstr "Paso 2: importando…"
 
 #: importwizard.cpp:160
 #, kde-format
@@ -103,7 +103,7 @@ msgstr "Terminar"
 #: importwizard.cpp:211
 #, kde-format
 msgid "Import addressbook from %1..."
-msgstr "Importar libreta de direcciones de %1..."
+msgstr "Importar libreta de direcciones de %1…"
 
 #: importwizard.cpp:214
 #, kde-format
@@ -113,7 +113,7 @@ msgstr "Importar libreta de direcciones de %1: terminado"
 #: importwizard.cpp:220
 #, kde-format
 msgid "Import filters from %1..."
-msgstr "Importar filtros de %1..."
+msgstr "Importar filtros de %1…"
 
 #: importwizard.cpp:223
 #, kde-format
@@ -123,7 +123,7 @@ msgstr "Importar filtros de %1: terminado"
 #: importwizard.cpp:229
 #, kde-format
 msgid "Import mails from %1..."
-msgstr "Importar mensajes de %1..."
+msgstr "Importar mensajes de %1…"
 
 #: importwizard.cpp:232
 #, kde-format
@@ -133,7 +133,7 @@ msgstr "Importar mensajes de %1: terminado"
 #: importwizard.cpp:238
 #, kde-format
 msgid "Import settings from %1..."
-msgstr "Importar preferencias de %1..."
+msgstr "Importar preferencias de %1…"
 
 #: importwizard.cpp:241
 #, kde-format
@@ -143,7 +143,7 @@ msgstr "Importar preferencias de %1: terminado"
 #: importwizard.cpp:247
 #, kde-format
 msgid "Import calendar from %1..."
-msgstr "Importar calendario de %1..."
+msgstr "Importar calendario de %1…"
 
 #: importwizard.cpp:250
 #, kde-format
@@ -175,7 +175,7 @@ msgstr "Importación terminada"
 #: libimportwizard/abstractaddressbook.cpp:28
 #, kde-format
 msgid "Creating new contact..."
-msgstr "Creando nuevo contacto..."
+msgstr "Creando nuevo contacto…"
 
 #: libimportwizard/abstractaddressbook.cpp:34
 #, kde-format
@@ -230,7 +230,7 @@ msgstr "No se ha encontrado el archivo de filtros"
 #: libimportwizard/abstractsettings.cpp:38
 #, kde-format
 msgid "Setting up identity..."
-msgstr "Configurando identidad..."
+msgstr "Configurando identidad…"
 
 #: libimportwizard/abstractsettings.cpp:46
 #, kde-format
@@ -240,7 +240,7 @@ msgstr "Identidad configurada."
 #: libimportwizard/abstractsettings.cpp:63
 #, kde-format
 msgid "Setting up transport..."
-msgstr "Configurando transporte..."
+msgstr "Configurando transporte…"
 
 #: libimportwizard/abstractsettings.cpp:75
 #, kde-format
