@@ -17,10 +17,17 @@ ecm_qt_declare_logging_category(sylpheedimporter_SRCS HEADER sylpheedplugin_debu
 kcoreaddons_add_plugin(sylpheedimporterplugin SOURCES ${sylpheedimporter_SRCS} INSTALL_NAMESPACE pim6/importwizard)
 set_target_properties(
     sylpheedimporterplugin
-    PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/importwizard/"
+    PROPERTIES
+        LIBRARY_OUTPUT_DIRECTORY
+            "${CMAKE_BINARY_DIR}/bin/importwizard/"
 )
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(sylpheedimporterplugin PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        sylpheedimporterplugin
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 
 target_link_libraries(

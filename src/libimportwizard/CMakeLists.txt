@@ -32,7 +32,8 @@ install(
 )
 
 install(
-    FILES "${CMAKE_CURRENT_BINARY_DIR}/importwizard_version.h"
+    FILES
+        "${CMAKE_CURRENT_BINARY_DIR}/importwizard_version.h"
     DESTINATION "${KDE_INSTALL_INCLUDEDIR}/KPim6/ImportWizard/"
     COMPONENT Devel
 )
@@ -64,7 +65,12 @@ ecm_qt_declare_logging_category(KPim6ImportWizard HEADER libimportwizard_debug.h
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KPim6ImportWizard PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        KPim6ImportWizard
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 
 target_include_directories(
@@ -77,7 +83,8 @@ generate_export_header(KPim6ImportWizard BASE_NAME libimportwizard)
 
 target_link_libraries(
     KPim6ImportWizard
-    PUBLIC KPim6::MailTransport
+    PUBLIC
+        KPim6::MailTransport
     PRIVATE
         KF6::Archive
         KPim6::PimCommon
@@ -90,18 +97,21 @@ target_link_libraries(KPim6ImportWizard PRIVATE qt6keychain)
 set_target_properties(
     KPim6ImportWizard
     PROPERTIES
-        VERSION ${IMPORTWIZARD_VERSION}
-        SOVERSION ${IMPORTWIZARD_SOVERSION}
-        EXPORT_NAME ImportWizard
+        VERSION
+            ${IMPORTWIZARD_VERSION}
+        SOVERSION
+            ${IMPORTWIZARD_SOVERSION}
+        EXPORT_NAME
+            ImportWizard
 )
+
+install(TARGETS KPim6ImportWizard EXPORT KPim6ImportWizardTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(
-    TARGETS KPim6ImportWizard
-    EXPORT KPim6ImportWizardTargets
-    ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    TARGETS
+        KPim6ImportWizard
+        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
 )
-
-install(TARGETS KPim6ImportWizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ecm_generate_headers(ImportWizard_CamelCase_HEADERS
     HEADER_NAMES
@@ -117,7 +127,8 @@ ecm_generate_headers(ImportWizard_CamelCase_HEADERS
 )
 
 install(
-    FILES ${ImportWizard_CamelCase_HEADERS}
+    FILES
+        ${ImportWizard_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/ImportWizard/ImportWizard/
     COMPONENT Devel
 )

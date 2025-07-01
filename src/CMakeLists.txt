@@ -1,15 +1,8 @@
-configure_file(
-    importwizard-version.h.in
-    ${CMAKE_CURRENT_BINARY_DIR}/importwizard-version.h
-    @ONLY
-)
+configure_file(importwizard-version.h.in ${CMAKE_CURRENT_BINARY_DIR}/importwizard-version.h @ONLY)
 add_subdirectory(icons)
 add_subdirectory(libimportwizard)
 
-file(
-    GLOB ICONS_SRCS
-    "${CMAKE_CURRENT_SOURCE_DIR}/icons/*-apps-kontact-import-wizard.png"
-)
+file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/icons/*-apps-kontact-import-wizard.png")
 ecm_add_app_icon(importwizard_SRCS ICONS ${ICONS_SRCS})
 add_executable(akonadiimportwizard)
 
@@ -74,7 +67,12 @@ ecm_qt_declare_logging_category(akonadiimportwizard HEADER importwizard_debug.h 
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(akonadiimportwizard PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        akonadiimportwizard
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 target_link_libraries(
     akonadiimportwizard
@@ -95,11 +93,12 @@ target_link_libraries(
 if(TARGET KF6::IconThemes)
     target_link_libraries(akonadiimportwizard KF6::IconThemes)
 endif()
-install(TARGETS akonadiimportwizard ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(
-    PROGRAMS data/org.kde.akonadiimportwizard.desktop
-    DESTINATION ${KDE_INSTALL_APPDIR}
+    TARGETS
+        akonadiimportwizard
+        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
 )
+install(PROGRAMS data/org.kde.akonadiimportwizard.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 add_subdirectory(manual/pics)
 add_subdirectory(plugins/)
