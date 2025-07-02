@@ -5,8 +5,7 @@
 >Importassistent</application
 >">
   <!ENTITY % addindex "IGNORE">
-  <!ENTITY % Dutch "INCLUDE"
-> 
+  <!ENTITY % Dutch "INCLUDE">
 ]>
 
 <article id="importwizard" lang="&language;">
