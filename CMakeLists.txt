@@ -126,7 +126,7 @@ set_package_properties(
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 add_definitions(-DQT_USE_QSTRINGBUILDER)
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
-ecm_set_disabled_deprecation_versions(QT 6.10.0 KF 6.15.0)
+ecm_set_disabled_deprecation_versions(QT 6.10.0 KF 6.16.0)
 include(ECMCheckOutboundLicense)
 file(
     GLOB_RECURSE ALL_SOURCE_FILES
