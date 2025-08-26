@@ -323,7 +323,7 @@ bool MorkParser::parseTable()
     char cur = nextChar();
 
     // Get id
-    while (cur != QLatin1Char('{') && cur != u'[' && cur != u'}' && cur) {
+    while (cur != u'{' && cur != u'[' && cur != u'}' && cur) {
         if (!isWhiteSpace(cur)) {
             TextId += QLatin1Char(cur);
         }
@@ -426,7 +426,7 @@ bool MorkParser::parseRow(int TableId, int TableScope)
     char cur = nextChar();
 
     // Get id
-    while (cur != QLatin1Char('(') && cur != u']' && cur != u'[' && cur) {
+    while (cur != u'(' && cur != u']' && cur != u'[' && cur) {
         if (!isWhiteSpace(cur)) {
             TextId += QLatin1Char(cur);
         }
