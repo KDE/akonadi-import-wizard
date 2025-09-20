@@ -32,7 +32,6 @@ using namespace Qt::Literals::StringLiterals;
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <MailCommon/MailKernel>
-#include <QAction>
 #include <QPushButton>
 
 ImportWizard::ImportWizard(WizardMode mode, QWidget *parent)
