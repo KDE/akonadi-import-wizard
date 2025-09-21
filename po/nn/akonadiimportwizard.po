@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_importing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:43+0000\n"
+"POT-Creation-Date: 2025-09-21 00:42+0000\n"
 "PO-Revision-Date: 2024-08-02 21:13+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -42,13 +42,13 @@ msgstr "karl@huftis.org"
 msgid "No program found."
 msgstr "Fann ingen program."
 
-#: importwizard.cpp:43
+#: importwizard.cpp:42
 #, kde-format
 msgctxt "@title:window"
 msgid "PIM Import Tool"
 msgstr "Importverktøy for PIM-data"
 
-#: importwizard.cpp:72
+#: importwizard.cpp:71
 #, kde-format
 msgid ""
 "Close KMail before importing data. Some plugins will modify KMail config "
@@ -57,108 +57,108 @@ msgstr ""
 "Lukk KMail før dataimportering. Nokre program­tillegg kan gjera endringar i "
 "oppsettfila til KMail."
 
-#: importwizard.cpp:128
+#: importwizard.cpp:127
 #, kde-format
 msgid "Step 1: Select Filter"
 msgstr "Steg 1: Vel filter"
 
-#: importwizard.cpp:133
+#: importwizard.cpp:132
 #, kde-format
 msgid "Step 2: Importing..."
 msgstr "Steg 2: Import …"
 
-#: importwizard.cpp:162
+#: importwizard.cpp:161
 #, kde-format
 msgid "Detect program"
 msgstr "Finn program"
 
-#: importwizard.cpp:167
+#: importwizard.cpp:166
 #, kde-format
 msgid "Select material to import"
 msgstr "Vel kva du vil importera"
 
-#: importwizard.cpp:171
+#: importwizard.cpp:170
 #, kde-format
 msgid "Import mail messages"
 msgstr "Importer e-postmeldingar"
 
-#: importwizard.cpp:175
+#: importwizard.cpp:174
 #, kde-format
 msgid "Import mail filters"
 msgstr "Importer e-postfilter"
 
 #. i18n: ectx: property (text), widget (QPushButton, importSettings)
-#: importwizard.cpp:179 ui/autodetect/importsettingpage.ui:47
+#: importwizard.cpp:178 ui/autodetect/importsettingpage.ui:47
 #, kde-format
 msgid "Import settings"
 msgstr "Innstillingar for importering"
 
-#: importwizard.cpp:183
+#: importwizard.cpp:182
 #, kde-format
 msgid "Import addressbooks"
 msgstr "Importer adressebøker"
 
-#: importwizard.cpp:187
+#: importwizard.cpp:186
 #, kde-format
 msgid "Import calendars"
 msgstr "Importer kalendrar"
 
-#: importwizard.cpp:191
+#: importwizard.cpp:190
 #, kde-format
 msgid "Finish"
 msgstr "Fullfør"
 
-#: importwizard.cpp:213
+#: importwizard.cpp:212
 #, kde-format
 msgid "Import addressbook from %1..."
 msgstr "Importer adressebok frå %1 …"
 
-#: importwizard.cpp:216
+#: importwizard.cpp:215
 #, kde-format
 msgid "Import addressbook from %1: Done"
 msgstr "Importer adressebok frå %1: ferdig"
 
-#: importwizard.cpp:222
+#: importwizard.cpp:221
 #, kde-format
 msgid "Import filters from %1..."
 msgstr "Importer filter frå %1 …"
 
-#: importwizard.cpp:225
+#: importwizard.cpp:224
 #, kde-format
 msgid "Import filters from %1: Done"
 msgstr "Importer filter frå %1: ferdig"
 
-#: importwizard.cpp:231
+#: importwizard.cpp:230
 #, kde-format
 msgid "Import mails from %1..."
 msgstr "Importer e-post frå %1 …"
 
-#: importwizard.cpp:234
+#: importwizard.cpp:233
 #, kde-format
 msgid "Import mails from %1: Done"
 msgstr "Importer e-post frå %1: ferdig"
 
-#: importwizard.cpp:240
+#: importwizard.cpp:239
 #, kde-format
 msgid "Import settings from %1..."
 msgstr "Importer innstillingar frå %1 …"
 
-#: importwizard.cpp:243
+#: importwizard.cpp:242
 #, kde-format
 msgid "Import settings from %1: Done"
 msgstr "Importer innstillingar frå %1: ferdig"
 
-#: importwizard.cpp:249
+#: importwizard.cpp:248
 #, kde-format
 msgid "Import calendar from %1..."
 msgstr "Importer kalender frå %1 …"
 
-#: importwizard.cpp:252
+#: importwizard.cpp:251
 #, kde-format
 msgid "Import calendar from %1: Done"
 msgstr "Importer kalender frå %1: ferdig"
 
-#: importwizard.cpp:341 plugins/balsa/balsaimportdata.cpp:48
+#: importwizard.cpp:340 plugins/balsa/balsaimportdata.cpp:48
 #: plugins/claws-mail/clawsmailimportdata.cpp:49
 #: plugins/evolutionv3/evolutionv3importdata.cpp:68
 #: plugins/icedove/icedoveimportdata.cpp:80
@@ -169,7 +169,7 @@ msgstr "Importer kalender frå %1: ferdig"
 msgid "Import in progress"
 msgstr "I gang med å importera"
 
-#: importwizard.cpp:348 plugins/balsa/balsaimportdata.cpp:55
+#: importwizard.cpp:347 plugins/balsa/balsaimportdata.cpp:55
 #: plugins/claws-mail/clawsmailimportdata.cpp:57
 #: plugins/evolutionv3/evolutionv3importdata.cpp:76
 #: plugins/icedove/icedoveimportdata.cpp:88

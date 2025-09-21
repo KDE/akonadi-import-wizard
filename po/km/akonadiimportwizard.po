@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: importwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:43+0000\n"
+"POT-Creation-Date: 2025-09-21 00:42+0000\n"
 "PO-Revision-Date: 2012-12-25 16:30+0700\n"
 "Last-Translator: sutha <sutha@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros>\n"
@@ -36,14 +36,14 @@ msgstr "sokhem@open.org.kh,sutha@open.org.kh,sophea@open.org.kh"
 msgid "No program found."
 msgstr "រក​មិន​ឃើញ​កម្មវិធី​ឡើយ"
 
-#: importwizard.cpp:43
+#: importwizard.cpp:42
 #, fuzzy, kde-format
 #| msgid "PIM Import Tool"
 msgctxt "@title:window"
 msgid "PIM Import Tool"
 msgstr "ឧបករណ៍​នាំចូល​របស់ PIM"
 
-#: importwizard.cpp:72
+#: importwizard.cpp:71
 #, kde-format
 msgid ""
 "Close KMail before importing data. Some plugins will modify KMail config "
@@ -51,113 +51,113 @@ msgid ""
 msgstr ""
 "បិទ KMail មុន​ពេល​នាំចូល​ទិន្ន័យ ។ កម្មវិធី​មួយ​ចំនួន​នឹង​កែប្រែ​ឯកសារ​ការ​កំណត់​រចនាសម្ព័ន្ធ​របស់ KMail ។"
 
-#: importwizard.cpp:128
+#: importwizard.cpp:127
 #, kde-format
 msgid "Step 1: Select Filter"
 msgstr ""
 
-#: importwizard.cpp:133
+#: importwizard.cpp:132
 #, kde-format
 msgid "Step 2: Importing..."
 msgstr ""
 
-#: importwizard.cpp:162
+#: importwizard.cpp:161
 #, kde-format
 msgid "Detect program"
 msgstr "លុប​កម្មវិធី"
 
-#: importwizard.cpp:167
+#: importwizard.cpp:166
 #, kde-format
 msgid "Select material to import"
 msgstr "ជ្រើស​វត្ថុ​ធាតុ​ដើម្បី​នាំចូល"
 
-#: importwizard.cpp:171
+#: importwizard.cpp:170
 #, kde-format
 msgid "Import mail messages"
 msgstr "នាំចូល​សារ​ទាំងអស់"
 
-#: importwizard.cpp:175
+#: importwizard.cpp:174
 #, kde-format
 msgid "Import mail filters"
 msgstr "នាំចូល​តម្រង​សារ"
 
 #. i18n: ectx: property (text), widget (QPushButton, importSettings)
-#: importwizard.cpp:179 ui/autodetect/importsettingpage.ui:47
+#: importwizard.cpp:178 ui/autodetect/importsettingpage.ui:47
 #, kde-format
 msgid "Import settings"
 msgstr "នាំចូល​ការ​កំណត់"
 
-#: importwizard.cpp:183
+#: importwizard.cpp:182
 #, kde-format
 msgid "Import addressbooks"
 msgstr "នាំចូល​សៀវភៅ​អាសយដ្ឋាន"
 
-#: importwizard.cpp:187
+#: importwizard.cpp:186
 #, kde-format
 msgid "Import calendars"
 msgstr "នាំចូល​ប្រតិទិន"
 
-#: importwizard.cpp:191
+#: importwizard.cpp:190
 #, kde-format
 msgid "Finish"
 msgstr "បញ្ចប់"
 
-#: importwizard.cpp:213
+#: importwizard.cpp:212
 #, kde-format
 msgid "Import addressbook from %1..."
 msgstr "នាំចូល​សៀវភៅ​អាសយដ្ឋាន​ពី %1..."
 
-#: importwizard.cpp:216
+#: importwizard.cpp:215
 #, fuzzy, kde-format
 #| msgid "Import addressbook from %1..."
 msgid "Import addressbook from %1: Done"
 msgstr "នាំចូល​សៀវភៅ​អាសយដ្ឋាន​ពី %1..."
 
-#: importwizard.cpp:222
+#: importwizard.cpp:221
 #, kde-format
 msgid "Import filters from %1..."
 msgstr "នាំចូល​តម្រង​ពី %1..."
 
-#: importwizard.cpp:225
+#: importwizard.cpp:224
 #, fuzzy, kde-format
 #| msgid "Import filters from %1..."
 msgid "Import filters from %1: Done"
 msgstr "នាំចូល​តម្រង​ពី %1..."
 
-#: importwizard.cpp:231
+#: importwizard.cpp:230
 #, kde-format
 msgid "Import mails from %1..."
 msgstr "នាំចូល​សារ​ពី %1..."
 
-#: importwizard.cpp:234
+#: importwizard.cpp:233
 #, fuzzy, kde-format
 #| msgid "Import mails from %1..."
 msgid "Import mails from %1: Done"
 msgstr "នាំចូល​សារ​ពី %1..."
 
-#: importwizard.cpp:240
+#: importwizard.cpp:239
 #, kde-format
 msgid "Import settings from %1..."
 msgstr "នាំចូល​ការ​កំណត់​ពី %1..."
 
-#: importwizard.cpp:243
+#: importwizard.cpp:242
 #, fuzzy, kde-format
 #| msgid "Import settings from %1..."
 msgid "Import settings from %1: Done"
 msgstr "នាំចូល​ការ​កំណត់​ពី %1..."
 
-#: importwizard.cpp:249
+#: importwizard.cpp:248
 #, kde-format
 msgid "Import calendar from %1..."
 msgstr "នាំចូល​ប្រតិទិន​ពី %1..."
 
-#: importwizard.cpp:252
+#: importwizard.cpp:251
 #, fuzzy, kde-format
 #| msgid "Import calendar from %1..."
 msgid "Import calendar from %1: Done"
 msgstr "នាំចូល​ប្រតិទិន​ពី %1..."
 
-#: importwizard.cpp:341 plugins/balsa/balsaimportdata.cpp:48
+#: importwizard.cpp:340 plugins/balsa/balsaimportdata.cpp:48
 #: plugins/claws-mail/clawsmailimportdata.cpp:49
 #: plugins/evolutionv3/evolutionv3importdata.cpp:68
 #: plugins/icedove/icedoveimportdata.cpp:80
@@ -168,7 +168,7 @@ msgstr "នាំចូល​ប្រតិទិន​ពី %1..."
 msgid "Import in progress"
 msgstr "ការ​នាំចូល​កំពុង​ដំណើរការ"
 
-#: importwizard.cpp:348 plugins/balsa/balsaimportdata.cpp:55
+#: importwizard.cpp:347 plugins/balsa/balsaimportdata.cpp:55
 #: plugins/claws-mail/clawsmailimportdata.cpp:57
 #: plugins/evolutionv3/evolutionv3importdata.cpp:76
 #: plugins/icedove/icedoveimportdata.cpp:88

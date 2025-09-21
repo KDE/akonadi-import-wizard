@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:43+0000\n"
+"POT-Creation-Date: 2025-09-21 00:42+0000\n"
 "PO-Revision-Date: 2024-08-03 14:24+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -35,121 +35,121 @@ msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com"
 msgid "No program found."
 msgstr "找不到程式。"
 
-#: importwizard.cpp:43
+#: importwizard.cpp:42
 #, kde-format
 msgctxt "@title:window"
 msgid "PIM Import Tool"
 msgstr "個人資訊管理匯入工具"
 
-#: importwizard.cpp:72
+#: importwizard.cpp:71
 #, kde-format
 msgid ""
 "Close KMail before importing data. Some plugins will modify KMail config "
 "file."
 msgstr "匯入資料前請先關閉 KMail。有些外掛程式會變更 KMail 的設定檔。"
 
-#: importwizard.cpp:128
+#: importwizard.cpp:127
 #, kde-format
 msgid "Step 1: Select Filter"
 msgstr "步驟一：選擇匯入過濾器"
 
-#: importwizard.cpp:133
+#: importwizard.cpp:132
 #, kde-format
 msgid "Step 2: Importing..."
 msgstr "步驟二：匯入信件"
 
-#: importwizard.cpp:162
+#: importwizard.cpp:161
 #, kde-format
 msgid "Detect program"
 msgstr "偵測程式"
 
-#: importwizard.cpp:167
+#: importwizard.cpp:166
 #, kde-format
 msgid "Select material to import"
 msgstr "選擇要匯入的內容"
 
-#: importwizard.cpp:171
+#: importwizard.cpp:170
 #, kde-format
 msgid "Import mail messages"
 msgstr "匯入郵件"
 
-#: importwizard.cpp:175
+#: importwizard.cpp:174
 #, kde-format
 msgid "Import mail filters"
 msgstr "匯入郵件過濾器"
 
 #. i18n: ectx: property (text), widget (QPushButton, importSettings)
-#: importwizard.cpp:179 ui/autodetect/importsettingpage.ui:47
+#: importwizard.cpp:178 ui/autodetect/importsettingpage.ui:47
 #, kde-format
 msgid "Import settings"
 msgstr "匯入設定"
 
-#: importwizard.cpp:183
+#: importwizard.cpp:182
 #, kde-format
 msgid "Import addressbooks"
 msgstr "匯入通訊錄"
 
-#: importwizard.cpp:187
+#: importwizard.cpp:186
 #, kde-format
 msgid "Import calendars"
 msgstr "匯入行事曆"
 
-#: importwizard.cpp:191
+#: importwizard.cpp:190
 #, kde-format
 msgid "Finish"
 msgstr "完成"
 
-#: importwizard.cpp:213
+#: importwizard.cpp:212
 #, kde-format
 msgid "Import addressbook from %1..."
 msgstr "從 %1 匯入通訊錄..."
 
-#: importwizard.cpp:216
+#: importwizard.cpp:215
 #, kde-format
 msgid "Import addressbook from %1: Done"
 msgstr "從 %1 匯入通訊錄：完成"
 
-#: importwizard.cpp:222
+#: importwizard.cpp:221
 #, kde-format
 msgid "Import filters from %1..."
 msgstr "從 %1 匯入郵件過濾器..."
 
-#: importwizard.cpp:225
+#: importwizard.cpp:224
 #, kde-format
 msgid "Import filters from %1: Done"
 msgstr "從 %1 匯入郵件過濾器：完成"
 
-#: importwizard.cpp:231
+#: importwizard.cpp:230
 #, kde-format
 msgid "Import mails from %1..."
 msgstr "從 %1 匯入郵件..."
 
-#: importwizard.cpp:234
+#: importwizard.cpp:233
 #, kde-format
 msgid "Import mails from %1: Done"
 msgstr "從 %1 匯入郵件：完成"
 
-#: importwizard.cpp:240
+#: importwizard.cpp:239
 #, kde-format
 msgid "Import settings from %1..."
 msgstr "從 %1 匯入設定..."
 
-#: importwizard.cpp:243
+#: importwizard.cpp:242
 #, kde-format
 msgid "Import settings from %1: Done"
 msgstr "從 %1 匯入設定：完成"
 
-#: importwizard.cpp:249
+#: importwizard.cpp:248
 #, kde-format
 msgid "Import calendar from %1..."
 msgstr "從 %1 匯入行事曆..."
 
-#: importwizard.cpp:252
+#: importwizard.cpp:251
 #, kde-format
 msgid "Import calendar from %1: Done"
 msgstr "從 %1 匯入行事曆：完成"
 
-#: importwizard.cpp:341 plugins/balsa/balsaimportdata.cpp:48
+#: importwizard.cpp:340 plugins/balsa/balsaimportdata.cpp:48
 #: plugins/claws-mail/clawsmailimportdata.cpp:49
 #: plugins/evolutionv3/evolutionv3importdata.cpp:68
 #: plugins/icedove/icedoveimportdata.cpp:80
@@ -160,7 +160,7 @@ msgstr "從 %1 匯入行事曆：完成"
 msgid "Import in progress"
 msgstr "匯入中..."
 
-#: importwizard.cpp:348 plugins/balsa/balsaimportdata.cpp:55
+#: importwizard.cpp:347 plugins/balsa/balsaimportdata.cpp:55
 #: plugins/claws-mail/clawsmailimportdata.cpp:57
 #: plugins/evolutionv3/evolutionv3importdata.cpp:76
 #: plugins/icedove/icedoveimportdata.cpp:88
