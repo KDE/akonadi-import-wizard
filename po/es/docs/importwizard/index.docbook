@@ -5,8 +5,7 @@
 >Asistente de importación</application
 >">
   <!ENTITY % addindex "IGNORE">
-  <!ENTITY % Spanish "INCLUDE"
-> 
+  <!ENTITY % Spanish "INCLUDE">
 ]>
 
 <article id="importwizard" lang="&language;">
@@ -117,7 +116,7 @@
 ><guimenu
 >Herramientas</guimenu
 ><guimenuitem
-> Asistente de importación...</guimenuitem
+> Asistente de importación…</guimenuitem
 ></menuchoice
 > para detección automática desde &kmail; con <menuchoice
 ><guimenu
