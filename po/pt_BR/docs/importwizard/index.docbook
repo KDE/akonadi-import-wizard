@@ -5,8 +5,7 @@
 >Assistente de Importação</application
 >">
   <!ENTITY % addindex "IGNORE">
-  <!ENTITY % Brazilian-Portuguese "INCLUDE"
-> 
+  <!ENTITY % Brazilian-Portuguese "INCLUDE">
 ]>
 
 <article id="importwizard" lang="&language;">
@@ -52,9 +51,9 @@
 </copyright>
 
 <date
->14/11/2013</date>
+>27/07/2016</date>
 <releaseinfo
->4.12 (&kde; 4.12)</releaseinfo>
+>5.3.40 (Applications 16.08)</releaseinfo>
 
 </articleinfo>
 
@@ -63,40 +62,69 @@
 >Introdução</title>
 
 <para
->O &i18n-importwizard; permite importar e-mails, configurações, livros de endereços e dados de calendário existentes na sua conta a partir dos seguintes aplicativos de e-mail:</para>
-  <simplelist>
-    <member
->Trojitá</member>
-    <member
->Evolution 1.x - 3.x</member>
-    <member
->OS X Mail</member>
-    <member
->Opera</member>
-    <member
->Sylpheed</member>
-    <member
->Thunderbird/Mozilla</member>
-    <member
->The Bat!</member>
-    <member
->Outlook Express</member>
-    <member
->Balsa</member>
-    <member
->Pegasus-Mail</member>
-    <member
->Claws Mail</member>
-  </simplelist>
+>O &i18n-importwizard; permite importar e-mails, configurações, livros de endereços e dados de calendário detectados na sua conta a partir dos seguintes aplicativos de e-mail:</para>
 
 <para
->Você pode iniciar o &i18n-importwizard; através do lançador de aplicativos ou a partir do &kmail;, usando a opção <menuchoice
+><application
+>Trojitá</application
+>, <application
+>Evolution 1.x - 3.x</application
+>, <application
+>OS X Mail</application
+>, <application
+>Opera</application
+>, <application
+>Sylpheed</application
+>, <application
+>Thunderbird/Mozilla</application
+>, <application
+>The Bat!</application
+>, <application
+>Outlook Express</application
+>, <application
+>Balsa</application
+>, <application
+>Pegasus-Mail</application
+> e <application
+>Claws Mail</application
+> </para>
+
+<para
+>Além disso, você pode usar a importação manual para <application
+>Arquivo do KMail</application
+>, <application
+>mbox (Unix, Evolution)</application
+>, Maildirs do &kmail;, <application
+>Icedove</application
+>, <application
+>Lotus Notes</application
+>, <application
+>Plain Text</application
+> e arquivos <application
+>Mailman</application
+>. </para>
+
+<para
+>Se nenhum dado de e-mail for detectado automaticamente, clique em <guibutton
+>Seleção manual</guibutton
+> na janela inicial e use os recursos de <link linkend="manual-import"
+>Importação manual</link
+>. </para>
+
+<para
+>Você pode iniciar o &i18n-importwizard; diretamente do lançador de aplicativos ou a partir do &kmail; com <menuchoice
 ><guimenu
 >Ferramentas</guimenu
 ><guimenuitem
->Assistente de Importação...</guimenuitem
+>Assistente de importação</guimenuitem
 ></menuchoice
-> </para>
+> para detecção automática ou a partir do &kmail; com <menuchoice
+><guimenu
+>Arquivo</guimenu
+> <guimenuitem
+>Importar mensagens</guimenuitem
+></menuchoice
+> para importação manual. </para>
 
 <note>
 <para
@@ -104,15 +132,13 @@
 </note>
 
 <para
->Para mais informações sobre outros utilitários para importar mensagens de e-mail, leia o <ulink url="help:kmailcvt"
->Manual do KMailCVT</ulink
-> e o capítulo <ulink url="help:pimsettingexporter"
->Exportação de Definições PIM</ulink
-> do manual do &kmail;.</para>
+>Para obter informações sobre outros utilitários para importar e-mails, leia o <ulink url="help:/pimdataexporter"
+>manual do exportador de dados do PIM</ulink
+>.</para>
 
-<sect2 id="using-kapp">
+<sect2 id="detected-mailers">
 <title
->Usando o &i18n-importwizard;</title>
+>Aplicativos de correio detectados</title>
 
 <para
 >Ao iniciar, o assistente de importação irá detectar todos os aplicativos de e-mail suportados e apresentá-los em na janela. Selecione o aplicativo de e-mail de onde deseja importar e clique no botão <guibutton
@@ -144,9 +170,7 @@
 
 <listitem
 ><para
->Para <guilabel
->Importar mensagens de e-mail</guilabel
->, você precisa selecionar a pasta para onde deseja importar as suas mensagens de e-mail. Uma vez selecionada, clique no botão <guibutton
+>Para importar mensagens de e-mail, você precisa selecionar a pasta para onde deseja importar as suas mensagens de e-mail. Uma vez selecionada, clique no botão <guibutton
 >Importar mensagens</guibutton
 >. Assim que a barra de progresso chegar aos 100%, clique no botão <guibutton
 >Próximo</guibutton
@@ -157,9 +181,7 @@
 
 <listitem
 ><para
->Para <guilabel
->Importar os filtros de e-mail</guilabel
->, clique no botão <guibutton
+>Para importar os filtros de e-mail, clique no botão <guibutton
 >Importar filtros</guibutton
 >, para que ele importe todos os filtros que encontrar. Assim que terminar, clique no botão <guibutton
 >Próximo</guibutton
@@ -170,9 +192,7 @@
 
 <listitem
 ><para
->Para <guilabel
->Importar as configurações</guilabel
->, clique no botão <guibutton
+>Para importar as configurações, clique no botão <guibutton
 >Importar configurações</guibutton
 >. O assistente irá fazer algumas perguntas, &eg;, qual a pasta a ser usada para as pastas de contas que não existem. O assistente também irá criar a sua identidade. Assim que terminar, clique no botão <guibutton
 >Próximo</guibutton
@@ -183,15 +203,14 @@
 
 <listitem
 ><para
->Para <guilabel
->Importar livros de endereços</guilabel
->, clique no botão <guibutton
+>Para importar livros de endereços ou calendários, clique no botão <guibutton
 >Importar livro de endereços</guibutton
->, para que ele importe todos os livros de endereços que encontrar. Assim que terminar, clique no botão <guibutton
+> ou <guibutton
+>Importar calendário</guibutton
+>, para que ele importe todos os livros de endereços ou calendários que encontrar. Assim que terminar, clique no botão <guibutton
 >Próximo</guibutton
 >.</para
 ></listitem>
-
 </itemizedlist>
 
 <para
@@ -203,7 +222,43 @@
 
 </sect2>
 
-<sect2 id="credits">
+<sect2 id="manual-import">
+<title
+>Importação manual</title>
+
+<para>
+<screenshot>
+<screeninfo
+>Importação manual</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="manual-import.png" format="PNG"/>
+    </imageobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note
+><para
+>Certifique-se de compactar suas pastas no outro cliente de e-mail.</para
+></note>
+<para
+>Selecione seu programa de e-mail anterior na caixa suspensa. A área de texto central da janela será atualizada com instruções especiais (se aplicável) e o local conhecido de armazenamento de mensagens de e-mail para esse aplicativo. Siga essas instruções e, em seguida, selecione a pasta para a qual deseja importar suas mensagens.</para>
+<para
+>Se você deseja remover mensagens duplicadas, marque a opção <guilabel
+>Remover mensagens duplicadas durante a importação</guilabel
+>. Uma janela de seleção de arquivo será exibida e você precisa selecionar o arquivo/pasta indicado nas instruções. Clique no botão <guibutton
+>Avançar</guibutton
+> para concluir a importação. Quando a importação terminar, você pode clicar no botão <guibutton
+>Voltar</guibutton
+> para importar de outro aplicativo ou no botão <guibutton
+>Concluir</guibutton
+> para sair. </para>
+</sect2>
+
+</sect1>
+
+<sect1 id="credits">
 
 <title
 >Créditos e licença</title>
@@ -213,16 +268,15 @@
 <para
 >Direitos autorais do programa 2013 Laurent Montel montel@kde.org </para>
 <para
->Direitos autorais da documentação Copyright &copy; 2013 Laurent Montel montel@kde.org </para>
+>A seção de importação manual desta documentação é uma cópia modificada do manual do KMailCVT</para>
+<para
+>Direitos autorais da documentação Copyright &copy; 2013 Laurent Montel montel@kde.org e Scarlett Clark scarlett@scarlettgatelyclark.com </para>
 
 <para
 >Tradução de André Marcelo Alvarenga <email
 >alvarenga@kde.org</email
 ></para
-> 
-&underFDL; &underGPL; </sect2>
-
-</sect1>
+> &underFDL; &underGPL; </sect1>
 
 </article>
 
