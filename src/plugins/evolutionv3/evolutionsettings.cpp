@@ -194,7 +194,7 @@ void EvolutionSettings::extractSignatureInfo(const QString &info)
 
         const QString tag = e.tagName();
         const QString uid = e.attribute(u"uid"_s);
-        const QString signatureName = e.attribute(u"name"_s); // Use it ?
+        // const QString signatureName = e.attribute(u"name"_s); // Use it ?
         const QString format = e.attribute(u"text"_s);
         const bool automatic = (e.attribute(u"auto"_s) == QLatin1StringView("true"));
         if (automatic) {
@@ -480,7 +480,7 @@ void EvolutionSettings::extractAccountInfo(const QString &info)
             }
         } else if (tag == QLatin1StringView("receipt-policy")) {
             if (e.hasAttribute(u"policy"_s)) {
-                const QString policy = e.attribute(u"policy"_s);
+                // const QString policy = e.attribute(u"policy"_s);
                 // TODO
             }
         } else if (tag == QLatin1StringView("pgp")) {

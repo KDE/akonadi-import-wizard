@@ -387,7 +387,7 @@ void ThunderbirdSettings::readGlobalSettings()
     const QString mailAlertShowPreviewStr = u"mail.biff.alert.show_preview"_s;
     // TODO add show preview
     if (mHashConfig.contains(mailAlertShowPreviewStr)) {
-        const bool mailAlertShowPreview = mHashConfig.value(mailAlertShowPreviewStr).toBool();
+        // const bool mailAlertShowPreview = mHashConfig.value(mailAlertShowPreviewStr).toBool();
         // addNewMailNotifier(u"General"_s,u"showSubject"_s, mailAlertShowPreview);
     } else {
         // Default value in thunderbird
