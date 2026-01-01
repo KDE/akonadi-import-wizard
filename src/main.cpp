@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2012-2025 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2012-2026 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
                          QStringLiteral(KDEPIM_VERSION),
                          i18n("PIM Import Tool"),
                          KAboutLicense::GPL_V2,
-                         i18n("Copyright © 2012-%1 ImportWizard authors", u"2025"_s));
+                         i18n("Copyright © 2012-%1 ImportWizard authors", u"2026"_s));
 
     aboutData.addAuthor(i18nc("@info:credit", "Laurent Montel"), i18n("Maintainer"), u"montel@kde.org"_s);
     QApplication::setWindowIcon(QIcon::fromTheme(u"kontact-import-wizard"_s));
