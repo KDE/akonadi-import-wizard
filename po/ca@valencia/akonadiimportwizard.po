@@ -204,7 +204,7 @@ msgstr "S'ha importat des de «%1»"
 #: libimportwizard/abstractaddressbook.cpp:88
 #, kde-format
 msgid "Error during contact creation: %1"
-msgstr "S'ha produït un error en crear el contacte: %1"
+msgstr "S'ha produït un error mentre es creava el contacte: %1"
 
 #: libimportwizard/abstractaddressbook.cpp:91
 #, kde-format
@@ -330,7 +330,7 @@ msgstr "S'ha exportat la llibreta d'adreces «%1»."
 #: plugins/evolutionv3/evolutionaddressbook.cpp:82
 #, kde-format
 msgid "Failed to export address book \"%1\"."
-msgstr "No s'ha pogut exportar la llibreta d'adreces «%1»."
+msgstr "Ha fallat mentre s'exportava la llibreta d'adreces «%1»."
 
 #: plugins/evolutionv3/evolutionv3importdata.cpp:59
 #, kde-format
