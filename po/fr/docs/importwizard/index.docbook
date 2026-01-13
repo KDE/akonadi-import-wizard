@@ -1,0 +1,278 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY i18n-importwizard "<application
+>Assistant d'importation</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % French "INCLUDE">
+]>
+
+<article id="importwizard" lang="&language;">
+
+<articleinfo id="importwizardinfo">
+
+<title
+>Le manuel utilisateur de &i18n-importwizard;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+&traducteurAlviseCavallari; &traducteurJoelleCornavin; &traducteurGerardDelafond; &traducteurLudovicGrossard; &traducteurPierre-EmmanuelMuller; &traducteurLaurentRathle; &traducteurYannVerley; &traducteurXavierBesnard; 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>Laurent Montel</holder>
+</copyright>
+
+<date
+>27-07-2016</date>
+<releaseinfo
+>5.3.40 (Applications 16.08)</releaseinfo>
+
+</articleinfo>
+
+<sect1 id="introduction">
+<title
+>Introduction</title>
+
+<para
+>&i18n-importwizard; permet d'importer des courriels, des configurations, des carnets d'adresses et des données de calendrier détectés dans votre compte utilisateur à partir des logiciels de messagerie suivants :</para>
+
+<para
+><application
+>Trojita</application
+>, <application
+>Evolution 1.x - 3.x</application
+>, <application
+>OS X Mail</application
+>, <application
+>Opera</application
+>, <application
+>Sylpheed</application
+>, <application
+>Thunderbird / Mozilla</application
+>, <application
+>The Bat ! </application
+>, <application
+>Outlook Express</application
+>, <application
+>Balsa</application
+>, <application
+>Pegasus-Mail</application
+> et <application
+>Claws Mail</application
+> </para>
+
+<para
+>De plus, vous pouvez utiliser l'importation manuelle pour <application
+>KMail Archive</application
+>, <application
+>mbox (Unix, Evolution)</application
+>, Maildir de &kmail;, <application
+>Icedove</application
+>, <application
+>Lotus Notes</application
+>, <application
+>Plain Text</application
+> et les archives <application
+>Mailman</application
+>. </para>
+
+<para
+>Si aucune donnée de courriel n'est détectée automatiquement, veuillez cliquer sur le bouton <guibutton
+>Sélection manuelle</guibutton
+> dans la fenêtre de démarrage et utiliser les fonctionnalités <link linkend="manual-import"
+>d'importation manuelle</link
+>. </para>
+
+<para
+>Vous pouvez démarrer &i18n-importwizard; directement à partir du lanceur d'application ou à partir de &kmail; avec l'élément de menu <menuchoice
+><guimenu
+>Outils</guimenu
+><guimenuitem
+>Assistant d'importation</guimenuitem
+></menuchoice
+> pour la détection automatique ou à partir de &kmail; avec l'élément de menu <menuchoice
+><guimenu
+>Fichier</guimenu
+><guimenuitem
+>Importer des messages</guimenuitem
+></menuchoice
+> pour une importation manuelle. </para>
+
+<note>
+<para
+>Veuillez fermer &kmail; avant l'importation de données. Certains modules externes modifieront le fichier de configuration de &kmail;.</para>
+</note>
+
+<para
+>Pour plus d'informations sur les autres utilitaires d'importation de courriels, veuillez consulter le manuel utilisateur de <ulink url="help:/pimdataexporter"
+>l'exportateur de données « PIM » </ulink
+>.</para>
+
+<sect2 id="detected-mailers">
+<title
+>Applications de messagerie détectées</title>
+
+<para
+>Au démarrage, l'assistant d'importation détectera toutes les applications de messagerie prises en charge et les répertoriera pour vous dans la fenêtre. Veuillez sélectionner l'application de messagerie à partir de laquelle vous souhaitez importer, puis cliquer sur le bouton <guibutton
+>Suivant</guibutton
+>. L'assistant vous demandera ensuite si vous souhaitez tout importer ou vous donnera des options pour sélectionner les types de données que vous souhaitez importer.</para>
+
+<screenshot>
+<screeninfo
+>Importer la sélection</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="import-selection.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Importer la sélection</phrase>
+    </textobject>
+    <caption>
+      <para
+>Importer la sélection</para>
+    </caption>
+  </mediaobject>
+</screenshot>
+
+<para
+>En fonction de vos sélections dans la page des données à importer, vous verrez une ou plusieurs des pages suivantes :</para>
+
+<itemizedlist>
+
+<listitem
+><para
+>Pour importer des courriels, vous devez sélectionner le dossier dans lequel vous souhaitez les importer. Une fois sélectionné, veuillez cliquer sur le bouton <guibutton
+>Importer les courriels</guibutton
+>. Une fois que la barre de progression atteint 100 %, veuillez cliquer sur le bouton <guibutton
+>Suivant</guibutton
+> ou sur le bouton <guibutton
+>Terminer</guibutton
+>, s'il s'agit de votre dernière sélection de données.</para
+></listitem>
+
+<listitem
+><para
+>Pour importer des filtres de courriels, veuillez cliquer sur le bouton <guibutton
+>Importer des filtres</guibutton
+> et ce menu importera tous les filtres trouvés. Une fois terminé, veuillez cliquer sur le bouton <guibutton
+>Suivant</guibutton
+> ou sur le bouton <guibutton
+>Terminer</guibutton
+>, s'il s'agit de votre dernière sélection de données.</para
+></listitem>
+
+<listitem
+><para
+>Pour importer une configuration, veuillez cliquer sur le bouton <guibutton
+>Importer une configuration</guibutton
+>. L'assistant vous posera quelques questions &pex; quel dossier utiliser pour les dossiers de compte n'existant pas. L'assistant créera également votre identité. Une fois terminé, veuillez cliquer sur le bouton <guibutton
+>Suivant</guibutton
+> ou sur le bouton <guibutton
+>Terminer</guibutton
+>, s'il s'agit de votre dernière sélection de données.</para
+></listitem>
+
+<listitem
+><para
+>Pour importer des carnets d'adresses ou des agendas, veuillez cliquer sur le bouton <guibutton
+>Importer un carnet d'adresses</guibutton
+> ou <guibutton
+>Importer un agenda</guibutton
+>. Cela importera tous les carnets d'adresses ou agenda qui seront trouvés. Une fois terminé, veuillez cliquer sur le bouton <guibutton
+>Suivant</guibutton
+>.</para
+></listitem>
+</itemizedlist>
+
+<para
+>Veuillez cliquer sur le bouton <guibutton
+>Terminer</guibutton
+> pour terminer et quitter l'assistant. Si à tout moment vous souhaitez mettre fin à l'assistant, vous pouvez cliquer sur le bouton <guibutton
+>Annuler</guibutton
+>.</para>
+
+</sect2>
+
+<sect2 id="manual-import">
+<title
+>Importation manuelle</title>
+
+<para>
+<screenshot>
+<screeninfo
+>Importation manuelle</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="manual-import.png" format="PNG"/>
+    </imageobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note
+><para
+>Veuillez vous assurer de compresser vos dossiers dans l'autre client de messagerie.</para
+></note>
+<para
+>Sélectionnez votre programme de messagerie précédent dans la boite de dialogue à liste déroulante. La zone centrale de texte de la boite de dialogue sera mise à jour avec des instructions spéciales (Si nécessaire) et l'emplacement connu d'enregistrement des courriels pour cette application. Veuillez suivre ces instructions, puis sélectionner le dossier dans lequel vous souhaitez importer vos courriels.</para>
+<para
+>Si vous souhaitez supprimer les messages dupliqués, veuillez sélectionner la case <guilabel
+>Supprimer les messages dupliqués durant l'importation</guilabel
+>. Une boite de dialogue de sélection de fichier apparaitra et vous devez sélectionner le fichier / dossier indiqué dans les instructions. Veuillez ensuite cliquer sur le bouton <guibutton
+>Suivant</guibutton
+> pour terminer l'importation. Lorsque l'importation est terminée, vous pouvez cliquer sur le bouton <guibutton
+>Précédent</guibutton
+> pour importer à partir d'une autre application ou sur le bouton <guibutton
+>Terminer</guibutton
+> pour quitter. </para>
+</sect2>
+
+</sect1>
+
+<sect1 id="credits">
+
+<title
+>Remerciements et licence</title>
+
+<para
+>&i18n-importwizard;</para>
+<para
+>Licence du programme 2013 par Laurent Montel montel@kde.org </para>
+<para
+>La section concernant l'importation manuelle est une copie modifiée du manuel de KMailCVT.</para>
+<para
+>Licence concernant la documentation &copy; 2013 Laurent Montel (montel@kde.org) et Scarlett Clark (scarlett@scarlettgatelyclark.com) </para>
+
+<para
+>Traduction française par &traducteurAlviseCavallari;,  &traducteurJoelleCornavin;,  &traducteurGerardDelafond;,  &traducteurLudovicGrossard;, &traducteurPierre-EmmanuelMuller;, &traducteurLaurentRathle;,  &traducteurYannVerley;</para
+> &underFDL; &underGPL; </sect1>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->
