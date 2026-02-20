@@ -102,10 +102,9 @@ msgid "Import addressbook from %1..."
 msgstr ""
 
 #: importwizard.cpp:215
-#, fuzzy, kde-format
-#| msgid "Import addressbook"
+#, kde-format
 msgid "Import addressbook from %1: Done"
-msgstr "Iompórtáil leabhar seoltaí"
+msgstr ""
 
 #: importwizard.cpp:221
 #, kde-format
@@ -113,10 +112,9 @@ msgid "Import filters from %1..."
 msgstr ""
 
 #: importwizard.cpp:224
-#, fuzzy, kde-format
-#| msgid "Import Filters"
+#, kde-format
 msgid "Import filters from %1: Done"
-msgstr "Iompórtáil Scagairí"
+msgstr ""
 
 #: importwizard.cpp:230
 #, kde-format
@@ -124,10 +122,9 @@ msgid "Import mails from %1..."
 msgstr ""
 
 #: importwizard.cpp:233
-#, fuzzy, kde-format
-#| msgid "Import Filters"
+#, kde-format
 msgid "Import mails from %1: Done"
-msgstr "Iompórtáil Scagairí"
+msgstr ""
 
 #: importwizard.cpp:239
 #, kde-format
@@ -145,10 +142,9 @@ msgid "Import calendar from %1..."
 msgstr ""
 
 #: importwizard.cpp:251
-#, fuzzy, kde-format
-#| msgid "Import calendar"
+#, kde-format
 msgid "Import calendar from %1: Done"
-msgstr "Iompórtáil féilire"
+msgstr ""
 
 #: importwizard.cpp:340 plugins/balsa/balsaimportdata.cpp:48
 #: plugins/claws-mail/clawsmailimportdata.cpp:49
@@ -178,11 +174,10 @@ msgid "Creating new contact..."
 msgstr "Teagmháil nua á cruthú..."
 
 #: libimportwizard/abstractaddressbook.cpp:36
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
-msgstr "Roghnaigh Leabhar Seoltaí"
+msgstr ""
 
 #: libimportwizard/abstractaddressbook.cpp:37
 #, kde-format
@@ -211,10 +206,9 @@ msgid "Contact creation complete"
 msgstr ""
 
 #: libimportwizard/abstractimporter.cpp:65
-#, fuzzy, kde-format
-#| msgid "Import Filters"
+#, kde-format
 msgid "Importing of filters from \"%1\" was canceled."
-msgstr "Iompórtáil Scagairí"
+msgstr ""
 
 #: libimportwizard/abstractimporter.cpp:67
 #, kde-format
@@ -222,9 +216,6 @@ msgid "1 filter was imported from \"%2\""
 msgid_plural "%1 filters were imported from \"%2\""
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: libimportwizard/abstractimporter.cpp:71
 #, kde-format
@@ -262,11 +253,10 @@ msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr ""
 
 #: main.cpp:40
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
-msgstr "Laurent Montel"
+msgstr ""
 
 #: main.cpp:40
 #, kde-format
@@ -286,10 +276,9 @@ msgstr ""
 
 #: plugins/balsa/balsaaddressbook.cpp:37 plugins/balsa/balsaaddressbook.cpp:50
 #: plugins/sylpheed/sylpheedaddressbook.cpp:29
-#, fuzzy, kde-format
-#| msgid "Import addressbook"
+#, kde-format
 msgid "No addressbook found"
-msgstr "Iompórtáil leabhar seoltaí"
+msgstr ""
 
 #: plugins/balsa/balsaaddressbook.cpp:64
 #, kde-format
@@ -314,11 +303,10 @@ msgid ""
 msgstr ""
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:24
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export Evolution Address Book"
-msgstr "Roghnaigh Leabhar Seoltaí"
+msgstr ""
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:27
 #, kde-format
@@ -470,10 +458,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/autodetect/selectprogrampage.ui:86
-#, fuzzy, kde-format
-#| msgid "Import addressbook"
+#, kde-format
 msgid "No program found"
-msgstr "Iompórtáil leabhar seoltaí"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, manualSelectionCheckBox)
 #: ui/autodetect/selectprogrampage.ui:112
