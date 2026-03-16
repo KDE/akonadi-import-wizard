@@ -153,10 +153,6 @@ find_package(KPim6MailImporterAkonadi ${MAILIMPORTER_VERSION} CONFIG REQUIRED)
 
 find_package(KPim6MessageViewer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6PimCommonAkonadi ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
-include_directories(
-    ${importwizard_SOURCE_DIR}
-    ${importwizard_BINARY_DIR}
-)
 
 find_package(Qt6Keychain ${QT6KEYCHAIN_LIB_VERSION} CONFIG)
 set_package_properties(
