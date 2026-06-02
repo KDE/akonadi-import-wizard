@@ -8,29 +8,30 @@ msgstr ""
 "Project-Id-Version: importwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:52+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-05-28 16:56-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
+msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 
 #: autodetect/widgets/selectprogramlistwidget.cpp:47
 #, kde-format
 msgid "No program found."
-msgstr ""
+msgstr "پىروگرامما تىپىلمىدى."
 
 #: importwizard.cpp:42
 #, kde-format
@@ -79,7 +80,7 @@ msgstr ""
 #: importwizard.cpp:178 ui/autodetect/importsettingpage.ui:47
 #, kde-format
 msgid "Import settings"
-msgstr "ئىمپورت قىلىش تەڭشەكلىرى"
+msgstr "ئەكىرىش تەڭشىكى"
 
 #: importwizard.cpp:182
 #, kde-format
@@ -102,10 +103,9 @@ msgid "Import addressbook from %1..."
 msgstr ""
 
 #: importwizard.cpp:215
-#, fuzzy, kde-format
-#| msgid "Import in progress"
+#, kde-format
 msgid "Import addressbook from %1: Done"
-msgstr "ئىمپورت قىلىۋاتىدۇ"
+msgstr ""
 
 #: importwizard.cpp:221
 #, kde-format
@@ -113,10 +113,9 @@ msgid "Import filters from %1..."
 msgstr ""
 
 #: importwizard.cpp:224
-#, fuzzy, kde-format
-#| msgid "Filters"
+#, kde-format
 msgid "Import filters from %1: Done"
-msgstr "سۈزگۈچ"
+msgstr ""
 
 #: importwizard.cpp:230
 #, kde-format
@@ -134,10 +133,9 @@ msgid "Import settings from %1..."
 msgstr ""
 
 #: importwizard.cpp:242
-#, fuzzy, kde-format
-#| msgid "Import settings"
+#, kde-format
 msgid "Import settings from %1: Done"
-msgstr "ئىمپورت قىلىش تەڭشەكلىرى"
+msgstr ""
 
 #: importwizard.cpp:248
 #, kde-format
@@ -145,10 +143,9 @@ msgid "Import calendar from %1..."
 msgstr ""
 
 #: importwizard.cpp:251
-#, fuzzy, kde-format
-#| msgid "Import finished"
+#, kde-format
 msgid "Import calendar from %1: Done"
-msgstr "ئىمپورت قىلىش تاماملاندى"
+msgstr ""
 
 #: importwizard.cpp:340 plugins/balsa/balsaimportdata.cpp:48
 #: plugins/claws-mail/clawsmailimportdata.cpp:49
@@ -159,7 +156,7 @@ msgstr "ئىمپورت قىلىش تاماملاندى"
 #: plugins/thunderbird/thunderbirdimportdata.cpp:82
 #, kde-format
 msgid "Import in progress"
-msgstr "ئىمپورت قىلىۋاتىدۇ"
+msgstr "ئەكىرىۋاتىدۇ"
 
 #: importwizard.cpp:347 plugins/balsa/balsaimportdata.cpp:55
 #: plugins/claws-mail/clawsmailimportdata.cpp:57
@@ -170,7 +167,7 @@ msgstr "ئىمپورت قىلىۋاتىدۇ"
 #: plugins/thunderbird/thunderbirdimportdata.cpp:90
 #, kde-format
 msgid "Import finished"
-msgstr "ئىمپورت قىلىش تاماملاندى"
+msgstr "ئەكىرىش تاماملاندى"
 
 #: libimportwizard/abstractaddressbook.cpp:30
 #, kde-format
@@ -178,16 +175,15 @@ msgid "Creating new contact..."
 msgstr ""
 
 #: libimportwizard/abstractaddressbook.cpp:36
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
-msgstr "ئادرېس دەپتىرى تاللاش"
+msgstr "ئادرېس دەپتەر تاللىنىدۇ"
 
 #: libimportwizard/abstractaddressbook.cpp:37
 #, kde-format
 msgid "Select the address book the new contact shall be saved in:"
-msgstr "يېڭى ئالاقەدەش ساقلىنىدىغان ئادرېس دەپتىرىنى تاللاڭ:"
+msgstr "يېڭى ئالاقەداش ساقلىنىدىغان ئادرېس دەپتىرىنى تاللاڭ:"
 
 #: libimportwizard/abstractaddressbook.cpp:42
 #, kde-format
@@ -256,8 +252,7 @@ msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr ""
 
 #: main.cpp:40
-#, fuzzy, kde-format
-#| msgid "Laurent Montel"
+#, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
@@ -265,7 +260,7 @@ msgstr "Laurent Montel"
 #: main.cpp:40
 #, kde-format
 msgid "Maintainer"
-msgstr "مەسئۇل كىشى"
+msgstr "ئاسرىغۇچى"
 
 #: main.cpp:48
 #, kde-format
@@ -307,11 +302,10 @@ msgid ""
 msgstr ""
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:24
-#, fuzzy, kde-format
-#| msgid "Select Address Book"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export Evolution Address Book"
-msgstr "ئادرېس دەپتىرى تاللاش"
+msgstr ""
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:27
 #, kde-format
@@ -371,30 +365,27 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, importAddressBook)
 #: ui/autodetect/importaddressbookpage.ui:47
-#, fuzzy, kde-format
-#| msgid "Import in progress"
+#, kde-format
 msgid "Import addressbook"
-msgstr "ئىمپورت قىلىۋاتىدۇ"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, importCalendar)
 #: ui/autodetect/importcalendarpage.ui:47
-#, fuzzy, kde-format
-#| msgid "Import finished"
+#, kde-format
 msgid "Import calendar"
-msgstr "ئىمپورت قىلىش تاماملاندى"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, importFilters)
 #: ui/autodetect/importfilterpage.ui:47
-#, fuzzy, kde-format
-#| msgid "Filters"
+#, kde-format
 msgid "Import Filters"
-msgstr "سۈزگۈچ"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/autodetect/importfinishpage.ui:29
 #, kde-format
 msgid "Summary:"
-msgstr "ئۈزۈندى:"
+msgstr "ئۈزۈندە:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/autodetect/importmailpage.ui:32 ui/manual/manualselectfilterpage.ui:136
@@ -404,10 +395,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, importMails)
 #: ui/autodetect/importmailpage.ui:60
-#, fuzzy, kde-format
-#| msgid "Import finished"
+#, kde-format
 msgid "Import Mails"
-msgstr "ئىمپورت قىلىش تاماملاندى"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mails)
 #: ui/autodetect/selectcomponentpage.ui:49
@@ -425,7 +415,7 @@ msgstr "سۈزگۈچ"
 #: ui/autodetect/selectcomponentpage.ui:69
 #, kde-format
 msgid "Settings"
-msgstr "تەڭشەكلەر"
+msgstr "تەڭشەك"
 
 #. i18n: ectx: property (text), widget (QCheckBox, addressbooks)
 #: ui/autodetect/selectcomponentpage.ui:79
@@ -455,10 +445,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, everything)
 #: ui/autodetect/selectcomponentpage.ui:143
-#, fuzzy, kde-format
-#| msgid "Import settings"
+#, kde-format
 msgid "Import Everything"
-msgstr "ئىمپورت قىلىش تەڭشەكلىرى"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/autodetect/selectprogrampage.ui:53
