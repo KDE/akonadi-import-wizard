@@ -5,8 +5,7 @@
 >Assistent d'importació</application
 >">
   <!ENTITY % addindex "IGNORE">
-  <!ENTITY % Catalan  "INCLUDE"
-> 
+  <!ENTITY % Catalan  "INCLUDE">
 ]>
 
 <article id="importwizard" lang="&language;">
