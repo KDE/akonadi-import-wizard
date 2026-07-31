@@ -194,7 +194,7 @@
 ><para
 >Um Einstellungen zu importieren, klicken Sie auf den Knopf <guilabel
 >Einstellungen importieren</guilabel
->. Dann müssen Sie &eg; angeben, welche Ordner für nicht vorhandenen Postfächer benutzt werden sollen. Der Assistent erstellt auch alle Daten für Ihre Identität. Ist das Importieren abgeschlossen, klicken Sie auf <guibutton
+>. Dann müssen Sie &eg; angeben, welche Ordner für nicht vorhandenen Postfächer verwendet werden sollen. Der Assistent erstellt auch alle Daten für Ihre Identität. Ist das Importieren abgeschlossen, klicken Sie auf <guibutton
 >Weiter</guibutton
 >, um noch mehr Daten zu importieren, oder auf <guibutton
 >Fertigstellen</guibutton
