@@ -331,8 +331,6 @@ void ImportWizard::next()
         // Disable back & finish
         setValid(currentPage(), false);
 
-        finishButton()->setEnabled(false);
-
         auto info = new MailImporter::FilterInfo();
         auto filterImporter = new MailImporter::FilterImporterAkonadi(info);
         auto infoGui = new ImportWizardFilterInfoGui(mImportpage, this);
@@ -350,7 +348,6 @@ void ImportWizard::next()
         delete info;
         // Enable finish & back buttons
         setValid(currentPage(), true);
-        finishButton()->setEnabled(true);
     } else {
         KAssistantDialog::next();
     }
