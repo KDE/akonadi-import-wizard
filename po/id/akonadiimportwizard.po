@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-import-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-03 00:44+0000\n"
 "PO-Revision-Date: 2024-10-01 19:27+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -148,7 +148,7 @@ msgstr "Impor kalender dari %1..."
 msgid "Import calendar from %1: Done"
 msgstr "Impor kalender dari %1: Kelar"
 
-#: importwizard.cpp:340 plugins/balsa/balsaimportdata.cpp:48
+#: importwizard.cpp:338 plugins/balsa/balsaimportdata.cpp:48
 #: plugins/claws-mail/clawsmailimportdata.cpp:49
 #: plugins/evolutionv3/evolutionv3importdata.cpp:68
 #: plugins/icedove/icedoveimportdata.cpp:80
@@ -159,7 +159,7 @@ msgstr "Impor kalender dari %1: Kelar"
 msgid "Import in progress"
 msgstr "Impor sedang dalam progres"
 
-#: importwizard.cpp:347 plugins/balsa/balsaimportdata.cpp:55
+#: importwizard.cpp:345 plugins/balsa/balsaimportdata.cpp:55
 #: plugins/claws-mail/clawsmailimportdata.cpp:57
 #: plugins/evolutionv3/evolutionv3importdata.cpp:76
 #: plugins/icedove/icedoveimportdata.cpp:88

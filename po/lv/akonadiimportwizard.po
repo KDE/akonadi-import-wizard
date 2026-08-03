@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-import-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-03 00:44+0000\n"
 "PO-Revision-Date: 2024-08-20 18:28+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -149,7 +149,7 @@ msgstr "Importēt kalendāru no „%1“..."
 msgid "Import calendar from %1: Done"
 msgstr "Kalendāra importēšana no „%1“ ir pabeigta"
 
-#: importwizard.cpp:340 plugins/balsa/balsaimportdata.cpp:48
+#: importwizard.cpp:338 plugins/balsa/balsaimportdata.cpp:48
 #: plugins/claws-mail/clawsmailimportdata.cpp:49
 #: plugins/evolutionv3/evolutionv3importdata.cpp:68
 #: plugins/icedove/icedoveimportdata.cpp:80
@@ -160,7 +160,7 @@ msgstr "Kalendāra importēšana no „%1“ ir pabeigta"
 msgid "Import in progress"
 msgstr "Notiek importēšana"
 
-#: importwizard.cpp:347 plugins/balsa/balsaimportdata.cpp:55
+#: importwizard.cpp:345 plugins/balsa/balsaimportdata.cpp:55
 #: plugins/claws-mail/clawsmailimportdata.cpp:57
 #: plugins/evolutionv3/evolutionv3importdata.cpp:76
 #: plugins/icedove/icedoveimportdata.cpp:88

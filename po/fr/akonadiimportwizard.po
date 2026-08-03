@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: importwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-03 00:44+0000\n"
 "PO-Revision-Date: 2024-08-02 09:42+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -157,7 +157,7 @@ msgstr "Importer un agenda depuis %1..."
 msgid "Import calendar from %1: Done"
 msgstr "Importer un agenda depuis %1 : terminé"
 
-#: importwizard.cpp:340 plugins/balsa/balsaimportdata.cpp:48
+#: importwizard.cpp:338 plugins/balsa/balsaimportdata.cpp:48
 #: plugins/claws-mail/clawsmailimportdata.cpp:49
 #: plugins/evolutionv3/evolutionv3importdata.cpp:68
 #: plugins/icedove/icedoveimportdata.cpp:80
@@ -168,7 +168,7 @@ msgstr "Importer un agenda depuis %1 : terminé"
 msgid "Import in progress"
 msgstr "Importation en cours"
 
-#: importwizard.cpp:347 plugins/balsa/balsaimportdata.cpp:55
+#: importwizard.cpp:345 plugins/balsa/balsaimportdata.cpp:55
 #: plugins/claws-mail/clawsmailimportdata.cpp:57
 #: plugins/evolutionv3/evolutionv3importdata.cpp:76
 #: plugins/icedove/icedoveimportdata.cpp:88
