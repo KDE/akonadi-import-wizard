@@ -5,7 +5,6 @@
 */
 
 #include "sylpheedsettings.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "sylpheedsettingsutils.h"
 #include <MailCommon/MailUtil>
@@ -22,6 +21,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QFile>
 #include <QRegularExpression>
 #include <QStringList>
+
+using namespace Qt::Literals::StringLiterals;
 
 SylpheedSettings::SylpheedSettings() = default;
 

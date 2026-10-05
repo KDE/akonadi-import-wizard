@@ -5,11 +5,11 @@
 */
 
 #include "abstractcalendar.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "abstractdisplayinfo.h"
 #include <KConfigGroup>
 #include <KSharedConfig>
+using namespace Qt::Literals::StringLiterals;
 using namespace LibImportWizard;
 
 AbstractCalendar::AbstractCalendar() = default;

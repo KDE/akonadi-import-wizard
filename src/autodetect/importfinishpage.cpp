@@ -5,10 +5,11 @@
 */
 
 #include "importfinishpage.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "ui_importfinishpage.h"
 #include <QTime>
+
+using namespace Qt::Literals::StringLiterals;
 
 ImportFinishPage::ImportFinishPage(QWidget *parent)
     : QWidget(parent)

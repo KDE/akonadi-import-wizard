@@ -5,7 +5,6 @@
 */
 
 #include "clawsmailimportdata.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "clawsmailaddressbook.h"
 #include "clawsmailsettings.h"
@@ -17,6 +16,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KPluginFactory>
 
 #include <QDir>
+
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(ClawsMailImportData, "clawsmailimporter.json")
 

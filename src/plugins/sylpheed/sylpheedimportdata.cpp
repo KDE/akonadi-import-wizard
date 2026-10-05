@@ -5,7 +5,6 @@
 */
 
 #include "sylpheedimportdata.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <MailImporter/FilterInfo>
 #include <MailImporter/FilterSylpheed>
@@ -18,6 +17,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <QDir>
+
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(SylpheedImportData, "sylpheedimporter.json")
 SylpheedImportData::SylpheedImportData(QObject *parent, const QList<QVariant> &)

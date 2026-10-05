@@ -5,9 +5,10 @@
 */
 
 #include "manualimportmailpage.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <QStandardPaths>
+
+using namespace Qt::Literals::StringLiterals;
 
 ManualImportMailPage::ManualImportMailPage(QWidget *parent)
     : QWidget(parent)

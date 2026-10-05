@@ -5,13 +5,14 @@
 */
 
 #include "trojitaaddressbook.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KContacts/Addressee>
 
 #include <QUrl>
 
 #include <QSettings>
+
+using namespace Qt::Literals::StringLiterals;
 
 TrojitaAddressBook::TrojitaAddressBook(const QString &filename)
 {

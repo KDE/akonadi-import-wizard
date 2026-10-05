@@ -5,7 +5,6 @@
 */
 
 #include "thunderbirdsettings.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <MailCommon/MailUtil>
 #include <MailTransport/TransportManager>
@@ -21,6 +20,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStandardPaths>
 #include <QTextStream>
 #include <QUrl>
+
+using namespace Qt::Literals::StringLiterals;
 
 ThunderbirdSettings::ThunderbirdSettings(const QString &filename)
     : mFileName(filename)

@@ -5,7 +5,6 @@
 */
 
 #include "sylpheedaddressbook.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
@@ -14,6 +13,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KLocalizedString>
 
 #include <QDomDocument>
+
+using namespace Qt::Literals::StringLiterals;
 
 SylpheedAddressBook::SylpheedAddressBook(const QDir &dir)
     : mDir(dir)

@@ -5,7 +5,6 @@
 */
 
 #include "evolutioncalendar.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "evolutionutil.h"
 
@@ -15,6 +14,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QDomDocument>
 #include <QDomElement>
 #include <QFile>
+
+using namespace Qt::Literals::StringLiterals;
 
 EvolutionCalendar::EvolutionCalendar() = default;
 

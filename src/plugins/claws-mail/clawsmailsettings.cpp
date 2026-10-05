@@ -5,7 +5,6 @@
 */
 
 #include "clawsmailsettings.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "importwizardutil.h"
 
@@ -20,6 +19,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QFileInfo>
 
 #include <QRegularExpression>
+
+using namespace Qt::Literals::StringLiterals;
 
 ClawsMailSettings::ClawsMailSettings() = default;
 

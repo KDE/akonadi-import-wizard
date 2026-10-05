@@ -5,7 +5,6 @@
 */
 
 #include "balsaaddressbook.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "importwizardutil.h"
 
@@ -21,6 +20,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QFile>
 #include <QFileInfo>
 #include <QRegularExpression>
+
+using namespace Qt::Literals::StringLiterals;
 
 BalsaAddressBook::BalsaAddressBook(const QString &filename)
     : mFileName(filename)

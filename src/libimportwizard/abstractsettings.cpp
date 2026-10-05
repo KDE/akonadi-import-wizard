@@ -4,7 +4,6 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "abstractsettings.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "abstractdisplayinfo.h"
 
@@ -20,6 +19,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QMetaMethod>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace Akonadi;
 
 AbstractSettings::AbstractSettings()

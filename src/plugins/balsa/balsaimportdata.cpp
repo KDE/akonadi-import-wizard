@@ -5,7 +5,6 @@
 */
 
 #include "balsaimportdata.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "balsaaddressbook.h"
 #include "balsasettings.h"
@@ -16,6 +15,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <QDir>
+
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(BalsaImportData, "balsaimporter.json")
 

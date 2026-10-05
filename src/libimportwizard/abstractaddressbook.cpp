@@ -4,7 +4,6 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "abstractaddressbook.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "abstractdisplayinfo.h"
 
@@ -17,6 +16,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <KLocalizedString>
 
 #include <QPointer>
+using namespace Qt::Literals::StringLiterals;
 using namespace LibImportWizard;
 AbstractAddressBook::AbstractAddressBook()
     : mCollection(-1)

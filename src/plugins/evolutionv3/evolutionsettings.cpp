@@ -5,7 +5,6 @@
 */
 
 #include "evolutionsettings.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "evolutionutil.h"
 #include "importwizardutil.h"
@@ -21,6 +20,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QDomDocument>
 #include <QDomElement>
 #include <QFile>
+
+using namespace Qt::Literals::StringLiterals;
 
 EvolutionSettings::EvolutionSettings() = default;
 

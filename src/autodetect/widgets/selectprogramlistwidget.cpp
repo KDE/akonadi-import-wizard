@@ -5,10 +5,11 @@
 */
 
 #include "selectprogramlistwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 #include <QPainter>
+
+using namespace Qt::Literals::StringLiterals;
 
 SelectProgramListWidget::SelectProgramListWidget(QWidget *parent)
     : QListWidget(parent)

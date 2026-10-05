@@ -5,7 +5,6 @@
 */
 
 #include "thunderbirdaddressbook.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "addressbook/MorkParser.h"
 
@@ -13,6 +12,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KContacts/Addressee>
 #include <KLocalizedString>
 #include <QUrl>
+
+using namespace Qt::Literals::StringLiterals;
 
 ThunderBirdAddressBook::ThunderBirdAddressBook(const QDir &dir)
     : mDir(dir)

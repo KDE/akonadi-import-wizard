@@ -5,7 +5,6 @@
 */
 
 #include "evolutionv3importdata.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "evolutionaddressbook.h"
 #include "evolutioncalendar.h"
@@ -19,6 +18,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KLocalizedString>
 
 #include <QDir>
+
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(Evolutionv3ImportData, "evolutionv3importer.json")
 

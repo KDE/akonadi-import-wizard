@@ -5,7 +5,6 @@
 */
 
 #include "trojitasettings.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <ImportWizard/ImportWizardUtil>
 
@@ -17,6 +16,8 @@ using namespace Qt::Literals::StringLiterals;
 #include "trojitaplugin_debug.h"
 
 #include <QSettings>
+
+using namespace Qt::Literals::StringLiterals;
 
 TrojitaSettings::TrojitaSettings(const QString &filename)
 {

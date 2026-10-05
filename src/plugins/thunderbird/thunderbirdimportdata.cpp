@@ -5,7 +5,6 @@
 */
 
 #include "thunderbirdimportdata.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "abstractdisplayinfo.h"
 #include "thunderbirdaddressbook.h"
@@ -19,6 +18,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KPluginFactory>
 
 #include <QDir>
+
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(ThunderbirdImportData, "thunderbirdimporter.json")
 

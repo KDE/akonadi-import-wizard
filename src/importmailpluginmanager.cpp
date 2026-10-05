@@ -5,12 +5,13 @@
 */
 
 #include "importmailpluginmanager.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "abstractimporter.h"
 #include "importwizard_debug.h"
 #include <KPluginFactory>
 #include <KPluginMetaData>
+
+using namespace Qt::Literals::StringLiterals;
 
 namespace
 {

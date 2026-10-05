@@ -6,7 +6,6 @@
 
 // Local includes
 #include "manualselectfilterpage.h"
-using namespace Qt::Literals::StringLiterals;
 
 // Filter includes
 #include <MailImporter/FilterEvolution>
@@ -39,6 +38,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QStandardPaths>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace MailImporter;
 
 ManualSelectFilterPage::ManualSelectFilterPage(QWidget *parent)

@@ -5,7 +5,6 @@
 */
 
 #include "trojitaimportdata.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "trojitaaddressbook.h"
 #include "trojitasettings.h"
@@ -15,6 +14,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KPluginFactory>
 
 #include <QDir>
+
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(TrojitaImportData, "trojitaimporter.json")
 

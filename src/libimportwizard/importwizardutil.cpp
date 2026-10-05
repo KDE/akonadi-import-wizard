@@ -5,7 +5,6 @@
 */
 
 #include "importwizardutil.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "importwizardsavepasswordjob.h"
 #include "libimportwizard_debug.h"
@@ -14,6 +13,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <Akonadi/TagCreateJob>
 #include <KConfigGroup>
 #include <KSharedConfig>
+
+using namespace Qt::Literals::StringLiterals;
 
 void ImportWizardUtil::mergeLdap(const ldapStruct &ldap)
 {

@@ -4,7 +4,6 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "importwizard.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "autodetect/importaddressbookpage.h"
 #include "autodetect/importcalendarpage.h"
@@ -33,6 +32,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KMessageBox>
 #include <MailCommon/MailKernel>
 #include <QPushButton>
+
+using namespace Qt::Literals::StringLiterals;
 
 ImportWizard::ImportWizard(WizardMode mode, QWidget *parent)
     : KAssistantDialog(parent)

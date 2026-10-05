@@ -5,7 +5,6 @@
 */
 
 #include "balsasettings.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "balsaplugin_debug.h"
 #include <MailCommon/MailUtil>
@@ -19,6 +18,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KConfigGroup>
 #include <QImage>
 #include <QRegularExpression>
+
+using namespace Qt::Literals::StringLiterals;
 
 BalsaSettings::BalsaSettings(const QString &filename)
     : mFileName(filename)

@@ -5,7 +5,6 @@
 */
 
 #include "seamonkeyimportdata.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../thunderbird/thunderbirdaddressbook.h"
 #include "../thunderbird/thunderbirdsettings.h"
@@ -19,6 +18,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KPluginFactory>
 
 #include <QDir>
+
+using namespace Qt::Literals::StringLiterals;
 
 SeaMonkeyImportData::SeaMonkeyImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)

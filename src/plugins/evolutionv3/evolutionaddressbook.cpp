@@ -4,7 +4,6 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "evolutionaddressbook.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "abstractdisplayinfo.h"
 
@@ -12,6 +11,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KMessageBox>
 #include <QFileDialog>
 #include <QProcess>
+
+using namespace Qt::Literals::StringLiterals;
 
 EvolutionAddressBook::EvolutionAddressBook() = default;
 

@@ -8,13 +8,14 @@
 */
 
 #include "MorkParser.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <QFile>
 #include <QIODevice>
 //        =============================================================
 //        MorkParser::MorkParser
 #include "thunderbirdplugin_debug.h"
+
+using namespace Qt::Literals::StringLiterals;
 
 MorkParser::MorkParser(int DefaultScope)
 {
