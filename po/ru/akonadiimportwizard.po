@@ -108,7 +108,7 @@ msgstr "Готово"
 #: importwizard.cpp:212
 #, kde-format
 msgid "Import addressbook from %1..."
-msgstr "Импорт адресной книги из «%1»..."
+msgstr "Импорт адресной книги из «%1»…"
 
 #: importwizard.cpp:215
 #, kde-format
@@ -118,7 +118,7 @@ msgstr "Завершён импорт адресной книги из «%1»"
 #: importwizard.cpp:221
 #, kde-format
 msgid "Import filters from %1..."
-msgstr "Импорт фильтров из «%1»..."
+msgstr "Импорт фильтров из «%1»…"
 
 #: importwizard.cpp:224
 #, kde-format
@@ -128,7 +128,7 @@ msgstr "Завершён импорт фильтров из «%1»"
 #: importwizard.cpp:230
 #, kde-format
 msgid "Import mails from %1..."
-msgstr "Импорт почты из «%1»..."
+msgstr "Импорт почты из «%1»…"
 
 #: importwizard.cpp:233
 #, kde-format
@@ -138,7 +138,7 @@ msgstr "Завершён импорт почты из «%1»"
 #: importwizard.cpp:239
 #, kde-format
 msgid "Import settings from %1..."
-msgstr "Импорт настроек из «%1»..."
+msgstr "Импорт параметров из «%1»…"
 
 #: importwizard.cpp:242
 #, kde-format
@@ -148,7 +148,7 @@ msgstr "Завершён импорт параметров из «%1»"
 #: importwizard.cpp:248
 #, kde-format
 msgid "Import calendar from %1..."
-msgstr "Импорт календаря из «%1»..."
+msgstr "Импорт календаря из «%1»…"
 
 #: importwizard.cpp:251
 #, kde-format
@@ -180,7 +180,7 @@ msgstr "Импорт завершён"
 #: libimportwizard/abstractaddressbook.cpp:30
 #, kde-format
 msgid "Creating new contact..."
-msgstr "Создание нового контакта..."
+msgstr "Создание нового контакта…"
 
 #: libimportwizard/abstractaddressbook.cpp:36
 #, kde-format
@@ -235,7 +235,7 @@ msgstr "Файл фильтров не был найден."
 #: libimportwizard/abstractsettings.cpp:40
 #, kde-format
 msgid "Setting up identity..."
-msgstr "Настройка профиля..."
+msgstr "Настройка профиля…"
 
 #: libimportwizard/abstractsettings.cpp:48
 #, kde-format
@@ -245,12 +245,12 @@ msgstr "Профиль настроен."
 #: libimportwizard/abstractsettings.cpp:65
 #, kde-format
 msgid "Setting up transport..."
-msgstr "Настройка транспорта..."
+msgstr "Настройка метода отправки…"
 
 #: libimportwizard/abstractsettings.cpp:77
 #, kde-format
 msgid "Transport set up."
-msgstr "Транспорт настроен."
+msgstr "Метод отправки настроен."
 
 #: main.cpp:34 main.cpp:36
 #, kde-format
@@ -325,7 +325,7 @@ msgstr "Экспорт адресной книги Evolution"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select the directory where vCards will be stored."
-msgstr "Выбор каталога для сохранения файлов vCard"
+msgstr "Выбор папки для сохранения файлов vCard"
 
 #: plugins/evolutionv3/evolutionaddressbook.cpp:80
 #, kde-format
@@ -429,7 +429,7 @@ msgstr "Фильтры"
 #: ui/autodetect/selectcomponentpage.ui:69
 #, kde-format
 msgid "Settings"
-msgstr "Настройки"
+msgstr "Параметры"
 
 #. i18n: ectx: property (text), widget (QCheckBox, addressbooks)
 #: ui/autodetect/selectcomponentpage.ui:79
@@ -451,7 +451,7 @@ msgid ""
 "settings from other mail programs into KMail"
 msgstr ""
 "Этот мастер может импортировать в KMail почтовые сообщения, записи адресной "
-"книги, фильтры и/или настройки из других почтовых программ."
+"книги, фильтры и/или параметры из других почтовых программ."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/autodetect/selectcomponentpage.ui:136
