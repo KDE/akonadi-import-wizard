@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-03 00:44+0000\n"
+"POT-Creation-Date: 2026-10-06 00:47+0000\n"
 "PO-Revision-Date: 2013-09-25 05:32+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -27,20 +27,20 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sairan@computer.org"
 
-#: autodetect/widgets/selectprogramlistwidget.cpp:47
+#: autodetect/widgets/selectprogramlistwidget.cpp:48
 #, fuzzy, kde-format
 #| msgid "No program found"
 msgid "No program found."
 msgstr "Бағдарламасы табылмады"
 
-#: importwizard.cpp:42
+#: importwizard.cpp:43
 #, fuzzy, kde-format
 #| msgid "PIM Import Tool"
 msgctxt "@title:window"
 msgid "PIM Import Tool"
 msgstr "PIM импорт құралы"
 
-#: importwizard.cpp:71
+#: importwizard.cpp:72
 #, kde-format
 msgid ""
 "Close KMail before importing data. Some plugins will modify KMail config "
@@ -49,130 +49,130 @@ msgstr ""
 "KMail-ді деректерді импорттау алдында жабу. Кейбір плагиндері KMail баптау "
 "файлын өзгертеді."
 
-#: importwizard.cpp:127
+#: importwizard.cpp:128
 #, kde-format
 msgid "Step 1: Select Filter"
 msgstr ""
 
-#: importwizard.cpp:132
+#: importwizard.cpp:133
 #, kde-format
 msgid "Step 2: Importing..."
 msgstr ""
 
-#: importwizard.cpp:161
+#: importwizard.cpp:162
 #, kde-format
 msgid "Detect program"
 msgstr "Бағдарламаны байқау"
 
-#: importwizard.cpp:166
+#: importwizard.cpp:167
 #, kde-format
 msgid "Select material to import"
 msgstr "Экспортайтын материалды таңдау"
 
-#: importwizard.cpp:170
+#: importwizard.cpp:171
 #, kde-format
 msgid "Import mail messages"
 msgstr "Пошта хаттарын импорттау"
 
-#: importwizard.cpp:174
+#: importwizard.cpp:175
 #, kde-format
 msgid "Import mail filters"
 msgstr "Пошта сүзгілерін импорттау"
 
 #. i18n: ectx: property (text), widget (QPushButton, importSettings)
-#: importwizard.cpp:178 ui/autodetect/importsettingpage.ui:47
+#: importwizard.cpp:179 ui/autodetect/importsettingpage.ui:47
 #, kde-format
 msgid "Import settings"
 msgstr "Код импортын баптау"
 
-#: importwizard.cpp:182
+#: importwizard.cpp:183
 #, kde-format
 msgid "Import addressbooks"
 msgstr "Адрестік кітапшаларды импорттау"
 
-#: importwizard.cpp:186
+#: importwizard.cpp:187
 #, kde-format
 msgid "Import calendars"
 msgstr "Күнтібелерді импорттау"
 
-#: importwizard.cpp:190
+#: importwizard.cpp:191
 #, kde-format
 msgid "Finish"
 msgstr "Аяқтау"
 
-#: importwizard.cpp:212
+#: importwizard.cpp:213
 #, kde-format
 msgid "Import addressbook from %1..."
 msgstr "Адрестік кітапшаны %1 дегеннен импорттау..."
 
-#: importwizard.cpp:215
+#: importwizard.cpp:216
 #, fuzzy, kde-format
 #| msgid "Import addressbook from %1..."
 msgid "Import addressbook from %1: Done"
 msgstr "Адрестік кітапшаны %1 дегеннен импорттау..."
 
-#: importwizard.cpp:221
+#: importwizard.cpp:222
 #, kde-format
 msgid "Import filters from %1..."
 msgstr "%1 дегеннен сүзгілерді импорттау..."
 
-#: importwizard.cpp:224
+#: importwizard.cpp:225
 #, fuzzy, kde-format
 #| msgid "Import filters from %1..."
 msgid "Import filters from %1: Done"
 msgstr "%1 дегеннен сүзгілерді импорттау..."
 
-#: importwizard.cpp:230
+#: importwizard.cpp:231
 #, kde-format
 msgid "Import mails from %1..."
 msgstr "Хаттарды %1 дегеннен импорттау..."
 
-#: importwizard.cpp:233
+#: importwizard.cpp:234
 #, fuzzy, kde-format
 #| msgid "Import mails from %1..."
 msgid "Import mails from %1: Done"
 msgstr "Хаттарды %1 дегеннен импорттау..."
 
-#: importwizard.cpp:239
+#: importwizard.cpp:240
 #, kde-format
 msgid "Import settings from %1..."
 msgstr "Параметрлерді %1 дегеннен импорттау..."
 
-#: importwizard.cpp:242
+#: importwizard.cpp:243
 #, fuzzy, kde-format
 #| msgid "Import settings from %1..."
 msgid "Import settings from %1: Done"
 msgstr "Параметрлерді %1 дегеннен импорттау..."
 
-#: importwizard.cpp:248
+#: importwizard.cpp:249
 #, kde-format
 msgid "Import calendar from %1..."
 msgstr "Күнтізбені %1 дегеннен импорттау..."
 
-#: importwizard.cpp:251
+#: importwizard.cpp:252
 #, fuzzy, kde-format
 #| msgid "Import calendar from %1..."
 msgid "Import calendar from %1: Done"
 msgstr "Күнтізбені %1 дегеннен импорттау..."
 
-#: importwizard.cpp:338 plugins/balsa/balsaimportdata.cpp:48
-#: plugins/claws-mail/clawsmailimportdata.cpp:49
-#: plugins/evolutionv3/evolutionv3importdata.cpp:68
-#: plugins/icedove/icedoveimportdata.cpp:80
-#: plugins/seamonkey/seamonkeyimportdata.cpp:80
-#: plugins/sylpheed/sylpheedimportdata.cpp:62
-#: plugins/thunderbird/thunderbirdimportdata.cpp:82
+#: importwizard.cpp:339 plugins/balsa/balsaimportdata.cpp:49
+#: plugins/claws-mail/clawsmailimportdata.cpp:50
+#: plugins/evolutionv3/evolutionv3importdata.cpp:69
+#: plugins/icedove/icedoveimportdata.cpp:81
+#: plugins/seamonkey/seamonkeyimportdata.cpp:81
+#: plugins/sylpheed/sylpheedimportdata.cpp:63
+#: plugins/thunderbird/thunderbirdimportdata.cpp:83
 #, kde-format
 msgid "Import in progress"
 msgstr "Импорт ету"
 
-#: importwizard.cpp:345 plugins/balsa/balsaimportdata.cpp:55
-#: plugins/claws-mail/clawsmailimportdata.cpp:57
-#: plugins/evolutionv3/evolutionv3importdata.cpp:76
-#: plugins/icedove/icedoveimportdata.cpp:88
-#: plugins/seamonkey/seamonkeyimportdata.cpp:88
-#: plugins/sylpheed/sylpheedimportdata.cpp:70
-#: plugins/thunderbird/thunderbirdimportdata.cpp:90
+#: importwizard.cpp:346 plugins/balsa/balsaimportdata.cpp:56
+#: plugins/claws-mail/clawsmailimportdata.cpp:58
+#: plugins/evolutionv3/evolutionv3importdata.cpp:77
+#: plugins/icedove/icedoveimportdata.cpp:89
+#: plugins/seamonkey/seamonkeyimportdata.cpp:89
+#: plugins/sylpheed/sylpheedimportdata.cpp:71
+#: plugins/thunderbird/thunderbirdimportdata.cpp:91
 #, kde-format
 msgid "Import finished"
 msgstr "Импорт аяқталды"
@@ -286,30 +286,30 @@ msgstr ""
 msgid "<p><i>Written by %1.</i></p>"
 msgstr ""
 
-#: plugins/balsa/balsaaddressbook.cpp:37 plugins/balsa/balsaaddressbook.cpp:50
-#: plugins/sylpheed/sylpheedaddressbook.cpp:29
+#: plugins/balsa/balsaaddressbook.cpp:38 plugins/balsa/balsaaddressbook.cpp:51
+#: plugins/sylpheed/sylpheedaddressbook.cpp:30
 #, fuzzy, kde-format
 #| msgid "Import addressbook"
 msgid "No addressbook found"
 msgstr "Адрестік кітапшаны импорттау"
 
-#: plugins/balsa/balsaaddressbook.cpp:64
+#: plugins/balsa/balsaaddressbook.cpp:65
 #, kde-format
 msgid "Ldap created"
 msgstr ""
 
-#: plugins/balsa/balsaaddressbook.cpp:94
+#: plugins/balsa/balsaaddressbook.cpp:95
 #, fuzzy, kde-format
 #| msgid "Import addressbook from %1..."
 msgid "New addressbook created: %1"
 msgstr "Адрестік кітапшаны %1 дегеннен импорттау..."
 
-#: plugins/claws-mail/clawsmailimportdata.cpp:78
+#: plugins/claws-mail/clawsmailimportdata.cpp:79
 #, kde-format
 msgid "Claws Mail settings not found."
 msgstr "ClawsMail параметрлері табылған жоқ."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:23
+#: plugins/evolutionv3/evolutionaddressbook.cpp:24
 #, kde-format
 msgid ""
 "Evolution address book will be exported as vCard. Import vCard in "
@@ -318,69 +318,69 @@ msgstr ""
 "Evolution адрестік ктапшасы vCard пішімінде экспортталады. vCard-ты "
 "KAddressBook-қа импорттап алыңыз."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:24
+#: plugins/evolutionv3/evolutionaddressbook.cpp:25
 #, fuzzy, kde-format
 #| msgid "Export Evolution Address Book"
 msgctxt "@title:window"
 msgid "Export Evolution Address Book"
 msgstr "Evolution адрес кітапшасына экспорттау"
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:27
+#: plugins/evolutionv3/evolutionaddressbook.cpp:28
 #, fuzzy, kde-format
 #| msgid "Select the directory where vCards will be stored."
 msgctxt "@title:window"
 msgid "Select the directory where vCards will be stored."
 msgstr "vCard-тарды сақтайтын қапшығын таңдау."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:80
+#: plugins/evolutionv3/evolutionaddressbook.cpp:81
 #, kde-format
 msgid "Address book \"%1\" exported."
 msgstr "\"%1\" адрестік кітапшасы экспортталды."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:82
+#: plugins/evolutionv3/evolutionaddressbook.cpp:83
 #, kde-format
 msgid "Failed to export address book \"%1\"."
 msgstr "\"%1\" адрес кітапшасын экспорттау жаңылысы."
 
-#: plugins/evolutionv3/evolutionv3importdata.cpp:59
+#: plugins/evolutionv3/evolutionv3importdata.cpp:60
 #, kde-format
 msgid "Evolution settings not found."
 msgstr "Evolution параметрлері табылған жоқ."
 
-#: plugins/evolutionv3/evolutionv3importdata.cpp:102
+#: plugins/evolutionv3/evolutionv3importdata.cpp:103
 #, kde-format
 msgid "Evolution calendar not found."
 msgstr "Evolution күнтізбесі табылған жоқ."
 
-#: plugins/icedove/icedoveimportdata.cpp:70
+#: plugins/icedove/icedoveimportdata.cpp:71
 #, fuzzy, kde-format
 #| msgid "Sylpheed settings not found."
 msgid "Icedove settings not found."
 msgstr "Sylpheed параметрлері табылған жоқ."
 
-#: plugins/seamonkey/seamonkeyimportdata.cpp:70
+#: plugins/seamonkey/seamonkeyimportdata.cpp:71
 #, fuzzy, kde-format
 #| msgid "Sylpheed settings not found."
 msgid "SeaMonkey settings not found."
 msgstr "Sylpheed параметрлері табылған жоқ."
 
-#: plugins/sylpheed/sylpheedaddressbook.cpp:62
+#: plugins/sylpheed/sylpheedaddressbook.cpp:63
 #, kde-format
 msgid "No contact found in %1"
 msgstr "%1 дегенде контакт табылған жоқ"
 
-#: plugins/sylpheed/sylpheedimportdata.cpp:53
+#: plugins/sylpheed/sylpheedimportdata.cpp:54
 #, kde-format
 msgid "Sylpheed settings not found."
 msgstr "Sylpheed параметрлері табылған жоқ."
 
-#: plugins/thunderbird/thunderbirdaddressbook.cpp:48
+#: plugins/thunderbird/thunderbirdaddressbook.cpp:49
 #, fuzzy, kde-format
 #| msgid "Filters file was not found"
 msgid "Contacts file '%1' not found"
 msgstr "Сүзгілер файлы табылмады"
 
-#: plugins/thunderbird/thunderbirdimportdata.cpp:72
+#: plugins/thunderbird/thunderbirdimportdata.cpp:73
 #, kde-format
 msgid "Thunderbird settings not found."
 msgstr "Thunderbird параметрлері табылған жоқ."
