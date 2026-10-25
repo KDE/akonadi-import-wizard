@@ -6,10 +6,9 @@
 
 #pragma once
 
-#include "libimportwizard_export.h"
 #include <QObject>
 #include <qt6keychain/keychain.h>
-class LIBIMPORTWIZARD_EXPORT ImportWizardSavePasswordJob : public QObject
+class ImportWizardSavePasswordJob : public QObject
 {
     Q_OBJECT
 public:
@@ -30,7 +29,7 @@ public:
     void setName(const QString &name);
 
 private:
-    LIBIMPORTWIZARD_NO_EXPORT void slotPasswordWritten(QKeychain::Job *baseJob);
+    void slotPasswordWritten(QKeychain::Job *baseJob);
     QString mPassword;
     QString mKey;
     QString mName;
