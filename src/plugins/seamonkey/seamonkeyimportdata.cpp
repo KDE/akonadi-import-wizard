@@ -21,6 +21,8 @@
 
 using namespace Qt::Literals::StringLiterals;
 
+K_PLUGIN_CLASS_WITH_JSON(SeaMonkeyImportData, "seamonkeyimporter.json")
+
 SeaMonkeyImportData::SeaMonkeyImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)
 {
@@ -131,3 +133,5 @@ LibImportWizard::AbstractImporter::TypeSupportedOptions SeaMonkeyImportData::sup
     options |= LibImportWizard::AbstractImporter::AddressBooks;
     return options;
 }
+
+#include "seamonkeyimportdata.moc"

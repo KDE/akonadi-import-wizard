@@ -21,6 +21,8 @@
 
 using namespace Qt::Literals::StringLiterals;
 
+K_PLUGIN_CLASS_WITH_JSON(IcedoveImportData, "icedoveimporter.json")
+
 IcedoveImportData::IcedoveImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)
 {
@@ -131,3 +133,5 @@ LibImportWizard::AbstractImporter::TypeSupportedOptions IcedoveImportData::suppo
     options |= LibImportWizard::AbstractImporter::AddressBooks;
     return options;
 }
+
+#include "icedoveimportdata.moc"
