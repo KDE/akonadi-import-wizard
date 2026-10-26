@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-import-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:47+0000\n"
+"POT-Creation-Date: 2026-10-26 00:50+0000\n"
 "PO-Revision-Date: 2024-08-01 10:41+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -155,8 +155,8 @@ msgstr "Importa un calendari des de %1: Fet"
 #: importwizard.cpp:339 plugins/balsa/balsaimportdata.cpp:49
 #: plugins/claws-mail/clawsmailimportdata.cpp:50
 #: plugins/evolutionv3/evolutionv3importdata.cpp:69
-#: plugins/icedove/icedoveimportdata.cpp:81
-#: plugins/seamonkey/seamonkeyimportdata.cpp:81
+#: plugins/icedove/icedoveimportdata.cpp:83
+#: plugins/seamonkey/seamonkeyimportdata.cpp:83
 #: plugins/sylpheed/sylpheedimportdata.cpp:63
 #: plugins/thunderbird/thunderbirdimportdata.cpp:83
 #, kde-format
@@ -166,8 +166,8 @@ msgstr "Importació en curs"
 #: importwizard.cpp:346 plugins/balsa/balsaimportdata.cpp:56
 #: plugins/claws-mail/clawsmailimportdata.cpp:58
 #: plugins/evolutionv3/evolutionv3importdata.cpp:77
-#: plugins/icedove/icedoveimportdata.cpp:89
-#: plugins/seamonkey/seamonkeyimportdata.cpp:89
+#: plugins/icedove/icedoveimportdata.cpp:91
+#: plugins/seamonkey/seamonkeyimportdata.cpp:91
 #: plugins/sylpheed/sylpheedimportdata.cpp:71
 #: plugins/thunderbird/thunderbirdimportdata.cpp:91
 #, kde-format
@@ -341,12 +341,12 @@ msgstr "No s'ha trobat la configuració de l'Evolution."
 msgid "Evolution calendar not found."
 msgstr "No s'ha trobat el calendari de l'Evolution."
 
-#: plugins/icedove/icedoveimportdata.cpp:71
+#: plugins/icedove/icedoveimportdata.cpp:73
 #, kde-format
 msgid "Icedove settings not found."
 msgstr "No s'ha trobat la configuració de l'Icedove."
 
-#: plugins/seamonkey/seamonkeyimportdata.cpp:71
+#: plugins/seamonkey/seamonkeyimportdata.cpp:73
 #, kde-format
 msgid "SeaMonkey settings not found."
 msgstr "No s'ha trobat la configuració del SeaMonkey."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:47+0000\n"
+"POT-Creation-Date: 2026-10-26 00:50+0000\n"
 "PO-Revision-Date: 2024-08-19 21:43+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -151,8 +151,8 @@ msgstr "%1에서 달력 가져오는 중: 완료"
 #: importwizard.cpp:339 plugins/balsa/balsaimportdata.cpp:49
 #: plugins/claws-mail/clawsmailimportdata.cpp:50
 #: plugins/evolutionv3/evolutionv3importdata.cpp:69
-#: plugins/icedove/icedoveimportdata.cpp:81
-#: plugins/seamonkey/seamonkeyimportdata.cpp:81
+#: plugins/icedove/icedoveimportdata.cpp:83
+#: plugins/seamonkey/seamonkeyimportdata.cpp:83
 #: plugins/sylpheed/sylpheedimportdata.cpp:63
 #: plugins/thunderbird/thunderbirdimportdata.cpp:83
 #, kde-format
@@ -162,8 +162,8 @@ msgstr "가져오는 중"
 #: importwizard.cpp:346 plugins/balsa/balsaimportdata.cpp:56
 #: plugins/claws-mail/clawsmailimportdata.cpp:58
 #: plugins/evolutionv3/evolutionv3importdata.cpp:77
-#: plugins/icedove/icedoveimportdata.cpp:89
-#: plugins/seamonkey/seamonkeyimportdata.cpp:89
+#: plugins/icedove/icedoveimportdata.cpp:91
+#: plugins/seamonkey/seamonkeyimportdata.cpp:91
 #: plugins/sylpheed/sylpheedimportdata.cpp:71
 #: plugins/thunderbird/thunderbirdimportdata.cpp:91
 #, kde-format
@@ -335,12 +335,12 @@ msgstr "에볼루션 설정을 찾을 수 없습니다."
 msgid "Evolution calendar not found."
 msgstr "에볼루션 달력을 찾을 수 없습니다."
 
-#: plugins/icedove/icedoveimportdata.cpp:71
+#: plugins/icedove/icedoveimportdata.cpp:73
 #, kde-format
 msgid "Icedove settings not found."
 msgstr "Icedove 설정을 찾을 수 없습니다."
 
-#: plugins/seamonkey/seamonkeyimportdata.cpp:71
+#: plugins/seamonkey/seamonkeyimportdata.cpp:73
 #, kde-format
 msgid "SeaMonkey settings not found."
 msgstr "SeaMonkey 설정을 찾을 수 없습니다."

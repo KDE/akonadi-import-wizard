@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:47+0000\n"
+"POT-Creation-Date: 2026-10-26 00:50+0000\n"
 "PO-Revision-Date: 2026-10-12 10:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -152,8 +152,8 @@ msgstr "%1 konumundan takvimi içe aktar: Tamamlandı"
 #: importwizard.cpp:339 plugins/balsa/balsaimportdata.cpp:49
 #: plugins/claws-mail/clawsmailimportdata.cpp:50
 #: plugins/evolutionv3/evolutionv3importdata.cpp:69
-#: plugins/icedove/icedoveimportdata.cpp:81
-#: plugins/seamonkey/seamonkeyimportdata.cpp:81
+#: plugins/icedove/icedoveimportdata.cpp:83
+#: plugins/seamonkey/seamonkeyimportdata.cpp:83
 #: plugins/sylpheed/sylpheedimportdata.cpp:63
 #: plugins/thunderbird/thunderbirdimportdata.cpp:83
 #, kde-format
@@ -163,8 +163,8 @@ msgstr "İçe aktarma sürüyor"
 #: importwizard.cpp:346 plugins/balsa/balsaimportdata.cpp:56
 #: plugins/claws-mail/clawsmailimportdata.cpp:58
 #: plugins/evolutionv3/evolutionv3importdata.cpp:77
-#: plugins/icedove/icedoveimportdata.cpp:89
-#: plugins/seamonkey/seamonkeyimportdata.cpp:89
+#: plugins/icedove/icedoveimportdata.cpp:91
+#: plugins/seamonkey/seamonkeyimportdata.cpp:91
 #: plugins/sylpheed/sylpheedimportdata.cpp:71
 #: plugins/thunderbird/thunderbirdimportdata.cpp:91
 #, kde-format
@@ -338,12 +338,12 @@ msgstr "Evolution ayarları bulunamadı."
 msgid "Evolution calendar not found."
 msgstr "Evolution takvimi bulunamadı."
 
-#: plugins/icedove/icedoveimportdata.cpp:71
+#: plugins/icedove/icedoveimportdata.cpp:73
 #, kde-format
 msgid "Icedove settings not found."
 msgstr "Icedove ayarları bulunamadı."
 
-#: plugins/seamonkey/seamonkeyimportdata.cpp:71
+#: plugins/seamonkey/seamonkeyimportdata.cpp:73
 #, kde-format
 msgid "SeaMonkey settings not found."
 msgstr "SeaMonkey ayarları bulunamadı."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: importwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:47+0000\n"
+"POT-Creation-Date: 2026-10-26 00:50+0000\n"
 "PO-Revision-Date: 2014-04-16 00:48+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -160,8 +160,8 @@ msgstr "Kalenner vun %1 importeren..."
 #: importwizard.cpp:339 plugins/balsa/balsaimportdata.cpp:49
 #: plugins/claws-mail/clawsmailimportdata.cpp:50
 #: plugins/evolutionv3/evolutionv3importdata.cpp:69
-#: plugins/icedove/icedoveimportdata.cpp:81
-#: plugins/seamonkey/seamonkeyimportdata.cpp:81
+#: plugins/icedove/icedoveimportdata.cpp:83
+#: plugins/seamonkey/seamonkeyimportdata.cpp:83
 #: plugins/sylpheed/sylpheedimportdata.cpp:63
 #: plugins/thunderbird/thunderbirdimportdata.cpp:83
 #, kde-format
@@ -171,8 +171,8 @@ msgstr "Import löppt"
 #: importwizard.cpp:346 plugins/balsa/balsaimportdata.cpp:56
 #: plugins/claws-mail/clawsmailimportdata.cpp:58
 #: plugins/evolutionv3/evolutionv3importdata.cpp:77
-#: plugins/icedove/icedoveimportdata.cpp:89
-#: plugins/seamonkey/seamonkeyimportdata.cpp:89
+#: plugins/icedove/icedoveimportdata.cpp:91
+#: plugins/seamonkey/seamonkeyimportdata.cpp:91
 #: plugins/sylpheed/sylpheedimportdata.cpp:71
 #: plugins/thunderbird/thunderbirdimportdata.cpp:91
 #, kde-format
@@ -352,13 +352,13 @@ msgstr "Evolution-Instellen laat sik nich finnen."
 msgid "Evolution calendar not found."
 msgstr "Evolution-Kalenner lett sik nich finnen."
 
-#: plugins/icedove/icedoveimportdata.cpp:71
+#: plugins/icedove/icedoveimportdata.cpp:73
 #, fuzzy, kde-format
 #| msgid "Sylpheed settings not found."
 msgid "Icedove settings not found."
 msgstr "Sylpheed-Instellen laat sik nich finnen."
 
-#: plugins/seamonkey/seamonkeyimportdata.cpp:71
+#: plugins/seamonkey/seamonkeyimportdata.cpp:73
 #, fuzzy, kde-format
 #| msgid "Sylpheed settings not found."
 msgid "SeaMonkey settings not found."
