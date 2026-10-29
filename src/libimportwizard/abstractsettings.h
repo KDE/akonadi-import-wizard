@@ -37,8 +37,6 @@ protected:
 
     QString uniqueIdentityName(const QString &name);
 
-    QString createResource(const QString &resources, const QString &name, const QMap<QString, QVariant> &settings);
-
     KIdentityManagementCore::Identity *createIdentity(QString &name);
 
     MailTransport::Transport *createTransport();
