@@ -440,9 +440,7 @@ msgid ""
 "settings from other mail programs into KMail"
 msgstr ""
 "Tämä opastettu toiminto tuo sähköpostiviestit, osoitekirjatietueet, "
-"suodattimet tai asetukset muista ohjelmista KMailiinTämä opastettu toiminto "
-"tuo sähköpostiviestit, osoitekirjatietueet, suodattimet tai asetukset muista "
-"ohjelmista KMailiin"
+"suodattimet tai asetukset muista ohjelmista KMailiin"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/autodetect/selectcomponentpage.ui:136
