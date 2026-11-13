@@ -1,0 +1,294 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY i18n-importwizard "<application
+>مرشد الاستيراد</application
+>">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Arabic "INCLUDE">
+]>
+
+<article id="importwizard" lang="&language;">
+
+<articleinfo id="importwizardinfo">
+
+<title
+>دليل &i18n-importwizard;</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Laurent</firstname
+> <surname
+>Montel</surname
+> </personname
+> <email
+>montel@kde.org</email
+> </author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2013</year>
+<holder
+>لوران مونتال</holder>
+</copyright>
+
+<date
+>2016-07-27</date>
+<releaseinfo
+>5.3.40 (التّطبيقات 16.08)</releaseinfo>
+
+</articleinfo>
+
+<sect1 id="introduction">
+<title
+>مقدمة</title>
+
+<para
+>يتيح &i18n-importwizard; استيراد البريد الإلكتروني والإعدادات ودليل العناوين وبيانات التقويم المكتشفة في حساب المستخدم الخاص بك من مراسلات البريد التالية:</para>
+
+<para
+><application
+>تروجيتا</application
+>، <application
+>إيفوليوشن 1.x - 3.x</application
+>، <application
+>بريد أو إس إكس</application
+>، <application
+>أوبرا</application
+>، <application
+>سيلفيد</application
+>، <application
+>ثندربرد/موزيلا</application
+>، <application
+>ذا بات!</application
+>، <application
+>أوتلوك إكسبرس</application
+>، <application
+>بالسا</application
+>، <application
+>بيغاسوس-ميل</application
+>، و<application
+>كلوز ميل</application
+> </para>
+
+<para
+>بالإضافة إلى ذلك، يمكنك استخدام الاستيراد اليدوي لأرشيفات <application
+>أرشيف كي-ميل</application
+>، <application
+>إمبوكس (يونكس، إيفوليوشن)</application
+>، أدلة بريد كي-ميل، <application
+>آيسدوف</application
+>، <application
+>لوتس نوتس</application
+>، <application
+>نص عادي</application
+> و<application
+>ميلمان</application
+>. </para>
+
+<para
+>إذا لم تُكشف أي بيانات بريد آليًا، فانقر على <guibutton
+>اختيار يدوي</guibutton
+> في نافذة البداية واستخدم ميزات <link linkend="manual-import"
+>الاستيراد اليدوي</link
+>. </para>
+
+<para
+>يمكنك بدء &i18n-importwizard; مباشرة من مشغل التطبيقات أو من &kmail; عبر <menuchoice
+><guimenu
+>أدوات</guimenu
+><guimenuitem
+>معالج الاستيراد</guimenuitem
+></menuchoice
+> للكشف الآلي، أو من &kmail; عبر <menuchoice
+><guimenu
+>ملف</guimenu
+> <guimenuitem
+>استيراد الرسائل</guimenuitem
+></menuchoice
+> للاستيراد اليدوي. </para>
+
+<note>
+<para
+>أغلق &kmail; قبل استيراد البيانات. ستُعدّل بعض الملحقات ملف إعدادات &kmail;.</para>
+</note>
+
+<para
+>للحصول على معلومات حول أدوات أخرى لاستيراد البريد، يُرجى قراءة دليل <ulink url="help:/pimdataexporter"
+>مُصدّر بيانات بي-آي-إم</ulink
+>.</para>
+
+<sect2 id="detected-mailers">
+<title
+>تطبيقات البريد المكتشفة</title>
+
+<para
+>عند بدء التشغيل، سيكتشف معالج الاستيراد جميع تطبيقات البريد المدعومة، وسيدرجها لك في النافذة. اختر تطبيق البريد الذي تريد الاستيراد منه، وانقر على زر <guibutton
+>التالي</guibutton
+>. سيسألك المعالج بعد ذلك عما إذا كنت تريد استيراد كل شيء، أو سيمنحك خيارات لتحديد أنواع المواد التي تريد استيرادها.</para>
+
+<screenshot>
+<screeninfo
+>اختيار الاستيراد</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="import-selection.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>اختيار الاستيراد</phrase>
+    </textobject>
+    <caption>
+      <para
+>اختيار الاستيراد</para>
+    </caption>
+  </mediaobject>
+</screenshot>
+
+<para
+>اعتمادًا على اختياراتك في شاشة المواد المراد استيرادها، سترى شاشة واحدة أو أكثر من الشاشات التالية:</para>
+
+<itemizedlist>
+
+<listitem
+><para
+>لاستيراد رسائل البريد، تحتاج إلى تحديد المجلد الذي تريد استيراد رسائل بريدك الإلكتروني إليه. بمجرد التحديد، انقر على زر <guibutton
+>استيراد البريد</guibutton
+>. عندما يصل شريط التقدم إلى 100%، انقر على زر <guibutton
+>التالي</guibutton
+>، أو زر <guibutton
+>إنهاء</guibutton
+> إذا كان هذا هو اختيارك الأخير للمادة.</para
+></listitem>
+
+<listitem
+><para
+>لاستيراد مرشحات البريد، انقر على زر <guibutton
+>استيراد المرشحات</guibutton
+> وسيستورد أي مرشحات وجدها، وعند الانتهاء انقر على زر <guibutton
+>التالي</guibutton
+>، أو زر <guibutton
+>إنهاء</guibutton
+> إذا كان هذا هو اختيارك الأخير للمادة.</para
+></listitem>
+
+<listitem
+><para
+>لاستيراد الإعدادات، انقر على زر <guibutton
+>استيراد الإعدادات</guibutton
+>. سيسألك المعالج بعض الأسئلة، مثل أي مجلد لاستخدامه لحسابات المجلدات غير الموجودة. سينشئ المعالج أيضًا هويتك. عند الانتهاء، انقر على زر <guibutton
+>التالي</guibutton
+>، أو زر <guibutton
+>إنهاء</guibutton
+> إذا كان هذا هو اختيارك الأخير للمادة.</para
+></listitem>
+
+<listitem
+><para
+>لاستيراد دفاتر العناوين أو التقاويم، انقر على زر <guibutton
+>استيراد دفتر العناوين</guibutton
+> أو <guibutton
+>استيراد التقويم</guibutton
+>، وسيستورد جميع دفاتر العناوين أو التقاويم التي يجدها. عند الانتهاء، انقر على زر <guibutton
+>التالي</guibutton
+>.</para
+></listitem>
+</itemizedlist>
+
+<para
+>انقر على زر <guibutton
+>إنهاء</guibutton
+> لإكمال معالج الاستيراد والخروج منه. إذا أردت إنهاء المعالج في أي وقت، يمكنك النقر على زر <guibutton
+>إلغاء</guibutton
+>.</para>
+
+</sect2>
+
+<sect2 id="manual-import">
+<title
+>الاستيراد اليدوي</title>
+
+<para>
+<screenshot>
+<screeninfo
+>الاستيراد اليدوي</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="manual-import.png" format="PNG"/>
+    </imageobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note
+><para
+>يُرجى التأكد من ضغط مجلداتك في عميل البريد الآخر.</para
+></note>
+<para
+>اختر برنامج بريدك السابق من القائمة المنسدلة. ستُحدّث منطقة النص المركزية في الحوار بتعليمات خاصة (إن وجدت)، والموقع المعروف لتخزين رسائل البريد لذلك التطبيق. اتبع هذه التعليمات، ثم اختر المجلد الذي تريد استيراد رسائلك إليه.</para>
+<para
+>إذا أردت إزالة الرسائل المكررة، فعّن <guilabel
+>إزالة الرسائل المكررة أثناء الاستيراد</guilabel
+>. سيظهر حوار اختيار ملف وتحتاج إلى تحديد الملف/المجلد المذكور في التعليمات. انقر على زر <guibutton
+>التالي</guibutton
+> لإكمال الاستيراد. عند انتهاء الاستيراد، يمكنك النقر على زر <guibutton
+>رجوع</guibutton
+> للاستيراد من تطبيق آخر أو زر <guibutton
+>إنهاء</guibutton
+> للخروج. </para>
+</sect2>
+
+</sect1>
+
+<sect1 id="credits">
+
+<title
+>الحقوق والترخيص</title>
+
+<para
+>&i18n-importwizard;</para>
+<para
+>حقوق برنامج 2013 لوران مونتيل montel@kde.org </para>
+<para
+>قسم الاستيراد اليدوي هو نسخة معدلة من دليل KMailCVT</para>
+<para
+>حقوق توثيق &copy; 2013 لوران مونتيل montel@kde.org وسكارليت كلارك scarlett@scarlettgatelyclark.com </para>
+
+<para
+>الترجمة: زايد السعيدي <email
+>zayed.alsaidi@gmail.com</email
+></para
+> &underFDL; &underGPL; </sect1>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->
