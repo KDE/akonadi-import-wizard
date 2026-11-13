@@ -30,7 +30,7 @@ void ImportFinishPage::addImportInfo(const QString &log)
 
 void ImportFinishPage::addImportError(const QString &log)
 {
-    ui->logFinish->addErrorLogEntry(log);
+    ui->logFinish->addErrorLogEntry(u"[%1] "_s.arg(QTime::currentTime().toString()) + log);
 }
 
 #include "moc_importfinishpage.cpp"
