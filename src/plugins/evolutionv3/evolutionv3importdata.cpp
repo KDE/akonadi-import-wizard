@@ -80,7 +80,7 @@ bool Evolutionv3ImportData::importMails()
 
 bool Evolutionv3ImportData::importFilters()
 {
-    const QString filterPath = QDir::homePath() + QLatin1StringView("/.config/evolution/mail/filter.xml");
+    const QString filterPath = QDir::homePath() + QLatin1StringView("/.config/evolution/mail/filters.xml");
     return addFilters(filterPath, MailCommon::FilterImporterExporter::EvolutionFilter);
 }
 
