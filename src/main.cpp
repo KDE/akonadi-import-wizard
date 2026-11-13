@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
     KCrash::initialize();
 
     QCommandLineParser parser;
-    const QCommandLineOption modeOption(QStringList() << u"mode"_s, i18nc("@info:shell", "Mode: %1", u"manual|automatic"_s));
+    const QCommandLineOption modeOption(QStringList() << u"mode"_s, i18nc("@info:shell", "Mode: %1", u"manual|automatic"_s), u"mode"_s);
     parser.addOption(modeOption);
     aboutData.setupCommandLine(&parser);
     parser.process(app);
