@@ -8,7 +8,6 @@
 
 #include "balsaaddressbook.h"
 #include "balsasettings.h"
-#include <MailCommon/FilterImporterBalsa>
 #include <MailImporter/FilterBalsa>
 #include <MailImporter/FilterInfo>
 

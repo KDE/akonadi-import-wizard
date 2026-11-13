@@ -5,6 +5,7 @@
 */
 
 #include "importwizardfilterinfogui.h"
+#include "manualimportmailpage.h"
 #include <KMessageBox>
 #include <QApplication>
 

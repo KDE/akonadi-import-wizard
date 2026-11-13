@@ -7,6 +7,7 @@
 #pragma once
 
 #include "abstractsettings.h"
+#include <QHash>
 
 class KConfigGroup;
 

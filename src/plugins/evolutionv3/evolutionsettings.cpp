@@ -20,6 +20,7 @@
 #include <QDomDocument>
 #include <QDomElement>
 #include <QFile>
+#include <QUrl>
 
 using namespace Qt::Literals::StringLiterals;
 

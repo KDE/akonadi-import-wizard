@@ -5,8 +5,9 @@
 */
 #pragma once
 
-#include "manualimportmailpage.h"
 #include <MailImporter/FilterInfoGui>
+
+class ManualImportMailPage;
 
 class ImportWizardFilterInfoGui : public MailImporter::FilterInfoGui
 {

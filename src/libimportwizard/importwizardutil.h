@@ -7,6 +7,7 @@
 #pragma once
 #include "libimportwizard_export.h"
 #include <QColor>
+#include <QList>
 #include <QString>
 #include <QUrl>
 

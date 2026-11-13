@@ -17,9 +17,11 @@
 #include <QUrl>
 
 #include "balsaplugin_debug.h"
+#include <QDateTime>
 #include <QFile>
 #include <QFileInfo>
 #include <QRegularExpression>
+#include <QTextStream>
 
 using namespace Qt::Literals::StringLiterals;
 

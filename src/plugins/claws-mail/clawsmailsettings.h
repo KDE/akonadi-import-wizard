@@ -9,6 +9,7 @@
 #include "../sylpheed/sylpheedsettings.h"
 
 class KConfigGroup;
+class QColor;
 
 class ClawsMailSettings : public SylpheedSettings
 {

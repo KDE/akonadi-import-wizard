@@ -30,7 +30,9 @@
 #include <KHelpMenu>
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <KSharedConfig>
 #include <MailCommon/MailKernel>
+#include <QMenu>
 #include <QPushButton>
 
 using namespace Qt::Literals::StringLiterals;

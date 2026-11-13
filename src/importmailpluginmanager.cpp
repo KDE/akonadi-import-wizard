@@ -9,7 +9,6 @@
 #include "abstractimporter.h"
 #include "importwizard_debug.h"
 #include <KPluginFactory>
-#include <KPluginMetaData>
 
 using namespace Qt::Literals::StringLiterals;
 

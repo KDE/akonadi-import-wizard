@@ -7,7 +7,10 @@
 #pragma once
 
 #include <QObject>
-#include <qt6keychain/keychain.h>
+namespace QKeychain
+{
+class Job;
+}
 class ImportWizardSavePasswordJob : public QObject
 {
     Q_OBJECT

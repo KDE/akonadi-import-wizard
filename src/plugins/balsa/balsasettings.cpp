@@ -7,8 +7,7 @@
 #include "balsasettings.h"
 
 #include "balsaplugin_debug.h"
-#include <MailCommon/MailUtil>
-#include <MailTransport/TransportManager>
+#include <MailTransport/Transport>
 #include <MessageViewer/KXFace>
 
 #include <KIdentityManagementCore/Identity>

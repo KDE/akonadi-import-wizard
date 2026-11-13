@@ -13,6 +13,7 @@
 #include <KIdentityManagementCore/Signature>
 
 #include "thunderbirdplugin_debug.h"
+#include <KConfigGroup>
 #include <KContacts/VCardConverter>
 #include <QDir>
 #include <QFile>

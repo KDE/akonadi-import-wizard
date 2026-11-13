@@ -5,7 +5,6 @@
 */
 
 #include "clawsmailaddressbook.h"
-#include <ImportWizard/ImportWizardUtil>
 
 ClawsMailAddressBook::ClawsMailAddressBook(const QDir &dir)
     : SylpheedAddressBook(dir)

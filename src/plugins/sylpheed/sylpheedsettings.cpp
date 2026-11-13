@@ -21,6 +21,7 @@
 #include <QFile>
 #include <QRegularExpression>
 #include <QStringList>
+#include <QTextStream>
 
 using namespace Qt::Literals::StringLiterals;
 

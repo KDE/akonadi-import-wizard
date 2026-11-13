@@ -9,7 +9,6 @@
 #include "abstractaddressbook.h"
 #include <QDir>
 #include <QHash>
-class QString;
 
 class SylpheedAddressBook : public LibImportWizard::AbstractAddressBook
 {

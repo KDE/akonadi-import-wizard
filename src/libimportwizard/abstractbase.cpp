@@ -7,15 +7,6 @@
 #include "abstractbase.h"
 #include <PimCommonAkonadi/CreateResource>
 
-#include <KSharedConfig>
-
-#include <Akonadi/AgentInstanceCreateJob>
-#include <Akonadi/AgentManager>
-#include <Akonadi/AgentType>
-
-#include <QMetaMethod>
-
-using namespace Akonadi;
 using namespace LibImportWizard;
 AbstractBase::AbstractBase()
 {

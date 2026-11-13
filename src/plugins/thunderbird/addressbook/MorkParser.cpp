@@ -10,7 +10,6 @@
 #include "MorkParser.h"
 
 #include <QFile>
-#include <QIODevice>
 //        =============================================================
 //        MorkParser::MorkParser
 #include "thunderbirdplugin_debug.h"

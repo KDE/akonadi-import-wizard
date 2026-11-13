@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <QColor>
 #include <QListWidget>
 
 class SelectProgramListWidget : public QListWidget

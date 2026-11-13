@@ -11,8 +11,7 @@
 
 #include <QByteArray>
 #include <QMap>
-#include <iostream>
-class QString;
+#include <QString>
 // Types
 
 using MorkDict = QMap<int, QString>;

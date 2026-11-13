@@ -16,7 +16,6 @@
 
 #include <KIconTheme>
 #include <QCommandLineParser>
-#include <cstdio>
 
 #include <KStyleManager>
 

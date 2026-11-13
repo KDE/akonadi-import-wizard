@@ -16,6 +16,7 @@
 #include <KPluginFactory>
 
 #include <QDir>
+#include <QFileInfo>
 
 using namespace Qt::Literals::StringLiterals;
 

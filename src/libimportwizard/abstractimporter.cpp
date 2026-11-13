@@ -7,11 +7,9 @@
 #include "abstractimporter.h"
 #include "abstractdisplayinfo.h"
 
+#include <KLocalizedString>
 #include <MailCommon/FilterManager>
-#include <MailImporter/FilterInfo>
-#include <MailImporterAkonadi/FilterImporterAkonadi>
 
-#include <QFile>
 #include <QFileInfo>
 
 using namespace LibImportWizard;

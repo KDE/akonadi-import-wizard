@@ -6,6 +6,7 @@
 
 #include "importwizardsavepasswordjob.h"
 #include "libimportwizard_debug.h"
+#include <qt6keychain/keychain.h>
 using namespace QKeychain;
 
 ImportWizardSavePasswordJob::ImportWizardSavePasswordJob(QObject *parent)

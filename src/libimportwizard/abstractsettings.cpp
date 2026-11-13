@@ -11,16 +11,10 @@
 #include <KIdentityManagementCore/IdentityManager>
 #include <MailTransport/TransportManager>
 
+#include <KConfigGroup>
 #include <KLocalizedString>
 
-#include <Akonadi/AgentInstanceCreateJob>
-#include <Akonadi/AgentManager>
-#include <Akonadi/AgentType>
-
-#include <QMetaMethod>
-
 using namespace Qt::Literals::StringLiterals;
-using namespace Akonadi;
 
 AbstractSettings::AbstractSettings()
 {

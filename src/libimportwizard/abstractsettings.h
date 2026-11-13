@@ -9,7 +9,6 @@
 #include "abstractbase.h"
 #include "libimportwizard_export.h"
 #include <KSharedConfig>
-#include <QMap>
 
 namespace KIdentityManagementCore
 {

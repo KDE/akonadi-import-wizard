@@ -9,6 +9,7 @@
 
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <QFile>
 #include <QFileDialog>
 #include <QProcess>
 

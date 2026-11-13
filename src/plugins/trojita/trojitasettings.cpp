@@ -6,8 +6,6 @@
 
 #include "trojitasettings.h"
 
-#include <ImportWizard/ImportWizardUtil>
-
 #include <MailTransport/TransportManager>
 
 #include <KIdentityManagementCore/Identity>

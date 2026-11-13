@@ -8,9 +8,9 @@
 #include "abstractimporter.h"
 
 #include <KAssistantDialog>
+#include <QMap>
 namespace LibImportWizard
 {
-class AbstractImporter;
 class AbstractDisplayInfo;
 }
 class KPageWidgetItem;

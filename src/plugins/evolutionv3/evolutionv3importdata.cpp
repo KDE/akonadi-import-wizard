@@ -18,6 +18,7 @@
 #include <KLocalizedString>
 
 #include <QDir>
+#include <QFileInfo>
 
 using namespace Qt::Literals::StringLiterals;
 

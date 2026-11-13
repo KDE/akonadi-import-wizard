@@ -17,7 +17,6 @@ class Filter;
 namespace MailCommon
 {
 class MailFilter;
-class FilterImporterExporter;
 }
 
 namespace LibImportWizard
