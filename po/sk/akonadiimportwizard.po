@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: importwizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 02:58+0000\n"
+"POT-Creation-Date: 2026-11-14 01:04+0000\n"
 "PO-Revision-Date: 2023-10-13 18:41+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -32,13 +32,13 @@ msgstr "wizzardsk@gmail.com"
 msgid "No program found."
 msgstr "Nenájdený program."
 
-#: importwizard.cpp:43
+#: importwizard.cpp:45
 #, kde-format
 msgctxt "@title:window"
 msgid "PIM Import Tool"
 msgstr "Importovací nástroj PIM"
 
-#: importwizard.cpp:72
+#: importwizard.cpp:74
 #, kde-format
 msgid ""
 "Close KMail before importing data. Some plugins will modify KMail config "
@@ -47,125 +47,125 @@ msgstr ""
 "Zatvorte KMail pred importovaním dát. Niektoré pluginy menia konfiguračný "
 "súbor KMailu."
 
-#: importwizard.cpp:128
+#: importwizard.cpp:130
 #, kde-format
 msgid "Step 1: Select Filter"
 msgstr "Krok 1: Výber filtra"
 
-#: importwizard.cpp:133
+#: importwizard.cpp:135
 #, kde-format
 msgid "Step 2: Importing..."
 msgstr "Krok 2: Importovanie..."
 
-#: importwizard.cpp:162
+#: importwizard.cpp:164
 #, kde-format
 msgid "Detect program"
 msgstr "Detekovať program"
 
-#: importwizard.cpp:167
+#: importwizard.cpp:169
 #, kde-format
 msgid "Select material to import"
 msgstr "Vybrať materiál na import"
 
-#: importwizard.cpp:171
+#: importwizard.cpp:173
 #, kde-format
 msgid "Import mail messages"
 msgstr "Importovať mailové správy"
 
-#: importwizard.cpp:175
+#: importwizard.cpp:177
 #, kde-format
 msgid "Import mail filters"
 msgstr "Importovať mailové filtre"
 
 #. i18n: ectx: property (text), widget (QPushButton, importSettings)
-#: importwizard.cpp:179 ui/autodetect/importsettingpage.ui:47
+#: importwizard.cpp:181 ui/autodetect/importsettingpage.ui:47
 #, kde-format
 msgid "Import settings"
 msgstr "Importovať nastavenia"
 
-#: importwizard.cpp:183
+#: importwizard.cpp:185
 #, kde-format
 msgid "Import addressbooks"
 msgstr "Importovať adresáre"
 
-#: importwizard.cpp:187
+#: importwizard.cpp:189
 #, kde-format
 msgid "Import calendars"
 msgstr "Importovať kalendáre"
 
-#: importwizard.cpp:191
+#: importwizard.cpp:193
 #, kde-format
 msgid "Finish"
 msgstr "Dokončiť"
 
-#: importwizard.cpp:213
+#: importwizard.cpp:215
 #, kde-format
 msgid "Import addressbook from %1..."
 msgstr "Importovať adresáre z %1..."
 
-#: importwizard.cpp:216
+#: importwizard.cpp:218
 #, kde-format
 msgid "Import addressbook from %1: Done"
 msgstr "Import adresára z %1: Hotovo"
 
-#: importwizard.cpp:222
+#: importwizard.cpp:224
 #, kde-format
 msgid "Import filters from %1..."
 msgstr "Importovať filtre z %1..."
 
-#: importwizard.cpp:225
+#: importwizard.cpp:227
 #, kde-format
 msgid "Import filters from %1: Done"
 msgstr "Import filtrov z %1: Hotovo"
 
-#: importwizard.cpp:231
+#: importwizard.cpp:233
 #, kde-format
 msgid "Import mails from %1..."
 msgstr "Importovať maily z %1..."
 
-#: importwizard.cpp:234
+#: importwizard.cpp:236
 #, kde-format
 msgid "Import mails from %1: Done"
 msgstr "Import pošty z %1: Hotovo"
 
-#: importwizard.cpp:240
+#: importwizard.cpp:242
 #, kde-format
 msgid "Import settings from %1..."
 msgstr "Importovať nastavenia z %1..."
 
-#: importwizard.cpp:243
+#: importwizard.cpp:245
 #, kde-format
 msgid "Import settings from %1: Done"
 msgstr "Import nastavení z %1: Hotovo"
 
-#: importwizard.cpp:249
+#: importwizard.cpp:251
 #, kde-format
 msgid "Import calendar from %1..."
 msgstr "Importovať kalendár z %1..."
 
-#: importwizard.cpp:252
+#: importwizard.cpp:254
 #, kde-format
 msgid "Import calendar from %1: Done"
 msgstr "Import kalendára z %1: Hotovo"
 
-#: importwizard.cpp:339 plugins/balsa/balsaimportdata.cpp:49
-#: plugins/claws-mail/clawsmailimportdata.cpp:50
-#: plugins/evolutionv3/evolutionv3importdata.cpp:69
-#: plugins/icedove/icedoveimportdata.cpp:83
-#: plugins/seamonkey/seamonkeyimportdata.cpp:83
-#: plugins/sylpheed/sylpheedimportdata.cpp:63
-#: plugins/thunderbird/thunderbirdimportdata.cpp:83
+#: importwizard.cpp:341 plugins/balsa/balsaimportdata.cpp:48
+#: plugins/claws-mail/clawsmailimportdata.cpp:51
+#: plugins/evolutionv3/evolutionv3importdata.cpp:70
+#: plugins/icedove/icedoveimportdata.cpp:84
+#: plugins/seamonkey/seamonkeyimportdata.cpp:84
+#: plugins/sylpheed/sylpheedimportdata.cpp:64
+#: plugins/thunderbird/thunderbirdimportdata.cpp:84
 #, kde-format
 msgid "Import in progress"
 msgstr "Prebieha import"
 
-#: importwizard.cpp:346 plugins/balsa/balsaimportdata.cpp:56
-#: plugins/claws-mail/clawsmailimportdata.cpp:58
+#: importwizard.cpp:348 plugins/balsa/balsaimportdata.cpp:55
+#: plugins/claws-mail/clawsmailimportdata.cpp:59
 #: plugins/evolutionv3/evolutionv3importdata.cpp:77
-#: plugins/icedove/icedoveimportdata.cpp:91
-#: plugins/seamonkey/seamonkeyimportdata.cpp:91
-#: plugins/sylpheed/sylpheedimportdata.cpp:71
-#: plugins/thunderbird/thunderbirdimportdata.cpp:91
+#: plugins/icedove/icedoveimportdata.cpp:92
+#: plugins/seamonkey/seamonkeyimportdata.cpp:92
+#: plugins/sylpheed/sylpheedimportdata.cpp:72
+#: plugins/thunderbird/thunderbirdimportdata.cpp:92
 #, kde-format
 msgid "Import finished"
 msgstr "Import bol ukončený"
@@ -206,12 +206,12 @@ msgstr "Chyba počas vytvárania kontaktu: %1"
 msgid "Contact creation complete"
 msgstr "Vytvorenie kontaktu ukončené"
 
-#: libimportwizard/abstractimporter.cpp:65
+#: libimportwizard/abstractimporter.cpp:63
 #, kde-format
 msgid "Importing of filters from \"%1\" was canceled."
 msgstr "Import filtrov z \"%1\" bol zrušený."
 
-#: libimportwizard/abstractimporter.cpp:67
+#: libimportwizard/abstractimporter.cpp:65
 #, kde-format
 msgid "1 filter was imported from \"%2\""
 msgid_plural "%1 filters were imported from \"%2\""
@@ -219,53 +219,53 @@ msgstr[0] "1 filter bol importovaný z \"%2\""
 msgstr[1] "%1 filtre boli importované z \"%2\""
 msgstr[2] "%1 filtrov bolo importovaných z \"%2\""
 
-#: libimportwizard/abstractimporter.cpp:71
+#: libimportwizard/abstractimporter.cpp:69
 #, kde-format
 msgid "Filters file was not found"
 msgstr "Súbor filtrov nenájdený."
 
-#: libimportwizard/abstractsettings.cpp:40
+#: libimportwizard/abstractsettings.cpp:34
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Pripravujem identitu..."
 
-#: libimportwizard/abstractsettings.cpp:48
+#: libimportwizard/abstractsettings.cpp:42
 #, kde-format
 msgid "Identity set up."
 msgstr "Identita nastavená."
 
-#: libimportwizard/abstractsettings.cpp:65
+#: libimportwizard/abstractsettings.cpp:59
 #, kde-format
 msgid "Setting up transport..."
 msgstr "Nastavujem prenos..."
 
-#: libimportwizard/abstractsettings.cpp:77
+#: libimportwizard/abstractsettings.cpp:71
 #, kde-format
 msgid "Transport set up."
 msgstr "Prenos nastavený."
 
-#: main.cpp:34 main.cpp:36
+#: main.cpp:33 main.cpp:35
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "Importovací nástroj PIM"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "Copyright © 2012-%1 Autori ImportWizard"
 
-#: main.cpp:40
+#: main.cpp:39
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:40
+#: main.cpp:39
 #, kde-format
 msgid "Maintainer"
 msgstr "Správca"
 
-#: main.cpp:48
+#: main.cpp:47
 #, kde-format
 msgctxt "@info:shell"
 msgid "Mode: %1"
@@ -276,28 +276,28 @@ msgstr "Režim: %1"
 msgid "<p><i>Written by %1.</i></p>"
 msgstr "<p><i>Napísal %1.</i></p>"
 
-#: plugins/balsa/balsaaddressbook.cpp:38 plugins/balsa/balsaaddressbook.cpp:51
+#: plugins/balsa/balsaaddressbook.cpp:40 plugins/balsa/balsaaddressbook.cpp:53
 #: plugins/sylpheed/sylpheedaddressbook.cpp:30
 #, kde-format
 msgid "No addressbook found"
 msgstr "Nenašiel sa adresár kontaktov"
 
-#: plugins/balsa/balsaaddressbook.cpp:65
+#: plugins/balsa/balsaaddressbook.cpp:67
 #, kde-format
 msgid "Ldap created"
 msgstr "Ldap vytvorený"
 
-#: plugins/balsa/balsaaddressbook.cpp:95
+#: plugins/balsa/balsaaddressbook.cpp:97
 #, kde-format
 msgid "New addressbook created: %1"
 msgstr "Nový adresár kontaktov vytvorený: %1"
 
-#: plugins/claws-mail/clawsmailimportdata.cpp:79
+#: plugins/claws-mail/clawsmailimportdata.cpp:80
 #, kde-format
 msgid "Claws Mail settings not found."
 msgstr "Nastavenia Claws Mail nenájdené."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:24
+#: plugins/evolutionv3/evolutionaddressbook.cpp:25
 #, kde-format
 msgid ""
 "Evolution address book will be exported as vCard. Import vCard in "
@@ -306,29 +306,29 @@ msgstr ""
 "Adresár Evolution bude exportovaný ako vCard. Importujte vCard v "
 "KAddressBooku."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:25
+#: plugins/evolutionv3/evolutionaddressbook.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Export Evolution Address Book"
 msgstr "Exportovať adresár Evolution"
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:28
+#: plugins/evolutionv3/evolutionaddressbook.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Select the directory where vCards will be stored."
 msgstr "Vyberte adresár, kde majú byť uložené vCards."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:81
+#: plugins/evolutionv3/evolutionaddressbook.cpp:82
 #, kde-format
 msgid "Address book \"%1\" exported."
 msgstr "Adresár \"%1\" exportovaný."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:83
+#: plugins/evolutionv3/evolutionaddressbook.cpp:84
 #, kde-format
 msgid "Failed to export address book \"%1\"."
 msgstr "Zlyhal export adresára \"%1\"."
 
-#: plugins/evolutionv3/evolutionv3importdata.cpp:60
+#: plugins/evolutionv3/evolutionv3importdata.cpp:61
 #, kde-format
 msgid "Evolution settings not found."
 msgstr "Nastavenia Evolution nenájdené."
@@ -338,12 +338,12 @@ msgstr "Nastavenia Evolution nenájdené."
 msgid "Evolution calendar not found."
 msgstr "Kalendár Evolution nenájdený."
 
-#: plugins/icedove/icedoveimportdata.cpp:73
+#: plugins/icedove/icedoveimportdata.cpp:74
 #, kde-format
 msgid "Icedove settings not found."
 msgstr "Nastavenia Icedove nenájdené."
 
-#: plugins/seamonkey/seamonkeyimportdata.cpp:73
+#: plugins/seamonkey/seamonkeyimportdata.cpp:74
 #, kde-format
 msgid "SeaMonkey settings not found."
 msgstr "Nastavenia Ivedoce nenájdené."
@@ -353,7 +353,7 @@ msgstr "Nastavenia Ivedoce nenájdené."
 msgid "No contact found in %1"
 msgstr "Nenašiel sa žiadny kontakt v %1"
 
-#: plugins/sylpheed/sylpheedimportdata.cpp:54
+#: plugins/sylpheed/sylpheedimportdata.cpp:55
 #, kde-format
 msgid "Sylpheed settings not found."
 msgstr "Nastavenia Sylpheed nenájdené."
@@ -363,7 +363,7 @@ msgstr "Nastavenia Sylpheed nenájdené."
 msgid "Contacts file '%1' not found"
 msgstr "Súbor kontaktov '%1' nenájdený"
 
-#: plugins/thunderbird/thunderbirdimportdata.cpp:73
+#: plugins/thunderbird/thunderbirdimportdata.cpp:74
 #, kde-format
 msgid "Thunderbird settings not found."
 msgstr "Nastavenia Thunderbirdu nenájdené."

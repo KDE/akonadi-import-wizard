@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-import-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 02:58+0000\n"
+"POT-Creation-Date: 2026-11-14 01:04+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -34,13 +34,13 @@ msgstr "skkalwar999@gmail.com"
 msgid "No program found."
 msgstr "कोऽपि कार्यक्रमः न लब्धः।"
 
-#: importwizard.cpp:43
+#: importwizard.cpp:45
 #, kde-format
 msgctxt "@title:window"
 msgid "PIM Import Tool"
 msgstr "PIM आयातसाधनम्"
 
-#: importwizard.cpp:72
+#: importwizard.cpp:74
 #, kde-format
 msgid ""
 "Close KMail before importing data. Some plugins will modify KMail config "
@@ -49,125 +49,125 @@ msgstr ""
 "दत्तांशस्य आयातात् पूर्वं KMail बन्दं कुर्वन्तु । केचन प्लगिन्स् KMail config सञ्चिकां "
 "परिवर्तयिष्यन्ति ।"
 
-#: importwizard.cpp:128
+#: importwizard.cpp:130
 #, kde-format
 msgid "Step 1: Select Filter"
 msgstr "Step 1: Filter इति चिनोतु"
 
-#: importwizard.cpp:133
+#: importwizard.cpp:135
 #, kde-format
 msgid "Step 2: Importing..."
 msgstr "Step 2: आयातः..."
 
-#: importwizard.cpp:162
+#: importwizard.cpp:164
 #, kde-format
 msgid "Detect program"
 msgstr "कार्यक्रमस्य अन्वेषणं कुर्वन्तु"
 
-#: importwizard.cpp:167
+#: importwizard.cpp:169
 #, kde-format
 msgid "Select material to import"
 msgstr "आयातार्थं सामग्रीं चिनोतु"
 
-#: importwizard.cpp:171
+#: importwizard.cpp:173
 #, kde-format
 msgid "Import mail messages"
 msgstr "मेलसन्देशान् आयातयन्तु"
 
-#: importwizard.cpp:175
+#: importwizard.cpp:177
 #, kde-format
 msgid "Import mail filters"
 msgstr "मेल-छिद्रकान् आयातयन्तु"
 
 #. i18n: ectx: property (text), widget (QPushButton, importSettings)
-#: importwizard.cpp:179 ui/autodetect/importsettingpage.ui:47
+#: importwizard.cpp:181 ui/autodetect/importsettingpage.ui:47
 #, kde-format
 msgid "Import settings"
 msgstr "सेटिंग्स् आयातयन्तु"
 
-#: importwizard.cpp:183
+#: importwizard.cpp:185
 #, kde-format
 msgid "Import addressbooks"
 msgstr "पतापुस्तकानि आयातयन्तु"
 
-#: importwizard.cpp:187
+#: importwizard.cpp:189
 #, kde-format
 msgid "Import calendars"
 msgstr "पञ्चाङ्गानि आयातयन्तु"
 
-#: importwizard.cpp:191
+#: importwizard.cpp:193
 #, kde-format
 msgid "Finish"
 msgstr "समापन"
 
-#: importwizard.cpp:213
+#: importwizard.cpp:215
 #, kde-format
 msgid "Import addressbook from %1..."
 msgstr "%1 तः पतापुस्तिका आयातयन्तु..."
 
-#: importwizard.cpp:216
+#: importwizard.cpp:218
 #, kde-format
 msgid "Import addressbook from %1: Done"
 msgstr "%1 तः पतापुस्तिकाम् आयातयन्तु: कृतम्"
 
-#: importwizard.cpp:222
+#: importwizard.cpp:224
 #, kde-format
 msgid "Import filters from %1..."
 msgstr "%1 तः फ़िल्टर् आयातयन्तु..."
 
-#: importwizard.cpp:225
+#: importwizard.cpp:227
 #, kde-format
 msgid "Import filters from %1: Done"
 msgstr "%1 तः फ़िल्टर् आयातयन्तु: कृतम्"
 
-#: importwizard.cpp:231
+#: importwizard.cpp:233
 #, kde-format
 msgid "Import mails from %1..."
 msgstr "%1 तः मेलम् आयातयन्तु..."
 
-#: importwizard.cpp:234
+#: importwizard.cpp:236
 #, kde-format
 msgid "Import mails from %1: Done"
 msgstr "%1 तः मेलम् आयातयन्तु: कृतम्"
 
-#: importwizard.cpp:240
+#: importwizard.cpp:242
 #, kde-format
 msgid "Import settings from %1..."
 msgstr "%1 तः सेटिङ्ग्स् आयातयन्तु..."
 
-#: importwizard.cpp:243
+#: importwizard.cpp:245
 #, kde-format
 msgid "Import settings from %1: Done"
 msgstr "%1 तः सेटिङ्ग्स् आयातयन्तु: कृतम्"
 
-#: importwizard.cpp:249
+#: importwizard.cpp:251
 #, kde-format
 msgid "Import calendar from %1..."
 msgstr "%1 तः पञ्चाङ्गं आयातयन्तु..."
 
-#: importwizard.cpp:252
+#: importwizard.cpp:254
 #, kde-format
 msgid "Import calendar from %1: Done"
 msgstr "%1 तः पञ्चाङ्गम् आयातयन्तु: कृतम्"
 
-#: importwizard.cpp:339 plugins/balsa/balsaimportdata.cpp:49
-#: plugins/claws-mail/clawsmailimportdata.cpp:50
-#: plugins/evolutionv3/evolutionv3importdata.cpp:69
-#: plugins/icedove/icedoveimportdata.cpp:83
-#: plugins/seamonkey/seamonkeyimportdata.cpp:83
-#: plugins/sylpheed/sylpheedimportdata.cpp:63
-#: plugins/thunderbird/thunderbirdimportdata.cpp:83
+#: importwizard.cpp:341 plugins/balsa/balsaimportdata.cpp:48
+#: plugins/claws-mail/clawsmailimportdata.cpp:51
+#: plugins/evolutionv3/evolutionv3importdata.cpp:70
+#: plugins/icedove/icedoveimportdata.cpp:84
+#: plugins/seamonkey/seamonkeyimportdata.cpp:84
+#: plugins/sylpheed/sylpheedimportdata.cpp:64
+#: plugins/thunderbird/thunderbirdimportdata.cpp:84
 #, kde-format
 msgid "Import in progress"
 msgstr "आयातः प्रचलति"
 
-#: importwizard.cpp:346 plugins/balsa/balsaimportdata.cpp:56
-#: plugins/claws-mail/clawsmailimportdata.cpp:58
+#: importwizard.cpp:348 plugins/balsa/balsaimportdata.cpp:55
+#: plugins/claws-mail/clawsmailimportdata.cpp:59
 #: plugins/evolutionv3/evolutionv3importdata.cpp:77
-#: plugins/icedove/icedoveimportdata.cpp:91
-#: plugins/seamonkey/seamonkeyimportdata.cpp:91
-#: plugins/sylpheed/sylpheedimportdata.cpp:71
-#: plugins/thunderbird/thunderbirdimportdata.cpp:91
+#: plugins/icedove/icedoveimportdata.cpp:92
+#: plugins/seamonkey/seamonkeyimportdata.cpp:92
+#: plugins/sylpheed/sylpheedimportdata.cpp:72
+#: plugins/thunderbird/thunderbirdimportdata.cpp:92
 #, kde-format
 msgid "Import finished"
 msgstr "आयातः समाप्तः"
@@ -209,65 +209,65 @@ msgstr "सम्पर्कनिर्माणकाले त्रुट�
 msgid "Contact creation complete"
 msgstr "सम्पर्क निर्माण सम्पन्न"
 
-#: libimportwizard/abstractimporter.cpp:65
+#: libimportwizard/abstractimporter.cpp:63
 #, kde-format
 msgid "Importing of filters from \"%1\" was canceled."
 msgstr "\"%1\" तः फ़िल्टरस्य आयातः रद्दः अभवत् ।"
 
-#: libimportwizard/abstractimporter.cpp:67
+#: libimportwizard/abstractimporter.cpp:65
 #, kde-format
 msgid "1 filter was imported from \"%2\""
 msgid_plural "%1 filters were imported from \"%2\""
 msgstr[0] "\"%2\" तः १ फ़िल्टर आयातितम् ।"
 msgstr[1] "%1 फ़िल्टर् \"%2\" तः आयाताः ।"
 
-#: libimportwizard/abstractimporter.cpp:71
+#: libimportwizard/abstractimporter.cpp:69
 #, kde-format
 msgid "Filters file was not found"
 msgstr "Filters सञ्चिका न प्राप्ता"
 
-#: libimportwizard/abstractsettings.cpp:40
+#: libimportwizard/abstractsettings.cpp:34
 #, kde-format
 msgid "Setting up identity..."
 msgstr "परिचयस्य स्थापना..."
 
-#: libimportwizard/abstractsettings.cpp:48
+#: libimportwizard/abstractsettings.cpp:42
 #, kde-format
 msgid "Identity set up."
 msgstr "परिचयः स्थापितः।"
 
-#: libimportwizard/abstractsettings.cpp:65
+#: libimportwizard/abstractsettings.cpp:59
 #, kde-format
 msgid "Setting up transport..."
 msgstr "परिवहनस्य स्थापना..."
 
-#: libimportwizard/abstractsettings.cpp:77
+#: libimportwizard/abstractsettings.cpp:71
 #, kde-format
 msgid "Transport set up."
 msgstr "परिवहनं स्थापितं।"
 
-#: main.cpp:34 main.cpp:36
+#: main.cpp:33 main.cpp:35
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "PIM आयातसाधनम्"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "प्रतिलिपिधर्मः © 2012-%1 ImportWizard लेखकाः"
 
-#: main.cpp:40
+#: main.cpp:39
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "लॉरेण्ट् मोंटेल्"
 
-#: main.cpp:40
+#: main.cpp:39
 #, kde-format
 msgid "Maintainer"
 msgstr "परिपालकः"
 
-#: main.cpp:48
+#: main.cpp:47
 #, kde-format
 msgctxt "@info:shell"
 msgid "Mode: %1"
@@ -278,28 +278,28 @@ msgstr "मोडः %1"
 msgid "<p><i>Written by %1.</i></p>"
 msgstr "<p><i>%1 इत्यनेन लिखितम् ।</i></p>"
 
-#: plugins/balsa/balsaaddressbook.cpp:38 plugins/balsa/balsaaddressbook.cpp:51
+#: plugins/balsa/balsaaddressbook.cpp:40 plugins/balsa/balsaaddressbook.cpp:53
 #: plugins/sylpheed/sylpheedaddressbook.cpp:30
 #, kde-format
 msgid "No addressbook found"
 msgstr "न पतापुस्तिका प्राप्ता"
 
-#: plugins/balsa/balsaaddressbook.cpp:65
+#: plugins/balsa/balsaaddressbook.cpp:67
 #, kde-format
 msgid "Ldap created"
 msgstr "ल्दाप् सृष्टवान्"
 
-#: plugins/balsa/balsaaddressbook.cpp:95
+#: plugins/balsa/balsaaddressbook.cpp:97
 #, kde-format
 msgid "New addressbook created: %1"
 msgstr "नूतनं पतापुस्तिका निर्मितम्: %1"
 
-#: plugins/claws-mail/clawsmailimportdata.cpp:79
+#: plugins/claws-mail/clawsmailimportdata.cpp:80
 #, kde-format
 msgid "Claws Mail settings not found."
 msgstr "Claws Mail सेटिंग्स् न प्राप्ताः।"
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:24
+#: plugins/evolutionv3/evolutionaddressbook.cpp:25
 #, kde-format
 msgid ""
 "Evolution address book will be exported as vCard. Import vCard in "
@@ -308,29 +308,29 @@ msgstr ""
 "Evolution address book vCard इति निर्यातितं भविष्यति । KAddressBook मध्ये vCard "
 "आयातयन्तु।"
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:25
+#: plugins/evolutionv3/evolutionaddressbook.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Export Evolution Address Book"
 msgstr "निर्यात विकास पता पुस्तिका"
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:28
+#: plugins/evolutionv3/evolutionaddressbook.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Select the directory where vCards will be stored."
 msgstr "यत्र vCards संगृहीतं भविष्यति तत् निर्देशिकां चिनोतु ।"
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:81
+#: plugins/evolutionv3/evolutionaddressbook.cpp:82
 #, kde-format
 msgid "Address book \"%1\" exported."
 msgstr "पतापुस्तिका \"%1\" निर्यातिता ।"
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:83
+#: plugins/evolutionv3/evolutionaddressbook.cpp:84
 #, kde-format
 msgid "Failed to export address book \"%1\"."
 msgstr "\"%1\" इति पतापुस्तकस्य निर्यातं कर्तुं असफलम् ।"
 
-#: plugins/evolutionv3/evolutionv3importdata.cpp:60
+#: plugins/evolutionv3/evolutionv3importdata.cpp:61
 #, kde-format
 msgid "Evolution settings not found."
 msgstr "विकाससेटिंग्स् न प्राप्ताः।"
@@ -340,12 +340,12 @@ msgstr "विकाससेटिंग्स् न प्राप्ता�
 msgid "Evolution calendar not found."
 msgstr "विकासपञ्चाङ्गः न प्राप्तः।"
 
-#: plugins/icedove/icedoveimportdata.cpp:73
+#: plugins/icedove/icedoveimportdata.cpp:74
 #, kde-format
 msgid "Icedove settings not found."
 msgstr "Icedove सेटिंग्स् न प्राप्ताः।"
 
-#: plugins/seamonkey/seamonkeyimportdata.cpp:73
+#: plugins/seamonkey/seamonkeyimportdata.cpp:74
 #, kde-format
 msgid "SeaMonkey settings not found."
 msgstr "SeaMonkey सेटिंग्स् न प्राप्ताः।"
@@ -355,7 +355,7 @@ msgstr "SeaMonkey सेटिंग्स् न प्राप्ताः।
 msgid "No contact found in %1"
 msgstr "%1 इत्यत्र कोऽपि सम्पर्कः न प्राप्तः"
 
-#: plugins/sylpheed/sylpheedimportdata.cpp:54
+#: plugins/sylpheed/sylpheedimportdata.cpp:55
 #, kde-format
 msgid "Sylpheed settings not found."
 msgstr "सिल्फीड् सेटिंग्स् न प्राप्ताः।"
@@ -365,7 +365,7 @@ msgstr "सिल्फीड् सेटिंग्स् न प्राप
 msgid "Contacts file '%1' not found"
 msgstr "सम्पर्कसञ्चिका '%1' न प्राप्ता"
 
-#: plugins/thunderbird/thunderbirdimportdata.cpp:73
+#: plugins/thunderbird/thunderbirdimportdata.cpp:74
 #, kde-format
 msgid "Thunderbird settings not found."
 msgstr "Thunderbird सेटिंग्स् न प्राप्ताः।"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-import-wizard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 02:58+0000\n"
+"POT-Creation-Date: 2026-11-14 01:04+0000\n"
 "PO-Revision-Date: 2024-10-01 19:27+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -32,13 +32,13 @@ msgstr "wantoyek@gmail.com"
 msgid "No program found."
 msgstr "Tidak ada program yang ditemukan."
 
-#: importwizard.cpp:43
+#: importwizard.cpp:45
 #, kde-format
 msgctxt "@title:window"
 msgid "PIM Import Tool"
 msgstr "Alat Impor PIM"
 
-#: importwizard.cpp:72
+#: importwizard.cpp:74
 #, kde-format
 msgid ""
 "Close KMail before importing data. Some plugins will modify KMail config "
@@ -47,125 +47,125 @@ msgstr ""
 "Tutup KMail sebelum mengimpor data. Beberapa plugin akan memodifikasi file "
 "config KMail."
 
-#: importwizard.cpp:128
+#: importwizard.cpp:130
 #, kde-format
 msgid "Step 1: Select Filter"
 msgstr "Langkah 1: Pilih Filter"
 
-#: importwizard.cpp:133
+#: importwizard.cpp:135
 #, kde-format
 msgid "Step 2: Importing..."
 msgstr "Langkah 2: Mengimpor..."
 
-#: importwizard.cpp:162
+#: importwizard.cpp:164
 #, kde-format
 msgid "Detect program"
 msgstr "Deteksi program"
 
-#: importwizard.cpp:167
+#: importwizard.cpp:169
 #, kde-format
 msgid "Select material to import"
 msgstr "Pilih material untuk mengimpor"
 
-#: importwizard.cpp:171
+#: importwizard.cpp:173
 #, kde-format
 msgid "Import mail messages"
 msgstr "Impor pesan surat"
 
-#: importwizard.cpp:175
+#: importwizard.cpp:177
 #, kde-format
 msgid "Import mail filters"
 msgstr "Impor filter surat"
 
 #. i18n: ectx: property (text), widget (QPushButton, importSettings)
-#: importwizard.cpp:179 ui/autodetect/importsettingpage.ui:47
+#: importwizard.cpp:181 ui/autodetect/importsettingpage.ui:47
 #, kde-format
 msgid "Import settings"
 msgstr "Impor pengaturan"
 
-#: importwizard.cpp:183
+#: importwizard.cpp:185
 #, kde-format
 msgid "Import addressbooks"
 msgstr "Impor buku alamat"
 
-#: importwizard.cpp:187
+#: importwizard.cpp:189
 #, kde-format
 msgid "Import calendars"
 msgstr "Impor kalender"
 
-#: importwizard.cpp:191
+#: importwizard.cpp:193
 #, kde-format
 msgid "Finish"
 msgstr "Selesai"
 
-#: importwizard.cpp:213
+#: importwizard.cpp:215
 #, kde-format
 msgid "Import addressbook from %1..."
 msgstr "Impor buku alamat dari %1..."
 
-#: importwizard.cpp:216
+#: importwizard.cpp:218
 #, kde-format
 msgid "Import addressbook from %1: Done"
 msgstr "Impor buku alamat dari %1: Kelar"
 
-#: importwizard.cpp:222
+#: importwizard.cpp:224
 #, kde-format
 msgid "Import filters from %1..."
 msgstr "Impor filter dari %1..."
 
-#: importwizard.cpp:225
+#: importwizard.cpp:227
 #, kde-format
 msgid "Import filters from %1: Done"
 msgstr "Impor filter dari %1: Kelar"
 
-#: importwizard.cpp:231
+#: importwizard.cpp:233
 #, kde-format
 msgid "Import mails from %1..."
 msgstr "Impor surat dari %1..."
 
-#: importwizard.cpp:234
+#: importwizard.cpp:236
 #, kde-format
 msgid "Import mails from %1: Done"
 msgstr "Impor surat dari %1: Kelar"
 
-#: importwizard.cpp:240
+#: importwizard.cpp:242
 #, kde-format
 msgid "Import settings from %1..."
 msgstr "Impor pengaturan dari %1..."
 
-#: importwizard.cpp:243
+#: importwizard.cpp:245
 #, kde-format
 msgid "Import settings from %1: Done"
 msgstr "Impor pengaturan dari %1: Kelar"
 
-#: importwizard.cpp:249
+#: importwizard.cpp:251
 #, kde-format
 msgid "Import calendar from %1..."
 msgstr "Impor kalender dari %1..."
 
-#: importwizard.cpp:252
+#: importwizard.cpp:254
 #, kde-format
 msgid "Import calendar from %1: Done"
 msgstr "Impor kalender dari %1: Kelar"
 
-#: importwizard.cpp:339 plugins/balsa/balsaimportdata.cpp:49
-#: plugins/claws-mail/clawsmailimportdata.cpp:50
-#: plugins/evolutionv3/evolutionv3importdata.cpp:69
-#: plugins/icedove/icedoveimportdata.cpp:83
-#: plugins/seamonkey/seamonkeyimportdata.cpp:83
-#: plugins/sylpheed/sylpheedimportdata.cpp:63
-#: plugins/thunderbird/thunderbirdimportdata.cpp:83
+#: importwizard.cpp:341 plugins/balsa/balsaimportdata.cpp:48
+#: plugins/claws-mail/clawsmailimportdata.cpp:51
+#: plugins/evolutionv3/evolutionv3importdata.cpp:70
+#: plugins/icedove/icedoveimportdata.cpp:84
+#: plugins/seamonkey/seamonkeyimportdata.cpp:84
+#: plugins/sylpheed/sylpheedimportdata.cpp:64
+#: plugins/thunderbird/thunderbirdimportdata.cpp:84
 #, kde-format
 msgid "Import in progress"
 msgstr "Impor sedang dalam progres"
 
-#: importwizard.cpp:346 plugins/balsa/balsaimportdata.cpp:56
-#: plugins/claws-mail/clawsmailimportdata.cpp:58
+#: importwizard.cpp:348 plugins/balsa/balsaimportdata.cpp:55
+#: plugins/claws-mail/clawsmailimportdata.cpp:59
 #: plugins/evolutionv3/evolutionv3importdata.cpp:77
-#: plugins/icedove/icedoveimportdata.cpp:91
-#: plugins/seamonkey/seamonkeyimportdata.cpp:91
-#: plugins/sylpheed/sylpheedimportdata.cpp:71
-#: plugins/thunderbird/thunderbirdimportdata.cpp:91
+#: plugins/icedove/icedoveimportdata.cpp:92
+#: plugins/seamonkey/seamonkeyimportdata.cpp:92
+#: plugins/sylpheed/sylpheedimportdata.cpp:72
+#: plugins/thunderbird/thunderbirdimportdata.cpp:92
 #, kde-format
 msgid "Import finished"
 msgstr "Impor selesai"
@@ -206,65 +206,65 @@ msgstr "Galat ketika pembuatan kontak: %1"
 msgid "Contact creation complete"
 msgstr "Pembuatan kontak sudah tuntas"
 
-#: libimportwizard/abstractimporter.cpp:65
+#: libimportwizard/abstractimporter.cpp:63
 #, kde-format
 msgid "Importing of filters from \"%1\" was canceled."
 msgstr "Pengimporan filter dari \"%1\" telah dibatalkan."
 
-#: libimportwizard/abstractimporter.cpp:67
+#: libimportwizard/abstractimporter.cpp:65
 #, kde-format
 msgid "1 filter was imported from \"%2\""
 msgid_plural "%1 filters were imported from \"%2\""
 msgstr[0] "1 filter telah diimpor dari \"%2\""
 msgstr[1] "%1 filter telah diimpor dari \"%2\""
 
-#: libimportwizard/abstractimporter.cpp:71
+#: libimportwizard/abstractimporter.cpp:69
 #, kde-format
 msgid "Filters file was not found"
 msgstr "File filter tidak ditemukan"
 
-#: libimportwizard/abstractsettings.cpp:40
+#: libimportwizard/abstractsettings.cpp:34
 #, kde-format
 msgid "Setting up identity..."
 msgstr "Mempersiapkan identitas..."
 
-#: libimportwizard/abstractsettings.cpp:48
+#: libimportwizard/abstractsettings.cpp:42
 #, kde-format
 msgid "Identity set up."
 msgstr "Identitas disiapkan."
 
-#: libimportwizard/abstractsettings.cpp:65
+#: libimportwizard/abstractsettings.cpp:59
 #, kde-format
 msgid "Setting up transport..."
 msgstr "Mempersiapkan transportasi..."
 
-#: libimportwizard/abstractsettings.cpp:77
+#: libimportwizard/abstractsettings.cpp:71
 #, kde-format
 msgid "Transport set up."
 msgstr "Transportasi disiapkan."
 
-#: main.cpp:34 main.cpp:36
+#: main.cpp:33 main.cpp:35
 #, kde-format
 msgid "PIM Import Tool"
 msgstr "Alat Impor PIM"
 
-#: main.cpp:38
+#: main.cpp:37
 #, kde-format
 msgid "Copyright © 2012-%1 ImportWizard authors"
 msgstr "Hak cipta © 2012-%1 penulis ImportWizard"
 
-#: main.cpp:40
+#: main.cpp:39
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:40
+#: main.cpp:39
 #, kde-format
 msgid "Maintainer"
 msgstr "Pemelihara"
 
-#: main.cpp:48
+#: main.cpp:47
 #, kde-format
 msgctxt "@info:shell"
 msgid "Mode: %1"
@@ -275,28 +275,28 @@ msgstr "Mode: %1"
 msgid "<p><i>Written by %1.</i></p>"
 msgstr "<p><i>Ditulis oleh %1.</i></p>"
 
-#: plugins/balsa/balsaaddressbook.cpp:38 plugins/balsa/balsaaddressbook.cpp:51
+#: plugins/balsa/balsaaddressbook.cpp:40 plugins/balsa/balsaaddressbook.cpp:53
 #: plugins/sylpheed/sylpheedaddressbook.cpp:30
 #, kde-format
 msgid "No addressbook found"
 msgstr "Tidak ditemukan buku_alamat"
 
-#: plugins/balsa/balsaaddressbook.cpp:65
+#: plugins/balsa/balsaaddressbook.cpp:67
 #, kde-format
 msgid "Ldap created"
 msgstr "Dibuat ldap"
 
-#: plugins/balsa/balsaaddressbook.cpp:95
+#: plugins/balsa/balsaaddressbook.cpp:97
 #, kde-format
 msgid "New addressbook created: %1"
 msgstr "Buku_alamat baru, dibuat: %1"
 
-#: plugins/claws-mail/clawsmailimportdata.cpp:79
+#: plugins/claws-mail/clawsmailimportdata.cpp:80
 #, kde-format
 msgid "Claws Mail settings not found."
 msgstr "Pengaturan Mail Claws tidak ditemukan."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:24
+#: plugins/evolutionv3/evolutionaddressbook.cpp:25
 #, kde-format
 msgid ""
 "Evolution address book will be exported as vCard. Import vCard in "
@@ -305,29 +305,29 @@ msgstr ""
 "Buku alamat Evolution akan diekspor sebagai vCard. Impor vCard dalam "
 "KAddressBook."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:25
+#: plugins/evolutionv3/evolutionaddressbook.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Export Evolution Address Book"
 msgstr "Ekspor Buku Alamat Evolution"
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:28
+#: plugins/evolutionv3/evolutionaddressbook.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Select the directory where vCards will be stored."
 msgstr "Pilih direktori di mana vCards akan disimpan."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:81
+#: plugins/evolutionv3/evolutionaddressbook.cpp:82
 #, kde-format
 msgid "Address book \"%1\" exported."
 msgstr "Buku alamat \"%1\" diekspor."
 
-#: plugins/evolutionv3/evolutionaddressbook.cpp:83
+#: plugins/evolutionv3/evolutionaddressbook.cpp:84
 #, kde-format
 msgid "Failed to export address book \"%1\"."
 msgstr "Gagal mengekspor buku alamat \"%1\"."
 
-#: plugins/evolutionv3/evolutionv3importdata.cpp:60
+#: plugins/evolutionv3/evolutionv3importdata.cpp:61
 #, kde-format
 msgid "Evolution settings not found."
 msgstr "Pengaturan Evolution tidak ditemukan."
@@ -337,12 +337,12 @@ msgstr "Pengaturan Evolution tidak ditemukan."
 msgid "Evolution calendar not found."
 msgstr "Kalender Evolution tidak ditemukan."
 
-#: plugins/icedove/icedoveimportdata.cpp:73
+#: plugins/icedove/icedoveimportdata.cpp:74
 #, kde-format
 msgid "Icedove settings not found."
 msgstr "Pengaturan Icedove tidak ditemukan."
 
-#: plugins/seamonkey/seamonkeyimportdata.cpp:73
+#: plugins/seamonkey/seamonkeyimportdata.cpp:74
 #, kde-format
 msgid "SeaMonkey settings not found."
 msgstr "Pengaturan SeaMonkey tidak ditemukan."
@@ -352,7 +352,7 @@ msgstr "Pengaturan SeaMonkey tidak ditemukan."
 msgid "No contact found in %1"
 msgstr "Tidak menemukan kontak di %1"
 
-#: plugins/sylpheed/sylpheedimportdata.cpp:54
+#: plugins/sylpheed/sylpheedimportdata.cpp:55
 #, kde-format
 msgid "Sylpheed settings not found."
 msgstr "Pengaturan Sylpheed tidak ditemukan."
@@ -362,7 +362,7 @@ msgstr "Pengaturan Sylpheed tidak ditemukan."
 msgid "Contacts file '%1' not found"
 msgstr "File kontak '%1' tidak ditemukan"
 
-#: plugins/thunderbird/thunderbirdimportdata.cpp:73
+#: plugins/thunderbird/thunderbirdimportdata.cpp:74
 #, kde-format
 msgid "Thunderbird settings not found."
 msgstr "Pengaturan Thunderbird tidak ditemukan."
