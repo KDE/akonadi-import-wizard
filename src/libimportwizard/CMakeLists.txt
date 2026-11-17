@@ -92,8 +92,8 @@ target_link_libraries(
         KPim6::MailImporter
         KPim6::MailImporterAkonadi
         KF6::I18n
+        qt6keychain
 )
-target_link_libraries(KPim6ImportWizard PRIVATE qt6keychain)
 set_target_properties(
     KPim6ImportWizard
     PROPERTIES
