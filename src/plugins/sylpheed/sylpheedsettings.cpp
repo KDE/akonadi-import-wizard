@@ -88,9 +88,8 @@ void SylpheedSettings::readCustomHeader(QFile *customHeaderFile)
         }
         addKmailConfig(u"General"_s, u"mime-header-count"_s, newValue);
         int currentHeader = (oldValue > 0) ? oldValue : 0;
-        for (QMapIterator<QString, QString> it(header); it.hasNext();) {
-            it.next();
-            addComposerHeaderGroup(u"Mime #%1"_s.arg(currentHeader), (it).key(), (it).value());
+        for (auto it = header.cbegin(), end = header.cend(); it != end; ++it) {
+            addComposerHeaderGroup(u"Mime #%1"_s.arg(currentHeader), it.key(), it.value());
             ++currentHeader;
         }
     }
