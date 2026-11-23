@@ -131,5 +131,6 @@ Keywords[ru]=импорт;миграция;почта;контакты;кале�
 Keywords[sk]=import;migrácia;email;kontakty;kalendár;Thunderbird;Evolution;
 Keywords[tr]=import;migration;email;contacts;calendar;Thunderbird;Evolution;içe aktar;dışa aktar;e-posta;posta;kişi;takvim;
 Keywords[uk]=import;migration;email;contacts;calendar;Thunderbird;Evolution;імпорт;міграція;перенесення;пошта;контакти;календар;тандерберд;еволюшн;
+Keywords[zh_CN]=import;migration;email;contacts;calendar;Thunderbird;Evolution;daoru;qianyi;dianziyoujian;youjian;lianxiren;rili;导入;迁移;电子邮件;邮件;联系人;日历;
 SingleMainWindow=true
 Version=1.5
